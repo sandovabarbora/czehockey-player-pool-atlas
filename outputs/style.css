@@ -1193,6 +1193,220 @@ li strong { font-family: var(--font-display); font-weight: 600; }
   border-radius: 1px;
 }
 
+/* Reprezentační cyklus dashboard: per-player intelligence one-pagers.
+   Each card synthesises five existing layers into one operational view
+   the analytical team can consume on a single screen. */
+.cycle-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  margin: var(--space-5) 0 var(--space-5);
+}
+@media (min-width: 1100px) {
+  .cycle-grid { grid-template-columns: 1fr 1fr; gap: var(--space-6) var(--space-7); }
+}
+.cycle-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 2px solid var(--ink);
+}
+.cycle-card-head { margin-bottom: 0; }
+.cycle-card-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  letter-spacing: -0.018em;
+  line-height: 1.1;
+  color: var(--ink);
+  text-transform: none;
+}
+.cycle-card-meta {
+  margin: var(--space-1) 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  max-width: none;
+}
+
+.cycle-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  margin: var(--space-1) 0 0;
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.cycle-stats div { margin: 0; }
+.cycle-stats dt {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cycle-stats dd {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+  font-feature-settings: "tnum", "lnum";
+  line-height: 1.1;
+}
+
+.cycle-cluster {
+  display: grid;
+  gap: var(--space-1);
+}
+.cycle-cluster-row {
+  display: grid;
+  grid-template-columns: 3.4rem 2.6rem 1fr;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+.cycle-cluster-tag {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cycle-cluster-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--oxblood-700);
+  background: var(--oxblood-200);
+  padding: 0.15rem 0.45rem;
+  border-radius: 1px;
+  text-align: center;
+}
+.cycle-cluster-label {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.cycle-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.cycle-section-label {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--oxblood-700);
+  max-width: none;
+}
+
+.cycle-tactical {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: none;
+}
+
+.cycle-traj {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem var(--space-3);
+  align-items: baseline;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  max-width: none;
+}
+.cycle-traj-delta {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--ink);
+}
+.cycle-traj-dir {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cycle-traj-detail {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.cycle-analogs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+  counter-reset: cyclean;
+}
+.cycle-analogs li {
+  display: grid;
+  grid-template-columns: 1.2rem 1fr auto;
+  align-items: baseline;
+  gap: 0.45rem;
+  counter-increment: cyclean;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+}
+.cycle-analogs li::before {
+  content: counter(cyclean);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+.cycle-analog-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+}
+.cycle-analog-country {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  background: var(--cream-100);
+  padding: 0.08rem 0.35rem;
+  color: var(--ink-soft);
+  justify-self: end;
+  margin-left: 0.3rem;
+}
+.cycle-analog-stats {
+  grid-column: 2 / -1;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.1rem;
+}
+
+.cycle-brief-excerpt {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: none;
+}
+
 /* Historical analogs */
 .analog-block {
   display: grid;

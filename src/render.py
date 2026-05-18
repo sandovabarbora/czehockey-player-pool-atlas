@@ -460,6 +460,134 @@ def _markdown_brief_to_html(text: str) -> dict:
     }
 
 
+def _build_cycle_dashboard(
+    canonical: pd.DataFrame,
+    features: pd.DataFrame,
+    coords: pd.DataFrame,
+    trajectory: pd.DataFrame,
+    cluster_labels: dict,
+    analogs: list[dict],
+    briefs: list[dict],
+) -> list[dict]:
+    """Per-player intelligence one-pagers for the cycle dashboard.
+
+    Combines five layers of evidence for each showcase player:
+      cluster (style + quality), tactical read, trajectory,
+      historical analogs (top 3), LLM scout brief excerpt.
+
+    Showcase selection covers position × stage:
+      Pastrnak  — NHL elite F
+      Hronek    — NHL elite D
+      Zacha     — NHL mid F
+      Kulich    — U22 F prospect
+      Jiricek   — U22 D prospect
+    """
+    showcase = [
+        ("nhl-8477956", "david-pastrnak", "David Pastrňák", "F"),
+        ("nhl-8479425", "filip-hronek",   "Filip Hronek",   "D"),
+        ("nhl-8478401", "pavel-zacha",    "Pavel Zacha",    "F"),
+        ("nhl-8483468", "jiri-kulich",    "Jiří Kulich",    "F"),
+        ("nhl-8483460", "david-jiricek",  "David Jiříček",  "D"),
+    ]
+    out: list[dict] = []
+    latest_season = int(features["season"].max())
+
+    briefs_by_slug = {b["slug"]: b for b in briefs}
+    analogs_by_name = {a["target_name"]: a for a in analogs}
+
+    for canonical_id, slug, name, pos in showcase:
+        feat = features[
+            (features["canonical_id"] == canonical_id)
+            & (features["season"] == latest_season)
+        ]
+        coord = coords[
+            (coords["canonical_id"] == canonical_id)
+            & (coords["season"] == latest_season)
+        ]
+        if feat.empty or coord.empty:
+            LOG.warning("cycle: missing data for %s", name)
+            continue
+        f = feat.iloc[0]
+        c = coord.iloc[0]
+        cz_canon = canonical[canonical["canonical_id"] == canonical_id]
+        age = None
+        iihf = 0
+        if not cz_canon.empty:
+            row = cz_canon.iloc[0]
+            by = row.get("birth_year")
+            if pd.notna(by):
+                age = 2026 - int(by)
+            iihf = int(row.get("iihf_appearances") or 0)
+
+        # Cluster labels
+        pos_label = "forwards" if pos == "F" else "defense"
+        cl_style = int(c.get("cluster_id_style", -1))
+        cl_quality = int(c.get("cluster_id_quality", -1))
+        style_map = cluster_labels.get(f"{pos_label}_style", {})
+        quality_map = cluster_labels.get(f"{pos_label}_quality", {})
+        style_meta = style_map.get(cl_style, {})
+        quality_meta = quality_map.get(cl_quality, {})
+
+        # Trajectory
+        traj_row = None
+        if not trajectory.empty:
+            tr = trajectory[trajectory["canonical_id"] == canonical_id]
+            if not tr.empty:
+                traj_row = tr.iloc[0]
+        traj = None
+        if traj_row is not None:
+            traj = {
+                "delta": round(float(traj_row.get("d_points_per_gp_quality", 0)), 3),
+                "direction": str(traj_row.get("direction", "stable")),
+                "gp_old": int(traj_row.get("GP_old", 0)),
+                "gp_new": int(traj_row.get("GP_new", 0)),
+                "old": round(float(traj_row.get("points_per_gp_quality_old", 0)), 3),
+                "new": round(float(traj_row.get("points_per_gp_quality_new", 0)), 3),
+            }
+
+        # Historical analog (top 3)
+        analog_block = analogs_by_name.get(name)
+        analog_tops = analog_block["analogs"][:3] if analog_block else []
+        comparison_age = analog_block.get("comparison_age") if analog_block else age
+
+        # LLM brief excerpt (first non-empty section body, truncated)
+        brief = briefs_by_slug.get(slug)
+        brief_excerpt = ""
+        if brief and brief.get("sections"):
+            first_section_html = brief["sections"][0]["html"]
+            # Strip tags for the excerpt
+            import re
+            text = re.sub(r"<[^>]+>", "", first_section_html)
+            text = text.strip()
+            if len(text) > 320:
+                text = text[:320].rsplit(" ", 1)[0] + "…"
+            brief_excerpt = text
+
+        out.append({
+            "slug": slug,
+            "name": name,
+            "position": pos,
+            "age": age,
+            "iihf": iihf,
+            "league": str(f.get("league", "")).upper(),
+            "stats": {
+                "P_per_GP_quality": round(float(f.get("points_per_gp_quality", 0)), 3),
+                "z": round(float(f.get("points_per_gp_quality_z", 0)), 2),
+                "GP": int(f.get("GP", 0)),
+                "P": int(f.get("P", 0)),
+            },
+            "cluster_style":   {"id": cl_style,   "label": style_meta.get("label_cs", f"C{cl_style}")},
+            "cluster_quality": {"id": cl_quality, "label": quality_meta.get("label_cs", f"C{cl_quality}")},
+            "tactical": style_meta.get("tactical_cs", ""),
+            "trajectory": traj,
+            "comparison_age": comparison_age,
+            "analogs": analog_tops,
+            "brief_excerpt": brief_excerpt,
+            "has_brief": bool(brief),
+        })
+    return out
+
+
 def _load_llm_briefs() -> list[dict]:
     """Load all briefs from outputs/briefs/*.md, parse to structured dicts.
 
@@ -594,8 +722,17 @@ def main() -> None:
     # Display 2 inline (forward + defenseman), list rest with a count.
     llm_briefs = _load_llm_briefs()
 
-    LOG.info("AI layer: %d analog targets, %d LLM briefs",
-             len(historical_analogs), len(llm_briefs))
+    # Reprezentační cyklus dashboard — per-player synth view combining
+    # cluster + tactical + trajectory + analog + brief excerpt.
+    _all_features = pd.concat([fwd_features, def_features], ignore_index=True)
+    _all_coords = pd.concat([fwd_coords, def_coords], ignore_index=True)
+    cycle_dashboard = _build_cycle_dashboard(
+        canonical, _all_features, _all_coords, trajectory, cluster_labels,
+        historical_analogs, llm_briefs,
+    )
+
+    LOG.info("AI layer: %d analog targets, %d LLM briefs, %d cycle cards",
+             len(historical_analogs), len(llm_briefs), len(cycle_dashboard))
 
     # --- Render HTML via Jinja2 ---
     # Markdown-ish → HTML for the limitations block (**bold** → <strong>bold</strong>)
@@ -625,6 +762,7 @@ def main() -> None:
         league_quality=league_quality,
         historical_analogs=historical_analogs,
         llm_briefs=llm_briefs,
+        cycle_dashboard=cycle_dashboard,
         rendered_at=dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
     )
     html_path = config.OUTPUTS_DIR / "index.html"

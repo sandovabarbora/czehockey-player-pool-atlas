@@ -33,6 +33,7 @@
       <ol>
         <li><a href="#llm-briefy">LLM scout briefy</a></li>
         <li><a href="#historicke-analogy">Historické analogy</a></li>
+        <li><a href="#cyklus-dashboard">Cyklus dashboard</a></li>
         <li><a href="#roadmap-video">Video tracking platform</a></li>
         <li><a href="#roadmap-buzz">Plánováno: media buzz</a></li>
       </ol>
@@ -70,7 +71,7 @@
       <summary>Obsah reportu</summary>
       <ol>
         <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
-        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#llm-briefy">LLM briefy</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video platform</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
+        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#llm-briefy">LLM briefy</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#cyklus-dashboard">Cyklus</a> · <a href="#roadmap-video">Video platform</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
         <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
       </ol>
     </details>
@@ -689,9 +690,10 @@
   <p class="chapter-title">AI a multimodální vrstva</p>
   <p class="chapter-synopsis">
     Aplikovaná ML a LLM vrstva: per-player scout briefy generované Claude
-    Opus, historické analogy v kariéře z corpusu 1&nbsp;177 hráčů, video
-    tracking platform v aktivním vývoji v paralelním sportu, plus roadmap
-    pro media buzz index z audio modality.
+    Opus, historické analogy v kariéře z corpusu 1&nbsp;177 hráčů, reprezentační
+    cyklus dashboard syntetizující všechny vrstvy do per-player intelligence
+    sheets, video tracking platform v aktivním vývoji v paralelním sportu,
+    plus roadmap pro media buzz index.
   </p>
 </aside>
 
@@ -1688,6 +1690,455 @@
     </p>
     
 
+    
+    <h3 id="cyklus-dashboard">Reprezentační cyklus dashboard &middot; per-player intelligence</h3>
+    <p>
+      Synthesis view nad existujícími vrstvami: pro každého hráče v showcase
+      poolu (NHL elita F+D, mid-cycle F, U22 prospekti F+D) jedna integrovaná
+      karta kombinující cluster placement (style + quality), tactical čtení,
+      meziroční trajektorii, top 3 historické analogy ve stejném věku, a
+      excerpt z LLM scout briefu. Pro federační analytický tým je tahle vrstva
+      <strong>operační</strong>: na jedné obrazovce všechno, co je o hráči ve
+      veřejných datech.
+    </p>
+    <div class="cycle-grid">
+      
+      <article class="cycle-card">
+        <header class="cycle-card-head">
+          <h4 class="cycle-card-name">David Pastrňák</h4>
+          <p class="cycle-card-meta">
+            F &middot; věk 30 &middot; NHL
+             &middot; MS 24/25 ×2
+          </p>
+        </header>
+
+        <dl class="cycle-stats">
+          <div><dt>P/GP quality</dt><dd>1,19</dd></div>
+          <div><dt>z-score</dt><dd>+6,50</dd></div>
+          <div><dt>GP / P</dt><dd>77 / 100</dd></div>
+        </dl>
+
+        <div class="cycle-cluster">
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">style</span>
+            <span class="cycle-cluster-pill">C0</span>
+            <span class="cycle-cluster-label">Top-six skórující</span>
+          </span>
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">quality</span>
+            <span class="cycle-cluster-pill">C3</span>
+            <span class="cycle-cluster-label">EU veteráni</span>
+          </span>
+        </div>
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Tactical read</p>
+          <p class="cycle-tactical">Shooting-heavy top-six profil. Statistický otisk konzistentní s hráči, kteří generují vlastní střelu z controlled-entry situations a drží PP1 minutáž. Reprezentační kontext: hráči tohoto clusteru typicky nesou ofenzivní zatížení první lajny.</p>
+        </div>
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Trajektorie 24/25 &rarr; 25/26</p>
+          <p class="cycle-traj">
+            <span class="cycle-traj-delta">Δ -0,001 P/GP</span>
+            <span class="cycle-traj-dir">stable</span>
+            <span class="cycle-traj-detail">82 GP &rarr; 77 GP</span>
+          </p>
+        </div>
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Historické analogy @29</p>
+          <ol class="cycle-analogs">
+            
+            <li>
+              <span class="cycle-analog-name">Ryan Nugent-Hopkins</span>
+              <span class="cycle-analog-country">CAN</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 82 GP &middot; 104 P &middot;
+                d&nbsp;=&nbsp;0,31
+              </span>
+            </li>
+            
+            <li>
+              <span class="cycle-analog-name">Jack Eichel</span>
+              <span class="cycle-analog-country">USA</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 74 GP &middot; 90 P &middot;
+                d&nbsp;=&nbsp;0,33
+              </span>
+            </li>
+            
+            <li>
+              <span class="cycle-analog-name">Claude Giroux</span>
+              <span class="cycle-analog-country">CAN</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 82 GP &middot; 102 P &middot;
+                d&nbsp;=&nbsp;0,35
+              </span>
+            </li>
+            
+          </ol>
+        </div>
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">LLM brief excerpt</p>
+          <p class="cycle-brief-excerpt">Pastrňák spadá do style clusteru C0 (Top-six skórující) a quality clusteru C3, s extrémní pozicí na produkční ose PC1 (5.77 style / 8.49 quality). Quality-adjusted P/GP 1.189 odpovídá cross-league z-score +6.50 — outlier i v rámci NHL elity v korpusu. Distribuce bodů je výrazně asistenčně vážená (A/GP shrunk 0.833 vs.…</p>
+        </div>
+        
+      </article>
+      
+      <article class="cycle-card">
+        <header class="cycle-card-head">
+          <h4 class="cycle-card-name">Filip Hronek</h4>
+          <p class="cycle-card-meta">
+            D &middot; věk 29 &middot; NHL
+             &middot; MS 24/25 ×1
+          </p>
+        </header>
+
+        <dl class="cycle-stats">
+          <div><dt>P/GP quality</dt><dd>0,56</dd></div>
+          <div><dt>z-score</dt><dd>+6,21</dd></div>
+          <div><dt>GP / P</dt><dd>82 / 49</dd></div>
+        </dl>
+
+        <div class="cycle-cluster">
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">style</span>
+            <span class="cycle-cluster-pill">C0</span>
+            <span class="cycle-cluster-label">Ofenzivní obránci</span>
+          </span>
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">quality</span>
+            <span class="cycle-cluster-pill">C3</span>
+            <span class="cycle-cluster-label">Mladí prospekti</span>
+          </span>
+        </div>
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Tactical read</p>
+          <p class="cycle-tactical">Power-play QB / puck-moving D profil. A/GP dominuje nad G/GP, statistický otisk odpovídá first-pair offensive obráncům s breakout-control rolí. Hodnota se realizuje v týmech s perimetr-heavy PP strukturou.</p>
+        </div>
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Trajektorie 24/25 &rarr; 25/26</p>
+          <p class="cycle-traj">
+            <span class="cycle-traj-delta">Δ +0,060 P/GP</span>
+            <span class="cycle-traj-dir">stable</span>
+            <span class="cycle-traj-detail">61 GP &rarr; 82 GP</span>
+          </p>
+        </div>
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Historické analogy @28</p>
+          <ol class="cycle-analogs">
+            
+            <li>
+              <span class="cycle-analog-name">Shayne Gostisbehere</span>
+              <span class="cycle-analog-country">USA</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 82 GP &middot; 51 P &middot;
+                d&nbsp;=&nbsp;0,12
+              </span>
+            </li>
+            
+            <li>
+              <span class="cycle-analog-name">Devon Toews</span>
+              <span class="cycle-analog-country">CAN</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 80 GP &middot; 50 P &middot;
+                d&nbsp;=&nbsp;0,17
+              </span>
+            </li>
+            
+            <li>
+              <span class="cycle-analog-name">Mattias Ekholm</span>
+              <span class="cycle-analog-country">SWE</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 80 GP &middot; 44 P &middot;
+                d&nbsp;=&nbsp;0,26
+              </span>
+            </li>
+            
+          </ol>
+        </div>
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">LLM brief excerpt</p>
+          <p class="cycle-brief-excerpt">Hronek se v sezóně 2025-26 nachází ve style clusteru C0 (Ofenzivní obránci) s PCA souřadnicemi (3.35, -0.77), což ho řadí do pravého kvadrantu produkční osy. Quality-adjusted P/GP 0.558 (NHL multiplier 1.00) je tažený především A/GP 0.466; cross-league z-score +6.205 ho na P/GP umisťuje vysoko nad mean defensemen v…</p>
+        </div>
+        
+      </article>
+      
+      <article class="cycle-card">
+        <header class="cycle-card-head">
+          <h4 class="cycle-card-name">Pavel Zacha</h4>
+          <p class="cycle-card-meta">
+            F &middot; věk 29 &middot; NHL
+             &middot; MS 24/25 ×1
+          </p>
+        </header>
+
+        <dl class="cycle-stats">
+          <div><dt>P/GP quality</dt><dd>0,78</dd></div>
+          <div><dt>z-score</dt><dd>+3,90</dd></div>
+          <div><dt>GP / P</dt><dd>78 / 65</dd></div>
+        </dl>
+
+        <div class="cycle-cluster">
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">style</span>
+            <span class="cycle-cluster-pill">C0</span>
+            <span class="cycle-cluster-label">Top-six skórující</span>
+          </span>
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">quality</span>
+            <span class="cycle-cluster-pill">C3</span>
+            <span class="cycle-cluster-label">EU veteráni</span>
+          </span>
+        </div>
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Tactical read</p>
+          <p class="cycle-tactical">Shooting-heavy top-six profil. Statistický otisk konzistentní s hráči, kteří generují vlastní střelu z controlled-entry situations a drží PP1 minutáž. Reprezentační kontext: hráči tohoto clusteru typicky nesou ofenzivní zatížení první lajny.</p>
+        </div>
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Trajektorie 24/25 &rarr; 25/26</p>
+          <p class="cycle-traj">
+            <span class="cycle-traj-delta">Δ +0,229 P/GP</span>
+            <span class="cycle-traj-dir">improving</span>
+            <span class="cycle-traj-detail">82 GP &rarr; 78 GP</span>
+          </p>
+        </div>
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Historické analogy @28</p>
+          <ol class="cycle-analogs">
+            
+            <li>
+              <span class="cycle-analog-name">Elias Lindholm</span>
+              <span class="cycle-analog-country">SWE</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 80 GP &middot; 64 P &middot;
+                d&nbsp;=&nbsp;0,15
+              </span>
+            </li>
+            
+            <li>
+              <span class="cycle-analog-name">Max Pacioretty</span>
+              <span class="cycle-analog-country">USA</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 81 GP &middot; 67 P &middot;
+                d&nbsp;=&nbsp;0,17
+              </span>
+            </li>
+            
+            <li>
+              <span class="cycle-analog-name">Bo Horvat</span>
+              <span class="cycle-analog-country">CAN</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 81 GP &middot; 68 P &middot;
+                d&nbsp;=&nbsp;0,17
+              </span>
+            </li>
+            
+          </ol>
+        </div>
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">LLM brief excerpt</p>
+          <p class="cycle-brief-excerpt">Zacha spadá do style clusteru C0 (Top-six skórující) s PCA souřadnicemi (3.02, -0.43) a v quality-adjusted projekci sedí na PC1 = 5.41, což ho řadí mezi NHL elitu corpusu. Quality-adjusted P/GP 0.777 (G/GP 0.363, A/GP 0.415) odpovídá cross-league z-skóre +3.90 — jedna z nejvyšších hodnot v celém datasetu. Style…</p>
+        </div>
+        
+      </article>
+      
+      <article class="cycle-card">
+        <header class="cycle-card-head">
+          <h4 class="cycle-card-name">Jiří Kulich</h4>
+          <p class="cycle-card-meta">
+            F &middot; věk 22 &middot; NHL
+             &middot; MS 24/25 ×1
+          </p>
+        </header>
+
+        <dl class="cycle-stats">
+          <div><dt>P/GP quality</dt><dd>0,38</dd></div>
+          <div><dt>z-score</dt><dd>+1,41</dd></div>
+          <div><dt>GP / P</dt><dd>12 / 5</dd></div>
+        </dl>
+
+        <div class="cycle-cluster">
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">style</span>
+            <span class="cycle-cluster-pill">C1</span>
+            <span class="cycle-cluster-label">Mladí prospekti / doplnění</span>
+          </span>
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">quality</span>
+            <span class="cycle-cluster-pill">C4</span>
+            <span class="cycle-cluster-label">EU mladá / depth</span>
+          </span>
+        </div>
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Tactical read</p>
+          <p class="cycle-tactical">Development pool. Cluster přechodný: kariérní arc je tu rozhodující signál, ne aktuální stats. Pro reprezentační plánování v 4letém cyklu je tahle vrstva fund-the-future.</p>
+        </div>
+        
+
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Historické analogy @21</p>
+          <ol class="cycle-analogs">
+            
+            <li>
+              <span class="cycle-analog-name">Mike Hardman</span>
+              <span class="cycle-analog-country">USA</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 8 GP &middot; 3 P &middot;
+                d&nbsp;=&nbsp;0,26
+              </span>
+            </li>
+            
+            <li>
+              <span class="cycle-analog-name">John Hayden</span>
+              <span class="cycle-analog-country">USA</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 12 GP &middot; 4 P &middot;
+                d&nbsp;=&nbsp;0,36
+              </span>
+            </li>
+            
+            <li>
+              <span class="cycle-analog-name">Nicholas Robertson</span>
+              <span class="cycle-analog-country">USA</span>
+              <span class="cycle-analog-stats">
+                NHL &middot; 15 GP &middot; 5 P &middot;
+                d&nbsp;=&nbsp;0,39
+              </span>
+            </li>
+            
+          </ol>
+        </div>
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">LLM brief excerpt</p>
+          <p class="cycle-brief-excerpt">Kulich spadá do style clusteru C1 (Mladí prospekti / doplnění) a quality clusteru C4 (EU mladá / depth), s PCA souřadnicemi style (0.03, 0.37) a quality (1.98, 0.10) — pravostranná pozice na produkční ose ho odlišuje od většiny C4 kohorty díky NHL multiplikátoru. Po Bayesovském shrinkage (K=10) činí jeho…</p>
+        </div>
+        
+      </article>
+      
+      <article class="cycle-card">
+        <header class="cycle-card-head">
+          <h4 class="cycle-card-name">David Jiříček</h4>
+          <p class="cycle-card-meta">
+            D &middot; věk 23 &middot; NHL
+            
+          </p>
+        </header>
+
+        <dl class="cycle-stats">
+          <div><dt>P/GP quality</dt><dd>0,06</dd></div>
+          <div><dt>z-score</dt><dd>-0,31</dd></div>
+          <div><dt>GP / P</dt><dd>26 / 0</dd></div>
+        </dl>
+
+        <div class="cycle-cluster">
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">style</span>
+            <span class="cycle-cluster-pill">C2</span>
+            <span class="cycle-cluster-label">Mladí depth D</span>
+          </span>
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">quality</span>
+            <span class="cycle-cluster-pill">C4</span>
+            <span class="cycle-cluster-label">Doplnění</span>
+          </span>
+        </div>
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Tactical read</p>
+          <p class="cycle-tactical">Development blue-line pool. AHL/Extraliga callup volume, NHL prospekti. Cluster přechodný: top-pair NHL ceiling je u většiny open question, ne aktuální výpověď.</p>
+        </div>
+        
+
+        
+
+        
+        <div class="cycle-section">
+          <p class="cycle-section-label">Historické analogy @22</p>
+          <ol class="cycle-analogs">
+            
+            <li>
+              <span class="cycle-analog-name">Victor Mancini</span>
+              <span class="cycle-analog-country">USA</span>
+              <span class="cycle-analog-stats">
+                AHL &middot; 23 GP &middot; 10 P &middot;
+                d&nbsp;=&nbsp;0,08
+              </span>
+            </li>
+            
+            <li>
+              <span class="cycle-analog-name">Cam Dineen</span>
+              <span class="cycle-analog-country">USA</span>
+              <span class="cycle-analog-stats">
+                AHL &middot; 22 GP &middot; 10 P &middot;
+                d&nbsp;=&nbsp;0,17
+              </span>
+            </li>
+            
+            <li>
+              <span class="cycle-analog-name">Brett Kulak</span>
+              <span class="cycle-analog-country">CAN</span>
+              <span class="cycle-analog-stats">
+                AHL &middot; 22 GP &middot; 10 P &middot;
+                d&nbsp;=&nbsp;0,17
+              </span>
+            </li>
+            
+          </ol>
+        </div>
+        
+
+        
+      </article>
+      
+    </div>
+    <p class="capita-note">
+      Každá karta je render existujícího datasetu &mdash; žádný nový výpočet
+      mimo synthesis. Production deployment této vrstvy by zahrnoval interaktivní
+      filtry (věk, pozice, liga, IIHF eligibility), per-hráče history sparkline,
+      a embed plně-generovaného briefu v expandable detailu.
+    </p>
+    
+
     <h3 id="roadmap-video">Video tracking a tactical platform</h3>
     <p>
       Tracking + event detection + tactical dashboards pipeline je v aktivním
@@ -2280,7 +2731,7 @@ aplikovat na vlastní rozšířenou datovou základnu.</p>
         </span>
       </p>
     </div>
-    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:44</p>
+    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:58</p>
   </div>
 </footer>
 

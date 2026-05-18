@@ -33,6 +33,7 @@
       <ol>
         <li><a href="#llm-briefy">LLM scout briefy</a></li>
         <li><a href="#historicke-analogy">Historické analogy</a></li>
+        <li><a href="#cyklus-dashboard">Cyklus dashboard</a></li>
         <li><a href="#roadmap-video">Video tracking platform</a></li>
         <li><a href="#roadmap-buzz">Plánováno: media buzz</a></li>
       </ol>
@@ -70,7 +71,7 @@
       <summary>Obsah reportu</summary>
       <ol>
         <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
-        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#llm-briefy">LLM briefy</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video platform</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
+        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#llm-briefy">LLM briefy</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#cyklus-dashboard">Cyklus</a> · <a href="#roadmap-video">Video platform</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
         <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
       </ol>
     </details>
@@ -326,9 +327,10 @@
   <p class="chapter-title">AI a multimodální vrstva</p>
   <p class="chapter-synopsis">
     Aplikovaná ML a LLM vrstva: per-player scout briefy generované Claude
-    Opus, historické analogy v kariéře z corpusu 1&nbsp;177 hráčů, video
-    tracking platform v aktivním vývoji v paralelním sportu, plus roadmap
-    pro media buzz index z audio modality.
+    Opus, historické analogy v kariéře z corpusu 1&nbsp;177 hráčů, reprezentační
+    cyklus dashboard syntetizující všechny vrstvy do per-player intelligence
+    sheets, video tracking platform v aktivním vývoji v paralelním sportu,
+    plus roadmap pro media buzz index.
   </p>
 </aside>
 
@@ -435,6 +437,100 @@
       aktivní rosters 2024/25-2025/26). <strong>Pre-2000 retiréi (Jágr, Hejduk, Hašek, Reichel,
       Sýkora) v této verzi chybí.</strong> Production-grade pipeline by je doplnila
       přes hockey-reference scraping; tato session ukazuje princip na dostupných datech.
+    </p>
+    {% endif %}
+
+    {% if cycle_dashboard %}
+    <h3 id="cyklus-dashboard">Reprezentační cyklus dashboard &middot; per-player intelligence</h3>
+    <p>
+      Synthesis view nad existujícími vrstvami: pro každého hráče v showcase
+      poolu (NHL elita F+D, mid-cycle F, U22 prospekti F+D) jedna integrovaná
+      karta kombinující cluster placement (style + quality), tactical čtení,
+      meziroční trajektorii, top 3 historické analogy ve stejném věku, a
+      excerpt z LLM scout briefu. Pro federační analytický tým je tahle vrstva
+      <strong>operační</strong>: na jedné obrazovce všechno, co je o hráči ve
+      veřejných datech.
+    </p>
+    <div class="cycle-grid">
+      {% for p in cycle_dashboard %}
+      <article class="cycle-card">
+        <header class="cycle-card-head">
+          <h4 class="cycle-card-name">{{ p.name }}</h4>
+          <p class="cycle-card-meta">
+            {{ p.position }} &middot; věk {{ p.age }} &middot; {{ p.league }}
+            {% if p.iihf %} &middot; MS 24/25 ×{{ p.iihf }}{% endif %}
+          </p>
+        </header>
+
+        <dl class="cycle-stats">
+          <div><dt>P/GP quality</dt><dd>{{ ('%.2f' | format(p.stats.P_per_GP_quality)) | replace('.', ',') }}</dd></div>
+          <div><dt>z-score</dt><dd>{{ ('%+.2f' | format(p.stats.z)) | replace('.', ',') }}</dd></div>
+          <div><dt>GP / P</dt><dd>{{ p.stats.GP }} / {{ p.stats.P }}</dd></div>
+        </dl>
+
+        <div class="cycle-cluster">
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">style</span>
+            <span class="cycle-cluster-pill">C{{ p.cluster_style.id }}</span>
+            <span class="cycle-cluster-label">{{ p.cluster_style.label }}</span>
+          </span>
+          <span class="cycle-cluster-row">
+            <span class="cycle-cluster-tag">quality</span>
+            <span class="cycle-cluster-pill">C{{ p.cluster_quality.id }}</span>
+            <span class="cycle-cluster-label">{{ p.cluster_quality.label }}</span>
+          </span>
+        </div>
+
+        {% if p.tactical %}
+        <div class="cycle-section">
+          <p class="cycle-section-label">Tactical read</p>
+          <p class="cycle-tactical">{{ p.tactical }}</p>
+        </div>
+        {% endif %}
+
+        {% if p.trajectory %}
+        <div class="cycle-section">
+          <p class="cycle-section-label">Trajektorie 24/25 &rarr; 25/26</p>
+          <p class="cycle-traj">
+            <span class="cycle-traj-delta">Δ {{ ('%+.3f' | format(p.trajectory.delta)) | replace('.', ',') }} P/GP</span>
+            <span class="cycle-traj-dir">{{ p.trajectory.direction }}</span>
+            <span class="cycle-traj-detail">{{ p.trajectory.gp_old }} GP &rarr; {{ p.trajectory.gp_new }} GP</span>
+          </p>
+        </div>
+        {% endif %}
+
+        {% if p.analogs %}
+        <div class="cycle-section">
+          <p class="cycle-section-label">Historické analogy @{{ p.comparison_age }}</p>
+          <ol class="cycle-analogs">
+            {% for a in p.analogs %}
+            <li>
+              <span class="cycle-analog-name">{{ a.name }}</span>
+              <span class="cycle-analog-country">{{ a.country }}</span>
+              <span class="cycle-analog-stats">
+                {{ a.league }} &middot; {{ a.GP }} GP &middot; {{ a.P }} P &middot;
+                d&nbsp;=&nbsp;{{ ('%.2f' | format(a.distance)) | replace('.', ',') }}
+              </span>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+        {% endif %}
+
+        {% if p.brief_excerpt %}
+        <div class="cycle-section">
+          <p class="cycle-section-label">LLM brief excerpt</p>
+          <p class="cycle-brief-excerpt">{{ p.brief_excerpt }}</p>
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    <p class="capita-note">
+      Každá karta je render existujícího datasetu &mdash; žádný nový výpočet
+      mimo synthesis. Production deployment této vrstvy by zahrnoval interaktivní
+      filtry (věk, pozice, liga, IIHF eligibility), per-hráče history sparkline,
+      a embed plně-generovaného briefu v expandable detailu.
     </p>
     {% endif %}
 
