@@ -14,7 +14,11 @@
 
 <a class="skip-link" href="#shrnuti">Přeskočit na obsah</a>
 
-<nav class="toc-sticky" aria-label="Obsah reportu">
+<nav class="toc-sticky" aria-label="Obsah reportu" id="toc">
+  <button type="button" class="toc-toggle" aria-controls="toc" aria-expanded="true"
+          aria-label="Skrýt obsah">
+    <span class="toc-toggle-glyph" aria-hidden="true"></span>
+  </button>
   <p class="toc-heading">Obsah</p>
   <ol>
     <li><a href="#shrnuti">Shrnutí</a>
@@ -27,7 +31,6 @@
     </li>
     <li><a href="#ai-vrstva">AI a multimodální vrstva</a>
       <ol>
-        <li><a href="#vision-profily">Vision-language profily</a></li>
         <li><a href="#historicke-analogy">Historické analogy</a></li>
         <li><a href="#roadmap-video">Plánováno: video tracking</a></li>
         <li><a href="#roadmap-buzz">Plánováno: media buzz</a></li>
@@ -66,7 +69,7 @@
       <summary>Obsah reportu</summary>
       <ol>
         <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
-        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#vision-profily">Vision profily</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
+        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
         <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
       </ol>
     </details>
@@ -684,9 +687,10 @@
   <span class="chapter-mark" aria-hidden="true"></span>
   <p class="chapter-title">AI a multimodální vrstva</p>
   <p class="chapter-synopsis">
-    Hybridní pipeline spojující data, video a taktické čtení v jedné metodice.
-    Vision-language profily, historické analogy v kariéře, roadmap pro video
-    tracking a media buzz.
+    Historické analogy v kariéře a roadmap pro video tracking a media buzz.
+    Capability layer, který kombinuje statistiku se strukturálním pohledem
+    na trajectorie a s pipelinami pro modality, jež federace dnes
+    zpracovává odděleně.
   </p>
 </aside>
 
@@ -694,115 +698,11 @@
   <div class="container">
     <h2 id="ai-vrstva">AI a multimodální vrstva</h2>
     <p class="framing">
-      Doplňková vrstva nad strukturovanými daty. Hybridní pipeline, která spojuje
-      modality, jež federace dnes zpracovává odděleně: fotografii a statistiku,
-      současný profil a historický analog, video a auditovatelnou metriku.
-      První dvě podsekce jsou implementované, další dvě jsou roadmap s ukázkovým
-      výstupem.
+      Doplňková vrstva nad strukturovanými daty. Spojuje současný statistický
+      profil s historickým analogem (implementováno) a otevírá modality,
+      jež federace dnes zpracovává odděleně, video a audio (roadmap
+      s ukázkovým výstupem).
     </p>
-
-    
-    <h3 id="vision-profily">Vision-language profily &middot; Claude Opus 4.7</h3>
-    <p>
-      Pro každého hráče se kombinuje akční foto z NHL CDN (vstupní modalita: obrázek)
-      s jeho strukturovanou statistickou kartou (vstupní modalita: pre-computed čísla).
-      Model popisuje hráče jako celek — co je vidět na snímku, jaké jsou stats,
-      kde se vizuál a čísla shodují, kde mezi nimi vzniká tenze. Tři odstavce
-      v češtině, žádné predikce, žádná doporučení.
-    </p>
-    <div class="vision-cards">
-      
-      <article class="vision-card">
-        <figure class="vision-card-photo">
-          <img src="https://assets.nhle.com/mugs/actionshots/1296x729/8477956.jpg" alt="Akční snímek David Pastrňák" loading="lazy">
-        </figure>
-        <div class="vision-card-body">
-          <h4>David Pastrňák</h4>
-          <p class="vision-card-meta">
-            Cache read 0 tok &middot;
-            out 696 tok &middot;
-            Czech &middot; claude-opus-4-7
-          </p>
-          
-          <p class="vision-card-para">Na snímku je hráč zachycen v opřené poloze u mantinelu, s pohledem mírně vzhůru a hokejkou nataženou před tělo v horizontální rovině. Vidět je černobílá helma Bauer s číslem 88, plexisklový půlvizor, krátký rezavý plnovous a véčko „A&#34; na dresu Bruins. Rukavice spočívají na hraně, hokejka je černá s výrazným zakřivením čepele směřujícím vzhůru. Postoj je statický, fotografie nezachycuje pohybovou fázi, pouze klidovou pozici v prostoru hřiště.</p>
-          
-          <p class="vision-card-para">Statistická karta ukazuje konzistenci na elitní úrovni: tři po sobě jdoucí sezóny s 100+ body (110, 106, 100) a střelecké objemy 261-382 ran za sezónu, tedy 3.39-4.66 S/GP. Kariérní totaly 420 G a 513 A na 833 zápasů odpovídají kadenci 1.12 P/GP přes celou kariéru. Cluster zařazení C3/C0 v kombinaci s quality z-score +6.50 řadí profil do horního ocasu rozdělení. Účast na dvou MS doplňuje mezinárodní vzorek.</p>
-          
-          <p class="vision-card-para">Zakřivení čepele a způsob, jakým je hokejka držena nataženě před tělem, je strukturálně konzistentní s profilem hráče, jehož produkce je vázána na střeleckou aktivitu — 319 a 382 ran v předchozích dvou sezónách nejsou náhodné, naznačují opakovaný shot-first sklon. Véčko asistenta na dresu doplňuje statistický obraz seniorní role v sestavě. Snímek je ovšem klidový portrét, nikoli akce; samotná fotka nemůže potvrdit release ani edge work. Statistická konzistence napříč třemi sezónami je tu hlavním signálem, vizuál slouží jako doplňující kontext, ne důkaz stylu.</p>
-          
-        </div>
-      </article>
-      
-      <article class="vision-card">
-        <figure class="vision-card-photo">
-          <img src="https://assets.nhle.com/mugs/actionshots/1296x729/8479425.jpg" alt="Akční snímek Filip Hronek" loading="lazy">
-        </figure>
-        <div class="vision-card-body">
-          <h4>Filip Hronek</h4>
-          <p class="vision-card-meta">
-            Cache read 0 tok &middot;
-            out 724 tok &middot;
-            Czech &middot; claude-opus-4-7
-          </p>
-          
-          <p class="vision-card-para">Na snímku je hráč v tmavě modrém dresu Vancouveru s číslem 17, zachycen v mírném předklonu nad ledem, hůl drženou oběma rukama nízko před tělem, čepel položená naplocho na ploše. Hlava je zvednutá, pohled směřuje vpřed mimo kotouč. Ramena jsou srovnaná, kolena pokrčená, váha přenesená na vnitřní hrany bruslí. Postava působí kompaktně, bez výrazné fyzické masivnosti — proporce odpovídají uváděným 183 cm a 86 kg.</p>
-          
-          <p class="vision-card-para">Karta ukazuje v sezóně 2025/26 8 G, 41 A a 49 bodů v 82 zápasech při 137 střelách, P/GP 0,60 a S/GP 1,67. V 2023/24 obdobně 48 bodů a 148 střel ve 81 zápasech. Kariérní součet je 533 GP, 287 bodů, z toho 239 asistencí. Quality cluster C3 s z-score +6,21 a style cluster C0. Jeden záznam z MS 24/25. Poměr asistencí k bodům přesahuje 0,83 napříč třemi sezónami.</p>
-          
-          <p class="vision-card-para">Pozice na snímku — hlava nahoře, hůl natažená dopředu k vedení puku, otevřený postoj bez záměru střely — koresponduje s profilem, kde dominují asistence (239 vs. 48 gólů) a kde jeden z nejvyšších z-score v souboru spočívá na objemu střel a distribuci, nikoli na zakončení. Snímek zachycuje fázi přenosu puku, což je vizuálně konzistentní s C0 stylem zaměřeným na transport. Tenze: 137–148 střel za sezónu naznačuje aktivní zapojení do ofenzivy, na fotografii však není zachycen moment vlastního zakončení; jeden snímek nemůže potvrdit konverzní profil, statistika ho doplňuje.</p>
-          
-        </div>
-      </article>
-      
-      <article class="vision-card">
-        <figure class="vision-card-photo">
-          <img src="https://assets.nhle.com/mugs/actionshots/1296x729/8483468.jpg" alt="Akční snímek Jiří Kulich" loading="lazy">
-        </figure>
-        <div class="vision-card-body">
-          <h4>Jiří Kulich</h4>
-          <p class="vision-card-meta">
-            Cache read 0 tok &middot;
-            out 797 tok &middot;
-            Czech &middot; claude-opus-4-7
-          </p>
-          
-          <p class="vision-card-para">Na snímku stojí hráč v modrém dresu Buffala v pozici po dokončení střely nebo přihrávky — hůl je vedena nízko a téměř vodorovně skrz trup, obě ruce drží hokejku v úchopu typickém pro forehandové zakončení, horní ruka u boku, spodní vysunutá vpřed. Trup je mírně předkloněný, hlava zvednutá s pohledem sledujícím dráhu kotouče. Vizor s plnou ochranou, dres bez viditelného čísla na předku. Postava působí kompaktně, bez nadměrné hmoty v ramenou.</p>
-          
-          <p class="vision-card-para">Karta uvádí 185 cm a 88 kg, pozici středního útočníka, věk 22. V sezóně 2024/25 odehrál 62 zápasů s bilancí 15+9 = 24 bodů, 134 střel (S/GP 2.16, G/S přibližně 0.11). Aktuální 2025/26 vykazuje 12 GP, 5 bodů, 20 střel, tedy 1.67 S/GP a P/GP 0.42. Atlas projekce řadí hráče do quality clusteru C4 se z-score +1.41 a stylového clusteru C1. Kariérně 75 NHL zápasů, 29 bodů, jeden záznam IIHF MS 24/25.</p>
-          
-          <p class="vision-card-para">Dokončený pohyb hole zachycený na snímku rezonuje se statistickým profilem postaveným především na objemu střelby — 2.16 S/GP v plné sezóně a vysoké 1.67 i ve vzorku letošního ročníku naznačují roli zakončovatele, k níž zachycené tělesné nastavení (nízká hůl, prodloužený follow-through skrz osu těla) odpovídá. Quality z-score +1.41 v rámci C4 a P/GP kolem 0.40 ukazují na nadprůměrnou ofenzivní hodnotu v relativně raném stadiu kariéry. Tenze leží mezi konverzí — 15 gólů na 134 střel je solidní, ne výjimečné — a vizuálním dojmem ostrého releasu; jeden snímek však zachycuje moment, nikoli průměr.</p>
-          
-        </div>
-      </article>
-      
-      <article class="vision-card">
-        <figure class="vision-card-photo">
-          <img src="https://assets.nhle.com/mugs/actionshots/1296x729/8480039.jpg" alt="Akční snímek Martin Nečas" loading="lazy">
-        </figure>
-        <div class="vision-card-body">
-          <h4>Martin Nečas</h4>
-          <p class="vision-card-meta">
-            Cache read 0 tok &middot;
-            out 758 tok &middot;
-            Czech &middot; claude-opus-4-7
-          </p>
-          
-          <p class="vision-card-para">Na snímku je hráč v dresu Colorado Avalanche s číslem 88, zachycen v mírně předkloněném postoji uprostřed bruslení podél mantinelu. Hokejka je vedena nízko obouruč, čepel u ledu, ruce v Bauer rukavicích drží hůl v širším úchopu typickém pro skenování prostoru. Hlava je zvednutá, pohled mimo kotouč, do strany — tělo otevřené. Vysoká, štíhlá konstrukce odpovídá uvedeným 191 cm. Plexisklový půlvizor, bez stop kontaktu v okamžiku snímku.</p>
-          
-          <p class="vision-card-para">Sezóna 2025/26 vykazuje 100 bodů ve 78 zápasech (1,28 P/GP) při 206 střelách, tedy 2,64 S/GP a střelecké efektivitě 0,18. Předchozí ročník 2024/25 byl rozdělen mezi dva týmy s kombinovaným tempem kolem 1,05 P/GP. Kariérní suma činí 426 bodů v 519 zápasech. Atlas ho řadí do quality clusteru C3 se z-score +6,41 a stylového clusteru C0. Dvě účasti na MS v sezónách 24/25.</p>
-          
-          <p class="vision-card-para">Vzpřímená hlava a otevřené tělo na fotce korespondují s profilem hráče, jehož bodová produkce se opírá výrazně o asistence (62 A vůči 38 G v poslední sezóně) — vizuální skenování ledu je konzistentní se statistickým podílem nahrávek. Vysoký objem střel (2,64 S/GP) přitom naznačuje, že role není čistě tvůrčí; snímek však tuto střeleckou složku nezachycuje, hokejka je v přípravné, nikoli zakončovací pozici. Tenze mezi obrazem (kontrolovaná, čtecí fáze) a čísly (vysoký shot volume) je očekávaná — jeden snímek nemůže reprezentovat celý styl, statistická konzistence napříč 519 zápasy je silnější signál.</p>
-          
-        </div>
-      </article>
-      
-    </div>
-    <p class="capita-note">
-      Cena marginal: ~3 000 cached input + ~700 output tokenů na hráče.
-      Při zahrnutí prompt cachingu po prvním volání ≈ <strong>0,02&ndash;0,04 USD na kartu</strong>.
-      Celý český pool (78 hráčů) by stál cca 1,50&ndash;3 USD jednorázově.
-    </p>
-    
 
     
     <h3 id="historicke-analogy">Historické analogy v kariéře</h3>
@@ -2286,9 +2186,34 @@ aplikovat na vlastní rozšířenou datovou základnu.</p>
         </span>
       </p>
     </div>
-    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:02</p>
+    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:11</p>
   </div>
 </footer>
+
+<script>
+  (() => {
+    const toc = document.getElementById('toc');
+    if (!toc) return;
+    const btn = toc.querySelector('.toc-toggle');
+    if (!btn) return;
+    const KEY = 'atlas-toc-collapsed';
+    const apply = (collapsed) => {
+      toc.dataset.collapsed = collapsed ? 'true' : 'false';
+      btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      btn.setAttribute('aria-label', collapsed ? 'Zobrazit obsah' : 'Skrýt obsah');
+    };
+    try {
+      apply(localStorage.getItem(KEY) === 'true');
+    } catch (e) {
+      apply(false);
+    }
+    btn.addEventListener('click', () => {
+      const next = toc.dataset.collapsed !== 'true';
+      apply(next);
+      try { localStorage.setItem(KEY, next ? 'true' : 'false'); } catch (e) {}
+    });
+  })();
+</script>
 
 </body>
 </html>

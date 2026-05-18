@@ -14,7 +14,11 @@
 
 <a class="skip-link" href="#shrnuti">Přeskočit na obsah</a>
 
-<nav class="toc-sticky" aria-label="Obsah reportu">
+<nav class="toc-sticky" aria-label="Obsah reportu" id="toc">
+  <button type="button" class="toc-toggle" aria-controls="toc" aria-expanded="true"
+          aria-label="Skrýt obsah">
+    <span class="toc-toggle-glyph" aria-hidden="true"></span>
+  </button>
   <p class="toc-heading">Obsah</p>
   <ol>
     <li><a href="#shrnuti">Shrnutí</a>
@@ -27,7 +31,6 @@
     </li>
     <li><a href="#ai-vrstva">AI a multimodální vrstva</a>
       <ol>
-        <li><a href="#vision-profily">Vision-language profily</a></li>
         <li><a href="#historicke-analogy">Historické analogy</a></li>
         <li><a href="#roadmap-video">Plánováno: video tracking</a></li>
         <li><a href="#roadmap-buzz">Plánováno: media buzz</a></li>
@@ -66,7 +69,7 @@
       <summary>Obsah reportu</summary>
       <ol>
         <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
-        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#vision-profily">Vision profily</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
+        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
         <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
       </ol>
     </details>
@@ -321,9 +324,10 @@
   <span class="chapter-mark" aria-hidden="true"></span>
   <p class="chapter-title">AI a multimodální vrstva</p>
   <p class="chapter-synopsis">
-    Hybridní pipeline spojující data, video a taktické čtení v jedné metodice.
-    Vision-language profily, historické analogy v kariéře, roadmap pro video
-    tracking a media buzz.
+    Historické analogy v kariéře a roadmap pro video tracking a media buzz.
+    Capability layer, který kombinuje statistiku se strukturálním pohledem
+    na trajectorie a s pipelinami pro modality, jež federace dnes
+    zpracovává odděleně.
   </p>
 </aside>
 
@@ -331,48 +335,11 @@
   <div class="container">
     <h2 id="ai-vrstva">AI a multimodální vrstva</h2>
     <p class="framing">
-      Doplňková vrstva nad strukturovanými daty. Hybridní pipeline, která spojuje
-      modality, jež federace dnes zpracovává odděleně: fotografii a statistiku,
-      současný profil a historický analog, video a auditovatelnou metriku.
-      První dvě podsekce jsou implementované, další dvě jsou roadmap s ukázkovým
-      výstupem.
+      Doplňková vrstva nad strukturovanými daty. Spojuje současný statistický
+      profil s historickým analogem (implementováno) a otevírá modality,
+      jež federace dnes zpracovává odděleně, video a audio (roadmap
+      s ukázkovým výstupem).
     </p>
-
-    {% if vision_cards %}
-    <h3 id="vision-profily">Vision-language profily &middot; Claude Opus 4.7</h3>
-    <p>
-      Pro každého hráče se kombinuje akční foto z NHL CDN (vstupní modalita: obrázek)
-      s jeho strukturovanou statistickou kartou (vstupní modalita: pre-computed čísla).
-      Model popisuje hráče jako celek — co je vidět na snímku, jaké jsou stats,
-      kde se vizuál a čísla shodují, kde mezi nimi vzniká tenze. Tři odstavce
-      v češtině, žádné predikce, žádná doporučení.
-    </p>
-    <div class="vision-cards">
-      {% for card in vision_cards %}
-      <article class="vision-card">
-        <figure class="vision-card-photo">
-          <img src="{{ card.photo_url }}" alt="Akční snímek {{ card.name }}" loading="lazy">
-        </figure>
-        <div class="vision-card-body">
-          <h4>{{ card.name }}</h4>
-          <p class="vision-card-meta">
-            Cache read {{ card.cache_read_tokens or 0 }} tok &middot;
-            out {{ card.output_tokens }} tok &middot;
-            Czech &middot; {{ card.model }}
-          </p>
-          {% for para in card.paragraphs %}
-          <p class="vision-card-para">{{ para }}</p>
-          {% endfor %}
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-    <p class="capita-note">
-      Cena marginal: ~3 000 cached input + ~700 output tokenů na hráče.
-      Při zahrnutí prompt cachingu po prvním volání ≈ <strong>0,02&ndash;0,04 USD na kartu</strong>.
-      Celý český pool (78 hráčů) by stál cca 1,50&ndash;3 USD jednorázově.
-    </p>
-    {% endif %}
 
     {% if historical_analogs %}
     <h3 id="historicke-analogy">Historické analogy v kariéře</h3>
@@ -756,6 +723,31 @@
     <p class="rendered-at">Vyrenderováno: {{ rendered_at }}</p>
   </div>
 </footer>
+
+<script>
+  (() => {
+    const toc = document.getElementById('toc');
+    if (!toc) return;
+    const btn = toc.querySelector('.toc-toggle');
+    if (!btn) return;
+    const KEY = 'atlas-toc-collapsed';
+    const apply = (collapsed) => {
+      toc.dataset.collapsed = collapsed ? 'true' : 'false';
+      btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      btn.setAttribute('aria-label', collapsed ? 'Zobrazit obsah' : 'Skrýt obsah');
+    };
+    try {
+      apply(localStorage.getItem(KEY) === 'true');
+    } catch (e) {
+      apply(false);
+    }
+    btn.addEventListener('click', () => {
+      const next = toc.dataset.collapsed !== 'true';
+      apply(next);
+      try { localStorage.setItem(KEY, next ? 'true' : 'false'); } catch (e) {}
+    });
+  })();
+</script>
 
 </body>
 </html>
