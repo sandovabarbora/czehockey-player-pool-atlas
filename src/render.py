@@ -200,7 +200,13 @@ def _build_cluster_summary_rich(
 
 
 def _build_top_movers(trajectory: pd.DataFrame, n: int = 5) -> tuple[list[dict], list[dict]]:
-    """Return (top_improvers, top_decliners) for forwards."""
+    """Return (top_improvers, top_decliners) for forwards.
+
+    Filters by the direction column from trajectory.py — improvers must have
+    direction=="improving" (delta exceeds CI band), decliners must have
+    direction=="declining". Near-zero deltas (direction="stable") don't
+    appear in either list — they belong on the stable middle.
+    """
     if trajectory.empty:
         return [], []
     fwd = trajectory[trajectory["position"] == "F"]
@@ -218,8 +224,10 @@ def _build_top_movers(trajectory: pd.DataFrame, n: int = 5) -> tuple[list[dict],
             "new": round(float(r.points_per_gp_quality_new), 3),
         }
 
-    top_imp = [_row(r) for r in fwd.nlargest(n, "d_points_per_gp_quality").itertuples()]
-    top_dec = [_row(r) for r in fwd.nsmallest(n, "d_points_per_gp_quality").itertuples()]
+    improving = fwd[fwd["direction"] == "improving"]
+    declining = fwd[fwd["direction"] == "declining"]
+    top_imp = [_row(r) for r in improving.nlargest(n, "d_points_per_gp_quality").itertuples()]
+    top_dec = [_row(r) for r in declining.nsmallest(n, "d_points_per_gp_quality").itertuples()]
     return top_imp, top_dec
 
 

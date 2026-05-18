@@ -72,7 +72,7 @@
             <td>{{ r.name }}</td>
             <td class="muted">{{ r.league }}</td>
             <td class="muted">{{ r.gp_old }} / {{ r.gp_new }}</td>
-            <td class="delta-up">+{{ '%.3f' | format(r.delta) }}</td>
+            <td class="delta-up">{{ '%+.3f' | format(r.delta) }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -88,7 +88,7 @@
             <td>{{ r.name }}</td>
             <td class="muted">{{ r.league }}</td>
             <td class="muted">{{ r.gp_old }} / {{ r.gp_new }}</td>
-            <td class="delta-down">{{ '%.3f' | format(r.delta) }}</td>
+            <td class="delta-down">{{ '%+.3f' | format(r.delta) }}</td>
           </tr>
           {% endfor %}
         </tbody>
