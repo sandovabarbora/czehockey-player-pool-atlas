@@ -58,6 +58,43 @@ def _annotate_top_players(ax, df: pd.DataFrame, x_col: str, y_col: str,
         )
 
 
+DIRECTION_COLOR = {
+    "improving": "#2e7d32",  # green
+    "declining": "#9c2a2a",  # red
+    "stable": "#888888",
+}
+
+
+def _draw_trajectory_arrows(ax, trajectory: pd.DataFrame, proj_label: str) -> None:
+    """Overlay arrows from (PCA_old) → (PCA_new) for each qualifying player.
+
+    Color-coded by direction (improving / stable / declining). Skips rows
+    with missing PCA coordinates.
+    """
+    if trajectory.empty:
+        return
+    x_old, y_old = f"pca_x_{proj_label}_old", f"pca_y_{proj_label}_old"
+    x_new, y_new = f"pca_x_{proj_label}_new", f"pca_y_{proj_label}_new"
+    needed = (x_old, y_old, x_new, y_new)
+    if not all(c in trajectory.columns for c in needed):
+        return
+    for _, r in trajectory.iterrows():
+        if any(pd.isna(r[c]) for c in needed):
+            continue
+        ax.annotate(
+            "",
+            xy=(r[x_new], r[y_new]),
+            xytext=(r[x_old], r[y_old]),
+            arrowprops=dict(
+                arrowstyle="->",
+                color=DIRECTION_COLOR.get(r["direction"], "#888"),
+                lw=1.2,
+                alpha=0.85,
+            ),
+            zorder=6,
+        )
+
+
 def render_forward_atlas() -> None:
     """Two-panel SVG: forward Atlas in style + quality projections."""
     coords_path = config.PROCESSED_DIR / "coords_forwards.parquet"
@@ -66,6 +103,13 @@ def render_forward_atlas() -> None:
     latest_season = int(coords["season"].max())
     cur = coords[coords["season"] == latest_season].copy()
     LOG.info("rendering %d forwards for season %d", len(cur), latest_season)
+
+    # Trajectory overlay
+    traj_path = config.PROCESSED_DIR / "trajectory.parquet"
+    traj_fwd = pd.DataFrame()
+    if traj_path.exists():
+        traj_all = read_parquet(traj_path)
+        traj_fwd = traj_all[traj_all["position"] == "F"]
 
     # Use quality z-score (computed elsewhere) as rank for annotation prioritization
     # If absent, fall back to PCA-y of the quality projection.
@@ -108,6 +152,7 @@ def render_forward_atlas() -> None:
         )
 
         _annotate_top_players(ax, sub, x_col, y_col, "rank", n=12)
+        _draw_trajectory_arrows(ax, traj_fwd, proj_label)
 
         ax.set_title(title, fontsize=11, fontfamily="serif", color=INK)
         ax.set_xlabel("PC1", fontsize=9, color=MUTED)
@@ -126,7 +171,8 @@ def render_forward_atlas() -> None:
     fig.text(
         0.5, -0.02,
         "PCA projekce z 4D feature vektoru (G/GP, A/GP, PIM/GP, věk). "
-        "Cluster ID z KMeans + silhouette. Modré kroužky = MS 2024/25 účastníci.",
+        "Cluster ID z KMeans + silhouette. Modré kroužky = MS 2024/25 účastníci. "
+        "Šipky = trajektorie 2024/25 → 2025/26 (zelená = zlepšení, červená = pokles, šedá = stabilní).",
         ha="center", fontsize=8, color=MUTED, fontfamily="sans-serif",
     )
     plt.tight_layout()
