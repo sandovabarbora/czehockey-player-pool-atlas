@@ -381,10 +381,119 @@ h2[id], h3[id] { scroll-margin-top: 2rem; }
 }
 
 /* =========================================================================
+   Hero edition stamp — top-right cover-page marker
+   Intelligence-brief convention: every brief carries its identity stamp
+   (REPORT / Atlas / 2025-26 / edice 01 / MIT) so the document declares
+   itself before its content does.
+   ========================================================================= */
+.hero-stamp {
+  position: absolute;
+  top: var(--space-5);
+  right: max(1.4rem, calc((100vw - var(--container)) / 2 + 1.4rem));
+  z-index: 2;
+  padding: 0.55rem 0.85rem 0.5rem;
+  background: oklch(0.155 0.05 252);
+  border: 1px solid var(--navy-divider);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  line-height: 1.55;
+  color: var(--cream-on-navy-muted);
+  letter-spacing: 0.06em;
+  text-align: right;
+  max-width: 15rem;
+}
+.hero-stamp-line { margin: 0; max-width: none; }
+.hero-stamp-line strong {
+  color: var(--cream-on-navy);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+@media (max-width: 720px) {
+  .hero-stamp {
+    position: static;
+    margin: 0 auto var(--space-4);
+    max-width: max-content;
+    text-align: left;
+  }
+}
+
+/* =========================================================================
+   Chapter divider — page-break between major sections
+   Long-form intelligence briefs use chapters; we use them only between
+   sections that mark a real shift in subject (II = AI vrstva, III =
+   Metodologie). Chapter I is implicit in the hero, not labelled.
+   ========================================================================= */
+.chapter-divider {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-1);
+  text-align: center;
+  padding: var(--space-8) max(1.4rem, 4vw) var(--space-7);
+  max-width: 56ch;
+  margin: 0 auto;
+}
+.chapter-numeral {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-display);
+  font-weight: 200;
+  font-size: clamp(5rem, 12vw, 9.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--navy-700);
+  font-feature-settings: "lnum";
+  max-width: none;
+}
+.chapter-mark {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background: var(--oxblood-700);
+  margin: 0 auto var(--space-3);
+}
+.chapter-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+  letter-spacing: -0.018em;
+  line-height: 1.15;
+  color: var(--ink);
+  max-width: none;
+}
+.chapter-synopsis {
+  margin: var(--space-3) auto 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+/* =========================================================================
    Section scaffolding (exec-summary, methodology)
    ========================================================================= */
 .exec-summary { padding: var(--space-7) 0 var(--space-6); }
 .methodology  { padding: var(--space-7) 0 var(--space-5); }
+
+/* Section immediately after a chapter divider already has the divider's
+   bottom padding as breathing room; collapse its own top padding to
+   avoid stacking double whitespace. */
+.chapter-divider + section { padding-top: var(--space-3); }
+
+/* The chapter divider visually carries the H2 role (large numeral, mark,
+   title, synopsis). Hide the section's own h2 to avoid duplication, but
+   keep it in DOM for TOC anchors and accessible outline. */
+.chapter-divider + section > .container > h2:first-child {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 .exec-summary h2,
 .methodology h2 {

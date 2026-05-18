@@ -81,6 +81,11 @@
 {% set cze_row = intl_per_capita | selectattr('country', 'equalto', 'CZE') | list | first if intl_has_data else none %}
 {% set max_per_million = intl_per_capita | map(attribute='per_million') | max if intl_has_data else 8 %}
 <section class="hero" id="shrnuti">
+  <aside class="hero-stamp" aria-label="Identifikace dokumentu">
+    <p class="hero-stamp-line">REPORT</p>
+    <p class="hero-stamp-line"><strong>Atlas · 2025/26</strong></p>
+    <p class="hero-stamp-line">edice 01 · MIT</p>
+  </aside>
   <div class="container">
     <p class="hero-kicker">Shrnutí · strukturální benchmark vs peer-země</p>
     <h2>Shrnutí</h2>
@@ -311,6 +316,17 @@
    Vision-language player cards, historical analog finder, plus
    honest roadmap mockups for video tracking and media-buzz indices.
    ============================================================================= #}
+<aside class="chapter-divider" role="separator" aria-label="Kapitola II">
+  <p class="chapter-numeral">II</p>
+  <span class="chapter-mark" aria-hidden="true"></span>
+  <p class="chapter-title">AI a multimodální vrstva</p>
+  <p class="chapter-synopsis">
+    Hybridní pipeline spojující data, video a taktické čtení v jedné metodice.
+    Vision-language profily, historické analogy v kariéře, roadmap pro video
+    tracking a media buzz.
+  </p>
+</aside>
+
 <section class="ai-layer">
   <div class="container">
     <h2 id="ai-vrstva">AI a multimodální vrstva</h2>
@@ -572,6 +588,17 @@
 {# =============================================================================
    SECTION B — METHODOLOGY & RESULTS (≥ 45 min read, audience: Morkes)
    ============================================================================= #}
+<aside class="chapter-divider" role="separator" aria-label="Kapitola III">
+  <p class="chapter-numeral">III</p>
+  <span class="chapter-mark" aria-hidden="true"></span>
+  <p class="chapter-title">Metodologie</p>
+  <p class="chapter-synopsis">
+    Replikovatelná pipeline. Datové zdroje, ligové násobičky, Bayesovský
+    shrinkage, PCA loadings, citlivostní analýza. Atlas obránců a kompletní
+    cluster detaily. Limitace.
+  </p>
+</aside>
+
 <section class="methodology">
   <div class="container">
     <h2 id="metodologie">Metodologie</h2>
