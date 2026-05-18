@@ -1,0 +1,40 @@
+{# Main report template. Renders to outputs/index.html.
+   Two-tiered structure: exec summary block first, methodology block below. #}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Český hokej — Atlas fondu hráčů</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="report-header">
+    <h1>Český hokej — Atlas fondu hráčů</h1>
+    <p class="subtitle">
+      Pozičně normalizovaná mapa cca {{ n_players }} hokejistů s českou
+      mezinárodní způsobilostí. Metodologický nástroj pro průběžné mapování
+      fondu hráčů, ne výběrové doporučení.
+    </p>
+  </header>
+
+  {# --- Section A: Executive Summary (Hnilička read time <= 90s) --- #}
+  {% include "exec_summary.html.j2" %}
+
+  {# --- Section B: Methodology & Results (Morkes read time >= 45min) --- #}
+  <section class="methodology">
+    <h2>Metodologie a výsledky</h2>
+    <p><em>Tato sekce bude vykreslena v Phase 1c Day 10.</em></p>
+  </section>
+
+  <footer>
+    <p>
+      Barbora Šandová · barbora@datasimply.eu ·
+      <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">
+        github.com/barborasandova/czehockey-player-pool-atlas
+      </a>
+    </p>
+    <p class="rendered-at">Vyrenderováno: {{ rendered_at }}</p>
+  </footer>
+</body>
+</html>

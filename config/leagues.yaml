@@ -1,0 +1,68 @@
+# Leagues included in the player pool.
+# Each league declares its fetch strategy and the source it represents.
+
+# Strategy values:
+#   http_json     - direct HTTP GET, parse JSON (NHL API)
+#   http_csv      - direct CSV download (MoneyPuck)
+#   http_html     - HTTP GET + BeautifulSoup (hokej.cz, IIHF)
+#   playwright    - Playwright headless browser (SPA-rendered sites)
+
+leagues:
+  nhl:
+    name: National Hockey League
+    country: NA
+    tier: 1
+    strategy: http_json
+    season_window: [2024, 2025]   # MoneyPuck uses single-year (2024 = 2024/25 season)
+
+  ahl:
+    name: American Hockey League
+    country: NA
+    tier: 2
+    strategy: http_html
+    notes: Limited advanced stats. Use hockey-reference + theahl.com.
+
+  liiga:
+    name: Liiga
+    country: FI
+    tier: 1
+    strategy: playwright
+    notes: API v2 locked. Render SPA pages via Playwright Chromium.
+
+  shl:
+    name: Svenska Hockeyligan
+    country: SE
+    tier: 1
+    strategy: playwright
+    notes: SPA, no SSR data.
+
+  nl:
+    name: National League
+    country: CH
+    tier: 1
+    strategy: playwright
+    notes: SPA via sihf.ch.
+
+  extraliga:
+    name: Tipsport Extraliga
+    country: CZ
+    tier: 1
+    strategy: http_html
+    notes: SSR'd on hokej.cz, /hrac/{slug}/{id} URL pattern.
+
+  cz1l:
+    name: Chance Liga (1. liga)
+    country: CZ
+    tier: 2
+    strategy: http_html
+    notes: For top prospects only — defined as IIHF U20/U18 participants in last 3 years.
+
+# Explicitly excluded
+excluded:
+  khl:
+    name: Kontinental Hockey League
+    reason: |
+      Excluded for political and data-quality reasons. Political sanctions limit the
+      usability of Russian statistical sources, and data quality has been unverifiable
+      recently. Czech players in KHL are not captured in this version of the map.
+      This exclusion is documented in the report's Limitations section.

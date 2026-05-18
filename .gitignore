@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Data — large files, regenerable from sources
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Notebook artifacts
+.ipynb_checkpoints/
+notebooks/*-checkpoint.ipynb
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+outputs/*.html
+outputs/*.pdf
+outputs/*.svg
+outputs/*.png
+!outputs/.gitkeep
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Playwright
+playwright/.cache/
+node_modules/
+
+# Secrets (none expected, defensive)
+.env
+.env.*
+!.env.example
+secrets/

@@ -1,0 +1,24 @@
+{# Executive Summary block. Designed for ~90 second read by non-technical
+   decision-makers (Hnilička, Šlégr, Rulík). Will be rendered in Phase 1c Day 9. #}
+<section class="exec-summary">
+  <h2>Shrnutí</h2>
+  <p class="framing">
+    Mapa cca {{ n_players }} Čechy hokejistů ve světových profesionálních ligách,
+    segmentovaná podle pozice a herního profilu. Metodologický nástroj pro
+    průběžné mapování fondu hráčů, ne výběrové doporučení.
+  </p>
+
+  {# Two side-by-side maps: style (no multipliers) + quality-adjusted #}
+  <div class="atlas-pair">
+    <figure>
+      <img src="atlas_style.svg" alt="Style mapa: pozičně normalizované z-skóre">
+      <figcaption>Style mapa &mdash; nezávisle na ligové síle</figcaption>
+    </figure>
+    <figure>
+      <img src="atlas_quality.svg" alt="Kvalitou upravená mapa">
+      <figcaption>Kvalitou upravená mapa &mdash; s násobičkami lig</figcaption>
+    </figure>
+  </div>
+
+  <p><em>Cluster summary cards, top 5 risers/fallers, observations: vykreslí Phase 1c Day 9.</em></p>
+</section>
