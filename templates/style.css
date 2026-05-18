@@ -1370,6 +1370,14 @@ li strong { font-family: var(--font-display); font-weight: 600; }
   color: var(--muted);
   max-width: none;
 }
+.video-poc-timeline {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: var(--space-3) 0;
+  background: var(--cream-50);
+  border: 1px solid var(--rule);
+}
 .video-poc-metrics {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1434,18 +1442,24 @@ li strong { font-family: var(--font-display); font-weight: 600; }
   font-style: italic;
   font-weight: 300;
   font-size: 0.92rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--ink-soft);
-  margin: 0;
+  margin: 0 0 var(--space-3);
   text-align: left;
-  max-width: 60ch;
+  max-width: 64ch;
   padding: 0;
 }
+.roadmap-caption:last-child { margin-bottom: 0; }
 .roadmap-caption strong {
   font-family: var(--font-display);
   font-style: normal;
   font-weight: 600;
   color: var(--oxblood-700);
+}
+.roadmap-caption em {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--ink);
 }
 
 /* =========================================================================

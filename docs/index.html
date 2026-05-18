@@ -1706,7 +1706,8 @@
       30sekundový publikně dostupný highlight Tipsport Extraliga (sezóna 2024/25,
       Karlovy Vary vs HC Mountfield) byl zpracován pretrained YOLOv8n modelem
       (COCO-trained, žádný hockey-specific fine-tuning). Sample 21 frames
-      (každých 1,5 s), detekce class 0 (person) a class 32 (sports ball).
+      ze 751, detekce class 0 (person, proxy pro skater + rozhodčí) a class 32
+      (sports ball, proxy pro puk).
     </p>
     <figure class="video-poc">
       <figcaption class="roadmap-label">Real PoC &middot; YOLOv8n na 30 s Extraliga broadcast</figcaption>
@@ -1715,32 +1716,59 @@
           <img src="video_poc_annotated.jpg"
                alt="Anotovaný frame z Extraliga broadcast: 19 detekovaných osob (hráči + rozhodčí) v bounding boxech přes celé kluziště"
                loading="lazy">
-          <p class="video-poc-figlabel">Frame 185 &middot; 19 osob detekovaných (peak)</p>
+          <p class="video-poc-figlabel">
+            Frame 185 &middot; 19 osob detekovaných (wide-angle, pravděpodobně faceoff nebo regroup)
+          </p>
         </div>
         <div class="video-poc-frame">
           <img src="video_poc_heatmap.png"
                alt="Heatmap pozic detekovaných osob agregovaná přes 21 vzorkovaných frames; tmavší navy oblast = vyšší hustota pohybu"
                loading="lazy">
-          <p class="video-poc-figlabel">Agregát 21 frames &middot; hustota pozic hráčů</p>
+          <p class="video-poc-figlabel">
+            Agregát 21 frames &middot; centrální hot zones = broadcast bias, kamera sleduje puk
+          </p>
         </div>
       </div>
+      <img src="video_poc_timeline.png"
+           alt="Bar chart hustoty detekcí v čase: 21 vzorkovaných frames z 30 s clipu, výška bar = počet osob, barva = zóna akce (vlevo/centrum/vpravo); 14 frames centrum, 1 frame vpravo, 6 frames close-up bez detekce"
+           class="video-poc-timeline"
+           loading="lazy">
       <dl class="video-poc-metrics">
-        <div><dt>Frames sampled</dt><dd>21 / 751</dd></div>
-        <div><dt>Mean osob / frame</dt><dd>6,1</dd></div>
-        <div><dt>Total detekcí</dt><dd>129</dd></div>
-        <div><dt>Inference / frame</dt><dd>18,3 ms</dd></div>
-        <div><dt>Realtime ekvivalent</dt><dd>~55 fps</dd></div>
-        <div><dt>Hardware</dt><dd>Apple Silicon, CPU</dd></div>
+        <div><dt>Osob na ledě v záběru</dt><dd>6,1 / frame</dd></div>
+        <div><dt>Wide-angle peak</dt><dd>19 osob</dd></div>
+        <div><dt>Close-up frames</dt><dd>6 / 21</dd></div>
+        <div><dt>Zóna akce centrum</dt><dd>14 / 21</dd></div>
+        <div><dt>Inference (CPU)</dt><dd>18,3 ms / frame</dd></div>
+        <div><dt>Real-time capacity</dt><dd>~55 fps</dd></div>
       </dl>
       <figcaption class="roadmap-caption">
-        Pretrained YOLOv8n (6,5 MB, COCO 80-class) bez hockey-specific tréninku.
-        <strong>0 detekcí puku</strong> v celém clipu, očekávané: COCO
-        "sports ball" třída není trénována na malé rychlé puk; produkční hockey
-        detector vyžaduje fine-tune na annotated rink dataset (Roboflow public
-        sets nebo vlastní labelling). Per-frame coords by se kalibrovaly na
-        rink coordinates homografií fixních markerů (modrá/červená linie,
-        kruhy faceoff). Tato ukázka je <strong>proof of CV stack</strong>,
-        ne produkční hockey tracker.
+        <strong>Hokejové čtení toho, co model vidí:</strong> 5v5 zápas má 14 osob
+        na ledě (10 skaters + 2 brankáři + 2 rozhodčí). Mean 6,1 v záběru odráží
+        broadcast cut, ne defektní detekci. Wide-angle frame s 19 osobami zachycuje
+        celé kluziště včetně střídaček (= n &gt; reálný on-ice počet). Šest
+        close-up frames bez detekce jsou hero shots a replays (kamera na obličeji
+        hráče). Centrální hot zones na heatmap jsou důsledek broadcast bias
+        (kamera sleduje puk), ne tactical pattern.
+      </figcaption>
+      <figcaption class="roadmap-caption">
+        <strong>0 detekcí puku</strong> není failure, je to očekávaný floor:
+        puk má v 640&times;360 broadcast frame ~1-2 px diameter, COCO "sports ball"
+        třída je trénovaná na 30-60 px míčové objekty. Pro produkční hockey
+        tracker se model fine-tunuje na annotated puk dataset (Roboflow public
+        sets, vlastní labelling) + per-frame coords se kalibrují homografií na
+        fixní markery (modré/červené linie, faceoff kruhy) &rarr; pixel přepočet
+        na metr v rink coords.
+      </figcaption>
+      <figcaption class="roadmap-caption">
+        <strong>Pro tactical value</strong> federace nepotřebuje vyšší detection
+        accuracy &mdash; potřebuje vrstvu nad detekcí: <em>team color classification</em>
+        (jersey HSV histogram &rarr; tým A / B / referee), <em>per-player tracking</em>
+        (Hungarian assignment + Kalman filter &rarr; trajectorie), <em>event
+        detection</em> (controlled vs dump entry, forecheck 1-1-3 vs 2-1-2,
+        faceoff outcome, breakout side), <em>line-matching analytics</em>
+        (která lajna proti které, kde a s jakou převahou). Detekce "kde jsou
+        hráči" je primitive layer; produkční hockey intelligence je o
+        <strong>klasifikaci toho, co se právě děje na ledě</strong>.
       </figcaption>
     </figure>
 
@@ -2241,7 +2269,7 @@ aplikovat na vlastní rozšířenou datovou základnu.</p>
         </span>
       </p>
     </div>
-    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:25</p>
+    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:31</p>
   </div>
 </footer>
 
