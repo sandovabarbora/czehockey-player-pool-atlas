@@ -55,3 +55,25 @@ def test_coerce_numeric_handles_extraliga_columns():
     assert out["GP"].iloc[0] == 17
     assert out["P"].iloc[0] == 25
     assert out["+/-"].iloc[0] == 5
+
+
+def test_parse_birth_date_from_profile_extracts_narozen():
+    """The bio card 'narozen' h2 is followed by a span with the date."""
+    from src.fetch_extraliga import parse_birth_date_from_profile
+
+    html = """
+    <html><body>
+      <div class="person-info">
+        <h2 class="h4 person-info-title text-uppercase">narozen</h2>
+        <span>22.2.1991</span>
+        <h2 class="h4 person-info-title text-uppercase">věk</h2>
+        <span>35 let</span>
+      </div>
+    </body></html>
+    """
+    assert parse_birth_date_from_profile(html) == "22.2.1991"
+
+
+def test_parse_birth_date_from_profile_returns_none_when_missing():
+    from src.fetch_extraliga import parse_birth_date_from_profile
+    assert parse_birth_date_from_profile("<html><body></body></html>") is None

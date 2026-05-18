@@ -188,6 +188,84 @@ def fetch_team_stats(team_id: int, team_slug: str) -> pd.DataFrame:
 _NUMERIC_COLS = ("GP", "G", "A", "P", "+/-", "+", "-", "PIM")
 
 
+# --- Per-player profile enrichment ------------------------------------------
+
+
+PROFILE_CACHE_DIR = config.RAW_DIR / ".cache" / "extraliga_profiles"
+
+
+def parse_birth_date_from_profile(html: str) -> str | None:
+    """Extract 'narozen' field from a player profile page.
+
+    The bio card has the structure:
+        <h2 class="...person-info-title...">narozen</h2>
+        <span>22.2.1991</span>
+    """
+    soup = BeautifulSoup(html, "lxml")
+    for h2 in soup.find_all("h2", class_=re.compile("person-info-title")):
+        if h2.get_text(strip=True).lower() == "narozen":
+            span = h2.find_next_sibling("span")
+            if span:
+                return span.get_text(strip=True)
+    return None
+
+
+def fetch_player_profile(player_id: int, slug: str) -> dict:
+    """Fetch one /hrac/{slug}/{id} profile, cache the HTML, return parsed bio.
+
+    The hokej.cz profile page does NOT expose nationality / birthCountry —
+    only birth_date is reliably extractable.
+    """
+    PROFILE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_path = PROFILE_CACHE_DIR / f"{player_id}.html"
+    if cache_path.exists() and cache_path.stat().st_size > 5_000:
+        html = cache_path.read_text(encoding="utf-8")
+    else:
+        url = f"{HOKEJCZ_BASE}/hrac/{slug}/{player_id}"
+        resp = http_get(url, headers=BROWSER_HEADERS, sleep_after=POLITE_SLEEP_S)
+        html = resp.text
+        cache_path.write_text(html, encoding="utf-8")
+    return {
+        "player_id": player_id,
+        "birth_date": parse_birth_date_from_profile(html),
+    }
+
+
+def enrich_birth_dates() -> None:
+    """For every unique Extraliga player, fetch /hrac/ profile and write
+    a per-player metadata parquet (data/raw/extraliga_player_meta.parquet).
+    """
+    # Use the latest extraliga_skaters_{N}.parquet
+    seasons = sorted(config.RAW_DIR.glob("extraliga_skaters_*.parquet"))
+    if not seasons:
+        LOG.error("no extraliga_skaters parquet to enrich from")
+        return
+    df = pd.read_parquet(seasons[-1])
+    unique = df[["player_id", "player_slug"]].drop_duplicates().reset_index(drop=True)
+    LOG.info("enriching birth dates for %d unique Extraliga players (cached after first run)",
+             len(unique))
+    rows: list[dict] = []
+    for i, r in unique.iterrows():
+        try:
+            meta = fetch_player_profile(int(r["player_id"]), r["player_slug"])
+        except Exception as e:  # noqa: BLE001
+            LOG.warning("profile fetch failed for %s/%s: %s",
+                        r["player_slug"], r["player_id"], e)
+            continue
+        rows.append(meta)
+        if (i + 1) % 50 == 0:
+            with_bd = sum(1 for x in rows if x.get("birth_date"))
+            LOG.info("  %d/%d profiles fetched (%d with birth_date)",
+                     i + 1, len(unique), with_bd)
+    out = pd.DataFrame(rows)
+    write_parquet(out, config.RAW_DIR / "extraliga_player_meta.parquet")
+    LOG.info("wrote %d profiles (%d with birth_date)",
+             len(out), out["birth_date"].notna().sum() if not out.empty else 0)
+
+
+# --- Numeric coercion -------------------------------------------------------
+
+
 def coerce_numeric(df: pd.DataFrame) -> pd.DataFrame:
     """Convert stat columns to numeric. hokej.cz uses '.' decimal already."""
     out = df.copy()

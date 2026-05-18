@@ -170,14 +170,17 @@ def load_liiga_meta() -> pd.DataFrame:
 
 
 def load_extraliga_players() -> pd.DataFrame:
-    """Aggregate one row per Extraliga player_id (across mid-season trades)."""
+    """Aggregate one row per Extraliga player_id (across mid-season trades).
+
+    If extraliga_player_meta.parquet exists (from the birth-date enrichment
+    pass), merge in birth_date and birth_year. Without it, those columns are
+    NA and downstream matching falls back to name-only fuzzy.
+    """
     # Find the latest season parquet present
     seasons = sorted(config.RAW_DIR.glob("extraliga_skaters_*.parquet"))
     if not seasons:
         return pd.DataFrame()
     df = pd.read_parquet(seasons[-1])
-    # Aggregate trade rows: keep one row per player_id with summed GP/G/A/P,
-    # take first team/position. (Stats aggregation can be redone in features.)
     agg = (
         df.groupby("player_id", as_index=False)
         .agg({
@@ -191,6 +194,23 @@ def load_extraliga_players() -> pd.DataFrame:
     )
     agg["position_normalized"] = agg["POZ."].apply(lambda p: normalize_position(p, "extraliga"))
     agg["name_normalized"] = agg["JMÉNO"].apply(normalize_name)
+
+    # Optional birth-date enrichment from extraliga_player_meta.parquet
+    meta_path = config.RAW_DIR / "extraliga_player_meta.parquet"
+    if meta_path.exists():
+        meta = pd.read_parquet(meta_path)
+        parsed = meta["birth_date"].apply(parse_birth_date)
+        meta["birth_date_iso"] = parsed.map(lambda t: t[0])
+        meta["birth_year"] = parsed.map(lambda t: t[1]).astype("Int64")
+        agg = agg.merge(meta[["player_id", "birth_date_iso", "birth_year"]],
+                        on="player_id", how="left")
+        n_with_bd = agg["birth_date_iso"].notna().sum()
+        LOG.info("Extraliga enriched: %d/%d players have birth_date", n_with_bd, len(agg))
+    else:
+        agg["birth_date_iso"] = pd.NA
+        agg["birth_year"] = pd.array([pd.NA] * len(agg), dtype="Int64")
+        LOG.info("Extraliga: no birth-date enrichment found (run enrich_birth_dates first)")
+
     return agg
 
 
@@ -308,10 +328,13 @@ def build_canonical_table() -> pd.DataFrame:
             new_liiga += 1
     LOG.info("Liiga merged: %d matched to NHL, %d new canonical entries", matched_liiga, new_liiga)
 
-    # ---- Merge Extraliga: name-only fuzzy match, but ONLY against existing
-    # NHL/Liiga canonical rows. Don't fuzzy-match Extraliga against other
-    # Extraliga — same name from a different player_id is a different person
-    # (Extraliga's player_id is authoritative within the league). ----
+    # ---- Merge Extraliga: match against existing NHL/Liiga canonical rows.
+    # If the Extraliga player has an enriched birth_year (from
+    # extraliga_player_meta.parquet), use birth_year ±1 as a hard gate
+    # (much stronger). Otherwise fall back to name-only fuzzy.
+    # Don't fuzzy-match Extraliga against other Extraliga — same name from a
+    # different player_id is a different person (Extraliga's player_id is
+    # authoritative within the league). ----
     matched_ext = 0
     new_ext = 0
     for _, p in extraliga.iterrows():
@@ -323,9 +346,12 @@ def build_canonical_table() -> pd.DataFrame:
             "birth_year": canonical.loc[eligible_mask, "birth_year"].values,
         }, index=canonical.index[eligible_mask])
         target_name = p["name_normalized"]
-        match_idx = _best_name_match(target_name, None, cand_df,
-                                     require_birth_year_within=99,
-                                     threshold=NAME_MATCH_THRESHOLD)
+        target_year = int(p["birth_year"]) if pd.notna(p.get("birth_year")) else None
+        match_idx = _best_name_match(
+            target_name, target_year, cand_df,
+            require_birth_year_within=1,
+            threshold=NAME_MATCH_THRESHOLD,
+        )
         if match_idx is not None:
             canonical.at[match_idx, "extraliga_id"] = int(p["player_id"])
             canonical.at[match_idx, "extraliga_team_id"] = p["source_team_id"]
@@ -340,8 +366,8 @@ def build_canonical_table() -> pd.DataFrame:
                 "canonical_id": f"extraliga-{int(p['player_id'])}",
                 "first_name": first,
                 "last_name": last,
-                "birth_date": pd.NA,
-                "birth_year": pd.NA,
+                "birth_date": p.get("birth_date_iso") if pd.notna(p.get("birth_date_iso")) else pd.NA,
+                "birth_year": p.get("birth_year") if pd.notna(p.get("birth_year")) else pd.NA,
                 "position_normalized": p["position_normalized"],
                 "nhl_id": pd.NA,
                 "liiga_id": pd.NA,
@@ -350,7 +376,9 @@ def build_canonical_table() -> pd.DataFrame:
                 "liiga_team": pd.NA,
                 "extraliga_team_id": p["source_team_id"],
                 "sources": ["extraliga"],
-                # Without birth_country we can't confirm Czech eligibility
+                # hokej.cz profiles don't expose birthCountry — eligibility
+                # for Extraliga players stays "unknown" without an alternate
+                # nationality source. Most are Czech, ~10-15% are imports.
                 "czech_eligible_flag": "unknown",
                 "_name_norm": target_name,
             }])], ignore_index=True)
@@ -373,11 +401,11 @@ def main() -> None:
     LOG.info("by n_sources: %s", canonical["n_sources"].value_counts().to_dict())
     LOG.info("by czech_eligible_flag: %s", canonical["czech_eligible_flag"].value_counts().to_dict())
     LOG.info("by position: %s", canonical["position_normalized"].value_counts().to_dict())
-    # Highlight: NHL players who ALSO appear in Liiga or Extraliga
-    cross = canonical[canonical["nhl_id"].notna() & (canonical["liiga_id"].notna() | canonical["extraliga_id"].notna())]
-    LOG.info("NHL alumni currently in EU leagues: %d", len(cross))
-    if not cross.empty:
-        for _, p in cross.iterrows():
+    # Highlight all multi-source matches
+    multi = canonical[canonical["n_sources"] >= 2]
+    LOG.info("multi-source player matches: %d", len(multi))
+    if not multi.empty:
+        for _, p in multi.iterrows():
             LOG.info("  %s %s (NHL %s | Liiga %s | Extraliga %s)",
                      p["first_name"], p["last_name"],
                      int(p["nhl_id"]) if pd.notna(p["nhl_id"]) else "-",
