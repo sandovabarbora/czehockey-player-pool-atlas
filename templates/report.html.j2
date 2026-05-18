@@ -1,5 +1,3 @@
-{# Main report template. Renders to outputs/index.html.
-   Two-tiered structure: exec summary block first, methodology block below. #}
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -9,32 +7,233 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="report-header">
-    <h1>Český hokej — Atlas fondu hráčů</h1>
-    <p class="subtitle">
-      Pozičně normalizovaná mapa cca {{ n_players }} hokejistů s českou
-      mezinárodní způsobilostí. Metodologický nástroj pro průběžné mapování
-      fondu hráčů, ne výběrové doporučení.
-    </p>
-  </header>
 
-  {# --- Section A: Executive Summary (Hnilička read time <= 90s) --- #}
-  {% include "exec_summary.html.j2" %}
+<header class="report-header">
+  <h1>Český hokej — Atlas fondu hráčů</h1>
+  <p class="subtitle">Metodologický nástroj pro průběžné mapování hráčů v profesionálních ligách</p>
+  <p class="meta">
+    Pool: <strong>{{ n_players }}</strong> kanonických hráčů (z toho
+    <strong>{{ n_yes }}</strong> potvrzeně Czech-eligible přes birth_country
+    nebo IIHF účast, <strong>{{ n_iihf }}</strong> s aktivní reprezentační
+    účastí MS 2024 nebo MS 2025).
+  </p>
+</header>
 
-  {# --- Section B: Methodology & Results (Morkes read time >= 45min) --- #}
-  <section class="methodology">
-    <h2>Metodologie a výsledky</h2>
-    <p><em>Tato sekce bude vykreslena v Phase 1c Day 10.</em></p>
-  </section>
+{# =============================================================================
+   SECTION A — EXECUTIVE SUMMARY (≤ 90 second read)
+   ============================================================================= #}
+<section class="exec-summary">
+  <h2>Shrnutí</h2>
+  <p class="framing">{{ framing }}</p>
 
-  <footer>
-    <p>
-      Barbora Šandová · barbora@datasimply.eu ·
-      <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">
-        github.com/barborasandova/czehockey-player-pool-atlas
-      </a>
-    </p>
-    <p class="rendered-at">Vyrenderováno: {{ rendered_at }}</p>
-  </footer>
+  <figure class="hero-figure">
+    <img src="atlas_forwards.svg" alt="Atlas útočníků: style a quality projekce">
+    <figcaption>
+      Atlas útočníků 2025-26 v obou projekcích. Modré kroužky = aktivní reprezentační
+      pool (MS 24/25). Šipky = trajektorie mezi sezónami.
+    </figcaption>
+  </figure>
+
+  <h3>Pozorování</h3>
+  <div class="observations">
+    {% for obs in observations %}
+    <div class="observation">
+      <h4>{{ obs.title }}</h4>
+      <p>{{ obs.body }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h3>Cluster archetypy — útočníci (style projekce)</h3>
+  <div class="cluster-cards">
+    {% for c in fwd_clusters %}
+    <div class="cluster-card">
+      <h4>C{{ c.cluster_id }} · {{ c.label }}</h4>
+      <p class="cluster-meta">
+        <span>n = <strong>{{ c.n_members }}</strong></span>
+        <span>MS pool: <strong>{{ c.nt_count }}</strong></span>
+        <span>medián ročník: <strong>{{ c.median_age_year }}</strong></span>
+      </p>
+      <p class="cluster-desc">{{ c.description }}</p>
+      <p class="cluster-top"><em>Top příklady:</em> {{ c.top_names | join(', ') }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h3>Trajektorie 2024/25 → 2025/26 (útočníci, ≥30 GP obě sezóny)</h3>
+  <div class="movers-grid">
+    <div class="movers-col">
+      <h4 class="movers-up">Zlepšení (Δ quality P/GP)</h4>
+      <table class="movers-table">
+        <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
+        <tbody>
+          {% for r in top_improvers %}
+          <tr>
+            <td>{{ r.name }}</td>
+            <td class="muted">{{ r.league }}</td>
+            <td class="muted">{{ r.gp_old }} / {{ r.gp_new }}</td>
+            <td class="delta-up">+{{ '%.3f' | format(r.delta) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="movers-col">
+      <h4 class="movers-down">Pokles (Δ quality P/GP)</h4>
+      <table class="movers-table">
+        <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
+        <tbody>
+          {% for r in top_decliners %}
+          <tr>
+            <td>{{ r.name }}</td>
+            <td class="muted">{{ r.league }}</td>
+            <td class="muted">{{ r.gp_old }} / {{ r.gp_new }}</td>
+            <td class="delta-down">{{ '%.3f' | format(r.delta) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p class="continue">Pro detailní metodologii a tabulky pokračujte k sekci níže.</p>
+</section>
+
+{# =============================================================================
+   SECTION B — METHODOLOGY & RESULTS (≥ 45 min read, audience: Morkes)
+   ============================================================================= #}
+<section class="methodology">
+  <h2>Metodologie</h2>
+
+  <h3>Datové zdroje</h3>
+  <ul>
+    <li><strong>NHL Stats API</strong> (api-web.nhle.com/v1) — všechny aktivní 2024-25 a 2025-26 NHL hráči, filtr birth_country = CZE</li>
+    <li><strong>MoneyPuck</strong> — 5v5 per-60 metriky + xG (NHL-only enrichment)</li>
+    <li><strong>Liiga</strong> (liiga.fi) — sezónní totaly přes Playwright</li>
+    <li><strong>Tipsport Extraliga</strong> (hokej.cz) — per-team /statistiky, birth dates z /hrac/ profilů</li>
+    <li><strong>IIHF turnaje</strong> (Wikipedia: MS 2024, MS 2025, WJC 2024, WJC 2025) — reprezentační účast pro eligibility filtr</li>
+  </ul>
+
+  <h3>Ligové násobičky (quality projekce)</h3>
+  <table class="kv-table">
+    <thead><tr><th>Liga</th><th>Násobička</th></tr></thead>
+    <tbody>
+      {% for k, v in league_quality.items() %}
+      <tr><td>{{ k }}</td><td>{{ '%.2f' | format(v) }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p class="muted small">
+    Subjektivní aproximace inspirované public konverzemi production rates hráčů, kteří přešli mezi ligami
+    (hockeyviz.com, Sznajder NHL-equivalency analyses). Citlivostní analýza níže ukazuje robustnost vůči ±20 %.
+  </p>
+
+  <h3>Bayesovský shrinkage</h3>
+  <p>
+    Per-game produkce hráčů s malým vzorkem (GP &lt; 10) je shrinkutována k mediánu své ligy
+    pomocí empirical Bayes formule:
+  </p>
+  <p class="formula">
+    shrunk_rate = (počet_eventů + K × cohort_medián) / (player_GP + K),&nbsp; K = 10
+  </p>
+  <p>
+    Při GP = 1 dominuje cohort medián (~91 %); při GP = 80 dominují skutečná data (~89 %).
+    Bez shrinkage by hráč jako Lantoši (4 GP, 5 bodů, 1.25 P/GP raw) předběhl Pastrňáka v kvalitě.
+    Po shrinkage spadne na 0.59 P/GP — methodologicky obhajitelné.
+  </p>
+
+  <h3>PCA loadings</h3>
+  <table class="loadings-table">
+    <thead>
+      <tr>
+        <th>Pozice</th><th>Projekce</th><th>PC</th><th>% variance</th>
+        <th>G/GP</th><th>A/GP</th><th>PIM/GP</th><th>věk</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in loadings_table %}
+      <tr>
+        <td>{{ r.position }}</td>
+        <td>{{ r.projection }}</td>
+        <td>{{ r.pc }}</td>
+        <td>{{ r.explained_pct }}%</td>
+        <td>{{ '%.3f' | format(r.loadings.get('goals_per_gp_shrunk', r.loadings.get('goals_per_gp_quality', 0))) }}</td>
+        <td>{{ '%.3f' | format(r.loadings.get('assists_per_gp_shrunk', r.loadings.get('assists_per_gp_quality', 0))) }}</td>
+        <td>{{ '%.3f' | format(r.loadings.get('pim_per_gp_shrunk', r.loadings.get('pim_per_gp_quality', 0))) }}</td>
+        <td>{{ '%.3f' | format(r.loadings.get('birth_year', 0)) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h3>Citlivostní analýza (±20 % násobičky)</h3>
+  <p>
+    Pro každý scénář perturbace násobičky byl přepočítán quality ranking a změřena změna oproti baseline.
+    <strong>Top-10 ranking je vůči těmto změnám stabilní</strong> — žádný scénář nezpůsobuje churn větší než 1 hráč.
+    NHL top elita (Pastrňák, Nečas, Zacha, Hertl) zůstává v top čtyřce ve všech scénářích.
+  </p>
+  <table class="sensitivity-table">
+    <thead>
+      <tr>
+        <th>Scénář</th><th>Popis</th>
+        <th>Top-10 overlap</th><th>Top-10 churn</th><th>Mean Δ rank (top 20)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in sensitivity_table %}
+      <tr>
+        <td>{{ r.scenario }}</td>
+        <td class="muted">{{ r.description }}</td>
+        <td>{{ r.overlap }} / 10</td>
+        <td>{{ r.churn }}</td>
+        <td>{{ '%.2f' | format(r.mean_delta) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h3>Atlas obránců</h3>
+  <figure>
+    <img src="atlas_defense.svg" alt="Atlas obránců">
+    <figcaption>Atlas obránců 2025-26. Stejná interpretace jako útočníci.</figcaption>
+  </figure>
+
+  <h3>Cluster detaily — obránci</h3>
+  <div class="cluster-cards">
+    {% for c in def_clusters %}
+    <div class="cluster-card">
+      <h4>C{{ c.cluster_id }} · {{ c.label }}</h4>
+      <p class="cluster-meta">
+        <span>n = <strong>{{ c.n_members }}</strong></span>
+        <span>MS pool: <strong>{{ c.nt_count }}</strong></span>
+        <span>medián ročník: <strong>{{ c.median_age_year }}</strong></span>
+      </p>
+      <p class="cluster-desc">{{ c.description }}</p>
+      <p class="cluster-top"><em>Top:</em> {{ c.top_names | join(', ') }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h3>Omezení této analýzy</h3>
+  <div class="limitations">
+    {{ limitations | safe }}
+  </div>
+
+  <h3>Reprodukovatelnost</h3>
+  <p>
+    Plná pipeline je veřejná: <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">github.com/barborasandova/czehockey-player-pool-atlas</a>.
+    MIT licence. Spustit lze přes <code>make install &amp;&amp; make install-browsers &amp;&amp; make all</code>.
+    Random seed = 42 pro všechny stochastické operace (KMeans, UMAP).
+  </p>
+</section>
+
+<footer>
+  <p>
+    Barbora Šandová · <a href="mailto:barbora@datasimply.eu">barbora@datasimply.eu</a> ·
+    <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">GitHub</a>
+  </p>
+  <p class="rendered-at">Vyrenderováno: {{ rendered_at }}</p>
+</footer>
+
 </body>
 </html>
