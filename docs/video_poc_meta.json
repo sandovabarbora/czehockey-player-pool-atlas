@@ -1,0 +1,23 @@
+{
+  "video_resolution": "640x360",
+  "video_fps": 25.0,
+  "video_total_frames": 751,
+  "video_duration_sec": 30.0,
+  "frames_sampled": 21,
+  "sample_interval_sec": 1.5,
+  "model": "YOLOv8n (pretrained on COCO, 80 classes, 6.5 MB)",
+  "classes_filtered": [
+    "person (skater proxy)",
+    "sports ball (puck proxy)"
+  ],
+  "confidence_threshold": 0.3,
+  "total_person_detections": 129,
+  "total_ball_detections": 0,
+  "mean_persons_per_frame": 6.1,
+  "mean_inference_ms_per_frame": 18.3,
+  "hardware_inferred": "Apple Silicon (Mac, CPU/MPS)",
+  "best_frame_idx": 185,
+  "best_frame_person_count": 19,
+  "source_clip_origin": "publicly available Czech hockey highlight, YouTube search 'tipsport extraliga sestrih', first 30s sample, 640x360 broadcast quality",
+  "disclaimer": "Pretrained model na COCO, ne na hockey domain. Detections jsou proxy: 'person' class = skater/referee. Puk je často moc malý a rychlý pro pretrained 'sports ball' class. Pro produkční hockey detector by se model fine-tunoval na annotated hockey frame set."
+}

@@ -1326,6 +1326,85 @@ li strong { font-family: var(--font-display); font-weight: 600; }
 }
 .analog-traj-detail { color: var(--muted); font-size: 0.74rem; }
 
+/* Video PoC: real output from YOLOv8 inference on Extraliga broadcast.
+   Same block treatment as .roadmap-mockup but real output, so the
+   visual frame is the actual annotated JPEG + heatmap PNG, not an
+   inline SVG schematic. */
+.video-poc {
+  margin: var(--space-4) 0 var(--space-6);
+  background: var(--cream-100);
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  border: 1px solid var(--rule);  /* full border, not dashed: this is real */
+}
+.video-poc .roadmap-label {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--oxblood-700);
+}
+.video-poc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+@media (min-width: 720px) {
+  .video-poc-grid { grid-template-columns: 1.78fr 1fr; gap: var(--space-4); }
+}
+.video-poc-frame { margin: 0; display: flex; flex-direction: column; gap: var(--space-1); }
+.video-poc-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+}
+.video-poc-figlabel {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  max-width: none;
+}
+.video-poc-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-3) 0;
+  margin: 0 0 var(--space-3);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+@media (min-width: 720px) {
+  .video-poc-metrics { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1100px) {
+  .video-poc-metrics { grid-template-columns: repeat(6, 1fr); }
+}
+.video-poc-metrics div { margin: 0; }
+.video-poc-metrics dt {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.video-poc-metrics dd {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ink);
+  font-feature-settings: "tnum", "lnum";
+  line-height: 1.1;
+}
+
 /* Roadmap mockups */
 .roadmap-mockup {
   margin: var(--space-4) 0 var(--space-6);
