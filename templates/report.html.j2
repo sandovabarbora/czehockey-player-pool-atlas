@@ -96,10 +96,12 @@
   </p>
 
   <figure class="hero-figure">
-    <img src="intl_cohort_heatmap.svg" alt="Mezinárodní cohort heatmap: ČR vs peer-země">
+    <img src="intl_cohort_heatmap.svg"
+         alt="Heatmap mezinárodního cohort benchmarku. Ukazuje, že český NHL pool je šestý ze šesti porovnávaných zemí per-capita, s nejvýraznějšími gapy v U22 útočníkové a celé obránecké pipeline napříč všemi věkovými skupinami. Modře orámovaná řada vyznačuje Českou republiku.">
     <figcaption>
       Mediánová produkce (P/GP) podle země, pozice a věkové skupiny. Modře
-      orámovaná řada = ČR. Buňka: počet hráčů + medián bodů na zápas.
+      orámovaná řada vyznačuje Českou republiku. Buňka: počet hráčů a medián
+      bodů na zápas.
     </figcaption>
   </figure>
 
@@ -124,7 +126,7 @@
             {% if cell.n > 0 %}
               n={{ cell.n }} · {{ '%.2f' | format(cell.median) }}
             {% else %}
-              <span class="muted">—</span>
+              <span class="muted" title="bez dat">—</span>
             {% endif %}
           </td>
         {% endfor %}
@@ -158,7 +160,7 @@
             {% if cell.n > 0 %}
               n={{ cell.n }} · {{ '%.2f' | format(cell.median) }}
             {% else %}
-              <span class="muted">—</span>
+              <span class="muted" title="bez dat">—</span>
             {% endif %}
           </td>
         {% endfor %}
@@ -173,10 +175,12 @@
   {% endif %}
 
   <figure class="hero-figure">
-    <img src="atlas_forwards.svg" alt="Atlas útočníků: style a quality projekce">
+    <img src="atlas_forwards.svg"
+         alt="Dvoupanelový atlas útočníků 2025-26 v PCA projekci. Levý panel (style mapa bez ligových násobiček) ukazuje Pastrňáka, Nečase a Červenku ve společné produkční zóně. Pravý panel (kvalitou upravená mapa) NHL elitu výrazně odpoutává od EU hráčů. Modré kroužky vyznačují účastníky MS 2024 a MS 2025; šipky znázorňují trajektorii mezi sezónami.">
     <figcaption>
-      Atlas útočníků 2025-26 v obou projekcích. Modré kroužky = aktivní reprezentační
-      pool (MS 24/25). Šipky = trajektorie mezi sezónami.
+      Atlas útočníků 2025-26 v obou projekcích. Modré kroužky vyznačují
+      aktivní reprezentační pool (MS 24/25). Šipky znázorňují trajektorii
+      mezi sezónami.
     </figcaption>
   </figure>
 
@@ -340,7 +344,8 @@
 
   <h3 id="atlas-obrancu">Atlas obránců</h3>
   <figure>
-    <img src="atlas_defense.svg" alt="Atlas obránců">
+    <img src="atlas_defense.svg"
+         alt="Dvoupanelový atlas obránců 2025-26 v PCA projekci. Stejná struktura jako útočníci, méně hustá kvůli celkově menšímu poolu českých NHL obránců (Hronek a Gudas dominují); modré kroužky vyznačují MS 2024/25.">
     <figcaption>Atlas obránců 2025-26. Stejná interpretace jako útočníci.</figcaption>
   </figure>
 
