@@ -1714,20 +1714,20 @@
       <div class="video-poc-grid">
         <div class="video-poc-frame">
           <img src="video_poc_annotated.jpg"
-               alt="Anotovaný frame z Extraliga broadcast: oxblood obdélník vymezuje ICE ROI (led), uvnitř 12 navy bboxů on-ice hráčů, vně 5 muted bboxů lavička/dav (filtrované)"
+               alt="Anotovaný frame z Extraliga broadcast: muted obdélník vymezuje ICE ROI; uvnitř 6 oxblood bboxů (Karlovy Vary, červené dresy) a 6 navy bboxů (HC Mountfield bílé + rozhodčí); 5 dalších osob mimo ROI je lavička, filtrované"
                loading="lazy">
           <p class="video-poc-figlabel">
-            Frame 185 &middot; <strong>12 on-ice</strong> (navy bboxy) + 5 off-ice
-            lavička/dav (muted bboxy, filtrované)
+            Frame 185 &middot; <strong>6 KVA</strong> (oxblood) +
+            <strong>6 MHK / ref</strong> (navy) = balanced 5v5 + rozhodčí na ledě
           </p>
         </div>
         <div class="video-poc-frame">
           <img src="video_poc_heatmap.png"
-               alt="Heatmap pozic on-ice hráčů agregovaná přes 21 vzorkovaných frames; tmavší navy oblast uvnitř oxblood ROI = vyšší hustota pohybu"
+               alt="Dvě heatmapy bok po boku: vlevo Karlovy Vary v oxblood ramp (n=221 on-ice detekcí), vpravo HC Mountfield + rozhodčí v navy ramp (n=395); rozdělené per-team KMeans clusteringem na torso HSV"
                loading="lazy">
           <p class="video-poc-figlabel">
-            Agregát on-ice pozic &middot; centrální hot zones = broadcast bias,
-            kamera sleduje puk
+            Per-team heatmapy &middot; KVA n=221 vs MHK+ref n=395 přes 151 frames
+            (5 fps sample), rozděleno torso HSV clusteringem
           </p>
         </div>
       </div>
@@ -1736,23 +1736,23 @@
            class="video-poc-timeline"
            loading="lazy">
       <dl class="video-poc-metrics">
-        <div><dt>On-ice / frame</dt><dd>4,3 osob</dd></div>
-        <div><dt>Wide-angle peak (on-ice)</dt><dd>12 osob</dd></div>
-        <div><dt>Off-ice filtrované</dt><dd>29,5 % detekcí</dd></div>
-        <div><dt>Close-up frames</dt><dd>6 / 21</dd></div>
-        <div><dt>Inference (CPU)</dt><dd>18,3 ms / frame</dd></div>
-        <div><dt>Real-time capacity</dt><dd>~55 fps</dd></div>
+        <div><dt>Sample density</dt><dd>5 fps / 151 frames</dd></div>
+        <div><dt>On-ice / frame</dt><dd>4,1 osob</dd></div>
+        <div><dt>Off-ice filtrované</dt><dd>32,9 % detekcí</dd></div>
+        <div><dt>Karlovy Vary (red)</dt><dd>221 detekcí</dd></div>
+        <div><dt>HC Mountfield + ref</dt><dd>395 detekcí</dd></div>
+        <div><dt>Inference / frame</dt><dd>18,3 ms (CPU)</dd></div>
       </dl>
       <figcaption class="roadmap-caption">
-        <strong>Hokejové čtení toho, co model vidí (po ROI filtru):</strong>
-        bench-player detekce nejsou pro game analysis relevantní, proto se
-        odfiltrovaly přes oxblood ICE ROI obdélník (kalibrovaný vizuálně pro
-        tento broadcast frame). Z původních 129 person-detekcí přes 21 frames
-        je <strong>91 on-ice</strong> a 38 off-ice (lavička, dav, sponzor boardy,
-        lower-third graphic) &mdash; 29,5 % detekcí by zkreslilo jakoukoli
-        tactical metric, kdyby se nefiltrovalo. Wide-angle peak frame má 12 on-ice
-        hráčů (přijatelné pro 5v5 + rozhodčí v záběru), ne 19. Šest close-up
-        frames bez detekce jsou hero shots a replays.
+        <strong>Co tahle vrstva přidá nad samotnou detekci:</strong> dense sample
+        (5 fps, 151 frames z 30 s), ICE ROI filter (odstraňuje 32,9 % junk
+        detekcí lavičky a davu), a per-team color split (KMeans-like rule
+        nad torso HSV: high saturation v red hue range &rarr; Karlovy Vary,
+        ostatní &rarr; MHK / rozhodčí). Frame 185 (wide angle, 5v5 + ref):
+        balanced 6 KVA + 6 MHK = correct call. Per-team heatmapy ukazují, kde
+        každý tým strávil čas na ledě v rámci 30 s sample &mdash; tactical
+        signal který commercial trackery dělají, ale jen pro NHL; pro
+        Extraliga, Liiga, SHL je tahle vrstva mezera na trhu.
       </figcaption>
       <figcaption class="roadmap-caption">
         <strong>0 detekcí puku</strong> a fixed-rectangle ICE ROI jsou dva
@@ -1766,15 +1766,20 @@
         defaults.
       </figcaption>
       <figcaption class="roadmap-caption">
-        <strong>Pro tactical value</strong> federace nepotřebuje vyšší detection
-        accuracy &mdash; potřebuje vrstvu nad detekcí: <em>team color classification</em>
-        (jersey HSV histogram &rarr; tým A / B / referee), <em>per-player tracking</em>
-        (Hungarian assignment + Kalman filter &rarr; trajectorie), <em>event
-        detection</em> (controlled vs dump entry, forecheck 1-1-3 vs 2-1-2,
-        faceoff outcome, breakout side), <em>line-matching analytics</em>
-        (která lajna proti které, kde a s jakou převahou). Detekce "kde jsou
-        hráči" je primitive layer; produkční hockey intelligence je o
-        <strong>klasifikaci toho, co se právě děje na ledě</strong>.
+        <strong>Co tahle vrstva přidá pro video coach nad commercial tracker:</strong>
+        Sportlogiq a InStat pokrývají NHL plně, Extraliga útržkovitě a draho.
+        Tahle pipeline běží na CPU v real-time (~55 fps na pretrained modelu),
+        bez per-game licencí; federace nebo klub si ji adaptuje na vlastní
+        taktický slovník. Konkrétně co tohle umožní video analytikovi:
+        <em>auto-pre-tagging klipů</em> (zone entry, forecheck attempt, faceoff,
+        line change) &mdash; coach pak jen verifikuje místo aby tagoval od nuly;
+        <em>search-and-retrieve</em> (&ldquo;ukaž mi všechny KVA zone entries
+        z levé strany s controlled puk&rdquo;); <em>per-line heatmaps</em>
+        (která pětka kde drží puk vs jen pendluje); <em>opponent tendency reports</em>
+        cross-game (&ldquo;Mountfield PP1 vstupuje vlevo v 67 % případů&rdquo;);
+        <em>real-time alerts</em> (&ldquo;soupeř právě přepnul na 1-3-1 PK box&rdquo;).
+        Detekce je primitive layer; tactical platform je <strong>vrstva
+        klasifikace, retrieval a alerts nad detekcí</strong>.
       </figcaption>
     </figure>
 
@@ -2275,7 +2280,7 @@ aplikovat na vlastní rozšířenou datovou základnu.</p>
         </span>
       </p>
     </div>
-    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:39</p>
+    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:44</p>
   </div>
 </footer>
 
