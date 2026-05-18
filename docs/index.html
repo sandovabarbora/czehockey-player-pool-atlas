@@ -24,6 +24,385 @@
   <h2>Shrnutí</h2>
   <p class="framing">Mapa cca 280 Čechy hokejistů ve světových profesionálních ligách (NHL, Liiga, Tipsport Extraliga), segmentovaná podle pozice a herního profilu. Metodologický nástroj pro průběžné mapování fondu hráčů v rámci víceletého reprezentačního cyklu — ne výběrové doporučení.</p>
 
+  
+  
+  <h3>Strukturální benchmark vs peer-země</h3>
+  <p>
+    Hokejová intuice český fond rozpoznává hráč po hráči. <strong>Strukturální
+    pozice v rámci peer-zemí (FIN, SWE, SVK, CAN) ale vyžaduje datovou
+    agregaci kterou jedinec v hlavě nedokáže.</strong> Níže tři čísla, která
+    nejsou typicky agregovaná v jednom místě.
+  </p>
+
+  <h4>Per-capita hustota NHL hráčů (sezóna 2025-26)</h4>
+  <table class="kv-table">
+    <thead>
+      <tr><th>Země</th><th>NHL hráči (≥10 GP)</th><th>Populace (M)</th><th>Hráčů / M</th></tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>CAN</td>
+        <td>323</td>
+        <td>40.1</td>
+        <td>8.05</td>
+      </tr>
+      
+      <tr>
+        <td>SWE</td>
+        <td>76</td>
+        <td>10.6</td>
+        <td>7.17</td>
+      </tr>
+      
+      <tr>
+        <td>FIN</td>
+        <td>34</td>
+        <td>5.6</td>
+        <td>6.07</td>
+      </tr>
+      
+      <tr>
+        <td>SVK</td>
+        <td>9</td>
+        <td>5.4</td>
+        <td>1.67</td>
+      </tr>
+      
+      <tr style="background:#f4f1ea; font-weight:600;">
+        <td>CZE</td>
+        <td>15</td>
+        <td>10.9</td>
+        <td>1.38</td>
+      </tr>
+      
+      <tr>
+        <td>USA</td>
+        <td>225</td>
+        <td>335.0</td>
+        <td>0.67</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <p class="muted small">
+    Po normalizaci na populaci je český fond v NHL <strong>šestý ze šesti</strong>
+    porovnávaných zemí — za Slovenskem, čtyřikrát méně hustý než Finsko.
+  </p>
+
+  <figure class="hero-figure">
+    <img src="intl_cohort_heatmap.svg" alt="Mezinárodní cohort heatmap: ČR vs peer-země">
+    <figcaption>
+      Mediánová produkce (P/GP) podle země, pozice a věkové skupiny. Modře
+      orámovaná řada = ČR. Buňka: počet hráčů + medián bodů na zápas.
+    </figcaption>
+  </figure>
+
+  <h4>Specifické cohort gapy</h4>
+  <p>
+    <strong>Útočníci — kde český pool je strukturálně tenký:</strong>
+  </p>
+  <table class="movers-table">
+    <thead>
+      <tr>
+        <th>Cohort</th>
+        <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td><strong>U22</strong></td>
+        
+          
+          <td>
+            
+              n=1 · 0.42
+            
+          </td>
+        
+          
+          <td>
+            
+              n=3 · 0.24
+            
+          </td>
+        
+          
+          <td>
+            
+              n=7 · 0.45
+            
+          </td>
+        
+          
+          <td>
+            
+              n=4 · 0.33
+            
+          </td>
+        
+      </tr>
+      
+      <tr>
+        <td><strong>23-25</strong></td>
+        
+          
+          <td>
+            
+              n=2 · 0.22
+            
+          </td>
+        
+          
+          <td>
+            
+              n=9 · 0.24
+            
+          </td>
+        
+          
+          <td>
+            
+              n=13 · 0.32
+            
+          </td>
+        
+          
+          <td>
+            
+              <span class="muted">—</span>
+            
+          </td>
+        
+      </tr>
+      
+      <tr>
+        <td><strong>26-29</strong></td>
+        
+          
+          <td>
+            
+              n=4 · 1.06
+            
+          </td>
+        
+          
+          <td>
+            
+              n=8 · 0.46
+            
+          </td>
+        
+          
+          <td>
+            
+              n=11 · 0.40
+            
+          </td>
+        
+          
+          <td>
+            
+              n=2 · 0.28
+            
+          </td>
+        
+      </tr>
+      
+      <tr>
+        <td><strong>30+</strong></td>
+        
+          
+          <td>
+            
+              n=5 · 0.19
+            
+          </td>
+        
+          
+          <td>
+            
+              n=5 · 0.47
+            
+          </td>
+        
+          
+          <td>
+            
+              n=15 · 0.58
+            
+          </td>
+        
+          
+          <td>
+            
+              <span class="muted">—</span>
+            
+          </td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+  <p class="muted small">
+    Český <strong>U22 forwards cohort = 1 hráč</strong> (Kulich). FIN 3, SWE 7.
+    Současný <strong>26-29 elite cohort (Pastrňák/Nečas/Zacha/Hertl) drží
+    median 1.06 P/GP</strong> — světová špička, ale jen 4 hráče hluboko.
+  </p>
+
+  <p>
+    <strong>Obránci — strukturálně problematická pozice napříč všemi cohorty:</strong>
+  </p>
+  <table class="movers-table">
+    <thead>
+      <tr>
+        <th>Cohort</th>
+        <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td><strong>U22</strong></td>
+        
+          
+          <td>
+            
+              <span class="muted">—</span>
+            
+          </td>
+        
+          
+          <td>
+            
+              <span class="muted">—</span>
+            
+          </td>
+        
+          
+          <td>
+            
+              n=5 · 0.23
+            
+          </td>
+        
+          
+          <td>
+            
+              n=1 · 0.38
+            
+          </td>
+        
+      </tr>
+      
+      <tr>
+        <td><strong>23-25</strong></td>
+        
+          
+          <td>
+            
+              n=1 · 0.00
+            
+          </td>
+        
+          
+          <td>
+            
+              n=1 · 0.27
+            
+          </td>
+        
+          
+          <td>
+            
+              n=12 · 0.24
+            
+          </td>
+        
+          
+          <td>
+            
+              <span class="muted">—</span>
+            
+          </td>
+        
+      </tr>
+      
+      <tr>
+        <td><strong>26-29</strong></td>
+        
+          
+          <td>
+            
+              n=1 · 0.60
+            
+          </td>
+        
+          
+          <td>
+            
+              n=5 · 0.18
+            
+          </td>
+        
+          
+          <td>
+            
+              n=5 · 0.23
+            
+          </td>
+        
+          
+          <td>
+            
+              n=2 · 0.26
+            
+          </td>
+        
+      </tr>
+      
+      <tr>
+        <td><strong>30+</strong></td>
+        
+          
+          <td>
+            
+              n=1 · 0.23
+            
+          </td>
+        
+          
+          <td>
+            
+              n=3 · 0.35
+            
+          </td>
+        
+          
+          <td>
+            
+              n=8 · 0.49
+            
+          </td>
+        
+          
+          <td>
+            
+              <span class="muted">—</span>
+            
+          </td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+  <p class="muted small">
+    ČR má <strong>4 obránce v NHL celkem</strong> napříč všemi věkovými skupinami.
+    Pro srovnání FIN má 14, SWE 30. U22 cohort: 0 českých obránců.
+  </p>
+  
+
   <figure class="hero-figure">
     <img src="atlas_forwards.svg" alt="Atlas útočníků: style a quality projekce">
     <figcaption>
@@ -517,7 +896,7 @@ aplikovat na vlastní rozšířenou datovou základnu.</p>
     Barbora Šandová · <a href="mailto:barbora@datasimply.eu">barbora@datasimply.eu</a> ·
     <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">GitHub</a>
   </p>
-  <p class="rendered-at">Vyrenderováno: 2026-05-18 14:16</p>
+  <p class="rendered-at">Vyrenderováno: 2026-05-18 16:32</p>
 </footer>
 
 </body>

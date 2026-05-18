@@ -26,6 +26,117 @@
   <h2>Shrnutí</h2>
   <p class="framing">{{ framing }}</p>
 
+  {% if intl_has_data %}
+  {# =========================================================================
+     INTERNATIONAL COHORT BENCHMARK — strongest "new info" finding
+     (Český fond vs FIN/SWE/SVK/CAN/USA per cohort + per-capita)
+     ========================================================================= #}
+  <h3>Strukturální benchmark vs peer-země</h3>
+  <p>
+    Hokejová intuice český fond rozpoznává hráč po hráči. <strong>Strukturální
+    pozice v rámci peer-zemí (FIN, SWE, SVK, CAN) ale vyžaduje datovou
+    agregaci kterou jedinec v hlavě nedokáže.</strong> Níže tři čísla, která
+    nejsou typicky agregovaná v jednom místě.
+  </p>
+
+  <h4>Per-capita hustota NHL hráčů (sezóna 2025-26)</h4>
+  <table class="kv-table">
+    <thead>
+      <tr><th>Země</th><th>NHL hráči (≥10 GP)</th><th>Populace (M)</th><th>Hráčů / M</th></tr>
+    </thead>
+    <tbody>
+      {% for r in intl_per_capita %}
+      <tr{% if r.country == 'CZE' %} style="background:#f4f1ea; font-weight:600;"{% endif %}>
+        <td>{{ r.country }}</td>
+        <td>{{ r.n_players }}</td>
+        <td>{{ '%.1f' | format(r.population_m) }}</td>
+        <td>{{ '%.2f' | format(r.per_million) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p class="muted small">
+    Po normalizaci na populaci je český fond v NHL <strong>šestý ze šesti</strong>
+    porovnávaných zemí — za Slovenskem, čtyřikrát méně hustý než Finsko.
+  </p>
+
+  <figure class="hero-figure">
+    <img src="intl_cohort_heatmap.svg" alt="Mezinárodní cohort heatmap: ČR vs peer-země">
+    <figcaption>
+      Mediánová produkce (P/GP) podle země, pozice a věkové skupiny. Modře
+      orámovaná řada = ČR. Buňka: počet hráčů + medián bodů na zápas.
+    </figcaption>
+  </figure>
+
+  <h4>Specifické cohort gapy</h4>
+  <p>
+    <strong>Útočníci — kde český pool je strukturálně tenký:</strong>
+  </p>
+  <table class="movers-table">
+    <thead>
+      <tr>
+        <th>Cohort</th>
+        <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in intl_cohort_gaps_f %}
+      <tr>
+        <td><strong>{{ r.cohort }}</strong></td>
+        {% for cc in ['CZE','FIN','SWE','SVK'] %}
+          {% set cell = r[cc] %}
+          <td>
+            {% if cell.n > 0 %}
+              n={{ cell.n }} · {{ '%.2f' | format(cell.median) }}
+            {% else %}
+              <span class="muted">—</span>
+            {% endif %}
+          </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p class="muted small">
+    Český <strong>U22 forwards cohort = 1 hráč</strong> (Kulich). FIN 3, SWE 7.
+    Současný <strong>26-29 elite cohort (Pastrňák/Nečas/Zacha/Hertl) drží
+    median 1.06 P/GP</strong> — světová špička, ale jen 4 hráče hluboko.
+  </p>
+
+  <p>
+    <strong>Obránci — strukturálně problematická pozice napříč všemi cohorty:</strong>
+  </p>
+  <table class="movers-table">
+    <thead>
+      <tr>
+        <th>Cohort</th>
+        <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in intl_cohort_gaps_d %}
+      <tr>
+        <td><strong>{{ r.cohort }}</strong></td>
+        {% for cc in ['CZE','FIN','SWE','SVK'] %}
+          {% set cell = r[cc] %}
+          <td>
+            {% if cell.n > 0 %}
+              n={{ cell.n }} · {{ '%.2f' | format(cell.median) }}
+            {% else %}
+              <span class="muted">—</span>
+            {% endif %}
+          </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p class="muted small">
+    ČR má <strong>4 obránce v NHL celkem</strong> napříč všemi věkovými skupinami.
+    Pro srovnání FIN má 14, SWE 30. U22 cohort: 0 českých obránců.
+  </p>
+  {% endif %}
+
   <figure class="hero-figure">
     <img src="atlas_forwards.svg" alt="Atlas útočníků: style a quality projekce">
     <figcaption>

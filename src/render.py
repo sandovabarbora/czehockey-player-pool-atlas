@@ -372,11 +372,56 @@ def main() -> None:
     league_quality = config.league_quality()["multipliers"]
     cluster_labels = config.load_yaml("cluster_labels.yaml")
 
+    # International benchmark data
+    intl_path = config.PROCESSED_DIR / "international_cohort.parquet"
+    intl_table = read_parquet(intl_path) if intl_path.exists() else pd.DataFrame()
+    intl_per_capita: list[dict] = []
+    intl_cohort_gaps_f: list[dict] = []
+    intl_cohort_gaps_d: list[dict] = []
+    if not intl_table.empty:
+        from src.international_benchmark import COUNTRIES, COHORTS, POPULATION_M
+        latest_intl = int(intl_table["season"].max())
+        sub_intl = intl_table[intl_table["season"] == latest_intl]
+        for country in COUNTRIES:
+            n = int(sub_intl[sub_intl["country"] == country]["n_players"].sum())
+            pop = POPULATION_M[country]
+            intl_per_capita.append({
+                "country": country,
+                "n_players": n,
+                "population_m": pop,
+                "per_million": round(n / pop, 2),
+            })
+        # Sort: per-million descending
+        intl_per_capita.sort(key=lambda r: r["per_million"], reverse=True)
+
+        for cohort_label, _, _ in COHORTS:
+            for position, target_list in (("F", intl_cohort_gaps_f), ("D", intl_cohort_gaps_d)):
+                row: dict = {"cohort": cohort_label}
+                for country in ("CZE", "FIN", "SWE", "SVK"):
+                    cell = sub_intl[
+                        (sub_intl["country"] == country)
+                        & (sub_intl["position"] == position)
+                        & (sub_intl["cohort"] == cohort_label)
+                    ]
+                    if cell.empty:
+                        row[country] = {"n": 0, "median": None}
+                    else:
+                        row[country] = {
+                            "n": int(cell.iloc[0]["n_players"]),
+                            "median": float(cell.iloc[0]["median_P_per_GP"]),
+                        }
+                target_list.append(row)
+
     # --- Render figures ---
     _render_atlas(fwd_coords, fwd_features, trajectory, "F",
                   config.OUTPUTS_DIR / "atlas_forwards.svg")
     _render_atlas(def_coords, def_features, trajectory, "D",
                   config.OUTPUTS_DIR / "atlas_defense.svg")
+
+    # International cohort heatmap (delegate to module that knows its layout)
+    if not intl_table.empty:
+        from src.international_benchmark import render_cohort_heatmap
+        render_cohort_heatmap(intl_table, config.OUTPUTS_DIR / "intl_cohort_heatmap.svg")
 
     # --- Build data tables ---
     n_players = int(canonical["canonical_id"].nunique())
@@ -404,6 +449,10 @@ def main() -> None:
         framing=CZECH_FRAMING,
         observations=CZECH_OBSERVATIONS,
         limitations=limitations_html,
+        intl_per_capita=intl_per_capita,
+        intl_cohort_gaps_f=intl_cohort_gaps_f,
+        intl_cohort_gaps_d=intl_cohort_gaps_d,
+        intl_has_data=bool(intl_per_capita),
         fwd_clusters=fwd_clusters,
         def_clusters=def_clusters,
         top_improvers=top_improvers,
