@@ -64,3 +64,8 @@ check: lint test
 clean:
 	rm -rf data/processed/* outputs/*.html outputs/*.pdf outputs/*.svg outputs/*.png
 	@echo "Cleaned processed/ and outputs/ (raw/ preserved)"
+
+pages:
+	cp outputs/index.html outputs/style.css outputs/atlas_forwards.svg \
+	   outputs/atlas_defense.svg outputs/report.pdf docs/
+	@echo "Copied current outputs/ to docs/ for GitHub Pages"
