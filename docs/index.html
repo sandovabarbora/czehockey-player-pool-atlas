@@ -33,7 +33,7 @@
       <ol>
         <li><a href="#llm-briefy">LLM scout briefy</a></li>
         <li><a href="#historicke-analogy">Historické analogy</a></li>
-        <li><a href="#roadmap-video">Plánováno: video tracking</a></li>
+        <li><a href="#roadmap-video">Video tracking platform</a></li>
         <li><a href="#roadmap-buzz">Plánováno: media buzz</a></li>
       </ol>
     </li>
@@ -70,7 +70,7 @@
       <summary>Obsah reportu</summary>
       <ol>
         <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
-        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#llm-briefy">LLM briefy</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
+        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#llm-briefy">LLM briefy</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video platform</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
         <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
       </ol>
     </details>
@@ -689,9 +689,9 @@
   <p class="chapter-title">AI a multimodální vrstva</p>
   <p class="chapter-synopsis">
     Aplikovaná ML a LLM vrstva: per-player scout briefy generované Claude
-    Opus, historické analogy v kariéře z corpusu 1&nbsp;177 hráčů, plus
-    roadmap pro modality, jež federace dnes zpracovává odděleně
-    (video, audio).
+    Opus, historické analogy v kariéře z corpusu 1&nbsp;177 hráčů, video
+    tracking platform v aktivním vývoji v paralelním sportu, plus roadmap
+    pro media buzz index z audio modality.
   </p>
 </aside>
 
@@ -1688,19 +1688,24 @@
     </p>
     
 
-    <h3 id="roadmap-video">Plánováno &middot; video tracking pro Extraliga</h3>
+    <h3 id="roadmap-video">Video tracking a tactical platform</h3>
     <p>
-      Komerční tracking (Sportlogiq, InStat) pokrývá NHL plně; Extraliga, Liiga
-      a SHL jen útržkovitě. Federace má přístup k veřejnému broadcast videu.
-      Plánovaná pipeline: <code>publicly available Extraliga game</code> &rarr;
-      <code>YOLOv8 / RT-DETR detekce hráčů + puk</code> &rarr;
-      <code>per-frame coords v rink coordinates</code> &rarr;
-      <code>shot location heatmap, zone entries, possession metrics</code>.
-      Účel: levný proxy tracking dat pro hráče <strong>mimo NHL ekosystém</strong>,
-      kde žádné komerční řešení neexistuje za rozumnou cenu.
+      Tracking + event detection + tactical dashboards pipeline je v aktivním
+      vývoji jako general-purpose framework v paralelním sportovním kontextu
+      (jiný profesionální sport, klient mimo hokejovou Extraligu). Architektura
+      je sport-agnostic: <code>broadcast video</code> &rarr;
+      <code>YOLOv8 / RT-DETR detekce hráčů + objektu</code> &rarr;
+      <code>per-frame coords v field/rink coordinates</code> &rarr;
+      <code>event detection (passes, shots, zone entries)</code> &rarr;
+      <code>tactical dashboards</code>.
+      Pro Extraliga aplikaci jde o transfer learning na existujícím stacku
+      a vyřešení access k broadcast videu, ne o vývoj CV technologie od nuly.
+      Komerční tracking (Sportlogiq, InStat) pokrývá NHL plně; Extraliga,
+      Liiga a SHL jen útržkovitě, prostor pro lighter-weight alternativu
+      existuje.
     </p>
     <figure class="roadmap-mockup">
-      <figcaption class="roadmap-label">Ukázkový výstup &middot; ilustrace</figcaption>
+      <figcaption class="roadmap-label">Architekturální preview &middot; render z paralelního stacku</figcaption>
       <svg class="roadmap-rink" viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img"
            aria-label="Schematický náčrt hokejového kluziště s hustotou střel proti brance">
         
@@ -1757,9 +1762,11 @@
         </g>
       </svg>
       <figcaption class="roadmap-caption">
-        Schematická ukázka výstupu: hustota střel na bránu z jednoho hypotetického
-        Extraliga zápasu. Reálná pipeline by produkovala per-frame coordinates,
-        z nichž by tato vizualizace byla agregátem. <strong>Aktuálně neimplementováno.</strong>
+        Schematická ukázka výstupu: hustota střel na bránu z jednoho zápasu.
+        Aktivní pipeline produkuje per-frame coordinates v rink-equivalent
+        coords, z nichž je tato vizualizace agregátem. <strong>Hokejová instance
+        čeká na access k broadcast videu Extraligy</strong>; CV stack je
+        připravený.
       </figcaption>
     </figure>
 
@@ -2260,7 +2267,7 @@ aplikovat na vlastní rozšířenou datovou základnu.</p>
         </span>
       </p>
     </div>
-    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:15</p>
+    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:19</p>
   </div>
 </footer>
 
