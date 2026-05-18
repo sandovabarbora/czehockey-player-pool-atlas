@@ -25,6 +25,14 @@
         <li><a href="#trajektorie">Trajektorie</a></li>
       </ol>
     </li>
+    <li><a href="#ai-vrstva">AI a multimodální vrstva</a>
+      <ol>
+        <li><a href="#vision-profily">Vision-language profily</a></li>
+        <li><a href="#historicke-analogy">Historické analogy</a></li>
+        <li><a href="#roadmap-video">Plánováno: video tracking</a></li>
+        <li><a href="#roadmap-buzz">Plánováno: media buzz</a></li>
+      </ol>
+    </li>
     <li><a href="#metodologie">Metodologie</a>
       <ol>
         <li><a href="#nasobicky">Ligové násobičky</a></li>
@@ -57,6 +65,7 @@
       <summary>Obsah reportu</summary>
       <ol>
         <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
+        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#vision-profily">Vision profily</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
         <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
       </ol>
     </details>
@@ -647,7 +656,1183 @@
       </div>
     </div>
 
-    <p class="continue">Metodologie a tabulky pokračují níže</p>
+    <p class="continue">AI a multimodální vrstva níže, metodologie pokračuje za ní</p>
+  </div>
+</section>
+
+
+<section class="ai-layer">
+  <div class="container">
+    <h2 id="ai-vrstva">AI a multimodální vrstva</h2>
+    <p class="framing">
+      Doplňková vrstva nad strukturovanými daty. Hybridní pipeline, která spojuje
+      modality, jež federace dnes zpracovává odděleně: fotografii a statistiku,
+      současný profil a historický analog, video a auditovatelnou metriku.
+      První dvě podsekce jsou implementované, další dvě jsou roadmap s ukázkovým
+      výstupem.
+    </p>
+
+    
+    <h3 id="vision-profily">Vision-language profily &middot; Claude Opus 4.7</h3>
+    <p>
+      Pro každého hráče se kombinuje akční foto z NHL CDN (vstupní modalita: obrázek)
+      s jeho strukturovanou statistickou kartou (vstupní modalita: pre-computed čísla).
+      Model popisuje hráče jako celek — co je vidět na snímku, jaké jsou stats,
+      kde se vizuál a čísla shodují, kde mezi nimi vzniká tenze. Tři odstavce
+      v češtině, žádné predikce, žádná doporučení.
+    </p>
+    <div class="vision-cards">
+      
+      <article class="vision-card">
+        <figure class="vision-card-photo">
+          <img src="https://assets.nhle.com/mugs/actionshots/1296x729/8477956.jpg" alt="Akční snímek David Pastrňák" loading="lazy">
+        </figure>
+        <div class="vision-card-body">
+          <h4>David Pastrňák</h4>
+          <p class="vision-card-meta">
+            Cache read 0 tok &middot;
+            out 696 tok &middot;
+            Czech &middot; claude-opus-4-7
+          </p>
+          
+          <p class="vision-card-para">Na snímku je hráč zachycen v opřené poloze u mantinelu, s pohledem mírně vzhůru a hokejkou nataženou před tělo v horizontální rovině. Vidět je černobílá helma Bauer s číslem 88, plexisklový půlvizor, krátký rezavý plnovous a véčko „A&#34; na dresu Bruins. Rukavice spočívají na hraně, hokejka je černá s výrazným zakřivením čepele směřujícím vzhůru. Postoj je statický, fotografie nezachycuje pohybovou fázi, pouze klidovou pozici v prostoru hřiště.</p>
+          
+          <p class="vision-card-para">Statistická karta ukazuje konzistenci na elitní úrovni: tři po sobě jdoucí sezóny s 100+ body (110, 106, 100) a střelecké objemy 261-382 ran za sezónu, tedy 3.39-4.66 S/GP. Kariérní totaly 420 G a 513 A na 833 zápasů odpovídají kadenci 1.12 P/GP přes celou kariéru. Cluster zařazení C3/C0 v kombinaci s quality z-score +6.50 řadí profil do horního ocasu rozdělení. Účast na dvou MS doplňuje mezinárodní vzorek.</p>
+          
+          <p class="vision-card-para">Zakřivení čepele a způsob, jakým je hokejka držena nataženě před tělem, je strukturálně konzistentní s profilem hráče, jehož produkce je vázána na střeleckou aktivitu — 319 a 382 ran v předchozích dvou sezónách nejsou náhodné, naznačují opakovaný shot-first sklon. Véčko asistenta na dresu doplňuje statistický obraz seniorní role v sestavě. Snímek je ovšem klidový portrét, nikoli akce; samotná fotka nemůže potvrdit release ani edge work. Statistická konzistence napříč třemi sezónami je tu hlavním signálem, vizuál slouží jako doplňující kontext, ne důkaz stylu.</p>
+          
+        </div>
+      </article>
+      
+      <article class="vision-card">
+        <figure class="vision-card-photo">
+          <img src="https://assets.nhle.com/mugs/actionshots/1296x729/8479425.jpg" alt="Akční snímek Filip Hronek" loading="lazy">
+        </figure>
+        <div class="vision-card-body">
+          <h4>Filip Hronek</h4>
+          <p class="vision-card-meta">
+            Cache read 0 tok &middot;
+            out 724 tok &middot;
+            Czech &middot; claude-opus-4-7
+          </p>
+          
+          <p class="vision-card-para">Na snímku je hráč v tmavě modrém dresu Vancouveru s číslem 17, zachycen v mírném předklonu nad ledem, hůl drženou oběma rukama nízko před tělem, čepel položená naplocho na ploše. Hlava je zvednutá, pohled směřuje vpřed mimo kotouč. Ramena jsou srovnaná, kolena pokrčená, váha přenesená na vnitřní hrany bruslí. Postava působí kompaktně, bez výrazné fyzické masivnosti — proporce odpovídají uváděným 183 cm a 86 kg.</p>
+          
+          <p class="vision-card-para">Karta ukazuje v sezóně 2025/26 8 G, 41 A a 49 bodů v 82 zápasech při 137 střelách, P/GP 0,60 a S/GP 1,67. V 2023/24 obdobně 48 bodů a 148 střel ve 81 zápasech. Kariérní součet je 533 GP, 287 bodů, z toho 239 asistencí. Quality cluster C3 s z-score +6,21 a style cluster C0. Jeden záznam z MS 24/25. Poměr asistencí k bodům přesahuje 0,83 napříč třemi sezónami.</p>
+          
+          <p class="vision-card-para">Pozice na snímku — hlava nahoře, hůl natažená dopředu k vedení puku, otevřený postoj bez záměru střely — koresponduje s profilem, kde dominují asistence (239 vs. 48 gólů) a kde jeden z nejvyšších z-score v souboru spočívá na objemu střel a distribuci, nikoli na zakončení. Snímek zachycuje fázi přenosu puku, což je vizuálně konzistentní s C0 stylem zaměřeným na transport. Tenze: 137–148 střel za sezónu naznačuje aktivní zapojení do ofenzivy, na fotografii však není zachycen moment vlastního zakončení; jeden snímek nemůže potvrdit konverzní profil, statistika ho doplňuje.</p>
+          
+        </div>
+      </article>
+      
+      <article class="vision-card">
+        <figure class="vision-card-photo">
+          <img src="https://assets.nhle.com/mugs/actionshots/1296x729/8483468.jpg" alt="Akční snímek Jiří Kulich" loading="lazy">
+        </figure>
+        <div class="vision-card-body">
+          <h4>Jiří Kulich</h4>
+          <p class="vision-card-meta">
+            Cache read 0 tok &middot;
+            out 797 tok &middot;
+            Czech &middot; claude-opus-4-7
+          </p>
+          
+          <p class="vision-card-para">Na snímku stojí hráč v modrém dresu Buffala v pozici po dokončení střely nebo přihrávky — hůl je vedena nízko a téměř vodorovně skrz trup, obě ruce drží hokejku v úchopu typickém pro forehandové zakončení, horní ruka u boku, spodní vysunutá vpřed. Trup je mírně předkloněný, hlava zvednutá s pohledem sledujícím dráhu kotouče. Vizor s plnou ochranou, dres bez viditelného čísla na předku. Postava působí kompaktně, bez nadměrné hmoty v ramenou.</p>
+          
+          <p class="vision-card-para">Karta uvádí 185 cm a 88 kg, pozici středního útočníka, věk 22. V sezóně 2024/25 odehrál 62 zápasů s bilancí 15+9 = 24 bodů, 134 střel (S/GP 2.16, G/S přibližně 0.11). Aktuální 2025/26 vykazuje 12 GP, 5 bodů, 20 střel, tedy 1.67 S/GP a P/GP 0.42. Atlas projekce řadí hráče do quality clusteru C4 se z-score +1.41 a stylového clusteru C1. Kariérně 75 NHL zápasů, 29 bodů, jeden záznam IIHF MS 24/25.</p>
+          
+          <p class="vision-card-para">Dokončený pohyb hole zachycený na snímku rezonuje se statistickým profilem postaveným především na objemu střelby — 2.16 S/GP v plné sezóně a vysoké 1.67 i ve vzorku letošního ročníku naznačují roli zakončovatele, k níž zachycené tělesné nastavení (nízká hůl, prodloužený follow-through skrz osu těla) odpovídá. Quality z-score +1.41 v rámci C4 a P/GP kolem 0.40 ukazují na nadprůměrnou ofenzivní hodnotu v relativně raném stadiu kariéry. Tenze leží mezi konverzí — 15 gólů na 134 střel je solidní, ne výjimečné — a vizuálním dojmem ostrého releasu; jeden snímek však zachycuje moment, nikoli průměr.</p>
+          
+        </div>
+      </article>
+      
+      <article class="vision-card">
+        <figure class="vision-card-photo">
+          <img src="https://assets.nhle.com/mugs/actionshots/1296x729/8480039.jpg" alt="Akční snímek Martin Nečas" loading="lazy">
+        </figure>
+        <div class="vision-card-body">
+          <h4>Martin Nečas</h4>
+          <p class="vision-card-meta">
+            Cache read 0 tok &middot;
+            out 758 tok &middot;
+            Czech &middot; claude-opus-4-7
+          </p>
+          
+          <p class="vision-card-para">Na snímku je hráč v dresu Colorado Avalanche s číslem 88, zachycen v mírně předkloněném postoji uprostřed bruslení podél mantinelu. Hokejka je vedena nízko obouruč, čepel u ledu, ruce v Bauer rukavicích drží hůl v širším úchopu typickém pro skenování prostoru. Hlava je zvednutá, pohled mimo kotouč, do strany — tělo otevřené. Vysoká, štíhlá konstrukce odpovídá uvedeným 191 cm. Plexisklový půlvizor, bez stop kontaktu v okamžiku snímku.</p>
+          
+          <p class="vision-card-para">Sezóna 2025/26 vykazuje 100 bodů ve 78 zápasech (1,28 P/GP) při 206 střelách, tedy 2,64 S/GP a střelecké efektivitě 0,18. Předchozí ročník 2024/25 byl rozdělen mezi dva týmy s kombinovaným tempem kolem 1,05 P/GP. Kariérní suma činí 426 bodů v 519 zápasech. Atlas ho řadí do quality clusteru C3 se z-score +6,41 a stylového clusteru C0. Dvě účasti na MS v sezónách 24/25.</p>
+          
+          <p class="vision-card-para">Vzpřímená hlava a otevřené tělo na fotce korespondují s profilem hráče, jehož bodová produkce se opírá výrazně o asistence (62 A vůči 38 G v poslední sezóně) — vizuální skenování ledu je konzistentní se statistickým podílem nahrávek. Vysoký objem střel (2,64 S/GP) přitom naznačuje, že role není čistě tvůrčí; snímek však tuto střeleckou složku nezachycuje, hokejka je v přípravné, nikoli zakončovací pozici. Tenze mezi obrazem (kontrolovaná, čtecí fáze) a čísly (vysoký shot volume) je očekávaná — jeden snímek nemůže reprezentovat celý styl, statistická konzistence napříč 519 zápasy je silnější signál.</p>
+          
+        </div>
+      </article>
+      
+    </div>
+    <p class="capita-note">
+      Cena marginal: ~3 000 cached input + ~700 output tokenů na hráče.
+      Při zahrnutí prompt cachingu po prvním volání ≈ <strong>0,02&ndash;0,04 USD na kartu</strong>.
+      Celý český pool (78 hráčů) by stál cca 1,50&ndash;3 USD jednorázově.
+    </p>
+    
+
+    
+    <h3 id="historicke-analogy">Historické analogy v kariéře</h3>
+    <p>
+      Pro aktuální české hráče algoritmus hledá top 5 nejbližších historických
+      analogů v cached NHL corpusu (1&nbsp;177 hráčů, všech národností).
+      Vzdálenost se počítá ze tří featur ve stejném věku: <code>P/GP (quality-adjusted)</code>,
+      <code>GP</code>, <code>league_quality</code> (z-skóre normalizace). Pro každý
+      analog se zobrazuje subsequent trajektorie do 4 sezón vpřed.
+      <strong>Popis, ne predikce</strong>: čtenář interpretuje rozpětí cest, metoda
+      ji neuvaluje.
+    </p>
+    
+    <div class="analog-block">
+      <div class="analog-target">
+        <p class="analog-label">Cíl</p>
+        <p class="analog-name">Jiří Kulich</p>
+        <p class="analog-stats">
+          F &middot; věk 21 &middot;
+          NHL &middot; 12 GP &middot;
+          5 P &middot;
+          0,42 P/GP
+        </p>
+        <p class="analog-cohort">Cohort N = 542</p>
+      </div>
+      <ol class="analog-list">
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">1</span>
+            <span class="analog-row-name">Mike Hardman</span>
+            <span class="analog-row-country">USA</span>
+            <span class="analog-row-context">
+              NHL &middot; 8 GP &middot; 3 P &middot;
+              d&nbsp;=&nbsp;0,26
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;22&nbsp;
+              <span class="analog-traj-detail">AHL&nbsp;&middot;&nbsp;43GP&nbsp;&middot;&nbsp;32P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;23&nbsp;
+              <span class="analog-traj-detail">AHL&nbsp;&middot;&nbsp;58GP&nbsp;&middot;&nbsp;18P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;24&nbsp;
+              <span class="analog-traj-detail">AHL&nbsp;&middot;&nbsp;63GP&nbsp;&middot;&nbsp;37P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;25&nbsp;
+              <span class="analog-traj-detail">AHL&nbsp;&middot;&nbsp;57GP&nbsp;&middot;&nbsp;35P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">2</span>
+            <span class="analog-row-name">John Hayden</span>
+            <span class="analog-row-country">USA</span>
+            <span class="analog-row-context">
+              NHL &middot; 12 GP &middot; 4 P &middot;
+              d&nbsp;=&nbsp;0,36
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;22&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;47GP&nbsp;&middot;&nbsp;13P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;23&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;54GP&nbsp;&middot;&nbsp;5P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;24&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;43GP&nbsp;&middot;&nbsp;4P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;25&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;29GP&nbsp;&middot;&nbsp;5P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">3</span>
+            <span class="analog-row-name">Nicholas Robertson</span>
+            <span class="analog-row-country">USA</span>
+            <span class="analog-row-context">
+              NHL &middot; 15 GP &middot; 5 P &middot;
+              d&nbsp;=&nbsp;0,39
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;22&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;56GP&nbsp;&middot;&nbsp;27P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;23&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;69GP&nbsp;&middot;&nbsp;22P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;24&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;78GP&nbsp;&middot;&nbsp;32P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">4</span>
+            <span class="analog-row-name">Elmer Soderblom</span>
+            <span class="analog-row-country">SWE</span>
+            <span class="analog-row-context">
+              NHL &middot; 21 GP &middot; 8 P &middot;
+              d&nbsp;=&nbsp;0,47
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;22&nbsp;
+              <span class="analog-traj-detail">AHL&nbsp;&middot;&nbsp;61GP&nbsp;&middot;&nbsp;29P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;23&nbsp;
+              <span class="analog-traj-detail">AHL&nbsp;&middot;&nbsp;38GP&nbsp;&middot;&nbsp;17P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;24&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;39GP&nbsp;&middot;&nbsp;3P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">5</span>
+            <span class="analog-row-name">Jack McBain</span>
+            <span class="analog-row-country">CAN</span>
+            <span class="analog-row-context">
+              NHL &middot; 10 GP &middot; 3 P &middot;
+              d&nbsp;=&nbsp;0,51
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;22&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;82GP&nbsp;&middot;&nbsp;26P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;23&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;67GP&nbsp;&middot;&nbsp;26P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;24&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;82GP&nbsp;&middot;&nbsp;27P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;25&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;75GP&nbsp;&middot;&nbsp;25P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+      </ol>
+    </div>
+    
+    <div class="analog-block">
+      <div class="analog-target">
+        <p class="analog-label">Cíl</p>
+        <p class="analog-name">David Jiříček</p>
+        <p class="analog-stats">
+          D &middot; věk 22 &middot;
+          AHL &middot; 24 GP &middot;
+          10 P &middot;
+          0,42 P/GP
+        </p>
+        <p class="analog-cohort">Cohort N = 306</p>
+      </div>
+      <ol class="analog-list">
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">1</span>
+            <span class="analog-row-name">Victor Mancini</span>
+            <span class="analog-row-country">USA</span>
+            <span class="analog-row-context">
+              AHL &middot; 23 GP &middot; 10 P &middot;
+              d&nbsp;=&nbsp;0,08
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;23&nbsp;
+              <span class="analog-traj-detail">AHL&nbsp;&middot;&nbsp;33GP&nbsp;&middot;&nbsp;12P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">2</span>
+            <span class="analog-row-name">Cam Dineen</span>
+            <span class="analog-row-country">USA</span>
+            <span class="analog-row-context">
+              AHL &middot; 22 GP &middot; 10 P &middot;
+              d&nbsp;=&nbsp;0,17
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;23&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;34GP&nbsp;&middot;&nbsp;7P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;24&nbsp;
+              <span class="analog-traj-detail">AHL&nbsp;&middot;&nbsp;50GP&nbsp;&middot;&nbsp;35P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;25&nbsp;
+              <span class="analog-traj-detail">AHL&nbsp;&middot;&nbsp;58GP&nbsp;&middot;&nbsp;25P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;26&nbsp;
+              <span class="analog-traj-detail">AHL&nbsp;&middot;&nbsp;59GP&nbsp;&middot;&nbsp;43P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">3</span>
+            <span class="analog-row-name">Brett Kulak</span>
+            <span class="analog-row-country">CAN</span>
+            <span class="analog-row-context">
+              AHL &middot; 22 GP &middot; 10 P &middot;
+              d&nbsp;=&nbsp;0,17
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;23&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;71GP&nbsp;&middot;&nbsp;8P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;24&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;57GP&nbsp;&middot;&nbsp;17P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;25&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;56GP&nbsp;&middot;&nbsp;7P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;26&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;46GP&nbsp;&middot;&nbsp;8P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">4</span>
+            <span class="analog-row-name">Urho Vaakanainen</span>
+            <span class="analog-row-country">FIN</span>
+            <span class="analog-row-context">
+              AHL &middot; 23 GP &middot; 8 P &middot;
+              d&nbsp;=&nbsp;0,24
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;23&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;23GP&nbsp;&middot;&nbsp;2P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;24&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;68GP&nbsp;&middot;&nbsp;14P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;25&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;46GP&nbsp;&middot;&nbsp;15P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;26&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;34GP&nbsp;&middot;&nbsp;6P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">5</span>
+            <span class="analog-row-name">Charles Alexis Legault</span>
+            <span class="analog-row-country">CAN</span>
+            <span class="analog-row-context">
+              AHL &middot; 24 GP &middot; 8 P &middot;
+              d&nbsp;=&nbsp;0,28
+            </span>
+          </div>
+          
+        </li>
+        
+      </ol>
+    </div>
+    
+    <div class="analog-block">
+      <div class="analog-target">
+        <p class="analog-label">Cíl</p>
+        <p class="analog-name">Pavel Zacha</p>
+        <p class="analog-stats">
+          F &middot; věk 28 &middot;
+          NHL &middot; 78 GP &middot;
+          65 P &middot;
+          0,83 P/GP
+        </p>
+        <p class="analog-cohort">Cohort N = 310</p>
+      </div>
+      <ol class="analog-list">
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">1</span>
+            <span class="analog-row-name">Elias Lindholm</span>
+            <span class="analog-row-country">SWE</span>
+            <span class="analog-row-context">
+              NHL &middot; 80 GP &middot; 64 P &middot;
+              d&nbsp;=&nbsp;0,15
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;29&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;49GP&nbsp;&middot;&nbsp;32P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;82GP&nbsp;&middot;&nbsp;47P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;69GP&nbsp;&middot;&nbsp;48P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">2</span>
+            <span class="analog-row-name">Max Pacioretty</span>
+            <span class="analog-row-country">USA</span>
+            <span class="analog-row-context">
+              NHL &middot; 81 GP &middot; 67 P &middot;
+              d&nbsp;=&nbsp;0,17
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;29&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;64GP&nbsp;&middot;&nbsp;37P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;66GP&nbsp;&middot;&nbsp;40P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;71GP&nbsp;&middot;&nbsp;66P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;32&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;48GP&nbsp;&middot;&nbsp;51P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">3</span>
+            <span class="analog-row-name">Bo Horvat</span>
+            <span class="analog-row-country">CAN</span>
+            <span class="analog-row-context">
+              NHL &middot; 81 GP &middot; 68 P &middot;
+              d&nbsp;=&nbsp;0,17
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;29&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;81GP&nbsp;&middot;&nbsp;57P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;68GP&nbsp;&middot;&nbsp;57P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">4</span>
+            <span class="analog-row-name">Travis Konecny</span>
+            <span class="analog-row-country">CAN</span>
+            <span class="analog-row-context">
+              NHL &middot; 77 GP &middot; 68 P &middot;
+              d&nbsp;=&nbsp;0,17
+            </span>
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">5</span>
+            <span class="analog-row-name">Pavel Buchnevich</span>
+            <span class="analog-row-country">RUS</span>
+            <span class="analog-row-context">
+              NHL &middot; 80 GP &middot; 63 P &middot;
+              d&nbsp;=&nbsp;0,19
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;29&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;76GP&nbsp;&middot;&nbsp;57P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;81GP&nbsp;&middot;&nbsp;48P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+      </ol>
+    </div>
+    
+    <div class="analog-block">
+      <div class="analog-target">
+        <p class="analog-label">Cíl</p>
+        <p class="analog-name">Filip Hronek</p>
+        <p class="analog-stats">
+          D &middot; věk 28 &middot;
+          NHL &middot; 82 GP &middot;
+          49 P &middot;
+          0,60 P/GP
+        </p>
+        <p class="analog-cohort">Cohort N = 169</p>
+      </div>
+      <ol class="analog-list">
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">1</span>
+            <span class="analog-row-name">Shayne Gostisbehere</span>
+            <span class="analog-row-country">USA</span>
+            <span class="analog-row-context">
+              NHL &middot; 82 GP &middot; 51 P &middot;
+              d&nbsp;=&nbsp;0,12
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;29&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;52GP&nbsp;&middot;&nbsp;31P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;81GP&nbsp;&middot;&nbsp;56P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;70GP&nbsp;&middot;&nbsp;45P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;32&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;55GP&nbsp;&middot;&nbsp;50P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">2</span>
+            <span class="analog-row-name">Devon Toews</span>
+            <span class="analog-row-country">CAN</span>
+            <span class="analog-row-context">
+              NHL &middot; 80 GP &middot; 50 P &middot;
+              d&nbsp;=&nbsp;0,17
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;29&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;82GP&nbsp;&middot;&nbsp;50P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;76GP&nbsp;&middot;&nbsp;44P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;68GP&nbsp;&middot;&nbsp;24P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">3</span>
+            <span class="analog-row-name">Mattias Ekholm</span>
+            <span class="analog-row-country">SWE</span>
+            <span class="analog-row-context">
+              NHL &middot; 80 GP &middot; 44 P &middot;
+              d&nbsp;=&nbsp;0,26
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;29&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;68GP&nbsp;&middot;&nbsp;33P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;48GP&nbsp;&middot;&nbsp;23P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;76GP&nbsp;&middot;&nbsp;31P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;32&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;57GP&nbsp;&middot;&nbsp;18P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">4</span>
+            <span class="analog-row-name">Hampus Lindholm</span>
+            <span class="analog-row-country">SWE</span>
+            <span class="analog-row-context">
+              NHL &middot; 80 GP &middot; 53 P &middot;
+              d&nbsp;=&nbsp;0,33
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;29&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;73GP&nbsp;&middot;&nbsp;26P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;17GP&nbsp;&middot;&nbsp;7P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;67GP&nbsp;&middot;&nbsp;26P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">5</span>
+            <span class="analog-row-name">Ryan Suter</span>
+            <span class="analog-row-country">USA</span>
+            <span class="analog-row-context">
+              NHL &middot; 82 GP &middot; 43 P &middot;
+              d&nbsp;=&nbsp;0,36
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;29&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;77GP&nbsp;&middot;&nbsp;38P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;82GP&nbsp;&middot;&nbsp;51P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;82GP&nbsp;&middot;&nbsp;40P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;32&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;78GP&nbsp;&middot;&nbsp;51P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+      </ol>
+    </div>
+    
+    <div class="analog-block">
+      <div class="analog-target">
+        <p class="analog-label">Cíl</p>
+        <p class="analog-name">David Pastrňák</p>
+        <p class="analog-stats">
+          F &middot; věk 29 &middot;
+          NHL &middot; 77 GP &middot;
+          100 P &middot;
+          1,30 P/GP
+        </p>
+        <p class="analog-cohort">Cohort N = 266</p>
+      </div>
+      <ol class="analog-list">
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">1</span>
+            <span class="analog-row-name">Ryan Nugent-Hopkins</span>
+            <span class="analog-row-country">CAN</span>
+            <span class="analog-row-context">
+              NHL &middot; 82 GP &middot; 104 P &middot;
+              d&nbsp;=&nbsp;0,31
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;80GP&nbsp;&middot;&nbsp;67P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;78GP&nbsp;&middot;&nbsp;49P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;32&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;72GP&nbsp;&middot;&nbsp;56P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">2</span>
+            <span class="analog-row-name">Jack Eichel</span>
+            <span class="analog-row-country">USA</span>
+            <span class="analog-row-context">
+              NHL &middot; 74 GP &middot; 90 P &middot;
+              d&nbsp;=&nbsp;0,33
+            </span>
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">3</span>
+            <span class="analog-row-name">Claude Giroux</span>
+            <span class="analog-row-country">CAN</span>
+            <span class="analog-row-context">
+              NHL &middot; 82 GP &middot; 102 P &middot;
+              d&nbsp;=&nbsp;0,35
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;82GP&nbsp;&middot;&nbsp;85P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;69GP&nbsp;&middot;&nbsp;53P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;32&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;54GP&nbsp;&middot;&nbsp;43P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;33&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;57GP&nbsp;&middot;&nbsp;42P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">4</span>
+            <span class="analog-row-name">Nikita Kucherov</span>
+            <span class="analog-row-country">RUS</span>
+            <span class="analog-row-context">
+              NHL &middot; 82 GP &middot; 113 P &middot;
+              d&nbsp;=&nbsp;0,40
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;81GP&nbsp;&middot;&nbsp;144P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;78GP&nbsp;&middot;&nbsp;121P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;32&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;76GP&nbsp;&middot;&nbsp;130P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">5</span>
+            <span class="analog-row-name">Sidney Crosby</span>
+            <span class="analog-row-country">CAN</span>
+            <span class="analog-row-context">
+              NHL &middot; 75 GP &middot; 89 P &middot;
+              d&nbsp;=&nbsp;0,40
+            </span>
+          </div>
+          
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;30&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;82GP&nbsp;&middot;&nbsp;89P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;31&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;79GP&nbsp;&middot;&nbsp;100P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;32&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;41GP&nbsp;&middot;&nbsp;47P</span>
+            </span>
+            
+            <span class="analog-traj-step">
+              věk&nbsp;33&nbsp;
+              <span class="analog-traj-detail">NHL&nbsp;&middot;&nbsp;55GP&nbsp;&middot;&nbsp;62P</span>
+            </span>
+            
+          </div>
+          
+        </li>
+        
+      </ol>
+    </div>
+    
+    <p class="capita-note">
+      Reference set tvoří pouze hráči v cached NHL landing endpoints (převážně
+      aktivní rosters 2024/25-2025/26). <strong>Pre-2000 retiréi (Jágr, Hejduk, Hašek, Reichel,
+      Sýkora) v této verzi chybí.</strong> Production-grade pipeline by je doplnila
+      přes hockey-reference scraping; tato session ukazuje princip na dostupných datech.
+    </p>
+    
+
+    <h3 id="roadmap-video">Plánováno &middot; video tracking pro Extraliga</h3>
+    <p>
+      Komerční tracking (Sportlogiq, InStat) pokrývá NHL plně; Extraliga, Liiga
+      a SHL jen útržkovitě. Federace má přístup k veřejnému broadcast videu.
+      Plánovaná pipeline: <code>publicly available Extraliga game</code> &rarr;
+      <code>YOLOv8 / RT-DETR detekce hráčů + puk</code> &rarr;
+      <code>per-frame coords v rink coordinates</code> &rarr;
+      <code>shot location heatmap, zone entries, possession metrics</code>.
+      Účel: levný proxy tracking dat pro hráče <strong>mimo NHL ekosystém</strong>,
+      kde žádné komerční řešení neexistuje za rozumnou cenu.
+    </p>
+    <figure class="roadmap-mockup">
+      <figcaption class="roadmap-label">Ukázkový výstup &middot; ilustrace</figcaption>
+      <svg class="roadmap-rink" viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Schematický náčrt hokejového kluziště s hustotou střel proti brance">
+        
+        <rect x="20" y="20" width="560" height="240" rx="60" ry="60" fill="#fdfbf6" stroke="#c8c2b7" stroke-width="1.6"/>
+        
+        <line x1="20" y1="140" x2="580" y2="140" stroke="#c8c2b7" stroke-width="0.8" stroke-dasharray="4 4"/>
+        
+        <circle cx="180" cy="100" r="32" fill="none" stroke="#c8c2b7" stroke-width="1"/>
+        <circle cx="180" cy="180" r="32" fill="none" stroke="#c8c2b7" stroke-width="1"/>
+        <circle cx="420" cy="100" r="32" fill="none" stroke="#c8c2b7" stroke-width="1"/>
+        <circle cx="420" cy="180" r="32" fill="none" stroke="#c8c2b7" stroke-width="1"/>
+        
+        <path d="M 540 130 Q 565 140 540 150 L 540 130" fill="#efe9dc" stroke="#c8c2b7" stroke-width="1"/>
+        
+        <g fill="#1f3a5f" fill-opacity="0.42">
+          <circle cx="460" cy="138" r="6"/>
+          <circle cx="470" cy="150" r="5"/>
+          <circle cx="450" cy="125" r="5"/>
+          <circle cx="455" cy="155" r="4"/>
+          <circle cx="465" cy="120" r="4"/>
+          <circle cx="445" cy="148" r="4"/>
+          <circle cx="475" cy="142" r="3"/>
+          <circle cx="425" cy="132" r="3"/>
+          <circle cx="435" cy="160" r="3"/>
+          <circle cx="430" cy="118" r="3"/>
+          <circle cx="495" cy="140" r="3"/>
+          <circle cx="410" cy="145" r="3"/>
+          <circle cx="415" cy="125" r="3"/>
+          <circle cx="490" cy="130" r="2.5"/>
+        </g>
+        <g fill="#9c3a2a" fill-opacity="0.7">
+          <circle cx="465" cy="135" r="2"/>
+          <circle cx="455" cy="143" r="2"/>
+          <circle cx="450" cy="138" r="2"/>
+          <circle cx="460" cy="148" r="2"/>
+        </g>
+        <g fill="#1f3a5f" fill-opacity="0.20">
+          <circle cx="380" cy="120" r="3"/>
+          <circle cx="370" cy="155" r="2.5"/>
+          <circle cx="360" cy="135" r="2.5"/>
+          <circle cx="340" cy="140" r="2"/>
+          <circle cx="320" cy="125" r="2"/>
+          <circle cx="300" cy="160" r="2"/>
+          <circle cx="220" cy="148" r="2"/>
+          <circle cx="200" cy="120" r="1.5"/>
+          <circle cx="160" cy="155" r="1.5"/>
+        </g>
+        
+        <g transform="translate(40, 240)" font-family="Bricolage Grotesque, sans-serif" font-size="9" fill="#8a857b">
+          <circle cx="0" cy="0" r="3" fill="#1f3a5f" fill-opacity="0.42"/>
+          <text x="8" y="3">shot location, n=29</text>
+          <circle cx="135" cy="0" r="2" fill="#9c3a2a" fill-opacity="0.7"/>
+          <text x="143" y="3">goal, n=4</text>
+        </g>
+      </svg>
+      <figcaption class="roadmap-caption">
+        Schematická ukázka výstupu: hustota střel na bránu z jednoho hypotetického
+        Extraliga zápasu. Reálná pipeline by produkovala per-frame coordinates,
+        z nichž by tato vizualizace byla agregátem. <strong>Aktuálně neimplementováno.</strong>
+      </figcaption>
+    </figure>
+
+    <h3 id="roadmap-buzz">Plánováno &middot; media buzz index z českých hokej podcastů</h3>
+    <p>
+      Český hokejový diskurz se z velké části odehrává v podcastech (Hokejka,
+      Češi v NHL, Slovenský hokej, regional). Plánovaná pipeline:
+      <code>RSS feed scrape</code> &rarr;
+      <code>Whisper-large-v3 transkribce v češtině</code> &rarr;
+      <code>NER na jména hráčů</code> &rarr;
+      <code>sentiment a topic extraction</code> &rarr;
+      <code>buzz time-series per hráč</code>. Signál, který federace dnes nemá
+      systematizovaný: <strong>mediální momentum a narativ kolem hráčů</strong>
+      jako doplněk ke statistické trajektorii.
+    </p>
+    <figure class="roadmap-mockup">
+      <figcaption class="roadmap-label">Ukázkový výstup &middot; ilustrace na vzorových datech</figcaption>
+      <svg class="roadmap-buzz" viewBox="0 0 640 240" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Schematický graf mediálního buzz indexu pro 4 hráče v čase">
+        
+        <line x1="60" y1="20" x2="60" y2="200" stroke="#c8c2b7" stroke-width="1"/>
+        <line x1="60" y1="200" x2="620" y2="200" stroke="#c8c2b7" stroke-width="1"/>
+        
+        <g stroke="#efe9dc" stroke-width="0.6">
+          <line x1="60" y1="60" x2="620" y2="60"/>
+          <line x1="60" y1="100" x2="620" y2="100"/>
+          <line x1="60" y1="140" x2="620" y2="140"/>
+        </g>
+        
+        <g font-family="Bricolage Grotesque, sans-serif" font-size="9" fill="#8a857b">
+          <text x="80"  y="218">XII</text>
+          <text x="170" y="218">I</text>
+          <text x="260" y="218">II</text>
+          <text x="350" y="218">III</text>
+          <text x="440" y="218">IV</text>
+          <text x="530" y="218">V</text>
+          <text x="50" y="63" text-anchor="end">100</text>
+          <text x="50" y="143" text-anchor="end">50</text>
+          <text x="50" y="203" text-anchor="end">0</text>
+        </g>
+        
+        <polyline fill="none" stroke="#1f3a5f" stroke-width="2"
+                  points="80,90 170,75 260,80 350,72 440,78 530,70 620,72"/>
+        
+        <polyline fill="none" stroke="#9c3a2a" stroke-width="2.4"
+                  points="80,175 170,170 260,160 350,140 440,55 530,75 620,100"/>
+        
+        <polyline fill="none" stroke="#7e8eaa" stroke-width="1.8"
+                  points="80,135 170,120 260,140 350,115 440,125 530,108 620,118"/>
+        
+        <polyline fill="none" stroke="#806b53" stroke-width="1.8"
+                  points="80,105 170,110 260,150 350,160 440,170 530,168 620,175"/>
+        
+        <line x1="440" y1="55" x2="440" y2="32" stroke="#9c3a2a" stroke-width="1" stroke-dasharray="2 2"/>
+        <text x="440" y="28" font-family="Spectral, serif" font-style="italic"
+              font-size="10" fill="#9c3a2a" text-anchor="middle">NHL debut</text>
+        
+        <g font-family="Bricolage Grotesque, sans-serif" font-size="10" fill="#2a261f"
+           transform="translate(60, 235)">
+          <line x1="0" y1="-4" x2="14" y2="-4" stroke="#1f3a5f" stroke-width="2"/>
+          <text x="20" y="0">Pastrňák</text>
+          <line x1="100" y1="-4" x2="114" y2="-4" stroke="#9c3a2a" stroke-width="2"/>
+          <text x="120" y="0">Kulich</text>
+          <line x1="195" y1="-4" x2="209" y2="-4" stroke="#7e8eaa" stroke-width="2"/>
+          <text x="215" y="0">Nečas</text>
+          <line x1="290" y1="-4" x2="304" y2="-4" stroke="#806b53" stroke-width="2"/>
+          <text x="310" y="0">Hronek</text>
+        </g>
+      </svg>
+      <figcaption class="roadmap-caption">
+        Ukázka výstupu pipeline: měsíční buzz score (počet zmínek &times; sentiment)
+        pro 4 hráče. Reálná pipeline by čerpala z transkripcí Whisper-large-v3,
+        NER by extrahoval mentioned-by-name. Data zde jsou ilustrativní.
+        <strong>Aktuálně neimplementováno.</strong>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -1029,7 +2214,7 @@ aplikovat na vlastní rozšířenou datovou základnu.</p>
       Barbora Šandová · <a href="mailto:barbora@datasimply.eu">barbora@datasimply.eu</a> ·
       <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">GitHub</a>
     </p>
-    <p class="rendered-at">Vyrenderováno: 2026-05-18 17:23</p>
+    <p class="rendered-at">Vyrenderováno: 2026-05-18 17:39</p>
   </div>
 </footer>
 

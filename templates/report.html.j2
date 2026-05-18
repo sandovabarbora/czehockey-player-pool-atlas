@@ -25,6 +25,14 @@
         <li><a href="#trajektorie">Trajektorie</a></li>
       </ol>
     </li>
+    <li><a href="#ai-vrstva">AI a multimodální vrstva</a>
+      <ol>
+        <li><a href="#vision-profily">Vision-language profily</a></li>
+        <li><a href="#historicke-analogy">Historické analogy</a></li>
+        <li><a href="#roadmap-video">Plánováno: video tracking</a></li>
+        <li><a href="#roadmap-buzz">Plánováno: media buzz</a></li>
+      </ol>
+    </li>
     <li><a href="#metodologie">Metodologie</a>
       <ol>
         <li><a href="#nasobicky">Ligové násobičky</a></li>
@@ -57,6 +65,7 @@
       <summary>Obsah reportu</summary>
       <ol>
         <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
+        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#vision-profily">Vision profily</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
         <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
       </ol>
     </details>
@@ -289,7 +298,270 @@
       </div>
     </div>
 
-    <p class="continue">Metodologie a tabulky pokračují níže</p>
+    <p class="continue">AI a multimodální vrstva níže, metodologie pokračuje za ní</p>
+  </div>
+</section>
+
+{# =============================================================================
+   SECTION A.5 — AI / MULTIMODAL LAYER (May 2026 addendum)
+   Vision-language player cards, historical analog finder, plus
+   honest roadmap mockups for video tracking and media-buzz indices.
+   ============================================================================= #}
+<section class="ai-layer">
+  <div class="container">
+    <h2 id="ai-vrstva">AI a multimodální vrstva</h2>
+    <p class="framing">
+      Doplňková vrstva nad strukturovanými daty. Hybridní pipeline, která spojuje
+      modality, jež federace dnes zpracovává odděleně: fotografii a statistiku,
+      současný profil a historický analog, video a auditovatelnou metriku.
+      První dvě podsekce jsou implementované, další dvě jsou roadmap s ukázkovým
+      výstupem.
+    </p>
+
+    {% if vision_cards %}
+    <h3 id="vision-profily">Vision-language profily &middot; Claude Opus 4.7</h3>
+    <p>
+      Pro každého hráče se kombinuje akční foto z NHL CDN (vstupní modalita: obrázek)
+      s jeho strukturovanou statistickou kartou (vstupní modalita: pre-computed čísla).
+      Model popisuje hráče jako celek — co je vidět na snímku, jaké jsou stats,
+      kde se vizuál a čísla shodují, kde mezi nimi vzniká tenze. Tři odstavce
+      v češtině, žádné predikce, žádná doporučení.
+    </p>
+    <div class="vision-cards">
+      {% for card in vision_cards %}
+      <article class="vision-card">
+        <figure class="vision-card-photo">
+          <img src="{{ card.photo_url }}" alt="Akční snímek {{ card.name }}" loading="lazy">
+        </figure>
+        <div class="vision-card-body">
+          <h4>{{ card.name }}</h4>
+          <p class="vision-card-meta">
+            Cache read {{ card.cache_read_tokens or 0 }} tok &middot;
+            out {{ card.output_tokens }} tok &middot;
+            Czech &middot; {{ card.model }}
+          </p>
+          {% for para in card.paragraphs %}
+          <p class="vision-card-para">{{ para }}</p>
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="capita-note">
+      Cena marginal: ~3 000 cached input + ~700 output tokenů na hráče.
+      Při zahrnutí prompt cachingu po prvním volání ≈ <strong>0,02&ndash;0,04 USD na kartu</strong>.
+      Celý český pool (78 hráčů) by stál cca 1,50&ndash;3 USD jednorázově.
+    </p>
+    {% endif %}
+
+    {% if historical_analogs %}
+    <h3 id="historicke-analogy">Historické analogy v kariéře</h3>
+    <p>
+      Pro aktuální české hráče algoritmus hledá top 5 nejbližších historických
+      analogů v cached NHL corpusu (1&nbsp;177 hráčů, všech národností).
+      Vzdálenost se počítá ze tří featur ve stejném věku: <code>P/GP (quality-adjusted)</code>,
+      <code>GP</code>, <code>league_quality</code> (z-skóre normalizace). Pro každý
+      analog se zobrazuje subsequent trajektorie do 4 sezón vpřed.
+      <strong>Popis, ne predikce</strong>: čtenář interpretuje rozpětí cest, metoda
+      ji neuvaluje.
+    </p>
+    {% for target in historical_analogs %}
+    <div class="analog-block">
+      <div class="analog-target">
+        <p class="analog-label">Cíl</p>
+        <p class="analog-name">{{ target.target_name }}</p>
+        <p class="analog-stats">
+          {{ target.target_position }} &middot; věk {{ target.comparison_age }} &middot;
+          {{ target.target_league }} &middot; {{ target.target_GP }} GP &middot;
+          {{ target.target_P }} P &middot;
+          {{ ('%.2f' | format(target.target_P_per_GP)) | replace('.', ',') }} P/GP
+        </p>
+        <p class="analog-cohort">Cohort N = {{ target.n_cohort }}</p>
+      </div>
+      <ol class="analog-list">
+        {% for a in target.analogs %}
+        <li class="analog-row">
+          <div class="analog-row-head">
+            <span class="analog-rank">{{ loop.index }}</span>
+            <span class="analog-row-name">{{ a.name }}</span>
+            <span class="analog-row-country">{{ a.country }}</span>
+            <span class="analog-row-context">
+              {{ a.league }} &middot; {{ a.GP }} GP &middot; {{ a.P }} P &middot;
+              d&nbsp;=&nbsp;{{ ('%.2f' | format(a.distance)) | replace('.', ',') }}
+            </span>
+          </div>
+          {% if a.trajectory %}
+          <div class="analog-row-trajectory">
+            <span class="analog-traj-label">Pokračování:</span>
+            {% for t in a.trajectory %}
+            <span class="analog-traj-step">
+              věk&nbsp;{{ t.age }}&nbsp;
+              <span class="analog-traj-detail">{{ t.league }}&nbsp;&middot;&nbsp;{{ t.GP }}GP&nbsp;&middot;&nbsp;{{ t.P }}P</span>
+            </span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endfor %}
+    <p class="capita-note">
+      Reference set tvoří pouze hráči v cached NHL landing endpoints (převážně
+      aktivní rosters 2024/25-2025/26). <strong>Pre-2000 retiréi (Jágr, Hejduk, Hašek, Reichel,
+      Sýkora) v této verzi chybí.</strong> Production-grade pipeline by je doplnila
+      přes hockey-reference scraping; tato session ukazuje princip na dostupných datech.
+    </p>
+    {% endif %}
+
+    <h3 id="roadmap-video">Plánováno &middot; video tracking pro Extraliga</h3>
+    <p>
+      Komerční tracking (Sportlogiq, InStat) pokrývá NHL plně; Extraliga, Liiga
+      a SHL jen útržkovitě. Federace má přístup k veřejnému broadcast videu.
+      Plánovaná pipeline: <code>publicly available Extraliga game</code> &rarr;
+      <code>YOLOv8 / RT-DETR detekce hráčů + puk</code> &rarr;
+      <code>per-frame coords v rink coordinates</code> &rarr;
+      <code>shot location heatmap, zone entries, possession metrics</code>.
+      Účel: levný proxy tracking dat pro hráče <strong>mimo NHL ekosystém</strong>,
+      kde žádné komerční řešení neexistuje za rozumnou cenu.
+    </p>
+    <figure class="roadmap-mockup">
+      <figcaption class="roadmap-label">Ukázkový výstup &middot; ilustrace</figcaption>
+      <svg class="roadmap-rink" viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Schematický náčrt hokejového kluziště s hustotou střel proti brance">
+        {# Rink outline (offensive third) #}
+        <rect x="20" y="20" width="560" height="240" rx="60" ry="60" fill="#fdfbf6" stroke="#c8c2b7" stroke-width="1.6"/>
+        {# Center red line #}
+        <line x1="20" y1="140" x2="580" y2="140" stroke="#c8c2b7" stroke-width="0.8" stroke-dasharray="4 4"/>
+        {# Faceoff circles #}
+        <circle cx="180" cy="100" r="32" fill="none" stroke="#c8c2b7" stroke-width="1"/>
+        <circle cx="180" cy="180" r="32" fill="none" stroke="#c8c2b7" stroke-width="1"/>
+        <circle cx="420" cy="100" r="32" fill="none" stroke="#c8c2b7" stroke-width="1"/>
+        <circle cx="420" cy="180" r="32" fill="none" stroke="#c8c2b7" stroke-width="1"/>
+        {# Goal crease #}
+        <path d="M 540 130 Q 565 140 540 150 L 540 130" fill="#efe9dc" stroke="#c8c2b7" stroke-width="1"/>
+        {# Shot density (synthetic — dense in slot, sparse on perimeter) #}
+        <g fill="#1f3a5f" fill-opacity="0.42">
+          <circle cx="460" cy="138" r="6"/>
+          <circle cx="470" cy="150" r="5"/>
+          <circle cx="450" cy="125" r="5"/>
+          <circle cx="455" cy="155" r="4"/>
+          <circle cx="465" cy="120" r="4"/>
+          <circle cx="445" cy="148" r="4"/>
+          <circle cx="475" cy="142" r="3"/>
+          <circle cx="425" cy="132" r="3"/>
+          <circle cx="435" cy="160" r="3"/>
+          <circle cx="430" cy="118" r="3"/>
+          <circle cx="495" cy="140" r="3"/>
+          <circle cx="410" cy="145" r="3"/>
+          <circle cx="415" cy="125" r="3"/>
+          <circle cx="490" cy="130" r="2.5"/>
+        </g>
+        <g fill="#9c3a2a" fill-opacity="0.7">
+          <circle cx="465" cy="135" r="2"/>
+          <circle cx="455" cy="143" r="2"/>
+          <circle cx="450" cy="138" r="2"/>
+          <circle cx="460" cy="148" r="2"/>
+        </g>
+        <g fill="#1f3a5f" fill-opacity="0.20">
+          <circle cx="380" cy="120" r="3"/>
+          <circle cx="370" cy="155" r="2.5"/>
+          <circle cx="360" cy="135" r="2.5"/>
+          <circle cx="340" cy="140" r="2"/>
+          <circle cx="320" cy="125" r="2"/>
+          <circle cx="300" cy="160" r="2"/>
+          <circle cx="220" cy="148" r="2"/>
+          <circle cx="200" cy="120" r="1.5"/>
+          <circle cx="160" cy="155" r="1.5"/>
+        </g>
+        {# Legend #}
+        <g transform="translate(40, 240)" font-family="Bricolage Grotesque, sans-serif" font-size="9" fill="#8a857b">
+          <circle cx="0" cy="0" r="3" fill="#1f3a5f" fill-opacity="0.42"/>
+          <text x="8" y="3">shot location, n=29</text>
+          <circle cx="135" cy="0" r="2" fill="#9c3a2a" fill-opacity="0.7"/>
+          <text x="143" y="3">goal, n=4</text>
+        </g>
+      </svg>
+      <figcaption class="roadmap-caption">
+        Schematická ukázka výstupu: hustota střel na bránu z jednoho hypotetického
+        Extraliga zápasu. Reálná pipeline by produkovala per-frame coordinates,
+        z nichž by tato vizualizace byla agregátem. <strong>Aktuálně neimplementováno.</strong>
+      </figcaption>
+    </figure>
+
+    <h3 id="roadmap-buzz">Plánováno &middot; media buzz index z českých hokej podcastů</h3>
+    <p>
+      Český hokejový diskurz se z velké části odehrává v podcastech (Hokejka,
+      Češi v NHL, Slovenský hokej, regional). Plánovaná pipeline:
+      <code>RSS feed scrape</code> &rarr;
+      <code>Whisper-large-v3 transkribce v češtině</code> &rarr;
+      <code>NER na jména hráčů</code> &rarr;
+      <code>sentiment a topic extraction</code> &rarr;
+      <code>buzz time-series per hráč</code>. Signál, který federace dnes nemá
+      systematizovaný: <strong>mediální momentum a narativ kolem hráčů</strong>
+      jako doplněk ke statistické trajektorii.
+    </p>
+    <figure class="roadmap-mockup">
+      <figcaption class="roadmap-label">Ukázkový výstup &middot; ilustrace na vzorových datech</figcaption>
+      <svg class="roadmap-buzz" viewBox="0 0 640 240" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Schematický graf mediálního buzz indexu pro 4 hráče v čase">
+        {# axes #}
+        <line x1="60" y1="20" x2="60" y2="200" stroke="#c8c2b7" stroke-width="1"/>
+        <line x1="60" y1="200" x2="620" y2="200" stroke="#c8c2b7" stroke-width="1"/>
+        {# gridlines #}
+        <g stroke="#efe9dc" stroke-width="0.6">
+          <line x1="60" y1="60" x2="620" y2="60"/>
+          <line x1="60" y1="100" x2="620" y2="100"/>
+          <line x1="60" y1="140" x2="620" y2="140"/>
+        </g>
+        {# month labels #}
+        <g font-family="Bricolage Grotesque, sans-serif" font-size="9" fill="#8a857b">
+          <text x="80"  y="218">XII</text>
+          <text x="170" y="218">I</text>
+          <text x="260" y="218">II</text>
+          <text x="350" y="218">III</text>
+          <text x="440" y="218">IV</text>
+          <text x="530" y="218">V</text>
+          <text x="50" y="63" text-anchor="end">100</text>
+          <text x="50" y="143" text-anchor="end">50</text>
+          <text x="50" y="203" text-anchor="end">0</text>
+        </g>
+        {# Pastrnak — steady high, navy #}
+        <polyline fill="none" stroke="#1f3a5f" stroke-width="2"
+                  points="80,90 170,75 260,80 350,72 440,78 530,70 620,72"/>
+        {# Kulich — flat early, big spike after NHL debut (March), oxblood (highlighted) #}
+        <polyline fill="none" stroke="#9c3a2a" stroke-width="2.4"
+                  points="80,175 170,170 260,160 350,140 440,55 530,75 620,100"/>
+        {# Necas — moderate with small spikes, navy-soft #}
+        <polyline fill="none" stroke="#7e8eaa" stroke-width="1.8"
+                  points="80,135 170,120 260,140 350,115 440,125 530,108 620,118"/>
+        {# Hronek — declining gradually after injury (Feb), umber #}
+        <polyline fill="none" stroke="#806b53" stroke-width="1.8"
+                  points="80,105 170,110 260,150 350,160 440,170 530,168 620,175"/>
+        {# Annotation: Kulich NHL debut #}
+        <line x1="440" y1="55" x2="440" y2="32" stroke="#9c3a2a" stroke-width="1" stroke-dasharray="2 2"/>
+        <text x="440" y="28" font-family="Spectral, serif" font-style="italic"
+              font-size="10" fill="#9c3a2a" text-anchor="middle">NHL debut</text>
+        {# legend #}
+        <g font-family="Bricolage Grotesque, sans-serif" font-size="10" fill="#2a261f"
+           transform="translate(60, 235)">
+          <line x1="0" y1="-4" x2="14" y2="-4" stroke="#1f3a5f" stroke-width="2"/>
+          <text x="20" y="0">Pastrňák</text>
+          <line x1="100" y1="-4" x2="114" y2="-4" stroke="#9c3a2a" stroke-width="2"/>
+          <text x="120" y="0">Kulich</text>
+          <line x1="195" y1="-4" x2="209" y2="-4" stroke="#7e8eaa" stroke-width="2"/>
+          <text x="215" y="0">Nečas</text>
+          <line x1="290" y1="-4" x2="304" y2="-4" stroke="#806b53" stroke-width="2"/>
+          <text x="310" y="0">Hronek</text>
+        </g>
+      </svg>
+      <figcaption class="roadmap-caption">
+        Ukázka výstupu pipeline: měsíční buzz score (počet zmínek &times; sentiment)
+        pro 4 hráče. Reálná pipeline by čerpala z transkripcí Whisper-large-v3,
+        NER by extrahoval mentioned-by-name. Data zde jsou ilustrativní.
+        <strong>Aktuálně neimplementováno.</strong>
+      </figcaption>
+    </figure>
   </div>
 </section>
 

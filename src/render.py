@@ -476,6 +476,35 @@ def main() -> None:
     loadings_table = _build_pca_loadings_table(pca_loadings) if not pca_loadings.empty else []
     sensitivity_table = _build_sensitivity_table(sensitivity) if not sensitivity.empty else []
 
+    # --- AI / multimodal layer (May 2026 addendum) ---
+    import json as _json
+
+    # Vision-language cards (Claude Opus with image input)
+    vision_cards = []
+    cards_dir = config.OUTPUTS_DIR / "cards"
+    if cards_dir.exists():
+        for p in sorted(cards_dir.glob("*.json")):
+            try:
+                c = _json.loads(p.read_text(encoding="utf-8"))
+                if c.get("profile_text"):
+                    paragraphs = [s.strip() for s in c["profile_text"].split("\n\n") if s.strip()]
+                    c["paragraphs"] = paragraphs
+                    vision_cards.append(c)
+            except Exception:  # noqa: BLE001
+                continue
+
+    # Historical analogs (career-trajectory nearest neighbours)
+    historical_analogs = []
+    analogs_path = config.PROCESSED_DIR / "historical_analogs.json"
+    if analogs_path.exists():
+        try:
+            historical_analogs = _json.loads(analogs_path.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            historical_analogs = []
+
+    LOG.info("AI layer: %d vision cards, %d analog targets",
+             len(vision_cards), len(historical_analogs))
+
     # --- Render HTML via Jinja2 ---
     # Markdown-ish → HTML for the limitations block (**bold** → <strong>bold</strong>)
     import re
@@ -502,6 +531,8 @@ def main() -> None:
         loadings_table=loadings_table,
         sensitivity_table=sensitivity_table,
         league_quality=league_quality,
+        vision_cards=vision_cards,
+        historical_analogs=historical_analogs,
         rendered_at=dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
     )
     html_path = config.OUTPUTS_DIR / "index.html"
