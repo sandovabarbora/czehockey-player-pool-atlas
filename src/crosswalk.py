@@ -169,6 +169,65 @@ def load_liiga_meta() -> pd.DataFrame:
     return df
 
 
+def load_iihf_participation() -> pd.DataFrame:
+    """Load IIHF Czech participation rows (one row per player-tournament)."""
+    path = config.RAW_DIR / "iihf_participation.parquet"
+    if not path.exists():
+        LOG.info("IIHF: no participation parquet found (run fetch_iihf first)")
+        return pd.DataFrame()
+    return pd.read_parquet(path)
+
+
+def annotate_with_iihf(canonical: pd.DataFrame, iihf: pd.DataFrame) -> pd.DataFrame:
+    """For each canonical player, check IIHF appearances and flag eligibility.
+
+    Match key: name_normalized. When IIHF has a birth_year and canonical also
+    does, require year ±1 as a hard gate. When canonical lacks birth_year
+    (some Extraliga players might), name-only is acceptable since IIHF is a
+    Czech-only roster — any name match is a strong eligibility signal.
+    """
+    if iihf.empty:
+        canonical["iihf_appearances"] = 0
+        canonical["iihf_tournaments"] = [[] for _ in range(len(canonical))]
+        return canonical
+
+    # Build a (name, year_set) index from IIHF
+    iihf_by_name: dict[str, list[tuple[int | None, str, int]]] = {}
+    for _, r in iihf.iterrows():
+        key = r["name_normalized"]
+        if not key:
+            continue
+        year = int(r["birth_year"]) if pd.notna(r.get("birth_year")) else None
+        iihf_by_name.setdefault(key, []).append((year, r["tournament"], int(r["year"])))
+
+    appearances: list[int] = []
+    tournaments_seen: list[list[str]] = []
+    new_flags: list[str] = []
+    for _, p in canonical.iterrows():
+        name = normalize_name(f"{p.get('first_name') or ''} {p.get('last_name') or ''}".strip())
+        matches = iihf_by_name.get(name, [])
+        # Filter by birth_year gate when both have it
+        canonical_year = int(p["birth_year"]) if pd.notna(p.get("birth_year")) else None
+        kept = []
+        for iihf_year, t, ty in matches:
+            if canonical_year is not None and iihf_year is not None:
+                if abs(iihf_year - canonical_year) > 1:
+                    continue
+            kept.append(f"{t}-{ty}")
+        appearances.append(len(kept))
+        tournaments_seen.append(kept)
+        # Upgrade "unknown" to "yes" when we have an IIHF hit
+        cur = p.get("czech_eligible_flag")
+        if kept and cur == "unknown":
+            new_flags.append("yes")
+        else:
+            new_flags.append(cur)
+    canonical["iihf_appearances"] = appearances
+    canonical["iihf_tournaments"] = tournaments_seen
+    canonical["czech_eligible_flag"] = new_flags
+    return canonical
+
+
 def load_extraliga_players() -> pd.DataFrame:
     """Aggregate one row per Extraliga player_id (across mid-season trades).
 
@@ -386,6 +445,14 @@ def build_canonical_table() -> pd.DataFrame:
     LOG.info("Extraliga merged: %d matched to existing, %d new canonical entries", matched_ext, new_ext)
 
     canonical["n_sources"] = canonical["sources"].apply(len)
+
+    # IIHF eligibility annotation
+    iihf = load_iihf_participation()
+    if not iihf.empty:
+        canonical = annotate_with_iihf(canonical, iihf)
+        n_upgraded = (canonical["iihf_appearances"] > 0).sum()
+        LOG.info("IIHF annotation: %d canonical players have IIHF appearances", n_upgraded)
+
     canonical = canonical.drop(columns=["_name_norm"])
     return canonical
 
