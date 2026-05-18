@@ -36,10 +36,14 @@ from typing import Any
 
 import numpy as np
 import pandas as pd
+from dotenv import load_dotenv
 
 from src import config
 from src.logging_setup import setup as logging_setup
 from src.utils import read_parquet
+
+# Load .env if present (development convenience). Gitignored — don't commit.
+load_dotenv(config.ROOT_DIR / ".env")
 
 LOG = logging.getLogger(__name__)
 
