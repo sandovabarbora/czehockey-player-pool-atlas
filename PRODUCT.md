@@ -36,7 +36,14 @@ minimum: leaves the audience with one quantified fact they didn't have before
 
 ## Brand Personality
 
-Sport-analytics seriózní: peer-to-peer, metodicky pečlivý, písemný.
+Sport-analytics seriózní: peer-to-peer, metodicky pečlivý, písemný. The
+author writes from the position of a **hockey intelligence consultant** —
+the emerging professional role that blends data science, video tracking,
+and tactical reading of the game (closer to NHL "Hockey Ops Analyst" or
+"Video Analytics Director" than to academic data scientist). This identity
+should be felt across the report (operator voice, descriptive tactical reads
+in cluster archetypes) but never overclaimed: tactical interpretation stays
+strictly descriptive, never predictive or prescriptive.
 
 The voice is closer to a consulting paper than a marketing landing. Calm,
 authoritative through evidence (not bravado), each sentence load-bearing. The

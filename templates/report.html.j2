@@ -49,11 +49,12 @@
 
 <header class="report-header">
   <div class="container">
-    <p class="masthead-kicker">Český hokej · veřejná datová analýza · 2025/26</p>
+    <p class="masthead-kicker">Český hokej &middot; hockey intelligence brief &middot; 2025/26</p>
     <h1>Atlas <em>fondu hráčů</em></h1>
     <p class="masthead-subtitle">
-      Metodologický nástroj pro průběžné mapování českých profesionálních hokejistů
-      v rámci víceletého reprezentačního cyklu. Žádné predikce, žádná doporučení sestavy.
+      Strukturovaný přehled českého profesionálního fondu, čtený z perspektivy
+      hockey intelligence: data, video a taktické čtení v jedné metodice.
+      Bez predikcí, bez doporučení sestavy.
     </p>
     <dl class="masthead-meta">
       <div><dt>Pool</dt> <dd><strong>{{ n_players }}</strong> hráčů</dd></div>
@@ -257,6 +258,9 @@
       </dt>
       <dd>
         {{ c.description }}
+        {% if c.tactical %}
+        <span class="cluster-tactical"><span class="cluster-tactical-label">Taktické čtení</span>{{ c.tactical }}</span>
+        {% endif %}
         <span class="cluster-top">{{ c.top_names | join(', ') }}</span>
       </dd>
       {% endfor %}
@@ -680,6 +684,9 @@
       </dt>
       <dd>
         {{ c.description }}
+        {% if c.tactical %}
+        <span class="cluster-tactical"><span class="cluster-tactical-label">Taktické čtení</span>{{ c.tactical }}</span>
+        {% endif %}
         <span class="cluster-top">{{ c.top_names | join(', ') }}</span>
       </dd>
       {% endfor %}
@@ -701,10 +708,24 @@
 
 <footer>
   <div class="container">
-    <p>
-      Barbora Šandová · <a href="mailto:barbora@datasimply.eu">barbora@datasimply.eu</a> ·
-      <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">GitHub</a>
-    </p>
+    <div class="role-block">
+      <p class="role-kicker">Hockey intelligence consultant</p>
+      <p class="role-body">
+        Spojení data science, video tracking a taktického čtení hry.
+        Pracuji s veřejnými statistickými zdroji NHL a evropských profesionálních
+        lig a kombinuji je se strukturálním pohledem na fond hráčů, scoutingovými
+        signály a roadmap pro hokejovou analytiku. Metodologie, kód i data této
+        analýzy jsou veřejné a reprodukovatelné.
+      </p>
+      <p class="role-author">
+        <span class="role-author-name">Barbora Šandová</span>
+        <span class="role-author-contact">
+          <a href="mailto:barbora@datasimply.eu">barbora@datasimply.eu</a>
+          &middot;
+          <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">github.com/barborasandova/czehockey-player-pool-atlas</a>
+        </span>
+      </p>
+    </div>
     <p class="rendered-at">Vyrenderováno: {{ rendered_at }}</p>
   </div>
 </footer>

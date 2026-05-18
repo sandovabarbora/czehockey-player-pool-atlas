@@ -681,6 +681,96 @@ figcaption {
   letter-spacing: 0.04em;
 }
 
+/* Tactical read: distinct from descriptive prose. Label-led with a top
+   rule as anchor (no side-stripe — see absolute bans). Serif italic body
+   signals "this is editorial interpretation layered on the measurement".
+   The oxblood label is the semantic anchor, the indent the spatial cue. */
+.cluster-tactical {
+  display: block;
+  margin-top: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px dotted var(--rule);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: 60ch;
+}
+.cluster-tactical-label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--oxblood-700);
+}
+
+/* =========================================================================
+   Footer role block
+   ========================================================================= */
+.role-block {
+  margin: 0 0 var(--space-5);
+  padding: var(--space-5) 0 var(--space-4);
+  border-top: 2px solid var(--ink);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  max-width: 64ch;
+}
+.role-kicker {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--oxblood-700);
+  max-width: none;
+}
+.role-body {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 56ch;
+}
+.role-author {
+  margin: var(--space-2) 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-3);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  max-width: none;
+}
+.role-author-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+.role-author-contact {
+  font-family: var(--font-sans);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.role-author-contact a {
+  color: var(--ink-soft);
+  border-bottom-color: var(--rule);
+}
+.role-author-contact a:hover {
+  color: var(--oxblood-700);
+  border-bottom-color: var(--oxblood-700);
+}
+
 /* =========================================================================
    Tables — generic
    ========================================================================= */

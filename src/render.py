@@ -230,6 +230,7 @@ def _build_cluster_summary_rich(
             "cluster_id": cid_int,
             "label": meta.get("label_cs", f"Cluster {cid_int}"),
             "description": meta.get("description_cs", ""),
+            "tactical": meta.get("tactical_cs", ""),
             "n_members": int(len(members)),
             "nt_count": nt_count,
             "median_age_year": median_age_year,
