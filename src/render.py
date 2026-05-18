@@ -32,21 +32,57 @@ from src.utils import read_parquet
 
 LOG = logging.getLogger(__name__)
 
-ACCENT_NAVY = "#1f3a5f"
-INK = "#1a1a1a"
-MUTED = "#6b6b6b"
-RULE = "#d4d4d4"
+# Palette aligned with templates/style.css (OKLCH tokens converted to sRGB hex
+# for matplotlib). Navy load-bearing, oxblood for highlights, warm neutrals.
+NAVY        = "#1f3a5f"   # navy-700 primary
+NAVY_DEEP   = "#162a44"   # navy-900 (drenched, for emphasis)
+NAVY_SOFT   = "#7e8eaa"   # navy-300 (faded)
+OXBLOOD     = "#9c3a2a"   # oxblood-700 (CZE highlight, secondary accent)
+OXBLOOD_SOFT = "#bf6657"  # oxblood-500
+INK         = "#2a261f"   # warm ink
+MUTED       = "#8a857b"   # warm muted
+RULE        = "#c8c2b7"   # warm rule
+CREAM       = "#fdfbf6"   # page surface
+CREAM_TINT  = "#efe9dc"   # tinted block
 
+# Curated cluster palette: navy variants + warm earth tones. OXBLOOD is
+# deliberately omitted here so it remains semantically reserved for MS-pool
+# rings and the CZE row highlight (otherwise red dots and red rings compete
+# in the same field). Hues feel sampled from a single warm-print plate.
 CLUSTER_PALETTE = [
-    "#1f3a5f", "#7f8d9d", "#b08968", "#7a5c63",
-    "#5e7e64", "#9c6a4d", "#806c8d", "#6b8e75",
+    NAVY,         # C0 — primary navy
+    NAVY_SOFT,    # C1 — lighter navy
+    "#b08968",    # C2 — warm tan
+    "#7a5c63",    # C3 — rose brown
+    "#5e7e64",    # C4 — sage mute
+    "#7e6678",    # C5 — plum mute
+    "#3d6b6e",    # C6 — deep teal
+    "#806b53",    # C7 — umber dark
 ]
 
+# Trajectory direction: neutralised. Per PRODUCT.md Design Principle #3
+# (no winners/losers colors), we avoid green/red. Direction is conveyed by
+# arrow head geometry; chromatic difference is shade-only.
 DIRECTION_COLOR = {
-    "improving": "#2e7d32",
-    "declining": "#9c2a2a",
-    "stable": "#888888",
+    "improving": NAVY,
+    "declining": NAVY_SOFT,
+    "stable":    MUTED,
 }
+
+# Matplotlib font defaults — serif chain prefers Spectral if user has it
+# system-installed; otherwise falls back to Cambria/Georgia/DejaVu Serif.
+plt.rcParams["font.family"] = "serif"
+plt.rcParams["font.serif"] = [
+    "Spectral", "Cambria", "Georgia", "Times New Roman", "DejaVu Serif",
+]
+plt.rcParams["font.sans-serif"] = [
+    "Bricolage Grotesque", "Helvetica Neue", "Arial", "DejaVu Sans",
+]
+plt.rcParams["axes.edgecolor"] = RULE
+plt.rcParams["axes.labelcolor"] = MUTED
+plt.rcParams["xtick.color"] = MUTED
+plt.rcParams["ytick.color"] = MUTED
+plt.rcParams["text.color"] = INK
 
 
 # =============================================================================
@@ -102,7 +138,7 @@ def _render_atlas(coords: pd.DataFrame, features: pd.DataFrame,
     traj_pos = trajectory[trajectory["position"] == position_label] if not trajectory.empty else pd.DataFrame()
 
     fig, (ax_left, ax_right) = plt.subplots(1, 2, figsize=(13, 6.5))
-    fig.patch.set_facecolor("white")
+    fig.patch.set_facecolor(CREAM)
 
     title_cs = "Útočníci" if position_label == "F" else "Obránci"
     for ax, proj_label, title in (
@@ -115,40 +151,46 @@ def _render_atlas(coords: pd.DataFrame, features: pd.DataFrame,
         sub[c_col] = sub[c_col].fillna(-1).astype(int)
 
         for cid in sorted(sub[c_col].unique()):
-            color = CLUSTER_PALETTE[cid % len(CLUSTER_PALETTE)] if cid >= 0 else "#cccccc"
+            color = CLUSTER_PALETTE[cid % len(CLUSTER_PALETTE)] if cid >= 0 else MUTED
             m = sub[c_col] == cid
             ax.scatter(sub.loc[m, x_col], sub.loc[m, y_col],
-                       s=18, c=color, alpha=0.7,
-                       edgecolors="white", linewidths=0.5,
+                       s=20, c=color, alpha=0.78,
+                       edgecolors=CREAM, linewidths=0.55,
                        label=f"C{cid}" if cid >= 0 else "—")
 
         nt = sub[sub["iihf_appearances"].fillna(0) >= 1]
         ax.scatter(nt[x_col], nt[y_col],
-                   s=80, facecolors="none", edgecolors=ACCENT_NAVY,
-                   linewidths=1.2, alpha=0.9, zorder=5,
+                   s=95, facecolors="none", edgecolors=OXBLOOD,
+                   linewidths=1.35, alpha=0.9, zorder=5,
                    label="MS 24/25")
 
         _annotate_top_players(ax, sub, x_col, y_col, "rank", n=10)
         _draw_trajectory_arrows(ax, traj_pos, proj_label)
 
-        ax.set_title(title, fontsize=11, fontfamily="serif", color=INK)
-        ax.set_xlabel("PC1", fontsize=9, color=MUTED)
-        ax.set_ylabel("PC2", fontsize=9, color=MUTED)
+        ax.set_title(title, fontsize=11.5, fontfamily="serif",
+                     color=INK, pad=12, loc="left")
+        ax.set_xlabel("PC1", fontsize=8.5, color=MUTED, fontfamily="sans-serif")
+        ax.set_ylabel("PC2", fontsize=8.5, color=MUTED, fontfamily="sans-serif")
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
         ax.spines["left"].set_color(RULE)
         ax.spines["bottom"].set_color(RULE)
         ax.tick_params(colors=MUTED, labelsize=8)
-        ax.legend(loc="lower right", fontsize=7, frameon=False)
+        ax.set_facecolor(CREAM)
+        leg = ax.legend(loc="lower right", fontsize=7.5, frameon=False,
+                        labelcolor=INK)
+        for txt in leg.get_texts():
+            txt.set_fontfamily("sans-serif")
 
-    fig.suptitle(f"Český hokej · {title_cs} ({latest}-{latest + 1})",
-                 fontsize=13, fontfamily="serif", color=INK, y=1.0)
+    fig.suptitle(f"Český hokej · {title_cs} {latest}/{latest + 1 - 2000:02d}",
+                 fontsize=14, fontfamily="serif", color=INK, y=1.02,
+                 x=0.02, ha="left", weight="normal")
     fig.text(
-        0.5, -0.02,
-        "PCA projekce z 4D vektoru (G/GP, A/GP, PIM/GP, věk). "
-        "Modré kroužky = MS 2024/25 účast. "
-        "Šipky = trajektorie 2024 → 2025 (zelená = zlepšení, červená = pokles).",
-        ha="center", fontsize=8, color=MUTED, fontfamily="sans-serif",
+        0.02, -0.025,
+        "PCA projekce z čtyřrozměrného vektoru (G/GP, A/GP, PIM/GP, věk). "
+        "Oxbloodové kroužky vyznačují MS 24/25 účast. Šipky znázorňují "
+        "trajektorii 2024/25 → 2025/26; směr arrow head ukazuje pohyb.",
+        ha="left", fontsize=8.2, color=MUTED, fontfamily="sans-serif",
     )
     plt.tight_layout()
     plt.savefig(out_path, bbox_inches="tight", format="svg")

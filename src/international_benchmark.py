@@ -32,12 +32,47 @@ import logging
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 import numpy as np
 import pandas as pd
 
 from src import config
 from src.logging_setup import setup as logging_setup
 from src.utils import read_parquet, write_parquet
+
+# Palette aligned with templates/style.css and src/render.py.
+NAVY        = "#1f3a5f"
+NAVY_DEEP   = "#162a44"
+OXBLOOD     = "#9c3a2a"
+INK         = "#2a261f"
+MUTED       = "#8a857b"
+RULE        = "#c8c2b7"
+CREAM       = "#fdfbf6"
+CREAM_TINT  = "#efe9dc"
+
+# Sequential ramp cream → navy. Reads as "more production = more visual weight"
+# without the YlGnBu green-teal SaaS-dashboard vocabulary.
+CMAP_NAVY = LinearSegmentedColormap.from_list(
+    "cream_to_navy",
+    [
+        (0.00, CREAM_TINT),
+        (0.30, "#c4c3bc"),
+        (0.55, "#7e8eaa"),
+        (0.80, NAVY),
+        (1.00, NAVY_DEEP),
+    ],
+    N=256,
+)
+
+# Matplotlib font defaults — share render.py's chain.
+plt.rcParams["font.family"] = "serif"
+plt.rcParams["font.serif"] = [
+    "Spectral", "Cambria", "Georgia", "Times New Roman", "DejaVu Serif",
+]
+plt.rcParams["font.sans-serif"] = [
+    "Bricolage Grotesque", "Helvetica Neue", "Arial", "DejaVu Sans",
+]
+plt.rcParams["text.color"] = INK
 
 LOG = logging.getLogger(__name__)
 
@@ -173,23 +208,26 @@ def build_cohort_table(season: int) -> pd.DataFrame:
 
 def render_cohort_heatmap(table: pd.DataFrame, out_path: Path) -> None:
     """Two-panel heatmap: forwards + defensemen. Rows = countries, cols = cohorts.
-    Cell color = median P/GP; cell annotation = n_players (median P/GP)."""
+    Cell color = median P/GP (cream → navy ramp); cell annotation = n_players
+    over median P/GP. The CZE row is highlighted with an oxblood outline so it
+    pops against the navy-tone heatmap."""
     latest_season = int(table["season"].max())
     sub = table[table["season"] == latest_season]
-    fig, axes = plt.subplots(1, 2, figsize=(11, 5), sharey=True)
-    fig.patch.set_facecolor("white")
+    fig, axes = plt.subplots(1, 2, figsize=(11.5, 5.2), sharey=True)
+    fig.patch.set_facecolor(CREAM)
 
     cohort_order = [c[0] for c in COHORTS]
     country_order = COUNTRIES
+    n_countries = len(country_order)
+    n_cohorts = len(cohort_order)
 
     for ax, position, title in (
         (axes[0], "F", "Útočníci"),
         (axes[1], "D", "Obránci"),
     ):
         sub_pos = sub[sub["position"] == position]
-        # Build matrix: rows=country, cols=cohort
-        matrix = np.full((len(country_order), len(cohort_order)), np.nan)
-        n_matrix = np.zeros((len(country_order), len(cohort_order)), dtype=int)
+        matrix = np.full((n_countries, n_cohorts), np.nan)
+        n_matrix = np.zeros((n_countries, n_cohorts), dtype=int)
         for i, country in enumerate(country_order):
             for j, cohort in enumerate(cohort_order):
                 row = sub_pos[(sub_pos["country"] == country) & (sub_pos["cohort"] == cohort)]
@@ -197,36 +235,72 @@ def render_cohort_heatmap(table: pd.DataFrame, out_path: Path) -> None:
                     matrix[i, j] = row.iloc[0]["median_P_per_GP"]
                     n_matrix[i, j] = int(row.iloc[0]["n_players"])
 
-        im = ax.imshow(matrix, cmap="YlGnBu", aspect="auto", vmin=0.0, vmax=1.0)
-        ax.set_xticks(range(len(cohort_order)))
-        ax.set_xticklabels(cohort_order)
-        ax.set_yticks(range(len(country_order)))
-        ax.set_yticklabels(country_order)
-        ax.set_title(f"{title} — medián bodů na zápas (NHL)", fontsize=11, fontfamily="serif")
+        ax.imshow(matrix, cmap=CMAP_NAVY, aspect="auto", vmin=0.0, vmax=1.0)
+        ax.set_xticks(range(n_cohorts))
+        ax.set_xticklabels(cohort_order, fontsize=9.5, fontfamily="sans-serif",
+                           color=INK)
+        ax.set_yticks(range(n_countries))
+        ax.set_yticklabels(country_order, fontsize=9.5, fontfamily="sans-serif",
+                           color=INK, weight="medium")
+        ax.set_title(f"{title}  ·  medián bodů na zápas",
+                     fontsize=11.5, fontfamily="serif", color=INK,
+                     pad=12, loc="left", weight="normal")
 
-        # Annotate each cell with "n=X • 0.XX"
-        for i in range(len(country_order)):
-            for j in range(len(cohort_order)):
+        # Thin tick marks, no rectangular outline
+        ax.tick_params(axis="both", which="both", length=0,
+                       colors=INK, pad=6)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+
+        # Annotate each cell — n on top, value beneath
+        for i in range(n_countries):
+            for j in range(n_cohorts):
                 n = n_matrix[i, j]
                 if n == 0:
-                    ax.text(j, i, "—", ha="center", va="center", fontsize=9, color="#999")
+                    ax.text(j, i, "—", ha="center", va="center",
+                            fontsize=10, color=MUTED, fontfamily="serif")
                 else:
                     val = matrix[i, j]
-                    ax.text(j, i, f"n={n}\n{val:.2f}", ha="center", va="center",
-                            fontsize=8, color="black" if val < 0.7 else "white")
+                    # Text color threshold for legibility on cream→navy ramp:
+                    # midpoint of ramp sits around 0.45–0.55 — switch above 0.55
+                    text_color = CREAM if val > 0.55 else INK
+                    ax.text(j, i - 0.10, f"n={n}", ha="center", va="center",
+                            fontsize=8.5, color=text_color,
+                            fontfamily="sans-serif", weight="medium")
+                    ax.text(j, i + 0.20, f"{val:.2f}", ha="center", va="center",
+                            fontsize=9, color=text_color,
+                            fontfamily="serif", weight="normal")
 
-        # Highlight Czech row with a navy box
+        # Highlight Czech row with an oxblood outline
         cz_idx = country_order.index("CZE")
-        ax.add_patch(plt.Rectangle((-0.5, cz_idx - 0.5), len(cohort_order), 1,
-                                     fill=False, edgecolor="#1f3a5f", lw=2))
+        ax.add_patch(plt.Rectangle(
+            (-0.5, cz_idx - 0.5), n_cohorts, 1,
+            fill=False, edgecolor=OXBLOOD, lw=2.2, zorder=8,
+        ))
+
+    # Materialize tick labels and repaint the CZE row label in oxblood
+    # (post-loop so sharedY does not leave the right axis with empty labels).
+    cz_idx = country_order.index("CZE")
+    fig.canvas.draw()
+    for ax in axes:
+        labels = ax.get_yticklabels()
+        if cz_idx < len(labels):
+            labels[cz_idx].set_color(OXBLOOD)
+            labels[cz_idx].set_weight("bold")
 
     fig.suptitle(
-        f"Mezinárodní cohort benchmark — NHL {latest_season}-{latest_season+1}\n"
-        "Buňka = počet hráčů + medián P/GP. Modře orámovaná řada = ČR.",
-        fontsize=12, fontfamily="serif",
+        f"Mezinárodní cohort benchmark  ·  NHL {latest_season}/{latest_season+1 - 2000:02d}",
+        fontsize=14, fontfamily="serif", color=INK,
+        x=0.02, ha="left", y=1.04, weight="normal",
     )
-    plt.tight_layout()
-    plt.savefig(out_path, bbox_inches="tight", format="svg")
+    fig.text(
+        0.02, 0.985,
+        "Buňka: počet hráčů a medián bodů na zápas. Vyznačená řada = Česko.",
+        ha="left", fontsize=9, color=MUTED, fontfamily="sans-serif",
+    )
+    plt.subplots_adjust(top=0.88, wspace=0.06)
+    plt.savefig(out_path, bbox_inches="tight", format="svg",
+                facecolor=CREAM, edgecolor="none")
     plt.close(fig)
     LOG.info("wrote %s", out_path)
 
