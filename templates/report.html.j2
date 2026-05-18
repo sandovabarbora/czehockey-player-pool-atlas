@@ -464,18 +464,20 @@
       <div class="video-poc-grid">
         <div class="video-poc-frame">
           <img src="video_poc_annotated.jpg"
-               alt="Anotovaný frame z Extraliga broadcast: 19 detekovaných osob (hráči + rozhodčí) v bounding boxech přes celé kluziště"
+               alt="Anotovaný frame z Extraliga broadcast: oxblood obdélník vymezuje ICE ROI (led), uvnitř 12 navy bboxů on-ice hráčů, vně 5 muted bboxů lavička/dav (filtrované)"
                loading="lazy">
           <p class="video-poc-figlabel">
-            Frame 185 &middot; 19 osob detekovaných (wide-angle, pravděpodobně faceoff nebo regroup)
+            Frame 185 &middot; <strong>12 on-ice</strong> (navy bboxy) + 5 off-ice
+            lavička/dav (muted bboxy, filtrované)
           </p>
         </div>
         <div class="video-poc-frame">
           <img src="video_poc_heatmap.png"
-               alt="Heatmap pozic detekovaných osob agregovaná přes 21 vzorkovaných frames; tmavší navy oblast = vyšší hustota pohybu"
+               alt="Heatmap pozic on-ice hráčů agregovaná přes 21 vzorkovaných frames; tmavší navy oblast uvnitř oxblood ROI = vyšší hustota pohybu"
                loading="lazy">
           <p class="video-poc-figlabel">
-            Agregát 21 frames &middot; centrální hot zones = broadcast bias, kamera sleduje puk
+            Agregát on-ice pozic &middot; centrální hot zones = broadcast bias,
+            kamera sleduje puk
           </p>
         </div>
       </div>
@@ -484,30 +486,34 @@
            class="video-poc-timeline"
            loading="lazy">
       <dl class="video-poc-metrics">
-        <div><dt>Osob na ledě v záběru</dt><dd>6,1 / frame</dd></div>
-        <div><dt>Wide-angle peak</dt><dd>19 osob</dd></div>
+        <div><dt>On-ice / frame</dt><dd>4,3 osob</dd></div>
+        <div><dt>Wide-angle peak (on-ice)</dt><dd>12 osob</dd></div>
+        <div><dt>Off-ice filtrované</dt><dd>29,5 % detekcí</dd></div>
         <div><dt>Close-up frames</dt><dd>6 / 21</dd></div>
-        <div><dt>Zóna akce centrum</dt><dd>14 / 21</dd></div>
         <div><dt>Inference (CPU)</dt><dd>18,3 ms / frame</dd></div>
         <div><dt>Real-time capacity</dt><dd>~55 fps</dd></div>
       </dl>
       <figcaption class="roadmap-caption">
-        <strong>Hokejové čtení toho, co model vidí:</strong> 5v5 zápas má 14 osob
-        na ledě (10 skaters + 2 brankáři + 2 rozhodčí). Mean 6,1 v záběru odráží
-        broadcast cut, ne defektní detekci. Wide-angle frame s 19 osobami zachycuje
-        celé kluziště včetně střídaček (= n &gt; reálný on-ice počet). Šest
-        close-up frames bez detekce jsou hero shots a replays (kamera na obličeji
-        hráče). Centrální hot zones na heatmap jsou důsledek broadcast bias
-        (kamera sleduje puk), ne tactical pattern.
+        <strong>Hokejové čtení toho, co model vidí (po ROI filtru):</strong>
+        bench-player detekce nejsou pro game analysis relevantní, proto se
+        odfiltrovaly přes oxblood ICE ROI obdélník (kalibrovaný vizuálně pro
+        tento broadcast frame). Z původních 129 person-detekcí přes 21 frames
+        je <strong>91 on-ice</strong> a 38 off-ice (lavička, dav, sponzor boardy,
+        lower-third graphic) &mdash; 29,5 % detekcí by zkreslilo jakoukoli
+        tactical metric, kdyby se nefiltrovalo. Wide-angle peak frame má 12 on-ice
+        hráčů (přijatelné pro 5v5 + rozhodčí v záběru), ne 19. Šest close-up
+        frames bez detekce jsou hero shots a replays.
       </figcaption>
       <figcaption class="roadmap-caption">
-        <strong>0 detekcí puku</strong> není failure, je to očekávaný floor:
-        puk má v 640&times;360 broadcast frame ~1-2 px diameter, COCO "sports ball"
-        třída je trénovaná na 30-60 px míčové objekty. Pro produkční hockey
-        tracker se model fine-tunuje na annotated puk dataset (Roboflow public
-        sets, vlastní labelling) + per-frame coords se kalibrují homografií na
-        fixní markery (modré/červené linie, faceoff kruhy) &rarr; pixel přepočet
-        na metr v rink coords.
+        <strong>0 detekcí puku</strong> a fixed-rectangle ICE ROI jsou dva
+        očekávané PoC floors: puk je v 640&times;360 broadcast ~1-2 px diameter
+        proti COCO "sports ball" tréninku na 30-60 px míče; ROI obdélník je
+        crude approximation, produkční move je per-frame perspektivní
+        homografie z fixních rink markerů (modré/červené linie, faceoff kruhy
+        &rarr; pixel přepočet na metr v rink coords, ROI se počítá automaticky
+        z polygonu). Hockey-specific fine-tune detektoru na annotated puk
+        dataset (Roboflow public sets nebo vlastní labelling) odstraní oba
+        defaults.
       </figcaption>
       <figcaption class="roadmap-caption">
         <strong>Pro tactical value</strong> federace nepotřebuje vyšší detection

@@ -6,229 +6,198 @@
   "frames_sampled": 21,
   "sample_interval_sec": 1.5,
   "model": "YOLOv8n (pretrained na COCO, 80 tříd, 6,5 MB)",
-  "classes_filtered": [
-    "person (skater + ref proxy)",
-    "sports ball (puk proxy)"
-  ],
   "confidence_threshold": 0.3,
+  "ice_roi_pixels": {
+    "x_min": 10,
+    "y_min": 35,
+    "x_max": 630,
+    "y_max": 260
+  },
+  "ice_roi_note": "Fixed rectangle on the 640×360 broadcast frame, calibrated visually. Production move = per-frame perspective homography derived from rink markers.",
   "total_person_detections": 129,
-  "total_ball_detections": 0,
-  "mean_persons_per_frame": 6.1,
-  "mean_inference_ms_per_frame": 17.9,
-  "hardware_inferred": "Apple Silicon, CPU only (žádné GPU)",
+  "total_on_ice": 91,
+  "total_off_ice_filtered": 38,
+  "off_ice_share_pct": 29.5,
+  "mean_on_ice_per_frame": 4.3,
+  "mean_off_ice_per_frame": 1.8,
   "best_frame_idx": 185,
-  "best_frame_person_count": 19,
+  "best_frame_on_ice_count": 12,
+  "puck_detections": 0,
   "zone_distribution_frames": {
     "vlevo": 0,
     "centrum": 14,
     "vpravo": 1,
     "—": 6
   },
-  "mean_spread_norm": 0.199,
+  "mean_inference_ms_per_frame": 17.4,
   "per_frame": [
     {
       "frame": 0,
       "t_sec": 0.0,
-      "n_persons": 0,
-      "mean_x_norm": null,
-      "mean_y_norm": null,
-      "spread_norm": null,
-      "zone": "—"
+      "n_on_ice": 0,
+      "n_off_ice": 0,
+      "zone": "—",
+      "spread_norm_roi": null
     },
     {
       "frame": 37,
       "t_sec": 1.48,
-      "n_persons": 0,
-      "mean_x_norm": null,
-      "mean_y_norm": null,
-      "spread_norm": null,
-      "zone": "—"
+      "n_on_ice": 0,
+      "n_off_ice": 0,
+      "zone": "—",
+      "spread_norm_roi": null
     },
     {
       "frame": 74,
       "t_sec": 2.96,
-      "n_persons": 0,
-      "mean_x_norm": null,
-      "mean_y_norm": null,
-      "spread_norm": null,
-      "zone": "—"
+      "n_on_ice": 0,
+      "n_off_ice": 0,
+      "zone": "—",
+      "spread_norm_roi": null
     },
     {
       "frame": 111,
       "t_sec": 4.44,
-      "n_persons": 0,
-      "mean_x_norm": null,
-      "mean_y_norm": null,
-      "spread_norm": null,
-      "zone": "—"
+      "n_on_ice": 0,
+      "n_off_ice": 0,
+      "zone": "—",
+      "spread_norm_roi": null
     },
     {
       "frame": 148,
       "t_sec": 5.92,
-      "n_persons": 16,
-      "mean_x_norm": 0.437,
-      "mean_y_norm": 0.611,
-      "spread_norm": 0.207,
-      "zone": "centrum"
+      "n_on_ice": 10,
+      "n_off_ice": 6,
+      "zone": "centrum",
+      "spread_norm_roi": 0.192
     },
     {
       "frame": 185,
       "t_sec": 7.4,
-      "n_persons": 19,
-      "mean_x_norm": 0.463,
-      "mean_y_norm": 0.556,
-      "spread_norm": 0.228,
-      "zone": "centrum"
+      "n_on_ice": 12,
+      "n_off_ice": 7,
+      "zone": "centrum",
+      "spread_norm_roi": 0.266
     },
     {
       "frame": 222,
       "t_sec": 8.88,
-      "n_persons": 9,
-      "mean_x_norm": 0.477,
-      "mean_y_norm": 0.444,
-      "spread_norm": 0.171,
-      "zone": "centrum"
+      "n_on_ice": 8,
+      "n_off_ice": 1,
+      "zone": "centrum",
+      "spread_norm_roi": 0.186
     },
     {
       "frame": 259,
       "t_sec": 10.36,
-      "n_persons": 7,
-      "mean_x_norm": 0.584,
-      "mean_y_norm": 0.485,
-      "spread_norm": 0.217,
-      "zone": "centrum"
+      "n_on_ice": 5,
+      "n_off_ice": 2,
+      "zone": "centrum",
+      "spread_norm_roi": 0.165
     },
     {
       "frame": 296,
       "t_sec": 11.84,
-      "n_persons": 6,
-      "mean_x_norm": 0.658,
-      "mean_y_norm": 0.463,
-      "spread_norm": 0.17,
-      "zone": "centrum"
+      "n_on_ice": 5,
+      "n_off_ice": 1,
+      "zone": "centrum",
+      "spread_norm_roi": 0.176
     },
     {
       "frame": 333,
       "t_sec": 13.32,
-      "n_persons": 3,
-      "mean_x_norm": 0.716,
-      "mean_y_norm": 0.396,
-      "spread_norm": 0.282,
-      "zone": "vpravo"
+      "n_on_ice": 3,
+      "n_off_ice": 0,
+      "zone": "vpravo",
+      "spread_norm_roi": 0.291
     },
     {
       "frame": 370,
       "t_sec": 14.8,
-      "n_persons": 7,
-      "mean_x_norm": 0.415,
-      "mean_y_norm": 0.513,
-      "spread_norm": 0.249,
-      "zone": "centrum"
+      "n_on_ice": 5,
+      "n_off_ice": 2,
+      "zone": "centrum",
+      "spread_norm_roi": 0.279
     },
     {
       "frame": 407,
       "t_sec": 16.28,
-      "n_persons": 0,
-      "mean_x_norm": null,
-      "mean_y_norm": null,
-      "spread_norm": null,
-      "zone": "—"
+      "n_on_ice": 0,
+      "n_off_ice": 0,
+      "zone": "—",
+      "spread_norm_roi": null
     },
     {
       "frame": 444,
       "t_sec": 17.76,
-      "n_persons": 7,
-      "mean_x_norm": 0.466,
-      "mean_y_norm": 0.502,
-      "spread_norm": 0.257,
-      "zone": "centrum"
+      "n_on_ice": 6,
+      "n_off_ice": 1,
+      "zone": "centrum",
+      "spread_norm_roi": 0.286
     },
     {
       "frame": 481,
       "t_sec": 19.24,
-      "n_persons": 11,
-      "mean_x_norm": 0.625,
-      "mean_y_norm": 0.664,
-      "spread_norm": 0.241,
-      "zone": "centrum"
+      "n_on_ice": 5,
+      "n_off_ice": 6,
+      "zone": "centrum",
+      "spread_norm_roi": 0.211
     },
     {
       "frame": 518,
       "t_sec": 20.72,
-      "n_persons": 11,
-      "mean_x_norm": 0.551,
-      "mean_y_norm": 0.635,
-      "spread_norm": 0.172,
-      "zone": "centrum"
+      "n_on_ice": 8,
+      "n_off_ice": 3,
+      "zone": "centrum",
+      "spread_norm_roi": 0.178
     },
     {
       "frame": 555,
       "t_sec": 22.2,
-      "n_persons": 2,
-      "mean_x_norm": 0.553,
-      "mean_y_norm": 0.474,
-      "spread_norm": 0.224,
-      "zone": "centrum"
+      "n_on_ice": 2,
+      "n_off_ice": 0,
+      "zone": "centrum",
+      "spread_norm_roi": 0.231
     },
     {
       "frame": 592,
       "t_sec": 23.68,
-      "n_persons": 2,
-      "mean_x_norm": 0.527,
-      "mean_y_norm": 0.491,
-      "spread_norm": 0.111,
-      "zone": "centrum"
+      "n_on_ice": 2,
+      "n_off_ice": 0,
+      "zone": "centrum",
+      "spread_norm_roi": 0.115
     },
     {
       "frame": 629,
       "t_sec": 25.16,
-      "n_persons": 2,
-      "mean_x_norm": 0.628,
-      "mean_y_norm": 0.471,
-      "spread_norm": 0.138,
-      "zone": "centrum"
+      "n_on_ice": 2,
+      "n_off_ice": 0,
+      "zone": "centrum",
+      "spread_norm_roi": 0.142
     },
     {
       "frame": 666,
       "t_sec": 26.64,
-      "n_persons": 0,
-      "mean_x_norm": null,
-      "mean_y_norm": null,
-      "spread_norm": null,
-      "zone": "—"
+      "n_on_ice": 0,
+      "n_off_ice": 0,
+      "zone": "—",
+      "spread_norm_roi": null
     },
     {
       "frame": 703,
       "t_sec": 28.12,
-      "n_persons": 16,
-      "mean_x_norm": 0.435,
-      "mean_y_norm": 0.506,
-      "spread_norm": 0.174,
-      "zone": "centrum"
+      "n_on_ice": 9,
+      "n_off_ice": 7,
+      "zone": "centrum",
+      "spread_norm_roi": 0.165
     },
     {
       "frame": 740,
       "t_sec": 29.6,
-      "n_persons": 11,
-      "mean_x_norm": 0.509,
-      "mean_y_norm": 0.569,
-      "spread_norm": 0.147,
-      "zone": "centrum"
+      "n_on_ice": 9,
+      "n_off_ice": 2,
+      "zone": "centrum",
+      "spread_norm_roi": 0.166
     }
-  ],
-  "hockey_translation": {
-    "n_persons_typical": "5v5 game = 10 skaters + 2 rozhodčí + 2 brankáři, max 14 osob na ledě. Mean 6,1 v broadcast cutu odráží že kamera nezachycuje celý rink (cut-aways, close-ups).",
-    "broadcast_bias": "Kamera sleduje puk: hot zones na heatmapě jsou tam, kde se v daném sample odehrávala puck-action. Boardy a obranná pásma jsou pod-vyzkoumána (kamera tam nezamíří, dokud tam nejde puk).",
-    "puk_zero": "0 detekcí puku není failure: COCO 'sports ball' třída je trénovaná na fotbalové/basketbalové míče (typicky 30-60 px diameter). Puk je 7,5 cm × 2,5 cm = ~1-2 px v 640×360 broadcast frame. Pro hockey detector by se model fine-tunoval na annotated puk dataset (Roboflow public sets, nebo custom labelling).",
-    "zone_timeline": "Zóny vlevo/centrum/vpravo na timeline neodpovídají hockey zónám 1:1 (broadcast cuts mění úhel). Pro tactical zone classification (obranná/neutrální/útočná) by se použila statická camera nad rinkem + rink-coordinates homography z fixních markerů.",
-    "what_production_needs": [
-      "Rink homography: pixel → metr na ledě, kalibrace přes faceoff circles + modré/červené linie",
-      "Team color classification: HSV histogram per detection → tým A / tým B / rozhodčí",
-      "Per-player tracking: Hungarian assignment + Kalman filter → individuální trajectorie přes frame",
-      "Event detection: zone entry typ (controlled vs dump), forecheck pattern (1-1-3 vs 2-1-2), faceoff outcome, breakout side",
-      "Puck detection: fine-tune YOLOv8 / DETR na hockey-specific annotated set",
-      "Tactical pattern matching: cycle vs forecheck vs breakout, PP1 setup vs PK box, line-matching analytics"
-    ]
-  },
-  "source_clip_origin": "publicly available Czech hockey highlight, YouTube search 'tipsport extraliga sestrih', first 30 s sample, 640x360 broadcast quality, KVA vs HC Mountfield 2024/25"
+  ]
 }
