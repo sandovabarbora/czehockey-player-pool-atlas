@@ -1123,6 +1123,76 @@ li strong { font-family: var(--font-display); font-weight: 600; }
   margin-bottom: var(--space-3);
 }
 
+/* LLM scout briefs: two-column display of full Claude-generated articles.
+   Treated like editorial articles in a journal — display title, structured
+   sections, no decorative chrome. Each brief is real Czech analytical
+   prose, not a UI card. */
+.llm-briefs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  margin: var(--space-5) 0 var(--space-5);
+}
+@media (min-width: 920px) {
+  .llm-briefs { grid-template-columns: 1fr 1fr; gap: var(--space-5) var(--space-7); }
+}
+.llm-brief {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 2px solid var(--ink);
+}
+.llm-brief-head { margin-bottom: var(--space-2); }
+.llm-brief-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  letter-spacing: -0.018em;
+  line-height: 1.1;
+  color: var(--ink);
+  text-transform: none;
+}
+.llm-brief-meta-line {
+  margin: var(--space-1) 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  max-width: none;
+}
+.llm-brief-body { font-family: var(--font-sans); }
+.llm-brief-heading {
+  margin: var(--space-4) 0 var(--space-1);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--oxblood-700);
+}
+.llm-brief-heading:first-child { margin-top: var(--space-2); }
+.llm-brief-body p {
+  margin: 0 0 var(--space-3);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 56ch;
+}
+.llm-brief-body p:last-child { margin-bottom: 0; }
+.llm-brief-body strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+.llm-brief-body code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  background: var(--cream-100);
+  padding: 0.1rem 0.3rem;
+  border-radius: 1px;
+}
+
 /* Historical analogs */
 .analog-block {
   display: grid;

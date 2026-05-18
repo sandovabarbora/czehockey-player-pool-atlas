@@ -31,6 +31,7 @@
     </li>
     <li><a href="#ai-vrstva">AI a multimodální vrstva</a>
       <ol>
+        <li><a href="#llm-briefy">LLM scout briefy</a></li>
         <li><a href="#historicke-analogy">Historické analogy</a></li>
         <li><a href="#roadmap-video">Plánováno: video tracking</a></li>
         <li><a href="#roadmap-buzz">Plánováno: media buzz</a></li>
@@ -69,7 +70,7 @@
       <summary>Obsah reportu</summary>
       <ol>
         <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
-        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
+        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#llm-briefy">LLM briefy</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
         <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
       </ol>
     </details>
@@ -687,10 +688,10 @@
   <span class="chapter-mark" aria-hidden="true"></span>
   <p class="chapter-title">AI a multimodální vrstva</p>
   <p class="chapter-synopsis">
-    Historické analogy v kariéře a roadmap pro video tracking a media buzz.
-    Capability layer, který kombinuje statistiku se strukturálním pohledem
-    na trajectorie a s pipelinami pro modality, jež federace dnes
-    zpracovává odděleně.
+    Aplikovaná ML a LLM vrstva: per-player scout briefy generované Claude
+    Opus, historické analogy v kariéře z corpusu 1&nbsp;177 hráčů, plus
+    roadmap pro modality, jež federace dnes zpracovává odděleně
+    (video, audio).
   </p>
 </aside>
 
@@ -698,11 +699,84 @@
   <div class="container">
     <h2 id="ai-vrstva">AI a multimodální vrstva</h2>
     <p class="framing">
-      Doplňková vrstva nad strukturovanými daty. Spojuje současný statistický
-      profil s historickým analogem (implementováno) a otevírá modality,
-      jež federace dnes zpracovává odděleně, video a audio (roadmap
-      s ukázkovým výstupem).
+      Aplikovaná ML a LLM vrstva nad strukturovanými daty. Per-player scout
+      briefy generované Claude Opus 4.7 z integrovaného Atlas datasetu,
+      historické analogy v kariéře z corpusu 1&nbsp;177 hráčů, plus roadmap
+      pro modality, jež federace dnes zpracovává odděleně (video, audio).
     </p>
+
+    
+    <h3 id="llm-briefy">LLM scout briefy &middot; Claude Opus 4.7</h3>
+    <p>
+      Pro každého hráče v poolu Claude Opus integruje cluster placement,
+      kvalitou upravenou produkci, trajektorii mezi sezónami, IIHF účast
+      a srovnatelné profily v korpusu do strukturovaného česky-psaného briefu.
+      Stance discipline (žádné predikce, žádná doporučení sestavy) je
+      vynucena systemovým promptem cachovaným přes prompt-caching.
+      Níže dva briefy jako ukázka, útočník a obránce.
+    </p>
+    <div class="llm-briefs">
+      
+      <article class="llm-brief">
+        <header class="llm-brief-head">
+          <h4 class="llm-brief-title">David Pastrňák</h4>
+          <p class="llm-brief-meta-line">F, 1996</p>
+        </header>
+        <div class="llm-brief-body">
+          
+          <h5 class="llm-brief-heading">Statistický profil</h5>
+          <p>Pastrňák spadá do style clusteru C0 (Top-six skórující) a quality clusteru C3, s extrémní pozicí na produkční ose PC1 (5.77 style / 8.49 quality). Quality-adjusted P/GP 1.189 odpovídá cross-league z-score +6.50 — outlier i v rámci NHL elity v korpusu. Distribuce bodů je výrazně asistenčně vážená (A/GP shrunk 0.833 vs. G/GP 0.356), což ho v rámci C0 řadí spíše k playmaker-forward profilu než k čistému střelci.</p>
+          
+          <h5 class="llm-brief-heading">Trajektorie</h5>
+          <p>Mezi sezónami 2024-2025 a 2025-2026 P/GP zůstává prakticky identické (1.189 → 1.189, Δ -0.001) při srovnatelném vzorku (82 → 77 GP). Profil je v multi-season okně stable, bez signálu age-related declinu na produkční ose ani strukturálního posunu mezi goal-share a assist-share.</p>
+          
+          <h5 class="llm-brief-heading">Reprezentační kontext</h5>
+          <p>Dva IIHF turnaje v korpusu (MS 2024, MS 2025), tedy potvrzená Czech-eligible účast v aktuálním cyklu. V rámci českého NT poolu zaujímá nejvyšší pozici na produkční PC1 ose mezi forwardy s NHL daty.</p>
+          
+          <h5 class="llm-brief-heading">Srovnatelné profily (in-corpus)</h5>
+          <p>V style clusteru C0 jsou nejbližší Martin Nečas (NHL, quality P/GP 1.175, distance 2.197), Lukáš Sedlák (Extraliga, 0.327, 2.235) a Lukáš Jašek (Liiga, 0.362, 2.642). Style mapa bez ligových násobiček zachycuje strukturální podobnost herního profilu, proto se Sedlák a Jašek objevují i přes výrazně nižší quality-adjusted produkci.</p>
+          
+          <h5 class="llm-brief-heading">Caveats</h5>
+          <p>Datový set obsahuje pouze NHL zdroj, žádné EU srovnání pro tohoto hráče. Vzhledem k extrémním souřadnicím (PC1 quality 8.49) je vzdálenost k nejbližším sousedům v clusteru C0 velká (>2.0), takže "comparable profiles" jsou nejbližší pouze relativně — Pastrňák je v korpusu strukturálně izolovaný outlier.</p>
+          
+        </div>
+      </article>
+      
+      <article class="llm-brief">
+        <header class="llm-brief-head">
+          <h4 class="llm-brief-title">Filip Hronek</h4>
+          <p class="llm-brief-meta-line">D, 1997</p>
+        </header>
+        <div class="llm-brief-body">
+          
+          <h5 class="llm-brief-heading">Statistický profil</h5>
+          <p>Hronek se v sezóně 2025-26 nachází ve style clusteru C0 (Ofenzivní obránci) s PCA souřadnicemi (3.35, -0.77), což ho řadí do pravého kvadrantu produkční osy. Quality-adjusted P/GP 0.558 (NHL multiplier 1.00) je tažený především A/GP 0.466; cross-league z-score +6.205 ho na P/GP umisťuje vysoko nad mean defensemen v korpusu. Quality cluster C3 (PCA quality 7.60, 0.50) odpovídá produkčně dominantnímu profilu navzdory labelu "Mladí prospekti" — clustering reflektuje věkovou složku PC2.</p>
+          
+          <h5 class="llm-brief-heading">Trajektorie</h5>
+          <p>Mezi 2024-25 a 2025-26 vzestup P/GP 0.497 → 0.558 (Δ +0.060) při zvýšení vzorku z 61 na 82 GP, klasifikováno jako stable. Růst je tažen spíše stabilizací zdraví a vyšším volume než skokovou změnou v rate stats; shrinkage efekt na 82 GP je minimální (raw 0.598 → shrunk 0.558).</p>
+          
+          <h5 class="llm-brief-heading">Reprezentační kontext</h5>
+          <p>Jedna potvrzená IIHF účast (MS 2025), eligibility flag yes. V Czech NT pool patří na pravé straně obrany mezi profily s nejvyšším NHL-adjusted P/GP outputem v korpusu, tedy do horní vrstvy ofenzivních obránců dostupných reprezentaci.</p>
+          
+          <h5 class="llm-brief-heading">Srovnatelné profily (in-corpus)</h5>
+          <p>Tři nejbližší v rámci style clusteru C0: Marian Adámek (extraliga, distance 1.453), Matyas Kantner (liiga, distance 1.474), Michal Kovařčík (extraliga, distance 1.535). Distance hodnoty 1.4-1.5 indikují, že nejbližší match-up v rámci stejného style profilu je relativně volný — Hronkův quality-adjusted output ho v rámci NHL kontingentu izoluje a srovnatelné style profily pocházejí z nižších lig s výrazně nižším P/GP.</p>
+          
+          <h5 class="llm-brief-heading">Caveats</h5>
+          <p>Style clustering nezohledňuje ligový kontext, proto srovnatelné profily zahrnují útočníky z Extraligy/Liigy s diametrálně odlišnou kvalitou opozice; quality cluster C3 je relevantnější benchmark. Data set neobsahuje shots/GP, TOI ani usage split (PP1 vs ES), což pro ofenzivního obránce limituje interpretaci, kolik produkce pochází z přesilovkového nasazení.</p>
+          
+        </div>
+      </article>
+      
+    </div>
+    <p class="capita-note">
+      Marginal cost ≈ 0,04 USD na brief (Claude Opus 4.7 + adaptive thinking,
+      effort=high, prompt cache na ~3 K stabilního systemového promptu).
+      Celý český pool (78 hráčů) cca 3 USD jednorázově.
+      Sample 5 briefů ve formátu markdown:
+      <a href="https://github.com/barborasandova/czehockey-player-pool-atlas/tree/main/outputs/briefs">outputs/briefs/</a>
+      v repu.
+    </p>
+    
 
     
     <h3 id="historicke-analogy">Historické analogy v kariéře</h3>
@@ -2186,7 +2260,7 @@ aplikovat na vlastní rozšířenou datovou základnu.</p>
         </span>
       </p>
     </div>
-    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:11</p>
+    <p class="rendered-at">Vyrenderováno: 2026-05-18 18:15</p>
   </div>
 </footer>
 

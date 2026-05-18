@@ -31,6 +31,7 @@
     </li>
     <li><a href="#ai-vrstva">AI a multimodální vrstva</a>
       <ol>
+        <li><a href="#llm-briefy">LLM scout briefy</a></li>
         <li><a href="#historicke-analogy">Historické analogy</a></li>
         <li><a href="#roadmap-video">Plánováno: video tracking</a></li>
         <li><a href="#roadmap-buzz">Plánováno: media buzz</a></li>
@@ -69,7 +70,7 @@
       <summary>Obsah reportu</summary>
       <ol>
         <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
-        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
+        <li><a href="#ai-vrstva">AI vrstva</a> · <a href="#llm-briefy">LLM briefy</a> · <a href="#historicke-analogy">Analogy</a> · <a href="#roadmap-video">Video roadmap</a> · <a href="#roadmap-buzz">Buzz roadmap</a></li>
         <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
       </ol>
     </details>
@@ -324,10 +325,10 @@
   <span class="chapter-mark" aria-hidden="true"></span>
   <p class="chapter-title">AI a multimodální vrstva</p>
   <p class="chapter-synopsis">
-    Historické analogy v kariéře a roadmap pro video tracking a media buzz.
-    Capability layer, který kombinuje statistiku se strukturálním pohledem
-    na trajectorie a s pipelinami pro modality, jež federace dnes
-    zpracovává odděleně.
+    Aplikovaná ML a LLM vrstva: per-player scout briefy generované Claude
+    Opus, historické analogy v kariéře z corpusu 1&nbsp;177 hráčů, plus
+    roadmap pro modality, jež federace dnes zpracovává odděleně
+    (video, audio).
   </p>
 </aside>
 
@@ -335,11 +336,47 @@
   <div class="container">
     <h2 id="ai-vrstva">AI a multimodální vrstva</h2>
     <p class="framing">
-      Doplňková vrstva nad strukturovanými daty. Spojuje současný statistický
-      profil s historickým analogem (implementováno) a otevírá modality,
-      jež federace dnes zpracovává odděleně, video a audio (roadmap
-      s ukázkovým výstupem).
+      Aplikovaná ML a LLM vrstva nad strukturovanými daty. Per-player scout
+      briefy generované Claude Opus 4.7 z integrovaného Atlas datasetu,
+      historické analogy v kariéře z corpusu 1&nbsp;177 hráčů, plus roadmap
+      pro modality, jež federace dnes zpracovává odděleně (video, audio).
     </p>
+
+    {% if llm_briefs %}
+    <h3 id="llm-briefy">LLM scout briefy &middot; Claude Opus 4.7</h3>
+    <p>
+      Pro každého hráče v poolu Claude Opus integruje cluster placement,
+      kvalitou upravenou produkci, trajektorii mezi sezónami, IIHF účast
+      a srovnatelné profily v korpusu do strukturovaného česky-psaného briefu.
+      Stance discipline (žádné predikce, žádná doporučení sestavy) je
+      vynucena systemovým promptem cachovaným přes prompt-caching.
+      Níže dva briefy jako ukázka, útočník a obránce.
+    </p>
+    <div class="llm-briefs">
+      {% for brief in llm_briefs[:2] %}
+      <article class="llm-brief">
+        <header class="llm-brief-head">
+          <h4 class="llm-brief-title">{{ brief.title }}</h4>
+          {% if brief.meta_line %}<p class="llm-brief-meta-line">{{ brief.meta_line }}</p>{% endif %}
+        </header>
+        <div class="llm-brief-body">
+          {% for sec in brief.sections %}
+          {% if sec.heading %}<h5 class="llm-brief-heading">{{ sec.heading }}</h5>{% endif %}
+          {{ sec.html | safe }}
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="capita-note">
+      Marginal cost ≈ 0,04 USD na brief (Claude Opus 4.7 + adaptive thinking,
+      effort=high, prompt cache na ~3 K stabilního systemového promptu).
+      Celý český pool (78 hráčů) cca 3 USD jednorázově.
+      Sample 5 briefů ve formátu markdown:
+      <a href="https://github.com/barborasandova/czehockey-player-pool-atlas/tree/main/outputs/briefs">outputs/briefs/</a>
+      v repu.
+    </p>
+    {% endif %}
 
     {% if historical_analogs %}
     <h3 id="historicke-analogy">Historické analogy v kariéře</h3>

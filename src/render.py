@@ -395,6 +395,107 @@ aplikovat na vlastní rozšířenou datovou základnu.
 
 
 # =============================================================================
+# LLM scout briefs — load + render markdown
+# =============================================================================
+
+
+def _markdown_brief_to_html(text: str) -> dict:
+    """Convert a Claude-generated scout brief (markdown) into structured HTML.
+
+    Briefs follow a stable format: optional ```markdown fence, then
+    `# Player Name (POS, year)`, then several `## Section title` blocks.
+    Returns dict with `title`, `meta_line` (extracted from H1 parens),
+    `sections` (list of {heading, html_body}).
+    """
+    import re
+    src = text.strip()
+    # Strip code fence if Claude wrapped output in ```markdown / ```
+    if src.startswith("```"):
+        src = re.sub(r"^```[a-zA-Z]*\n?", "", src)
+        src = re.sub(r"\n?```\s*$", "", src)
+
+    title = ""
+    meta_line = ""
+    body = src
+    h1_match = re.match(r"^#\s+(.+?)\n", src)
+    if h1_match:
+        h1 = h1_match.group(1).strip()
+        body = src[h1_match.end():]
+        paren = re.search(r"\(([^)]+)\)\s*$", h1)
+        if paren:
+            meta_line = paren.group(1).strip()
+            title = h1[:paren.start()].strip()
+        else:
+            title = h1
+
+    sections: list[dict] = []
+    chunks = re.split(r"\n##\s+", body)
+    for i, chunk in enumerate(chunks):
+        chunk = chunk.strip()
+        if not chunk:
+            continue
+        if i == 0 and not chunk.startswith("## "):
+            # Material before any ## (lead paragraph — rare but possible)
+            heading = ""
+            body_text = chunk
+        elif i == 0:
+            line, _, body_text = chunk[3:].partition("\n")
+            heading = line.strip()
+            body_text = body_text.strip()
+        else:
+            line, _, body_text = chunk.partition("\n")
+            heading = line.strip()
+            body_text = body_text.strip()
+        # Inline **bold** → <strong>
+        body_html = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", body_text)
+        # Paragraph splitting
+        paragraphs = [p.strip() for p in body_html.split("\n\n") if p.strip()]
+        body_html = "\n".join(f"<p>{p}</p>" for p in paragraphs)
+        sections.append({"heading": heading, "html": body_html})
+
+    return {
+        "title": title,
+        "meta_line": meta_line,
+        "sections": sections,
+    }
+
+
+def _load_llm_briefs() -> list[dict]:
+    """Load all briefs from outputs/briefs/*.md, parse to structured dicts.
+
+    Order is deliberate: the two showcased inline (Pastrnak forward,
+    Hronek defenseman) come first; the rest follow for a count.
+    """
+    briefs_dir = config.OUTPUTS_DIR / "briefs"
+    if not briefs_dir.exists():
+        return []
+
+    preferred = ["david-pastrnak", "filip-hronek"]
+    seen: set[str] = set()
+    ordered: list[Path] = []
+    for slug in preferred:
+        p = briefs_dir / f"{slug}.md"
+        if p.exists():
+            ordered.append(p)
+            seen.add(p.name)
+    for p in sorted(briefs_dir.glob("*.md")):
+        if p.name not in seen:
+            ordered.append(p)
+
+    out: list[dict] = []
+    for p in ordered:
+        try:
+            text = p.read_text(encoding="utf-8")
+            parsed = _markdown_brief_to_html(text)
+            parsed["slug"] = p.stem
+            parsed["bytes"] = len(text.encode("utf-8"))
+            out.append(parsed)
+        except Exception as e:  # noqa: BLE001
+            LOG.warning("brief parse failed for %s: %s", p.name, e)
+    return out
+
+
+# =============================================================================
 # Main orchestrator
 # =============================================================================
 
@@ -480,9 +581,7 @@ def main() -> None:
     # --- AI / multimodal layer (May 2026 addendum) ---
     import json as _json
 
-    # Historical analogs (career-trajectory nearest neighbours).
-    # Vision-language cards section removed from template per UX request;
-    # src/vision_cards.py + outputs/cards/ retained for potential later use.
+    # Historical analogs (career-trajectory nearest neighbours)
     historical_analogs = []
     analogs_path = config.PROCESSED_DIR / "historical_analogs.json"
     if analogs_path.exists():
@@ -491,7 +590,12 @@ def main() -> None:
         except Exception:  # noqa: BLE001
             historical_analogs = []
 
-    LOG.info("AI layer: %d analog targets", len(historical_analogs))
+    # LLM scout briefs (Claude Opus 4.7 over structured Atlas data).
+    # Display 2 inline (forward + defenseman), list rest with a count.
+    llm_briefs = _load_llm_briefs()
+
+    LOG.info("AI layer: %d analog targets, %d LLM briefs",
+             len(historical_analogs), len(llm_briefs))
 
     # --- Render HTML via Jinja2 ---
     # Markdown-ish → HTML for the limitations block (**bold** → <strong>bold</strong>)
@@ -520,6 +624,7 @@ def main() -> None:
         sensitivity_table=sensitivity_table,
         league_quality=league_quality,
         historical_analogs=historical_analogs,
+        llm_briefs=llm_briefs,
         rendered_at=dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
     )
     html_path = config.OUTPUTS_DIR / "index.html"
