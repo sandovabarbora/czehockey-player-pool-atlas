@@ -20,6 +20,27 @@
 
 * { box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
+/* Skip link for keyboard nav */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-bottom: none;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Anchor scroll offset so sticky TOC doesn't cover headings */
+h2[id], h3[id] { scroll-margin-top: 1rem; }
+
 body {
   margin: 0;
   padding: 0;
@@ -67,6 +88,104 @@ footer {
 .report-header {
   padding-top: 2.2rem;
   padding-bottom: 1rem;
+}
+
+/* TOC: floating sticky on wide screens (≥1280px), collapsible on narrow */
+.toc-sticky {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .toc-sticky {
+    display: block;
+    position: fixed;
+    top: 2rem;
+    right: 1.5rem;
+    width: 200px;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    padding: 0.9rem 1rem;
+    background: var(--bg-tint);
+    border-radius: 2px;
+    z-index: 50;
+  }
+  .toc-sticky .toc-heading {
+    font-family: Georgia, serif;
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: var(--accent);
+    margin: 0 0 0.4rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .toc-sticky ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .toc-sticky ol ol {
+    margin: 0.15rem 0 0.4rem 0.8rem;
+    padding: 0;
+  }
+  .toc-sticky li > a {
+    display: block;
+    padding: 0.1rem 0;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: none;
+  }
+  .toc-sticky li > a:hover {
+    color: var(--accent);
+  }
+  .toc-sticky > ol > li > a {
+    font-family: Georgia, serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+  }
+  .toc-sticky ol ol li > a {
+    color: var(--muted);
+    font-size: 0.76rem;
+  }
+}
+
+/* Mobile/tablet TOC: collapsible details */
+.toc-mobile {
+  margin: 1rem 0 1.5rem 0;
+  padding: 0.6rem 0.9rem;
+  background: var(--bg-tint);
+  border-radius: 2px;
+  font-size: 0.85rem;
+}
+.toc-mobile summary {
+  font-family: Georgia, serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--accent);
+  cursor: pointer;
+  user-select: none;
+}
+.toc-mobile ol {
+  list-style: none;
+  padding: 0.5rem 0 0 0;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.toc-mobile li {
+  margin: 0.2rem 0;
+}
+.toc-mobile a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: none;
+}
+.toc-mobile a:hover {
+  border-bottom: 1px solid var(--accent);
+}
+@media (min-width: 1280px) {
+  .toc-mobile { display: none; }
 }
 
 .subtitle {

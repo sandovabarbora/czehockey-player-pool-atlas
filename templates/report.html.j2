@@ -8,6 +8,33 @@
 </head>
 <body>
 
+<a class="skip-link" href="#shrnuti">Přeskočit na obsah</a>
+
+<nav class="toc-sticky" aria-label="Obsah reportu">
+  <p class="toc-heading">Obsah</p>
+  <ol>
+    <li><a href="#shrnuti">Shrnutí</a>
+      <ol>
+        <li><a href="#strukturalni-benchmark">Benchmark vs peer-země</a></li>
+        <li><a href="#pozorovani">Pozorování</a></li>
+        <li><a href="#cluster-archetypy">Cluster archetypy</a></li>
+        <li><a href="#trajektorie">Trajektorie</a></li>
+      </ol>
+    </li>
+    <li><a href="#metodologie">Metodologie</a>
+      <ol>
+        <li><a href="#nasobicky">Ligové násobičky</a></li>
+        <li><a href="#shrinkage">Bayesovský shrinkage</a></li>
+        <li><a href="#pca-loadings">PCA loadings</a></li>
+        <li><a href="#sensitivity">Citlivostní analýza</a></li>
+        <li><a href="#atlas-obrancu">Atlas obránců</a></li>
+        <li><a href="#omezeni">Omezení analýzy</a></li>
+        <li><a href="#reprodukovatelnost">Reprodukovatelnost</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+
 <header class="report-header">
   <h1>Český hokej · Atlas fondu hráčů</h1>
   <p class="subtitle">Metodologický nástroj pro průběžné mapování hráčů v profesionálních ligách</p>
@@ -17,13 +44,21 @@
     nebo IIHF účast, <strong>{{ n_iihf }}</strong> s aktivní reprezentační
     účastí MS 2024 nebo MS 2025).
   </p>
+
+  <details class="toc-mobile" open>
+    <summary>Obsah reportu</summary>
+    <ol>
+      <li><a href="#shrnuti">Shrnutí</a> &middot; <a href="#strukturalni-benchmark">Benchmark vs peer-země</a> &middot; <a href="#pozorovani">Pozorování</a> &middot; <a href="#cluster-archetypy">Cluster archetypy</a> &middot; <a href="#trajektorie">Trajektorie</a></li>
+      <li><a href="#metodologie">Metodologie</a> &middot; <a href="#nasobicky">Násobičky</a> &middot; <a href="#shrinkage">Shrinkage</a> &middot; <a href="#pca-loadings">PCA</a> &middot; <a href="#sensitivity">Sensitivity</a> &middot; <a href="#atlas-obrancu">Atlas obránců</a> &middot; <a href="#omezeni">Omezení</a></li>
+    </ol>
+  </details>
 </header>
 
 {# =============================================================================
    SECTION A — EXECUTIVE SUMMARY (≤ 90 second read)
    ============================================================================= #}
 <section class="exec-summary">
-  <h2>Shrnutí</h2>
+  <h2 id="shrnuti">Shrnutí</h2>
   <p class="framing">{{ framing }}</p>
 
   {% if intl_has_data %}
@@ -31,7 +66,7 @@
      INTERNATIONAL COHORT BENCHMARK — strongest "new info" finding
      (Český fond vs FIN/SWE/SVK/CAN/USA per cohort + per-capita)
      ========================================================================= #}
-  <h3>Strukturální benchmark vs peer-země</h3>
+  <h3 id="strukturalni-benchmark">Strukturální benchmark vs peer-země</h3>
   <p>
     Hokejová intuice český fond rozpoznává hráč po hráči. <strong>Strukturální
     pozice v rámci peer-zemí (FIN, SWE, SVK, CAN) ale vyžaduje datovou
@@ -145,7 +180,7 @@
     </figcaption>
   </figure>
 
-  <h3>Pozorování</h3>
+  <h3 id="pozorovani">Pozorování</h3>
   <div class="observations">
     {% for obs in observations %}
     <div class="observation">
@@ -155,7 +190,7 @@
     {% endfor %}
   </div>
 
-  <h3>Cluster archetypy, útočníci (style projekce)</h3>
+  <h3 id="cluster-archetypy">Cluster archetypy, útočníci (style projekce)</h3>
   <dl class="cluster-list">
     {% for c in fwd_clusters %}
     <dt>
@@ -171,7 +206,7 @@
     {% endfor %}
   </dl>
 
-  <h3>Trajektorie 2024/25 → 2025/26 (útočníci, ≥30 GP obě sezóny)</h3>
+  <h3 id="trajektorie">Trajektorie 2024/25 → 2025/26 (útočníci, ≥30 GP obě sezóny)</h3>
   <div class="movers-grid">
     <div class="movers-col">
       <h4>Posun nahoru (Δ quality P/GP)</h4>
@@ -214,9 +249,9 @@
    SECTION B — METHODOLOGY & RESULTS (≥ 45 min read, audience: Morkes)
    ============================================================================= #}
 <section class="methodology">
-  <h2>Metodologie</h2>
+  <h2 id="metodologie">Metodologie</h2>
 
-  <h3>Datové zdroje</h3>
+  <h3 id="datove-zdroje">Datové zdroje</h3>
   <ul>
     <li><strong>NHL Stats API</strong> (api-web.nhle.com/v1): všechny aktivní 2024-25 a 2025-26 NHL hráči, filtr birth_country = CZE</li>
     <li><strong>MoneyPuck</strong>: 5v5 per-60 metriky a xG (NHL-only enrichment)</li>
@@ -225,7 +260,7 @@
     <li><strong>IIHF turnaje</strong> (Wikipedia: MS 2024, MS 2025, WJC 2024, WJC 2025): reprezentační účast pro eligibility filtr</li>
   </ul>
 
-  <h3>Ligové násobičky (quality projekce)</h3>
+  <h3 id="nasobicky">Ligové násobičky (quality projekce)</h3>
   <table class="kv-table">
     <thead><tr><th>Liga</th><th>Násobička</th></tr></thead>
     <tbody>
@@ -239,7 +274,7 @@
     (hockeyviz.com, Sznajder NHL-equivalency analyses). Citlivostní analýza níže ukazuje robustnost vůči ±20 %.
   </p>
 
-  <h3>Bayesovský shrinkage</h3>
+  <h3 id="shrinkage">Bayesovský shrinkage</h3>
   <p>
     Per-game produkce hráčů s malým vzorkem (GP &lt; 10) je shrinkutována k mediánu své ligy
     pomocí empirical Bayes formule:
@@ -253,7 +288,7 @@
     Po shrinkage spadne na 0.59 P/GP, methodologicky obhajitelné.
   </p>
 
-  <h3>PCA loadings</h3>
+  <h3 id="pca-loadings">PCA loadings</h3>
   <table class="loadings-table">
     <thead>
       <tr>
@@ -277,7 +312,7 @@
     </tbody>
   </table>
 
-  <h3>Citlivostní analýza (±20 % násobičky)</h3>
+  <h3 id="sensitivity">Citlivostní analýza (±20 % násobičky)</h3>
   <p>
     Pro každý scénář perturbace násobičky byl přepočítán quality ranking a změřena změna oproti baseline.
     <strong>Top-10 ranking je vůči těmto změnám stabilní</strong>: žádný scénář nezpůsobuje churn větší než 1 hráč.
@@ -303,13 +338,13 @@
     </tbody>
   </table>
 
-  <h3>Atlas obránců</h3>
+  <h3 id="atlas-obrancu">Atlas obránců</h3>
   <figure>
     <img src="atlas_defense.svg" alt="Atlas obránců">
     <figcaption>Atlas obránců 2025-26. Stejná interpretace jako útočníci.</figcaption>
   </figure>
 
-  <h3>Cluster detaily, obránci</h3>
+  <h3 id="cluster-obranci">Cluster detaily, obránci</h3>
   <dl class="cluster-list">
     {% for c in def_clusters %}
     <dt>
@@ -325,12 +360,12 @@
     {% endfor %}
   </dl>
 
-  <h3>Omezení této analýzy</h3>
+  <h3 id="omezeni">Omezení této analýzy</h3>
   <div class="limitations">
     {{ limitations | safe }}
   </div>
 
-  <h3>Reprodukovatelnost</h3>
+  <h3 id="reprodukovatelnost">Reprodukovatelnost</h3>
   <p>
     Plná pipeline je veřejná: <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">github.com/barborasandova/czehockey-player-pool-atlas</a>.
     MIT licence. Spustit lze přes <code>make install &amp;&amp; make install-browsers &amp;&amp; make all</code>.
