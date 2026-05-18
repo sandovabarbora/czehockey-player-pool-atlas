@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Český hokej · Atlas fondu hráčů</title>
+  <meta name="description" content="Strukturální benchmark českého fondu profesionálních hokejistů vs Finsko, Švédsko, Slovensko, Kanada, USA. Metodologický nástroj pro průběžné mapování v rámci reprezentačního cyklu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,354 +40,401 @@
 </nav>
 
 <header class="report-header">
-  <h1>Český hokej · Atlas fondu hráčů</h1>
-  <p class="subtitle">Metodologický nástroj pro průběžné mapování hráčů v profesionálních ligách</p>
-  <p class="meta">
-    Pool: <strong>{{ n_players }}</strong> kanonických hráčů (z toho
-    <strong>{{ n_yes }}</strong> potvrzeně Czech-eligible přes birth_country
-    nebo IIHF účast, <strong>{{ n_iihf }}</strong> s aktivní reprezentační
-    účastí MS 2024 nebo MS 2025).
-  </p>
+  <div class="container">
+    <p class="masthead-kicker">Český hokej · veřejná datová analýza · 2025/26</p>
+    <h1>Atlas <em>fondu hráčů</em></h1>
+    <p class="masthead-subtitle">
+      Metodologický nástroj pro průběžné mapování českých profesionálních hokejistů
+      v rámci víceletého reprezentačního cyklu. Žádné predikce, žádná doporučení sestavy.
+    </p>
+    <dl class="masthead-meta">
+      <div><dt>Pool</dt> <dd><strong>{{ n_players }}</strong> hráčů</dd></div>
+      <div><dt>Czech-eligible</dt> <dd><strong>{{ n_yes }}</strong></dd></div>
+      <div><dt>Aktivní reprezentace MS 24/25</dt> <dd><strong>{{ n_iihf }}</strong></dd></div>
+    </dl>
 
-  <details class="toc-mobile" open>
-    <summary>Obsah reportu</summary>
-    <ol>
-      <li><a href="#shrnuti">Shrnutí</a> &middot; <a href="#strukturalni-benchmark">Benchmark vs peer-země</a> &middot; <a href="#pozorovani">Pozorování</a> &middot; <a href="#cluster-archetypy">Cluster archetypy</a> &middot; <a href="#trajektorie">Trajektorie</a></li>
-      <li><a href="#metodologie">Metodologie</a> &middot; <a href="#nasobicky">Násobičky</a> &middot; <a href="#shrinkage">Shrinkage</a> &middot; <a href="#pca-loadings">PCA</a> &middot; <a href="#sensitivity">Sensitivity</a> &middot; <a href="#atlas-obrancu">Atlas obránců</a> &middot; <a href="#omezeni">Omezení</a></li>
-    </ol>
-  </details>
+    <details class="toc-mobile" open>
+      <summary>Obsah reportu</summary>
+      <ol>
+        <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
+        <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
+      </ol>
+    </details>
+  </div>
 </header>
+
+{# =============================================================================
+   HERO BAND — drenched navy with numeric anchor
+   The H2 "Shrnutí" is in DOM (sr-only) so TOC + outline still work; the
+   visual H2 role is carried by the kicker + display number.
+   ============================================================================= #}
+{% set cze_row = intl_per_capita | selectattr('country', 'equalto', 'CZE') | list | first if intl_has_data else none %}
+{% set max_per_million = intl_per_capita | map(attribute='per_million') | max if intl_has_data else 8 %}
+<section class="hero" id="shrnuti">
+  <div class="container">
+    <p class="hero-kicker">Shrnutí · strukturální benchmark vs peer-země</p>
+    <h2>Shrnutí</h2>
+    <div class="hero-grid">
+      <div class="hero-num">
+        <span class="hero-num-figure">{% if cze_row %}{{ ('%.2f' | format(cze_row.per_million)) | replace('.', ',') }}{% else %}—{% endif %}</span>
+        <span class="hero-num-unit">hráče v NHL na milion obyvatel, sezóna 2025/26</span>
+      </div>
+      <div class="hero-lead">
+        <p>
+          Per-capita hustota NHL hráčů řadí český fond na <span class="hero-pull">páté místo ze šesti</span> porovnávaných zemí.
+          Finsko má přibližně <strong>čtyřnásobnou</strong> hustotu,
+          Švédsko <strong>pětinásobnou</strong>.
+        </p>
+        <p class="hero-sublead">
+          Strukturální propast je nejvýraznější v <strong>U22 útočnících</strong>
+          (jediný hráč) a v celé <strong>obránecké pipeline</strong> (čtyři hráči
+          celkem, šedesát českých obránců chybí oproti Švédsku). Hokejová intuice
+          tato čísla rozpoznává hráč po hráči, ale agregaci v jednom místě nemá.
+        </p>
+      </div>
+    </div>
+    <dl class="hero-meta">
+      <div><dt>Mapovaný pool</dt> <dd>{{ n_players }} hráčů</dd></div>
+      <div><dt>Reprezentační účast 24/25</dt> <dd>{{ n_iihf }} hráčů</dd></div>
+      <div><dt>Datový rámec</dt> <dd>2024/25 → 2025/26</dd></div>
+    </dl>
+  </div>
+</section>
 
 {# =============================================================================
    SECTION A — EXECUTIVE SUMMARY (≤ 90 second read)
    ============================================================================= #}
 <section class="exec-summary">
-  <h2 id="shrnuti">Shrnutí</h2>
-  <p class="framing">{{ framing }}</p>
+  <div class="container">
+    <p class="framing">{{ framing }}</p>
 
-  {% if intl_has_data %}
-  {# =========================================================================
-     INTERNATIONAL COHORT BENCHMARK — strongest "new info" finding
-     (Český fond vs FIN/SWE/SVK/CAN/USA per cohort + per-capita)
-     ========================================================================= #}
-  <h3 id="strukturalni-benchmark">Strukturální benchmark vs peer-země</h3>
-  <p>
-    Hokejová intuice český fond rozpoznává hráč po hráči. <strong>Strukturální
-    pozice v rámci peer-zemí (FIN, SWE, SVK, CAN) ale vyžaduje datovou
-    agregaci kterou jedinec v hlavě nedokáže.</strong> Níže tři čísla, která
-    nejsou typicky agregovaná v jednom místě.
-  </p>
+    {% if intl_has_data %}
+    <h3 id="strukturalni-benchmark">Strukturální benchmark vs peer-země</h3>
+    <p>
+      Hokejová intuice český fond rozpoznává hráč po hráči. <strong>Strukturální
+      pozice v rámci peer-zemí (FIN, SWE, SVK, CAN, USA) ale vyžaduje datovou
+      agregaci, kterou jedinec v hlavě nedokáže.</strong> Níže tři čísla, která
+      typicky nejsou shromážděna v jednom místě.
+    </p>
 
-  <h4>Per-capita hustota NHL hráčů (sezóna 2025-26)</h4>
-  <table class="kv-table">
-    <thead>
-      <tr><th>Země</th><th>NHL hráči (≥10 GP)</th><th>Populace (M)</th><th>Hráčů / M</th></tr>
-    </thead>
-    <tbody>
+    <h4>Per-capita hustota NHL hráčů (sezóna 2025/26)</h4>
+    <div class="capita" role="list" aria-label="Per-capita hustota NHL hráčů podle země">
       {% for r in intl_per_capita %}
-      <tr{% if r.country == 'CZE' %} style="background:#f4f1ea; font-weight:600;"{% endif %}>
-        <td>{{ r.country }}</td>
-        <td>{{ r.n_players }}</td>
-        <td>{{ '%.1f' | format(r.population_m) }}</td>
-        <td>{{ '%.2f' | format(r.per_million) }}</td>
-      </tr>
+      <div class="capita-row" role="listitem"
+           {% if r.country == 'CZE' %}data-highlight="cze"{% endif %}
+           style="--value: {{ r.per_million }}; --max: {{ max_per_million }};">
+        <div class="capita-country">
+          <span class="capita-code">{{ r.country }}</span>
+          {% if r.country == 'CZE' %}Česko{% elif r.country == 'FIN' %}Finsko{% elif r.country == 'SWE' %}Švédsko{% elif r.country == 'SVK' %}Slovensko{% elif r.country == 'CAN' %}Kanada{% elif r.country == 'USA' %}USA{% else %}{{ r.country }}{% endif %}
+        </div>
+        <div class="capita-bar" aria-hidden="true"><div class="capita-bar-fill"></div></div>
+        <div class="capita-value">{{ ('%.2f' | format(r.per_million)) | replace('.', ',') }}</div>
+      </div>
       {% endfor %}
-    </tbody>
-  </table>
-  <p class="muted small">
-    Po normalizaci na populaci je český fond v NHL <strong>šestý ze šesti</strong>
-    porovnávaných zemí, za Slovenskem, čtyřikrát méně hustý než Finsko.
-  </p>
-
-  <figure class="hero-figure">
-    <img src="intl_cohort_heatmap.svg"
-         alt="Heatmap mezinárodního cohort benchmarku. Ukazuje, že český NHL pool je šestý ze šesti porovnávaných zemí per-capita, s nejvýraznějšími gapy v U22 útočníkové a celé obránecké pipeline napříč všemi věkovými skupinami. Modře orámovaná řada vyznačuje Českou republiku.">
-    <figcaption>
-      Mediánová produkce (P/GP) podle země, pozice a věkové skupiny. Modře
-      orámovaná řada vyznačuje Českou republiku. Buňka: počet hráčů a medián
-      bodů na zápas.
-    </figcaption>
-  </figure>
-
-  <h4>Specifické cohort gapy</h4>
-  <p>
-    <strong>Útočníci, kde český pool je strukturálně tenký:</strong>
-  </p>
-  <table class="movers-table">
-    <thead>
-      <tr>
-        <th>Cohort</th>
-        <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for r in intl_cohort_gaps_f %}
-      <tr>
-        <td><strong>{{ r.cohort }}</strong></td>
-        {% for cc in ['CZE','FIN','SWE','SVK'] %}
-          {% set cell = r[cc] %}
-          <td>
-            {% if cell.n > 0 %}
-              n={{ cell.n }} · {{ '%.2f' | format(cell.median) }}
-            {% else %}
-              <span class="muted" title="bez dat">—</span>
-            {% endif %}
-          </td>
-        {% endfor %}
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  <p class="muted small">
-    Český <strong>U22 forwards cohort = 1 hráč</strong> (Kulich). FIN 3, SWE 7.
-    Současný <strong>26-29 elite cohort (Pastrňák/Nečas/Zacha/Hertl) drží
-    median 1.06 P/GP</strong>, světová špička, ale jen 4 hráče hluboko.
-  </p>
-
-  <p>
-    <strong>Obránci, strukturálně problematická pozice napříč všemi cohorty:</strong>
-  </p>
-  <table class="movers-table">
-    <thead>
-      <tr>
-        <th>Cohort</th>
-        <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for r in intl_cohort_gaps_d %}
-      <tr>
-        <td><strong>{{ r.cohort }}</strong></td>
-        {% for cc in ['CZE','FIN','SWE','SVK'] %}
-          {% set cell = r[cc] %}
-          <td>
-            {% if cell.n > 0 %}
-              n={{ cell.n }} · {{ '%.2f' | format(cell.median) }}
-            {% else %}
-              <span class="muted" title="bez dat">—</span>
-            {% endif %}
-          </td>
-        {% endfor %}
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  <p class="muted small">
-    ČR má <strong>4 obránce v NHL celkem</strong> napříč všemi věkovými skupinami.
-    Pro srovnání FIN má 14, SWE 30. U22 cohort: 0 českých obránců.
-  </p>
-  {% endif %}
-
-  <figure class="hero-figure">
-    <img src="atlas_forwards.svg"
-         alt="Dvoupanelový atlas útočníků 2025-26 v PCA projekci. Levý panel (style mapa bez ligových násobiček) ukazuje Pastrňáka, Nečase a Červenku ve společné produkční zóně. Pravý panel (kvalitou upravená mapa) NHL elitu výrazně odpoutává od EU hráčů. Modré kroužky vyznačují účastníky MS 2024 a MS 2025; šipky znázorňují trajektorii mezi sezónami.">
-    <figcaption>
-      Atlas útočníků 2025-26 v obou projekcích. Modré kroužky vyznačují
-      aktivní reprezentační pool (MS 24/25). Šipky znázorňují trajektorii
-      mezi sezónami.
-    </figcaption>
-  </figure>
-
-  <h3 id="pozorovani">Pozorování</h3>
-  <div class="observations">
-    {% for obs in observations %}
-    <div class="observation">
-      <h4>{{ obs.title }}</h4>
-      <p>{{ obs.body }}</p>
     </div>
-    {% endfor %}
-  </div>
+    <p class="capita-note">
+      Český fond je per-capita <strong>pátý ze šesti</strong>, mezi Slovenskem
+      a USA. USA má sice nejvíc NHL hráčů absolutně, ale populace 340 milionů
+      ředí per-capita hustotu na 0,67. Slovensko (1,67) překonává Česko navzdory
+      poloviční populaci, finská hustota je přibližně čtyřnásobná, švédská
+      pětinásobná.
+    </p>
 
-  <h3 id="cluster-archetypy">Cluster archetypy, útočníci (style projekce)</h3>
-  <dl class="cluster-list">
-    {% for c in fwd_clusters %}
-    <dt>
-      C{{ c.cluster_id }} · {{ c.label }}
-      <span class="cluster-meta-inline">
-        {{ c.n_members }} hráčů · MS pool {{ c.nt_count }} · medián ročník {{ c.median_age_year }}
-      </span>
-    </dt>
-    <dd>
-      {{ c.description }}
-      <span class="cluster-top">Top: {{ c.top_names | join(', ') }}</span>
-    </dd>
-    {% endfor %}
-  </dl>
+    <figure class="figure-bleed">
+      <img src="intl_cohort_heatmap.svg"
+           alt="Heatmap mezinárodního cohort benchmarku. Český NHL pool je šestý ze šesti porovnávaných zemí per-capita, s nejvýraznějšími gapy v U22 útočnících a celé obránecké pipeline napříč všemi věkovými skupinami. Modře orámovaná řada vyznačuje Českou republiku.">
+      <figcaption>
+        Mediánová produkce (P/GP) podle země, pozice a věkové skupiny. Modře orámovaná
+        řada vyznačuje Českou republiku; buňka obsahuje počet hráčů a medián bodů na zápas.
+      </figcaption>
+    </figure>
 
-  <h3 id="trajektorie">Trajektorie 2024/25 → 2025/26 (útočníci, ≥30 GP obě sezóny)</h3>
-  <div class="movers-grid">
-    <div class="movers-col">
-      <h4>Posun nahoru (Δ quality P/GP)</h4>
-      <table class="movers-table">
-        <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
-        <tbody>
-          {% for r in top_improvers %}
-          <tr>
-            <td>{{ r.name }}</td>
-            <td class="muted">{{ r.league }}</td>
-            <td class="muted">{{ r.gp_old }} / {{ r.gp_new }}</td>
-            <td class="arrow-up">{{ '%+.3f' | format(r.delta) }}</td>
-          </tr>
+    <h4>Specifické cohort gapy — útočníci</h4>
+    <p>Český pool je strukturálně tenký v mladších kohortách. Současná NHL elita drží mediánovou produkci na světové úrovni, ale jen ve čtyřech hráčích.</p>
+    <table class="cohort-table">
+      <thead>
+        <tr>
+          <th>Cohort</th>
+          <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in intl_cohort_gaps_f %}
+        <tr>
+          <td>{{ r.cohort }}</td>
+          {% for cc in ['CZE','FIN','SWE','SVK'] %}
+            {% set cell = r[cc] %}
+            <td{% if cc == 'CZE' %} class="cohort-cze"{% endif %}>
+              {% if cell.n > 0 %}
+                <span class="cohort-cell-n">{{ cell.n }}</span><span class="cohort-cell-median">{{ ('%.2f' | format(cell.median)) | replace('.', ',') }}</span>
+              {% else %}
+                <span class="muted" title="bez dat">—</span>
+              {% endif %}
+            </td>
           {% endfor %}
-        </tbody>
-      </table>
-    </div>
-    <div class="movers-col">
-      <h4>Posun dolů (Δ quality P/GP)</h4>
-      <table class="movers-table">
-        <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
-        <tbody>
-          {% for r in top_decliners %}
-          <tr>
-            <td>{{ r.name }}</td>
-            <td class="muted">{{ r.league }}</td>
-            <td class="muted">{{ r.gp_old }} / {{ r.gp_new }}</td>
-            <td class="arrow-down">{{ '%+.3f' | format(r.delta) }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-  </div>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="capita-note">
+      Český <strong>U22 forwards cohort = 1 hráč</strong> (Kulich). FIN má 3, SWE 7.
+      Současný <strong>26-29 elite cohort (Pastrňák, Nečas, Zacha, Hertl) drží
+      mediánovou produkci 1,06 P/GP</strong>, světová špička, ale jen ve čtyřech hráčích.
+    </p>
 
-  <p class="continue">Pro detailní metodologii a tabulky pokračujte k sekci níže.</p>
+    <h4>Specifické cohort gapy — obránci</h4>
+    <p>Obránci jsou strukturálně problematickou pozicí napříč všemi věkovými skupinami. Celkový počet českých NHL obránců je čtyři, švédských třicet.</p>
+    <table class="cohort-table">
+      <thead>
+        <tr>
+          <th>Cohort</th>
+          <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in intl_cohort_gaps_d %}
+        <tr>
+          <td>{{ r.cohort }}</td>
+          {% for cc in ['CZE','FIN','SWE','SVK'] %}
+            {% set cell = r[cc] %}
+            <td{% if cc == 'CZE' %} class="cohort-cze"{% endif %}>
+              {% if cell.n > 0 %}
+                <span class="cohort-cell-n">{{ cell.n }}</span><span class="cohort-cell-median">{{ ('%.2f' | format(cell.median)) | replace('.', ',') }}</span>
+              {% else %}
+                <span class="muted" title="bez dat">—</span>
+              {% endif %}
+            </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="capita-note">
+      ČR má <strong>4 obránce v NHL</strong> napříč všemi věkovými skupinami.
+      Pro srovnání: Finsko 14, Švédsko 30. V U22 kohortě: 0 českých obránců.
+    </p>
+    {% endif %}
+
+    <figure class="figure-bleed">
+      <img src="atlas_forwards.svg"
+           alt="Dvoupanelový atlas útočníků 2025/26 v PCA projekci. Levý panel (style mapa bez ligových násobiček) ukazuje Pastrňáka, Nečase a Červenku ve společné produkční zóně. Pravý panel (kvalitou upravená mapa) NHL elitu výrazně odpoutává od EU hráčů. Modré kroužky vyznačují účastníky MS 2024 a MS 2025; šipky znázorňují trajektorii mezi sezónami.">
+      <figcaption>
+        Atlas útočníků 2025/26 v obou projekcích. Modré kroužky vyznačují aktivní
+        reprezentační pool (MS 24/25). Šipky znázorňují trajektorii mezi sezónami.
+      </figcaption>
+    </figure>
+
+    <h3 id="pozorovani">Pozorování</h3>
+    <div class="observations">
+      {% for obs in observations %}
+      <div class="observation">
+        <h4>{{ obs.title }}</h4>
+        <p>{{ obs.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h3 id="cluster-archetypy">Cluster archetypy — útočníci (style projekce)</h3>
+    <dl class="cluster-list">
+      {% for c in fwd_clusters %}
+      <dt>
+        <span class="cluster-id">C{{ c.cluster_id }}</span>
+        <span>
+          {{ c.label }}
+          <span class="cluster-meta-inline">
+            {{ c.n_members }} hráčů · MS pool {{ c.nt_count }} · medián ročník {{ c.median_age_year }}
+          </span>
+        </span>
+      </dt>
+      <dd>
+        {{ c.description }}
+        <span class="cluster-top">{{ c.top_names | join(', ') }}</span>
+      </dd>
+      {% endfor %}
+    </dl>
+
+    <h3 id="trajektorie">Trajektorie 2024/25 → 2025/26 (útočníci, ≥30 GP obě sezóny)</h3>
+    <div class="movers-grid">
+      <div class="movers-col">
+        <h4>Posun nahoru (Δ quality P/GP)</h4>
+        <table class="movers-table">
+          <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
+          <tbody>
+            {% for r in top_improvers %}
+            <tr>
+              <td>{{ r.name }}</td>
+              <td class="muted">{{ r.league }}</td>
+              <td class="muted">{{ r.gp_old }} / {{ r.gp_new }}</td>
+              <td class="arrow-up">{{ '%+.3f' | format(r.delta) }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="movers-col">
+        <h4>Posun dolů (Δ quality P/GP)</h4>
+        <table class="movers-table">
+          <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
+          <tbody>
+            {% for r in top_decliners %}
+            <tr>
+              <td>{{ r.name }}</td>
+              <td class="muted">{{ r.league }}</td>
+              <td class="muted">{{ r.gp_old }} / {{ r.gp_new }}</td>
+              <td class="arrow-down">{{ '%+.3f' | format(r.delta) }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="continue">Metodologie a tabulky pokračují níže</p>
+  </div>
 </section>
 
 {# =============================================================================
    SECTION B — METHODOLOGY & RESULTS (≥ 45 min read, audience: Morkes)
    ============================================================================= #}
 <section class="methodology">
-  <h2 id="metodologie">Metodologie</h2>
+  <div class="container">
+    <h2 id="metodologie">Metodologie</h2>
 
-  <h3 id="datove-zdroje">Datové zdroje</h3>
-  <ul>
-    <li><strong>NHL Stats API</strong> (api-web.nhle.com/v1): všechny aktivní 2024-25 a 2025-26 NHL hráči, filtr birth_country = CZE</li>
-    <li><strong>MoneyPuck</strong>: 5v5 per-60 metriky a xG (NHL-only enrichment)</li>
-    <li><strong>Liiga</strong> (liiga.fi): sezónní totaly přes Playwright</li>
-    <li><strong>Tipsport Extraliga</strong> (hokej.cz): per-team /statistiky, birth dates z /hrac/ profilů</li>
-    <li><strong>IIHF turnaje</strong> (Wikipedia: MS 2024, MS 2025, WJC 2024, WJC 2025): reprezentační účast pro eligibility filtr</li>
-  </ul>
+    <h3 id="datove-zdroje">Datové zdroje</h3>
+    <ul>
+      <li><strong>NHL Stats API</strong> (api-web.nhle.com/v1): všichni aktivní 2024/25 a 2025/26 NHL hráči, filtr birth_country = CZE</li>
+      <li><strong>MoneyPuck</strong>: 5v5 per-60 metriky a xG (NHL-only enrichment)</li>
+      <li><strong>Liiga</strong> (liiga.fi): sezónní totaly přes Playwright</li>
+      <li><strong>Tipsport Extraliga</strong> (hokej.cz): per-team /statistiky, birth dates z /hrac/ profilů</li>
+      <li><strong>IIHF turnaje</strong> (Wikipedia: MS 2024, MS 2025, WJC 2024, WJC 2025): reprezentační účast pro eligibility filtr</li>
+    </ul>
 
-  <h3 id="nasobicky">Ligové násobičky (quality projekce)</h3>
-  <table class="kv-table">
-    <thead><tr><th>Liga</th><th>Násobička</th></tr></thead>
-    <tbody>
-      {% for k, v in league_quality.items() %}
-      <tr><td>{{ k }}</td><td>{{ '%.2f' | format(v) }}</td></tr>
+    <h3 id="nasobicky">Ligové násobičky (quality projekce)</h3>
+    <table class="kv-table">
+      <thead><tr><th>Liga</th><th>Násobička</th></tr></thead>
+      <tbody>
+        {% for k, v in league_quality.items() %}
+        <tr><td>{{ k }}</td><td>{{ ('%.2f' | format(v)) | replace('.', ',') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="muted small">
+      Subjektivní aproximace inspirované veřejnými srovnáními produkce hráčů přecházejících mezi ligami
+      (hockeyviz.com, Sznajder NHL-equivalency analyses). Citlivostní analýza níže ukazuje robustnost vůči ±20 %.
+    </p>
+
+    <h3 id="shrinkage">Bayesovský shrinkage</h3>
+    <p>
+      Per-game produkce hráčů s malým vzorkem (GP &lt; 10) je shrinkutována k mediánu své ligy
+      pomocí empirical Bayes formule:
+    </p>
+    <p class="formula">
+      shrunk_rate = (počet_eventů + K × cohort_medián) / (player_GP + K), &nbsp; K = 10
+    </p>
+    <p>
+      Při GP = 1 dominuje cohort medián (~91 %); při GP = 80 dominují skutečná data (~89 %).
+      Bez shrinkage by hráč jako Lantoši (4 GP, 5 bodů, 1,25 P/GP raw) předběhl Pastrňáka v kvalitě.
+      Po shrinkage spadne na 0,59 P/GP, metodologicky obhajitelné.
+    </p>
+
+    <h3 id="pca-loadings">PCA loadings</h3>
+    <table class="loadings-table">
+      <thead>
+        <tr>
+          <th>Pozice</th><th>Projekce</th><th>PC</th><th>% variance</th>
+          <th>G/GP</th><th>A/GP</th><th>PIM/GP</th><th>věk</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in loadings_table %}
+        <tr>
+          <td>{{ r.position }}</td>
+          <td>{{ r.projection }}</td>
+          <td>{{ r.pc }}</td>
+          <td>{{ r.explained_pct }}%</td>
+          <td>{{ '%.3f' | format(r.loadings.get('goals_per_gp_shrunk', r.loadings.get('goals_per_gp_quality', 0))) }}</td>
+          <td>{{ '%.3f' | format(r.loadings.get('assists_per_gp_shrunk', r.loadings.get('assists_per_gp_quality', 0))) }}</td>
+          <td>{{ '%.3f' | format(r.loadings.get('pim_per_gp_shrunk', r.loadings.get('pim_per_gp_quality', 0))) }}</td>
+          <td>{{ '%.3f' | format(r.loadings.get('birth_year', 0)) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h3 id="sensitivity">Citlivostní analýza (±20 % násobičky)</h3>
+    <p>
+      Pro každý scénář perturbace násobičky byl přepočítán quality ranking a změřena změna oproti baseline.
+      <strong>Top-10 ranking je vůči těmto změnám stabilní</strong>: žádný scénář nezpůsobuje churn větší než 1 hráč.
+      NHL top elita (Pastrňák, Nečas, Zacha, Hertl) zůstává v top čtyřce ve všech scénářích.
+    </p>
+    <table class="sensitivity-table">
+      <thead>
+        <tr>
+          <th>Scénář</th><th>Popis</th>
+          <th>Top-10 overlap</th><th>Top-10 churn</th><th>Mean Δ rank (top 20)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in sensitivity_table %}
+        <tr>
+          <td>{{ r.scenario }}</td>
+          <td>{{ r.description }}</td>
+          <td>{{ r.overlap }} / 10</td>
+          <td>{{ r.churn }}</td>
+          <td>{{ '%.2f' | format(r.mean_delta) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h3 id="atlas-obrancu">Atlas obránců</h3>
+    <figure class="figure-bleed">
+      <img src="atlas_defense.svg"
+           alt="Dvoupanelový atlas obránců 2025/26 v PCA projekci. Stejná struktura jako útočníci, méně hustá kvůli celkově menšímu poolu českých NHL obránců (Hronek a Gudas dominují); modré kroužky vyznačují MS 2024/25.">
+      <figcaption>Atlas obránců 2025/26. Stejná interpretace jako útočníci.</figcaption>
+    </figure>
+
+    <h3 id="cluster-obranci">Cluster detaily — obránci</h3>
+    <dl class="cluster-list">
+      {% for c in def_clusters %}
+      <dt>
+        <span class="cluster-id">C{{ c.cluster_id }}</span>
+        <span>
+          {{ c.label }}
+          <span class="cluster-meta-inline">
+            {{ c.n_members }} hráčů · MS pool {{ c.nt_count }} · medián ročník {{ c.median_age_year }}
+          </span>
+        </span>
+      </dt>
+      <dd>
+        {{ c.description }}
+        <span class="cluster-top">{{ c.top_names | join(', ') }}</span>
+      </dd>
       {% endfor %}
-    </tbody>
-  </table>
-  <p class="muted small">
-    Subjektivní aproximace inspirované public konverzemi production rates hráčů, kteří přešli mezi ligami
-    (hockeyviz.com, Sznajder NHL-equivalency analyses). Citlivostní analýza níže ukazuje robustnost vůči ±20 %.
-  </p>
+    </dl>
 
-  <h3 id="shrinkage">Bayesovský shrinkage</h3>
-  <p>
-    Per-game produkce hráčů s malým vzorkem (GP &lt; 10) je shrinkutována k mediánu své ligy
-    pomocí empirical Bayes formule:
-  </p>
-  <p class="formula">
-    shrunk_rate = (počet_eventů + K × cohort_medián) / (player_GP + K),&nbsp; K = 10
-  </p>
-  <p>
-    Při GP = 1 dominuje cohort medián (~91 %); při GP = 80 dominují skutečná data (~89 %).
-    Bez shrinkage by hráč jako Lantoši (4 GP, 5 bodů, 1.25 P/GP raw) předběhl Pastrňáka v kvalitě.
-    Po shrinkage spadne na 0.59 P/GP, methodologicky obhajitelné.
-  </p>
+    <h3 id="omezeni">Omezení této analýzy</h3>
+    <div class="limitations">
+      {{ limitations | safe }}
+    </div>
 
-  <h3 id="pca-loadings">PCA loadings</h3>
-  <table class="loadings-table">
-    <thead>
-      <tr>
-        <th>Pozice</th><th>Projekce</th><th>PC</th><th>% variance</th>
-        <th>G/GP</th><th>A/GP</th><th>PIM/GP</th><th>věk</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for r in loadings_table %}
-      <tr>
-        <td>{{ r.position }}</td>
-        <td>{{ r.projection }}</td>
-        <td>{{ r.pc }}</td>
-        <td>{{ r.explained_pct }}%</td>
-        <td>{{ '%.3f' | format(r.loadings.get('goals_per_gp_shrunk', r.loadings.get('goals_per_gp_quality', 0))) }}</td>
-        <td>{{ '%.3f' | format(r.loadings.get('assists_per_gp_shrunk', r.loadings.get('assists_per_gp_quality', 0))) }}</td>
-        <td>{{ '%.3f' | format(r.loadings.get('pim_per_gp_shrunk', r.loadings.get('pim_per_gp_quality', 0))) }}</td>
-        <td>{{ '%.3f' | format(r.loadings.get('birth_year', 0)) }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  <h3 id="sensitivity">Citlivostní analýza (±20 % násobičky)</h3>
-  <p>
-    Pro každý scénář perturbace násobičky byl přepočítán quality ranking a změřena změna oproti baseline.
-    <strong>Top-10 ranking je vůči těmto změnám stabilní</strong>: žádný scénář nezpůsobuje churn větší než 1 hráč.
-    NHL top elita (Pastrňák, Nečas, Zacha, Hertl) zůstává v top čtyřce ve všech scénářích.
-  </p>
-  <table class="sensitivity-table">
-    <thead>
-      <tr>
-        <th>Scénář</th><th>Popis</th>
-        <th>Top-10 overlap</th><th>Top-10 churn</th><th>Mean Δ rank (top 20)</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for r in sensitivity_table %}
-      <tr>
-        <td>{{ r.scenario }}</td>
-        <td class="muted">{{ r.description }}</td>
-        <td>{{ r.overlap }} / 10</td>
-        <td>{{ r.churn }}</td>
-        <td>{{ '%.2f' | format(r.mean_delta) }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  <h3 id="atlas-obrancu">Atlas obránců</h3>
-  <figure>
-    <img src="atlas_defense.svg"
-         alt="Dvoupanelový atlas obránců 2025-26 v PCA projekci. Stejná struktura jako útočníci, méně hustá kvůli celkově menšímu poolu českých NHL obránců (Hronek a Gudas dominují); modré kroužky vyznačují MS 2024/25.">
-    <figcaption>Atlas obránců 2025-26. Stejná interpretace jako útočníci.</figcaption>
-  </figure>
-
-  <h3 id="cluster-obranci">Cluster detaily, obránci</h3>
-  <dl class="cluster-list">
-    {% for c in def_clusters %}
-    <dt>
-      C{{ c.cluster_id }} · {{ c.label }}
-      <span class="cluster-meta-inline">
-        {{ c.n_members }} hráčů · MS pool {{ c.nt_count }} · medián ročník {{ c.median_age_year }}
-      </span>
-    </dt>
-    <dd>
-      {{ c.description }}
-      <span class="cluster-top">Top: {{ c.top_names | join(', ') }}</span>
-    </dd>
-    {% endfor %}
-  </dl>
-
-  <h3 id="omezeni">Omezení této analýzy</h3>
-  <div class="limitations">
-    {{ limitations | safe }}
+    <h3 id="reprodukovatelnost">Reprodukovatelnost</h3>
+    <p>
+      Plná pipeline je veřejná: <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">github.com/barborasandova/czehockey-player-pool-atlas</a>.
+      MIT licence. Spustit lze přes <code>make install &amp;&amp; make install-browsers &amp;&amp; make all</code>.
+      Random seed = 42 pro všechny stochastické operace (KMeans, UMAP).
+    </p>
   </div>
-
-  <h3 id="reprodukovatelnost">Reprodukovatelnost</h3>
-  <p>
-    Plná pipeline je veřejná: <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">github.com/barborasandova/czehockey-player-pool-atlas</a>.
-    MIT licence. Spustit lze přes <code>make install &amp;&amp; make install-browsers &amp;&amp; make all</code>.
-    Random seed = 42 pro všechny stochastické operace (KMeans, UMAP).
-  </p>
 </section>
 
 <footer>
-  <p>
-    Barbora Šandová · <a href="mailto:barbora@datasimply.eu">barbora@datasimply.eu</a> ·
-    <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">GitHub</a>
-  </p>
-  <p class="rendered-at">Vyrenderováno: {{ rendered_at }}</p>
+  <div class="container">
+    <p>
+      Barbora Šandová · <a href="mailto:barbora@datasimply.eu">barbora@datasimply.eu</a> ·
+      <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">GitHub</a>
+    </p>
+    <p class="rendered-at">Vyrenderováno: {{ rendered_at }}</p>
+  </div>
 </footer>
 
 </body>

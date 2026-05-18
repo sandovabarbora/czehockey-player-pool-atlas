@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Český hokej · Atlas fondu hráčů</title>
+  <meta name="description" content="Strukturální benchmark českého fondu profesionálních hokejistů vs Finsko, Švédsko, Slovensko, Kanada, USA. Metodologický nástroj pro průběžné mapování v rámci reprezentačního cyklu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,858 +40,945 @@
 </nav>
 
 <header class="report-header">
-  <h1>Český hokej · Atlas fondu hráčů</h1>
-  <p class="subtitle">Metodologický nástroj pro průběžné mapování hráčů v profesionálních ligách</p>
-  <p class="meta">
-    Pool: <strong>385</strong> kanonických hráčů (z toho
-    <strong>78</strong> potvrzeně Czech-eligible přes birth_country
-    nebo IIHF účast, <strong>42</strong> s aktivní reprezentační
-    účastí MS 2024 nebo MS 2025).
-  </p>
+  <div class="container">
+    <p class="masthead-kicker">Český hokej · veřejná datová analýza · 2025/26</p>
+    <h1>Atlas <em>fondu hráčů</em></h1>
+    <p class="masthead-subtitle">
+      Metodologický nástroj pro průběžné mapování českých profesionálních hokejistů
+      v rámci víceletého reprezentačního cyklu. Žádné predikce, žádná doporučení sestavy.
+    </p>
+    <dl class="masthead-meta">
+      <div><dt>Pool</dt> <dd><strong>385</strong> hráčů</dd></div>
+      <div><dt>Czech-eligible</dt> <dd><strong>78</strong></dd></div>
+      <div><dt>Aktivní reprezentace MS 24/25</dt> <dd><strong>42</strong></dd></div>
+    </dl>
 
-  <details class="toc-mobile" open>
-    <summary>Obsah reportu</summary>
-    <ol>
-      <li><a href="#shrnuti">Shrnutí</a> &middot; <a href="#strukturalni-benchmark">Benchmark vs peer-země</a> &middot; <a href="#pozorovani">Pozorování</a> &middot; <a href="#cluster-archetypy">Cluster archetypy</a> &middot; <a href="#trajektorie">Trajektorie</a></li>
-      <li><a href="#metodologie">Metodologie</a> &middot; <a href="#nasobicky">Násobičky</a> &middot; <a href="#shrinkage">Shrinkage</a> &middot; <a href="#pca-loadings">PCA</a> &middot; <a href="#sensitivity">Sensitivity</a> &middot; <a href="#atlas-obrancu">Atlas obránců</a> &middot; <a href="#omezeni">Omezení</a></li>
-    </ol>
-  </details>
+    <details class="toc-mobile" open>
+      <summary>Obsah reportu</summary>
+      <ol>
+        <li><a href="#shrnuti">Shrnutí</a> · <a href="#strukturalni-benchmark">Benchmark</a> · <a href="#pozorovani">Pozorování</a> · <a href="#cluster-archetypy">Cluster archetypy</a> · <a href="#trajektorie">Trajektorie</a></li>
+        <li><a href="#metodologie">Metodologie</a> · <a href="#nasobicky">Násobičky</a> · <a href="#shrinkage">Shrinkage</a> · <a href="#pca-loadings">PCA</a> · <a href="#sensitivity">Sensitivity</a> · <a href="#atlas-obrancu">Atlas obránců</a> · <a href="#omezeni">Omezení</a></li>
+      </ol>
+    </details>
+  </div>
 </header>
 
 
+
+
+<section class="hero" id="shrnuti">
+  <div class="container">
+    <p class="hero-kicker">Shrnutí · strukturální benchmark vs peer-země</p>
+    <h2>Shrnutí</h2>
+    <div class="hero-grid">
+      <div class="hero-num">
+        <span class="hero-num-figure">1,38</span>
+        <span class="hero-num-unit">hráče v NHL na milion obyvatel, sezóna 2025/26</span>
+      </div>
+      <div class="hero-lead">
+        <p>
+          Per-capita hustota NHL hráčů řadí český fond na <span class="hero-pull">páté místo ze šesti</span> porovnávaných zemí.
+          Finsko má přibližně <strong>čtyřnásobnou</strong> hustotu,
+          Švédsko <strong>pětinásobnou</strong>.
+        </p>
+        <p class="hero-sublead">
+          Strukturální propast je nejvýraznější v <strong>U22 útočnících</strong>
+          (jediný hráč) a v celé <strong>obránecké pipeline</strong> (čtyři hráči
+          celkem, šedesát českých obránců chybí oproti Švédsku). Hokejová intuice
+          tato čísla rozpoznává hráč po hráči, ale agregaci v jednom místě nemá.
+        </p>
+      </div>
+    </div>
+    <dl class="hero-meta">
+      <div><dt>Mapovaný pool</dt> <dd>385 hráčů</dd></div>
+      <div><dt>Reprezentační účast 24/25</dt> <dd>42 hráčů</dd></div>
+      <div><dt>Datový rámec</dt> <dd>2024/25 → 2025/26</dd></div>
+    </dl>
+  </div>
+</section>
+
+
 <section class="exec-summary">
-  <h2 id="shrnuti">Shrnutí</h2>
-  <p class="framing">Mapa cca 280 Čechy hokejistů ve světových profesionálních ligách (NHL, Liiga, Tipsport Extraliga), segmentovaná podle pozice a herního profilu. Metodologický nástroj pro průběžné mapování fondu hráčů v rámci víceletého reprezentačního cyklu, nikoli výběrové doporučení.</p>
+  <div class="container">
+    <p class="framing">Mapa cca 280 Čechy hokejistů ve světových profesionálních ligách (NHL, Liiga, Tipsport Extraliga), segmentovaná podle pozice a herního profilu. Metodologický nástroj pro průběžné mapování fondu hráčů v rámci víceletého reprezentačního cyklu, nikoli výběrové doporučení.</p>
 
-  
-  
-  <h3 id="strukturalni-benchmark">Strukturální benchmark vs peer-země</h3>
-  <p>
-    Hokejová intuice český fond rozpoznává hráč po hráči. <strong>Strukturální
-    pozice v rámci peer-zemí (FIN, SWE, SVK, CAN) ale vyžaduje datovou
-    agregaci kterou jedinec v hlavě nedokáže.</strong> Níže tři čísla, která
-    nejsou typicky agregovaná v jednom místě.
-  </p>
-
-  <h4>Per-capita hustota NHL hráčů (sezóna 2025-26)</h4>
-  <table class="kv-table">
-    <thead>
-      <tr><th>Země</th><th>NHL hráči (≥10 GP)</th><th>Populace (M)</th><th>Hráčů / M</th></tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td>CAN</td>
-        <td>323</td>
-        <td>40.1</td>
-        <td>8.05</td>
-      </tr>
-      
-      <tr>
-        <td>SWE</td>
-        <td>76</td>
-        <td>10.6</td>
-        <td>7.17</td>
-      </tr>
-      
-      <tr>
-        <td>FIN</td>
-        <td>34</td>
-        <td>5.6</td>
-        <td>6.07</td>
-      </tr>
-      
-      <tr>
-        <td>SVK</td>
-        <td>9</td>
-        <td>5.4</td>
-        <td>1.67</td>
-      </tr>
-      
-      <tr style="background:#f4f1ea; font-weight:600;">
-        <td>CZE</td>
-        <td>15</td>
-        <td>10.9</td>
-        <td>1.38</td>
-      </tr>
-      
-      <tr>
-        <td>USA</td>
-        <td>225</td>
-        <td>335.0</td>
-        <td>0.67</td>
-      </tr>
-      
-    </tbody>
-  </table>
-  <p class="muted small">
-    Po normalizaci na populaci je český fond v NHL <strong>šestý ze šesti</strong>
-    porovnávaných zemí, za Slovenskem, čtyřikrát méně hustý než Finsko.
-  </p>
-
-  <figure class="hero-figure">
-    <img src="intl_cohort_heatmap.svg"
-         alt="Heatmap mezinárodního cohort benchmarku. Ukazuje, že český NHL pool je šestý ze šesti porovnávaných zemí per-capita, s nejvýraznějšími gapy v U22 útočníkové a celé obránecké pipeline napříč všemi věkovými skupinami. Modře orámovaná řada vyznačuje Českou republiku.">
-    <figcaption>
-      Mediánová produkce (P/GP) podle země, pozice a věkové skupiny. Modře
-      orámovaná řada vyznačuje Českou republiku. Buňka: počet hráčů a medián
-      bodů na zápas.
-    </figcaption>
-  </figure>
-
-  <h4>Specifické cohort gapy</h4>
-  <p>
-    <strong>Útočníci, kde český pool je strukturálně tenký:</strong>
-  </p>
-  <table class="movers-table">
-    <thead>
-      <tr>
-        <th>Cohort</th>
-        <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td><strong>U22</strong></td>
-        
-          
-          <td>
-            
-              n=1 · 0.42
-            
-          </td>
-        
-          
-          <td>
-            
-              n=3 · 0.24
-            
-          </td>
-        
-          
-          <td>
-            
-              n=7 · 0.45
-            
-          </td>
-        
-          
-          <td>
-            
-              n=4 · 0.33
-            
-          </td>
-        
-      </tr>
-      
-      <tr>
-        <td><strong>23-25</strong></td>
-        
-          
-          <td>
-            
-              n=2 · 0.22
-            
-          </td>
-        
-          
-          <td>
-            
-              n=9 · 0.24
-            
-          </td>
-        
-          
-          <td>
-            
-              n=13 · 0.32
-            
-          </td>
-        
-          
-          <td>
-            
-              <span class="muted" title="bez dat">—</span>
-            
-          </td>
-        
-      </tr>
-      
-      <tr>
-        <td><strong>26-29</strong></td>
-        
-          
-          <td>
-            
-              n=4 · 1.06
-            
-          </td>
-        
-          
-          <td>
-            
-              n=8 · 0.46
-            
-          </td>
-        
-          
-          <td>
-            
-              n=11 · 0.40
-            
-          </td>
-        
-          
-          <td>
-            
-              n=2 · 0.28
-            
-          </td>
-        
-      </tr>
-      
-      <tr>
-        <td><strong>30+</strong></td>
-        
-          
-          <td>
-            
-              n=5 · 0.19
-            
-          </td>
-        
-          
-          <td>
-            
-              n=5 · 0.47
-            
-          </td>
-        
-          
-          <td>
-            
-              n=15 · 0.58
-            
-          </td>
-        
-          
-          <td>
-            
-              <span class="muted" title="bez dat">—</span>
-            
-          </td>
-        
-      </tr>
-      
-    </tbody>
-  </table>
-  <p class="muted small">
-    Český <strong>U22 forwards cohort = 1 hráč</strong> (Kulich). FIN 3, SWE 7.
-    Současný <strong>26-29 elite cohort (Pastrňák/Nečas/Zacha/Hertl) drží
-    median 1.06 P/GP</strong>, světová špička, ale jen 4 hráče hluboko.
-  </p>
-
-  <p>
-    <strong>Obránci, strukturálně problematická pozice napříč všemi cohorty:</strong>
-  </p>
-  <table class="movers-table">
-    <thead>
-      <tr>
-        <th>Cohort</th>
-        <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td><strong>U22</strong></td>
-        
-          
-          <td>
-            
-              <span class="muted" title="bez dat">—</span>
-            
-          </td>
-        
-          
-          <td>
-            
-              <span class="muted" title="bez dat">—</span>
-            
-          </td>
-        
-          
-          <td>
-            
-              n=5 · 0.23
-            
-          </td>
-        
-          
-          <td>
-            
-              n=1 · 0.38
-            
-          </td>
-        
-      </tr>
-      
-      <tr>
-        <td><strong>23-25</strong></td>
-        
-          
-          <td>
-            
-              n=1 · 0.00
-            
-          </td>
-        
-          
-          <td>
-            
-              n=1 · 0.27
-            
-          </td>
-        
-          
-          <td>
-            
-              n=12 · 0.24
-            
-          </td>
-        
-          
-          <td>
-            
-              <span class="muted" title="bez dat">—</span>
-            
-          </td>
-        
-      </tr>
-      
-      <tr>
-        <td><strong>26-29</strong></td>
-        
-          
-          <td>
-            
-              n=1 · 0.60
-            
-          </td>
-        
-          
-          <td>
-            
-              n=5 · 0.18
-            
-          </td>
-        
-          
-          <td>
-            
-              n=5 · 0.23
-            
-          </td>
-        
-          
-          <td>
-            
-              n=2 · 0.26
-            
-          </td>
-        
-      </tr>
-      
-      <tr>
-        <td><strong>30+</strong></td>
-        
-          
-          <td>
-            
-              n=1 · 0.23
-            
-          </td>
-        
-          
-          <td>
-            
-              n=3 · 0.35
-            
-          </td>
-        
-          
-          <td>
-            
-              n=8 · 0.49
-            
-          </td>
-        
-          
-          <td>
-            
-              <span class="muted" title="bez dat">—</span>
-            
-          </td>
-        
-      </tr>
-      
-    </tbody>
-  </table>
-  <p class="muted small">
-    ČR má <strong>4 obránce v NHL celkem</strong> napříč všemi věkovými skupinami.
-    Pro srovnání FIN má 14, SWE 30. U22 cohort: 0 českých obránců.
-  </p>
-  
-
-  <figure class="hero-figure">
-    <img src="atlas_forwards.svg"
-         alt="Dvoupanelový atlas útočníků 2025-26 v PCA projekci. Levý panel (style mapa bez ligových násobiček) ukazuje Pastrňáka, Nečase a Červenku ve společné produkční zóně. Pravý panel (kvalitou upravená mapa) NHL elitu výrazně odpoutává od EU hráčů. Modré kroužky vyznačují účastníky MS 2024 a MS 2025; šipky znázorňují trajektorii mezi sezónami.">
-    <figcaption>
-      Atlas útočníků 2025-26 v obou projekcích. Modré kroužky vyznačují
-      aktivní reprezentační pool (MS 24/25). Šipky znázorňují trajektorii
-      mezi sezónami.
-    </figcaption>
-  </figure>
-
-  <h3 id="pozorovani">Pozorování</h3>
-  <div class="observations">
     
-    <div class="observation">
-      <h4>Reprezentační fond překlenuje NHL i Extraligu</h4>
-      <p>42 z 81 hráčů, kteří odehráli MS 2024 nebo MS 2025 za reprezentaci, se nachází v mapovaném poolu. Mezi nimi top NHL hráči (Pastrňák, Nečas, Vejmelka) i Extraliga veteráni (Červenka, Sedlák, Kundrátek). Strukturálně tedy reprezentační pool není „NHL kontingent“ ani „Extraliga kontingent“: je to spojnice obou profesionálních ekosystémů.</p>
+    <h3 id="strukturalni-benchmark">Strukturální benchmark vs peer-země</h3>
+    <p>
+      Hokejová intuice český fond rozpoznává hráč po hráči. <strong>Strukturální
+      pozice v rámci peer-zemí (FIN, SWE, SVK, CAN, USA) ale vyžaduje datovou
+      agregaci, kterou jedinec v hlavě nedokáže.</strong> Níže tři čísla, která
+      typicky nejsou shromážděna v jednom místě.
+    </p>
+
+    <h4>Per-capita hustota NHL hráčů (sezóna 2025/26)</h4>
+    <div class="capita" role="list" aria-label="Per-capita hustota NHL hráčů podle země">
+      
+      <div class="capita-row" role="listitem"
+           
+           style="--value: 8.05; --max: 8.05;">
+        <div class="capita-country">
+          <span class="capita-code">CAN</span>
+          Kanada
+        </div>
+        <div class="capita-bar" aria-hidden="true"><div class="capita-bar-fill"></div></div>
+        <div class="capita-value">8,05</div>
+      </div>
+      
+      <div class="capita-row" role="listitem"
+           
+           style="--value: 7.17; --max: 8.05;">
+        <div class="capita-country">
+          <span class="capita-code">SWE</span>
+          Švédsko
+        </div>
+        <div class="capita-bar" aria-hidden="true"><div class="capita-bar-fill"></div></div>
+        <div class="capita-value">7,17</div>
+      </div>
+      
+      <div class="capita-row" role="listitem"
+           
+           style="--value: 6.07; --max: 8.05;">
+        <div class="capita-country">
+          <span class="capita-code">FIN</span>
+          Finsko
+        </div>
+        <div class="capita-bar" aria-hidden="true"><div class="capita-bar-fill"></div></div>
+        <div class="capita-value">6,07</div>
+      </div>
+      
+      <div class="capita-row" role="listitem"
+           
+           style="--value: 1.67; --max: 8.05;">
+        <div class="capita-country">
+          <span class="capita-code">SVK</span>
+          Slovensko
+        </div>
+        <div class="capita-bar" aria-hidden="true"><div class="capita-bar-fill"></div></div>
+        <div class="capita-value">1,67</div>
+      </div>
+      
+      <div class="capita-row" role="listitem"
+           data-highlight="cze"
+           style="--value: 1.38; --max: 8.05;">
+        <div class="capita-country">
+          <span class="capita-code">CZE</span>
+          Česko
+        </div>
+        <div class="capita-bar" aria-hidden="true"><div class="capita-bar-fill"></div></div>
+        <div class="capita-value">1,38</div>
+      </div>
+      
+      <div class="capita-row" role="listitem"
+           
+           style="--value: 0.67; --max: 8.05;">
+        <div class="capita-country">
+          <span class="capita-code">USA</span>
+          USA
+        </div>
+        <div class="capita-bar" aria-hidden="true"><div class="capita-bar-fill"></div></div>
+        <div class="capita-value">0,67</div>
+      </div>
+      
     </div>
+    <p class="capita-note">
+      Český fond je per-capita <strong>pátý ze šesti</strong>, mezi Slovenskem
+      a USA. USA má sice nejvíc NHL hráčů absolutně, ale populace 340 milionů
+      ředí per-capita hustotu na 0,67. Slovensko (1,67) překonává Česko navzdory
+      poloviční populaci, finská hustota je přibližně čtyřnásobná, švédská
+      pětinásobná.
+    </p>
+
+    <figure class="figure-bleed">
+      <img src="intl_cohort_heatmap.svg"
+           alt="Heatmap mezinárodního cohort benchmarku. Český NHL pool je šestý ze šesti porovnávaných zemí per-capita, s nejvýraznějšími gapy v U22 útočnících a celé obránecké pipeline napříč všemi věkovými skupinami. Modře orámovaná řada vyznačuje Českou republiku.">
+      <figcaption>
+        Mediánová produkce (P/GP) podle země, pozice a věkové skupiny. Modře orámovaná
+        řada vyznačuje Českou republiku; buňka obsahuje počet hráčů a medián bodů na zápas.
+      </figcaption>
+    </figure>
+
+    <h4>Specifické cohort gapy — útočníci</h4>
+    <p>Český pool je strukturálně tenký v mladších kohortách. Současná NHL elita drží mediánovou produkci na světové úrovni, ale jen ve čtyřech hráčích.</p>
+    <table class="cohort-table">
+      <thead>
+        <tr>
+          <th>Cohort</th>
+          <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>U22</td>
+          
+            
+            <td class="cohort-cze">
+              
+                <span class="cohort-cell-n">1</span><span class="cohort-cell-median">0,42</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">3</span><span class="cohort-cell-median">0,24</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">7</span><span class="cohort-cell-median">0,45</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">4</span><span class="cohort-cell-median">0,33</span>
+              
+            </td>
+          
+        </tr>
+        
+        <tr>
+          <td>23-25</td>
+          
+            
+            <td class="cohort-cze">
+              
+                <span class="cohort-cell-n">2</span><span class="cohort-cell-median">0,22</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">9</span><span class="cohort-cell-median">0,24</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">13</span><span class="cohort-cell-median">0,32</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="muted" title="bez dat">—</span>
+              
+            </td>
+          
+        </tr>
+        
+        <tr>
+          <td>26-29</td>
+          
+            
+            <td class="cohort-cze">
+              
+                <span class="cohort-cell-n">4</span><span class="cohort-cell-median">1,06</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">8</span><span class="cohort-cell-median">0,46</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">11</span><span class="cohort-cell-median">0,40</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">2</span><span class="cohort-cell-median">0,28</span>
+              
+            </td>
+          
+        </tr>
+        
+        <tr>
+          <td>30+</td>
+          
+            
+            <td class="cohort-cze">
+              
+                <span class="cohort-cell-n">5</span><span class="cohort-cell-median">0,19</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">5</span><span class="cohort-cell-median">0,47</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">15</span><span class="cohort-cell-median">0,58</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="muted" title="bez dat">—</span>
+              
+            </td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+    <p class="capita-note">
+      Český <strong>U22 forwards cohort = 1 hráč</strong> (Kulich). FIN má 3, SWE 7.
+      Současný <strong>26-29 elite cohort (Pastrňák, Nečas, Zacha, Hertl) drží
+      mediánovou produkci 1,06 P/GP</strong>, světová špička, ale jen ve čtyřech hráčích.
+    </p>
+
+    <h4>Specifické cohort gapy — obránci</h4>
+    <p>Obránci jsou strukturálně problematickou pozicí napříč všemi věkovými skupinami. Celkový počet českých NHL obránců je čtyři, švédských třicet.</p>
+    <table class="cohort-table">
+      <thead>
+        <tr>
+          <th>Cohort</th>
+          <th>ČR</th><th>FIN</th><th>SWE</th><th>SVK</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>U22</td>
+          
+            
+            <td class="cohort-cze">
+              
+                <span class="muted" title="bez dat">—</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="muted" title="bez dat">—</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">5</span><span class="cohort-cell-median">0,23</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">1</span><span class="cohort-cell-median">0,38</span>
+              
+            </td>
+          
+        </tr>
+        
+        <tr>
+          <td>23-25</td>
+          
+            
+            <td class="cohort-cze">
+              
+                <span class="cohort-cell-n">1</span><span class="cohort-cell-median">0,00</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">1</span><span class="cohort-cell-median">0,27</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">12</span><span class="cohort-cell-median">0,24</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="muted" title="bez dat">—</span>
+              
+            </td>
+          
+        </tr>
+        
+        <tr>
+          <td>26-29</td>
+          
+            
+            <td class="cohort-cze">
+              
+                <span class="cohort-cell-n">1</span><span class="cohort-cell-median">0,60</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">5</span><span class="cohort-cell-median">0,18</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">5</span><span class="cohort-cell-median">0,23</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">2</span><span class="cohort-cell-median">0,26</span>
+              
+            </td>
+          
+        </tr>
+        
+        <tr>
+          <td>30+</td>
+          
+            
+            <td class="cohort-cze">
+              
+                <span class="cohort-cell-n">1</span><span class="cohort-cell-median">0,23</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">3</span><span class="cohort-cell-median">0,35</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="cohort-cell-n">8</span><span class="cohort-cell-median">0,49</span>
+              
+            </td>
+          
+            
+            <td>
+              
+                <span class="muted" title="bez dat">—</span>
+              
+            </td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+    <p class="capita-note">
+      ČR má <strong>4 obránce v NHL</strong> napříč všemi věkovými skupinami.
+      Pro srovnání: Finsko 14, Švédsko 30. V U22 kohortě: 0 českých obránců.
+    </p>
     
-    <div class="observation">
-      <h4>Kvalitou upravená mapa vizualizuje ligový diferenciál</h4>
-      <p>Po aplikaci ligových násobiček se NHL elita (Pastrňák PC1 ≈ 8.5) dramaticky odpoutává od EU elity (Červenka PC1 ≈ 2). Style mapa (bez násobiček) ukazuje samotný herní profil; Pastrňák a Červenka tam leží v podobné zóně produkce. Dvojice projekcí umožňuje interpretovat fond jak stylově, tak kvalitativně, bez nutnosti volit jednu narativu.</p>
+
+    <figure class="figure-bleed">
+      <img src="atlas_forwards.svg"
+           alt="Dvoupanelový atlas útočníků 2025/26 v PCA projekci. Levý panel (style mapa bez ligových násobiček) ukazuje Pastrňáka, Nečase a Červenku ve společné produkční zóně. Pravý panel (kvalitou upravená mapa) NHL elitu výrazně odpoutává od EU hráčů. Modré kroužky vyznačují účastníky MS 2024 a MS 2025; šipky znázorňují trajektorii mezi sezónami.">
+      <figcaption>
+        Atlas útočníků 2025/26 v obou projekcích. Modré kroužky vyznačují aktivní
+        reprezentační pool (MS 24/25). Šipky znázorňují trajektorii mezi sezónami.
+      </figcaption>
+    </figure>
+
+    <h3 id="pozorovani">Pozorování</h3>
+    <div class="observations">
+      
+      <div class="observation">
+        <h4>Reprezentační fond překlenuje NHL i Extraligu</h4>
+        <p>42 z 81 hráčů, kteří odehráli MS 2024 nebo MS 2025 za reprezentaci, se nachází v mapovaném poolu. Mezi nimi top NHL hráči (Pastrňák, Nečas, Vejmelka) i Extraliga veteráni (Červenka, Sedlák, Kundrátek). Strukturálně tedy reprezentační pool není „NHL kontingent“ ani „Extraliga kontingent“: je to spojnice obou profesionálních ekosystémů.</p>
+      </div>
+      
+      <div class="observation">
+        <h4>Kvalitou upravená mapa vizualizuje ligový diferenciál</h4>
+        <p>Po aplikaci ligových násobiček se NHL elita (Pastrňák PC1 ≈ 8.5) dramaticky odpoutává od EU elity (Červenka PC1 ≈ 2). Style mapa (bez násobiček) ukazuje samotný herní profil; Pastrňák a Červenka tam leží v podobné zóně produkce. Dvojice projekcí umožňuje interpretovat fond jak stylově, tak kvalitativně, bez nutnosti volit jednu narativu.</p>
+      </div>
+      
+      <div class="observation">
+        <h4>Trajektorie 2024/25 → 2025/26 odhalují stabilní vrcholy</h4>
+        <p>Z 16 hráčů, kteří splňují minimum 30 zápasů v obou sezónách, vykazují stabilní top-tier produkci NHL hvězdy (Pastrňák Δ ≈ 0). Mezi zlepšujícími se: Zacha a Nečas (oba NHL, breakout / post-trade). Mezi klesajícími: Hertl a Palát. Tato čísla nejsou predikce; popisují směr pohybu mezi sezónami.</p>
+      </div>
+      
     </div>
-    
-    <div class="observation">
-      <h4>Trajektorie 2024/25 → 2025/26 odhalují stabilní vrcholy</h4>
-      <p>Z 16 hráčů, kteří splňují minimum 30 zápasů v obou sezónách, vykazují stabilní top-tier produkci NHL hvězdy (Pastrňák Δ ≈ 0). Mezi zlepšujícími se: Zacha a Nečas (oba NHL, breakout / post-trade). Mezi klesajícími: Hertl a Palát. Tato čísla nejsou predikce; popisují směr pohybu mezi sezónami.</p>
+
+    <h3 id="cluster-archetypy">Cluster archetypy — útočníci (style projekce)</h3>
+    <dl class="cluster-list">
+      
+      <dt>
+        <span class="cluster-id">C0</span>
+        <span>
+          Top-six skórující
+          <span class="cluster-meta-inline">
+            18 hráčů · MS pool 8 · medián ročník 1996
+          </span>
+        </span>
+      </dt>
+      <dd>
+        Vysoká produkce gólů + asistencí, NHL stars (Pastrňák, Hertl, Zacha, Nečas) + EU elita (Mazura). Mediánový ročník 1996.
+        <span class="cluster-top">David Pastrnak, Martin Necas, Pavel Zacha, Tomas Hertl, Roman Červenka</span>
+      </dd>
+      
+      <dt>
+        <span class="cluster-id">C1</span>
+        <span>
+          Mladí prospekti / doplnění
+          <span class="cluster-meta-inline">
+            122 hráčů · MS pool 9 · medián ročník 2001
+          </span>
+        </span>
+      </dt>
+      <dd>
+        Nízká produkce, mediánový ročník 2001. Většinou Extraliga (112/122). Junior callupy a mladí depth hráči.
+        <span class="cluster-top">Jiri Kulich, Tomas Mazura, Filip Chytil, Ondrej Kos, Jakub Frolo *</span>
+      </dd>
+      
+      <dt>
+        <span class="cluster-id">C2</span>
+        <span>
+          Fyzičtí role-players
+          <span class="cluster-meta-inline">
+            9 hráčů · MS pool 1 · medián ročník 1997
+          </span>
+        </span>
+      </dt>
+      <dd>
+        Výrazně vysoké PIM (5-6× cohort medián). Velcí hráči: Klapka (NHL prospect), Zohorna, Lakatoš. Středně-vyšší věk.
+        <span class="cluster-top">Adam Klapka, Libor Hudáček, Dominik Lakatoš, Matúš Sukeľ, Ondrej Pavel</span>
+      </dd>
+      
+      <dt>
+        <span class="cluster-id">C3</span>
+        <span>
+          Veteránští two-way
+          <span class="cluster-meta-inline">
+            92 hráčů · MS pool 4 · medián ročník 1993
+          </span>
+        </span>
+      </dt>
+      <dd>
+        Mediánový ročník 1994, nižší produkce než C0. Mix NHL veteránů (Palát, Faksa, Nosek, Kampf) a Extraliga regulars.
+        <span class="cluster-top">Radek Faksa, Tomas Nosek, Ondrej Palat, David Kampf, David Kaše</span>
+      </dd>
+      
+    </dl>
+
+    <h3 id="trajektorie">Trajektorie 2024/25 → 2025/26 (útočníci, ≥30 GP obě sezóny)</h3>
+    <div class="movers-grid">
+      <div class="movers-col">
+        <h4>Posun nahoru (Δ quality P/GP)</h4>
+        <table class="movers-table">
+          <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
+          <tbody>
+            
+            <tr>
+              <td>Pavel Zacha</td>
+              <td class="muted">nhl</td>
+              <td class="muted">82 / 78</td>
+              <td class="arrow-up">+0.229</td>
+            </tr>
+            
+            <tr>
+              <td>Martin Necas</td>
+              <td class="muted">nhl</td>
+              <td class="muted">79 / 78</td>
+              <td class="arrow-up">+0.204</td>
+            </tr>
+            
+            <tr>
+              <td>Radek Faksa</td>
+              <td class="muted">nhl</td>
+              <td class="muted">70 / 58</td>
+              <td class="arrow-up">+0.070</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="movers-col">
+        <h4>Posun dolů (Δ quality P/GP)</h4>
+        <table class="movers-table">
+          <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
+          <tbody>
+            
+            <tr>
+              <td>Ondrej Palat</td>
+              <td class="muted">nhl</td>
+              <td class="muted">77 / 80</td>
+              <td class="arrow-down">-0.156</td>
+            </tr>
+            
+            <tr>
+              <td>Tomas Hertl</td>
+              <td class="muted">nhl</td>
+              <td class="muted">73 / 82</td>
+              <td class="arrow-down">-0.109</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </div>
-    
+
+    <p class="continue">Metodologie a tabulky pokračují níže</p>
   </div>
-
-  <h3 id="cluster-archetypy">Cluster archetypy, útočníci (style projekce)</h3>
-  <dl class="cluster-list">
-    
-    <dt>
-      C0 · Top-six skórující
-      <span class="cluster-meta-inline">
-        18 hráčů · MS pool 8 · medián ročník 1996
-      </span>
-    </dt>
-    <dd>
-      Vysoká produkce gólů + asistencí, NHL stars (Pastrňák, Hertl, Zacha, Nečas) + EU elita (Mazura). Mediánový ročník 1996.
-      <span class="cluster-top">Top: David Pastrnak, Martin Necas, Pavel Zacha, Tomas Hertl, Roman Červenka</span>
-    </dd>
-    
-    <dt>
-      C1 · Mladí prospekti / doplnění
-      <span class="cluster-meta-inline">
-        122 hráčů · MS pool 9 · medián ročník 2001
-      </span>
-    </dt>
-    <dd>
-      Nízká produkce, mediánový ročník 2001. Většinou Extraliga (112/122). Junior callupy a mladí depth hráči.
-      <span class="cluster-top">Top: Jiri Kulich, Tomas Mazura, Filip Chytil, Ondrej Kos, Jakub Frolo *</span>
-    </dd>
-    
-    <dt>
-      C2 · Fyzičtí role-players
-      <span class="cluster-meta-inline">
-        9 hráčů · MS pool 1 · medián ročník 1997
-      </span>
-    </dt>
-    <dd>
-      Výrazně vysoké PIM (5-6× cohort medián). Velcí hráči: Klapka (NHL prospect), Zohorna, Lakatoš. Středně-vyšší věk.
-      <span class="cluster-top">Top: Adam Klapka, Libor Hudáček, Dominik Lakatoš, Matúš Sukeľ, Ondrej Pavel</span>
-    </dd>
-    
-    <dt>
-      C3 · Veteránští two-way
-      <span class="cluster-meta-inline">
-        92 hráčů · MS pool 4 · medián ročník 1993
-      </span>
-    </dt>
-    <dd>
-      Mediánový ročník 1994, nižší produkce než C0. Mix NHL veteránů (Palát, Faksa, Nosek, Kampf) a Extraliga regulars.
-      <span class="cluster-top">Top: Radek Faksa, Tomas Nosek, Ondrej Palat, David Kampf, David Kaše</span>
-    </dd>
-    
-  </dl>
-
-  <h3 id="trajektorie">Trajektorie 2024/25 → 2025/26 (útočníci, ≥30 GP obě sezóny)</h3>
-  <div class="movers-grid">
-    <div class="movers-col">
-      <h4>Posun nahoru (Δ quality P/GP)</h4>
-      <table class="movers-table">
-        <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
-        <tbody>
-          
-          <tr>
-            <td>Pavel Zacha</td>
-            <td class="muted">nhl</td>
-            <td class="muted">82 / 78</td>
-            <td class="arrow-up">+0.229</td>
-          </tr>
-          
-          <tr>
-            <td>Martin Necas</td>
-            <td class="muted">nhl</td>
-            <td class="muted">79 / 78</td>
-            <td class="arrow-up">+0.204</td>
-          </tr>
-          
-          <tr>
-            <td>Radek Faksa</td>
-            <td class="muted">nhl</td>
-            <td class="muted">70 / 58</td>
-            <td class="arrow-up">+0.070</td>
-          </tr>
-          
-        </tbody>
-      </table>
-    </div>
-    <div class="movers-col">
-      <h4>Posun dolů (Δ quality P/GP)</h4>
-      <table class="movers-table">
-        <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
-        <tbody>
-          
-          <tr>
-            <td>Ondrej Palat</td>
-            <td class="muted">nhl</td>
-            <td class="muted">77 / 80</td>
-            <td class="arrow-down">-0.156</td>
-          </tr>
-          
-          <tr>
-            <td>Tomas Hertl</td>
-            <td class="muted">nhl</td>
-            <td class="muted">73 / 82</td>
-            <td class="arrow-down">-0.109</td>
-          </tr>
-          
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <p class="continue">Pro detailní metodologii a tabulky pokračujte k sekci níže.</p>
 </section>
 
 
 <section class="methodology">
-  <h2 id="metodologie">Metodologie</h2>
+  <div class="container">
+    <h2 id="metodologie">Metodologie</h2>
 
-  <h3 id="datove-zdroje">Datové zdroje</h3>
-  <ul>
-    <li><strong>NHL Stats API</strong> (api-web.nhle.com/v1): všechny aktivní 2024-25 a 2025-26 NHL hráči, filtr birth_country = CZE</li>
-    <li><strong>MoneyPuck</strong>: 5v5 per-60 metriky a xG (NHL-only enrichment)</li>
-    <li><strong>Liiga</strong> (liiga.fi): sezónní totaly přes Playwright</li>
-    <li><strong>Tipsport Extraliga</strong> (hokej.cz): per-team /statistiky, birth dates z /hrac/ profilů</li>
-    <li><strong>IIHF turnaje</strong> (Wikipedia: MS 2024, MS 2025, WJC 2024, WJC 2025): reprezentační účast pro eligibility filtr</li>
-  </ul>
+    <h3 id="datove-zdroje">Datové zdroje</h3>
+    <ul>
+      <li><strong>NHL Stats API</strong> (api-web.nhle.com/v1): všichni aktivní 2024/25 a 2025/26 NHL hráči, filtr birth_country = CZE</li>
+      <li><strong>MoneyPuck</strong>: 5v5 per-60 metriky a xG (NHL-only enrichment)</li>
+      <li><strong>Liiga</strong> (liiga.fi): sezónní totaly přes Playwright</li>
+      <li><strong>Tipsport Extraliga</strong> (hokej.cz): per-team /statistiky, birth dates z /hrac/ profilů</li>
+      <li><strong>IIHF turnaje</strong> (Wikipedia: MS 2024, MS 2025, WJC 2024, WJC 2025): reprezentační účast pro eligibility filtr</li>
+    </ul>
 
-  <h3 id="nasobicky">Ligové násobičky (quality projekce)</h3>
-  <table class="kv-table">
-    <thead><tr><th>Liga</th><th>Násobička</th></tr></thead>
-    <tbody>
-      
-      <tr><td>nhl</td><td>1.00</td></tr>
-      
-      <tr><td>ahl</td><td>0.55</td></tr>
-      
-      <tr><td>shl</td><td>0.45</td></tr>
-      
-      <tr><td>liiga</td><td>0.42</td></tr>
-      
-      <tr><td>nl</td><td>0.40</td></tr>
-      
-      <tr><td>extraliga</td><td>0.35</td></tr>
-      
-      <tr><td>cz1l</td><td>0.20</td></tr>
-      
-    </tbody>
-  </table>
-  <p class="muted small">
-    Subjektivní aproximace inspirované public konverzemi production rates hráčů, kteří přešli mezi ligami
-    (hockeyviz.com, Sznajder NHL-equivalency analyses). Citlivostní analýza níže ukazuje robustnost vůči ±20 %.
-  </p>
+    <h3 id="nasobicky">Ligové násobičky (quality projekce)</h3>
+    <table class="kv-table">
+      <thead><tr><th>Liga</th><th>Násobička</th></tr></thead>
+      <tbody>
+        
+        <tr><td>nhl</td><td>1,00</td></tr>
+        
+        <tr><td>ahl</td><td>0,55</td></tr>
+        
+        <tr><td>shl</td><td>0,45</td></tr>
+        
+        <tr><td>liiga</td><td>0,42</td></tr>
+        
+        <tr><td>nl</td><td>0,40</td></tr>
+        
+        <tr><td>extraliga</td><td>0,35</td></tr>
+        
+        <tr><td>cz1l</td><td>0,20</td></tr>
+        
+      </tbody>
+    </table>
+    <p class="muted small">
+      Subjektivní aproximace inspirované veřejnými srovnáními produkce hráčů přecházejících mezi ligami
+      (hockeyviz.com, Sznajder NHL-equivalency analyses). Citlivostní analýza níže ukazuje robustnost vůči ±20 %.
+    </p>
 
-  <h3 id="shrinkage">Bayesovský shrinkage</h3>
-  <p>
-    Per-game produkce hráčů s malým vzorkem (GP &lt; 10) je shrinkutována k mediánu své ligy
-    pomocí empirical Bayes formule:
-  </p>
-  <p class="formula">
-    shrunk_rate = (počet_eventů + K × cohort_medián) / (player_GP + K),&nbsp; K = 10
-  </p>
-  <p>
-    Při GP = 1 dominuje cohort medián (~91 %); při GP = 80 dominují skutečná data (~89 %).
-    Bez shrinkage by hráč jako Lantoši (4 GP, 5 bodů, 1.25 P/GP raw) předběhl Pastrňáka v kvalitě.
-    Po shrinkage spadne na 0.59 P/GP, methodologicky obhajitelné.
-  </p>
+    <h3 id="shrinkage">Bayesovský shrinkage</h3>
+    <p>
+      Per-game produkce hráčů s malým vzorkem (GP &lt; 10) je shrinkutována k mediánu své ligy
+      pomocí empirical Bayes formule:
+    </p>
+    <p class="formula">
+      shrunk_rate = (počet_eventů + K × cohort_medián) / (player_GP + K), &nbsp; K = 10
+    </p>
+    <p>
+      Při GP = 1 dominuje cohort medián (~91 %); při GP = 80 dominují skutečná data (~89 %).
+      Bez shrinkage by hráč jako Lantoši (4 GP, 5 bodů, 1,25 P/GP raw) předběhl Pastrňáka v kvalitě.
+      Po shrinkage spadne na 0,59 P/GP, metodologicky obhajitelné.
+    </p>
 
-  <h3 id="pca-loadings">PCA loadings</h3>
-  <table class="loadings-table">
-    <thead>
-      <tr>
-        <th>Pozice</th><th>Projekce</th><th>PC</th><th>% variance</th>
-        <th>G/GP</th><th>A/GP</th><th>PIM/GP</th><th>věk</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td>D</td>
-        <td>quality</td>
-        <td>PC1</td>
-        <td>41.4%</td>
-        <td>0.706</td>
-        <td>0.702</td>
-        <td>-0.064</td>
-        <td>0.067</td>
-      </tr>
-      
-      <tr>
-        <td>D</td>
-        <td>quality</td>
-        <td>PC2</td>
-        <td>27.1%</td>
-        <td>0.019</td>
-        <td>0.113</td>
-        <td>0.714</td>
-        <td>-0.691</td>
-      </tr>
-      
-      <tr>
-        <td>D</td>
-        <td>style</td>
-        <td>PC1</td>
-        <td>35.8%</td>
-        <td>0.666</td>
-        <td>0.643</td>
-        <td>-0.376</td>
-        <td>0.041</td>
-      </tr>
-      
-      <tr>
-        <td>D</td>
-        <td>style</td>
-        <td>PC2</td>
-        <td>26.5%</td>
-        <td>-0.120</td>
-        <td>-0.226</td>
-        <td>-0.509</td>
-        <td>0.822</td>
-      </tr>
-      
-      <tr>
-        <td>F</td>
-        <td>quality</td>
-        <td>PC1</td>
-        <td>46.2%</td>
-        <td>0.699</td>
-        <td>0.703</td>
-        <td>0.083</td>
-        <td>-0.103</td>
-      </tr>
-      
-      <tr>
-        <td>F</td>
-        <td>quality</td>
-        <td>PC2</td>
-        <td>25.0%</td>
-        <td>-0.069</td>
-        <td>0.024</td>
-        <td>0.904</td>
-        <td>0.422</td>
-      </tr>
-      
-      <tr>
-        <td>F</td>
-        <td>style</td>
-        <td>PC1</td>
-        <td>42.6%</td>
-        <td>0.658</td>
-        <td>0.673</td>
-        <td>0.226</td>
-        <td>-0.250</td>
-      </tr>
-      
-      <tr>
-        <td>F</td>
-        <td>style</td>
-        <td>PC2</td>
-        <td>25.3%</td>
-        <td>-0.128</td>
-        <td>0.093</td>
-        <td>0.774</td>
-        <td>0.613</td>
-      </tr>
-      
-    </tbody>
-  </table>
+    <h3 id="pca-loadings">PCA loadings</h3>
+    <table class="loadings-table">
+      <thead>
+        <tr>
+          <th>Pozice</th><th>Projekce</th><th>PC</th><th>% variance</th>
+          <th>G/GP</th><th>A/GP</th><th>PIM/GP</th><th>věk</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>D</td>
+          <td>quality</td>
+          <td>PC1</td>
+          <td>41.4%</td>
+          <td>0.706</td>
+          <td>0.702</td>
+          <td>-0.064</td>
+          <td>0.067</td>
+        </tr>
+        
+        <tr>
+          <td>D</td>
+          <td>quality</td>
+          <td>PC2</td>
+          <td>27.1%</td>
+          <td>0.019</td>
+          <td>0.113</td>
+          <td>0.714</td>
+          <td>-0.691</td>
+        </tr>
+        
+        <tr>
+          <td>D</td>
+          <td>style</td>
+          <td>PC1</td>
+          <td>35.8%</td>
+          <td>0.666</td>
+          <td>0.643</td>
+          <td>-0.376</td>
+          <td>0.041</td>
+        </tr>
+        
+        <tr>
+          <td>D</td>
+          <td>style</td>
+          <td>PC2</td>
+          <td>26.5%</td>
+          <td>-0.120</td>
+          <td>-0.226</td>
+          <td>-0.509</td>
+          <td>0.822</td>
+        </tr>
+        
+        <tr>
+          <td>F</td>
+          <td>quality</td>
+          <td>PC1</td>
+          <td>46.2%</td>
+          <td>0.699</td>
+          <td>0.703</td>
+          <td>0.083</td>
+          <td>-0.103</td>
+        </tr>
+        
+        <tr>
+          <td>F</td>
+          <td>quality</td>
+          <td>PC2</td>
+          <td>25.0%</td>
+          <td>-0.069</td>
+          <td>0.024</td>
+          <td>0.904</td>
+          <td>0.422</td>
+        </tr>
+        
+        <tr>
+          <td>F</td>
+          <td>style</td>
+          <td>PC1</td>
+          <td>42.6%</td>
+          <td>0.658</td>
+          <td>0.673</td>
+          <td>0.226</td>
+          <td>-0.250</td>
+        </tr>
+        
+        <tr>
+          <td>F</td>
+          <td>style</td>
+          <td>PC2</td>
+          <td>25.3%</td>
+          <td>-0.128</td>
+          <td>0.093</td>
+          <td>0.774</td>
+          <td>0.613</td>
+        </tr>
+        
+      </tbody>
+    </table>
 
-  <h3 id="sensitivity">Citlivostní analýza (±20 % násobičky)</h3>
-  <p>
-    Pro každý scénář perturbace násobičky byl přepočítán quality ranking a změřena změna oproti baseline.
-    <strong>Top-10 ranking je vůči těmto změnám stabilní</strong>: žádný scénář nezpůsobuje churn větší než 1 hráč.
-    NHL top elita (Pastrňák, Nečas, Zacha, Hertl) zůstává v top čtyřce ve všech scénářích.
-  </p>
-  <table class="sensitivity-table">
-    <thead>
-      <tr>
-        <th>Scénář</th><th>Popis</th>
-        <th>Top-10 overlap</th><th>Top-10 churn</th><th>Mean Δ rank (top 20)</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr>
-        <td>baseline</td>
-        <td class="muted">current multipliers from config</td>
-        <td>10 / 10</td>
-        <td>0</td>
-        <td>0.00</td>
-      </tr>
-      
-      <tr>
-        <td>liiga_minus20</td>
-        <td class="muted">liiga multiplier −20%</td>
-        <td>9 / 10</td>
-        <td>1</td>
-        <td>4.35</td>
-      </tr>
-      
-      <tr>
-        <td>liiga_plus20</td>
-        <td class="muted">liiga multiplier +20%</td>
-        <td>9 / 10</td>
-        <td>1</td>
-        <td>1.90</td>
-      </tr>
-      
-      <tr>
-        <td>extraliga_minus20</td>
-        <td class="muted">extraliga multiplier −20%</td>
-        <td>9 / 10</td>
-        <td>1</td>
-        <td>1.30</td>
-      </tr>
-      
-      <tr>
-        <td>extraliga_plus20</td>
-        <td class="muted">extraliga multiplier +20%</td>
-        <td>10 / 10</td>
-        <td>0</td>
-        <td>2.50</td>
-      </tr>
-      
-      <tr>
-        <td>all_minus20</td>
-        <td class="muted">every league multiplier −20%</td>
-        <td>10 / 10</td>
-        <td>0</td>
-        <td>0.00</td>
-      </tr>
-      
-      <tr>
-        <td>all_plus20</td>
-        <td class="muted">every league multiplier +20%</td>
-        <td>10 / 10</td>
-        <td>0</td>
-        <td>0.00</td>
-      </tr>
-      
-    </tbody>
-  </table>
+    <h3 id="sensitivity">Citlivostní analýza (±20 % násobičky)</h3>
+    <p>
+      Pro každý scénář perturbace násobičky byl přepočítán quality ranking a změřena změna oproti baseline.
+      <strong>Top-10 ranking je vůči těmto změnám stabilní</strong>: žádný scénář nezpůsobuje churn větší než 1 hráč.
+      NHL top elita (Pastrňák, Nečas, Zacha, Hertl) zůstává v top čtyřce ve všech scénářích.
+    </p>
+    <table class="sensitivity-table">
+      <thead>
+        <tr>
+          <th>Scénář</th><th>Popis</th>
+          <th>Top-10 overlap</th><th>Top-10 churn</th><th>Mean Δ rank (top 20)</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>baseline</td>
+          <td>current multipliers from config</td>
+          <td>10 / 10</td>
+          <td>0</td>
+          <td>0.00</td>
+        </tr>
+        
+        <tr>
+          <td>liiga_minus20</td>
+          <td>liiga multiplier −20%</td>
+          <td>9 / 10</td>
+          <td>1</td>
+          <td>4.35</td>
+        </tr>
+        
+        <tr>
+          <td>liiga_plus20</td>
+          <td>liiga multiplier +20%</td>
+          <td>9 / 10</td>
+          <td>1</td>
+          <td>1.90</td>
+        </tr>
+        
+        <tr>
+          <td>extraliga_minus20</td>
+          <td>extraliga multiplier −20%</td>
+          <td>9 / 10</td>
+          <td>1</td>
+          <td>1.30</td>
+        </tr>
+        
+        <tr>
+          <td>extraliga_plus20</td>
+          <td>extraliga multiplier +20%</td>
+          <td>10 / 10</td>
+          <td>0</td>
+          <td>2.50</td>
+        </tr>
+        
+        <tr>
+          <td>all_minus20</td>
+          <td>every league multiplier −20%</td>
+          <td>10 / 10</td>
+          <td>0</td>
+          <td>0.00</td>
+        </tr>
+        
+        <tr>
+          <td>all_plus20</td>
+          <td>every league multiplier +20%</td>
+          <td>10 / 10</td>
+          <td>0</td>
+          <td>0.00</td>
+        </tr>
+        
+      </tbody>
+    </table>
 
-  <h3 id="atlas-obrancu">Atlas obránců</h3>
-  <figure>
-    <img src="atlas_defense.svg"
-         alt="Dvoupanelový atlas obránců 2025-26 v PCA projekci. Stejná struktura jako útočníci, méně hustá kvůli celkově menšímu poolu českých NHL obránců (Hronek a Gudas dominují); modré kroužky vyznačují MS 2024/25.">
-    <figcaption>Atlas obránců 2025-26. Stejná interpretace jako útočníci.</figcaption>
-  </figure>
+    <h3 id="atlas-obrancu">Atlas obránců</h3>
+    <figure class="figure-bleed">
+      <img src="atlas_defense.svg"
+           alt="Dvoupanelový atlas obránců 2025/26 v PCA projekci. Stejná struktura jako útočníci, méně hustá kvůli celkově menšímu poolu českých NHL obránců (Hronek a Gudas dominují); modré kroužky vyznačují MS 2024/25.">
+      <figcaption>Atlas obránců 2025/26. Stejná interpretace jako útočníci.</figcaption>
+    </figure>
 
-  <h3 id="cluster-obranci">Cluster detaily, obránci</h3>
-  <dl class="cluster-list">
-    
-    <dt>
-      C0 · Ofenzivní obránci
-      <span class="cluster-meta-inline">
-        15 hráčů · MS pool 3 · medián ročník 1997
-      </span>
-    </dt>
-    <dd>
-      Vyšší A/GP (0.29), playmaking z modré. Hronek (NHL), Jordan (Liiga), Alscher, Kaňák.
-      <span class="cluster-top">Top: Filip Hronek, Marek Alscher, Michal Jordan, Marian Adámek, Jakub Galvas</span>
-    </dd>
-    
-    <dt>
-      C1 · Fyzičtí veteráni
-      <span class="cluster-meta-inline">
-        10 hráčů · MS pool 1 · medián ročník 1995
-      </span>
-    </dt>
-    <dd>
-      Gudas (NHL), Pláněk, Šenkeřík. Nízká produkce, vyšší PIM. Pivot defenzivního stylu.
-      <span class="cluster-top">Top: Radko Gudas, Petr Šenkeřík, Tomáš Dvořák, Janis Jaks, Tomáš Bartejs</span>
-    </dd>
-    
-    <dt>
-      C2 · Mladí depth D
-      <span class="cluster-meta-inline">
-        42 hráčů · MS pool 6 · medián ročník 2001
-      </span>
-    </dt>
-    <dd>
-      Mediánový ročník 2001, mostly Extraliga. Jiříček (NHL prospect), Hovorka, Trejbal, Hájek.
-      <span class="cluster-top">Top: Mikulas Hovorka, Ondrej Trejbal, Rayen Petrovický, Filip Král, David Moravec</span>
-    </dd>
-    
-    <dt>
-      C3 · Veteránští bodaři
-      <span class="cluster-meta-inline">
-        5 hráčů · MS pool 3 · medián ročník 1992
-      </span>
-    </dt>
-    <dd>
-      Tichaček, Kundrátek, Krejčík. Vyšší A (0.29), starší (1992). Šedovlasí playmakeři z modré.
-      <span class="cluster-top">Top: Jiri Tichacek, Jakub Krejčík, Tomáš Kundrátek, Radim Šimek, David Škůrek</span>
-    </dd>
-    
-    <dt>
-      C4 · Two-way střední věk
-      <span class="cluster-meta-inline">
-        13 hráčů · MS pool 3 · medián ročník 2000
-      </span>
-    </dt>
-    <dd>
-      Vyrovnaný profil, mediánový ročník 2000.
-      <span class="cluster-top">Top: Radek Kucerik, Tomáš Cibulka, Miguël Tourigny, Samuel Huzevka *, Libor Zábranský</span>
-    </dd>
-    
-    <dt>
-      C5 · Defenzivní depth
-      <span class="cluster-meta-inline">
-        43 hráčů · MS pool 0 · medián ročník 1993
-      </span>
-    </dt>
-    <dd>
-      Šestá kategorie: typicky velmi mladí nebo strongly defensive.
-      <span class="cluster-top">Top: Filip Pavlík, Adam Polášek, Adam Jánošík, Patrik Demel, Alex Rašner</span>
-    </dd>
-    
-  </dl>
+    <h3 id="cluster-obranci">Cluster detaily — obránci</h3>
+    <dl class="cluster-list">
+      
+      <dt>
+        <span class="cluster-id">C0</span>
+        <span>
+          Ofenzivní obránci
+          <span class="cluster-meta-inline">
+            15 hráčů · MS pool 3 · medián ročník 1997
+          </span>
+        </span>
+      </dt>
+      <dd>
+        Vyšší A/GP (0.29), playmaking z modré. Hronek (NHL), Jordan (Liiga), Alscher, Kaňák.
+        <span class="cluster-top">Filip Hronek, Marek Alscher, Michal Jordan, Marian Adámek, Jakub Galvas</span>
+      </dd>
+      
+      <dt>
+        <span class="cluster-id">C1</span>
+        <span>
+          Fyzičtí veteráni
+          <span class="cluster-meta-inline">
+            10 hráčů · MS pool 1 · medián ročník 1995
+          </span>
+        </span>
+      </dt>
+      <dd>
+        Gudas (NHL), Pláněk, Šenkeřík. Nízká produkce, vyšší PIM. Pivot defenzivního stylu.
+        <span class="cluster-top">Radko Gudas, Petr Šenkeřík, Tomáš Dvořák, Janis Jaks, Tomáš Bartejs</span>
+      </dd>
+      
+      <dt>
+        <span class="cluster-id">C2</span>
+        <span>
+          Mladí depth D
+          <span class="cluster-meta-inline">
+            42 hráčů · MS pool 6 · medián ročník 2001
+          </span>
+        </span>
+      </dt>
+      <dd>
+        Mediánový ročník 2001, mostly Extraliga. Jiříček (NHL prospect), Hovorka, Trejbal, Hájek.
+        <span class="cluster-top">Mikulas Hovorka, Ondrej Trejbal, Rayen Petrovický, Filip Král, David Moravec</span>
+      </dd>
+      
+      <dt>
+        <span class="cluster-id">C3</span>
+        <span>
+          Veteránští bodaři
+          <span class="cluster-meta-inline">
+            5 hráčů · MS pool 3 · medián ročník 1992
+          </span>
+        </span>
+      </dt>
+      <dd>
+        Tichaček, Kundrátek, Krejčík. Vyšší A (0.29), starší (1992). Šedovlasí playmakeři z modré.
+        <span class="cluster-top">Jiri Tichacek, Jakub Krejčík, Tomáš Kundrátek, Radim Šimek, David Škůrek</span>
+      </dd>
+      
+      <dt>
+        <span class="cluster-id">C4</span>
+        <span>
+          Two-way střední věk
+          <span class="cluster-meta-inline">
+            13 hráčů · MS pool 3 · medián ročník 2000
+          </span>
+        </span>
+      </dt>
+      <dd>
+        Vyrovnaný profil, mediánový ročník 2000.
+        <span class="cluster-top">Radek Kucerik, Tomáš Cibulka, Miguël Tourigny, Samuel Huzevka *, Libor Zábranský</span>
+      </dd>
+      
+      <dt>
+        <span class="cluster-id">C5</span>
+        <span>
+          Defenzivní depth
+          <span class="cluster-meta-inline">
+            43 hráčů · MS pool 0 · medián ročník 1993
+          </span>
+        </span>
+      </dt>
+      <dd>
+        Šestá kategorie: typicky velmi mladí nebo strongly defensive.
+        <span class="cluster-top">Filip Pavlík, Adam Polášek, Adam Jánošík, Patrik Demel, Alex Rašner</span>
+      </dd>
+      
+    </dl>
 
-  <h3 id="omezeni">Omezení této analýzy</h3>
-  <div class="limitations">
-    <p><strong>Veřejná versus interní data.</strong> Tato analýza využívá výhradně veřejně dostupné
+    <h3 id="omezeni">Omezení této analýzy</h3>
+    <div class="limitations">
+      <p><strong>Veřejná versus interní data.</strong> Tato analýza využívá výhradně veřejně dostupné
 statistické zdroje (NHL API, MoneyPuck, Liiga, hokej.cz, Wikipedia pro IIHF turnaje).
 Trénerský a manažerský úsek reprezentace ČR disponuje interními daty (videosrážka,
 kondiční sledování, scoutingové zprávy, mikrostatistiky vstupů do pásma a kontrolovaných
@@ -921,22 +1012,25 @@ ligy mimo Extraligu a Liigy jsou rovněž mimo scope.</p>
 Výběr hráčů a strategická rozhodnutí vyžadují integraci s interní expertízou, kterou
 tato metoda nemá k dispozici. Cílem je nabídnout metodu, kterou interní tým může
 aplikovat na vlastní rozšířenou datovou základnu.</p>
-  </div>
+    </div>
 
-  <h3 id="reprodukovatelnost">Reprodukovatelnost</h3>
-  <p>
-    Plná pipeline je veřejná: <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">github.com/barborasandova/czehockey-player-pool-atlas</a>.
-    MIT licence. Spustit lze přes <code>make install &amp;&amp; make install-browsers &amp;&amp; make all</code>.
-    Random seed = 42 pro všechny stochastické operace (KMeans, UMAP).
-  </p>
+    <h3 id="reprodukovatelnost">Reprodukovatelnost</h3>
+    <p>
+      Plná pipeline je veřejná: <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">github.com/barborasandova/czehockey-player-pool-atlas</a>.
+      MIT licence. Spustit lze přes <code>make install &amp;&amp; make install-browsers &amp;&amp; make all</code>.
+      Random seed = 42 pro všechny stochastické operace (KMeans, UMAP).
+    </p>
+  </div>
 </section>
 
 <footer>
-  <p>
-    Barbora Šandová · <a href="mailto:barbora@datasimply.eu">barbora@datasimply.eu</a> ·
-    <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">GitHub</a>
-  </p>
-  <p class="rendered-at">Vyrenderováno: 2026-05-18 16:54</p>
+  <div class="container">
+    <p>
+      Barbora Šandová · <a href="mailto:barbora@datasimply.eu">barbora@datasimply.eu</a> ·
+      <a href="https://github.com/barborasandova/czehockey-player-pool-atlas">GitHub</a>
+    </p>
+    <p class="rendered-at">Vyrenderováno: 2026-05-18 17:10</p>
+  </div>
 </footer>
 
 </body>
