@@ -141,7 +141,7 @@ def _render_atlas(coords: pd.DataFrame, features: pd.DataFrame,
         ax.tick_params(colors=MUTED, labelsize=8)
         ax.legend(loc="lower right", fontsize=7, frameon=False)
 
-    fig.suptitle(f"Český hokej — {title_cs} ({latest}-{latest + 1})",
+    fig.suptitle(f"Český hokej · {title_cs} ({latest}-{latest + 1})",
                  fontsize=13, fontfamily="serif", color=INK, y=1.0)
     fig.text(
         0.5, -0.02,
@@ -268,7 +268,7 @@ CZECH_FRAMING = (
     "Mapa cca 280 Čechy hokejistů ve světových profesionálních ligách "
     "(NHL, Liiga, Tipsport Extraliga), segmentovaná podle pozice a herního "
     "profilu. Metodologický nástroj pro průběžné mapování fondu hráčů v rámci "
-    "víceletého reprezentačního cyklu — ne výběrové doporučení."
+    "víceletého reprezentačního cyklu, nikoli výběrové doporučení."
 )
 
 CZECH_OBSERVATIONS = [
@@ -279,7 +279,7 @@ CZECH_OBSERVATIONS = [
             "se nachází v mapovaném poolu. Mezi nimi top NHL hráči (Pastrňák, "
             "Nečas, Vejmelka) i Extraliga veteráni (Červenka, Sedlák, Kundrátek). "
             "Strukturálně tedy reprezentační pool není „NHL kontingent“ ani „Extraliga "
-            "kontingent“ — je to spojnice obou profesionálních ekosystémů."
+            "kontingent“: je to spojnice obou profesionálních ekosystémů."
         ),
     },
     {
@@ -287,7 +287,7 @@ CZECH_OBSERVATIONS = [
         "body": (
             "Po aplikaci ligových násobiček se NHL elita (Pastrňák PC1 ≈ 8.5) "
             "dramaticky odpoutává od EU elity (Červenka PC1 ≈ 2). Style mapa "
-            "(bez násobiček) ukazuje samotný herní profil — Pastrňák a Červenka "
+            "(bez násobiček) ukazuje samotný herní profil; Pastrňák a Červenka "
             "tam leží v podobné zóně produkce. Dvojice projekcí umožňuje "
             "interpretovat fond jak stylově, tak kvalitativně, bez nutnosti "
             "volit jednu narativu."
@@ -319,7 +319,7 @@ SHL = 0.45, Liiga = 0.42, NL = 0.40, Extraliga = 0.35, 1. liga = 0.20) jsou subj
 aproximace. Vycházejí z veřejných srovnání produkce hráčů, kteří přešli mezi ligami, ale
 jsou citlivé na výběr hráčů, vlastnosti pravidel, velikost kluziště a sezónní kontext.
 Citlivostní analýza (oddíl Methodologie) ukazuje, jak se mapa mění při změně násobičky
-o ±20 % — top-10 ranking je vůči těmto perturbacím stabilní (churn 0-1 hráčů).
+o ±20 %: top-10 ranking je vůči těmto perturbacím stabilní (churn 0-1 hráčů).
 
 **Žádná data z KHL.** KHL je z analýzy vyloučena ze dvou důvodů: politické sankce
 omezují použitelnost ruských statistických zdrojů, a kvalita dat byla v poslední době
@@ -335,7 +335,7 @@ specifické metriky neumožňují společnou projekci s útočníky a obránci. 
 analytika je extrémně kontext-závislá (kvalita obrany před brankářem, ledové podmínky,
 schéma hry) a tato analýza nenárokuje hloubku v této oblasti.
 
-**Chybějící zdroje.** SHL a švýcarská NL jsou v této verzi mapy vyloučeny —
+**Chybějící zdroje.** SHL a švýcarská NL jsou v této verzi mapy vyloučeny;
 oba weby jsou JavaScript-rendered s netriviálním přístupem k datům. Český pool
 v těchto ligách (~10-20 hráčů) tedy v této verzi mapy chybí. AHL hráči, NCAA, juniorské
 ligy mimo Extraligu a Liigy jsou rovněž mimo scope.

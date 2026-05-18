@@ -14,7 +14,7 @@ forwards_style:
   2:
     label_cs: "Fyzičtí role-players"
     label_en: "Physical role players"
-    description_cs: "Výrazně vysoké PIM (5-6× cohort medián). Velcí hráči — Klapka (NHL prospect), Zohorna, Lakatoš. Středně-vyšší věk."
+    description_cs: "Výrazně vysoké PIM (5-6× cohort medián). Velcí hráči: Klapka (NHL prospect), Zohorna, Lakatoš. Středně-vyšší věk."
   3:
     label_cs: "Veteránští two-way"
     label_en: "Veteran utility"
@@ -26,15 +26,15 @@ forwards_quality:
   0:
     label_cs: "NHL elita"
     label_en: "NHL elite"
-    description_cs: "Po aplikaci multiplierů — top NHL hráči pull dramaticky vpravo."
+    description_cs: "Po aplikaci multiplierů: top NHL hráči pull dramaticky vpravo."
   1:
     label_cs: "EU elita po korekci"
     label_en: "EU elite (after adjustment)"
-    description_cs: "Top EU scorers — Červenka, Kantner, Jašek, Sedlák. Vysoká EU produkce, ale za NHL elitou."
+    description_cs: "Top EU scorers: Červenka, Kantner, Jašek, Sedlák. Vysoká EU produkce, ale za NHL elitou."
   2:
     label_cs: "Solidní NHL doplnění"
     label_en: "Solid NHL depth"
-    description_cs: "Hráči jako Faksa, Klapka — top-9/10 NHL minutáž ale ne elite produkce."
+    description_cs: "Hráči jako Faksa, Klapka: top-9/10 NHL minutáž ale ne elite produkce."
   3:
     label_cs: "EU veteráni"
     label_en: "EU veterans"
@@ -68,13 +68,13 @@ defense_style:
   5:
     label_cs: "Defenzivní depth"
     label_en: "Defensive depth"
-    description_cs: "Šestá kategorie — typicky velmi mladí nebo strongly defensive."
+    description_cs: "Šestá kategorie: typicky velmi mladí nebo strongly defensive."
 
 defense_quality:
   0:
     label_cs: "NHL D elita"
     label_en: "NHL D elite"
-    description_cs: "Po korekci multiplierů — top NHL obránci."
+    description_cs: "Po korekci multiplierů: top NHL obránci."
   1:
     label_cs: "EU ofenzivní D"
     label_en: "EU offensive D"

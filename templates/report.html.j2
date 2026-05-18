@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Český hokej — Atlas fondu hráčů</title>
+  <title>Český hokej · Atlas fondu hráčů</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="report-header">
-  <h1>Český hokej — Atlas fondu hráčů</h1>
+  <h1>Český hokej · Atlas fondu hráčů</h1>
   <p class="subtitle">Metodologický nástroj pro průběžné mapování hráčů v profesionálních ligách</p>
   <p class="meta">
     Pool: <strong>{{ n_players }}</strong> kanonických hráčů (z toho
@@ -57,7 +57,7 @@
   </table>
   <p class="muted small">
     Po normalizaci na populaci je český fond v NHL <strong>šestý ze šesti</strong>
-    porovnávaných zemí — za Slovenskem, čtyřikrát méně hustý než Finsko.
+    porovnávaných zemí, za Slovenskem, čtyřikrát méně hustý než Finsko.
   </p>
 
   <figure class="hero-figure">
@@ -70,7 +70,7 @@
 
   <h4>Specifické cohort gapy</h4>
   <p>
-    <strong>Útočníci — kde český pool je strukturálně tenký:</strong>
+    <strong>Útočníci, kde český pool je strukturálně tenký:</strong>
   </p>
   <table class="movers-table">
     <thead>
@@ -100,11 +100,11 @@
   <p class="muted small">
     Český <strong>U22 forwards cohort = 1 hráč</strong> (Kulich). FIN 3, SWE 7.
     Současný <strong>26-29 elite cohort (Pastrňák/Nečas/Zacha/Hertl) drží
-    median 1.06 P/GP</strong> — světová špička, ale jen 4 hráče hluboko.
+    median 1.06 P/GP</strong>, světová špička, ale jen 4 hráče hluboko.
   </p>
 
   <p>
-    <strong>Obránci — strukturálně problematická pozice napříč všemi cohorty:</strong>
+    <strong>Obránci, strukturálně problematická pozice napříč všemi cohorty:</strong>
   </p>
   <table class="movers-table">
     <thead>
@@ -155,26 +155,26 @@
     {% endfor %}
   </div>
 
-  <h3>Cluster archetypy — útočníci (style projekce)</h3>
-  <div class="cluster-cards">
+  <h3>Cluster archetypy, útočníci (style projekce)</h3>
+  <dl class="cluster-list">
     {% for c in fwd_clusters %}
-    <div class="cluster-card">
-      <h4>C{{ c.cluster_id }} · {{ c.label }}</h4>
-      <p class="cluster-meta">
-        <span>n = <strong>{{ c.n_members }}</strong></span>
-        <span>MS pool: <strong>{{ c.nt_count }}</strong></span>
-        <span>medián ročník: <strong>{{ c.median_age_year }}</strong></span>
-      </p>
-      <p class="cluster-desc">{{ c.description }}</p>
-      <p class="cluster-top"><em>Top příklady:</em> {{ c.top_names | join(', ') }}</p>
-    </div>
+    <dt>
+      C{{ c.cluster_id }} · {{ c.label }}
+      <span class="cluster-meta-inline">
+        {{ c.n_members }} hráčů · MS pool {{ c.nt_count }} · medián ročník {{ c.median_age_year }}
+      </span>
+    </dt>
+    <dd>
+      {{ c.description }}
+      <span class="cluster-top">Top: {{ c.top_names | join(', ') }}</span>
+    </dd>
     {% endfor %}
-  </div>
+  </dl>
 
   <h3>Trajektorie 2024/25 → 2025/26 (útočníci, ≥30 GP obě sezóny)</h3>
   <div class="movers-grid">
     <div class="movers-col">
-      <h4 class="movers-up">Zlepšení (Δ quality P/GP)</h4>
+      <h4>Posun nahoru (Δ quality P/GP)</h4>
       <table class="movers-table">
         <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
         <tbody>
@@ -183,14 +183,14 @@
             <td>{{ r.name }}</td>
             <td class="muted">{{ r.league }}</td>
             <td class="muted">{{ r.gp_old }} / {{ r.gp_new }}</td>
-            <td class="delta-up">{{ '%+.3f' | format(r.delta) }}</td>
+            <td class="arrow-up">{{ '%+.3f' | format(r.delta) }}</td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
     </div>
     <div class="movers-col">
-      <h4 class="movers-down">Pokles (Δ quality P/GP)</h4>
+      <h4>Posun dolů (Δ quality P/GP)</h4>
       <table class="movers-table">
         <thead><tr><th>Hráč</th><th>Liga</th><th>GP 24 / 25</th><th>Δ</th></tr></thead>
         <tbody>
@@ -199,7 +199,7 @@
             <td>{{ r.name }}</td>
             <td class="muted">{{ r.league }}</td>
             <td class="muted">{{ r.gp_old }} / {{ r.gp_new }}</td>
-            <td class="delta-down">{{ '%+.3f' | format(r.delta) }}</td>
+            <td class="arrow-down">{{ '%+.3f' | format(r.delta) }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -218,11 +218,11 @@
 
   <h3>Datové zdroje</h3>
   <ul>
-    <li><strong>NHL Stats API</strong> (api-web.nhle.com/v1) — všechny aktivní 2024-25 a 2025-26 NHL hráči, filtr birth_country = CZE</li>
-    <li><strong>MoneyPuck</strong> — 5v5 per-60 metriky + xG (NHL-only enrichment)</li>
-    <li><strong>Liiga</strong> (liiga.fi) — sezónní totaly přes Playwright</li>
-    <li><strong>Tipsport Extraliga</strong> (hokej.cz) — per-team /statistiky, birth dates z /hrac/ profilů</li>
-    <li><strong>IIHF turnaje</strong> (Wikipedia: MS 2024, MS 2025, WJC 2024, WJC 2025) — reprezentační účast pro eligibility filtr</li>
+    <li><strong>NHL Stats API</strong> (api-web.nhle.com/v1): všechny aktivní 2024-25 a 2025-26 NHL hráči, filtr birth_country = CZE</li>
+    <li><strong>MoneyPuck</strong>: 5v5 per-60 metriky a xG (NHL-only enrichment)</li>
+    <li><strong>Liiga</strong> (liiga.fi): sezónní totaly přes Playwright</li>
+    <li><strong>Tipsport Extraliga</strong> (hokej.cz): per-team /statistiky, birth dates z /hrac/ profilů</li>
+    <li><strong>IIHF turnaje</strong> (Wikipedia: MS 2024, MS 2025, WJC 2024, WJC 2025): reprezentační účast pro eligibility filtr</li>
   </ul>
 
   <h3>Ligové násobičky (quality projekce)</h3>
@@ -250,7 +250,7 @@
   <p>
     Při GP = 1 dominuje cohort medián (~91 %); při GP = 80 dominují skutečná data (~89 %).
     Bez shrinkage by hráč jako Lantoši (4 GP, 5 bodů, 1.25 P/GP raw) předběhl Pastrňáka v kvalitě.
-    Po shrinkage spadne na 0.59 P/GP — methodologicky obhajitelné.
+    Po shrinkage spadne na 0.59 P/GP, methodologicky obhajitelné.
   </p>
 
   <h3>PCA loadings</h3>
@@ -280,7 +280,7 @@
   <h3>Citlivostní analýza (±20 % násobičky)</h3>
   <p>
     Pro každý scénář perturbace násobičky byl přepočítán quality ranking a změřena změna oproti baseline.
-    <strong>Top-10 ranking je vůči těmto změnám stabilní</strong> — žádný scénář nezpůsobuje churn větší než 1 hráč.
+    <strong>Top-10 ranking je vůči těmto změnám stabilní</strong>: žádný scénář nezpůsobuje churn větší než 1 hráč.
     NHL top elita (Pastrňák, Nečas, Zacha, Hertl) zůstává v top čtyřce ve všech scénářích.
   </p>
   <table class="sensitivity-table">
@@ -309,21 +309,21 @@
     <figcaption>Atlas obránců 2025-26. Stejná interpretace jako útočníci.</figcaption>
   </figure>
 
-  <h3>Cluster detaily — obránci</h3>
-  <div class="cluster-cards">
+  <h3>Cluster detaily, obránci</h3>
+  <dl class="cluster-list">
     {% for c in def_clusters %}
-    <div class="cluster-card">
-      <h4>C{{ c.cluster_id }} · {{ c.label }}</h4>
-      <p class="cluster-meta">
-        <span>n = <strong>{{ c.n_members }}</strong></span>
-        <span>MS pool: <strong>{{ c.nt_count }}</strong></span>
-        <span>medián ročník: <strong>{{ c.median_age_year }}</strong></span>
-      </p>
-      <p class="cluster-desc">{{ c.description }}</p>
-      <p class="cluster-top"><em>Top:</em> {{ c.top_names | join(', ') }}</p>
-    </div>
+    <dt>
+      C{{ c.cluster_id }} · {{ c.label }}
+      <span class="cluster-meta-inline">
+        {{ c.n_members }} hráčů · MS pool {{ c.nt_count }} · medián ročník {{ c.median_age_year }}
+      </span>
+    </dt>
+    <dd>
+      {{ c.description }}
+      <span class="cluster-top">Top: {{ c.top_names | join(', ') }}</span>
+    </dd>
     {% endfor %}
-  </div>
+  </dl>
 
   <h3>Omezení této analýzy</h3>
   <div class="limitations">
