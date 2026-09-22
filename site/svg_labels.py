@@ -1,4 +1,4 @@
-"""English labels for the matplotlib atlas SVGs: docs/cs/*.svg -> docs/*.svg.
+"""English labels for the matplotlib atlas SVGs: site/source/figures/*.svg -> docs/*.svg.
 
 matplotlib writes text as glyph paths; the titles/captions listed in T are
 replaced with real <text> elements (left-anchored, same position/size/colour),
@@ -67,5 +67,4 @@ SOURCE = Path(__file__).resolve().parent / "source" / "figures"
 for name in ["atlas_forwards.svg", "atlas_defense.svg", "intl_cohort_heatmap.svg"]:
     src = (SOURCE / name).read_text(encoding="utf-8")
     (DOCS / name).write_text(convert(src), encoding="utf-8")
-    (DOCS / "cs" / name).write_text(src, encoding="utf-8")
     print("labelled", name)

@@ -8,9 +8,10 @@ per-capita rows, the two cohort tables and the cluster blocks are all
 structured markup with the numbers in them. A re-render therefore moves the
 statements with the data, and nothing here is typed by hand.
 
-Used by site/enrich_index.py, which inserts the rendered block after the
-hero; `translate_index.py` leaves it alone (it is built per language from
-the page it is inserted into).
+Inserted by site/insert_takeaways.py at the end of the build. The site is
+English only since 2026-09-22; the Czech strings below stay because the
+content source is still the Czech render and a Czech edition would need
+nothing but a second call.
 """
 
 from __future__ import annotations

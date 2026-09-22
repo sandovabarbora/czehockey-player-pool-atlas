@@ -1,7 +1,7 @@
 """Extract interaction metadata from the matplotlib atlas SVGs -> docs/atlas_meta.json.
 
 Geometry is language-independent (EN and CS SVGs differ only in title text),
-so we read the Czech originals in docs/cs/.
+so we read the pristine, Czech-labelled originals in site/source/figures/.
 """
 import json
 import math
@@ -10,6 +10,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+SOURCE = Path(__file__).resolve().parent / "source" / "figures"
 DOCS = Path(sys.argv[1])
 SVG = "{http://www.w3.org/2000/svg}"
 XL = "{http://www.w3.org/1999/xlink}href"
@@ -192,9 +193,9 @@ def parse_heatmap(path):
 
 
 meta = {
-    "atlas_forwards.svg": parse_atlas(DOCS / "cs" / "atlas_forwards.svg"),
-    "atlas_defense.svg": parse_atlas(DOCS / "cs" / "atlas_defense.svg"),
-    "intl_cohort_heatmap.svg": parse_heatmap(DOCS / "cs" / "intl_cohort_heatmap.svg"),
+    "atlas_forwards.svg": parse_atlas(SOURCE / "atlas_forwards.svg"),
+    "atlas_defense.svg": parse_atlas(SOURCE / "atlas_defense.svg"),
+    "intl_cohort_heatmap.svg": parse_heatmap(SOURCE / "intl_cohort_heatmap.svg"),
 }
 (DOCS / "atlas_meta.json").write_text(json.dumps(meta, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 for k, v in meta.items():

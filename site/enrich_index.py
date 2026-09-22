@@ -1,5 +1,5 @@
 """Structural upgrades to docs/index.html (Czech source):
-- topbar with language switch, modern.css link, hreflang alternates
+- topbar, modern.css link, hreflang alternates (English only since 2026-09-22)
 - NHL headshots / action shots on player cards, briefs, analog targets
 - avatar chips in cluster top lists + movers tables
 - masthead cast strip
@@ -71,7 +71,6 @@ sub(r'<link href="https://fonts\.googleapis\.com/css2\?family=Spectral[^"]*" rel
 sub(r'<link rel="stylesheet" href="style\.css">',
     '<link rel="stylesheet" href="style.css">\n  <link rel="stylesheet" href="modern.css">\n'
     '  <link rel="alternate" hreflang="en" href="https://hockey.bsandova.com/">\n'
-    '  <link rel="alternate" hreflang="cs" href="https://hockey.bsandova.com/cs/">\n'
     '  <link rel="alternate" hreflang="x-default" href="https://hockey.bsandova.com/">',
     1)
 
@@ -102,9 +101,6 @@ TOPBAR = '''<nav class="topbar" aria-label="Navigace">
     <a href="#shrnuti">Shrnutí</a>
     <a href="#ai-vrstva">AI vrstva</a>
     <a href="#metodologie">Metodologie</a>
-  </div>
-  <div class="lang-switch" aria-label="Jazyk">
-    <a href="../" hreflang="en" lang="en">EN</a><span aria-current="page" lang="cs">CS</span>
   </div>
 </nav>
 '''
@@ -277,7 +273,7 @@ sub(r'(place where they are aggregated\.|agregaci v jednom místě nemá\.)(\s*<
 
 # mobile TOC: drop the in-page list; the top bar gets a Contents button that opens the rail as a panel
 sub(r'\s*<details class="toc-mobile" open>.*?</details>', '', 1, re.S)
-sub(r'(<div class="lang-switch")', r'<button type="button" class="toc-btn" aria-controls="toc" aria-expanded="false">Obsah</button>\n  \1', 1)
+sub(r'(<div class="topbar-links">.*?</div>)', r'\1\n  <button type="button" class="toc-btn" aria-controls="toc" aria-expanded="false">Obsah</button>', 1, re.S)
 sub(r'<span class="cast-caption">', '<span class="cast-caption" data-short="6 profilů hráčů">', 1)
 
 # clusters: accordion — header + photo chips visible, description + tactical read folded

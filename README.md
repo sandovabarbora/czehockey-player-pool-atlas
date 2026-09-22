@@ -8,7 +8,7 @@ is a replicable mapping method intended as a planning tool over the multi-year
 international cycle. It is not a roster suggestion, and it does not commentate on
 tournament results, line combinations, or individual coaching choices.
 
-The Czech version of this README is at [`README.cs.md`](README.cs.md).
+The Czech version of this README is at [`README.cs.md`](README.cs.md). The published site is English only (since 2026-09-22); the Czech render stays the content source the English page is translated from.
 
 ---
 

@@ -7,7 +7,7 @@ applied here at build time, hex for hex. A figure already drawn in the
 register contains none of the legacy hexes and passes through unchanged,
 so this is idempotent and safe on every build.
 
-usage: site/svg_theme.py DOCS_DIR      (recolours DOCS_DIR/*.svg and DOCS_DIR/cs/*.svg)
+usage: site/svg_theme.py DOCS_DIR      (recolours DOCS_DIR/*.svg)
 """
 
 from __future__ import annotations
@@ -112,7 +112,7 @@ def ramp_images(svg: str) -> tuple[str, int]:
 
 
 def main(docs: Path) -> None:
-    files = sorted(docs.glob("*.svg")) + sorted((docs / "cs").glob("*.svg"))
+    files = sorted(docs.glob("*.svg"))
     total = 0
     for f in files:
         out, n = recolour(f.read_text(encoding="utf-8"))

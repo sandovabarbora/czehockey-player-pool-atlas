@@ -721,8 +721,6 @@ R('<nav class="topbar" aria-label="Navigace">', '<nav class="topbar" aria-label=
 R('<a class="topbar-brand" href="#top">Český hokej <span>Atlas</span></a>', '<a class="topbar-brand" href="#top">Czech Hockey <span>Atlas</span></a>')
 R('<a href="#shrnuti">Shrnutí</a> <a href="#ai-vrstva">AI vrstva</a> <a href="#metodologie">Metodologie</a>',
   '<a href="#shrnuti">Summary</a>\n    <a href="#ai-vrstva">AI layer</a>\n    <a href="#metodologie">Methodology</a>')
-R('<div class="lang-switch" aria-label="Jazyk"> <a href="../" hreflang="en" lang="en">EN</a><span aria-current="page" lang="cs">CS</span> </div>',
-  '<div class="lang-switch" aria-label="Language">\n    <span aria-current="page" lang="en">EN</span><a href="cs/" hreflang="cs" lang="cs">CS</a>\n  </div>')
 R('<span class="cast-caption" data-short="6 profilů hráčů">Profily šesti hráčů: Pastrňák, Nečas, Hronek, Zacha, Kulich, Jiříček</span>',
   '<span class="cast-caption" data-short="6 player profiles">Six player profiles: Pastrňák, Nečas, Hronek, Zacha, Kulich, Jiříček</span>')
 
