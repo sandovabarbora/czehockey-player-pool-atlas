@@ -102,4 +102,4 @@ MIT. See [LICENSE](LICENSE).
 
 ## Contact
 
-Barbora Šandová · barbora@datasimply.eu · [linkedin.com/in/barborasandova](https://linkedin.com/in/barborasandova)
+Barbora Šandová · hello@bsandova.com · [linkedin.com/in/barborasandova](https://linkedin.com/in/barborasandova)

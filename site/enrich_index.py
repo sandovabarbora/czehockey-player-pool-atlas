@@ -66,13 +66,13 @@ def sub(pat, repl, want, flags=0):
 
 # ---------------------------------------------------------------- head
 sub(r'<link href="https://fonts\.googleapis\.com/css2\?family=Spectral[^"]*" rel="stylesheet">',
-    '<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">',
+    '<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">',
     1)
 sub(r'<link rel="stylesheet" href="style\.css">',
     '<link rel="stylesheet" href="style.css">\n  <link rel="stylesheet" href="modern.css">\n'
-    '  <link rel="alternate" hreflang="en" href="https://hockey.datasimply.eu/">\n'
-    '  <link rel="alternate" hreflang="cs" href="https://hockey.datasimply.eu/cs/">\n'
-    '  <link rel="alternate" hreflang="x-default" href="https://hockey.datasimply.eu/">',
+    '  <link rel="alternate" hreflang="en" href="https://hockey.bsandova.com/">\n'
+    '  <link rel="alternate" hreflang="cs" href="https://hockey.bsandova.com/cs/">\n'
+    '  <link rel="alternate" hreflang="x-default" href="https://hockey.bsandova.com/">',
     1)
 
 

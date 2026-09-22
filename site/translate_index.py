@@ -143,7 +143,7 @@ R('''Český fond je per-capita <strong>pátý ze šesti</strong>, mezi Slovensk
       Slovakia (1.67) outranks Czechia despite half the population; Finland's
       density is roughly four times higher, Sweden's five times.''')
 R('alt="Heatmap mezinárodního cohort benchmarku. Český NHL pool je šestý ze šesti porovnávaných zemí per-capita, s nejvýraznějšími gapy v U22 útočnících a celé obránecké pipeline napříč všemi věkovými skupinami. Modře orámovaná řada vyznačuje Českou republiku."',
-  'alt="Heatmap of the international cohort benchmark. The Czech NHL pool is fifth of six compared countries per capita, with the widest gaps among U22 forwards and across the entire defence pipeline in all age groups. The blue-outlined row marks the Czech Republic."')
+  'alt="Heatmap of the international cohort benchmark. The Czech NHL pool is fifth of six compared countries per capita, with the widest gaps among U22 forwards and across the entire defence pipeline in all age groups. The outlined row marks the Czech Republic."')
 R('''Mediánová produkce (P/GP) podle země, pozice a věkové skupiny. Modře orámovaná
         řada vyznačuje Českou republiku; buňka obsahuje počet hráčů a medián bodů na zápas.''',
   '''Median production (P/GP) by country, position and age group. The blue-outlined
@@ -166,11 +166,11 @@ R('''ČR má <strong>4 obránce v NHL</strong> napříč všemi věkovými skupi
       Pro srovnání: Finsko 14, Švédsko 30. V U22 kohortě: 0 českých obránců.''',
   '''CZE has <strong>4 defensemen in the NHL</strong> across all age groups.
       For comparison: Finland 14, Sweden 30. In the U22 cohort: 0 Czech defensemen.''')
-R('alt="Dvoupanelový atlas útočníků 2025/26 v PCA projekci. Levý panel (style mapa bez ligových násobiček) ukazuje Pastrňáka, Nečase a Červenku ve společné produkční zóně. Pravý panel (kvalitou upravená mapa) NHL elitu výrazně odpoutává od EU hráčů. Modré kroužky vyznačují účastníky MS 2024 a MS 2025; šipky znázorňují trajektorii mezi sezónami."',
-  'alt="Two-panel atlas of forwards 2025/26 in PCA projection. The left panel (style map without league multipliers) shows Pastrňák, Nečas and Červenka in a shared production zone. The right panel (quality-adjusted map) pulls the NHL elite well away from EU players. Blue rings mark participants of WC 2024 and WC 2025; arrows show the trajectory between seasons."')
-R('''Atlas útočníků 2025/26 v obou projekcích. Modré kroužky vyznačují aktivní
+R('alt="Dvoupanelový atlas útočníků 2025/26 v PCA projekci. Levý panel (style mapa bez ligových násobiček) ukazuje Pastrňáka, Nečase a Červenku ve společné produkční zóně. Pravý panel (kvalitou upravená mapa) NHL elitu výrazně odpoutává od EU hráčů. Zelené kroužky vyznačují účastníky MS 2024 a MS 2025; šipky znázorňují trajektorii mezi sezónami."',
+  'alt="Two-panel atlas of forwards 2025/26 in PCA projection. The left panel (style map without league multipliers) shows Pastrňák, Nečas and Červenka in a shared production zone. The right panel (quality-adjusted map) pulls the NHL elite well away from EU players. Acid rings mark participants of WC 2024 and WC 2025; arrows show the trajectory between seasons."')
+R('''Atlas útočníků 2025/26 v obou projekcích. Zelené kroužky vyznačují aktivní
         reprezentační pool (MS 24/25). Šipky znázorňují trajektorii mezi sezónami.''',
-  '''Forwards atlas 2025/26 in both projections. Blue rings mark the active
+  '''Forwards atlas 2025/26 in both projections. Acid rings mark the active
         national-team pool (WC 24/25). Arrows show the trajectory between seasons.''')
 
 # observations
@@ -594,7 +594,7 @@ R('''Pro každý scénář perturbace násobičky byl přepočítán quality ran
       The NHL top elite (Pastrňák, Nečas, Zacha, Hertl) stays in the top four in all scenarios.''')
 R('<th>Scénář</th><th>Popis</th>', '<th>Scenario</th><th>Description</th>')
 R('<h3 id="atlas-obrancu">Atlas obránců</h3>', '<h3 id="atlas-obrancu">Defensemen atlas</h3>')
-R('alt="Dvoupanelový atlas obránců 2025/26 v PCA projekci. Stejná struktura jako útočníci, méně hustá kvůli celkově menšímu poolu českých NHL obránců (Hronek a Gudas dominují); modré kroužky vyznačují MS 2024/25."',
+R('alt="Dvoupanelový atlas obránců 2025/26 v PCA projekci. Stejná struktura jako útočníci, méně hustá kvůli celkově menšímu poolu českých NHL obránců (Hronek a Gudas dominují); zelené kroužky vyznačují MS 2024/25."',
   'alt="Two-panel atlas of defensemen 2025/26 in PCA projection. Same structure as the forwards, less dense due to the overall smaller pool of Czech NHL defensemen (Hronek and Gudas dominate); blue rings mark WC 2024/25."')
 R('<figcaption>Atlas obránců 2025/26. Stejná interpretace jako útočníci.</figcaption>',
   '<figcaption>Defensemen atlas 2025/26. Same interpretation as for the forwards.</figcaption>')

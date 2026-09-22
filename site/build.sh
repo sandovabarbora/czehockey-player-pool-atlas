@@ -20,4 +20,5 @@ sed -i '' -e 's|href="style.css?|href="../style.css?|' -e 's|href="modern.css?|h
 python3 "$S/translate_index.py" "$D/index.html"
 python3 "$S/svg_labels.py" "$D" >/dev/null
 python3 "$S/atlas_meta.py" "$D" >/dev/null
+python3 "$S/svg_theme.py" "$D" >/dev/null   # legacy-palette figures into the register; after atlas_meta, which reads the legacy fills
 echo "built docs/index.html (en) + docs/cs/index.html (cs)"

@@ -18,7 +18,7 @@ T = {
     "Český hokej · Obránci 2025/26": "Czech Hockey · Defensemen 2025/26",
     "PCA projekce z čtyřrozměrného vektoru (G/GP, A/GP, PIM/GP, věk). Oxbloodové kroužky vyznačují MS 24/25 účast. "
     "Šipky znázorňují trajektorii 2024/25 → 2025/26; směr arrow head ukazuje pohyb.":
-        "PCA projection of a four-dimensional vector (G/GP, A/GP, PIM/GP, age). Oxblood rings mark WC 24/25 participation. "
+        "PCA projection of a four-dimensional vector (G/GP, A/GP, PIM/GP, age). Acid rings mark WC 24/25 participation. "
         "Arrows show the 2024/25 → 2025/26 trajectory; the arrowhead points in the direction of movement.",
     "Útočníci  ·  medián bodů na zápas": "Forwards  ·  median points per game",
     "Obránci  ·  medián bodů na zápas": "Defensemen  ·  median points per game",
@@ -60,7 +60,12 @@ def convert(src: str) -> str:
     return out
 
 
+# The Czech-labelled originals live in site/source/figures/ (the pristine,
+# cream-palette render); the built site's copies are recoloured afterwards
+# by site/svg_theme.py, so this must not read them back.
+SOURCE = Path(__file__).resolve().parent / "source" / "figures"
 for name in ["atlas_forwards.svg", "atlas_defense.svg", "intl_cohort_heatmap.svg"]:
-    src = (DOCS / "cs" / name).read_text(encoding="utf-8")
+    src = (SOURCE / name).read_text(encoding="utf-8")
     (DOCS / name).write_text(convert(src), encoding="utf-8")
+    (DOCS / "cs" / name).write_text(src, encoding="utf-8")
     print("labelled", name)
