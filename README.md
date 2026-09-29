@@ -4,7 +4,7 @@ An exploratory, descriptive atlas of Czech professional hockey players per head 
 peer nations (Finland, Sweden, Switzerland, Slovakia, Germany, Latvia, Denmark, Norway, Austria),
 1995/96–2025/26. Published at <https://hockey.bsandova.com/>.
 
-Status: exploratory; not pre-registered; no external review. The atlas identifies no cause, makes
+Status: exploratory; not pre-registered. The atlas identifies no cause, makes
 no forecast and gives no selection or policy advice.
 
 ## Questions
