@@ -25,7 +25,9 @@
   "q4": "mean of the measured seasonal shares; interval from resampling seasons; ratio_to_home resamples the same seasons for both leagues",
   "q5": "median of Czech player-season ratios; interval from resampling players",
   "q6": "mean over tournaments of the roster share; to_2022 is 2010-2022, from_2023 is 2023-2026",
-  "q7": "median of Czech goalkeeper-season save % minus the league-season median; interval from resampling goalkeepers"
+  "q7": "median of Czech goalkeeper-season save % minus the league-season median; interval from resampling goalkeepers",
+  "q5_positions": "as q5, for forwards and defencemen in the Liiga and the SHL",
+  "q7_youth": "mean of the seasonal 23-or-under shares of goalkeeper games; interval from resampling seasons"
  },
  "q3": {
   "peer_range": [
@@ -613,6 +615,102 @@
    "hi": 0.015122,
    "clusters": 2,
    "rows": 5
+  }
+ },
+ "q5_positions": {
+  "Liiga": {
+   "F": {
+    "toi": {
+     "median": 1.077795,
+     "lo": 1.039931,
+     "hi": 1.15717,
+     "clusters": 19,
+     "rows": 38
+    },
+    "ppg": {
+     "median": 1.527988,
+     "lo": 1.3454,
+     "hi": 1.798246,
+     "clusters": 19,
+     "rows": 38
+    }
+   },
+   "D": {
+    "toi": {
+     "median": 1.08665,
+     "lo": 1.028516,
+     "hi": 1.157426,
+     "clusters": 21,
+     "rows": 34
+    },
+    "ppg": {
+     "median": 1.190113,
+     "lo": 1.0,
+     "hi": 1.45352,
+     "clusters": 21,
+     "rows": 34
+    }
+   }
+  },
+  "SHL": {
+   "F": {
+    "toi": {
+     "median": 1.130113,
+     "lo": 1.040769,
+     "hi": 1.20565,
+     "clusters": 14,
+     "rows": 28
+    },
+    "ppg": {
+     "median": 1.498066,
+     "lo": 1.063725,
+     "hi": 1.713889,
+     "clusters": 14,
+     "rows": 28
+    }
+   },
+   "D": {
+    "toi": {
+     "median": 0.938429,
+     "lo": 0.627602,
+     "hi": 1.0394,
+     "clusters": 7,
+     "rows": 11
+    },
+    "ppg": {
+     "median": 0.985423,
+     "lo": 0.484848,
+     "hi": 1.538462,
+     "clusters": 7,
+     "rows": 11
+    }
+   }
+  }
+ },
+ "q7_youth": {
+  "Extraliga": {
+   "mean": 0.209905,
+   "lo": 0.161893,
+   "hi": 0.259255,
+   "min": 0.070603,
+   "max": 0.383005,
+   "seasons": 12
+  },
+  "Liiga": {
+   "mean": 0.373804,
+   "lo": 0.350239,
+   "hi": 0.399133,
+   "min": 0.310273,
+   "max": 0.460497,
+   "seasons": 12
+  },
+  "SHL": {
+   "mean": 0.208598,
+   "lo": 0.16489,
+   "hi": 0.260089,
+   "min": 0.126743,
+   "max": 0.405707,
+   "seasons": 12
   }
  }
 }

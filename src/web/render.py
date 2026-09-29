@@ -69,6 +69,9 @@ def questions() -> list[dict]:
 def old_anchors(autumn: bool) -> dict[str, str]:
     m = {q["id"]: q["url"] for q in questions()}
     m.update({a: f"methodology/#{a}" for a in METHOD_ANCHORS})
+    # the first (Czech) version's anchors, still linked from older copies of the article
+    m.update({"metodologie": "methodology/#methodology", "datove-zdroje": "methodology/#data-sources",
+              "omezeni": "methodology/#limitations", "reprodukovatelnost": "methodology/#reproducibility"})
     if autumn:
         m["autumn"] = "this-autumn/"
     return m

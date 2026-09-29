@@ -14,7 +14,8 @@ splits the pages need, without changing any existing output:
   q6  the Czech mean roster shares for 2010-2022 and 2023-2026, and without the 2018 and 2022
       Olympics (no NHL players took part in either), and the placement rule of every Czech row
   q7  the Czech goalkeepers' median save % minus the league median, per league, with a 95 %
-      bootstrap interval, resampling goalkeepers
+      bootstrap interval, resampling goalkeepers; the goalkeepers' 23-or-under share of games per
+      league with a 95 % bootstrap interval, resampling seasons
 
 Percentile intervals, `REPS` resamples, seed `SEED`; a rebuild gives the same file.
 
@@ -138,6 +139,31 @@ def q4(q4_out: dict[str, Any], rng: np.random.Generator) -> dict[str, Any]:
     return out
 
 
+def q5_positions(q5_out: dict[str, Any], rng: np.random.Generator) -> dict[str, Any]:
+    """Forwards and defencemen in the Liiga and the SHL, as NHL_by_position does for the NHL."""
+    players = q5_out["players"]
+    return {
+        lg: {
+            pos: {
+                m: cluster_median(_by_player([p for p in players if p["league"] == lg and p["position"] == pos], f), rng)
+                for m, f in (("toi", "toi_ratio"), ("ppg", "ppg_ratio"))
+            }
+            for pos in ("F", "D")
+        }
+        for lg in Q5_LEAGUES[1:]
+    }
+
+
+def q7_youth(q7_out: dict[str, Any], rng: np.random.Generator) -> dict[str, Any]:
+    """The goalkeepers' 23-or-under share of games per league: mean of seasons, resampling seasons."""
+    out = {}
+    for lg, v in q7_out["youth"].items():
+        vals = np.array([r["u24_games_share"] for r in v["seasons"] if r["u24_games_share"] is not None], dtype=float)
+        if len(vals):
+            out[lg] = _season_mean(vals, rng)
+    return out
+
+
 def _mean_shares(events: list[dict[str, Any]]) -> dict[str, Any]:
     shares = {c: float(np.mean([e[c] / e["players"] for e in events])) for c in Q6_CATS}
     return {"events": len(events), "first": min(e["year"] for e in events), "last": max(e["year"] for e in events), "shares": shares}
@@ -208,6 +234,8 @@ def run(outputs: dict[str, dict[str, Any]], lk: linking.Linked | None) -> dict[s
             "q6": "mean over tournaments of the roster share; to_2022 is 2010-2022, from_2023 is 2023-2026",
             "q7": "median of Czech goalkeeper-season save % minus the league-season median; "
             "interval from resampling goalkeepers",
+            "q5_positions": "as q5, for forwards and defencemen in the Liiga and the SHL",
+            "q7_youth": "mean of the seasonal 23-or-under shares of goalkeeper games; interval from resampling seasons",
         },
         "q3": q3(outputs["q3_cohort_gaps"], lk),
         "q4": q4(outputs["q4_youth_ice_time"], rng),
@@ -215,6 +243,9 @@ def run(outputs: dict[str, dict[str, Any]], lk: linking.Linked | None) -> dict[s
         "q5_group_n": q5_group_sizes(lk),
         "q6": q6(outputs["q6_national_team"]),
         "q7": q7(outputs["q7_goalkeepers"], rng),
+        # appended after q7 so that the draws above are unchanged
+        "q5_positions": q5_positions(outputs["q5_abroad"], rng),
+        "q7_youth": q7_youth(outputs["q7_goalkeepers"], rng),
     }
 
 

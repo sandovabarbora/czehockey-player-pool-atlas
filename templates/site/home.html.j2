@@ -36,7 +36,7 @@
     <dl class="facts">
       <div class="fact"><dt>Czech NHL players per million, {{ q1.season }}</dt><dd><span class="fact-n">{{ f2(h.nhl_per_million) }}</span><span class="fact-note">{{ h.nhl }} players, population {{ f1(population_m) }} million · administrative count</span></dd></div>
       <div class="fact"><dt>NHL and rung-2 players per million</dt><dd><span class="fact-n">{{ f2(h.top5_per_million) }}</span><span class="fact-note">{{ h.top5 }} players · {{ ordinal(h.rank_top5) }} of {{ q1.n_nations }} · administrative count</span></dd></div>
-      {% if fall %}<div class="fact"><dt>Downward step in the Czech NHL level</dt><dd><span class="fact-n">{{ times(fall.delta_factor.median) }}</span><span class="fact-note">90 % HDI {{ f2(fall.delta_factor.lo) }}–{{ f2(fall.delta_factor.hi) }} · most likely {{ fall.modal.season }} (p = {{ f2(fall.modal.prob) }})</span></dd></div>{% endif %}
+      {% if fall %}<div class="fact"><dt>Czech NHL step with a median below 1</dt><dd><span class="fact-n">{{ times(fall.delta_factor.median) }}</span><span class="fact-note">90 % HDI {{ f2(fall.delta_factor.lo) }}–{{ f2(fall.delta_factor.hi) }} · most likely {{ fall.modal.season }} (posterior probability {{ f2(fall.modal.prob) }})</span></dd></div>{% endif %}
       <div class="fact"><dt>Extraliga skater games played by skaters aged 20 or under</dt><dd><span class="fact-n">{{ pct(yl.Extraliga.games.mean) }}</span><span class="fact-note">95 % bootstrap by season {{ pct(yl.Extraliga.games.lo) }}–{{ pct(yl.Extraliga.games.hi) }} · {{ yl.Extraliga.games.seasons }} seasons</span></dd></div>
     </dl>
   </div>
@@ -69,7 +69,7 @@
 <section class="front-question" id="question">
   <div class="container">
     <h2>The question and its contribution</h2>
-    <p>Research on athlete development asks how players reach the top of a sport and which of them do. Relative age shapes who is selected in youth sport generally and in hockey in particular {{ ref(['cobley2009', 'nolan2010']) }}, success in youth national squads is followed by adult success for only some athletes {{ ref(['barreiros2014']) }}, world-class athletes tend to have practised several sports before specialising {{ ref(['gullich2022']) }}, and professional hockey moves players across national borders {{ ref(['maguire1996']) }}. Comparative work on national sport systems proposes a framework of policy factors behind international success {{ ref(['debosscher2006']) }}. This atlas tests none of these accounts. Its contribution is a descriptive base for the Czech case: from public league statistics and one definition of nationality, it counts how many Czech players reached the NHL and the four strongest European leagues relative to population, against nine peer nations over {{ q2.CZE.n_seasons }} seasons, and it publishes the counts, their intervals, the player list and the code that rebuilds them.</p>
+    <p>Research on athlete development asks how players reach the top of a sport and which of them do. Players born early in the selection year are over-represented in youth sport generally and in hockey in particular {{ ref(['cobley2009', 'nolan2010']) }}, success in youth national squads is followed by adult success for only some athletes {{ ref(['barreiros2014']) }}, world-class athletes tend to have practised several sports before specialising {{ ref(['gullich2022']) }}, and professional hockey moves players across national borders {{ ref(['maguire1996']) }}. Comparative work on national sport systems proposes a framework of policy factors behind international success {{ ref(['debosscher2006']) }}. This atlas tests none of these accounts. Its contribution is a descriptive base for the Czech case: from public league statistics and one definition of nationality, it counts how many Czech players reached the NHL and the four strongest European leagues relative to population, against nine peer nations over {{ q2.CZE.n_seasons }} seasons, and it publishes the counts, their intervals, the player list and the code that rebuilds them.</p>
   </div>
 </section>
 
@@ -95,7 +95,9 @@
       <li id="ref-{{ r.n }}">{{ r.text }} <a href="{{ r.url }}">{{ r.url }}</a>. Accessed {{ r.accessed }}.</li>
       {% endfor %}
     </ol>
-    <p>Data sources, with their access dates and terms, are listed under <a href="methodology/#data-sources">Data availability</a>.</p>
+    {% set cited_here = ['cobley2009', 'nolan2010', 'barreiros2014', 'gullich2022', 'maguire1996', 'debosscher2006'] %}
+    {% set elsewhere = refs|rejectattr('key', 'in', cited_here)|map(attribute='n')|list %}
+    <p>{% if elsewhere %}References {{ elsewhere[0] }}–{{ elsewhere[-1] }} are cited on the question pages. {% endif %}Data sources, with their access dates and terms, are listed under <a href="methodology/#data-sources">Data availability</a>.</p>
 
     <h2 id="changes">Change log</h2>
     <ul class="changelog">

@@ -140,7 +140,7 @@ def _q2(q2: dict) -> dict:
             "fall": fall_step,
             "ups": ups,
             "only_up": fall_step is None,
-            "fitted": nat["fitted"],
+            "fitted": {**nat["fitted"], "seasons": q2["seasons"]},
             "diag": nat["diagnostics"],
             "top_pair": brk["top_candidates"][0],
             "n_breaks": brk["n_breaks"],
@@ -153,6 +153,8 @@ def _q2(q2: dict) -> dict:
         spread = [q2["seasons"][i] for i, p in enumerate(marg) if p >= 0.03]
         cze["fall_spread"] = (spread[0], spread[-1]) if spread else None
         cze["fall_mass_in_spread"] = sum(p for p in marg if p >= 0.03)
+    cze["level_latest"] = _level(cze, "latest", " players")
+    cze["level_peak"] = _level(cze, "peak")
     cze["sharp"] = bool(cze["fall"] and cze["fall"]["modal"]["prob"] >= 0.5)
     out["max_rhat"] = max(n["diagnostics"]["max_rhat"] for n in q2["nations"].values())
     out["divergences"] = sum(n["diagnostics"]["n_divergences"] for n in q2["nations"].values())
@@ -393,6 +395,13 @@ def _ci(d: dict | None, key: str = "median", f=fmt.f2) -> str:
     return f"{f(d[key])} ({f(d['lo'])}–{f(d['hi'])})"
 
 
+def _level(nation: dict, which: str, unit: str = "") -> str:
+    """The break model's level in one season with its 90 % HDI, at the most probable pair of step seasons."""
+    f = nation["fitted"]
+    i = f["seasons"].index(f[which]["season"])
+    return f"{round(f['median'][i])}{unit} (90 % HDI {round(f['lo'][i])}–{round(f['hi'][i])})"
+
+
 def _takeaways(c: dict) -> list[dict]:
     """The summary's findings, one per question, each with its interval or its count label."""
     q1, q2, q3, q4, q5, q6, q7, iv = (c[k] for k in ("q1", "q2", "q3", "q4", "q5", "q6", "q7", "iv"))
@@ -418,10 +427,12 @@ def _takeaways(c: dict) -> list[dict]:
         ],
     })
     fall_txt = (
-        f"The break model places a downward step most likely in {fall['modal']['season']} (posterior probability "
+        f"The break model dates the step whose median is below 1 most likely to {fall['modal']['season']} (posterior probability "
         f"{fmt.f2(fall['modal']['prob'])}), with a factor of {fmt.times(fall['delta_factor']['median'])} "
         f"(90 % HDI {fmt.f2(fall['delta_factor']['lo'])}–{fmt.f2(fall['delta_factor']['hi'])}; "
-        f"P(level falls) = {fmt.f2(fall['p_down'])}). The model describes timing, not cause."
+        f"P(level falls) = {fmt.f2(fall['p_down'])})"
+        + (", so its direction is not resolved." if fall["delta_factor"]["hi"] >= 1 else ".")
+        + " The model describes timing, not cause."
         if fall
         else "The break model finds no downward step."
     )
@@ -432,8 +443,8 @@ def _takeaways(c: dict) -> list[dict]:
         ),
         "body": [
             fall_txt
-            + f" Conditional on the most probable pair of step seasons, the model level in {cze['fitted']['latest']['season']} "
-            f"is {fmt.pct0(cze['fitted']['latest_to_peak'])} of its {cze['fitted']['peak']['season']} peak."
+            + f" Conditional on the most probable pair of step seasons, the model level in {cze['fitted']['latest']['season']} is "
+            f"{_level(cze, 'latest', ' players')}, against {_level(cze, 'peak')} at its {cze['fitted']['peak']['season']} peak."
         ],
     })
     top = q3["top_shortfall"]
