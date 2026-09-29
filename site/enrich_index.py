@@ -88,6 +88,13 @@ sub(r'(<h3 id="nasobicky">[^<]*</h3>)',
 
 # ---------------------------------------------------------------- interactive atlases
 sub(r'<figure class="figure-bleed">(\s*)<img src="intl_cohort_heatmap.svg"', r'<figure class="figure-bleed" data-atlas="heatmap">\1<img src="intl_cohort_heatmap.svg"', 1)
+# the heatmap's legend sits above it, always in view (the SVG has none of its own):
+# the cell shade ramp, the held-colour outline of the home row, the no-data dash
+HEAT_LEGEND = ('<div class="fig-legend">'
+               '<span><i class="lg-ramp"></i>median P/GP, lower → higher</span>'
+               '<span><i class="lg-home"></i>Czechia</span>'
+               '<span><b class="lg-dash">—</b>no players</span></div>')
+sub(r'(<figure class="figure-bleed" data-atlas="heatmap">\s*)(<img src="intl_cohort_heatmap.svg")', lambda m: m.group(1) + HEAT_LEGEND + '\n      ' + m.group(2), 1)
 sub(r'<figure class="figure-bleed">(\s*)<img src="atlas_forwards.svg"', r'<figure class="figure-bleed" data-atlas="forwards">\1<img src="atlas_forwards.svg"', 1)
 sub(r'<figure class="figure-bleed">(\s*)<img src="atlas_defense.svg"', r'<figure class="figure-bleed" data-atlas="defense">\1<img src="atlas_defense.svg"', 1)
 sub(r'(<h3 id="cluster-archetypy">[^<]*</h3>\s*)<dl class="cluster-list">', r'\1<dl class="cluster-list" data-atlas-clusters="forwards">', 1)

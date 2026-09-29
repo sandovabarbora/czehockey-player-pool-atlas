@@ -60,11 +60,19 @@ def convert(src: str) -> str:
     return out
 
 
+# In-plot legends that sit on a name label: the forwards style map's legend
+# (lower right) covers the Červenka label, so it moves to the empty upper right.
+MOVE = {"atlas_forwards.svg": {"legend_1": (0, -305)}}
+
 # The Czech-labelled originals live in site/source/figures/ (the pristine,
 # cream-palette render); the built site's copies are recoloured afterwards
 # by site/svg_theme.py, so this must not read them back.
 SOURCE = Path(__file__).resolve().parent / "source" / "figures"
 for name in ["atlas_forwards.svg", "atlas_defense.svg", "intl_cohort_heatmap.svg"]:
     src = (SOURCE / name).read_text(encoding="utf-8")
-    (DOCS / name).write_text(convert(src), encoding="utf-8")
+    out = convert(src)
+    for gid, (dx, dy) in MOVE.get(name, {}).items():
+        out, n = re.subn(f'<g id="{gid}">', f'<g id="{gid}" transform="translate({dx} {dy})">', out, count=1)
+        assert n == 1, (name, gid)
+    (DOCS / name).write_text(out, encoding="utf-8")
     print("labelled", name)
