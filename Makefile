@@ -1,5 +1,6 @@
 .PHONY: help install install-browsers fetch features reduce render all clean test lint check \
-	fetch-nhl fetch-eurostat fetch-liiga fetch-shl fetch-extraliga verify-snapshot restore-snapshot
+	fetch-nhl fetch-eurostat fetch-liiga fetch-shl fetch-extraliga verify-snapshot restore-snapshot \
+	analysis analysis-fast
 
 PYTHON ?= python
 VENV   ?= .venv
@@ -16,6 +17,8 @@ help:
 	@echo "  fetch-shl        SHL skaters and goalies 1995/96-2025/26 -> data/snapshot/"
 	@echo "  fetch-extraliga  Extraliga skaters, goalies, birth dates 1995/96-2025/26 (hokej.cz, ~1 h cold)"
 	@echo "  verify-snapshot  Check data/snapshot/ against its SHA256SUMS"
+	@echo "  analysis         Spec questions 1-7, linking and the pool list -> outputs/*.json (~6 min, PyMC)"
+	@echo "  analysis-fast    The same without refitting the break model (q2)"
 	@echo "  restore-snapshot Copy data/snapshot/ into data/processed/ (never overwrites newer files)"
 	@echo "  features         Build position-specific feature vectors"
 	@echo "  reduce           Run PCA + UMAP + KMeans"
@@ -63,6 +66,12 @@ fetch-extraliga:
 
 verify-snapshot:
 	$(ACT) python -m src.snapshot verify
+
+analysis:
+	$(ACT) python -m src.analysis
+
+analysis-fast:
+	$(ACT) python -m src.analysis --skip-model
 
 restore-snapshot:
 	$(ACT) python -m src.snapshot restore

@@ -1,0 +1,1298 @@
+{
+ "meta": {
+  "inputs": {
+   "del_goalies.parquet": "85afcda9b8f8c849800e89086001ebcc7433cd7de6c1e299d82f555801463213",
+   "del_skaters.parquet": "6e8bc872969e5e43e2831abb922d64fca3460db9649ce93f2fcf9cc0fa32a36f",
+   "extraliga_goalies.parquet": "1607e0d36b2852b849a830217a68259802728863163e3ff35cfbfb61a6727b07",
+   "extraliga_skaters.parquet": "7c372c4989dc3af8c6ad044bcbd77626bc3e31347fb6ee5436aecc2698b856ed",
+   "liiga_goalies.parquet": "e7ab79b3f65a225a8d8e9884a3d60446bfc1e354756332811c01cf03975ea3c6",
+   "liiga_skaters.parquet": "141c75ceede7edfa9cacc55f6e1ca71217c04bbd8300e5bbcd6a0c8756cb1ae1",
+   "nhl_goalies.parquet": "a16be42c492ab8be86eeaa1e63433cbdc9a4d7b699acfdb0dc8aeb306b6bff64",
+   "nhl_skaters.parquet": "d42f3feb41ae5238ab6ad3f3cadfc5889109839fcbc529ef5311701b7da05fc9",
+   "nl_goalies.parquet": "1cbc7d9b50e2d9dbf5e3f6c242a34bd624268eff6b02ee6cbd97897b3d2e1512",
+   "nl_skaters.parquet": "1497f2e2740caba1d4d47cea0ed1cf56ade5647dc99197204de39340a6293c60",
+   "population.parquet": "4f546a213389b432a165753b4d58411a1cedcb8274fc5dc815e61436a7c5ce05",
+   "rosters.parquet": "566d51646bf864e718fa4e5634dd4b013d3099aa05ff4997d16a67a63e338752",
+   "shl_goalies.parquet": "397a50791cebbf0fc8cd2d5f4f68774452e8b313a6c0b3705d6f0b2356cd1aac",
+   "shl_skaters.parquet": "0744828aed80a1c2bdf52f05924d3700fc7d5639be402ddd8c600c67edc4a819"
+  }
+ },
+ "definitions": {
+  "season": "2025/26",
+  "players": "qualifying rung 1 + 2 players (q1_per_million), once per person",
+  "age": "season start year minus birth year",
+  "age_bands": [
+   "≤21",
+   "22–25",
+   "26–29",
+   "30+"
+  ],
+  "peer_median": "median of players per million over the peers in `peers_in_median`: peers with more than 25% of players unknown in a split dimension are left out of that split",
+  "shortfall": "(peer median - Czechia) per million x Czech population: players needed to reach the median"
+ },
+ "unknown": {
+  "CZE": {
+   "players": 53,
+   "position_unknown": 0,
+   "age_unknown": 0
+  },
+  "FIN": {
+   "players": 424,
+   "position_unknown": 0,
+   "age_unknown": 2
+  },
+  "SWE": {
+   "players": 407,
+   "position_unknown": 37,
+   "age_unknown": 2
+  },
+  "CHE": {
+   "players": 248,
+   "position_unknown": 0,
+   "age_unknown": 175
+  },
+  "SVK": {
+   "players": 13,
+   "position_unknown": 0,
+   "age_unknown": 0
+  },
+  "DEU": {
+   "players": 198,
+   "position_unknown": 0,
+   "age_unknown": 147
+  },
+  "LVA": {
+   "players": 15,
+   "position_unknown": 0,
+   "age_unknown": 0
+  },
+  "DNK": {
+   "players": 16,
+   "position_unknown": 0,
+   "age_unknown": 0
+  },
+  "NOR": {
+   "players": 20,
+   "position_unknown": 4,
+   "age_unknown": 0
+  },
+  "AUT": {
+   "players": 8,
+   "position_unknown": 1,
+   "age_unknown": 0
+  }
+ },
+ "cells": [
+  {
+   "position": "D",
+   "age_band": "22–25",
+   "counts": {
+    "CZE": 3,
+    "FIN": 42,
+    "SWE": 28,
+    "CHE": 2,
+    "SVK": 0,
+    "DEU": 4,
+    "LVA": 1,
+    "DNK": 0,
+    "NOR": 1,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.2748,
+    "FIN": 7.4298,
+    "SWE": 2.6401,
+    "CHE": 0.2192,
+    "SVK": 0.0,
+    "DEU": 0.0479,
+    "LVA": 0.542,
+    "DNK": 0.0,
+    "NOR": 0.1777,
+    "AUT": 0.0
+   },
+   "peer_median": 0.1777,
+   "home_minus_median": 0.0971,
+   "home_to_median": 1.5466,
+   "home_rank": 4,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -1.0602
+  },
+  {
+   "position": "D",
+   "age_band": "26–29",
+   "counts": {
+    "CZE": 4,
+    "FIN": 34,
+    "SWE": 43,
+    "CHE": 6,
+    "SVK": 2,
+    "DEU": 3,
+    "LVA": 1,
+    "DNK": 2,
+    "NOR": 1,
+    "AUT": 1
+   },
+   "per_million": {
+    "CZE": 0.3664,
+    "FIN": 6.0146,
+    "SWE": 4.0545,
+    "CHE": 0.6576,
+    "SVK": 0.3697,
+    "DEU": 0.0359,
+    "LVA": 0.542,
+    "DNK": 0.3319,
+    "NOR": 0.1777,
+    "AUT": 0.1085
+   },
+   "peer_median": 0.3697,
+   "home_minus_median": -0.0033,
+   "home_to_median": 0.9911,
+   "home_rank": 5,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0359
+  },
+  {
+   "position": "D",
+   "age_band": "30+",
+   "counts": {
+    "CZE": 7,
+    "FIN": 38,
+    "SWE": 48,
+    "CHE": 15,
+    "SVK": 0,
+    "DEU": 6,
+    "LVA": 0,
+    "DNK": 3,
+    "NOR": 0,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.6413,
+    "FIN": 6.7222,
+    "SWE": 4.5259,
+    "CHE": 1.644,
+    "SVK": 0.0,
+    "DEU": 0.0719,
+    "LVA": 0.0,
+    "DNK": 0.4979,
+    "NOR": 0.0,
+    "AUT": 0.0
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.6413,
+   "home_to_median": null,
+   "home_rank": 3,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -7.0
+  },
+  {
+   "position": "D",
+   "age_band": "unknown",
+   "counts": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 72,
+    "SVK": 0,
+    "DEU": 49,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 0.0,
+    "SWE": 0.0,
+    "CHE": 7.891,
+    "SVK": 0.0,
+    "DEU": 0.5871,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.0,
+    "AUT": 0.0
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.0,
+   "home_to_median": null,
+   "home_rank": 1,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0
+  },
+  {
+   "position": "D",
+   "age_band": "≤21",
+   "counts": {
+    "CZE": 0,
+    "FIN": 21,
+    "SWE": 20,
+    "CHE": 2,
+    "SVK": 1,
+    "DEU": 1,
+    "LVA": 1,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 3.7149,
+    "SWE": 1.8858,
+    "CHE": 0.2192,
+    "SVK": 0.1849,
+    "DEU": 0.012,
+    "LVA": 0.542,
+    "DNK": 0.0,
+    "NOR": 0.0,
+    "AUT": 0.0
+   },
+   "peer_median": 0.1849,
+   "home_minus_median": -0.1849,
+   "home_to_median": 0.0,
+   "home_rank": 5,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 2.0179
+  },
+  {
+   "position": "F",
+   "age_band": "22–25",
+   "counts": {
+    "CZE": 3,
+    "FIN": 79,
+    "SWE": 36,
+    "CHE": 6,
+    "SVK": 1,
+    "DEU": 7,
+    "LVA": 1,
+    "DNK": 0,
+    "NOR": 3,
+    "AUT": 2
+   },
+   "per_million": {
+    "CZE": 0.2748,
+    "FIN": 13.9752,
+    "SWE": 3.3945,
+    "CHE": 0.6576,
+    "SVK": 0.1849,
+    "DEU": 0.0839,
+    "LVA": 0.542,
+    "DNK": 0.0,
+    "NOR": 0.5331,
+    "AUT": 0.217
+   },
+   "peer_median": 0.5331,
+   "home_minus_median": -0.2583,
+   "home_to_median": 0.5155,
+   "home_rank": 5,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 2.8193
+  },
+  {
+   "position": "F",
+   "age_band": "26–29",
+   "counts": {
+    "CZE": 15,
+    "FIN": 62,
+    "SWE": 58,
+    "CHE": 11,
+    "SVK": 3,
+    "DEU": 5,
+    "LVA": 3,
+    "DNK": 4,
+    "NOR": 1,
+    "AUT": 1
+   },
+   "per_million": {
+    "CZE": 1.3741,
+    "FIN": 10.9679,
+    "SWE": 5.4688,
+    "CHE": 1.2056,
+    "SVK": 0.5546,
+    "DEU": 0.0599,
+    "LVA": 1.6259,
+    "DNK": 0.6638,
+    "NOR": 0.1777,
+    "AUT": 0.1085
+   },
+   "peer_median": 0.6638,
+   "home_minus_median": 0.7103,
+   "home_to_median": 2.07,
+   "home_rank": 4,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -7.7537
+  },
+  {
+   "position": "F",
+   "age_band": "30+",
+   "counts": {
+    "CZE": 10,
+    "FIN": 58,
+    "SWE": 72,
+    "CHE": 19,
+    "SVK": 2,
+    "DEU": 19,
+    "LVA": 3,
+    "DNK": 6,
+    "NOR": 3,
+    "AUT": 1
+   },
+   "per_million": {
+    "CZE": 0.9161,
+    "FIN": 10.2603,
+    "SWE": 6.7889,
+    "CHE": 2.0824,
+    "SVK": 0.3697,
+    "DEU": 0.2276,
+    "LVA": 1.6259,
+    "DNK": 0.9958,
+    "NOR": 0.5331,
+    "AUT": 0.1085
+   },
+   "peer_median": 0.9958,
+   "home_minus_median": -0.0797,
+   "home_to_median": 0.92,
+   "home_rank": 5,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.8695
+  },
+  {
+   "position": "F",
+   "age_band": "unknown",
+   "counts": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 1,
+    "CHE": 103,
+    "SVK": 0,
+    "DEU": 88,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 0.0,
+    "SWE": 0.0943,
+    "CHE": 11.2886,
+    "SVK": 0.0,
+    "DEU": 1.0543,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.0,
+    "AUT": 0.0
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.0,
+   "home_to_median": null,
+   "home_rank": 2,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0
+  },
+  {
+   "position": "F",
+   "age_band": "≤21",
+   "counts": {
+    "CZE": 0,
+    "FIN": 58,
+    "SWE": 31,
+    "CHE": 2,
+    "SVK": 3,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 4,
+    "AUT": 2
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 10.2603,
+    "SWE": 2.923,
+    "CHE": 0.2192,
+    "SVK": 0.5546,
+    "DEU": 0.0,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.7108,
+    "AUT": 0.217
+   },
+   "peer_median": 0.5546,
+   "home_minus_median": -0.5546,
+   "home_to_median": 0.0,
+   "home_rank": 6,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 6.0538
+  },
+  {
+   "position": "G",
+   "age_band": "22–25",
+   "counts": {
+    "CZE": 3,
+    "FIN": 5,
+    "SWE": 6,
+    "CHE": 2,
+    "SVK": 0,
+    "DEU": 1,
+    "LVA": 1,
+    "DNK": 0,
+    "NOR": 1,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.2748,
+    "FIN": 0.8845,
+    "SWE": 0.5657,
+    "CHE": 0.2192,
+    "SVK": 0.0,
+    "DEU": 0.012,
+    "LVA": 0.542,
+    "DNK": 0.0,
+    "NOR": 0.1777,
+    "AUT": 0.0
+   },
+   "peer_median": 0.1777,
+   "home_minus_median": 0.0971,
+   "home_to_median": 1.5466,
+   "home_rank": 4,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -1.0602
+  },
+  {
+   "position": "G",
+   "age_band": "26–29",
+   "counts": {
+    "CZE": 4,
+    "FIN": 8,
+    "SWE": 10,
+    "CHE": 2,
+    "SVK": 0,
+    "DEU": 1,
+    "LVA": 1,
+    "DNK": 0,
+    "NOR": 1,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.3664,
+    "FIN": 1.4152,
+    "SWE": 0.9429,
+    "CHE": 0.2192,
+    "SVK": 0.0,
+    "DEU": 0.012,
+    "LVA": 0.542,
+    "DNK": 0.0,
+    "NOR": 0.1777,
+    "AUT": 0.0
+   },
+   "peer_median": 0.1777,
+   "home_minus_median": 0.1887,
+   "home_to_median": 2.0621,
+   "home_rank": 4,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -2.0602
+  },
+  {
+   "position": "G",
+   "age_band": "30+",
+   "counts": {
+    "CZE": 4,
+    "FIN": 11,
+    "SWE": 13,
+    "CHE": 6,
+    "SVK": 1,
+    "DEU": 4,
+    "LVA": 3,
+    "DNK": 1,
+    "NOR": 1,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.3664,
+    "FIN": 1.9459,
+    "SWE": 1.2258,
+    "CHE": 0.6576,
+    "SVK": 0.1849,
+    "DEU": 0.0479,
+    "LVA": 1.6259,
+    "DNK": 0.166,
+    "NOR": 0.1777,
+    "AUT": 0.0
+   },
+   "peer_median": 0.1849,
+   "home_minus_median": 0.1816,
+   "home_to_median": 1.9822,
+   "home_rank": 4,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -1.9821
+  },
+  {
+   "position": "G",
+   "age_band": "unknown",
+   "counts": {
+    "CZE": 0,
+    "FIN": 2,
+    "SWE": 1,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 10,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 0.3538,
+    "SWE": 0.0943,
+    "CHE": 0.0,
+    "SVK": 0.0,
+    "DEU": 0.1198,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.0,
+    "AUT": 0.0
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.0,
+   "home_to_median": null,
+   "home_rank": 3,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0
+  },
+  {
+   "position": "G",
+   "age_band": "≤21",
+   "counts": {
+    "CZE": 0,
+    "FIN": 6,
+    "SWE": 3,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 1.0614,
+    "SWE": 0.2829,
+    "CHE": 0.0,
+    "SVK": 0.0,
+    "DEU": 0.0,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.0,
+    "AUT": 0.0
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.0,
+   "home_to_median": null,
+   "home_rank": 3,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0
+  },
+  {
+   "position": "unknown",
+   "age_band": "22–25",
+   "counts": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 6,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 1,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 0.0,
+    "SWE": 0.5657,
+    "CHE": 0.0,
+    "SVK": 0.0,
+    "DEU": 0.0,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.1777,
+    "AUT": 0.0
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.0,
+   "home_to_median": null,
+   "home_rank": 3,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0
+  },
+  {
+   "position": "unknown",
+   "age_band": "26–29",
+   "counts": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 4,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 1,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 0.0,
+    "SWE": 0.3772,
+    "CHE": 0.0,
+    "SVK": 0.0,
+    "DEU": 0.0,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.1777,
+    "AUT": 0.0
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.0,
+   "home_to_median": null,
+   "home_rank": 3,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0
+  },
+  {
+   "position": "unknown",
+   "age_band": "30+",
+   "counts": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 10,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 0.0,
+    "SWE": 0.9429,
+    "CHE": 0.0,
+    "SVK": 0.0,
+    "DEU": 0.0,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.0,
+    "AUT": 0.0
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.0,
+   "home_to_median": null,
+   "home_rank": 2,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0
+  },
+  {
+   "position": "unknown",
+   "age_band": "≤21",
+   "counts": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 17,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 2,
+    "AUT": 1
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 0.0,
+    "SWE": 1.6029,
+    "CHE": 0.0,
+    "SVK": 0.0,
+    "DEU": 0.0,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.3554,
+    "AUT": 0.1085
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.0,
+   "home_to_median": null,
+   "home_rank": 4,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0
+  }
+ ],
+ "by_position": [
+  {
+   "position": "D",
+   "counts": {
+    "CZE": 14,
+    "FIN": 135,
+    "SWE": 139,
+    "CHE": 97,
+    "SVK": 3,
+    "DEU": 63,
+    "LVA": 3,
+    "DNK": 5,
+    "NOR": 2,
+    "AUT": 1
+   },
+   "per_million": {
+    "CZE": 1.2825,
+    "FIN": 23.8816,
+    "SWE": 13.1064,
+    "CHE": 10.631,
+    "SVK": 0.5546,
+    "DEU": 0.7548,
+    "LVA": 1.6259,
+    "DNK": 0.8298,
+    "NOR": 0.3554,
+    "AUT": 0.1085
+   },
+   "peer_median": 0.8298,
+   "home_minus_median": 0.4527,
+   "home_to_median": 1.5456,
+   "home_rank": 5,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "CHE",
+    "SVK",
+    "DEU",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -4.9421
+  },
+  {
+   "position": "F",
+   "counts": {
+    "CZE": 28,
+    "FIN": 257,
+    "SWE": 198,
+    "CHE": 141,
+    "SVK": 9,
+    "DEU": 119,
+    "LVA": 7,
+    "DNK": 10,
+    "NOR": 11,
+    "AUT": 6
+   },
+   "per_million": {
+    "CZE": 2.5651,
+    "FIN": 45.4635,
+    "SWE": 18.6695,
+    "CHE": 15.4533,
+    "SVK": 1.6638,
+    "DEU": 1.4257,
+    "LVA": 3.7938,
+    "DNK": 1.6596,
+    "NOR": 1.9547,
+    "AUT": 0.651
+   },
+   "peer_median": 1.9547,
+   "home_minus_median": 0.6104,
+   "home_to_median": 1.3122,
+   "home_rank": 5,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "CHE",
+    "SVK",
+    "DEU",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -6.6626
+  },
+  {
+   "position": "G",
+   "counts": {
+    "CZE": 11,
+    "FIN": 32,
+    "SWE": 33,
+    "CHE": 10,
+    "SVK": 1,
+    "DEU": 16,
+    "LVA": 5,
+    "DNK": 1,
+    "NOR": 3,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 1.0077,
+    "FIN": 5.6608,
+    "SWE": 3.1116,
+    "CHE": 1.096,
+    "SVK": 0.1849,
+    "DEU": 0.1917,
+    "LVA": 2.7099,
+    "DNK": 0.166,
+    "NOR": 0.5331,
+    "AUT": 0.0
+   },
+   "peer_median": 0.5331,
+   "home_minus_median": 0.4746,
+   "home_to_median": 1.8903,
+   "home_rank": 5,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "CHE",
+    "SVK",
+    "DEU",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -5.1807
+  },
+  {
+   "position": "unknown",
+   "counts": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 37,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 4,
+    "AUT": 1
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 0.0,
+    "SWE": 3.4887,
+    "CHE": 0.0,
+    "SVK": 0.0,
+    "DEU": 0.0,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.7108,
+    "AUT": 0.1085
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.0,
+   "home_to_median": null,
+   "home_rank": 4,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "CHE",
+    "SVK",
+    "DEU",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0
+  }
+ ],
+ "by_age_band": [
+  {
+   "age_band": "22–25",
+   "counts": {
+    "CZE": 9,
+    "FIN": 126,
+    "SWE": 76,
+    "CHE": 10,
+    "SVK": 1,
+    "DEU": 12,
+    "LVA": 3,
+    "DNK": 0,
+    "NOR": 6,
+    "AUT": 2
+   },
+   "per_million": {
+    "CZE": 0.8245,
+    "FIN": 22.2895,
+    "SWE": 7.1661,
+    "CHE": 1.096,
+    "SVK": 0.1849,
+    "DEU": 0.1438,
+    "LVA": 1.6259,
+    "DNK": 0.0,
+    "NOR": 1.0662,
+    "AUT": 0.217
+   },
+   "peer_median": 1.0662,
+   "home_minus_median": -0.2417,
+   "home_to_median": 0.7733,
+   "home_rank": 5,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 2.6386
+  },
+  {
+   "age_band": "26–29",
+   "counts": {
+    "CZE": 23,
+    "FIN": 104,
+    "SWE": 115,
+    "CHE": 19,
+    "SVK": 5,
+    "DEU": 9,
+    "LVA": 5,
+    "DNK": 6,
+    "NOR": 4,
+    "AUT": 2
+   },
+   "per_million": {
+    "CZE": 2.107,
+    "FIN": 18.3977,
+    "SWE": 10.8434,
+    "CHE": 2.0824,
+    "SVK": 0.9243,
+    "DEU": 0.1078,
+    "LVA": 2.7099,
+    "DNK": 0.9958,
+    "NOR": 0.7108,
+    "AUT": 0.217
+   },
+   "peer_median": 0.9958,
+   "home_minus_median": 1.1113,
+   "home_to_median": 2.116,
+   "home_rank": 4,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -12.1305
+  },
+  {
+   "age_band": "30+",
+   "counts": {
+    "CZE": 21,
+    "FIN": 107,
+    "SWE": 143,
+    "CHE": 40,
+    "SVK": 3,
+    "DEU": 29,
+    "LVA": 6,
+    "DNK": 10,
+    "NOR": 4,
+    "AUT": 1
+   },
+   "per_million": {
+    "CZE": 1.9238,
+    "FIN": 18.9284,
+    "SWE": 13.4835,
+    "CHE": 4.3839,
+    "SVK": 0.5546,
+    "DEU": 0.3474,
+    "LVA": 3.2519,
+    "DNK": 1.6596,
+    "NOR": 0.7108,
+    "AUT": 0.1085
+   },
+   "peer_median": 1.6596,
+   "home_minus_median": 0.2642,
+   "home_to_median": 1.1592,
+   "home_rank": 4,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": -2.8842
+  },
+  {
+   "age_band": "unknown",
+   "counts": {
+    "CZE": 0,
+    "FIN": 2,
+    "SWE": 2,
+    "CHE": 175,
+    "SVK": 0,
+    "DEU": 147,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 0.3538,
+    "SWE": 0.1886,
+    "CHE": 19.1796,
+    "SVK": 0.0,
+    "DEU": 1.7612,
+    "LVA": 0.0,
+    "DNK": 0.0,
+    "NOR": 0.0,
+    "AUT": 0.0
+   },
+   "peer_median": 0.0,
+   "home_minus_median": 0.0,
+   "home_to_median": null,
+   "home_rank": 3,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 0.0
+  },
+  {
+   "age_band": "≤21",
+   "counts": {
+    "CZE": 0,
+    "FIN": 85,
+    "SWE": 71,
+    "CHE": 4,
+    "SVK": 4,
+    "DEU": 1,
+    "LVA": 1,
+    "DNK": 0,
+    "NOR": 6,
+    "AUT": 3
+   },
+   "per_million": {
+    "CZE": 0.0,
+    "FIN": 15.0366,
+    "SWE": 6.6946,
+    "CHE": 0.4384,
+    "SVK": 0.7395,
+    "DEU": 0.012,
+    "LVA": 0.542,
+    "DNK": 0.0,
+    "NOR": 1.0662,
+    "AUT": 0.3255
+   },
+   "peer_median": 0.7395,
+   "home_minus_median": -0.7395,
+   "home_to_median": 0.0,
+   "home_rank": 7,
+   "peers_in_median": [
+    "FIN",
+    "SWE",
+    "SVK",
+    "LVA",
+    "DNK",
+    "NOR",
+    "AUT"
+   ],
+   "shortfall": 8.0717
+  }
+ ],
+ "largest_shortfalls": [
+  {
+   "position": "F",
+   "age_band": "≤21",
+   "shortfall": 6.0538,
+   "home_to_median": 0.0
+  },
+  {
+   "position": "F",
+   "age_band": "22–25",
+   "shortfall": 2.8193,
+   "home_to_median": 0.5155
+  },
+  {
+   "position": "D",
+   "age_band": "≤21",
+   "shortfall": 2.0179,
+   "home_to_median": 0.0
+  },
+  {
+   "position": "F",
+   "age_band": "30+",
+   "shortfall": 0.8695,
+   "home_to_median": 0.92
+  },
+  {
+   "position": "D",
+   "age_band": "26–29",
+   "shortfall": 0.0359,
+   "home_to_median": 0.9911
+  }
+ ]
+}
