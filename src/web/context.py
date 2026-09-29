@@ -10,6 +10,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import subprocess
+import unicodedata
 from pathlib import Path
 from statistics import median
 from typing import Any
@@ -292,6 +293,78 @@ def _pool(pool: dict) -> dict:
     }
 
 
+def _fold(name: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFKD", name) if not unicodedata.combining(c)).casefold()
+
+
+def _autumn(news: dict | None, pool: dict, q5: dict) -> dict:
+    """"This autumn" (#autumn): dated news from `config/news/cze.yaml` beside the atlas's own numbers.
+
+    The news gives only dated facts and their sources. The captain's numbers come from here: his
+    latest-season row in `pool` (by `person_id`, whose name must match the news) and his row in
+    `q5_abroad` for the same season, league and team, which carries the league-season median at his
+    position. Footnotes are numbered in order of first citation, in the page's order: coach, then captain. Empty dict without a news file.
+    """
+    if not news:
+        return {}
+    by_key = {s["key"]: s for s in news["sources"]}
+    order: list[str] = []
+
+    def cite(keys: list[str]) -> list[int]:
+        for k in keys:
+            if k not in by_key:
+                raise KeyError(f"news source {k!r} is cited but not listed")
+            if k not in order:
+                order.append(k)
+        return sorted(order.index(k) + 1 for k in keys)
+
+    k = news["coach"]
+    coach = {
+        **k,
+        "approved": fmt.long_date(k["approved"]),
+        "contract_years": {2: "two", 3: "three", 4: "four"}.get(k["contract_years"], str(k["contract_years"])),
+        "notes_approved": cite(k["sources_approved"]),
+        "notes_staff": cite(k["sources_staff"]),
+        "first_game": {**k["first_game"], "date": fmt.long_date(k["first_game"]["date"]),
+                       "notes": cite(k["first_game"]["sources"])},
+    }
+    words = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth", 7: "seventh"}
+    c = news["captain"]
+    player = next((p for p in pool["players"] if p["person_id"] == c["person_id"]), None)
+    if player is None or _fold(player["name"]) != _fold(c["name"]):
+        raise ValueError(f"news captain {c['name']!r} is not {c['person_id']} in outputs/pool.json")
+    last = player["seasons"][-1]
+    q5_row = next(
+        (r for r in q5["players"] if r["person_id"] == c["person_id"] and r["season"] == last["season"]
+         and r["league"] == last["league"] and r["team"] == last["team"]),
+        None,
+    )
+    captain = {
+        **c,
+        "named": fmt.long_date(c["named"]),
+        "nth": fmt.ordinal(c["nth"]),
+        "czech_nth": words.get(c["czech_nth"], fmt.ordinal(c["czech_nth"])),
+        "notes_named": cite(c["sources_named"]),
+        "notes_previous": cite(c["sources_previous"]),
+        "notes_czech_nth": cite(c["sources_czech_nth"]),
+        "season": last,
+        "position_word": POSITION_WORD[player["position"]],
+        "abroad": q5_row,
+    }
+    sources = [
+        {**by_key[key], "n": i + 1, "date": fmt.long_date(by_key[key]["date"]) if by_key[key].get("date") else None,
+         "accessed": fmt.long_date(by_key[key]["accessed"])}
+        for i, key in enumerate(order)
+    ]
+    return {
+        "data_as_of": fmt.long_date(news["data_as_of"]),
+        "news_as_of": fmt.long_date(news["news_as_of"]),
+        "captain": captain,
+        "coach": coach,
+        "sources": sources,
+    }
+
+
 def _population_m(q1: dict) -> float:
     home = next(n for n in q1["headline"]["nations"] if n["iso3"] == HOME)
     return home["population"] / 1e6
@@ -436,6 +509,7 @@ def build(outputs_dir: Path | None = None, build_date: str | None = None) -> dic
         "band_word": BAND_WORD,
         "build_date": build_date or dt.date.today().isoformat(),
         "sources": sources(),
+        "autumn": _autumn(config.news(), o["pool"], o["q5_abroad"]),
         "f1": fmt.f1,
         "f2": fmt.f2,
         "pct": fmt.pct,
@@ -443,6 +517,7 @@ def build(outputs_dir: Path | None = None, build_date: str | None = None) -> dic
         "num": fmt.num,
         "ordinal": fmt.ordinal,
         "times": fmt.times,
+        "mmss": fmt.mmss,
         "median": median,
     }
     ctx["take"] = _takeaways(ctx)

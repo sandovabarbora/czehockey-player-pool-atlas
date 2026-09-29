@@ -73,6 +73,14 @@ def nt_veterans() -> dict[str, list[str]]:
     return load_yaml("nt_veterans.yaml")
 
 
+def news(nation: str = "cze") -> dict[str, Any] | None:
+    """Return the dated news (`config/news/<nation>.yaml`) for the report's
+    "This autumn" section, or None when there is none -- the section is then
+    left out."""
+    path = CONFIG_DIR / "news" / f"{nation}.yaml"
+    return load_yaml(f"news/{nation}.yaml") if path.exists() else None
+
+
 # --- Reproducibility ---------------------------------------------------------
 
 RANDOM_SEED: int = 42

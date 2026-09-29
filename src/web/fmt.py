@@ -47,3 +47,16 @@ def ratio_words(x: float | None, tol: float = 0.03) -> str:
     if x < 1 - tol:
         return "below"
     return "at"
+
+
+def mmss(seconds: float | None) -> str:
+    """1239.3 -> '20:39' (minutes:seconds, as ice time is written)."""
+    if seconds is None:
+        return "–"
+    m, s = divmod(round(seconds), 60)
+    return f"{m}:{s:02d}"
+
+
+def long_date(d: object) -> str:
+    """date(2026, 9, 29) -> '29 September 2026'."""
+    return f"{d.day} {d:%B} {d.year}"  # type: ignore[attr-defined]

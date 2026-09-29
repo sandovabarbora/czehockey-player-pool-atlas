@@ -120,3 +120,37 @@ def test_pool_data_rows(outputs: dict) -> None:
     p = data["players"][0]
     assert set(p) == {"id", "n", "b", "bd", "p", "nb", "r", "l", "g", "s"}
     assert all(len(row) == len(data["fields"]) for row in p["s"])
+
+
+def test_autumn_section(site: Path, outputs: dict) -> None:
+    """This autumn: the as-of line, only confirmed news, footnoted, the captain's numbers from outputs/."""
+    html = (site / "index.html").read_text(encoding="utf-8")
+    assert 'id="autumn"' in html
+    sec = html[html.index('id="autumn"'):]
+    sec = sec[: sec.index("</section>")]
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", sec))
+    assert "Atlas data as of 29 September 2026; news as of 29 September 2026" in text
+    news = config.news()
+    assert news is not None
+    for s in news["sources"]:
+        assert s["url"] in sec, s["key"]
+    assert len(re.findall(r'<li id="autumn-src-\d+"', sec)) == len(news["sources"])
+    for n in set(re.findall(r'href="#autumn-src-(\d+)"', sec)):
+        assert f'id="autumn-src-{n}"' in sec
+    # the Bruins captaincy is a club role; the unconfirmed items stay out
+    assert "not a national-team role" in text
+    for word in ("Červenka", "alternate captain", "Brno", "Plzeň"):
+        assert word not in text, word
+    pid = news["captain"]["person_id"]
+    player = next(p for p in outputs["pool"]["players"] if p["person_id"] == pid)
+    last = player["seasons"][-1]
+    row = next(r for r in outputs["q5_abroad"]["players"] if r["person_id"] == pid and r["season"] == last["season"])
+    assert f"NHL games, {last['season']} {int(last['games'])}" in text
+    assert f"Points {int(last['points'])}" in text
+    assert fmt.mmss(last["toi_per_game_s"]) in text and fmt.mmss(row["median_toi_per_game_s"]) in text
+    assert fmt.f2(row["median_points_per_game"]) in text
+    assert 'href="#q6"' in sec
+
+
+def test_mmss() -> None:
+    assert fmt.mmss(1239.3) == "20:39" and fmt.mmss(875.69) == "14:36" and fmt.mmss(59.6) == "1:00"

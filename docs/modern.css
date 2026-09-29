@@ -1294,3 +1294,19 @@ footer { margin-top: 0; }
   .ax-grid .ax-table thead th, .ax-grid .ax-table thead th:last-child { display: table-cell; width: auto; padding: 0.3rem 0.6rem 0.3rem 0; text-align: left; border-bottom: 1px solid var(--ink); }
   .ax-grid .ax-table th.num, .ax-grid .ax-table thead th.num:last-child { text-align: right; }
 }
+/* "This autumn" (#autumn): dated news beside the snapshot, as in the football atlas */
+.autumn-asof { font-family: var(--font-mono); font-size: var(--t-micro); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0.25rem 0 1.25rem; }
+.autumn-body { max-width: 72ch; }
+.autumn .container .autumn-body p { max-width: 72ch; }
+.autumn-body h3 { font-size: 1.125rem; margin: 1.75rem 0 0.5rem; }
+.autumn-body sup.fn { font-size: 0.7em; line-height: 0; margin-left: 0.1em; }
+.autumn-body sup.fn a { text-decoration: none; }
+.autumn-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 0; margin: 1rem 0 0.5rem; border-top: 4px solid var(--acid); }
+.autumn-stats > div { border-bottom: 1px solid var(--rule); padding: 0.6rem 1rem 0.6rem 0; }
+.autumn-stats dt { font-family: var(--font-mono); font-size: var(--t-micro); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.autumn-stats dd { margin: 0.2rem 0 0; font-family: var(--font-display); font-size: 1.5rem; font-variant-numeric: tabular-nums; line-height: 1.2; }
+.autumn-stats dd .muted { display: block; font-family: var(--font-sans); font-size: 0.8125rem; color: var(--muted); }
+.autumn-sources-h { font-size: 0.9375rem !important; }
+.autumn-sources { font-size: 0.8125rem; padding-left: 1.4em; overflow-wrap: anywhere; }
+.autumn-sources li { margin: 0.3rem 0; }
+.autumn-sources li:target { background: color-mix(in srgb, var(--acid) 14%, transparent); }

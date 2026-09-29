@@ -53,7 +53,7 @@
     {% for t in take %}
     <div class="nx-take"><p class="nx-take-n">{{ loop.index }}</p><div><p class="nx-take-head">{{ t.head }}</p>{% for b in t.body %}<p class="nx-take-body">{{ b }}</p>{% endfor %}</div></div>
     {% endfor %}
-    <p class="take-line close-links"><a href="#scope">What is counted</a> · <a href="#limitations">Limitations</a> · <a href="atlas/">Every Czech player in the pool</a></p>
+    <p class="take-line close-links"><a href="#scope">What is counted</a> · <a href="#limitations">Limitations</a> · {% if autumn %}<a href="#autumn">This autumn</a> · {% endif %}<a href="atlas/">Every Czech player in the pool</a></p>
   </div>
 </section>
 
@@ -260,6 +260,48 @@
   </div>
 </section>
 
+{# This autumn: dated news (config/news/cze.yaml) beside the atlas's own numbers; only confirmed,
+   footnoted facts. Left out when there is no news file. #}
+{% macro fn(ns) %}<sup class="fn">{% for n in ns %}{% if not loop.first %},{% endif %}<a href="#autumn-src-{{ n }}">{{ n }}</a>{% endfor %}</sup>{% endmacro %}
+{% if autumn %}
+{% set au = autumn %}
+{% set cp = au.captain %}
+{% set co = au.coach %}
+<section class="slide autumn" id="autumn">
+  <div class="container">
+    <p class="close-kicker">News</p>
+    <h2 class="slide-q">This autumn</h2>
+    <p class="autumn-asof">Atlas data as of {{ au.data_as_of }}; news as of {{ au.news_as_of }}</p>
+    <div class="autumn-body">
+      <p class="autumn-lede">Two dated items of news, with their sources listed at the end of this section. The numbers beside them are the atlas's own, from its snapshot, which this section does not refresh.</p>
+
+      <h3>A new head coach of the national team</h3>
+      <p>{{ co.new }} succeeds {{ co.previous }} as head coach of the Czech men's national team. {{ co.approved_by[0]|upper }}{{ co.approved_by[1:] }} approved the appointment on {{ co.approved }}, with {{ co.contract_years }}-year contracts.{{ fn(co.notes_approved) }} The staff: {{ co.new }} with coaches {{ co.coaches|join(' and ') }}, goalkeeping coach {{ co.goalkeeping_coach }}, and {{ co.general_manager }} as general manager in place of {{ co.previous_general_manager }}.{{ fn(co.notes_staff) }} The first game under the new staff is on {{ co.first_game.date }} against {{ co.first_game.opponent }} at the {{ co.first_game.venue }} ({{ co.first_game.competition }}).{{ fn(co.first_game.notes) }}</p>
+      <p class="capita-note">What the national team's rosters have been built from since {{ q6.first_year }}, by league: <a href="#q6">question 6</a>.</p>
+
+      <h3>A club captaincy in the NHL</h3>
+      <p>On {{ cp.named }} the {{ cp.club }} named {{ cp.name }} the {{ cp.nth }} captain in the club's history.{{ fn(cp.notes_named) }} The previous captain was {{ cp.previous }} ({{ cp.previous_note }}).{{ fn(cp.notes_previous) }} According to hokej.cz, {{ cp.name.split(' ')[-1] }} is the {{ cp.czech_nth }} Czech to be a permanent captain in the NHL.{{ fn(cp.notes_czech_nth) }} The captaincy is with his NHL club, not a national-team role.</p>
+      {% set s = cp.season %}
+      {% set a = cp.abroad %}
+      <dl class="autumn-stats" aria-label="{{ cp.name }}, {{ s.league }} {{ s.season }}, from the atlas">
+        <div><dt>{{ s.league }} games, {{ s.season }}</dt><dd>{{ num(s.games) }}</dd></div>
+        <div><dt>Points</dt><dd>{{ num(s.points) }} <span class="muted">{{ num(s.goals) }} goals, {{ num(s.assists) }} assists</span></dd></div>
+        <div><dt>Ice time per game</dt><dd>{{ mmss(s.toi_per_game_s) }}{% if a %} <span class="muted">median {{ mmss(a.median_toi_per_game_s) }}</span>{% endif %}</dd></div>
+        {% if a %}<div><dt>Points per game</dt><dd>{{ f2(a.points_per_game) }} <span class="muted">median {{ f2(a.median_points_per_game) }}</span></dd></div>{% endif %}
+      </dl>
+      <p class="capita-note">From the atlas's pool data, {{ s.league }} {{ s.season }}. The median is over all {{ s.league }} {{ cp.position_word }} who reached the games threshold that season, as in <a href="#q5">question 5</a>. His seasons since {{ pool.window.split('–')[0] }} are on the <a href="atlas/">pool page</a>.</p>
+
+      <h3 class="autumn-sources-h">Sources</h3>
+      <ol class="autumn-sources">
+        {% for src in au.sources %}
+        <li id="autumn-src-{{ src.n }}">{{ src.publisher }} ({{ src.date or 'n.d.' }}). <a href="{{ src.url }}" rel="noopener">{{ src.url }}</a>, accessed {{ src.accessed }}.</li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="methodology" id="methodology">
   <div class="container">
     <h2>How it is built, and where it stops</h2>
@@ -314,6 +356,7 @@
 
     <h3 id="changes">Change log</h3>
     <ul class="changelog">
+      <li><span class="mono">2026-09-29</span> A <a href="#autumn">This autumn</a> section: two dated, sourced items of news (the national team's new head coach and staff; David Pastrňák's club captaincy in Boston), beside the atlas's own numbers.</li>
       <li><span class="mono">2026-09-29</span> Rebuilt on the football atlas's model: ten nations, a two-rung league ladder, fetchers with a committed snapshot, one analysis module per question, interactive charts drawn from <code>outputs/</code>, and a <a href="atlas/">pool page</a>. The style map, the AI layer and the video proof of concept of the earlier version are withdrawn.</li>
       <li><span class="mono">2026-09-22</span> The site became English only.</li>
       <li><span class="mono">2026-05-18</span> First version: a style map of Czech players from a crosswalk of league statistics.</li>

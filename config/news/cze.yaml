@@ -1,0 +1,83 @@
+# "This autumn" (report section #autumn): dated news beside the atlas's
+# frozen data. The atlas data is NOT refreshed for it -- every number the
+# section shows is read from outputs/ (pool.json, q5_abroad.json), and only
+# the dated facts below come from outside.
+#
+# Only facts graded "confirmed by an official source" or "confirmed by
+# reputable media only" in the news review of 29 September 2026 are here.
+# Left out as "not confirmed": any national-team captaincy (no announcement
+# found; Pastrňák was an alternate captain at the 2026 Olympics) and the
+# 2026-27 Czech Hockey Games venues and dates.
+# A source is cited only if it was read; `date` is its publication date where
+# the review recorded one, null otherwise (rendered "n.d.").
+#
+# Wording rules: no evaluation of the appointments or the players; the
+# Pastrňák item is a club (NHL) captaincy and must not read as the national
+# team's.
+#
+# The section is left out when this file is missing (src.web.context._autumn).
+
+data_as_of: 2026-09-29
+news_as_of: 2026-09-29
+
+sources:
+  - key: bruins_captain
+    publisher: Boston Bruins / NHL.com
+    date: 2026-09-27
+    url: "https://www.nhl.com/bruins/news/bruins-name-david-pastrnak-28th-captain-in-team-history"
+    accessed: 2026-09-29
+  - key: bruins_reaction
+    publisher: Boston Bruins / NHL.com
+    date: null
+    url: "https://www.nhl.com/bruins/news/pastrnak-reacts-to-being-named-28th-bruins-captain-grateful-humbled-and-honored"
+    accessed: 2026-09-29
+  - key: hokej_captain
+    publisher: hokej.cz (Czech Ice Hockey Association)
+    date: null
+    url: "https://www.hokej.cz/oficialne-pastrnak-je-kapitanem-bostonu-v-historii-nhl-jako-sesty-cech/5098230"
+    accessed: 2026-09-29
+  - key: sport_motak
+    publisher: Sport.cz
+    date: 2026-04-16
+    url: "https://www.sport.cz/clanek/hokej-reprezentace-o-rulikove-nastupci-u-reprezentace-je-rozhodnuto-5437460"
+    accessed: 2026-09-29
+  - key: hokej_motak
+    publisher: hokej.cz (Czech Ice Hockey Association)
+    date: 2026-09-15
+    url: "https://www.hokej.cz/poprve-od-zlateho-ms-motak-zacne-reprezentacni-misi-v-o2-arene/5097991"
+    accessed: 2026-09-29
+
+# A club captaincy in the NHL. `person_id` is the player's id in
+# outputs/pool.json; the name must match it (diacritics folded).
+captain:
+  name: David Pastrňák
+  person_id: "NHL:8477956"
+  club: Boston Bruins
+  named: 2026-09-27
+  nth: 28
+  previous: Brad Marchand
+  previous_note: captain 2023–25, traded in March 2025
+  czech_nth: 6
+  sources_named: [bruins_captain, bruins_reaction]
+  sources_previous: [bruins_captain]
+  sources_czech_nth: [hokej_captain]
+
+# The men's national team's new head coach and staff.
+coach:
+  new: Zdeněk Moták
+  previous: Radim Rulík
+  approved: 2026-04-16
+  approved_by: the executive board of the Czech Ice Hockey Association
+  contract_years: 2
+  sources_approved: [sport_motak]
+  coaches: [Pavel Gross, Richard Král]
+  goalkeeping_coach: Jaroslav Kameš
+  general_manager: Patrik Eliáš
+  previous_general_manager: Jiří Šlégr
+  sources_staff: [hokej_motak]
+  first_game:
+    date: 2026-11-05
+    opponent: Sweden
+    venue: O2 Arena, Prague
+    competition: Euro Hockey Tour
+    sources: [hokej_motak]
