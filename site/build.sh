@@ -1,21 +1,17 @@
 #!/bin/zsh
-# Build the published site from the Czech render:
-#   docs/index.html     English (the site is English only since 2026-09-22;
-#                       the Czech render stays the content source)
-#   docs/atlas_meta.json  interaction metadata for atlas.js
-# Source of truth for content: site/source/index.cs.html (= outputs/index.html
-# from `make render`). Layout/photos/i18n/formulas are applied by the scripts
-# here; translation is exact-match so a re-rendered source will fail loudly
-# where the copy changed (fix the pair in translate_index.py).
+# Build the published site from the analysis outputs (`make analysis`):
+#   docs/index.html          the report          templates/site/report.html.j2
+#   docs/atlas/index.html    the pool page       templates/site/atlas.html.j2
+#   docs/charts/report.json  chart data          (src/web/charts.py)
+#   docs/atlas/pool.json     the pool list
+#   docs/*.css, charts.js, atlas.app.js          templates/site/static/
+# Every number on the pages is read from outputs/*.json by src/web/context.py.
+# docs/CNAME and docs/img/ are left as they are.
+#
+# usage: site/build.sh [OUT_DIR]   (default docs/)
 set -e
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
-S="$ROOT/site"
-D="$ROOT/docs"
-cp "$S/source/index.cs.html" "$D/index.html"
-python3 "$S/enrich_index.py" "$D/index.html"
-python3 "$S/translate_index.py" "$D/index.html"
-python3 "$S/svg_labels.py" "$D" >/dev/null
-python3 "$S/atlas_meta.py" "$D" >/dev/null
-python3 "$S/svg_theme.py" "$D" >/dev/null   # legacy-palette figures into the register; after atlas_meta, which reads the legacy fills
-python3 "$S/insert_takeaways.py" "$D/index.html" en
-echo "built docs/index.html (en)"
+PY=${PYTHON:-python3}
+if command -v uv >/dev/null 2>&1 && [ -f "$ROOT/pyproject.toml" ]; then PY="uv run --project $ROOT python"; fi
+cd "$ROOT"
+${=PY} -m src.web ${1:+"$1"}

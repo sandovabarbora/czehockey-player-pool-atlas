@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-home="CZE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{% endblock %}">
+  <link rel="canonical" href="{% block canonical %}{% endblock %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ prefix }}style.css?v={{ v }}">
+  <link rel="stylesheet" href="{{ prefix }}modern.css?v={{ v }}">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  {% block scripts %}{% endblock %}
+</head>
+<body id="top"{% block body_attrs %}{% endblock %}>
+<nav class="topbar" aria-label="Navigation">
+  <a class="topbar-brand" href="{{ prefix }}">Czech Hockey <span>Atlas</span></a>
+  <div class="topbar-links">
+    <a href="{{ prefix }}#take">Summary</a>
+    <a href="{{ prefix }}#q1">Questions</a>
+    <a href="{{ prefix }}#q7">Goalkeepers</a>
+    <a href="{{ prefix }}#methodology">Methodology</a>
+    <a href="{{ prefix }}atlas/"{% if page == 'atlas' %} aria-current="page"{% endif %}>Players</a>
+  </div>
+</nav>
+{% block body %}{% endblock %}
+<footer>
+  <div class="container">
+    <div class="role-block">
+      <p class="role-kicker">Built by Barbora Šandová — data &amp; cloud engineer</p>
+      <p class="role-body">A descriptive, reproducible benchmark from public statistics: the fetchers, the snapshot, the analysis and this page are one repository. No predictions, no selection advice.</p>
+      <p class="role-author">
+        <span class="role-author-name">Barbora Šandová</span>
+        <span class="role-author-contact">
+          <a href="mailto:hello@bsandova.com">hello@bsandova.com</a>
+          &middot;
+          <a href="https://github.com/sandovabarbora/czehockey-player-pool-atlas">github.com/sandovabarbora/czehockey-player-pool-atlas</a>
+        </span>
+      </p>
+    </div>
+    <p class="rendered-at">Built {{ build_date }} from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+  </div>
+</footer>
+</body>
+</html>

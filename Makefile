@@ -1,6 +1,6 @@
 .PHONY: help install install-browsers fetch features reduce render all clean test lint check \
 	fetch-nhl fetch-eurostat fetch-liiga fetch-shl fetch-extraliga verify-snapshot restore-snapshot \
-	analysis analysis-fast
+	analysis analysis-fast pages
 
 PYTHON ?= python
 VENV   ?= .venv
@@ -22,7 +22,8 @@ help:
 	@echo "  restore-snapshot Copy data/snapshot/ into data/processed/ (never overwrites newer files)"
 	@echo "  features         Build position-specific feature vectors"
 	@echo "  reduce           Run PCA + UMAP + KMeans"
-	@echo "  render           Render HTML + PDF report"
+	@echo "  render           Render the legacy HTML + PDF report (not the site)"
+	@echo "  pages            Render the site (docs/index.html, docs/atlas/) from outputs/"
 	@echo "  all              fetch -> features -> reduce -> render"
 	@echo "  test             Run pytest"
 	@echo "  lint             Run ruff check"
@@ -104,13 +105,7 @@ clean:
 	@echo "Cleaned processed/ and outputs/ (raw/ preserved)"
 
 pages:
-	# The Czech render is the content source; the published page is English
-	# (site/translate_index.py). The pristine, Czech-labelled figures live in
-	# site/source/figures/: site/svg_labels.py writes the English copies into
-	# docs/ and site/svg_theme.py recolours them into the register.
-	cp outputs/index.html site/source/index.cs.html
-	cp outputs/style.css docs/
-	cp outputs/atlas_forwards.svg outputs/atlas_defense.svg outputs/intl_cohort_heatmap.svg site/source/figures/
-	cp outputs/report.pdf docs/
+	# The report (docs/index.html) and the pool page (docs/atlas/) from outputs/*.json:
+	# src/web renders templates/site/ and copies its static assets; CNAME and img/ stay.
 	./site/build.sh
 	@echo "Built docs/ for GitHub Pages (English)"

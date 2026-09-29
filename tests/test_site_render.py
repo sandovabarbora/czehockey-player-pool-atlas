@@ -1,0 +1,122 @@
+"""The site render (src/web): pages built from outputs/, numbers from the outputs, no old material."""
+
+from __future__ import annotations
+
+import copy
+import json
+import re
+from pathlib import Path
+
+import pytest
+
+from src import config
+from src.web import charts, context, fmt
+from src.web.render import render
+
+DOCS = config.ROOT_DIR / "docs"
+
+
+@pytest.fixture(scope="module")
+def site(tmp_path_factory: pytest.TempPathFactory) -> Path:
+    out = tmp_path_factory.mktemp("site")
+    render(out, build_date="2026-09-29")
+    return out
+
+
+@pytest.fixture(scope="module")
+def outputs() -> dict:
+    return context.load_outputs()
+
+
+def test_fmt() -> None:
+    assert [fmt.ordinal(n) for n in (1, 2, 3, 4, 11, 12, 13, 21, 22)] == [
+        "1st", "2nd", "3rd", "4th", "11th", "12th", "13th", "21st", "22nd",
+    ]
+    assert fmt.pct(0.143) == "14.3%" and fmt.pct0(0.3042) == "30%"
+    assert fmt.f2(1.8322) == "1.83"
+    assert fmt.times(0.831) == "×0.83"
+    assert fmt.ratio_words(0.98) == "at" and fmt.ratio_words(0.87) == "below" and fmt.ratio_words(1.4) == "above"
+
+
+def test_pages_and_assets_written(site: Path) -> None:
+    for rel in ("index.html", "atlas/index.html", "charts/report.json", "atlas/pool.json",
+                "style.css", "modern.css", "charts.js", "atlas.app.js"):
+        assert (site / rel).stat().st_size > 0, rel
+    assert not (site / "CNAME").exists(), "the render must not write CNAME"
+    assert (DOCS / "CNAME").read_text().strip() == "hockey.bsandova.com"
+
+
+def test_report_structure(site: Path) -> None:
+    html = (site / "index.html").read_text(encoding="utf-8")
+    assert '<html lang="en"' in html
+    for anchor in ("take", "scope", "nationality", "exclusions", "q1", "q2", "q3", "q4", "q5", "q6", "q7",
+                   "methodology", "data-sources", "linking", "limitations", "changes"):
+        assert f'id="{anchor}"' in html, anchor
+    assert "img/hockey.jpg" in html and "U.S. Air Force Academy" in html
+    for excluded in ("KHL", "AHL", "Slovak Extraliga", "Elite Prospects"):
+        assert excluded in html
+    js = (site / "charts.js").read_text(encoding="utf-8")
+    for name in re.findall(r'data-chart="([^"]+)"', html):
+        assert f"'{name}'" in js, f"no chart function for {name}"
+
+
+def test_no_withdrawn_material(site: Path) -> None:
+    for rel in ("index.html", "atlas/index.html"):
+        text = re.sub(r"<[^>]+>", " ", (site / rel).read_text(encoding="utf-8"))
+        text = text.replace("the AI layer and the video proof of concept of the earlier version are withdrawn", "")
+        for word in ("YOLO", "multimodal", "LLM", "Claude", "video", " AI ", "UMAP", "cluster"):
+            assert word not in text, (rel, word)
+
+
+def test_numbers_come_from_outputs(site: Path, outputs: dict) -> None:
+    html = (site / "index.html").read_text(encoding="utf-8")
+    head = outputs["q1_per_million"]["headline"]
+    home = head["home"]
+    assert f"{home['nhl_per_million']:.2f}" in html
+    assert f"{head['peer_median']['nhl_per_million']:.2f}" in html
+    peak = outputs["q1_per_million"]["nhl_home_peak"]
+    assert f"peaked at {peak['n']} players in {peak['season']}" in html
+    fall = next(s for s in outputs["q2_break_model"]["nations"]["CZE"]["break"]["steps"] if s["direction"] == "down")
+    assert fall["modal"]["season"] in html
+    q4 = outputs["q4_youth_ice_time"]["leagues"]
+    assert fmt.pct(q4["Liiga"]["summary"]["mean_u21_games_share"]) in html
+    assert f"{outputs['linking']['persons']:,}" in html
+    atlas = (site / "atlas/index.html").read_text(encoding="utf-8")
+    assert f"{outputs['pool']['counts']['players']} players" in atlas
+
+
+def test_chart_data_matches_outputs(site: Path, outputs: dict) -> None:
+    rep = json.loads((site / "charts/report.json").read_text(encoding="utf-8"))
+    assert rep["q1"]["nhl_series"]["nations"]["CZE"]["n"] == outputs["q1_per_million"]["nhl_series"]["nations"]["CZE"]["n"]
+    assert len(rep["q3"]["rows"]) == 12
+    pool = json.loads((site / "atlas/pool.json").read_text(encoding="utf-8"))
+    assert len(pool["players"]) == outputs["pool"]["counts"]["players"]
+    for season, by in pool["by_season_rung"].items():
+        assert sum(by.values()) == outputs["pool"]["counts"]["seasons"][season]
+
+
+def test_published_site_is_current(site: Path) -> None:
+    """docs/ must be re-rendered after outputs/ or the templates change (`make pages`)."""
+    for rel in ("charts/report.json", "atlas/pool.json", "charts.js", "atlas.app.js", "modern.css"):
+        assert (DOCS / rel).read_bytes() == (site / rel).read_bytes(), f"docs/{rel} is stale: run `make pages`"
+    strip = lambda s: re.sub(r"Built \d{4}-\d{2}-\d{2}", "", s)  # noqa: E731
+    assert strip((DOCS / "index.html").read_text(encoding="utf-8")) == strip((site / "index.html").read_text(encoding="utf-8"))
+
+
+def test_words_follow_numbers(outputs: dict) -> None:
+    """A sentence's direction is chosen from its number, so flipping the number flips the word."""
+    o = copy.deepcopy(outputs)
+    q1 = o["q1_per_million"]
+    q1["headline"]["home"]["nhl_per_million"] = q1["headline"]["peer_median"]["nhl_per_million"] / 2
+    assert context._q1(q1)["nhl_vs_median_word"] == "below"
+    q2 = o["q2_break_model"]
+    for s in q2["nations"]["CZE"]["break"]["steps"]:
+        s["direction"] = "up"
+    assert context._q2(q2)["CZE"]["fall"] is None
+
+
+def test_pool_data_rows(outputs: dict) -> None:
+    data = charts.pool_data(outputs["pool"])
+    p = data["players"][0]
+    assert set(p) == {"id", "n", "b", "bd", "p", "nb", "r", "l", "g", "s"}
+    assert all(len(row) == len(data["fields"]) for row in p["s"])
