@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Czech hockey · Player pool atlas</title>
-  <meta name="description" content="The Czech professional hockey player pool measured against nine peer nations: NHL and top European league players per million inhabitants, when the NHL group fell, where the cohorts are thin, ice time for the young at home, how Czech players fare abroad, what the national team is built from. Public data, reproducible.">
+  <title>Czech Hockey Atlas</title>
+  <meta name="description" content="An exploratory atlas of Czech professional hockey players per head against nine peer nations, 1995/96–2025/26: counts per million, timing of changes, age and position, young players' share at home, players abroad, national-team rosters and goalkeepers. Public data, reproducible.">
   <link rel="canonical" href="https://hockey.bsandova.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=5eb2262dfe">
-  <link rel="stylesheet" href="modern.css?v=5eb2262dfe">
+  <link rel="stylesheet" href="style.css?v=5449fcf567">
+  <link rel="stylesheet" href="modern.css?v=5449fcf567">
 <script>
   /* The report used to be one page. Its old anchors (#q1 … #q7, #methodology, #autumn …) now live
      on their own pages: send an old link to the page that holds that part. */
@@ -30,16 +30,15 @@
     <details class="nav-q" data-nav-q>
       <summary>Questions</summary>
       <ol class="nav-q-list">
-        <li><a href="q/per-head/"><span class="nav-q-n">1</span>Is the Czech pool thin?</a></li>
-        <li><a href="q/break/"><span class="nav-q-n">2</span>When did it break?</a></li>
-        <li><a href="q/cohorts/"><span class="nav-q-n">3</span>Where is it thin?</a></li>
-        <li><a href="q/youth/"><span class="nav-q-n">4</span>Do young players get ice time at home?</a></li>
-        <li><a href="q/abroad/"><span class="nav-q-n">5</span>How do they fare abroad?</a></li>
-        <li><a href="q/national-team/"><span class="nav-q-n">6</span>What is the national team built from?</a></li>
+        <li><a href="q/per-head/"><span class="nav-q-n">1</span>Players per million</a></li>
+        <li><a href="q/break/"><span class="nav-q-n">2</span>Timing of changes</a></li>
+        <li><a href="q/cohorts/"><span class="nav-q-n">3</span>Position and age</a></li>
+        <li><a href="q/youth/"><span class="nav-q-n">4</span>Young skaters at home</a></li>
+        <li><a href="q/abroad/"><span class="nav-q-n">5</span>Czech skaters abroad</a></li>
+        <li><a href="q/national-team/"><span class="nav-q-n">6</span>National-team rosters</a></li>
         <li><a href="q/goalkeepers/"><span class="nav-q-n">7</span>Goalkeepers</a></li>
       </ol>
     </details>
-    <a href="this-autumn/">This autumn</a>
     <a href="methodology/">Methodology</a>
     <a href="players/">Players</a>
   </div>
@@ -57,69 +56,99 @@
 
 <header class="report-header">
   <div class="container">
-    <h1>Czech hockey: <em>the player pool</em></h1>
-    <p class="masthead-subtitle">How deep is the Czech professional pool, measured against nine peer nations · 2025/26</p>
+    <p class="masthead-kicker">Research · Czech hockey atlas · 1995/96–2025/26</p>
+    <h1>Czech professional hockey players per head against nine peer nations, 1995/96–2025/26</h1>
+    <p class="masthead-deck">This exploratory atlas counts how many Czech players reach the NHL and Europe's four strongest leagues relative to population; in 2025/26 Czechia ranked 4th of 10 nations in the NHL.</p>
   </div>
 </header>
 
 <section class="hero" id="summary">
   <img class="hero-photo" src="img/hockey.jpg" srcset="img/hockey-1200.jpg 1200w, img/hockey.jpg 1920w" sizes="100vw" alt="A hockey player carrying the puck across the ice, in black and white with only the blue of his jersey kept" decoding="async" fetchpriority="high">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-num">
-        <span class="hero-num-figure">1.83<span class="ast" aria-hidden="true">*</span></span>
-        <span class="hero-num-unit">Czech NHL players per million inhabitants, 2025/26</span>
-      </div>
-      <div class="hero-lead">
-        <p class="hero-finding">
-          Per head, Czechia ranks 4th of 10 nations in the NHL and 5th in the NHL plus the four strongest European leagues.
-          The Czech NHL group peaked at 58 players in 2001/02; it is 20 now.
-        </p>
-        <p class="hero-path">Three minutes: this number and the six findings below. The rest is the evidence.</p>
-      </div>
-    </div>
-    <p class="hero-footnote">* 20 Czech players with at least 20 of 82 NHL games (pro-rated to the schedule) in 2025/26, per 10.9 million inhabitants (Eurostat); every peer counted the same way. <a href="methodology/">Methodology</a>.</p>
+    <dl class="facts">
+      <div class="fact"><dt>Czech NHL players per million, 2025/26</dt><dd><span class="fact-n">1.83</span><span class="fact-note">20 players, population 10.9 million · administrative count</span></dd></div>
+      <div class="fact"><dt>NHL and rung-2 players per million</dt><dd><span class="fact-n">4.86</span><span class="fact-note">53 players · 5th of 10 · administrative count</span></dd></div>
+<div class="fact"><dt>Downward step in the Czech NHL level</dt><dd><span class="fact-n">×0.83</span><span class="fact-note">90 % HDI 0.56–1.14 · most likely 2009/10 (p = 0.09)</span></dd></div>      <div class="fact"><dt>Extraliga skater games played by skaters aged 20 or under</dt><dd><span class="fact-n">7.9 %</span><span class="fact-note">95 % bootstrap by season 7.0 %–8.8 % · 12 seasons</span></dd></div>
+    </dl>
   </div>
   <p class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Jake_Levin_(Air_Force_Falcon%27s_men%27s_ice_hockey)_during_game_against_Bentley_Falcons_men%27s_ice_hockey_at_Cadet_Arena_in_Colorado_Springs_on_November_9,_2018_(45170233234).jpg">U.S. Air Force Academy</a> · public domain, colour held</p>
 </section>
 
-<section class="autumn-teaser" aria-labelledby="autumn-teaser-h">
+<section class="front-intro">
   <div class="container">
-    <p class="close-kicker">News</p>
-    <h2 class="slide-q" id="autumn-teaser-h"><a href="this-autumn/">This autumn</a></h2>
-    <p class="autumn-asof">Atlas data as of 29 September 2026; news as of 29 September 2026</p>
-    <ul class="autumn-teaser-list">
-      <li><a href="this-autumn/#autumn-coach">A new head coach of the national team</a></li>
-      <li><a href="this-autumn/#autumn-captain">A club captaincy in the NHL</a></li>
-    </ul>
+    <details class="tldr" open>
+      <summary>Overwhelmed? Here's the short version</summary>
+      <ul>
+        <li>Sweden and Finland have about 4 times the Czech NHL rate per inhabitant, and the Czech ranks stay the same under three different games thresholds.</li>
+        <li>The Czech NHL count fell from 58 players in 2001/02 to 20; the break model spreads the timing of that fall over 2008/09–2023/24 and does not place it in one season.</li>
+        <li>The Czech count is furthest below the peer median among players aged 21 or under, and skaters aged 20 or under take about half the share of league games at home that they take in the Liiga or the SHL.</li>
+        <li>The counts are the whole published record rather than samples; averaged and modelled quantities carry intervals, and several groups are only a handful of players, so single-season ranks move easily.</li>
+        <li>The atlas describes and does not explain: it identifies no cause, makes no forecast and gives no selection advice, and the KHL, which supplied about a quarter of Czech national-team roster spots, is outside its data.</li>
+      </ul>
+    </details>
+    <dl class="meta-block mono">
+      <div><dt>published</dt><dd>18 May 2026 · updated 29 September 2026 · <a href="#changes">version 3</a></dd></div>
+      <div><dt>status</dt><dd>research, exploratory; not pre-registered</dd></div>
+      <div><dt>data</dt><dd>NHL, Liiga, SHL, Extraliga (hokej.cz), DEL, National League (SIHF), Eurostat <code>demo_gind</code> and English Wikipedia rosters; snapshot 29 September 2026, hashes in <code>data/snapshot/SHA256SUMS</code> (sha256 2b6a01be049c); <a href="methodology/#data-sources">data availability</a></dd></div>
+      <div><dt>code</dt><dd><a href="https://github.com/sandovabarbora/czehockey-player-pool-atlas">github.com/sandovabarbora/czehockey-player-pool-atlas</a>, <code>src/analysis/</code> and <code>src/web/</code>; rebuild: <code>make install restore-snapshot verify-snapshot analysis pages</code></dd></div>
+      <div><dt>cite as</dt><dd>Šandová, B. (2026). <em>Czech hockey atlas: the player pool</em>. hockey.bsandova.com, version 3.</dd></div>
+      <div><dt>licence</dt><dd>code MIT; text and figures CC BY 4.0; roster-derived data CC BY-SA 4.0</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="front-question" id="question">
+  <div class="container">
+    <h2>The question and its contribution</h2>
+    <p>Research on athlete development asks how players reach the top of a sport and which of them do. Relative age shapes who is selected in youth sport generally and in hockey in particular <span class="ref">[<a href="#ref-1">1</a>, <a href="#ref-2">2</a>]</span>, success in youth national squads is followed by adult success for only some athletes <span class="ref">[<a href="#ref-3">3</a>]</span>, world-class athletes tend to have practised several sports before specialising <span class="ref">[<a href="#ref-4">4</a>]</span>, and professional hockey moves players across national borders <span class="ref">[<a href="#ref-5">5</a>]</span>. Comparative work on national sport systems proposes a framework of policy factors behind international success <span class="ref">[<a href="#ref-6">6</a>]</span>. This atlas tests none of these accounts. Its contribution is a descriptive base for the Czech case: from public league statistics and one definition of nationality, it counts how many Czech players reached the NHL and the four strongest European leagues relative to population, against nine peer nations over 31 seasons, and it publishes the counts, their intervals, the player list and the code that rebuilds them.</p>
   </div>
 </section>
 
 <section class="take" id="take">
   <div class="container">
-    <p class="close-kicker">What to take from it</p>
-    <div class="nx-take"><p class="nx-take-n">1</p><div><p class="nx-take-head">Per head, the Czech pool sits above the peer median, not at the bottom: 4th of 10 in the NHL.</p><p class="nx-take-body">20 Czech players reached the games threshold in the NHL in 2025/26, 1.83 per million inhabitants against a peer median of 1.21. Counting the four strongest European leagues as well, 53 players, 4.86 per million, 5th of 10.</p><p class="nx-take-body">Sweden and Finland are in another class: 7.26 and 7.25 NHL players per million, about 4 times the Czech rate.</p><p class="nx-take-link"><a href="q/per-head/">Read the evidence →</a></p></div></div>
-    <div class="nx-take"><p class="nx-take-n">2</p><div><p class="nx-take-head">The Czech NHL group fell from 58 players in 2001/02 to 20 in 2025/26 — gradually, not in one break.</p><p class="nx-take-body">The most likely season for a fall is 2009/10, with only 9% probability; the step is ×0.83 (90% interval 0.56–1.14). The fitted level is now 43% of its 2002/03 peak.</p><p class="nx-take-body">Finland and Sweden show only upward steps over the same seasons.</p><p class="nx-take-link"><a href="q/break/">Read the evidence →</a></p></div></div>
-    <div class="nx-take"><p class="nx-take-n">3</p><div><p class="nx-take-head">The gap is young: no Czech skater aged 21 or under reaches the games threshold in the NHL or rung 2.</p><p class="nx-take-body">The largest shortfall against the peer median is forwards aged 21 or under: 6.1 players, then forwards aged 22–25 (2.8).</p><p class="nx-take-link"><a href="q/cohorts/">Read the evidence →</a></p></div></div>
-    <div class="nx-take"><p class="nx-take-n">4</p><div><p class="nx-take-head">At home, under-21 skaters get 7.9% of Extraliga games; the Liiga gives its young 14.3% and the SHL 16.7%.</p><p class="nx-take-body">On ice time the gap is wider: 5.5% against 11.9% and 11.4%, averaged over 2014/15–2025/26. In 2025/26 the Extraliga share was 5.7% of games.</p><p class="nx-take-link"><a href="q/youth/">Read the evidence →</a></p></div></div>
-    <div class="nx-take"><p class="nx-take-n">5</p><div><p class="nx-take-head">Abroad, Czech skaters in the NHL play the median ice time for their position and score below it; in the Liiga and the SHL they are above the median on both.</p><p class="nx-take-body">Over 2020/21–2025/26, Czech NHL skaters played 0.98 times the median ice time of their position and scored 0.87 times its points per game. In the Liiga the ratios are 1.09 and 1.40, in the SHL 1.08 and 1.30.</p><p class="nx-take-link"><a href="q/abroad/">Read the evidence →</a></p></div></div>
-    <div class="nx-take"><p class="nx-take-n">6</p><div><p class="nx-take-head">Since 2010 the national team has drawn on the NHL (30%), the Extraliga (28%) and the KHL (25%) in about equal parts; rung 2 gives 13%.</p><p class="nx-take-body">Averaged over 21 World Championship and Olympic rosters. The KHL is outside the atlas&#39;s leagues, so 25% of the roster spots come from a league the atlas does not measure.</p><p class="nx-take-link"><a href="q/national-team/">Read the evidence →</a></p></div></div>
-    <p class="take-line close-links"><a href="methodology/#scope">What is counted</a> · <a href="methodology/#limitations">Limitations</a> · <a href="this-autumn/">This autumn</a> · <a href="players/">Every Czech player in the pool</a></p>
+    <h2 class="close-kicker">Findings</h2>
+    <div class="nx-take"><p class="nx-take-n">1</p><div><p class="nx-take-head">In 2025/26, 20 Czech players reached the games threshold in the NHL, 1.83 per million inhabitants, which ranks Czechia 4th of 10 nations and above the median of the nine peers (1.21).</p><p class="nx-take-body">With the four rung-2 leagues added, the count is 53 players, 4.86 per million, 5th of 10 (peer median 3.55). Sweden (7.26) and Finland (7.25) have about 4 times the Czech NHL rate. These are administrative counts; the Czech ranks are the same under all three games thresholds.</p><p class="nx-take-link"><a href="q/per-head/">Question 1: Players per million</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">2</p><div><p class="nx-take-head">The observed Czech NHL count was 58 players in 2001/02 and 20 in 2025/26 (administrative counts).</p><p class="nx-take-body">The break model places a downward step most likely in 2009/10 (posterior probability 0.09), with a factor of ×0.83 (90 % HDI 0.56–1.14; P(level falls) = 0.80). The model describes timing, not cause. Conditional on the most probable pair of step seasons, the model level in 2025/26 is 43 % of its 2002/03 peak.</p><p class="nx-take-link"><a href="q/break/">Question 2: Timing of changes</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">3</p><div><p class="nx-take-head">In 2025/26 no Czech forward or defenceman aged 21 or under reached the games threshold in the NHL or rung 2.</p><p class="nx-take-body">Expressed in players at the Czech population, the difference from the median of seven peers is 6.1 for forwards aged 21 or under and 2.8 for forwards aged 22–25. One season is a noisy cross-section: Czech forwards aged 21 or under who reached the threshold numbered 5, 3, 2, 0, 4, 0 in the seasons 2020/21 to 2025/26.</p><p class="nx-take-link"><a href="q/cohorts/">Question 3: Position and age</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">4</p><div><p class="nx-take-head">Skaters aged 20 or under played 7.9 % of Extraliga skater games, against 14.3 % in the Liiga and 16.7 % in the SHL (means of 12 seasons, 2014/15–2025/26).</p><p class="nx-take-body">The 95 % bootstrap intervals, resampling seasons, are 7.0 %–8.8 %, 12.9 %–15.8 % and 15.5 %–17.9 %. The shares cover players of every nationality and compare leagues, not the chances given to any one player.</p><p class="nx-take-link"><a href="q/youth/">Question 4: Young skaters at home</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">5</p><div><p class="nx-take-head">Over 2020/21–2025/26, the median Czech NHL skater played 0.98 times the median ice time of his league, season and position and scored 0.87 times its points per game (35 players, 111 player-seasons).</p><p class="nx-take-body">The 95 % bootstrap intervals, resampling players, are 0.90–1.11 and 0.68–1.42, so both include 1. In the Liiga the ratios are 1.09 (1.04–1.14) and 1.40 (1.23–1.54), in the SHL 1.08 (0.98–1.18) and 1.30 (0.99–1.59); they compare imported players with each league&#39;s own depth and are not comparable across leagues.</p><p class="nx-take-link"><a href="q/abroad/">Question 5: Czech skaters abroad</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">6</p><div><p class="nx-take-head">Across 21 World Championship and Olympic rosters, 2010–2026, Czech roster spots came on average 31 % from the NHL, 28 % from the Extraliga, 25 % from the KHL and 13 % from rung 2.</p><p class="nx-take-body">The KHL share was 33 % over 2010–2022 and 0 % over 2023–2026, when the Extraliga share was 43 %. Without the 2018 and 2022 Olympics, which NHL players did not attend, the NHL share is 34 %. Roster composition reflects nomination as well as the pool.</p><p class="nx-take-link"><a href="q/national-team/">Question 6: National-team rosters</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">7</p><div><p class="nx-take-head">In 2025/26, 11 Czech goalkeepers reached the games threshold in the NHL or rung 2, 1.01 per million, 5th of 10 (peer median 0.53).</p><p class="nx-take-body">In the NHL alone there were 6, 0.55 per million, 4th (peer median 0.11). These are administrative counts of a few players each.</p><p class="nx-take-link"><a href="q/goalkeepers/">Question 7: Goalkeepers</a></p></div></div>
+    <p class="take-line close-links"><a href="methodology/#scope">What is counted</a> · <a href="methodology/#limitations">Limitations</a> · <a href="players/">Every Czech player in the pool</a> · Note: <a href="this-autumn/">Czech hockey news, 29 September 2026</a></p>
   </div>
 </section>
 
-<section class="close" id="close">
+<section class="front-foot" id="cite">
   <div class="container">
-    <p class="close-kicker">What this is for</p>
-    <p class="close-statement">The same measured questions, asked every summer and answered the same way, with the uncertainty on the page — and a name behind every number.</p>
-    <p class="close-links"><a href="players/">Every Czech player in the pool</a> · <a href="#take">What to take from it</a> · <a href="methodology/#limitations">Limitations</a> · <a href="https://football.bsandova.com/">The football atlas</a></p>
+    <h2>How to cite</h2>
+    <p>Šandová, B. (2026). <em>Czech hockey atlas: the player pool</em>. hockey.bsandova.com, version 3. <a href="https://hockey.bsandova.com/">https://hockey.bsandova.com/</a>. Code and data: <a href="https://github.com/sandovabarbora/czehockey-player-pool-atlas">github.com/sandovabarbora/czehockey-player-pool-atlas</a>.</p>
+
+    <h2 id="references">References</h2>
+    <ol class="references">
+      <li id="ref-1">Cobley, S., Baker, J., Wattie, N. and McKenna, J. (2009). Annual age-grouping and athlete development: a meta-analytical review of relative age effects in sport. Sports Medicine 39(3), 235–256. <a href="https://doi.org/10.2165/00007256-200939030-00005">https://doi.org/10.2165/00007256-200939030-00005</a>. Accessed 29 September 2026.</li>
+      <li id="ref-2">Nolan, J. E. and Howell, G. (2010). Hockey success and birth date: the relative age effect revisited. International Review for the Sociology of Sport 45(4), 507–512. <a href="https://doi.org/10.1177/1012690210371560">https://doi.org/10.1177/1012690210371560</a>. Accessed 29 September 2026.</li>
+      <li id="ref-3">Barreiros, A., Côté, J. and Fonseca, A. M. (2014). From early to adult sport success: analysing athletes&#39; progression in national squads. European Journal of Sport Science 14(S1), S178–S182. <a href="https://doi.org/10.1080/17461391.2012.671368">https://doi.org/10.1080/17461391.2012.671368</a>. Accessed 29 September 2026.</li>
+      <li id="ref-4">Güllich, A., Macnamara, B. N. and Hambrick, D. Z. (2022). What makes a champion? Early multidisciplinary practice, not early specialization, predicts world-class performance. Perspectives on Psychological Science 17(1), 6–29. <a href="https://doi.org/10.1177/1745691620974772">https://doi.org/10.1177/1745691620974772</a>. Accessed 29 September 2026.</li>
+      <li id="ref-5">Maguire, J. (1996). Blade runners: Canadian migrants, ice hockey, and the global sports process. Journal of Sport and Social Issues 20(3), 335–360. <a href="https://doi.org/10.1177/019372396020003007">https://doi.org/10.1177/019372396020003007</a>. Accessed 29 September 2026.</li>
+      <li id="ref-6">De Bosscher, V., De Knop, P., Van Bottenburg, M. and Shibli, S. (2006). A conceptual framework for analysing sports policy factors leading to international sporting success. European Sport Management Quarterly 6(2), 185–215. <a href="https://doi.org/10.1080/16184740600955087">https://doi.org/10.1080/16184740600955087</a>. Accessed 29 September 2026.</li>
+      <li id="ref-7">Wikipedia contributors (2026). Timeline of the National Hockey League, revision 1376655521 of 25 September 2026. English Wikipedia (CC BY-SA 4.0). <a href="https://en.wikipedia.org/w/index.php?oldid=1376655521">https://en.wikipedia.org/w/index.php?oldid=1376655521</a>. Accessed 29 September 2026.</li>
+      <li id="ref-8">Wikipedia contributors (2026). Kontinental Hockey League, revision 1375949502 of 21 September 2026. English Wikipedia (CC BY-SA 4.0). <a href="https://en.wikipedia.org/w/index.php?oldid=1375949502">https://en.wikipedia.org/w/index.php?oldid=1375949502</a>. Accessed 29 September 2026.</li>
+      <li id="ref-9">Wikipedia contributors (2026). Ice hockey at the 2018 Winter Olympics – Men&#39;s tournament, revision 1349342664 of 16 April 2026. English Wikipedia (CC BY-SA 4.0). <a href="https://en.wikipedia.org/w/index.php?oldid=1349342664">https://en.wikipedia.org/w/index.php?oldid=1349342664</a>. Accessed 29 September 2026.</li>
+      <li id="ref-10">Wikipedia contributors (2026). Ice hockey at the 2022 Winter Olympics – Men&#39;s tournament, revision 1366326745 of 27 July 2026. English Wikipedia (CC BY-SA 4.0). <a href="https://en.wikipedia.org/w/index.php?oldid=1366326745">https://en.wikipedia.org/w/index.php?oldid=1366326745</a>. Accessed 29 September 2026.</li>
+    </ol>
+    <p>Data sources, with their access dates and terms, are listed under <a href="methodology/#data-sources">Data availability</a>.</p>
+
+    <h2 id="changes">Change log</h2>
+    <ul class="changelog">
+      <li><span class="mono">29 September 2026</span> Version 3: editorial pass to the site's editorial standard, with intervals added, a roster-linking correction and the corrected numbers listed in the <a href="methodology/#changes">full change log</a>.</li>
+    </ul>
   </div>
 </section>
 <footer>
   <div class="container">
     <div class="role-block">
       <p class="role-kicker">Built by Barbora Šandová — data &amp; cloud engineer</p>
-      <p class="role-body">A descriptive, reproducible benchmark from public statistics: the fetchers, the snapshot, the analysis and this page are one repository. No predictions, no selection advice.</p>
+      <p class="role-body">An exploratory, descriptive atlas built from public statistics; the fetchers, the snapshot, the analysis and these pages are one repository. It makes no forecasts and gives no selection advice.</p>
       <p class="role-author">
         <span class="role-author-name">Barbora Šandová</span>
         <span class="role-author-contact">
@@ -129,7 +158,7 @@
         </span>
       </p>
     </div>
-    <p class="rendered-at">Built 2026-09-29 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+    <p class="rendered-at">Built 29 September 2026 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
   </div>
 </footer>
 </body>

@@ -35,17 +35,24 @@ STATIC = TEMPLATES / "static"
 STATIC_FILES = ("style.css", "modern.css", "charts.js", "atlas.app.js")
 DOCS = config.ROOT_DIR / "docs"
 
-# (id, slug, title as on the page, limitations shown as "What this does not show")
+# (id, slug, content title (the page's h1), short label (navigation), limitations listed as "What this does not show")
 QUESTIONS = (
-    ("q1", "per-head", "Is the Czech pool thin?", ("khl", "nationality", "population")),
-    ("q2", "break", "When did it break?", ("khl", "population", "descriptive")),
-    ("q3", "cohorts", "Where is it thin?", ("birth", "nationality", "population")),
-    ("q4", "youth", "Do young players get ice time at home?", ("birth",)),
-    ("q5", "abroad", "How do they fare abroad?", ("khl", "ahl", "descriptive")),
-    ("q6", "national-team", "What is the national team built from?", ("khl",)),
-    ("q7", "goalkeepers", "Goalkeepers", ("ahl", "population", "descriptive")),
+    ("q1", "per-head", "NHL and rung-2 players per million inhabitants, ten nations, 2025/26", "Players per million",
+     ("population", "nationality", "khl", "single_season")),
+    ("q2", "break", "Timing of changes in the Czech NHL count, 1995/96–2025/26", "Timing of changes",
+     ("descriptive", "khl", "population")),
+    ("q3", "cohorts", "Czech NHL and rung-2 players by position and age against the peer median, 2025/26", "Position and age",
+     ("single_season", "birth", "ages", "nationality")),
+    ("q4", "youth", "Share of league games and ice time played by skaters aged 20 or under, 2014/15–2025/26", "Young skaters at home",
+     ("birth", "ages", "descriptive")),
+    ("q5", "abroad", "Ice time and points per game of Czech skaters against the league median, 2020/21–2025/26", "Czech skaters abroad",
+     ("ahl", "khl", "descriptive")),
+    ("q6", "national-team", "League composition of Czech national-team rosters, 2010–2026", "National-team rosters",
+     ("khl", "descriptive")),
+    ("q7", "goalkeepers", "Czech goalkeepers: counts per million, save percentage abroad and national-team spots", "Goalkeepers",
+     ("ahl", "ages", "population", "descriptive")),
 )
-LIMIT_KEYS = ("khl", "ahl", "birth", "nationality", "name_links", "population", "descriptive")
+LIMIT_KEYS = ("descriptive", "khl", "ahl", "birth", "nationality", "name_links", "population", "ages", "single_season")
 # the one-page report's anchors -> the page that holds that part now (relative to the site root)
 METHOD_ANCHORS = ("scope", "nationality", "exclusions", "methodology", "data-sources", "linking",
                   "definitions", "reproducibility", "limitations", "changes")
@@ -53,9 +60,9 @@ METHOD_ANCHORS = ("scope", "nationality", "exclusions", "methodology", "data-sou
 
 def questions() -> list[dict]:
     return [
-        {"id": qid, "n": i + 1, "slug": slug, "url": f"q/{slug}/", "title": title, "limits": list(limits),
-         "description": f"Question {i + 1} of the Czech hockey player pool atlas: {title}"}
-        for i, (qid, slug, title, limits) in enumerate(QUESTIONS)
+        {"id": qid, "n": i + 1, "slug": slug, "url": f"q/{slug}/", "title": title, "label": label, "limits": list(limits),
+         "description": f"Question {i + 1} of the Czech hockey atlas: {title}."}
+        for i, (qid, slug, title, label, limits) in enumerate(QUESTIONS)
     ]
 
 

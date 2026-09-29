@@ -114,7 +114,7 @@ def test_outputs_keep_enough_places_for_one_decimal_percent() -> None:
     # 0.079467 must read 7.9%, not 8.0% after a first rounding to 0.0795
     from src.web import fmt
 
-    assert fmt.pct(common.clean(0.0794667)) == "7.9%"
+    assert fmt.pct(common.clean(0.0794667)) == "7.9\u00a0%"
 
 
 # -- Q4 -------------------------------------------------------------------------------

@@ -9,7 +9,8 @@
 # found; Pastrňák was an alternate captain at the 2026 Olympics) and the
 # 2026-27 Czech Hockey Games venues and dates.
 # A source is cited only if it was read; `date` is its publication date where
-# the review recorded one, null otherwise (rendered "n.d.").
+# the page shows one (checked 29 September 2026), null otherwise (rendered "n.d.").
+# `author` and `title` are as the page gives them.
 #
 # Wording rules: no evaluation of the appointments or the players; the
 # Pastrňák item is a club (NHL) captaincy and must not read as the national
@@ -22,26 +23,36 @@ news_as_of: 2026-09-29
 
 sources:
   - key: bruins_captain
+    author: "Boston Bruins"
+    title: "Bruins Name David Pastrnak 28th Captain in Team History"
     publisher: Boston Bruins / NHL.com
     date: 2026-09-27
     url: "https://www.nhl.com/bruins/news/bruins-name-david-pastrnak-28th-captain-in-team-history"
     accessed: 2026-09-29
   - key: bruins_reaction
+    author: "Fraser, B."
+    title: "Pastrnak Reacts to Being Named 28th Bruins Captain: 'Grateful, Humbled, and Honored'"
     publisher: Boston Bruins / NHL.com
-    date: null
+    date: 2026-09-27
     url: "https://www.nhl.com/bruins/news/pastrnak-reacts-to-being-named-28th-bruins-captain-grateful-humbled-and-honored"
     accessed: 2026-09-29
   - key: hokej_captain
+    author: "Hedbávný, M."
+    title: "Oficiálně: Pastrňák je kapitánem Bostonu! V historii NHL jako šestý Čech"
     publisher: hokej.cz (Czech Ice Hockey Association)
     date: null
     url: "https://www.hokej.cz/oficialne-pastrnak-je-kapitanem-bostonu-v-historii-nhl-jako-sesty-cech/5098230"
     accessed: 2026-09-29
   - key: sport_motak
+    author: "Škvor, J."
+    title: "O Rulíkově nástupci u reprezentace je rozhodnuto. Přijde k nároďáku i Jandač?"
     publisher: Sport.cz
     date: 2026-04-16
     url: "https://www.sport.cz/clanek/hokej-reprezentace-o-rulikove-nastupci-u-reprezentace-je-rozhodnuto-5437460"
     accessed: 2026-09-29
   - key: hokej_motak
+    author: "Bagar, A."
+    title: "Poprvé od zlatého MS! Moták začne reprezentační misi v O2 areně"
     publisher: hokej.cz (Czech Ice Hockey Association)
     date: 2026-09-15
     url: "https://www.hokej.cz/poprve-od-zlateho-ms-motak-zacne-reprezentacni-misi-v-o2-arene/5097991"

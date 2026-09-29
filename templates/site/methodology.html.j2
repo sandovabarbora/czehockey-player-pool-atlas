@@ -8,14 +8,23 @@
 <main id="content" class="page-methodology">
 <header class="page-head">
   <div class="container">
-    <h1 class="page-title">Methodology</h1>
+    <p class="masthead-kicker">Research · Czech hockey atlas · methods, data and limitations</p>
+    <h1 class="page-title">Methodology, data availability and limitations of the Czech hockey atlas</h1>
+    <dl class="meta-block mono">
+      <div><dt>status</dt><dd>{{ meta.status }}; no external review</dd></div>
+      <div><dt>version</dt><dd>{{ meta.version }}, updated {{ meta.updated }} (<a href="#changes">change log</a>)</dd></div>
+      <div><dt>data</dt><dd>snapshot {{ meta.snapshot_date }}, <code>data/snapshot/SHA256SUMS</code> (sha256 {{ meta.snapshot_sums }})</dd></div>
+      <div><dt>code</dt><dd><a href="{{ meta.repo }}">{{ meta.repo_short }}</a>; rebuild: <code>{{ meta.rebuild }}</code></dd></div>
+      <div><dt>cite as</dt><dd>Šandová, B. (2026). <em>{{ meta.title }}</em>. hockey.bsandova.com, version {{ meta.version }}.</dd></div>
+      <div><dt>licence</dt><dd>code MIT; text and figures CC BY 4.0; roster-derived data CC BY-SA 4.0</dd></div>
+    </dl>
   </div>
 </header>
 
 <section class="slide scope" id="scope">
   <div class="container">
     <h2 class="slide-q">What is counted</h2>
-    <p class="slide-a">Ten nations, six leagues, one definition of nationality, and three leagues and one database left out on purpose.</p>
+    <p class="slide-a">The atlas covers ten nations and six leagues with one definition of nationality; three leagues and one player database are left out on purpose.</p>
     <div class="scope-grid">
       <div>
         <h3>The ladder</h3>
@@ -40,7 +49,7 @@
       <div>
         <h3 id="exclusions">Left out</h3>
         <ul class="scope-ul">
-          <li><strong>KHL</strong>, by design. It removes a real destination, especially before 2014, and it is where {{ pct0(q6.home.khl) }} of the Czech national team's roster spots since 2010 came from.</li>
+          <li><strong>KHL</strong>, by design. What this leaves out is described under <a href="#limit-khl">Limitations</a>.</li>
           <li><strong>AHL</strong>: its terms forbid automated access. AHL seasons appear only in NHL players' career records, a survivor-biased view.</li>
           <li><strong>Slovak Extraliga</strong>: its robots.txt blocks automated access. Slovakia is measured through its players in the covered leagues.</li>
           <li><strong>Elite Prospects</strong>: its terms forbid scraping.</li>
@@ -54,16 +63,17 @@
   <div class="container">
     <h2>How it is built, and where it stops</h2>
 
-    <h3 id="data-sources">Sources</h3>
+    <h3 id="data-sources">Data availability</h3>
     <table class="sources-table">
       <thead><tr><th scope="col">Source</th><th scope="col">What</th><th scope="col">Fields used</th><th scope="col">Accessed</th></tr></thead>
       <tbody>
       {% for s in sources %}
-        <tr><td><a href="{{ s.url }}">{{ s.name }}</a></td><td>{{ s.what }}</td><td>{{ s.fields }}</td><td class="mono">{{ s.accessed }}</td></tr>
+        <tr><td><a href="{{ s.url }}">{{ s.name }}</a></td><td>{{ s.what }}</td><td>{{ s.fields }}</td><td>{{ long_date(s.accessed) if s.accessed != 'unknown' else 'unknown' }}</td></tr>
       {% endfor %}
       </tbody>
     </table>
-    <p>Only public statistics are used: names, birth dates, nationality and season statistics. Every source was fetched once, with at least a second between requests and within its robots.txt, into a raw cache; the processed tables are committed in <code>data/snapshot/</code> with a SHA-256 list, so a clean clone rebuilds every number here without fetching. The NHL's terms allow non-commercial informational use; this is a non-commercial page that cites its sources. Wikipedia rosters are used under CC BY-SA 4.0, each page at the revision listed in <code>data/snapshot/rosters_sources.json</code>.</p>
+    <p>Only public statistics are used: names, birth dates, nationality and season statistics. Every source was fetched once, with at least one second between requests and within its robots.txt, into a raw cache; the processed tables are committed in <code>data/snapshot/</code> with a SHA-256 list, so a clean clone rebuilds every number here without fetching. The snapshot was taken on {{ meta.snapshot_date }}.</p>
+    <p>Terms, source by source. The NHL's terms allow non-commercial informational use; this is a non-commercial page that cites its sources. Wikipedia rosters are used under CC BY-SA 4.0, each page at the revision listed in <code>data/snapshot/rosters_sources.json</code>, so <code>rosters.parquet</code> and the tables derived from it (question 6, the national-team parts of question 7 and the pool page) are CC BY-SA 4.0 and cannot be relicensed CC BY. Eurostat data are reusable with acknowledgement under the Commission's reuse policy. The statistics from liiga.fi, shl.se, hokej.cz, penny-del.org and data.sihf.ch are used as published facts (names, dates and season totals); their terms have not been reviewed for redistribution, so the snapshot tables derived from them are shared for reproducing the atlas only, and any other reuse should follow each site's terms. The code is MIT-licensed; the text and figures are CC BY 4.0.</p>
 
     <h3 id="linking">Linking players across leagues</h3>
     <p>{{ num(linking.persons) }} people in all, {{ num(linking.with_nat) }} of them with a nationality. Records are matched in four steps: folded name plus full birth date; first initial, surname and birth date (for Dan and Daniel); for records without a birth date, the name alone when exactly one person of that name played within four seasons and his birth year does not contradict it; and finally records still unmatched are joined within the same league on the same name.</p>
@@ -77,19 +87,27 @@
       </tbody>
     </table>
     </div>
-    <p>"Unmatched" records keep the nationality their own league gives them, which for the DEL before 2022/23 and for foreign licences in the National League is none. {{ linking.conflicts.persons }} people carry conflicting nationality codes; in {{ linking.conflicts.czech_eligibility_overridden_by_citizenship }} of them an Extraliga "Czech" (the foreigner flag) is overridden by a citizenship or national-team code. {{ linking.swapped|length }} Wikipedia roster birth dates matched no league record until day and month were swapped or moved by one day; they are corrected in the analysis and listed in <code>outputs/linking.json</code>.</p>
+    <p>"Unmatched" records keep the nationality their own league gives them, which for the DEL before 2022/23 and for foreign licences in the National League is none. {{ linking.conflicts.persons }} people carry conflicting nationality codes; in {{ linking.conflicts.czech_eligibility_overridden_by_citizenship }} of them an Extraliga "Czech" (the foreigner flag) is overridden by a citizenship or national-team code. {{ linking.swapped|length }} Wikipedia roster birth dates matched no league record as given; they are replaced by the league date when day and month were swapped, when the dates are one day apart, or when the day differs and the player's other roster rows all give the league date. The corrections are listed in <code>outputs/linking.json</code>.</p>
 
     <h3 id="definitions">Definitions</h3>
     <dl class="defs">
       <dt>Games threshold</dt><dd>{{ q1.threshold_def }}. The headline also reports any game and a flat 20.</dd>
-      <dt>Age</dt><dd>Season start year minus birth year; under 21 means 20 or less.</dd>
+      <dt>Age</dt><dd>Season start year minus birth year. Question 3 uses 21 or under, question 4 uses 20 or under (under-21 hockey) and question 7 uses 23 or under for goalkeepers.</dd>
       <dt>Population</dt><dd>Eurostat <code>demo_gind</code>, 1 January of the season's second year.</dd>
-      <dt>Complete season</dt><dd>A rung 1 + 2 season counts as complete when every rung-2 league has at least 90% of its qualifying players' nationality identified.</dd>
+      <dt>Complete season</dt><dd>A rung 1 + 2 season counts as complete when every rung-2 league has at least 90 % of its qualifying players' nationality identified.</dd>
+      <dt>Intervals</dt><dd>Counts of the whole published record are administrative counts and carry no sampling interval. The break model (question 2) reports 90 % highest-density intervals of the posterior. Means over seasons (question 4) and medians over players (questions 5 and 7) carry 95 % percentile bootstrap intervals, resampling seasons, players or goalkeepers, {{ num(iv.definitions.reps) }} resamples, seed {{ iv.definitions.seed }} (<code>src/analysis/intervals.py</code>).</dd>
       <dt>Season</dt><dd>Regular season only, every league.</dd>
     </dl>
 
-    <h3 id="reproducibility">Reproducibility</h3>
-    <p><code>make restore-snapshot</code> puts the committed snapshot in place, <code>make verify-snapshot</code> checks its hashes, <code>make analysis</code> recomputes <code>outputs/</code> (about six minutes, mostly the break model) and <code>make pages</code> renders this page and the pool page from them. Each output file records the SHA-256 of the snapshot files it was built from, and the tests fail when the snapshot changes without the outputs being rebuilt. Every number in this text is read from <code>outputs/</code> at render time.</p>
+    <h3 id="reproducibility">Reproduction</h3>
+    <p>From a clean clone, with Python {{ meta.python }} and <a href="https://docs.astral.sh/uv/">uv</a> (the environment is pinned in <code>uv.lock</code>):</p>
+    <pre class="mono"><code>make install            # .venv from uv.lock
+make restore-snapshot   # data/snapshot/ -> data/processed/
+make verify-snapshot    # check the files against data/snapshot/SHA256SUMS
+make analysis           # outputs/*.json (about six minutes; the break model uses seed {{ meta.seed }})
+make pages              # docs/ from outputs/ and templates/site/
+make test               # the test suite</code></pre>
+    <p><code>make analysis-fast</code> rebuilds everything except the break model. Each output file records the SHA-256 of the snapshot files it was built from, and the tests fail when the snapshot changes without the outputs being rebuilt or when <code>docs/</code> is stale. Every number in the text is read from <code>outputs/</code> at render time.</p>
 
     <h3 id="limitations">Limitations</h3>
     <ul class="nx-limits">
@@ -98,12 +116,20 @@
       {% endfor %}
     </ul>
 
+    <h3 id="references">References</h3>
+    <ol class="references">
+      {% for r in refs %}
+      <li id="ref-{{ r.n }}">{{ r.text }} <a href="{{ r.url }}">{{ r.url }}</a>. Accessed {{ r.accessed }}.</li>
+      {% endfor %}
+    </ol>
+
     <h3 id="changes">Change log</h3>
     <ul class="changelog">
-      <li><span class="mono">2026-09-29</span> A <a href="../this-autumn/">This autumn</a> section: two dated, sourced items of news (the national team's new head coach and staff; David Pastrňák's club captaincy in Boston), beside the atlas's own numbers.</li>
-      <li><span class="mono">2026-09-29</span> Rebuilt on the football atlas's model: ten nations, a two-rung league ladder, fetchers with a committed snapshot, one analysis module per question, interactive charts drawn from <code>outputs/</code>, and a <a href="../players/">pool page</a>. The style map, the AI layer and the video proof of concept of the earlier version are withdrawn.</li>
-      <li><span class="mono">2026-09-22</span> The site became English only.</li>
-      <li><span class="mono">2026-05-18</span> First version: a style map of Czech players from a crosswalk of league statistics.</li>
+      <li><span class="mono">29 September 2026</span> Version 3, an editorial pass against the site's editorial standard v1. Status stated as exploratory and not pre-registered; content headings; each question page has a one-sentence answer, figure captions, evidence, "What this means", "What this does not show" and a metadata line; all limitations are collected on this page; references, data availability, licences and reproduction commands added; the "This autumn" section became a dated note outside the main navigation. New figures, all computed by <code>src/analysis/intervals.py</code> into <code>outputs/intervals.json</code>: 95 % bootstrap intervals for the question 4 shares and ratios, the question 5 median ratios and the question 7 save-percentage differences; season ranges for question 4; the question 3 peer ranges and the Czech 21-or-under cells for 2020/21–2025/26; the question 6 shares by period and without the 2018 and 2022 Olympics. Question 2 now reports P(level rises) for every step and reads a step as a rise or fall only when its 90 % HDI excludes 1. Correction: a hand check of the Czech roster rows placed by the weakest rules found that Radko Gudas (Olympics 2026) was not linked because the roster's birth date differed from his league record by 25 days; the roster birth-date rule now also accepts the league date when the player's other roster rows all give it. This corrected six roster birth dates (the list in <code>outputs/linking.json</code> grows from 19 to {{ linking.swapped|length }}) and changed: people in the linked data 17 991 → {{ num(linking.persons) }}, with a nationality 14 309 → {{ num(linking.with_nat) }}; NHL players on the Czech 2026 Olympic roster 10 → 11 and "other" 2 → 1; the Czech mean NHL roster share 30.4 % → {{ pct(q6.home['1']) }} and "other" 3.4 % → {{ pct(q6.home.other) }}; the Swiss mean NHL roster share 16.5 % → 16.7 %; Finland's NHL + rung-2 count for 2025/26 425 → 426 (75.18 → 75.36 per million) and small changes in the Finnish, German, National League and SHL coverage figures of earlier seasons. No Czech count in questions 1–5 or 7 changed. Checked against editorial standard v1 on 29 September 2026.</li>
+      <li><span class="mono">29 September 2026</span> A "This autumn" section: two dated, sourced items of news (the national team's new head coach and staff; David Pastrňák's club captaincy in Boston), beside the atlas's own numbers.</li>
+      <li><span class="mono">29 September 2026</span> Rebuilt on the football atlas's model: ten nations, a two-rung league ladder, fetchers with a committed snapshot, one analysis module per question, interactive charts drawn from <code>outputs/</code>, and a <a href="../players/">pool page</a>. The style map, the AI layer and the video proof of concept of the earlier version are withdrawn.</li>
+      <li><span class="mono">22 September 2026</span> The site became English only.</li>
+      <li><span class="mono">18 May 2026</span> First version: a style map of Czech players from a crosswalk of league statistics.</li>
     </ul>
   </div>
 </section>

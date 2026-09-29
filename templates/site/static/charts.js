@@ -25,7 +25,7 @@
   const RUNG = { '1': C.acid, '2': C.ink, other: C.grey, home: C.pale, khl: 'url(#hatch)', unknown: C.none };
   const RUNG_SWATCH = { '1': C.acid, '2': C.ink, other: C.grey, home: C.pale, khl: 'repeating-linear-gradient(45deg,#111 0 1.5px,#fff 1.5px 4px)', unknown: C.none };
   const CAT_LABEL = { '1': 'NHL', '2': 'rung 2', home: 'Extraliga', khl: 'KHL', other: 'other league', unknown: 'not placed' };
-  const fmt2 = d3.format('.2f'), pct = d3.format('.1%'), pct0 = d3.format('.0%');
+  const fmt2 = (v) => d3.format('.2f')(v).replace('-', '\u2212'), pct = (v) => d3.format('.1f')(v * 100).replace('-', '\u2212') + '\u00a0%', pct0 = (v) => d3.format('.0f')(v * 100) + '\u00a0%';
   const esc = (v) => String(v == null ? '' : v).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const short = (s) => `${s.slice(2, 4)}/${s.slice(5, 7)}`;
 
@@ -198,7 +198,7 @@
     function draw() {
       const d = q2.nations[state.c], seasons = q2.seasons;
       const held = state.c === home ? C.acid : C.ink;
-      lg.innerHTML = `<span><i style="background:${held};border-radius:50%"></i>players (20+ games)</span><span><i class="lg-line" style="border-top-color:${held}"></i>fitted level</span><span><i style="background:#e9eefb"></i>90% interval</span><span><i style="background:${C.ink}"></i>where a fall is dated</span><span><i style="background:${C.pale}"></i>where a rise is dated</span>`;
+      lg.innerHTML = `<span><i style="background:${held};border-radius:50%"></i>players (20+ games)</span><span><i class="lg-line" style="border-top-color:${held}"></i>fitted level</span><span><i style="background:#e9eefb"></i>90\u00a0% HDI</span><span><i style="background:${C.ink}"></i>step with median factor below 1</span><span><i style="background:${C.pale}"></i>step with median factor above 1</span>`;
       const H = 440, top = 300, M = { t: 16, r: 20, b: 34, l: 40 };
       const { svg, w, narrow } = svgIn(plot, H);
       const x = d3.scalePoint().domain(seasons).range([M.l, w - M.r]).padding(0.5);
@@ -224,7 +224,7 @@
       svg.on('mousemove', (ev) => {
         const [mx] = d3.pointer(ev, svg.node());
         const i = Math.floor((mx - M.l) / x.step()); if (i < 0 || i >= seasons.length) return hideTip();
-        const steps = d.steps.map((s) => `<span>${s.direction === 'down' ? 'fall' : 'rise'} ${s.order}: ${pct(s.marginal[i])}</span>`).join('');
+        const steps = d.steps.map((s) => `<span>step ${s.order}: ${pct(s.marginal[i])}</span>`).join('');
         showTip(`<b>${seasons[i]}</b><span>${d.n[i] == null ? 'no season (lockout)' : d.n[i] + ' players'}</span><span>fitted ${d.median[i].toFixed(1)} (${d.lo[i].toFixed(1)}–${d.hi[i].toFixed(1)})</span>${steps}`, ev.clientX, ev.clientY);
       }).on('mouseleave', hideTip);
     }
@@ -260,7 +260,7 @@
         });
         g.append('line').attr('x1', x(r.median)).attr('x2', x(r.median)).attr('y1', cy - 9).attr('y2', cy + 9).attr('stroke', C.ink).attr('stroke-width', 2);
         g.append('circle').attr('cx', x(r.pm[home])).attr('cy', cy).attr('r', 6).attr('fill', C.acid)
-          .on('mousemove', (ev) => showTip(`<b>Czechia · ${POS[r.position]}, ${r.band}</b><span>${r.counts[home]} players · ${fmt2(r.pm[home])} per million</span><span>peer median ${fmt2(r.median)}</span><span>${r.shortfall > 0 ? `${r.shortfall.toFixed(1)} players short of the median` : 'at or above the median'}</span>`, ev.clientX, ev.clientY))
+          .on('mousemove', (ev) => showTip(`<b>Czechia · ${POS[r.position]}, ${r.band}</b><span>${r.counts[home]} players · ${fmt2(r.pm[home])} per million</span><span>peer median ${fmt2(r.median)}</span><span>${r.shortfall > 0 ? `${r.shortfall.toFixed(1)} players below the peer median` : 'at or above the peer median'}</span>`, ev.clientX, ev.clientY))
           .on('mouseleave', hideTip);
       });
       label(svg, w - M.r, M.t + rowH * rows.length + 26, 'players per million (log scale)', 'end');

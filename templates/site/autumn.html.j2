@@ -1,7 +1,7 @@
 {% extends "_base.html.j2" %}
 {% from "_macros.html.j2" import fn with context %}
-{% block title %}This autumn — Czech Hockey Atlas{% endblock %}
-{% block description %}Two dated, sourced items of Czech hockey news, beside the atlas's own numbers.{% endblock %}
+{% block title %}Czech Hockey News{% endblock %}
+{% block description %}A dated note with two sourced items of Czech hockey news, beside the atlas's own numbers.{% endblock %}
 {% block canonical %}https://hockey.bsandova.com/this-autumn/{% endblock %}
 
 {% block body %}
@@ -12,11 +12,11 @@
 {% set co = au.coach %}
 <section class="slide autumn" id="autumn">
   <div class="container">
-    <p class="close-kicker">News</p>
-    <h1 class="slide-q">This autumn</h1>
+    <p class="close-kicker">Note · Czech hockey atlas · {{ au.news_as_of }}</p>
+    <h1 class="slide-q">Czech hockey news: a new national-team head coach and an NHL club captaincy, {{ au.news_as_of }}</h1>
     <p class="autumn-asof">Atlas data as of {{ au.data_as_of }}; news as of {{ au.news_as_of }}</p>
     <div class="autumn-body">
-      <p class="autumn-lede">Two dated items of news, with their sources listed at the end of this section. The numbers beside them are the atlas's own, from its snapshot, which this section does not refresh.</p>
+      <p class="autumn-lede">This note records two dated items of news, with their sources listed at the end. The numbers beside them are the atlas's own, from its snapshot, which this note does not refresh; the note makes no statistical claim.</p>
 
       <h3 id="autumn-coach">A new head coach of the national team</h3>
       <p>{{ co.new }} succeeds {{ co.previous }} as head coach of the Czech men's national team. {{ co.approved_by[0]|upper }}{{ co.approved_by[1:] }} approved the appointment on {{ co.approved }}, with {{ co.contract_years }}-year contracts.{{ fn(co.notes_approved) }} The staff: {{ co.new }} with coaches {{ co.coaches|join(' and ') }}, goalkeeping coach {{ co.goalkeeping_coach }}, and {{ co.general_manager }} as general manager in place of {{ co.previous_general_manager }}.{{ fn(co.notes_staff) }} The first game under the new staff is on {{ co.first_game.date }} against {{ co.first_game.opponent }} at the {{ co.first_game.venue }} ({{ co.first_game.competition }}).{{ fn(co.first_game.notes) }}</p>
@@ -34,12 +34,12 @@
         <div><dt>Points per game</dt><dd>{{ f2(a.points_per_game) }} <span class="muted">median {{ f2(a.median_points_per_game) }}</span></dd></div>
         {% endif %}
       </dl>
-      <p class="capita-note">From the atlas's pool data, {{ s.league }} {{ s.season }}. The median is over all {{ s.league }} {{ cp.position_word }} who reached the games threshold that season, as in <a href="../{{ qurl.q5 }}">question 5</a>. His seasons since {{ pool.window.split('–')[0] }} are on the <a href="../players/">pool page</a>.</p>
+      <p class="capita-note">From the atlas's pool data, {{ s.league }} {{ s.season }}. The median is over all {{ num(iv.q5_group_n.get(s.league ~ '|' ~ s.season ~ '|' ~ cp.position, 0)) }} {{ s.league }} {{ cp.position_word }} who reached the games threshold that season (at least 20 of 82 games, pro-rated), as in <a href="../{{ qurl.q5 }}">question 5</a>; it describes one season and is not a rating. His seasons since {{ pool.window.split('–')[0] }} are on the <a href="../players/">pool page</a>.</p>
 
       <h3 class="autumn-sources-h">Sources</h3>
       <ol class="autumn-sources">
         {% for src in au.sources %}
-        <li id="autumn-src-{{ src.n }}">{{ src.publisher }} ({{ src.date or 'n.d.' }}). <a href="{{ src.url }}" rel="noopener">{{ src.url }}</a>, accessed {{ src.accessed }}.</li>
+        <li id="autumn-src-{{ src.n }}">{{ src.author }} ({{ src.date or 'n.d.' }}). {{ src.title }}{{ '' if src.title[-1] in '?!' else '.' }} {{ src.publisher }}. <a href="{{ src.url }}" rel="noopener">{{ src.url }}</a>. Accessed {{ src.accessed }}.</li>
         {% endfor %}
       </ol>
     </div>

@@ -38,7 +38,9 @@ def test_fmt() -> None:
     assert [fmt.ordinal(n) for n in (1, 2, 3, 4, 11, 12, 13, 21, 22)] == [
         "1st", "2nd", "3rd", "4th", "11th", "12th", "13th", "21st", "22nd",
     ]
-    assert fmt.pct(0.143) == "14.3%" and fmt.pct0(0.3042) == "30%"
+    assert fmt.pct(0.143) == "14.3\u00a0%" and fmt.pct0(0.3042) == "30\u00a0%"
+    assert fmt.num(17991) == "17\u00a0991" and fmt.signed(-0.31) == "\u22120.3" and fmt.signed(1.06) == "+1.1"
+    assert fmt.f2(-0.5) == "\u22120.50"
     assert fmt.f2(1.8322) == "1.83"
     assert fmt.times(0.831) == "×0.83"
     assert fmt.ratio_words(0.98) == "at" and fmt.ratio_words(0.87) == "below" and fmt.ratio_words(1.4) == "above"
@@ -56,11 +58,19 @@ def test_report_structure(site: Path) -> None:
     home = (site / "index.html").read_text(encoding="utf-8")
     assert '<html lang="en"' in home and 'id="take"' in home
     assert "img/hockey.jpg" in home and "U.S. Air Force Academy" in home
-    assert home.count("Read the evidence") == 6
+    assert home.count('class="nx-take-link"') == 7
+    for part in ('class="facts"', 'class="tldr"', 'class="meta-block', 'id="question"', 'id="cite"', 'id="references"', 'id="changes"'):
+        assert part in home, part
+    assert "Research · Czech hockey atlas" in home and "exploratory; not pre-registered" in home
+    assert "29 September 2026" in home[home.index('id="changes"'):]
     for i, rel in enumerate(QPAGES, 1):
-        assert f'id="q{i}"' in (site / rel).read_text(encoding="utf-8"), rel
+        page = (site / rel).read_text(encoding="utf-8")
+        assert f'id="q{i}"' in page, rel
+        for part in ("Figure 1.", "How to read it", "Evidence", "What this means", "What this does not show", 'class="page-meta'):
+            assert part in page, (rel, part)
+        assert "<h1" in page and "?</h1>" not in page, rel
     meth = (site / "methodology/index.html").read_text(encoding="utf-8")
-    for anchor in ("scope", "nationality", "exclusions", "methodology", "data-sources", "linking", "limitations", "changes"):
+    for anchor in ("scope", "nationality", "exclusions", "methodology", "data-sources", "linking", "limitations", "reproducibility", "references", "changes"):
         assert f'id="{anchor}"' in meth, anchor
     for excluded in ("KHL", "AHL", "Slovak Extraliga", "Elite Prospects"):
         assert excluded in meth
@@ -73,7 +83,7 @@ def test_navigation_and_old_links(site: Path) -> None:
     """Every page has the same top bar; old one-page anchors and /atlas/ still lead somewhere."""
     for rel in PAGES:
         html = (site / rel).read_text(encoding="utf-8")
-        for label in ("Summary", "Questions", "This autumn", "Methodology", "Players"):
+        for label in ("Summary", "Questions", "Methodology", "Players"):
             assert f">{label}<" in html, (rel, label)
         assert html.count('class="nav-q-list"') == 1
     home = (site / "index.html").read_text(encoding="utf-8")
@@ -108,12 +118,12 @@ def test_numbers_come_from_outputs(site: Path, outputs: dict) -> None:
     assert f"{home['nhl_per_million']:.2f}" in html
     assert f"{head['peer_median']['nhl_per_million']:.2f}" in html
     peak = outputs["q1_per_million"]["nhl_home_peak"]
-    assert f"peaked at {peak['n']} players in {peak['season']}" in html
+    assert f"{peak['n']} players in {peak['season']}" in html
     fall = next(s for s in outputs["q2_break_model"]["nations"]["CZE"]["break"]["steps"] if s["direction"] == "down")
     assert fall["modal"]["season"] in html
     q4 = outputs["q4_youth_ice_time"]["leagues"]
     assert fmt.pct(q4["Liiga"]["summary"]["mean_u21_games_share"]) in html
-    assert f"{outputs['linking']['persons']:,}" in html
+    assert fmt.num(outputs["linking"]["persons"]) in html
     atlas = (site / "players/index.html").read_text(encoding="utf-8")
     assert f"{outputs['pool']['counts']['players']} players" in atlas
 
@@ -132,7 +142,7 @@ def test_published_site_is_current(site: Path) -> None:
     """docs/ must be re-rendered after outputs/ or the templates change (`make pages`)."""
     for rel in ("charts/report.json", "players/pool.json", "charts.js", "atlas.app.js", "modern.css", "atlas/index.html"):
         assert (DOCS / rel).read_bytes() == (site / rel).read_bytes(), f"docs/{rel} is stale: run `make pages`"
-    strip = lambda s: re.sub(r"Built \d{4}-\d{2}-\d{2}", "", s)  # noqa: E731
+    strip = lambda s: re.sub(r"Built \d{1,2} \w+ \d{4}", "", s)  # noqa: E731
     for rel in PAGES:
         assert strip((DOCS / rel).read_text(encoding="utf-8")) == strip((site / rel).read_text(encoding="utf-8")), f"docs/{rel} is stale"
 
@@ -164,6 +174,7 @@ def test_autumn_section(site: Path, outputs: dict) -> None:
     sec = sec[: sec.index("</section>")]
     text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", sec))
     assert "Atlas data as of 29 September 2026; news as of 29 September 2026" in text
+    assert "Note · Czech hockey atlas" in text and "n.d.)" in text  # one source shows no date
     news = config.news()
     assert news is not None
     for s in news["sources"]:
@@ -188,3 +199,39 @@ def test_autumn_section(site: Path, outputs: dict) -> None:
 
 def test_mmss() -> None:
     assert fmt.mmss(1239.3) == "20:39" and fmt.mmss(875.69) == "14:36" and fmt.mmss(59.6) == "1:00"
+
+
+def test_references_resolve(site: Path) -> None:
+    """Every citation on every page resolves to a numbered reference, and every reference is cited."""
+    from src.web import references
+
+    cited: set[int] = set()
+    for rel in PAGES:
+        html = (site / rel).read_text(encoding="utf-8")
+        for n in re.findall(r'href="[^"]*#ref-(\d+)"', html):
+            cited.add(int(n))
+    listed = {r["n"] for r in references.listing()}
+    assert cited == listed
+    meth = (site / "methodology/index.html").read_text(encoding="utf-8")
+    for n in listed:
+        assert f'id="ref-{n}"' in meth
+
+
+def test_intervals_match_point_values(outputs: dict) -> None:
+    """The bootstrap module reproduces the point values the question outputs report."""
+    iv = outputs["intervals"]
+    for lg in ("NHL", "Liiga", "SHL"):
+        s = outputs["q5_abroad"]["summary"][lg]["CZE"]
+        assert iv["q5"][lg]["toi"]["median"] == pytest.approx(s["median_toi_ratio"])
+        assert iv["q5"][lg]["ppg"]["median"] == pytest.approx(s["median_ppg_ratio"])
+        assert iv["q5"][lg]["toi"]["lo"] <= iv["q5"][lg]["toi"]["median"] <= iv["q5"][lg]["toi"]["hi"]
+    for lg in ("Extraliga", "Liiga", "SHL"):
+        assert iv["q4"]["leagues"][lg]["games"]["mean"] == pytest.approx(
+            outputs["q4_youth_ice_time"]["leagues"][lg]["summary"]["mean_u21_games_share"], abs=1e-5)
+    assert iv["q6"]["all"]["shares"]["1"] == pytest.approx(outputs["q6_national_team"]["mean_shares"]["CZE"]["1"], abs=1e-5)
+    for lg, v in iv["q7"].items():
+        if v:
+            assert v["median"] == pytest.approx(outputs["q7_goalkeepers"]["abroad"]["summary"][lg]["median_save_pct_minus_median"], abs=1e-5)
+    last = [r for r in iv["q3"]["u21_by_season"] if r["season"] == outputs["q3_cohort_gaps"]["definitions"]["season"]]
+    top = next(c for c in outputs["q3_cohort_gaps"]["cells"] if c["position"] == "F" and c["age_band"] == "≤21")
+    assert next(r for r in last if r["position"] == "F")["shortfall"] == pytest.approx(top["shortfall"])

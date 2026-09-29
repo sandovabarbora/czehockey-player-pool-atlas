@@ -2,20 +2,31 @@
 
 from __future__ import annotations
 
+NBSP = "\u00a0"
+MINUS = "\u2212"
 _ORD = {1: "st", 2: "nd", 3: "rd"}
 
 
+def _minus(s: str) -> str:
+    return s.replace("-", MINUS)
+
+
 def f1(x: float | None) -> str:
-    return "–" if x is None else f"{x:.1f}"
+    return "–" if x is None else _minus(f"{x:.1f}")
 
 
 def f2(x: float | None) -> str:
-    return "–" if x is None else f"{x:.2f}"
+    return "–" if x is None else _minus(f"{x:.2f}")
+
+
+def signed(x: float | None, digits: int = 1) -> str:
+    """-0.31 -> '−0.3', 1.06 -> '+1.1' (a real minus sign)."""
+    return "–" if x is None else _minus(f"{x:+.{digits}f}")
 
 
 def pct(share: float | None, digits: int = 1) -> str:
-    """0.0795 -> '7.9%'."""
-    return "–" if share is None else f"{share * 100:.{digits}f}%"
+    """0.0795 -> '7.9 %' (a no-break space before the sign)."""
+    return "–" if share is None else _minus(f"{share * 100:.{digits}f}") + NBSP + "%"
 
 
 def pct0(share: float | None) -> str:
@@ -23,8 +34,8 @@ def pct0(share: float | None) -> str:
 
 
 def num(n: float | int | None) -> str:
-    """1234 -> '1,234'."""
-    return "–" if n is None else f"{round(n):,}"
+    """17991 -> '17 991' (a no-break space between thousands)."""
+    return "–" if n is None else f"{round(n):,}".replace(",", NBSP)
 
 
 def ordinal(n: int) -> str:
