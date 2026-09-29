@@ -1035,7 +1035,7 @@ a:hover, .topbar-links a:hover { color: var(--acid); }
 .hero-credit a { color: #FFFFFF; text-decoration: underline; text-decoration-color: rgba(255,255,255,.5); }
 /* on phones the photograph sits above the text, the text on the dark ground below it */
 @media (max-width: 760px) {
-  .hero { min-height: 0; padding-top: 72vw; background: #0B0B0B url(img/hockey-1200.jpg) 70% 0 / auto 66vw no-repeat; }
+  .hero { min-height: 0; padding-top: 72vw; background: #0B0B0B url(img/hockey-1200.jpg) 50% 0 / 100% auto no-repeat; }
   .hero::before { background: linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 34vw, #0B0B0B 66vw); }
   .hero-credit { top: calc(66vw - 20px); bottom: auto; left: 1rem; right: 1rem; font-size: 9px; }
   .hero-stamp { background: transparent; }
