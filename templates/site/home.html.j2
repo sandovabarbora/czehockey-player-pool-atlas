@@ -1,0 +1,82 @@
+{% extends "_base.html.j2" %}
+{% set h = q1.home %}
+{% block title %}Czech hockey · Player pool atlas{% endblock %}
+{% block description %}The Czech professional hockey player pool measured against nine peer nations: NHL and top European league players per million inhabitants, when the NHL group fell, where the cohorts are thin, ice time for the young at home, how Czech players fare abroad, what the national team is built from. Public data, reproducible.{% endblock %}
+{% block canonical %}https://hockey.bsandova.com/{% endblock %}
+{% block head_extra %}
+<script>
+  /* The report used to be one page. Its old anchors (#q1 … #q7, #methodology, #autumn …) now live
+     on their own pages: send an old link to the page that holds that part. */
+  (function () {
+    var map = {{ old_anchors|tojson }};
+    var id = decodeURIComponent(location.hash.slice(1));
+    var to = map[id] || (id.indexOf('autumn-src-') === 0 ? 'this-autumn/#' + id : null);
+    if (to) location.replace(to);
+  })();
+</script>
+{% endblock %}
+
+{% block body %}
+<a class="skip-link" href="#take">Skip to content</a>
+
+<header class="report-header">
+  <div class="container">
+    <h1>Czech hockey: <em>the player pool</em></h1>
+    <p class="masthead-subtitle">How deep is the Czech professional pool, measured against nine peer nations · {{ q1.season }}</p>
+  </div>
+</header>
+
+<section class="hero" id="summary">
+  <img class="hero-photo" src="img/hockey.jpg" srcset="img/hockey-1200.jpg 1200w, img/hockey.jpg 1920w" sizes="100vw" alt="A hockey player carrying the puck across the ice, in black and white with only the blue of his jersey kept" decoding="async" fetchpriority="high">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-num">
+        <span class="hero-num-figure">{{ f2(h.nhl_per_million) }}<span class="ast" aria-hidden="true">*</span></span>
+        <span class="hero-num-unit">Czech NHL players per million inhabitants, {{ q1.season }}</span>
+      </div>
+      <div class="hero-lead">
+        <p class="hero-finding">
+          Per head, Czechia ranks {{ ordinal(h.rank_nhl) }} of {{ q1.n_nations }} nations in the NHL and {{ ordinal(h.rank_top5) }} in the NHL plus the four strongest European leagues.
+          The Czech NHL group peaked at {{ q1.peak.n }} players in {{ q1.peak.season }}; it is {{ q1.peak.latest.n }} now.
+        </p>
+        <p class="hero-path">Three minutes: this number and the six findings below. The rest is the evidence.</p>
+      </div>
+    </div>
+    <p class="hero-footnote">* {{ h.nhl }} Czech players with at least 20 of 82 NHL games (pro-rated to the schedule) in {{ q1.season }}, per {{ f1(population_m) }} million inhabitants (Eurostat); every peer counted the same way. <a href="methodology/">Methodology</a>.</p>
+  </div>
+  <p class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Jake_Levin_(Air_Force_Falcon%27s_men%27s_ice_hockey)_during_game_against_Bentley_Falcons_men%27s_ice_hockey_at_Cadet_Arena_in_Colorado_Springs_on_November_9,_2018_(45170233234).jpg">U.S. Air Force Academy</a> · public domain, colour held</p>
+</section>
+
+{% if autumn %}
+<section class="autumn-teaser" aria-labelledby="autumn-teaser-h">
+  <div class="container">
+    <p class="close-kicker">News</p>
+    <h2 class="slide-q" id="autumn-teaser-h"><a href="this-autumn/">This autumn</a></h2>
+    <p class="autumn-asof">Atlas data as of {{ autumn.data_as_of }}; news as of {{ autumn.news_as_of }}</p>
+    <ul class="autumn-teaser-list">
+      <li><a href="this-autumn/#autumn-coach">A new head coach of the national team</a></li>
+      <li><a href="this-autumn/#autumn-captain">A club captaincy in the NHL</a></li>
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<section class="take" id="take">
+  <div class="container">
+    <p class="close-kicker">What to take from it</p>
+    {% for t in take %}
+    {% set q = questions[loop.index0] %}
+    <div class="nx-take"><p class="nx-take-n">{{ loop.index }}</p><div><p class="nx-take-head">{{ t.head }}</p>{% for b in t.body %}<p class="nx-take-body">{{ b }}</p>{% endfor %}<p class="nx-take-link"><a href="{{ q.url }}">Read the evidence →</a></p></div></div>
+    {% endfor %}
+    <p class="take-line close-links"><a href="methodology/#scope">What is counted</a> · <a href="methodology/#limitations">Limitations</a> · {% if autumn %}<a href="this-autumn/">This autumn</a> · {% endif %}<a href="players/">Every Czech player in the pool</a></p>
+  </div>
+</section>
+
+<section class="close" id="close">
+  <div class="container">
+    <p class="close-kicker">What this is for</p>
+    <p class="close-statement">The same measured questions, asked every summer and answered the same way, with the uncertainty on the page — and a name behind every number.</p>
+    <p class="close-links"><a href="players/">Every Czech player in the pool</a> · <a href="#take">What to take from it</a> · <a href="methodology/#limitations">Limitations</a> · <a href="https://football.bsandova.com/">The football atlas</a></p>
+  </div>
+</section>
+{% endblock %}

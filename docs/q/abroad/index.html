@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-home="CZE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How do they fare abroad? — Czech Hockey Atlas</title>
+  <meta name="description" content="Question 5 of the Czech hockey player pool atlas: How do they fare abroad?">
+  <link rel="canonical" href="https://hockey.bsandova.com/q/abroad/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css?v=5eb2262dfe">
+  <link rel="stylesheet" href="../../modern.css?v=5eb2262dfe">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script defer src="../../charts.js?v=5eb2262dfe"></script></head>
+<body id="top">
+<nav class="topbar" aria-label="Navigation">
+  <a class="topbar-brand" href="../../">Czech Hockey <span>Atlas</span></a>
+  <div class="topbar-links">
+    <a href="../../">Summary</a>
+    <details class="nav-q" data-nav-q>
+      <summary class="is-current">Questions</summary>
+      <ol class="nav-q-list">
+        <li><a href="../../q/per-head/"><span class="nav-q-n">1</span>Is the Czech pool thin?</a></li>
+        <li><a href="../../q/break/"><span class="nav-q-n">2</span>When did it break?</a></li>
+        <li><a href="../../q/cohorts/"><span class="nav-q-n">3</span>Where is it thin?</a></li>
+        <li><a href="../../q/youth/"><span class="nav-q-n">4</span>Do young players get ice time at home?</a></li>
+        <li><a href="../../q/abroad/" aria-current="page"><span class="nav-q-n">5</span>How do they fare abroad?</a></li>
+        <li><a href="../../q/national-team/"><span class="nav-q-n">6</span>What is the national team built from?</a></li>
+        <li><a href="../../q/goalkeepers/"><span class="nav-q-n">7</span>Goalkeepers</a></li>
+      </ol>
+    </details>
+    <a href="../../this-autumn/">This autumn</a>
+    <a href="../../methodology/">Methodology</a>
+    <a href="../../players/">Players</a>
+  </div>
+</nav>
+<script>
+  /* the Questions menu: close on a click outside it or on Escape */
+  (function () {
+    var d = document.querySelector('[data-nav-q]');
+    if (!d) return;
+    document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+  })();
+</script>
+<main id="content" class="qpage">
+<section class="slide" id="q5">
+  <div class="container">
+<p class="close-kicker">Question 5</p>
+    <h1 class="slide-q">How do they fare abroad?</h1>
+    <p class="slide-a">In the NHL, Czech skaters play <strong>0.98 times</strong> the median ice time of their position and score 0.87 times its points per game. In the Liiga (1.09, 1.40) and the SHL (1.08, 1.30) they are above the median on both counts.</p>
+    <figure class="figure-bleed" data-chart="q5-abroad">
+      <table class="fig-table">
+        <thead><tr><th scope="col">League</th><th scope="col" class="num">Czech players</th><th scope="col" class="num">player-seasons</th><th scope="col" class="num">ice time ÷ median</th><th scope="col" class="num">points per game ÷ median</th></tr></thead>
+        <tbody><tr><td>NHL</td><td class="num">35</td><td class="num">111</td><td class="num">0.98</td><td class="num">0.87</td></tr><tr><td>Liiga</td><td class="num">40</td><td class="num">72</td><td class="num">1.09</td><td class="num">1.40</td></tr><tr><td>SHL</td><td class="num">21</td><td class="num">39</td><td class="num">1.08</td><td class="num">1.30</td></tr></tbody>
+      </table>
+      <figcaption>How to read it: each dot is a nation's median skater in a league over 2020/21–2025/26, as a multiple of the league-season median at the same position (1.0 = the median). Czechia is the blue dot; filled ink dots are peers with ten or more player-seasons in that league, hollow ones fewer. Switch between ice time and points per game. A league's own players (Finns in the Liiga, Swedes in the SHL) sit below 1.0: they make up most of the roster, depth included, and the imported players are compared with them.</figcaption>
+    </figure>
+    <details class="fold slide-method" open>
+      <summary>How we know</summary>
+      <p class="slide-did"><span class="slide-did-label">What we did</span> Qualifying skaters (the games threshold) over 2020/21–2025/26; each player-season is divided by the median of all qualifying skaters of the same league, season and position (forward or defenceman), and the table shows the median of those ratios. 222 Czech player-seasons in all; 3 have no position and are left out.</p>
+      <p class="slide-how"><span class="slide-how-label">By position</span> NHL forwards 1.00 (ice time) and 1.01 (points), NHL defencemen 0.91 and 0.83; Liiga forwards 1.53 on points, SHL forwards 1.50.</p>
+    </details>
+    <section class="q-limits" aria-labelledby="q5-limits">
+      <h2 class="q-sub" id="q5-limits">What this does not show</h2>
+      <ul class="nx-limits">
+        <li><strong>KHL</strong> Excluded by design. It is where 25% of Czech national-team roster spots since 2010 came from, so the pool counted here is smaller than the pool the national team drew on, most of all before 2014 and before 2022.</li>
+
+        <li><strong>AHL</strong> Not fetched (terms). An AHL season appears only when the player also has an NHL career record, which favours those who made it.</li>
+
+        <li><strong>Descriptive only</strong> Nothing here predicts a season, rates a player beyond his published statistics or advises selection.</li>
+
+      </ul>
+      <p class="q-limits-more"><a href="../../methodology/#limitations">Limitations</a></p>
+    </section>
+    <nav class="q-pager" aria-label="Questions">
+<a class="q-pager-prev" href="../../q/youth/"><span class="q-pager-label">← Question 4</span>Do young players get ice time at home?</a>      <a class="q-pager-home" href="../../#take">Summary</a>
+<a class="q-pager-next" href="../../q/national-team/"><span class="q-pager-label">Question 6 →</span>What is the national team built from?</a>    </nav>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="role-block">
+      <p class="role-kicker">Built by Barbora Šandová — data &amp; cloud engineer</p>
+      <p class="role-body">A descriptive, reproducible benchmark from public statistics: the fetchers, the snapshot, the analysis and this page are one repository. No predictions, no selection advice.</p>
+      <p class="role-author">
+        <span class="role-author-name">Barbora Šandová</span>
+        <span class="role-author-contact">
+          <a href="mailto:hello@bsandova.com">hello@bsandova.com</a>
+          &middot;
+          <a href="https://github.com/sandovabarbora/czehockey-player-pool-atlas">github.com/sandovabarbora/czehockey-player-pool-atlas</a>
+        </span>
+      </p>
+    </div>
+    <p class="rendered-at">Built 2026-09-29 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<p class="close-kicker">Question 3</p>
+<h1 class="slide-q">Where is it thin?</h1>
+{% set top = q3.top_shortfall %}
+<p class="slide-a">{% if q3.u21_home == 0 %}In the youngest band: <strong>no Czech skater aged 21 or under</strong> reaches the games threshold in the NHL or rung 2 in {{ q3.season }}.{% else %}{{ q3.u21_home }} Czech skaters aged 21 or under reach the threshold in {{ q3.season }}.{% endif %}{% if top %} The largest shortfall is {{ position_word[top.position] }} aged {{ band_word[top.age_band] }}: {{ f1(top.shortfall) }} players below the peer median.{% endif %}</p>
+<figure class="figure-bleed" data-chart="q3-cohorts">
+  <table class="fig-table">
+    <thead><tr><th scope="col">Position, age</th><th scope="col" class="num">Czech players</th><th scope="col" class="num">per million</th><th scope="col" class="num">peer median</th><th scope="col" class="num">short of the median</th></tr></thead>
+    <tbody>
+    {% for c in q3.cells|sort(attribute='position') %}
+      <tr><td>{{ position_word[c.position] }}, {{ c.age_band }}</td><td class="num">{{ c.counts.CZE }}</td><td class="num">{{ f2(c.per_million.CZE) }}</td><td class="num">{{ f2(c.peer_median) }}</td><td class="num">{{ f1(c.shortfall) if c.shortfall > 0 else '–' }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <figcaption>How to read it: one row per position and age band in {{ q3.season }}. The blue dot is Czechia, the ink tick the peer median, the grey dots the peers (hover for names). A hollow dot is a peer left out of that median because more than a quarter of its players have no known age or position: {{ q3.excluded_age|join(' and ') }} in every age band, as the National League and the DEL publish no birth dates. The scale is logarithmic so the small nations stay readable next to Finland and Sweden.</figcaption>
+</figure>
+<details class="fold slide-method" open>
+  <summary>How we know</summary>
+  <p class="slide-did"><span class="slide-did-label">What we did</span> Qualifying players in the NHL and rung 2 in {{ q3.season }}, counted once per person, split by position and by age (season start year minus birth year). The shortfall is the gap to the peer median per million times the Czech population ({{ f1(population_m) }} million): the number of players Czechia would need to reach the median.</p>
+  <p class="slide-how"><span class="slide-how-label">Largest shortfalls</span> {% for s in q3.shortfalls %}{{ position_word[s.position] }} {{ s.age_band }}: {{ f1(s.shortfall) }}{{ '; ' if not loop.last else '.' }}{% endfor %}</p>
+</details>

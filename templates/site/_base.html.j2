@@ -11,23 +11,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ prefix }}style.css?v={{ v }}">
   <link rel="stylesheet" href="{{ prefix }}modern.css?v={{ v }}">
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  {% if page in ("question", "players") %}<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>{% endif %}
   {% block scripts %}{% endblock %}
+  {% block head_extra %}{% endblock %}
 </head>
 <body id="top"{% block body_attrs %}{% endblock %}>
 <nav class="topbar" aria-label="Navigation">
   <a class="topbar-brand" href="{{ prefix }}">Czech Hockey <span>Atlas</span></a>
   <div class="topbar-links">
-    <a href="{{ prefix }}#take">Summary</a>
-    <a href="{{ prefix }}#q1">Questions</a>
-    <a href="{{ prefix }}#q7">Goalkeepers</a>
+    <a href="{{ prefix }}"{% if page == 'home' %} aria-current="page"{% endif %}>Summary</a>
+    <details class="nav-q" data-nav-q>
+      <summary{% if page == 'question' %} class="is-current"{% endif %}>Questions</summary>
+      <ol class="nav-q-list">
+        {% for q in questions %}
+        <li><a href="{{ prefix }}{{ q.url }}"{% if cur is defined and cur.id == q.id %} aria-current="page"{% endif %}><span class="nav-q-n">{{ loop.index }}</span>{{ q.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </details>
     {% if autumn %}
-    <a href="{{ prefix }}#autumn">This autumn</a>
+    <a href="{{ prefix }}this-autumn/"{% if page == 'autumn' %} aria-current="page"{% endif %}>This autumn</a>
     {% endif %}
-    <a href="{{ prefix }}#methodology">Methodology</a>
-    <a href="{{ prefix }}atlas/"{% if page == 'atlas' %} aria-current="page"{% endif %}>Players</a>
+    <a href="{{ prefix }}methodology/"{% if page == 'methodology' %} aria-current="page"{% endif %}>Methodology</a>
+    <a href="{{ prefix }}players/"{% if page == 'players' %} aria-current="page"{% endif %}>Players</a>
   </div>
 </nav>
+<script>
+  /* the Questions menu: close on a click outside it or on Escape */
+  (function () {
+    var d = document.querySelector('[data-nav-q]');
+    if (!d) return;
+    document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+  })();
+</script>
 {% block body %}{% endblock %}
 <footer>
   <div class="container">

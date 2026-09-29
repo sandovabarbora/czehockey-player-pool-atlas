@@ -1,0 +1,15 @@
+<p class="close-kicker">Question 6</p>
+<h1 class="slide-q">What is the national team built from?</h1>
+<p class="slide-a">Since {{ q6.first_year }}, Czech World Championship and Olympic rosters have been on average <strong>{{ pct0(q6.home['1']) }} NHL</strong>, {{ pct0(q6.home['home']) }} Extraliga, {{ pct0(q6.home.khl) }} KHL and {{ pct0(q6.home['2']) }} rung 2.</p>
+<figure class="figure-bleed" data-chart="q6-roster">
+  <table class="fig-table">
+    <thead><tr><th scope="col">Tournament</th><th scope="col" class="num">NHL</th><th scope="col" class="num">rung 2</th><th scope="col" class="num">Extraliga</th><th scope="col" class="num">KHL</th><th scope="col" class="num">other</th><th scope="col" class="num">players</th></tr></thead>
+    <tbody>{% for e in q6.events %}<tr{% if e is sameas q6.last_event %} class="is-home"{% endif %}><td>{{ 'Olympics' if e.event == 'OG' else 'World Championship' }} {{ e.year }}</td><td class="num">{{ e['1'] }}</td><td class="num">{{ e['2'] }}</td><td class="num">{{ e.home }}</td><td class="num">{{ e.khl }}</td><td class="num">{{ e.other + e.unknown }}</td><td class="num">{{ e.players }}</td></tr>{% endfor %}</tbody>
+  </table>
+  <figcaption>How to read it: each bar is a nation's roster spots by the league the player's club was in at the time of the tournament, averaged over the {{ q6.n_events }} World Championships and Olympics since {{ q6.first_year }}: NHL in blue, rung 2 in ink, the Extraliga pale, the KHL hatched, other leagues grey. The second view is Czechia tournament by tournament{% if q6.last_khl_event and q6.last_khl_event is not sameas q6.last_event %}: no KHL player has been on the Czech roster since the {{ 'Olympics' if q6.last_khl_event.event == 'OG' else 'World Championship' }} {{ q6.last_khl_event.year }}{% endif %}; at the {{ q6.last_label }} the roster had {{ q6.last_event['1'] }} NHL players, {{ q6.last_event['2'] }} from rung 2 and {{ q6.last_event.home }} from the Extraliga.</figcaption>
+</figure>
+<details class="fold slide-method" open>
+  <summary>How we know</summary>
+  <p class="slide-did"><span class="slide-did-label">What we did</span> Rosters from the English Wikipedia articles for each World Championship and Olympic tournament since {{ q6.first_year }} (CC BY-SA 4.0), each player linked to his league records. A player's club is placed in a league by these rules in order: the league Wikipedia gives, a list of KHL clubs, his NHL career record for that season, his own league row, a team-name match, then the club's country.</p>
+  <p class="slide-how"><span class="slide-how-label">Placement</span> {% for k, v in q6.basis_counts.items() %}{{ k|replace('_', ' ') }} {{ num(v) }}{{ ', ' if not loop.last else '' }}{% endfor %} roster rows (all nations). The Czech NHL share ranks {{ ordinal(q6.nhl_rank) }} of the ten nations.</p>
+</details>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-home="CZE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Where is it thin? — Czech Hockey Atlas</title>
+  <meta name="description" content="Question 3 of the Czech hockey player pool atlas: Where is it thin?">
+  <link rel="canonical" href="https://hockey.bsandova.com/q/cohorts/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css?v=5eb2262dfe">
+  <link rel="stylesheet" href="../../modern.css?v=5eb2262dfe">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script defer src="../../charts.js?v=5eb2262dfe"></script></head>
+<body id="top">
+<nav class="topbar" aria-label="Navigation">
+  <a class="topbar-brand" href="../../">Czech Hockey <span>Atlas</span></a>
+  <div class="topbar-links">
+    <a href="../../">Summary</a>
+    <details class="nav-q" data-nav-q>
+      <summary class="is-current">Questions</summary>
+      <ol class="nav-q-list">
+        <li><a href="../../q/per-head/"><span class="nav-q-n">1</span>Is the Czech pool thin?</a></li>
+        <li><a href="../../q/break/"><span class="nav-q-n">2</span>When did it break?</a></li>
+        <li><a href="../../q/cohorts/" aria-current="page"><span class="nav-q-n">3</span>Where is it thin?</a></li>
+        <li><a href="../../q/youth/"><span class="nav-q-n">4</span>Do young players get ice time at home?</a></li>
+        <li><a href="../../q/abroad/"><span class="nav-q-n">5</span>How do they fare abroad?</a></li>
+        <li><a href="../../q/national-team/"><span class="nav-q-n">6</span>What is the national team built from?</a></li>
+        <li><a href="../../q/goalkeepers/"><span class="nav-q-n">7</span>Goalkeepers</a></li>
+      </ol>
+    </details>
+    <a href="../../this-autumn/">This autumn</a>
+    <a href="../../methodology/">Methodology</a>
+    <a href="../../players/">Players</a>
+  </div>
+</nav>
+<script>
+  /* the Questions menu: close on a click outside it or on Escape */
+  (function () {
+    var d = document.querySelector('[data-nav-q]');
+    if (!d) return;
+    document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+  })();
+</script>
+<main id="content" class="qpage">
+<section class="slide" id="q3">
+  <div class="container">
+<p class="close-kicker">Question 3</p>
+    <h1 class="slide-q">Where is it thin?</h1>
+    <p class="slide-a">In the youngest band: <strong>no Czech skater aged 21 or under</strong> reaches the games threshold in the NHL or rung 2 in 2025/26. The largest shortfall is forwards aged 21 or under: 6.1 players below the peer median.</p>
+    <figure class="figure-bleed" data-chart="q3-cohorts">
+      <table class="fig-table">
+        <thead><tr><th scope="col">Position, age</th><th scope="col" class="num">Czech players</th><th scope="col" class="num">per million</th><th scope="col" class="num">peer median</th><th scope="col" class="num">short of the median</th></tr></thead>
+        <tbody>
+          <tr><td>defencemen, 22–25</td><td class="num">3</td><td class="num">0.27</td><td class="num">0.18</td><td class="num">–</td></tr>
+          <tr><td>defencemen, 26–29</td><td class="num">4</td><td class="num">0.37</td><td class="num">0.37</td><td class="num">0.0</td></tr>
+          <tr><td>defencemen, 30+</td><td class="num">7</td><td class="num">0.64</td><td class="num">0.00</td><td class="num">–</td></tr>
+          <tr><td>defencemen, ≤21</td><td class="num">0</td><td class="num">0.00</td><td class="num">0.18</td><td class="num">2.0</td></tr>
+          <tr><td>forwards, 22–25</td><td class="num">3</td><td class="num">0.27</td><td class="num">0.53</td><td class="num">2.8</td></tr>
+          <tr><td>forwards, 26–29</td><td class="num">15</td><td class="num">1.37</td><td class="num">0.66</td><td class="num">–</td></tr>
+          <tr><td>forwards, 30+</td><td class="num">10</td><td class="num">0.92</td><td class="num">1.00</td><td class="num">0.9</td></tr>
+          <tr><td>forwards, ≤21</td><td class="num">0</td><td class="num">0.00</td><td class="num">0.55</td><td class="num">6.1</td></tr>
+          <tr><td>goalkeepers, 22–25</td><td class="num">3</td><td class="num">0.27</td><td class="num">0.18</td><td class="num">–</td></tr>
+          <tr><td>goalkeepers, 26–29</td><td class="num">4</td><td class="num">0.37</td><td class="num">0.18</td><td class="num">–</td></tr>
+          <tr><td>goalkeepers, 30+</td><td class="num">4</td><td class="num">0.37</td><td class="num">0.18</td><td class="num">–</td></tr>
+          <tr><td>goalkeepers, ≤21</td><td class="num">0</td><td class="num">0.00</td><td class="num">0.00</td><td class="num">–</td></tr>
+        </tbody>
+      </table>
+      <figcaption>How to read it: one row per position and age band in 2025/26. The blue dot is Czechia, the ink tick the peer median, the grey dots the peers (hover for names). A hollow dot is a peer left out of that median because more than a quarter of its players have no known age or position: Switzerland and Germany in every age band, as the National League and the DEL publish no birth dates. The scale is logarithmic so the small nations stay readable next to Finland and Sweden.</figcaption>
+    </figure>
+    <details class="fold slide-method" open>
+      <summary>How we know</summary>
+      <p class="slide-did"><span class="slide-did-label">What we did</span> Qualifying players in the NHL and rung 2 in 2025/26, counted once per person, split by position and by age (season start year minus birth year). The shortfall is the gap to the peer median per million times the Czech population (10.9 million): the number of players Czechia would need to reach the median.</p>
+      <p class="slide-how"><span class="slide-how-label">Largest shortfalls</span> forwards ≤21: 6.1; forwards 22–25: 2.8; defencemen ≤21: 2.0; forwards 30+: 0.9; defencemen 26–29: 0.0.</p>
+    </details>
+    <section class="q-limits" aria-labelledby="q3-limits">
+      <h2 class="q-sub" id="q3-limits">What this does not show</h2>
+      <ul class="nx-limits">
+        <li><strong>Birth dates</strong> The National League and the DEL publish none, so their players' ages come only from a link to another league. That removes Switzerland and Germany from the age medians in question 3 and leaves the NL and DEL youth shares in question 4 unmeasured.</li>
+
+        <li><strong>Nationality</strong> For 649 of the 867 Czech players on the pool page, the only evidence is the Extraliga foreigner flag or a licence, which is eligibility, not citizenship. The DEL published no nationality before 2022/23, so the rung 1 + 2 series before 2022/23 is a lower bound.</li>
+
+        <li><strong>Population</strong> A per-million rate compares nations of very different sizes; a handful of players moves a small nation's rate a lot.</li>
+
+      </ul>
+      <p class="q-limits-more"><a href="../../methodology/#limitations">Limitations</a></p>
+    </section>
+    <nav class="q-pager" aria-label="Questions">
+<a class="q-pager-prev" href="../../q/break/"><span class="q-pager-label">← Question 2</span>When did it break?</a>      <a class="q-pager-home" href="../../#take">Summary</a>
+<a class="q-pager-next" href="../../q/youth/"><span class="q-pager-label">Question 4 →</span>Do young players get ice time at home?</a>    </nav>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="role-block">
+      <p class="role-kicker">Built by Barbora Šandová — data &amp; cloud engineer</p>
+      <p class="role-body">A descriptive, reproducible benchmark from public statistics: the fetchers, the snapshot, the analysis and this page are one repository. No predictions, no selection advice.</p>
+      <p class="role-author">
+        <span class="role-author-name">Barbora Šandová</span>
+        <span class="role-author-contact">
+          <a href="mailto:hello@bsandova.com">hello@bsandova.com</a>
+          &middot;
+          <a href="https://github.com/sandovabarbora/czehockey-player-pool-atlas">github.com/sandovabarbora/czehockey-player-pool-atlas</a>
+        </span>
+      </p>
+    </div>
+    <p class="rendered-at">Built 2026-09-29 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+  </div>
+</footer>
+</body>
+</html>

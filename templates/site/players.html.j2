@@ -1,7 +1,7 @@
 {% extends "_base.html.j2" %}
 {% block title %}Players — Czech Hockey Atlas{% endblock %}
 {% block description %}Every Czech player with a season in a covered league, {{ pool.window }}: games by season and by rung of the league, and each player's seasons in a table.{% endblock %}
-{% block canonical %}https://hockey.bsandova.com/atlas/{% endblock %}
+{% block canonical %}https://hockey.bsandova.com/players/{% endblock %}
 {% block scripts %}<script defer src="../atlas.app.js?v={{ v }}"></script>{% endblock %}
 {% block body_attrs %} class="ax-page"{% endblock %}
 
@@ -35,7 +35,7 @@
     <noscript><p class="ax-note">The list needs JavaScript. The same data is in <a href="pool.json">pool.json</a>.</p></noscript>
   </div>
   <footer class="ax-foot">
-    <p>Czech nationality follows the report's <a href="../#nationality">one definition</a>: citizenship where a league publishes it, then the national-team roster, then eligibility. For {{ pool.eligibility_only }} of the {{ pool.players }} players the only evidence is the Extraliga foreigner flag or a licence ({{ pool.by_basis.citizenship }} by citizenship, {{ pool.by_basis.national_team }} by a national-team roster). Age is the season start year minus the birth year. Not covered: the KHL (by design), the AHL (its terms), the Czech 1st league and every other league; a season there is absent here, not zero. Sources and access dates are on the <a href="../#data-sources">report page</a>.</p>
+    <p>Czech nationality follows the report's <a href="../methodology/#nationality">one definition</a>: citizenship where a league publishes it, then the national-team roster, then eligibility. For {{ pool.eligibility_only }} of the {{ pool.players }} players the only evidence is the Extraliga foreigner flag or a licence ({{ pool.by_basis.citizenship }} by citizenship, {{ pool.by_basis.national_team }} by a national-team roster). Age is the season start year minus the birth year. Not covered: the KHL (by design), the AHL (its terms), the Czech 1st league and every other league; a season there is absent here, not zero. Sources and access dates are on the <a href="../methodology/#data-sources">report page</a>.</p>
   </footer>
 </main>
 {% endblock %}

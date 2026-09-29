@@ -92,7 +92,7 @@ Output at `outputs/index.html` and `outputs/report.pdf`.
 
 ```bash
 make analysis           # outputs/*.json from the committed snapshot (~6 min)
-make pages              # docs/index.html (report) and docs/atlas/ (pool page)
+make pages              # docs/: summary, q/<slug>/ per question, this-autumn/, methodology/, players/ (atlas/ redirects)
 ```
 
 `src/web/` renders `templates/site/*.html.j2` from `outputs/*.json` and copies the
