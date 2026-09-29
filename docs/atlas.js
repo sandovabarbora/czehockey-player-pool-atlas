@@ -133,8 +133,8 @@
     reset.addEventListener('click', () => { state.off.clear(); state.ringOnly = false; apply(); });
     controls.appendChild(reset);
     const hint = document.createElement('span'); hint.className = 'atlas-hint'; hint.textContent = T.hint;
-    controls.appendChild(hint);
     wrap.before(controls);
+    wrap.before(hint); // the hint sits under the control row, which stays one line
 
     // point hover
     const showPoint = (p, c, u) => {
