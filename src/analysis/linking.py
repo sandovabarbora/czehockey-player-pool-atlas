@@ -650,7 +650,8 @@ def fix_roster_dates(
     """Some Wikipedia roster tables give a birth date with day and month swapped, or a day
     off. A roster date that matches no league record of that name is replaced when the
     league records of that name carry exactly one birth date and it is the swapped date or
-    one day away. Each replacement is reported."""
+    one day away, or it is in the same year and month and every other roster row of that
+    player (same name, same team) gives it. Each replacement is reported."""
     if rosters is None or not len(rosters):
         return rosters, []
     dates: dict[str, set[str]] = defaultdict(set)
@@ -661,6 +662,11 @@ def fix_roster_dates(
     fixed = []
     keys = r["player"].map(common.link_key)
     col = r.columns.get_loc("birth_date")
+    team = r["team_iso3"] if "team_iso3" in r.columns else pd.Series([None] * len(r), index=r.index)
+    roster_dates: dict[tuple[str, object], list[str]] = defaultdict(list)
+    for k, t, d in zip(keys, team, r["birth_date"], strict=True):
+        if isinstance(d, str):
+            roster_dates[(k, t)].append(d)
     for i, (k, d) in enumerate(zip(keys, r["birth_date"], strict=True)):
         if not isinstance(d, str) or d in dates.get(k, ()):
             continue
@@ -669,7 +675,10 @@ def fix_roster_dates(
             continue
         c = next(iter(cands))
         one_day = abs((pd.Timestamp(c) - pd.Timestamp(d)).days) == 1
-        if c == _swap_day_month(d) or one_day:
+        others = list(roster_dates.get((k, team.iat[i]), []))
+        others.remove(d)
+        rosters_agree = bool(others) and set(others) == {c} and c[:7] == d[:7]
+        if c == _swap_day_month(d) or one_day or rosters_agree:
             r.iat[i, col] = c
             fixed.append(
                 {
@@ -678,7 +687,7 @@ def fix_roster_dates(
                     "player": r["player"].iat[i],
                     "roster_date": d,
                     "used": c,
-                    "reason": "one day" if one_day else "day and month swapped",
+                    "reason": "one day" if one_day else ("day and month swapped" if c == _swap_day_month(d) else "day differs; the player's other rosters give the league date"),
                 }
             )
     return r, fixed

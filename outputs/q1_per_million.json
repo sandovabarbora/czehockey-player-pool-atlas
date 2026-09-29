@@ -33,13 +33,13 @@
     "population": 5652881.0,
     "nhl": 41,
     "nhl_per_million": 7.252939,
-    "top5": 425,
-    "top5_per_million": 75.182902,
+    "top5": 426,
+    "top5_per_million": 75.359803,
     "by_league": {
      "NHL": 41,
      "SHL": 36,
      "Liiga": 314,
-     "NL": 27,
+     "NL": 28,
      "DEL": 9
     },
     "rank_nhl": 2,
@@ -243,8 +243,8 @@
     },
     "NL": {
      "qualifying": 365,
-     "unidentified": 22,
-     "identified_share": 0.939726
+     "unidentified": 21,
+     "identified_share": 0.942466
     },
     "SHL": {
      "qualifying": 365,
@@ -1118,9 +1118,9 @@
      407,
      383,
      402,
-     394,
-     403,
-     425
+     395,
+     404,
+     426
     ],
     "per_million": [
      74.723345,
@@ -1138,9 +1138,9 @@
      73.548107,
      69.030887,
      72.250569,
-     70.308793,
-     71.504981,
-     75.182902
+     70.487242,
+     71.682413,
+     75.359803
     ]
    },
    "SWE": {
@@ -1273,7 +1273,7 @@
     "n": [
      53,
      61,
-     68,
+     69,
      69,
      77,
      85,
@@ -1293,7 +1293,7 @@
     "per_million": [
      0.646323,
      0.745701,
-     0.847647,
+     0.860112,
      0.858979,
      0.95624,
      1.052404,
@@ -1568,8 +1568,8 @@
      },
      "SHL": {
       "qualifying": 311,
-      "unidentified": 17,
-      "identified_share": 0.945338
+      "unidentified": 16,
+      "identified_share": 0.948553
      }
     },
     "complete": false
@@ -1966,8 +1966,8 @@
      },
      "NL": {
       "qualifying": 372,
-      "unidentified": 19,
-      "identified_share": 0.948925
+      "unidentified": 18,
+      "identified_share": 0.951613
      },
      "SHL": {
       "qualifying": 355,
@@ -1997,8 +1997,8 @@
      },
      "NL": {
       "qualifying": 367,
-      "unidentified": 19,
-      "identified_share": 0.948229
+      "unidentified": 18,
+      "identified_share": 0.950954
      },
      "SHL": {
       "qualifying": 367,
@@ -2028,8 +2028,8 @@
      },
      "NL": {
       "qualifying": 365,
-      "unidentified": 22,
-      "identified_share": 0.939726
+      "unidentified": 21,
+      "identified_share": 0.942466
      },
      "SHL": {
       "qualifying": 365,

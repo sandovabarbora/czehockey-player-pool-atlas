@@ -629,8 +629,8 @@
      "skaters": 408,
      "u21_skaters": 5,
      "games": 14429.0,
-     "age_known_games_share": 0.501629,
-     "u21_games_share": 0.026803,
+     "age_known_games_share": 0.504678,
+     "u21_games_share": 0.026641,
      "measured": false
     },
     {
@@ -638,8 +638,8 @@
      "skaters": 410,
      "u21_skaters": 3,
      "games": 14434.0,
-     "age_known_games_share": 0.475405,
-     "u21_games_share": 0.018653,
+     "age_known_games_share": 0.477276,
+     "u21_games_share": 0.01858,
      "measured": false
     },
     {
@@ -647,8 +647,8 @@
      "skaters": 425,
      "u21_skaters": 1,
      "games": 14412.0,
-     "age_known_games_share": 0.45927,
-     "u21_games_share": 0.001662,
+     "age_known_games_share": 0.462531,
+     "u21_games_share": 0.00165,
      "measured": false
     }
    ],
@@ -657,9 +657,9 @@
     "mean_u21_games_share": null,
     "latest": {
      "season": "2025/26",
-     "u21_games_share": 0.001662,
+     "u21_games_share": 0.00165,
      "u21_toi_share": null,
-     "age_known_games_share": 0.45927,
+     "age_known_games_share": 0.462531,
      "measured": false
     }
    }
