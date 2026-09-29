@@ -1,0 +1,1625 @@
+{
+ "source": "NHL stats REST (api.nhle.com/stats/rest), regular season",
+ "min_games": 20,
+ "seasons": [
+  {
+   "season": "1995/96",
+   "cancelled": false,
+   "skaters": 777,
+   "goalies": 78,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 35,
+     "gp20": 25
+    },
+    "FIN": {
+     "players": 14,
+     "gp20": 13
+    },
+    "SWE": {
+     "players": 35,
+     "gp20": 27
+    },
+    "CHE": {
+     "players": 1,
+     "gp20": 1
+    },
+    "SVK": {
+     "players": 10,
+     "gp20": 7
+    },
+    "DEU": {
+     "players": 3,
+     "gp20": 1
+    },
+    "LVA": {
+     "players": 3,
+     "gp20": 2
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 0,
+     "gp20": 0
+    }
+   }
+  },
+  {
+   "season": "1996/97",
+   "cancelled": false,
+   "skaters": 769,
+   "goalies": 77,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 38,
+     "gp20": 26
+    },
+    "FIN": {
+     "players": 17,
+     "gp20": 13
+    },
+    "SWE": {
+     "players": 36,
+     "gp20": 34
+    },
+    "CHE": {
+     "players": 2,
+     "gp20": 1
+    },
+    "SVK": {
+     "players": 8,
+     "gp20": 6
+    },
+    "DEU": {
+     "players": 4,
+     "gp20": 2
+    },
+    "LVA": {
+     "players": 3,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 0,
+     "gp20": 0
+    }
+   }
+  },
+  {
+   "season": "1997/98",
+   "cancelled": false,
+   "skaters": 762,
+   "goalies": 73,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 39,
+     "gp20": 30
+    },
+    "FIN": {
+     "players": 17,
+     "gp20": 14
+    },
+    "SWE": {
+     "players": 39,
+     "gp20": 35
+    },
+    "CHE": {
+     "players": 1,
+     "gp20": 1
+    },
+    "SVK": {
+     "players": 13,
+     "gp20": 9
+    },
+    "DEU": {
+     "players": 6,
+     "gp20": 3
+    },
+    "LVA": {
+     "players": 4,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 0,
+     "gp20": 0
+    }
+   }
+  },
+  {
+   "season": "1998/99",
+   "cancelled": false,
+   "skaters": 814,
+   "goalies": 85,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 52,
+     "gp20": 39
+    },
+    "FIN": {
+     "players": 17,
+     "gp20": 14
+    },
+    "SWE": {
+     "players": 41,
+     "gp20": 37
+    },
+    "CHE": {
+     "players": 1,
+     "gp20": 1
+    },
+    "SVK": {
+     "players": 13,
+     "gp20": 12
+    },
+    "DEU": {
+     "players": 6,
+     "gp20": 3
+    },
+    "LVA": {
+     "players": 7,
+     "gp20": 4
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 0,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 0,
+     "gp20": 0
+    }
+   }
+  },
+  {
+   "season": "1999/00",
+   "cancelled": false,
+   "skaters": 838,
+   "goalies": 83,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 56,
+     "gp20": 43
+    },
+    "FIN": {
+     "players": 26,
+     "gp20": 21
+    },
+    "SWE": {
+     "players": 46,
+     "gp20": 43
+    },
+    "CHE": {
+     "players": 1,
+     "gp20": 1
+    },
+    "SVK": {
+     "players": 19,
+     "gp20": 15
+    },
+    "DEU": {
+     "players": 6,
+     "gp20": 3
+    },
+    "LVA": {
+     "players": 7,
+     "gp20": 5
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 0,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 0,
+     "gp20": 0
+    }
+   }
+  },
+  {
+   "season": "2000/01",
+   "cancelled": false,
+   "skaters": 884,
+   "goalies": 89,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 71,
+     "gp20": 53
+    },
+    "FIN": {
+     "players": 34,
+     "gp20": 29
+    },
+    "SWE": {
+     "players": 47,
+     "gp20": 41
+    },
+    "CHE": {
+     "players": 5,
+     "gp20": 2
+    },
+    "SVK": {
+     "players": 30,
+     "gp20": 23
+    },
+    "DEU": {
+     "players": 6,
+     "gp20": 3
+    },
+    "LVA": {
+     "players": 7,
+     "gp20": 6
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 1
+    },
+    "AUT": {
+     "players": 0,
+     "gp20": 0
+    }
+   }
+  },
+  {
+   "season": "2001/02",
+   "cancelled": false,
+   "skaters": 874,
+   "goalies": 89,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 77,
+     "gp20": 58
+    },
+    "FIN": {
+     "players": 42,
+     "gp20": 28
+    },
+    "SWE": {
+     "players": 52,
+     "gp20": 46
+    },
+    "CHE": {
+     "players": 2,
+     "gp20": 2
+    },
+    "SVK": {
+     "players": 32,
+     "gp20": 22
+    },
+    "DEU": {
+     "players": 7,
+     "gp20": 3
+    },
+    "LVA": {
+     "players": 6,
+     "gp20": 5
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 1
+    },
+    "AUT": {
+     "players": 1,
+     "gp20": 0
+    }
+   }
+  },
+  {
+   "season": "2002/03",
+   "cancelled": false,
+   "skaters": 888,
+   "goalies": 91,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 73,
+     "gp20": 57
+    },
+    "FIN": {
+     "players": 38,
+     "gp20": 28
+    },
+    "SWE": {
+     "players": 58,
+     "gp20": 49
+    },
+    "CHE": {
+     "players": 3,
+     "gp20": 2
+    },
+    "SVK": {
+     "players": 36,
+     "gp20": 27
+    },
+    "DEU": {
+     "players": 9,
+     "gp20": 5
+    },
+    "LVA": {
+     "players": 5,
+     "gp20": 5
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 1
+    },
+    "AUT": {
+     "players": 1,
+     "gp20": 0
+    }
+   }
+  },
+  {
+   "season": "2003/04",
+   "cancelled": false,
+   "skaters": 916,
+   "goalies": 94,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 74,
+     "gp20": 54
+    },
+    "FIN": {
+     "players": 38,
+     "gp20": 28
+    },
+    "SWE": {
+     "players": 52,
+     "gp20": 44
+    },
+    "CHE": {
+     "players": 4,
+     "gp20": 2
+    },
+    "SVK": {
+     "players": 38,
+     "gp20": 25
+    },
+    "DEU": {
+     "players": 8,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 4,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 1
+    }
+   }
+  },
+  {
+   "season": "2004/05",
+   "cancelled": true,
+   "skaters": 0,
+   "goalies": 0,
+   "nationality_share": null,
+   "birth_date_share": null,
+   "skater_toi_share": null,
+   "goalie_toi_share": null,
+   "nations": {
+    "CZE": {
+     "players": 0,
+     "gp20": 0
+    },
+    "FIN": {
+     "players": 0,
+     "gp20": 0
+    },
+    "SWE": {
+     "players": 0,
+     "gp20": 0
+    },
+    "CHE": {
+     "players": 0,
+     "gp20": 0
+    },
+    "SVK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "DEU": {
+     "players": 0,
+     "gp20": 0
+    },
+    "LVA": {
+     "players": 0,
+     "gp20": 0
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 0,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 0,
+     "gp20": 0
+    }
+   }
+  },
+  {
+   "season": "2005/06",
+   "cancelled": false,
+   "skaters": 870,
+   "goalies": 91,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 65,
+     "gp20": 51
+    },
+    "FIN": {
+     "players": 39,
+     "gp20": 30
+    },
+    "SWE": {
+     "players": 46,
+     "gp20": 42
+    },
+    "CHE": {
+     "players": 4,
+     "gp20": 3
+    },
+    "SVK": {
+     "players": 32,
+     "gp20": 25
+    },
+    "DEU": {
+     "players": 8,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 3,
+     "gp20": 2
+    },
+    "DNK": {
+     "players": 0,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 1
+    }
+   }
+  },
+  {
+   "season": "2006/07",
+   "cancelled": false,
+   "skaters": 858,
+   "goalies": 84,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 65,
+     "gp20": 52
+    },
+    "FIN": {
+     "players": 42,
+     "gp20": 34
+    },
+    "SWE": {
+     "players": 50,
+     "gp20": 43
+    },
+    "CHE": {
+     "players": 5,
+     "gp20": 4
+    },
+    "SVK": {
+     "players": 26,
+     "gp20": 22
+    },
+    "DEU": {
+     "players": 7,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 4,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 1,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 2
+    },
+    "AUT": {
+     "players": 2,
+     "gp20": 2
+    }
+   }
+  },
+  {
+   "season": "2007/08",
+   "cancelled": false,
+   "skaters": 852,
+   "goalies": 89,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 59,
+     "gp20": 53
+    },
+    "FIN": {
+     "players": 40,
+     "gp20": 31
+    },
+    "SWE": {
+     "players": 53,
+     "gp20": 46
+    },
+    "CHE": {
+     "players": 6,
+     "gp20": 3
+    },
+    "SVK": {
+     "players": 23,
+     "gp20": 19
+    },
+    "DEU": {
+     "players": 8,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 3,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 2,
+     "gp20": 0
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 2
+    },
+    "AUT": {
+     "players": 2,
+     "gp20": 1
+    }
+   }
+  },
+  {
+   "season": "2008/09",
+   "cancelled": false,
+   "skaters": 885,
+   "goalies": 89,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 57,
+     "gp20": 46
+    },
+    "FIN": {
+     "players": 42,
+     "gp20": 32
+    },
+    "SWE": {
+     "players": 54,
+     "gp20": 46
+    },
+    "CHE": {
+     "players": 6,
+     "gp20": 4
+    },
+    "SVK": {
+     "players": 18,
+     "gp20": 16
+    },
+    "DEU": {
+     "players": 8,
+     "gp20": 5
+    },
+    "LVA": {
+     "players": 4,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 4,
+     "gp20": 3
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 3
+    }
+   }
+  },
+  {
+   "season": "2009/10",
+   "cancelled": false,
+   "skaters": 879,
+   "goalies": 83,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 48,
+     "gp20": 39
+    },
+    "FIN": {
+     "players": 38,
+     "gp20": 30
+    },
+    "SWE": {
+     "players": 53,
+     "gp20": 46
+    },
+    "CHE": {
+     "players": 4,
+     "gp20": 2
+    },
+    "SVK": {
+     "players": 18,
+     "gp20": 14
+    },
+    "DEU": {
+     "players": 8,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 5,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 6,
+     "gp20": 3
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 2
+    }
+   }
+  },
+  {
+   "season": "2010/11",
+   "cancelled": false,
+   "skaters": 891,
+   "goalies": 87,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 42,
+     "gp20": 40
+    },
+    "FIN": {
+     "players": 30,
+     "gp20": 27
+    },
+    "SWE": {
+     "players": 63,
+     "gp20": 48
+    },
+    "CHE": {
+     "players": 6,
+     "gp20": 3
+    },
+    "SVK": {
+     "players": 14,
+     "gp20": 12
+    },
+    "DEU": {
+     "players": 9,
+     "gp20": 6
+    },
+    "LVA": {
+     "players": 4,
+     "gp20": 1
+    },
+    "DNK": {
+     "players": 6,
+     "gp20": 5
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 2
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 3
+    }
+   }
+  },
+  {
+   "season": "2011/12",
+   "cancelled": false,
+   "skaters": 894,
+   "goalies": 89,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 43,
+     "gp20": 38
+    },
+    "FIN": {
+     "players": 29,
+     "gp20": 25
+    },
+    "SWE": {
+     "players": 68,
+     "gp20": 48
+    },
+    "CHE": {
+     "players": 8,
+     "gp20": 7
+    },
+    "SVK": {
+     "players": 12,
+     "gp20": 10
+    },
+    "DEU": {
+     "players": 7,
+     "gp20": 6
+    },
+    "LVA": {
+     "players": 3,
+     "gp20": 1
+    },
+    "DNK": {
+     "players": 6,
+     "gp20": 5
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 3
+    }
+   }
+  },
+  {
+   "season": "2012/13",
+   "cancelled": false,
+   "skaters": 839,
+   "goalies": 82,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 44,
+     "gp20": 33
+    },
+    "FIN": {
+     "players": 30,
+     "gp20": 22
+    },
+    "SWE": {
+     "players": 63,
+     "gp20": 44
+    },
+    "CHE": {
+     "players": 8,
+     "gp20": 7
+    },
+    "SVK": {
+     "players": 12,
+     "gp20": 8
+    },
+    "DEU": {
+     "players": 8,
+     "gp20": 5
+    },
+    "LVA": {
+     "players": 1,
+     "gp20": 1
+    },
+    "DNK": {
+     "players": 8,
+     "gp20": 6
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 0
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 2
+    }
+   }
+  },
+  {
+   "season": "2013/14",
+   "cancelled": false,
+   "skaters": 886,
+   "goalies": 97,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 37,
+     "gp20": 31
+    },
+    "FIN": {
+     "players": 32,
+     "gp20": 26
+    },
+    "SWE": {
+     "players": 77,
+     "gp20": 53
+    },
+    "CHE": {
+     "players": 11,
+     "gp20": 10
+    },
+    "SVK": {
+     "players": 14,
+     "gp20": 14
+    },
+    "DEU": {
+     "players": 6,
+     "gp20": 5
+    },
+    "LVA": {
+     "players": 2,
+     "gp20": 1
+    },
+    "DNK": {
+     "players": 8,
+     "gp20": 7
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 1
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 3
+    }
+   }
+  },
+  {
+   "season": "2014/15",
+   "cancelled": false,
+   "skaters": 882,
+   "goalies": 92,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 38,
+     "gp20": 34
+    },
+    "FIN": {
+     "players": 35,
+     "gp20": 26
+    },
+    "SWE": {
+     "players": 76,
+     "gp20": 66
+    },
+    "CHE": {
+     "players": 13,
+     "gp20": 8
+    },
+    "SVK": {
+     "players": 13,
+     "gp20": 13
+    },
+    "DEU": {
+     "players": 9,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 2,
+     "gp20": 2
+    },
+    "DNK": {
+     "players": 8,
+     "gp20": 5
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 1
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 3
+    }
+   }
+  },
+  {
+   "season": "2015/16",
+   "cancelled": false,
+   "skaters": 898,
+   "goalies": 92,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 39,
+     "gp20": 32
+    },
+    "FIN": {
+     "players": 39,
+     "gp20": 30
+    },
+    "SWE": {
+     "players": 85,
+     "gp20": 71
+    },
+    "CHE": {
+     "players": 14,
+     "gp20": 8
+    },
+    "SVK": {
+     "players": 12,
+     "gp20": 10
+    },
+    "DEU": {
+     "players": 9,
+     "gp20": 8
+    },
+    "LVA": {
+     "players": 3,
+     "gp20": 1
+    },
+    "DNK": {
+     "players": 7,
+     "gp20": 6
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 2
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 3
+    }
+   }
+  },
+  {
+   "season": "2016/17",
+   "cancelled": false,
+   "skaters": 888,
+   "goalies": 95,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 38,
+     "gp20": 25
+    },
+    "FIN": {
+     "players": 39,
+     "gp20": 30
+    },
+    "SWE": {
+     "players": 90,
+     "gp20": 65
+    },
+    "CHE": {
+     "players": 14,
+     "gp20": 10
+    },
+    "SVK": {
+     "players": 13,
+     "gp20": 11
+    },
+    "DEU": {
+     "players": 7,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 2,
+     "gp20": 1
+    },
+    "DNK": {
+     "players": 10,
+     "gp20": 8
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 2
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 3
+    }
+   }
+  },
+  {
+   "season": "2017/18",
+   "cancelled": false,
+   "skaters": 890,
+   "goalies": 95,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 37,
+     "gp20": 31
+    },
+    "FIN": {
+     "players": 42,
+     "gp20": 33
+    },
+    "SWE": {
+     "players": 97,
+     "gp20": 81
+    },
+    "CHE": {
+     "players": 15,
+     "gp20": 11
+    },
+    "SVK": {
+     "players": 13,
+     "gp20": 8
+    },
+    "DEU": {
+     "players": 7,
+     "gp20": 6
+    },
+    "LVA": {
+     "players": 1,
+     "gp20": 1
+    },
+    "DNK": {
+     "players": 7,
+     "gp20": 7
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 1
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 3
+    }
+   }
+  },
+  {
+   "season": "2018/19",
+   "cancelled": false,
+   "skaters": 906,
+   "goalies": 93,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 40,
+     "gp20": 27
+    },
+    "FIN": {
+     "players": 49,
+     "gp20": 40
+    },
+    "SWE": {
+     "players": 96,
+     "gp20": 83
+    },
+    "CHE": {
+     "players": 13,
+     "gp20": 12
+    },
+    "SVK": {
+     "players": 11,
+     "gp20": 9
+    },
+    "DEU": {
+     "players": 8,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 3,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 7,
+     "gp20": 6
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 2
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 3
+    }
+   }
+  },
+  {
+   "season": "2019/20",
+   "cancelled": false,
+   "skaters": 883,
+   "goalies": 87,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 33,
+     "gp20": 28
+    },
+    "FIN": {
+     "players": 49,
+     "gp20": 33
+    },
+    "SWE": {
+     "players": 111,
+     "gp20": 83
+    },
+    "CHE": {
+     "players": 15,
+     "gp20": 12
+    },
+    "SVK": {
+     "players": 12,
+     "gp20": 7
+    },
+    "DEU": {
+     "players": 9,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 5,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 9,
+     "gp20": 7
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 1
+    },
+    "AUT": {
+     "players": 2,
+     "gp20": 2
+    }
+   }
+  },
+  {
+   "season": "2020/21",
+   "cancelled": false,
+   "skaters": 913,
+   "goalies": 98,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 34,
+     "gp20": 21
+    },
+    "FIN": {
+     "players": 60,
+     "gp20": 41
+    },
+    "SWE": {
+     "players": 96,
+     "gp20": 67
+    },
+    "CHE": {
+     "players": 12,
+     "gp20": 9
+    },
+    "SVK": {
+     "players": 10,
+     "gp20": 5
+    },
+    "DEU": {
+     "players": 9,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 4,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 8,
+     "gp20": 5
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 1
+    },
+    "AUT": {
+     "players": 1,
+     "gp20": 1
+    }
+   }
+  },
+  {
+   "season": "2021/22",
+   "cancelled": false,
+   "skaters": 1004,
+   "goalies": 119,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 39,
+     "gp20": 25
+    },
+    "FIN": {
+     "players": 63,
+     "gp20": 42
+    },
+    "SWE": {
+     "players": 106,
+     "gp20": 79
+    },
+    "CHE": {
+     "players": 13,
+     "gp20": 11
+    },
+    "SVK": {
+     "players": 11,
+     "gp20": 7
+    },
+    "DEU": {
+     "players": 8,
+     "gp20": 6
+    },
+    "LVA": {
+     "players": 5,
+     "gp20": 4
+    },
+    "DNK": {
+     "players": 7,
+     "gp20": 5
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 1
+    },
+    "AUT": {
+     "players": 2,
+     "gp20": 1
+    }
+   }
+  },
+  {
+   "season": "2022/23",
+   "cancelled": false,
+   "skaters": 951,
+   "goalies": 107,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 41,
+     "gp20": 26
+    },
+    "FIN": {
+     "players": 55,
+     "gp20": 39
+    },
+    "SWE": {
+     "players": 107,
+     "gp20": 76
+    },
+    "CHE": {
+     "players": 12,
+     "gp20": 11
+    },
+    "SVK": {
+     "players": 10,
+     "gp20": 6
+    },
+    "DEU": {
+     "players": 8,
+     "gp20": 8
+    },
+    "LVA": {
+     "players": 5,
+     "gp20": 3
+    },
+    "DNK": {
+     "players": 6,
+     "gp20": 4
+    },
+    "NOR": {
+     "players": 1,
+     "gp20": 1
+    },
+    "AUT": {
+     "players": 2,
+     "gp20": 0
+    }
+   }
+  },
+  {
+   "season": "2023/24",
+   "cancelled": false,
+   "skaters": 924,
+   "goalies": 98,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 33,
+     "gp20": 25
+    },
+    "FIN": {
+     "players": 48,
+     "gp20": 37
+    },
+    "SWE": {
+     "players": 101,
+     "gp20": 71
+    },
+    "CHE": {
+     "players": 10,
+     "gp20": 9
+    },
+    "SVK": {
+     "players": 11,
+     "gp20": 7
+    },
+    "DEU": {
+     "players": 7,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 5,
+     "gp20": 4
+    },
+    "DNK": {
+     "players": 6,
+     "gp20": 4
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 2
+    },
+    "AUT": {
+     "players": 1,
+     "gp20": 1
+    }
+   }
+  },
+  {
+   "season": "2024/25",
+   "cancelled": false,
+   "skaters": 920,
+   "goalies": 103,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 30,
+     "gp20": 23
+    },
+    "FIN": {
+     "players": 56,
+     "gp20": 38
+    },
+    "SWE": {
+     "players": 97,
+     "gp20": 71
+    },
+    "CHE": {
+     "players": 11,
+     "gp20": 10
+    },
+    "SVK": {
+     "players": 8,
+     "gp20": 6
+    },
+    "DEU": {
+     "players": 7,
+     "gp20": 7
+    },
+    "LVA": {
+     "players": 6,
+     "gp20": 5
+    },
+    "DNK": {
+     "players": 6,
+     "gp20": 4
+    },
+    "NOR": {
+     "players": 2,
+     "gp20": 2
+    },
+    "AUT": {
+     "players": 2,
+     "gp20": 2
+    }
+   }
+  },
+  {
+   "season": "2025/26",
+   "cancelled": false,
+   "skaters": 940,
+   "goalies": 98,
+   "nationality_share": 1.0,
+   "birth_date_share": 1.0,
+   "skater_toi_share": 1.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": {
+     "players": 29,
+     "gp20": 20
+    },
+    "FIN": {
+     "players": 52,
+     "gp20": 41
+    },
+    "SWE": {
+     "players": 103,
+     "gp20": 77
+    },
+    "CHE": {
+     "players": 11,
+     "gp20": 11
+    },
+    "SVK": {
+     "players": 9,
+     "gp20": 7
+    },
+    "DEU": {
+     "players": 8,
+     "gp20": 8
+    },
+    "LVA": {
+     "players": 7,
+     "gp20": 6
+    },
+    "DNK": {
+     "players": 7,
+     "gp20": 4
+    },
+    "NOR": {
+     "players": 3,
+     "gp20": 2
+    },
+    "AUT": {
+     "players": 3,
+     "gp20": 2
+    }
+   }
+  }
+ ],
+ "missing_nationality": 0,
+ "careers": {
+  "players_requested": 1075,
+  "players_with_rows": 1075,
+  "rows": 35946,
+  "leagues": 388
+ }
+}

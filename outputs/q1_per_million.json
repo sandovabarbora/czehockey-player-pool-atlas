@@ -1,0 +1,2050 @@
+{
+ "meta": {
+  "inputs": {
+   "del_goalies.parquet": "85afcda9b8f8c849800e89086001ebcc7433cd7de6c1e299d82f555801463213",
+   "del_skaters.parquet": "6e8bc872969e5e43e2831abb922d64fca3460db9649ce93f2fcf9cc0fa32a36f",
+   "extraliga_goalies.parquet": "1607e0d36b2852b849a830217a68259802728863163e3ff35cfbfb61a6727b07",
+   "extraliga_skaters.parquet": "7c372c4989dc3af8c6ad044bcbd77626bc3e31347fb6ee5436aecc2698b856ed",
+   "liiga_goalies.parquet": "e7ab79b3f65a225a8d8e9884a3d60446bfc1e354756332811c01cf03975ea3c6",
+   "liiga_skaters.parquet": "141c75ceede7edfa9cacc55f6e1ca71217c04bbd8300e5bbcd6a0c8756cb1ae1",
+   "nhl_goalies.parquet": "a16be42c492ab8be86eeaa1e63433cbdc9a4d7b699acfdb0dc8aeb306b6bff64",
+   "nhl_skaters.parquet": "d42f3feb41ae5238ab6ad3f3cadfc5889109839fcbc529ef5311701b7da05fc9",
+   "nl_goalies.parquet": "1cbc7d9b50e2d9dbf5e3f6c242a34bd624268eff6b02ee6cbd97897b3d2e1512",
+   "nl_skaters.parquet": "1497f2e2740caba1d4d47cea0ed1cf56ade5647dc99197204de39340a6293c60",
+   "population.parquet": "4f546a213389b432a165753b4d58411a1cedcb8274fc5dc815e61436a7c5ce05",
+   "rosters.parquet": "566d51646bf864e718fa4e5634dd4b013d3099aa05ff4997d16a67a63e338752",
+   "shl_goalies.parquet": "397a50791cebbf0fc8cd2d5f4f68774452e8b313a6c0b3705d6f0b2356cd1aac",
+   "shl_skaters.parquet": "0744828aed80a1c2bdf52f05924d3700fc7d5639be402ddd8c600c67edc4a819"
+  }
+ },
+ "definitions": {
+  "threshold": "at least 20 of 82 games, pro-rated to the league-season's schedule (95th percentile of skater games played)",
+  "top5": "rung 1 (NHL) + rung 2 (SHL, Liiga, National League, DEL); a player counts once per season",
+  "population": "Eurostat demo_gind, 1 January of the season's second year",
+  "nationality": "the person's nationality from outputs/linking.json",
+  "complete_season": "every rung-2 league has at least 90% of qualifying rows identified"
+ },
+ "headline": {
+  "season": "2025/26",
+  "nations": [
+   {
+    "iso3": "FIN",
+    "name": "Finland",
+    "population": 5652881.0,
+    "nhl": 41,
+    "nhl_per_million": 7.252939,
+    "top5": 425,
+    "top5_per_million": 75.182902,
+    "by_league": {
+     "NHL": 41,
+     "SHL": 36,
+     "Liiga": 314,
+     "NL": 27,
+     "DEL": 9
+    },
+    "rank_nhl": 2,
+    "rank_top5": 1
+   },
+   {
+    "iso3": "SWE",
+    "name": "Sweden",
+    "population": 10605529.0,
+    "nhl": 77,
+    "nhl_per_million": 7.260364,
+    "top5": 408,
+    "top5_per_million": 38.4705,
+    "by_league": {
+     "NHL": 77,
+     "SHL": 251,
+     "Liiga": 43,
+     "NL": 30,
+     "DEL": 12
+    },
+    "rank_nhl": 1,
+    "rank_top5": 2
+   },
+   {
+    "iso3": "CHE",
+    "name": "Switzerland",
+    "population": 9124288.0,
+    "nhl": 11,
+    "nhl_per_million": 1.205574,
+    "top5": 248,
+    "top5_per_million": 27.180203,
+    "by_league": {
+     "NHL": 11,
+     "SHL": 4,
+     "Liiga": 0,
+     "NL": 233,
+     "DEL": 0
+    },
+    "rank_nhl": 6,
+    "rank_top5": 3
+   },
+   {
+    "iso3": "LVA",
+    "name": "Latvia",
+    "population": 1845096.0,
+    "nhl": 6,
+    "nhl_per_million": 3.251863,
+    "top5": 15,
+    "top5_per_million": 8.129658,
+    "by_league": {
+     "NHL": 6,
+     "SHL": 0,
+     "Liiga": 4,
+     "NL": 4,
+     "DEL": 1
+    },
+    "rank_nhl": 3,
+    "rank_top5": 4
+   },
+   {
+    "iso3": "CZE",
+    "name": "Czechia",
+    "population": 10915839.0,
+    "nhl": 20,
+    "nhl_per_million": 1.8322,
+    "top5": 53,
+    "top5_per_million": 4.85533,
+    "by_league": {
+     "NHL": 20,
+     "SHL": 9,
+     "Liiga": 13,
+     "NL": 10,
+     "DEL": 2
+    },
+    "rank_nhl": 4,
+    "rank_top5": 5
+   },
+   {
+    "iso3": "NOR",
+    "name": "Norway",
+    "population": 5627400.0,
+    "nhl": 2,
+    "nhl_per_million": 0.355404,
+    "top5": 20,
+    "top5_per_million": 3.554039,
+    "by_league": {
+     "NHL": 2,
+     "SHL": 13,
+     "Liiga": 3,
+     "NL": 0,
+     "DEL": 2
+    },
+    "rank_nhl": 8,
+    "rank_top5": 6
+   },
+   {
+    "iso3": "DNK",
+    "name": "Denmark",
+    "population": 6025603.0,
+    "nhl": 4,
+    "nhl_per_million": 0.663834,
+    "top5": 16,
+    "top5_per_million": 2.655336,
+    "by_league": {
+     "NHL": 4,
+     "SHL": 1,
+     "Liiga": 4,
+     "NL": 1,
+     "DEL": 6
+    },
+    "rank_nhl": 7,
+    "rank_top5": 7
+   },
+   {
+    "iso3": "SVK",
+    "name": "Slovakia",
+    "population": 5409407.0,
+    "nhl": 7,
+    "nhl_per_million": 1.294042,
+    "top5": 13,
+    "top5_per_million": 2.403221,
+    "by_league": {
+     "NHL": 7,
+     "SHL": 3,
+     "Liiga": 1,
+     "NL": 1,
+     "DEL": 1
+    },
+    "rank_nhl": 5,
+    "rank_top5": 8
+   },
+   {
+    "iso3": "DEU",
+    "name": "Germany",
+    "population": 83467117.0,
+    "nhl": 8,
+    "nhl_per_million": 0.095846,
+    "top5": 198,
+    "top5_per_million": 2.372192,
+    "by_league": {
+     "NHL": 8,
+     "SHL": 0,
+     "Liiga": 0,
+     "NL": 1,
+     "DEL": 189
+    },
+    "rank_nhl": 10,
+    "rank_top5": 9
+   },
+   {
+    "iso3": "AUT",
+    "name": "Austria",
+    "population": 9215956.0,
+    "nhl": 2,
+    "nhl_per_million": 0.217015,
+    "top5": 8,
+    "top5_per_million": 0.86806,
+    "by_league": {
+     "NHL": 2,
+     "SHL": 1,
+     "Liiga": 0,
+     "NL": 5,
+     "DEL": 0
+    },
+    "rank_nhl": 9,
+    "rank_top5": 10
+   }
+  ],
+  "peer_median": {
+   "nhl_per_million": 1.205574,
+   "top5_per_million": 3.554039
+  },
+  "home": {
+   "iso3": "CZE",
+   "nhl": 20,
+   "nhl_per_million": 1.8322,
+   "top5": 53,
+   "top5_per_million": 4.85533,
+   "rank_nhl": 4,
+   "rank_top5": 5,
+   "nhl_vs_peer_median": 1.519775,
+   "top5_vs_peer_median": 1.366144
+  },
+  "coverage": {
+   "season": "2025/26",
+   "leagues": {
+    "NHL": {
+     "qualifying": 781,
+     "unidentified": 0,
+     "identified_share": 1.0
+    },
+    "DEL": {
+     "qualifying": 348,
+     "unidentified": 0,
+     "identified_share": 1.0
+    },
+    "Liiga": {
+     "qualifying": 429,
+     "unidentified": 0,
+     "identified_share": 1.0
+    },
+    "NL": {
+     "qualifying": 365,
+     "unidentified": 22,
+     "identified_share": 0.939726
+    },
+    "SHL": {
+     "qualifying": 365,
+     "unidentified": 4,
+     "identified_share": 0.989041
+    }
+   },
+   "complete": true
+  },
+  "sensitivity": {
+   "any_game": {
+    "iso3": "CZE",
+    "nhl": 29,
+    "nhl_per_million": 2.65669,
+    "top5": 69,
+    "top5_per_million": 6.32109,
+    "rank_nhl": 4,
+    "rank_top5": 5,
+    "nhl_vs_peer_median": 2.203673,
+    "top5_vs_peer_median": 1.693871
+   },
+   "fixed_20_games": {
+    "iso3": "CZE",
+    "nhl": 20,
+    "nhl_per_million": 1.8322,
+    "top5": 53,
+    "top5_per_million": 4.85533,
+    "rank_nhl": 4,
+    "rank_top5": 5,
+    "nhl_vs_peer_median": 1.519775,
+    "top5_vs_peer_median": 1.517938
+   }
+  }
+ },
+ "nhl_series": {
+  "seasons": [
+   "1995/96",
+   "1996/97",
+   "1997/98",
+   "1998/99",
+   "1999/00",
+   "2000/01",
+   "2001/02",
+   "2002/03",
+   "2003/04",
+   "2004/05",
+   "2005/06",
+   "2006/07",
+   "2007/08",
+   "2008/09",
+   "2009/10",
+   "2010/11",
+   "2011/12",
+   "2012/13",
+   "2013/14",
+   "2014/15",
+   "2015/16",
+   "2016/17",
+   "2017/18",
+   "2018/19",
+   "2019/20",
+   "2020/21",
+   "2021/22",
+   "2022/23",
+   "2023/24",
+   "2024/25",
+   "2025/26"
+  ],
+  "nations": {
+   "CZE": {
+    "n": [
+     25,
+     26,
+     30,
+     39,
+     43,
+     53,
+     58,
+     57,
+     54,
+     null,
+     51,
+     52,
+     53,
+     46,
+     39,
+     40,
+     38,
+     38,
+     31,
+     34,
+     32,
+     25,
+     31,
+     27,
+     29,
+     22,
+     25,
+     26,
+     25,
+     23,
+     20
+    ],
+    "per_million": [
+     2.422165,
+     2.522035,
+     2.912869,
+     3.790227,
+     4.183653,
+     5.179814,
+     5.685616,
+     5.592266,
+     5.296534,
+     null,
+     4.988469,
+     5.071077,
+     5.12403,
+     4.412139,
+     3.727745,
+     3.814344,
+     3.617172,
+     3.613498,
+     2.948893,
+     3.226334,
+     3.032071,
+     2.363213,
+     2.921757,
+     2.535259,
+     2.711816,
+     2.096269,
+     2.37717,
+     2.401287,
+     2.293461,
+     2.108254,
+     1.8322
+    ]
+   },
+   "FIN": {
+    "n": [
+     13,
+     13,
+     14,
+     14,
+     21,
+     29,
+     28,
+     28,
+     28,
+     null,
+     30,
+     34,
+     31,
+     32,
+     30,
+     27,
+     25,
+     23,
+     26,
+     26,
+     30,
+     30,
+     33,
+     40,
+     34,
+     43,
+     42,
+     39,
+     37,
+     38,
+     41
+    ],
+    "per_million": [
+     2.540637,
+     2.532968,
+     2.719847,
+     2.713364,
+     4.060873,
+     5.597251,
+     5.389901,
+     5.378105,
+     5.36426,
+     null,
+     5.708219,
+     6.44311,
+     5.848523,
+     6.007907,
+     5.605981,
+     5.022998,
+     4.628544,
+     4.238324,
+     4.769531,
+     4.751676,
+     5.467162,
+     5.451278,
+     5.98571,
+     7.24911,
+     6.153521,
+     7.770439,
+     7.569967,
+     7.009384,
+     6.602602,
+     6.742405,
+     7.252939
+    ]
+   },
+   "SWE": {
+    "n": [
+     27,
+     34,
+     35,
+     37,
+     43,
+     41,
+     46,
+     49,
+     44,
+     null,
+     42,
+     43,
+     46,
+     46,
+     46,
+     48,
+     48,
+     49,
+     53,
+     66,
+     71,
+     65,
+     81,
+     83,
+     85,
+     73,
+     79,
+     76,
+     71,
+     71,
+     77
+    ],
+    "per_million": [
+     3.055164,
+     3.844197,
+     3.955864,
+     4.17875,
+     4.852492,
+     4.615666,
+     5.163244,
+     5.480501,
+     4.902141,
+     null,
+     4.642037,
+     4.718401,
+     5.009296,
+     4.969563,
+     4.924694,
+     5.097939,
+     5.061767,
+     5.127726,
+     5.495153,
+     6.771068,
+     7.207378,
+     6.503152,
+     8.003761,
+     8.113245,
+     8.230382,
+     7.033233,
+     7.558126,
+     7.223266,
+     6.728769,
+     6.705888,
+     7.260364
+    ]
+   },
+   "CHE": {
+    "n": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     null,
+     3,
+     4,
+     3,
+     4,
+     2,
+     3,
+     7,
+     7,
+     10,
+     8,
+     8,
+     10,
+     11,
+     12,
+     12,
+     10,
+     11,
+     11,
+     9,
+     10,
+     11
+    ],
+    "per_million": [
+     0.141596,
+     0.141216,
+     0.140915,
+     0.14038,
+     0.139578,
+     0.277621,
+     0.275647,
+     0.273454,
+     0.271586,
+     null,
+     0.402192,
+     0.532713,
+     0.395075,
+     0.519355,
+     0.256878,
+     0.381188,
+     0.879987,
+     0.870749,
+     1.228557,
+     0.971149,
+     0.960716,
+     1.187712,
+     1.296538,
+     1.404408,
+     1.394371,
+     1.153363,
+     1.258755,
+     1.247818,
+     1.004211,
+     1.104847,
+     1.205574
+    ]
+   },
+   "SVK": {
+    "n": [
+     7,
+     6,
+     9,
+     12,
+     15,
+     23,
+     22,
+     27,
+     25,
+     null,
+     25,
+     22,
+     19,
+     16,
+     14,
+     12,
+     10,
+     11,
+     14,
+     13,
+     10,
+     11,
+     8,
+     9,
+     7,
+     6,
+     7,
+     6,
+     7,
+     6,
+     7
+    ],
+    "per_million": [
+     1.304075,
+     1.115463,
+     1.670487,
+     2.224949,
+     2.778469,
+     4.27606,
+     4.090017,
+     5.023375,
+     4.653869,
+     null,
+     4.652956,
+     4.09441,
+     3.534184,
+     2.972651,
+     2.597205,
+     2.225335,
+     1.850371,
+     2.032958,
+     2.584958,
+     2.397927,
+     1.842893,
+     2.023791,
+     1.469745,
+     1.651249,
+     1.282551,
+     1.098945,
+     1.288017,
+     1.105218,
+     1.290397,
+     1.107123,
+     1.294042
+    ]
+   },
+   "DEU": {
+    "n": [
+     1,
+     2,
+     3,
+     3,
+     3,
+     3,
+     3,
+     5,
+     7,
+     null,
+     7,
+     7,
+     7,
+     5,
+     7,
+     6,
+     6,
+     6,
+     5,
+     7,
+     8,
+     7,
+     6,
+     7,
+     7,
+     8,
+     6,
+     8,
+     7,
+     7,
+     8
+    ],
+    "per_million": [
+     0.012222,
+     0.024387,
+     0.03656,
+     0.036569,
+     0.036513,
+     0.03647,
+     0.03639,
+     0.060579,
+     0.084816,
+     null,
+     0.084912,
+     0.085039,
+     0.08514,
+     0.060974,
+     0.085572,
+     0.074792,
+     0.074694,
+     0.074512,
+     0.061906,
+     0.08621,
+     0.097352,
+     0.084826,
+     0.07247,
+     0.084318,
+     0.084168,
+     0.096206,
+     0.072083,
+     0.096248,
+     0.083876,
+     0.083755,
+     0.095846
+    ]
+   },
+   "LVA": {
+    "n": [
+     2,
+     3,
+     3,
+     4,
+     5,
+     6,
+     5,
+     5,
+     3,
+     null,
+     2,
+     3,
+     3,
+     3,
+     3,
+     1,
+     1,
+     1,
+     1,
+     2,
+     1,
+     1,
+     1,
+     3,
+     3,
+     3,
+     4,
+     3,
+     4,
+     5,
+     6
+    ],
+    "per_million": [
+     0.80987,
+     1.227038,
+     1.239265,
+     1.667189,
+     2.099328,
+     2.54952,
+     2.154285,
+     2.17449,
+     1.317801,
+     null,
+     0.897717,
+     1.358179,
+     1.368732,
+     1.387069,
+     1.414758,
+     0.482019,
+     0.489042,
+     0.494114,
+     0.499633,
+     1.007001,
+     0.507883,
+     0.51279,
+     0.516962,
+     1.562526,
+     1.572595,
+     1.584599,
+     2.132472,
+     1.582914,
+     2.129274,
+     2.687356,
+     3.251863
+    ]
+   },
+   "DNK": {
+    "n": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     null,
+     0,
+     0,
+     0,
+     3,
+     3,
+     5,
+     5,
+     7,
+     7,
+     5,
+     6,
+     8,
+     7,
+     6,
+     7,
+     5,
+     5,
+     4,
+     4,
+     4,
+     4
+    ],
+    "per_million": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null,
+     0.0,
+     0.0,
+     0.0,
+     0.544321,
+     0.542031,
+     0.899179,
+     0.895974,
+     1.249414,
+     1.24395,
+     0.883437,
+     1.051294,
+     1.391602,
+     1.210823,
+     1.033399,
+     1.202178,
+     0.856158,
+     0.851293,
+     0.674234,
+     0.671,
+     0.667475,
+     0.663834
+    ]
+   },
+   "NOR": {
+    "n": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1,
+     0,
+     null,
+     0,
+     2,
+     2,
+     0,
+     0,
+     2,
+     0,
+     1,
+     1,
+     1,
+     2,
+     2,
+     1,
+     2,
+     1,
+     1,
+     1,
+     1,
+     2,
+     2,
+     2
+    ],
+    "per_million": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.222053,
+     0.22104,
+     0.219671,
+     0.0,
+     null,
+     0.0,
+     0.427247,
+     0.422193,
+     0.0,
+     0.0,
+     0.406479,
+     0.0,
+     0.19797,
+     0.195731,
+     0.193581,
+     0.383584,
+     0.38035,
+     0.188835,
+     0.37536,
+     0.186304,
+     0.185482,
+     0.184323,
+     0.182183,
+     0.360347,
+     0.357504,
+     0.355404
+    ]
+   },
+   "AUT": {
+    "n": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     null,
+     1,
+     2,
+     1,
+     3,
+     2,
+     3,
+     3,
+     2,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     2,
+     1,
+     1,
+     0,
+     1,
+     2,
+     2
+    ],
+    "per_million": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.122811,
+     null,
+     0.121149,
+     0.241459,
+     0.120366,
+     0.359928,
+     0.239474,
+     0.358202,
+     0.356798,
+     0.236634,
+     0.352618,
+     0.34945,
+     0.344809,
+     0.341964,
+     0.340049,
+     0.338647,
+     0.224692,
+     0.111949,
+     0.111372,
+     0.0,
+     0.109185,
+     0.217457,
+     0.217015
+    ]
+   }
+  },
+  "threshold": [
+   20,
+   20,
+   20,
+   20,
+   20,
+   20,
+   20,
+   20,
+   20,
+   null,
+   20,
+   20,
+   20,
+   20,
+   20,
+   20,
+   20,
+   12,
+   20,
+   20,
+   20,
+   20,
+   20,
+   20,
+   17,
+   14,
+   20,
+   20,
+   20,
+   20,
+   20
+  ]
+ },
+ "nhl_home_peak": {
+  "season": "2001/02",
+  "n": 58,
+  "latest": {
+   "season": "2025/26",
+   "n": 20
+  }
+ },
+ "top5_series": {
+  "seasons": [
+   "2008/09",
+   "2009/10",
+   "2010/11",
+   "2011/12",
+   "2012/13",
+   "2013/14",
+   "2014/15",
+   "2015/16",
+   "2016/17",
+   "2017/18",
+   "2018/19",
+   "2019/20",
+   "2020/21",
+   "2021/22",
+   "2022/23",
+   "2023/24",
+   "2024/25",
+   "2025/26"
+  ],
+  "nations": {
+   "CZE": {
+    "n": [
+     59,
+     57,
+     63,
+     66,
+     56,
+     45,
+     54,
+     48,
+     37,
+     42,
+     44,
+     47,
+     44,
+     60,
+     57,
+     59,
+     68,
+     53
+    ],
+    "per_million": [
+     5.659047,
+     5.448243,
+     6.007592,
+     6.282456,
+     5.325155,
+     4.280651,
+     5.124178,
+     4.548106,
+     3.497555,
+     3.958509,
+     4.131533,
+     4.395013,
+     4.192538,
+     5.705208,
+     5.264359,
+     5.412568,
+     6.2331,
+     4.85533
+    ]
+   },
+   "FIN": {
+    "n": [
+     398,
+     364,
+     356,
+     344,
+     323,
+     334,
+     362,
+     394,
+     404,
+     403,
+     410,
+     396,
+     407,
+     383,
+     402,
+     394,
+     403,
+     425
+    ],
+    "per_million": [
+     74.723345,
+     68.01924,
+     66.229157,
+     63.68876,
+     59.520804,
+     61.270126,
+     66.157957,
+     71.802057,
+     73.410539,
+     73.098222,
+     74.303374,
+     71.67042,
+     73.548107,
+     69.030887,
+     72.250569,
+     70.308793,
+     71.504981,
+     75.182902
+    ]
+   },
+   "SWE": {
+    "n": [
+     222,
+     249,
+     278,
+     305,
+     291,
+     306,
+     317,
+     354,
+     364,
+     387,
+     395,
+     402,
+     390,
+     378,
+     377,
+     394,
+     410,
+     408
+    ],
+    "per_million": [
+     23.983543,
+     26.657582,
+     29.525562,
+     32.163309,
+     30.452413,
+     31.72673,
+     32.521643,
+     35.935376,
+     36.417652,
+     38.240192,
+     38.611227,
+     38.924864,
+     37.574806,
+     36.164199,
+     35.831202,
+     37.33993,
+     38.724143,
+     38.4705
+    ]
+   },
+   "CHE": {
+    "n": [
+     232,
+     233,
+     239,
+     248,
+     247,
+     242,
+     242,
+     241,
+     247,
+     242,
+     238,
+     237,
+     235,
+     247,
+     236,
+     247,
+     247,
+     248
+    ],
+    "per_million": [
+     30.122609,
+     29.926253,
+     30.367971,
+     31.176686,
+     30.724985,
+     29.731077,
+     29.377253,
+     28.941558,
+     29.336485,
+     28.523844,
+     27.854087,
+     27.538821,
+     27.104022,
+     28.264779,
+     26.771378,
+     27.560019,
+     27.289715,
+     27.180203
+    ]
+   },
+   "SVK": {
+    "n": [
+     31,
+     28,
+     25,
+     22,
+     19,
+     21,
+     21,
+     20,
+     17,
+     13,
+     18,
+     14,
+     18,
+     16,
+     13,
+     11,
+     13,
+     13
+    ],
+    "per_million": [
+     5.759511,
+     5.19441,
+     4.636115,
+     4.070816,
+     3.511472,
+     3.877437,
+     3.873575,
+     3.685785,
+     3.127677,
+     2.388336,
+     3.302497,
+     2.565102,
+     3.296836,
+     2.944038,
+     2.39464,
+     2.027767,
+     2.398767,
+     2.403221
+    ]
+   },
+   "DEU": {
+    "n": [
+     53,
+     61,
+     68,
+     69,
+     77,
+     85,
+     101,
+     100,
+     110,
+     116,
+     125,
+     141,
+     160,
+     196,
+     230,
+     211,
+     197,
+     198
+    ],
+    "per_million": [
+     0.646323,
+     0.745701,
+     0.847647,
+     0.858979,
+     0.95624,
+     1.052404,
+     1.24388,
+     1.216905,
+     1.332983,
+     1.401096,
+     1.505676,
+     1.69539,
+     1.924117,
+     2.354719,
+     2.767134,
+     2.528277,
+     2.357104,
+     2.372192
+    ]
+   },
+   "LVA": {
+    "n": [
+     6,
+     5,
+     4,
+     3,
+     4,
+     6,
+     6,
+     5,
+     5,
+     5,
+     8,
+     10,
+     12,
+     15,
+     12,
+     13,
+     14,
+     15
+    ],
+    "per_million": [
+     2.774138,
+     2.35793,
+     1.928078,
+     1.467127,
+     1.976455,
+     2.9978,
+     3.021002,
+     2.539416,
+     2.56395,
+     2.584809,
+     4.166736,
+     5.241983,
+     6.338398,
+     7.996771,
+     6.331655,
+     6.920139,
+     7.524596,
+     8.129658
+    ]
+   },
+   "DNK": {
+    "n": [
+     6,
+     8,
+     8,
+     10,
+     14,
+     12,
+     10,
+     17,
+     18,
+     21,
+     19,
+     19,
+     19,
+     22,
+     20,
+     21,
+     21,
+     16
+    ],
+    "per_million": [
+     1.088643,
+     1.445416,
+     1.438686,
+     1.791949,
+     2.498827,
+     2.132486,
+     1.766873,
+     2.978667,
+     3.131105,
+     3.63247,
+     3.272431,
+     3.263056,
+     3.2534,
+     3.745688,
+     3.371172,
+     3.522752,
+     3.504244,
+     2.655336
+    ]
+   },
+   "NOR": {
+    "n": [
+     13,
+     14,
+     14,
+     13,
+     15,
+     13,
+     10,
+     15,
+     15,
+     13,
+     13,
+     14,
+     14,
+     10,
+     11,
+     10,
+     14,
+     20
+    ],
+    "per_million": [
+     2.708755,
+     2.881726,
+     2.845352,
+     2.607368,
+     2.969547,
+     2.544501,
+     1.935808,
+     2.876878,
+     2.852624,
+     2.454859,
+     2.439843,
+     2.608252,
+     2.596743,
+     1.843226,
+     2.004014,
+     1.801736,
+     2.502529,
+     3.554039
+    ]
+   },
+   "AUT": {
+    "n": [
+     6,
+     5,
+     7,
+     7,
+     4,
+     8,
+     8,
+     9,
+     9,
+     9,
+     9,
+     8,
+     10,
+     8,
+     11,
+     10,
+     9,
+     8
+    ],
+    "per_million": [
+     0.719856,
+     0.598685,
+     0.835805,
+     0.832528,
+     0.473269,
+     0.940315,
+     0.931866,
+     1.034427,
+     1.025891,
+     1.020146,
+     1.015942,
+     0.898769,
+     1.119487,
+     0.890975,
+     1.208158,
+     1.091852,
+     0.978557,
+     0.86806
+    ]
+   }
+  },
+  "coverage": [
+   {
+    "season": "2008/09",
+    "leagues": {
+     "NHL": {
+      "qualifying": 721,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 361,
+      "unidentified": 215,
+      "identified_share": 0.404432
+     },
+     "Liiga": {
+      "qualifying": 379,
+      "unidentified": 7,
+      "identified_share": 0.98153
+     },
+     "NL": {
+      "qualifying": 303,
+      "unidentified": 27,
+      "identified_share": 0.910891
+     },
+     "SHL": {
+      "qualifying": 306,
+      "unidentified": 67,
+      "identified_share": 0.781046
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2009/10",
+    "leagues": {
+     "NHL": {
+      "qualifying": 725,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 335,
+      "unidentified": 200,
+      "identified_share": 0.402985
+     },
+     "Liiga": {
+      "qualifying": 355,
+      "unidentified": 6,
+      "identified_share": 0.983099
+     },
+     "NL": {
+      "qualifying": 294,
+      "unidentified": 21,
+      "identified_share": 0.928571
+     },
+     "SHL": {
+      "qualifying": 299,
+      "unidentified": 38,
+      "identified_share": 0.87291
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2010/11",
+    "leagues": {
+     "NHL": {
+      "qualifying": 725,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 323,
+      "unidentified": 195,
+      "identified_share": 0.396285
+     },
+     "Liiga": {
+      "qualifying": 353,
+      "unidentified": 3,
+      "identified_share": 0.991501
+     },
+     "NL": {
+      "qualifying": 304,
+      "unidentified": 21,
+      "identified_share": 0.930921
+     },
+     "SHL": {
+      "qualifying": 311,
+      "unidentified": 17,
+      "identified_share": 0.945338
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2011/12",
+    "leagues": {
+     "NHL": {
+      "qualifying": 728,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 319,
+      "unidentified": 199,
+      "identified_share": 0.376176
+     },
+     "Liiga": {
+      "qualifying": 359,
+      "unidentified": 4,
+      "identified_share": 0.988858
+     },
+     "NL": {
+      "qualifying": 317,
+      "unidentified": 24,
+      "identified_share": 0.92429
+     },
+     "SHL": {
+      "qualifying": 318,
+      "unidentified": 1,
+      "identified_share": 0.996855
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2012/13",
+    "leagues": {
+     "NHL": {
+      "qualifying": 723,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 328,
+      "unidentified": 198,
+      "identified_share": 0.396341
+     },
+     "Liiga": {
+      "qualifying": 350,
+      "unidentified": 3,
+      "identified_share": 0.991429
+     },
+     "NL": {
+      "qualifying": 318,
+      "unidentified": 16,
+      "identified_share": 0.949686
+     },
+     "SHL": {
+      "qualifying": 309,
+      "unidentified": 1,
+      "identified_share": 0.996764
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2013/14",
+    "leagues": {
+     "NHL": {
+      "qualifying": 733,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 333,
+      "unidentified": 190,
+      "identified_share": 0.429429
+     },
+     "Liiga": {
+      "qualifying": 358,
+      "unidentified": 8,
+      "identified_share": 0.977654
+     },
+     "NL": {
+      "qualifying": 307,
+      "unidentified": 16,
+      "identified_share": 0.947883
+     },
+     "SHL": {
+      "qualifying": 314,
+      "unidentified": 1,
+      "identified_share": 0.996815
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2014/15",
+    "leagues": {
+     "NHL": {
+      "qualifying": 715,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 333,
+      "unidentified": 178,
+      "identified_share": 0.465465
+     },
+     "Liiga": {
+      "qualifying": 366,
+      "unidentified": 6,
+      "identified_share": 0.983607
+     },
+     "NL": {
+      "qualifying": 318,
+      "unidentified": 17,
+      "identified_share": 0.946541
+     },
+     "SHL": {
+      "qualifying": 321,
+      "unidentified": 1,
+      "identified_share": 0.996885
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2015/16",
+    "leagues": {
+     "NHL": {
+      "qualifying": 733,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 331,
+      "unidentified": 150,
+      "identified_share": 0.546828
+     },
+     "Liiga": {
+      "qualifying": 395,
+      "unidentified": 9,
+      "identified_share": 0.977215
+     },
+     "NL": {
+      "qualifying": 314,
+      "unidentified": 14,
+      "identified_share": 0.955414
+     },
+     "SHL": {
+      "qualifying": 366,
+      "unidentified": 0,
+      "identified_share": 1.0
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2016/17",
+    "leagues": {
+     "NHL": {
+      "qualifying": 718,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 331,
+      "unidentified": 144,
+      "identified_share": 0.564955
+     },
+     "Liiga": {
+      "qualifying": 393,
+      "unidentified": 4,
+      "identified_share": 0.989822
+     },
+     "NL": {
+      "qualifying": 314,
+      "unidentified": 8,
+      "identified_share": 0.974522
+     },
+     "SHL": {
+      "qualifying": 366,
+      "unidentified": 0,
+      "identified_share": 1.0
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2017/18",
+    "leagues": {
+     "NHL": {
+      "qualifying": 747,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 335,
+      "unidentified": 136,
+      "identified_share": 0.59403
+     },
+     "Liiga": {
+      "qualifying": 389,
+      "unidentified": 1,
+      "identified_share": 0.997429
+     },
+     "NL": {
+      "qualifying": 319,
+      "unidentified": 11,
+      "identified_share": 0.965517
+     },
+     "SHL": {
+      "qualifying": 364,
+      "unidentified": 0,
+      "identified_share": 1.0
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2018/19",
+    "leagues": {
+     "NHL": {
+      "qualifying": 759,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 338,
+      "unidentified": 117,
+      "identified_share": 0.653846
+     },
+     "Liiga": {
+      "qualifying": 392,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "NL": {
+      "qualifying": 315,
+      "unidentified": 9,
+      "identified_share": 0.971429
+     },
+     "SHL": {
+      "qualifying": 365,
+      "unidentified": 0,
+      "identified_share": 1.0
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2019/20",
+    "leagues": {
+     "NHL": {
+      "qualifying": 741,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 336,
+      "unidentified": 96,
+      "identified_share": 0.714286
+     },
+     "Liiga": {
+      "qualifying": 400,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "NL": {
+      "qualifying": 310,
+      "unidentified": 8,
+      "identified_share": 0.974194
+     },
+     "SHL": {
+      "qualifying": 364,
+      "unidentified": 0,
+      "identified_share": 1.0
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2020/21",
+    "leagues": {
+     "NHL": {
+      "qualifying": 748,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 344,
+      "unidentified": 83,
+      "identified_share": 0.758721
+     },
+     "Liiga": {
+      "qualifying": 403,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "NL": {
+      "qualifying": 314,
+      "unidentified": 12,
+      "identified_share": 0.961783
+     },
+     "SHL": {
+      "qualifying": 373,
+      "unidentified": 0,
+      "identified_share": 1.0
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2021/22",
+    "leagues": {
+     "NHL": {
+      "qualifying": 784,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 376,
+      "unidentified": 58,
+      "identified_share": 0.845745
+     },
+     "Liiga": {
+      "qualifying": 400,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "NL": {
+      "qualifying": 332,
+      "unidentified": 20,
+      "identified_share": 0.939759
+     },
+     "SHL": {
+      "qualifying": 359,
+      "unidentified": 0,
+      "identified_share": 1.0
+     }
+    },
+    "complete": false
+   },
+   {
+    "season": "2022/23",
+    "leagues": {
+     "NHL": {
+      "qualifying": 758,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 364,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "Liiga": {
+      "qualifying": 394,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "NL": {
+      "qualifying": 360,
+      "unidentified": 27,
+      "identified_share": 0.925
+     },
+     "SHL": {
+      "qualifying": 352,
+      "unidentified": 0,
+      "identified_share": 1.0
+     }
+    },
+    "complete": true
+   },
+   {
+    "season": "2023/24",
+    "leagues": {
+     "NHL": {
+      "qualifying": 786,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 344,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "Liiga": {
+      "qualifying": 392,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "NL": {
+      "qualifying": 372,
+      "unidentified": 19,
+      "identified_share": 0.948925
+     },
+     "SHL": {
+      "qualifying": 355,
+      "unidentified": 0,
+      "identified_share": 1.0
+     }
+    },
+    "complete": true
+   },
+   {
+    "season": "2024/25",
+    "leagues": {
+     "NHL": {
+      "qualifying": 759,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 338,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "Liiga": {
+      "qualifying": 420,
+      "unidentified": 1,
+      "identified_share": 0.997619
+     },
+     "NL": {
+      "qualifying": 367,
+      "unidentified": 19,
+      "identified_share": 0.948229
+     },
+     "SHL": {
+      "qualifying": 367,
+      "unidentified": 1,
+      "identified_share": 0.997275
+     }
+    },
+    "complete": true
+   },
+   {
+    "season": "2025/26",
+    "leagues": {
+     "NHL": {
+      "qualifying": 781,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "DEL": {
+      "qualifying": 348,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "Liiga": {
+      "qualifying": 429,
+      "unidentified": 0,
+      "identified_share": 1.0
+     },
+     "NL": {
+      "qualifying": 365,
+      "unidentified": 22,
+      "identified_share": 0.939726
+     },
+     "SHL": {
+      "qualifying": 365,
+      "unidentified": 4,
+      "identified_share": 0.989041
+     }
+    },
+    "complete": true
+   }
+  ],
+  "complete_seasons": [
+   "2022/23",
+   "2023/24",
+   "2024/25",
+   "2025/26"
+  ]
+ }
+}

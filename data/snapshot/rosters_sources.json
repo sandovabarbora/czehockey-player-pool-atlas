@@ -1,0 +1,5110 @@
+{
+ "license": "CC BY-SA 4.0",
+ "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "attribution": "Wikipedia contributors, English Wikipedia; each page at the revision listed",
+ "pages": [
+  {
+   "event": "OG",
+   "year": 2010,
+   "title": "Ice hockey at the 2010 Winter Olympics – Men's team rosters",
+   "url": "https://en.wikipedia.org/wiki/Ice_hockey_at_the_2010_Winter_Olympics_%E2%80%93_Men's_team_rosters",
+   "revid": 1366322668,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366322668",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2010,
+   "title": "2010 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2010_IIHF_World_Championship_rosters",
+   "revid": 1312817550,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1312817550",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2011,
+   "title": "2011 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2011_IIHF_World_Championship_rosters",
+   "revid": 1335583137,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1335583137",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2012,
+   "title": "2012 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2012_IIHF_World_Championship_rosters",
+   "revid": 1331288330,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1331288330",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2013,
+   "title": "2013 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2013_IIHF_World_Championship_rosters",
+   "revid": 1331288327,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1331288327",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "OG",
+   "year": 2014,
+   "title": "Ice hockey at the 2014 Winter Olympics – Men's team rosters",
+   "url": "https://en.wikipedia.org/wiki/Ice_hockey_at_the_2014_Winter_Olympics_%E2%80%93_Men's_team_rosters",
+   "revid": 1366321849,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366321849",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2014,
+   "title": "2014 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2014_IIHF_World_Championship_rosters",
+   "revid": 1331288319,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1331288319",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2015,
+   "title": "2015 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2015_IIHF_World_Championship_rosters",
+   "revid": 1372595286,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1372595286",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2016,
+   "title": "2016 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2016_IIHF_World_Championship_rosters",
+   "revid": 1373222619,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1373222619",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2017,
+   "title": "2017 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2017_IIHF_World_Championship_rosters",
+   "revid": 1373743383,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1373743383",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "OG",
+   "year": 2018,
+   "title": "Ice hockey at the 2018 Winter Olympics – Men's team rosters",
+   "url": "https://en.wikipedia.org/wiki/Ice_hockey_at_the_2018_Winter_Olympics_%E2%80%93_Men's_team_rosters",
+   "revid": 1364049485,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364049485",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2018,
+   "title": "2018 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2018_IIHF_World_Championship_rosters",
+   "revid": 1351620640,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351620640",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2019,
+   "title": "2019 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2019_IIHF_World_Championship_rosters",
+   "revid": 1331288305,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1331288305",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2021,
+   "title": "2021 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2021_IIHF_World_Championship_rosters",
+   "revid": 1375972320,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375972320",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "OG",
+   "year": 2022,
+   "title": "Ice hockey at the 2022 Winter Olympics – Men's team rosters",
+   "url": "https://en.wikipedia.org/wiki/Ice_hockey_at_the_2022_Winter_Olympics_%E2%80%93_Men's_team_rosters",
+   "revid": 1366315986,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366315986",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2022,
+   "title": "2022 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2022_IIHF_World_Championship_rosters",
+   "revid": 1376487012,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376487012",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2023,
+   "title": "2023 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2023_IIHF_World_Championship_rosters",
+   "revid": 1377116139,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1377116139",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2024,
+   "title": "2024 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2024_IIHF_World_Championship_rosters",
+   "revid": 1344622644,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1344622644",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2025,
+   "title": "2025 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2025_IIHF_World_Championship_rosters",
+   "revid": 1356293833,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1356293833",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "OG",
+   "year": 2026,
+   "title": "Ice hockey at the 2026 Winter Olympics – Men's team rosters",
+   "url": "https://en.wikipedia.org/wiki/Ice_hockey_at_the_2026_Winter_Olympics_%E2%80%93_Men's_team_rosters",
+   "revid": 1360070054,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1360070054",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "event": "WC",
+   "year": 2026,
+   "title": "2026 IIHF World Championship rosters",
+   "url": "https://en.wikipedia.org/wiki/2026_IIHF_World_Championship_rosters",
+   "revid": 1371854452,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1371854452",
+   "retrieved": "2026-09-29"
+  }
+ ],
+ "player_articles": [
+  {
+   "linked_from": "Agris Saviels",
+   "title": "Agris Saviels",
+   "url": "https://en.wikipedia.org/wiki/Agris_Saviels",
+   "revid": 1351551930,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351551930",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Aleksandrs Jerofejevs",
+   "title": "Aleksandrs Jerofejevs",
+   "url": "https://en.wikipedia.org/wiki/Aleksandrs_Jerofejevs",
+   "revid": 1369093542,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1369093542",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Aleksandrs Ņiživijs",
+   "title": "Aleksandrs Ņiživijs",
+   "url": "https://en.wikipedia.org/wiki/Aleksandrs_%C5%85i%C5%BEivijs",
+   "revid": 1369093619,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1369093619",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Aleksejs Širokovs",
+   "title": "Aleksejs Širokovs",
+   "url": "https://en.wikipedia.org/wiki/Aleksejs_%C5%A0irokovs",
+   "revid": 1369093716,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1369093716",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Alexander Barta",
+   "title": "Alexander Barta",
+   "url": "https://en.wikipedia.org/wiki/Alexander_Barta",
+   "revid": 1261858541,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1261858541",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Alexander Bonsaksen",
+   "title": "Alexander Bonsaksen",
+   "url": "https://en.wikipedia.org/wiki/Alexander_Bonsaksen",
+   "revid": 1243241805,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1243241805",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Alexander Edler",
+   "title": "Alexander Edler",
+   "url": "https://en.wikipedia.org/wiki/Alexander_Edler",
+   "revid": 1366876635,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366876635",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Alexander Salák",
+   "title": "Alexander Salák",
+   "url": "https://en.wikipedia.org/wiki/Alexander_Sal%C3%A1k",
+   "revid": 1374583202,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374583202",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Alexander Sulzer",
+   "title": "Alexander Sulzer",
+   "url": "https://en.wikipedia.org/wiki/Alexander_Sulzer",
+   "revid": 1366741204,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366741204",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Alexander Sundberg",
+   "title": "Alexander Sundberg",
+   "url": "https://en.wikipedia.org/wiki/Alexander_Sundberg",
+   "revid": 1334882157,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1334882157",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Alexander Weiss",
+   "title": "Alexander Weiss",
+   "url": "https://en.wikipedia.org/wiki/Alexander_Weiss",
+   "revid": 1248780985,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1248780985",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Aleš Hemský",
+   "title": "Aleš Hemský",
+   "url": "https://en.wikipedia.org/wiki/Ale%C5%A1_Hemsk%C3%BD",
+   "revid": 1375759354,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375759354",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Anders Bastiansen",
+   "title": "Anders Bastiansen",
+   "url": "https://en.wikipedia.org/wiki/Anders_Bastiansen",
+   "revid": 1277187554,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1277187554",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Anders Fredriksen",
+   "title": "Anders Fredriksen",
+   "url": "https://en.wikipedia.org/wiki/Anders_Fredriksen",
+   "revid": 1305483708,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1305483708",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Anders Lindbäck",
+   "title": "Anders Lindbäck",
+   "url": "https://en.wikipedia.org/wiki/Anders_Lindb%C3%A4ck",
+   "revid": 1368806032,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1368806032",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Anders Nilsson (ice hockey)",
+   "title": "Anders Nilsson (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Anders_Nilsson_(ice_hockey)",
+   "revid": 1367600513,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367600513",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Anders Poulsen (ice hockey)",
+   "title": "Anders Poulsen (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Anders_Poulsen_(ice_hockey)",
+   "revid": 1329758105,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1329758105",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andre Lakos",
+   "title": "Andre Lakos",
+   "url": "https://en.wikipedia.org/wiki/Andre_Lakos",
+   "revid": 1356812284,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1356812284",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andreas Engqvist",
+   "title": "Andreas Engqvist",
+   "url": "https://en.wikipedia.org/wiki/Andreas_Engqvist",
+   "revid": 1325145807,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1325145807",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andreas Jämtin",
+   "title": "Andreas Jämtin",
+   "url": "https://en.wikipedia.org/wiki/Andreas_J%C3%A4mtin",
+   "revid": 1369841217,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1369841217",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andreas Kristler",
+   "title": "Andreas Kristler",
+   "url": "https://en.wikipedia.org/wiki/Andreas_Kristler",
+   "revid": 1269481028,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1269481028",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andreas Martinsen",
+   "title": "Andreas Martinsen",
+   "url": "https://en.wikipedia.org/wiki/Andreas_Martinsen",
+   "revid": 1366765643,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366765643",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andreas Stene",
+   "title": "Andreas Stene",
+   "url": "https://en.wikipedia.org/wiki/Andreas_Stene",
+   "revid": 1151969481,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1151969481",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andrej Podkonický",
+   "title": "Andrej Podkonický",
+   "url": "https://en.wikipedia.org/wiki/Andrej_Podkonick%C3%BD",
+   "revid": 1377347213,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1377347213",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andrej Sekera",
+   "title": "Andrej Sekera",
+   "url": "https://en.wikipedia.org/wiki/Andrej_Sekera",
+   "revid": 1367659044,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367659044",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andrej Šťastný",
+   "title": "Andrej Šťastný",
+   "url": "https://en.wikipedia.org/wiki/Andrej_%C5%A0%C5%A5astn%C3%BD",
+   "revid": 1286248739,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1286248739",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andres Ambühl",
+   "title": "Andres Ambühl",
+   "url": "https://en.wikipedia.org/wiki/Andres_Amb%C3%BChl",
+   "revid": 1364184721,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364184721",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Andris Džeriņš",
+   "title": "Andris Džeriņš",
+   "url": "https://en.wikipedia.org/wiki/Andris_D%C5%BEeri%C5%86%C5%A1",
+   "revid": 1345398999,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1345398999",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "André Lysenstøen",
+   "title": "André Lysenstøen",
+   "url": "https://en.wikipedia.org/wiki/Andr%C3%A9_Lysenst%C3%B8en",
+   "revid": 1283946257,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1283946257",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "André Rankel",
+   "title": "André Rankel",
+   "url": "https://en.wikipedia.org/wiki/Andr%C3%A9_Rankel",
+   "revid": 1338215541,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338215541",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Anssi Salmela",
+   "title": "Anssi Salmela",
+   "url": "https://en.wikipedia.org/wiki/Anssi_Salmela",
+   "revid": 1367600677,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367600677",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Antti Miettinen",
+   "title": "Antti Miettinen",
+   "url": "https://en.wikipedia.org/wiki/Antti_Miettinen",
+   "revid": 1367477345,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367477345",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Antti Pihlström",
+   "title": "Antti Pihlström",
+   "url": "https://en.wikipedia.org/wiki/Antti_Pihlstr%C3%B6m",
+   "revid": 1357603670,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1357603670",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Antti Raanta",
+   "title": "Antti Raanta",
+   "url": "https://en.wikipedia.org/wiki/Antti_Raanta",
+   "revid": 1377079171,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1377079171",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Armands Bērziņš",
+   "title": "Armands Bērziņš",
+   "url": "https://en.wikipedia.org/wiki/Armands_B%C4%93rzi%C5%86%C5%A1",
+   "revid": 1365191049,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1365191049",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Artūrs Kulda",
+   "title": "Artūrs Kulda",
+   "url": "https://en.wikipedia.org/wiki/Art%C5%ABrs_Kulda",
+   "revid": 1367195876,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367195876",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Arvīds Reķis",
+   "title": "Arvīds Reķis",
+   "url": "https://en.wikipedia.org/wiki/Arv%C4%ABds_Re%C4%B7is",
+   "revid": 1212551350,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1212551350",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Atte Engren",
+   "title": "Atte Engren",
+   "url": "https://en.wikipedia.org/wiki/Atte_Engren",
+   "revid": 1367557311,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367557311",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Atte Ohtamaa",
+   "title": "Atte Ohtamaa",
+   "url": "https://en.wikipedia.org/wiki/Atte_Ohtamaa",
+   "revid": 1361782873,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361782873",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Beat Gerber",
+   "title": "Beat Gerber",
+   "url": "https://en.wikipedia.org/wiki/Beat_Gerber",
+   "revid": 1375116205,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375116205",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Benedikt Kohl",
+   "title": "Benedikt Kohl",
+   "url": "https://en.wikipedia.org/wiki/Benedikt_Kohl",
+   "revid": 1253132239,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1253132239",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Benjamin Plüss",
+   "title": "Benjamin Plüss",
+   "url": "https://en.wikipedia.org/wiki/Benjamin_Pl%C3%BCss",
+   "revid": 1324444955,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1324444955",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Bernhard Starkbaum",
+   "title": "Bernhard Starkbaum",
+   "url": "https://en.wikipedia.org/wiki/Bernhard_Starkbaum",
+   "revid": 1156747188,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1156747188",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Bjarke Møller",
+   "title": "Bjarke Møller",
+   "url": "https://en.wikipedia.org/wiki/Bjarke_M%C3%B8ller",
+   "revid": 1017037864,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1017037864",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Bjorn Christen",
+   "title": "Björn Christen",
+   "url": "https://en.wikipedia.org/wiki/Bj%C3%B6rn_Christen",
+   "revid": 1341539823,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341539823",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Branislav Mezei",
+   "title": "Branislav Mezei",
+   "url": "https://en.wikipedia.org/wiki/Branislav_Mezei",
+   "revid": 1373371552,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1373371552",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Branko Radivojevič",
+   "title": "Branko Radivojevič",
+   "url": "https://en.wikipedia.org/wiki/Branko_Radivojevi%C4%8D",
+   "revid": 1366073813,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366073813",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Brede Frettem Csiszar",
+   "title": "Brede Frettem Csiszar",
+   "url": "https://en.wikipedia.org/wiki/Brede_Frettem_Csiszar",
+   "revid": 1319340247,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1319340247",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Calle Järnkrok",
+   "title": "Calle Järnkrok",
+   "url": "https://en.wikipedia.org/wiki/Calle_J%C3%A4rnkrok",
+   "revid": 1372336235,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1372336235",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Carl Gunnarsson",
+   "title": "Carl Gunnarsson",
+   "url": "https://en.wikipedia.org/wiki/Carl_Gunnarsson",
+   "revid": 1367602456,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367602456",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Christian Bäckman",
+   "title": "Christian Bäckman",
+   "url": "https://en.wikipedia.org/wiki/Christian_B%C3%A4ckman",
+   "revid": 1370647255,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1370647255",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Christian Ehrhoff",
+   "title": "Christian Ehrhoff",
+   "url": "https://en.wikipedia.org/wiki/Christian_Ehrhoff",
+   "revid": 1366213265,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366213265",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Christoph Schubert",
+   "title": "Christoph Schubert",
+   "url": "https://en.wikipedia.org/wiki/Christoph_Schubert",
+   "revid": 1351712235,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351712235",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Christoph Ullmann",
+   "title": "Christoph Ullmann",
+   "url": "https://en.wikipedia.org/wiki/Christoph_Ullmann",
+   "revid": 1328007228,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1328007228",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Christopher Fischer",
+   "title": "Christopher Fischer",
+   "url": "https://en.wikipedia.org/wiki/Christopher_Fischer",
+   "revid": 1274000680,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1274000680",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Constantin Braun",
+   "title": "Constantin Braun",
+   "url": "https://en.wikipedia.org/wiki/Constantin_Braun",
+   "revid": 1353831041,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353831041",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Cristopher Nilstorp",
+   "title": "Cristopher Nihlstorp",
+   "url": "https://en.wikipedia.org/wiki/Cristopher_Nihlstorp",
+   "revid": 1366317640,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366317640",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Damien Brunner",
+   "title": "Damien Brunner",
+   "url": "https://en.wikipedia.org/wiki/Damien_Brunner",
+   "revid": 1366742428,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366742428",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Alfredsson",
+   "title": "Daniel Alfredsson",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Alfredsson",
+   "revid": 1367603858,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367603858",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Fernholm",
+   "title": "Daniel Fernholm",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Fernholm",
+   "revid": 1353967308,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353967308",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Kreutzer",
+   "title": "Daniel Kreutzer",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Kreutzer",
+   "revid": 1366116739,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366116739",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Manzato",
+   "title": "Daniel Manzato",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Manzato",
+   "revid": 1360595314,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1360595314",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Nielsen",
+   "title": "Daniel Nielsen",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Nielsen",
+   "revid": 1341004819,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341004819",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Oberkofler",
+   "title": "Daniel Oberkofler",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Oberkofler",
+   "revid": 1304100550,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1304100550",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Pietta",
+   "title": "Daniel Pietta",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Pietta",
+   "revid": 1358343991,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1358343991",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Rahimi",
+   "title": "Daniel Rahimi",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Rahimi",
+   "revid": 1351731265,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351731265",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Rubin",
+   "title": "Daniel Rubin",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Rubin",
+   "revid": 1375825078,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375825078",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Sedin",
+   "title": "Daniel Sedin",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Sedin",
+   "revid": 1375763407,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375763407",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Sørvik",
+   "title": "Daniel Sørvik",
+   "url": "https://en.wikipedia.org/wiki/Daniel_S%C3%B8rvik",
+   "revid": 1307048167,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1307048167",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Daniel Welser",
+   "title": "Daniel Welser",
+   "url": "https://en.wikipedia.org/wiki/Daniel_Welser",
+   "revid": 1312123674,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1312123674",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Danny aus den Birken",
+   "title": "Danny aus den Birken",
+   "url": "https://en.wikipedia.org/wiki/Danny_aus_den_Birken",
+   "revid": 1358336339,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1358336339",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Darcy Werenka",
+   "title": "Darcy Werenka",
+   "url": "https://en.wikipedia.org/wiki/Darcy_Werenka",
+   "revid": 1356507745,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1356507745",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "David Krejčí",
+   "title": "David Krejčí",
+   "url": "https://en.wikipedia.org/wiki/David_Krej%C4%8D%C3%AD",
+   "revid": 1369489412,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1369489412",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "David Petrasek",
+   "title": "David Petrasek",
+   "url": "https://en.wikipedia.org/wiki/David_Petrasek",
+   "revid": 1254942425,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1254942425",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "David Rundblad",
+   "title": "David Rundblad",
+   "url": "https://en.wikipedia.org/wiki/David_Rundblad",
+   "revid": 1366742595,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366742595",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "David Schuller",
+   "title": "David Schuller",
+   "url": "https://en.wikipedia.org/wiki/David_Schuller",
+   "revid": 1316163545,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1316163545",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Dean Kukan",
+   "title": "Dean Kukan",
+   "url": "https://en.wikipedia.org/wiki/Dean_Kukan",
+   "revid": 1366215813,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366215813",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Denis Hollenstein",
+   "title": "Denis Hollenstein",
+   "url": "https://en.wikipedia.org/wiki/Denis_Hollenstein",
+   "revid": 1340700027,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1340700027",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Denis Reul",
+   "title": "Denis Reul",
+   "url": "https://en.wikipedia.org/wiki/Denis_Reul",
+   "revid": 1376433530,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376433530",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Dennis Endras",
+   "title": "Dennis Endras",
+   "url": "https://en.wikipedia.org/wiki/Dennis_Endras",
+   "revid": 1366216221,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366216221",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Dennis Rasmussen (ice hockey)",
+   "title": "Dennis Rasmussen (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Dennis_Rasmussen_(ice_hockey)",
+   "revid": 1366216253,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366216253",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Dick Axelsson",
+   "title": "Dick Axelsson",
+   "url": "https://en.wikipedia.org/wiki/Dick_Axelsson",
+   "revid": 1351730280,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730280",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Dimitri Kotschnew",
+   "title": "Dimitrij Kotschnew",
+   "url": "https://en.wikipedia.org/wiki/Dimitrij_Kotschnew",
+   "revid": 1313395977,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1313395977",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Dimitri Pätzold",
+   "title": "Dimitri Pätzold",
+   "url": "https://en.wikipedia.org/wiki/Dimitri_P%C3%A4tzold",
+   "revid": 1351730914,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730914",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Dimitrij Kotschnew",
+   "title": "Dimitrij Kotschnew",
+   "url": "https://en.wikipedia.org/wiki/Dimitrij_Kotschnew",
+   "revid": 1313395977,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1313395977",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Dominik Graňák",
+   "title": "Dominik Graňák",
+   "url": "https://en.wikipedia.org/wiki/Dominik_Gra%C5%88%C3%A1k",
+   "revid": 1361235557,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361235557",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Dominik Schlumpf",
+   "title": "Dominik Schlumpf",
+   "url": "https://en.wikipedia.org/wiki/Dominik_Schlumpf",
+   "revid": 1350221834,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1350221834",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Dávid Skokan",
+   "title": "Dávid Skokan",
+   "url": "https://en.wikipedia.org/wiki/D%C3%A1vid_Skokan",
+   "revid": 1356711457,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1356711457",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Edgars Lūsiņš",
+   "title": "Edgars Lūsiņš",
+   "url": "https://en.wikipedia.org/wiki/Edgars_L%C5%ABsi%C5%86%C5%A1",
+   "revid": 1353203660,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353203660",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Edgars Masaļskis",
+   "title": "Edgars Masaļskis",
+   "url": "https://en.wikipedia.org/wiki/Edgars_Masa%C4%BCskis",
+   "revid": 1355154438,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355154438",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Eerikki Koivu",
+   "title": "Eerikki Koivu",
+   "url": "https://en.wikipedia.org/wiki/Eerikki_Koivu",
+   "revid": 1253132464,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1253132464",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Elias Fälth",
+   "title": "Elias Fälth",
+   "url": "https://en.wikipedia.org/wiki/Elias_F%C3%A4lth",
+   "revid": 1338514348,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338514348",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Emil Kristensen",
+   "title": "Emil Kristensen",
+   "url": "https://en.wikipedia.org/wiki/Emil_Kristensen",
+   "revid": 1376999049,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376999049",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Eric Blum",
+   "title": "Eric Blum",
+   "url": "https://en.wikipedia.org/wiki/Eric_Blum",
+   "revid": 1338879439,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338879439",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Erik Ersberg",
+   "title": "Erik Ersberg",
+   "url": "https://en.wikipedia.org/wiki/Erik_Ersberg",
+   "revid": 1367559420,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367559420",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Erik Follestad Johansen",
+   "title": "Erik Follestad Johansen",
+   "url": "https://en.wikipedia.org/wiki/Erik_Follestad_Johansen",
+   "revid": 1368567665,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1368567665",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Erik Gustafsson (ice hockey, born 1988)",
+   "title": "Erik Gustafsson (ice hockey, born 1988)",
+   "url": "https://en.wikipedia.org/wiki/Erik_Gustafsson_(ice_hockey,_born_1988)",
+   "revid": 1366076013,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366076013",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Erik Haula",
+   "title": "Erik Haula",
+   "url": "https://en.wikipedia.org/wiki/Erik_Haula",
+   "revid": 1377254738,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1377254738",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Erik Karlsson",
+   "title": "Erik Karlsson",
+   "url": "https://en.wikipedia.org/wiki/Erik_Karlsson",
+   "revid": 1376873144,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376873144",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ervīns Muštukovs",
+   "title": "Ervīns Muštukovs",
+   "url": "https://en.wikipedia.org/wiki/Erv%C4%ABns_Mu%C5%A1tukovs",
+   "revid": 1334563791,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1334563791",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Etienne Froidevaux",
+   "title": "Etienne Froidevaux",
+   "url": "https://en.wikipedia.org/wiki/Etienne_Froidevaux",
+   "revid": 1275315415,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1275315415",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Evan Kaufmann",
+   "title": "Evan Kaufmann",
+   "url": "https://en.wikipedia.org/wiki/Evan_Kaufmann",
+   "revid": 1205198258,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1205198258",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Fabian Weinhandl",
+   "title": "Fabian Weinhandl",
+   "url": "https://en.wikipedia.org/wiki/Fabian_Weinhandl",
+   "revid": 1216020160,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1216020160",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Felix Schütz",
+   "title": "Felix Schütz",
+   "url": "https://en.wikipedia.org/wiki/Felix_Sch%C3%BCtz",
+   "revid": 1366319273,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366319273",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Filip Novák (ice hockey)",
+   "title": "Filip Novák (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Filip_Nov%C3%A1k_(ice_hockey)",
+   "revid": 1351730938,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730938",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Florian Iberer",
+   "title": "Florian Iberer",
+   "url": "https://en.wikipedia.org/wiki/Florian_Iberer",
+   "revid": 1318334307,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1318334307",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Florian Ondruschka",
+   "title": "Florian Ondruschka",
+   "url": "https://en.wikipedia.org/wiki/Florian_Ondruschka",
+   "revid": 1234330578,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1234330578",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Frank Hördler",
+   "title": "Frank Hördler",
+   "url": "https://en.wikipedia.org/wiki/Frank_H%C3%B6rdler",
+   "revid": 1362407961,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1362407961",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Frank Mauer",
+   "title": "Frank Mauer",
+   "url": "https://en.wikipedia.org/wiki/Frank_Mauer",
+   "revid": 1335314298,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1335314298",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Frans Nielsen",
+   "title": "Frans Nielsen",
+   "url": "https://en.wikipedia.org/wiki/Frans_Nielsen",
+   "revid": 1366330138,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366330138",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Frederik Andersen",
+   "title": "Frederik Andersen",
+   "url": "https://en.wikipedia.org/wiki/Frederik_Andersen",
+   "revid": 1366219182,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366219182",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Frederik Storm",
+   "title": "Frederik Storm",
+   "url": "https://en.wikipedia.org/wiki/Frederik_Storm",
+   "revid": 1361169762,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361169762",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Fredrik Pettersson",
+   "title": "Fredrik Pettersson",
+   "url": "https://en.wikipedia.org/wiki/Fredrik_Pettersson",
+   "revid": 1366219214,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366219214",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Félicien Du Bois",
+   "title": "Félicien Du Bois",
+   "url": "https://en.wikipedia.org/wiki/F%C3%A9licien_Du_Bois",
+   "revid": 1240085581,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1240085581",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Gabriel Landeskog",
+   "title": "Gabriel Landeskog",
+   "url": "https://en.wikipedia.org/wiki/Gabriel_Landeskog",
+   "revid": 1376869456,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376869456",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Georgijs Pujacs",
+   "title": "Georgijs Pujacs",
+   "url": "https://en.wikipedia.org/wiki/Georgijs_Pujacs",
+   "revid": 1351719076,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351719076",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Gerhard Unterluggauer",
+   "title": "Gerhard Unterluggauer",
+   "url": "https://en.wikipedia.org/wiki/Gerhard_Unterluggauer",
+   "revid": 1350631984,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1350631984",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Gints Meija",
+   "title": "Gints Meija",
+   "url": "https://en.wikipedia.org/wiki/Gints_Meija",
+   "revid": 1343648113,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1343648113",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Goran Bezina",
+   "title": "Goran Bezina",
+   "url": "https://en.wikipedia.org/wiki/Goran_Bezina",
+   "revid": 1366306372,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366306372",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Gregor Baumgartner",
+   "title": "Gregor Baumgartner",
+   "url": "https://en.wikipedia.org/wiki/Gregor_Baumgartner",
+   "revid": 1353838336,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353838336",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Guntis Galviņš",
+   "title": "Guntis Galviņš",
+   "url": "https://en.wikipedia.org/wiki/Guntis_Galvi%C5%86%C5%A1",
+   "revid": 1341378356,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341378356",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Gustav Nyquist",
+   "title": "Gustav Nyquist",
+   "url": "https://en.wikipedia.org/wiki/Gustav_Nyquist",
+   "revid": 1372550142,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1372550142",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Henrik Sedin",
+   "title": "Henrik Sedin",
+   "url": "https://en.wikipedia.org/wiki/Henrik_Sedin",
+   "revid": 1375790660,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375790660",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Henrik Solberg",
+   "title": "Henrik Solberg",
+   "url": "https://en.wikipedia.org/wiki/Henrik_Solberg",
+   "revid": 1368881589,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1368881589",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Henrik Tallinder",
+   "title": "Henrik Tallinder",
+   "url": "https://en.wikipedia.org/wiki/Henrik_Tallinder",
+   "revid": 1351711886,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351711886",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Henrik Zetterberg",
+   "title": "Henrik Zetterberg",
+   "url": "https://en.wikipedia.org/wiki/Henrik_Zetterberg",
+   "revid": 1367606707,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367606707",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Henrik Ødegaard",
+   "title": "Henrik Ødegaard",
+   "url": "https://en.wikipedia.org/wiki/Henrik_%C3%98degaard",
+   "revid": 1360313812,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1360313812",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Herberts Vasiļjevs",
+   "title": "Herberts Vasiļjevs",
+   "url": "https://en.wikipedia.org/wiki/Herberts_Vasi%C4%BCjevs",
+   "revid": 1362877526,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1362877526",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Iiro Pakarinen",
+   "title": "Iiro Pakarinen",
+   "url": "https://en.wikipedia.org/wiki/Iiro_Pakarinen",
+   "revid": 1366077086,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366077086",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Iiro Tarkki",
+   "title": "Iiro Tarkki",
+   "url": "https://en.wikipedia.org/wiki/Iiro_Tarkki",
+   "revid": 1366077089,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366077089",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ilari Melart",
+   "title": "Ilari Melart",
+   "url": "https://en.wikipedia.org/wiki/Ilari_Melart",
+   "revid": 1367140776,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367140776",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ivan Baranka",
+   "title": "Ivan Baranka",
+   "url": "https://en.wikipedia.org/wiki/Ivan_Baranka",
+   "revid": 1351730937,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730937",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ivan Majeský",
+   "title": "Ivan Majeský",
+   "url": "https://en.wikipedia.org/wiki/Ivan_Majesk%C3%BD",
+   "revid": 1351730631,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730631",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ivan Čiernik",
+   "title": "Ivan Čiernik",
+   "url": "https://en.wikipedia.org/wiki/Ivan_%C4%8Ciernik",
+   "revid": 1326400356,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1326400356",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ivan Švarný",
+   "title": "Ivan Švarný",
+   "url": "https://en.wikipedia.org/wiki/Ivan_%C5%A0varn%C3%BD",
+   "revid": 1265505068,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1265505068",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ivars Punnenovs",
+   "title": "Ivars Punnenovs",
+   "url": "https://en.wikipedia.org/wiki/Ivars_Punnenovs",
+   "revid": 1357482522,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1357482522",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ivo Rüthemann",
+   "title": "Ivo Rüthemann",
+   "url": "https://en.wikipedia.org/wiki/Ivo_R%C3%BCthemann",
+   "revid": 1273412301,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1273412301",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jacob Markström",
+   "title": "Jacob Markström",
+   "url": "https://en.wikipedia.org/wiki/Jacob_Markstr%C3%B6m",
+   "revid": 1367607297,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367607297",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jakob Silfverberg",
+   "title": "Jakob Silfverberg",
+   "url": "https://en.wikipedia.org/wiki/Jakob_Silfverberg",
+   "revid": 1367607461,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367607461",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jakub Kindl",
+   "title": "Jakub Kindl",
+   "url": "https://en.wikipedia.org/wiki/Jakub_Kindl",
+   "revid": 1374581016,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374581016",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jakub Klepiš",
+   "title": "Jakub Klepiš",
+   "url": "https://en.wikipedia.org/wiki/Jakub_Klepi%C5%A1",
+   "revid": 1374581094,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374581094",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jakub Kovář",
+   "title": "Jakub Kovář",
+   "url": "https://en.wikipedia.org/wiki/Jakub_Kov%C3%A1%C5%99",
+   "revid": 1351730817,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730817",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jakub Krejčík",
+   "title": "Jakub Krejčík",
+   "url": "https://en.wikipedia.org/wiki/Jakub_Krej%C4%8D%C3%ADk",
+   "revid": 1364618032,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364618032",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jakub Nakládal",
+   "title": "Jakub Nakládal",
+   "url": "https://en.wikipedia.org/wiki/Jakub_Nakl%C3%A1dal",
+   "revid": 1366318195,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366318195",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jakub Petružálek",
+   "title": "Jakub Petružálek",
+   "url": "https://en.wikipedia.org/wiki/Jakub_Petru%C5%BE%C3%A1lek",
+   "revid": 1351550727,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351550727",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jakub Voráček",
+   "title": "Jakub Voráček",
+   "url": "https://en.wikipedia.org/wiki/Jakub_Vor%C3%A1%C4%8Dek",
+   "revid": 1366743912,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366743912",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jakub Štěpánek",
+   "title": "Jakub Štěpánek",
+   "url": "https://en.wikipedia.org/wiki/Jakub_%C5%A0t%C4%9Bp%C3%A1nek",
+   "revid": 1290168460,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1290168460",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jan Hejda",
+   "title": "Jan Hejda",
+   "url": "https://en.wikipedia.org/wiki/Jan_Hejda",
+   "revid": 1366077312,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366077312",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jan Kolář (ice hockey, born 1986)",
+   "title": "Jan Kolář (ice hockey, born 1986)",
+   "url": "https://en.wikipedia.org/wiki/Jan_Kol%C3%A1%C5%99_(ice_hockey,_born_1986)",
+   "revid": 1345399194,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1345399194",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jan Kovář",
+   "title": "Jan Kovář",
+   "url": "https://en.wikipedia.org/wiki/Jan_Kov%C3%A1%C5%99",
+   "revid": 1366221202,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366221202",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jan Marek (ice hockey b. 1979)",
+   "title": "Jan Marek (ice hockey, born 1979)",
+   "url": "https://en.wikipedia.org/wiki/Jan_Marek_(ice_hockey,_born_1979)",
+   "revid": 1351719322,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351719322",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jani Lajunen",
+   "title": "Jani Lajunen",
+   "url": "https://en.wikipedia.org/wiki/Jani_Lajunen",
+   "revid": 1366328860,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366328860",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jani Tuppurainen",
+   "title": "Jani Tuppurainen",
+   "url": "https://en.wikipedia.org/wiki/Jani_Tuppurainen",
+   "revid": 1267007552,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1267007552",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Janne Jalasvaara",
+   "title": "Janne Jalasvaara",
+   "url": "https://en.wikipedia.org/wiki/Janne_Jalasvaara",
+   "revid": 1298796977,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1298796977",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Janne Lahti",
+   "title": "Janne Lahti",
+   "url": "https://en.wikipedia.org/wiki/Janne_Lahti",
+   "revid": 1343697753,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1343697753",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Janne Niskala",
+   "title": "Janne Niskala",
+   "url": "https://en.wikipedia.org/wiki/Janne_Niskala",
+   "revid": 1361926377,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361926377",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Janne Pesonen",
+   "title": "Janne Pesonen",
+   "url": "https://en.wikipedia.org/wiki/Janne_Pesonen",
+   "revid": 1366325850,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366325850",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jannik Hansen",
+   "title": "Jannik Hansen",
+   "url": "https://en.wikipedia.org/wiki/Jannik_Hansen",
+   "revid": 1367560141,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367560141",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jarkko Immonen",
+   "title": "Jarkko Immonen",
+   "url": "https://en.wikipedia.org/wiki/Jarkko_Immonen",
+   "revid": 1367560176,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367560176",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jarkko Immonen (ice hockey b. 1982)",
+   "title": "Jarkko Immonen",
+   "url": "https://en.wikipedia.org/wiki/Jarkko_Immonen",
+   "revid": 1367560176,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367560176",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jarno Koskiranta",
+   "title": "Jarno Koskiranta",
+   "url": "https://en.wikipedia.org/wiki/Jarno_Koskiranta",
+   "revid": 1267007169,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1267007169",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jaromír Jágr",
+   "title": "Jaromír Jágr",
+   "url": "https://en.wikipedia.org/wiki/Jarom%C3%ADr_J%C3%A1gr",
+   "revid": 1374695109,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374695109",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jaroslav Halák",
+   "title": "Jaroslav Halák",
+   "url": "https://en.wikipedia.org/wiki/Jaroslav_Hal%C3%A1k",
+   "revid": 1371791226,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1371791226",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jaroslav Janus",
+   "title": "Jaroslav Janus",
+   "url": "https://en.wikipedia.org/wiki/Jaroslav_Janus",
+   "revid": 1352057925,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1352057925",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jens Baxmann",
+   "title": "Jens Baxmann",
+   "url": "https://en.wikipedia.org/wiki/Jens_Baxmann",
+   "revid": 1361694802,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361694802",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jere Karalahti",
+   "title": "Jere Karalahti",
+   "url": "https://en.wikipedia.org/wiki/Jere_Karalahti",
+   "revid": 1351730669,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730669",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jere Sallinen",
+   "title": "Jere Sallinen",
+   "url": "https://en.wikipedia.org/wiki/Jere_Sallinen",
+   "revid": 1366312027,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366312027",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jesper Damgaard",
+   "title": "Jesper Damgaard",
+   "url": "https://en.wikipedia.org/wiki/Jesper_Damgaard",
+   "revid": 1351638870,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351638870",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jesper Duus",
+   "title": "Jesper Duus",
+   "url": "https://en.wikipedia.org/wiki/Jesper_Duus",
+   "revid": 1341006100,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341006100",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jesper Jensen (ice hockey b. 1987)",
+   "title": "Jesper Jensen (ice hockey, born 1987)",
+   "url": "https://en.wikipedia.org/wiki/Jesper_Jensen_(ice_hockey,_born_1987)",
+   "revid": 1364798269,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364798269",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jesper Jensen (ice hockey b. 1991)",
+   "title": "Jesper Jensen Aabo",
+   "url": "https://en.wikipedia.org/wiki/Jesper_Jensen_Aabo",
+   "revid": 1364185608,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364185608",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jesper Jensen (ice hockey, born 1987)",
+   "title": "Jesper Jensen (ice hockey, born 1987)",
+   "url": "https://en.wikipedia.org/wiki/Jesper_Jensen_(ice_hockey,_born_1987)",
+   "revid": 1364798269,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364798269",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jesper Jensen (ice hockey, born 1991)",
+   "title": "Jesper Jensen Aabo",
+   "url": "https://en.wikipedia.org/wiki/Jesper_Jensen_Aabo",
+   "revid": 1364185608,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364185608",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jesse Joensuu",
+   "title": "Jesse Joensuu",
+   "url": "https://en.wikipedia.org/wiki/Jesse_Joensuu",
+   "revid": 1318092266,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1318092266",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jhonas Enroth",
+   "title": "Jhonas Enroth",
+   "url": "https://en.wikipedia.org/wiki/Jhonas_Enroth",
+   "revid": 1366084992,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366084992",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jimmie Ericsson",
+   "title": "Jimmie Ericsson",
+   "url": "https://en.wikipedia.org/wiki/Jimmie_Ericsson",
+   "revid": 1366312989,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366312989",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jiří Hudler",
+   "title": "Jiří Hudler",
+   "url": "https://en.wikipedia.org/wiki/Ji%C5%99%C3%AD_Hudler",
+   "revid": 1353275484,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353275484",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jiří Novotný (ice hockey)",
+   "title": "Jiří Novotný (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Ji%C5%99%C3%AD_Novotn%C3%BD_(ice_hockey)",
+   "revid": 1351711784,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351711784",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jiří Sekáč",
+   "title": "Jiří Sekáč",
+   "url": "https://en.wikipedia.org/wiki/Ji%C5%99%C3%AD_Sek%C3%A1%C4%8D",
+   "revid": 1376495912,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376495912",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jiří Tlustý",
+   "title": "Jiří Tlustý",
+   "url": "https://en.wikipedia.org/wiki/Ji%C5%99%C3%AD_Tlust%C3%BD",
+   "revid": 1374584071,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374584071",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Joacim Eriksson",
+   "title": "Joacim Eriksson",
+   "url": "https://en.wikipedia.org/wiki/Joacim_Eriksson",
+   "revid": 1366222353,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366222353",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Joakim Lindström",
+   "title": "Joakim Lindström",
+   "url": "https://en.wikipedia.org/wiki/Joakim_Lindstr%C3%B6m",
+   "revid": 1370950128,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1370950128",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jochen Reimer",
+   "title": "Jochen Reimer",
+   "url": "https://en.wikipedia.org/wiki/Jochen_Reimer",
+   "revid": 1271926962,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1271926962",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Joel Lundqvist",
+   "title": "Joel Lundqvist",
+   "url": "https://en.wikipedia.org/wiki/Joel_Lundqvist",
+   "revid": 1340634207,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1340634207",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Johan Fransson",
+   "title": "Johan Fransson",
+   "url": "https://en.wikipedia.org/wiki/Johan_Fransson",
+   "revid": 1366322439,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366322439",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Johan Franzén",
+   "title": "Johan Franzén",
+   "url": "https://en.wikipedia.org/wiki/Johan_Franz%C3%A9n",
+   "revid": 1367608074,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367608074",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Johan Gustafsson",
+   "title": "Johan Gustafsson",
+   "url": "https://en.wikipedia.org/wiki/Johan_Gustafsson",
+   "revid": 1361577872,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361577872",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Johan Harju",
+   "title": "Johan Harju",
+   "url": "https://en.wikipedia.org/wiki/Johan_Harju",
+   "revid": 1375953984,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375953984",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Johan Larsson (ice hockey, born 1992)",
+   "title": "Johan Larsson (ice hockey, born 1992)",
+   "url": "https://en.wikipedia.org/wiki/Johan_Larsson_(ice_hockey,_born_1992)",
+   "revid": 1372707882,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1372707882",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Johannes Reichel",
+   "title": "Johannes Reichel",
+   "url": "https://en.wikipedia.org/wiki/Johannes_Reichel",
+   "revid": 1141306942,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1141306942",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "John Gobbi",
+   "title": "John Gobbi",
+   "url": "https://en.wikipedia.org/wiki/John_Gobbi",
+   "revid": 1341378421,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341378421",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "John Tripp (ice hockey)",
+   "title": "John Tripp (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/John_Tripp_(ice_hockey)",
+   "revid": 1365019716,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1365019716",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jonas Ahnelöv",
+   "title": "Jonas Ahnelöv",
+   "url": "https://en.wikipedia.org/wiki/Jonas_Ahnel%C3%B6v",
+   "revid": 1357569287,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1357569287",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jonas Andersson (ice hockey)",
+   "title": "Jonas Andersson (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Jonas_Andersson_(ice_hockey)",
+   "revid": 1366222915,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366222915",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jonas Brodin",
+   "title": "Jonas Brodin",
+   "url": "https://en.wikipedia.org/wiki/Jonas_Brodin",
+   "revid": 1367608222,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367608222",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jonas Djupvik Løvlie",
+   "title": "Jonas Djupvik Løvlie",
+   "url": "https://en.wikipedia.org/wiki/Jonas_Djupvik_L%C3%B8vlie",
+   "revid": 1266604749,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1266604749",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jonas Gustavsson",
+   "title": "Jonas Gustavsson",
+   "url": "https://en.wikipedia.org/wiki/Jonas_Gustavsson",
+   "revid": 1368690288,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1368690288",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jonas Holøs",
+   "title": "Jonas Holøs",
+   "url": "https://en.wikipedia.org/wiki/Jonas_Hol%C3%B8s",
+   "revid": 1367560731,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367560731",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jonathan Ericsson",
+   "title": "Jonathan Ericsson",
+   "url": "https://en.wikipedia.org/wiki/Jonathan_Ericsson",
+   "revid": 1366316601,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366316601",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Joni Ortio",
+   "title": "Joni Ortio",
+   "url": "https://en.wikipedia.org/wiki/Joni_Ortio",
+   "revid": 1367560885,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367560885",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Joonas Järvinen",
+   "title": "Joonas Järvinen",
+   "url": "https://en.wikipedia.org/wiki/Joonas_J%C3%A4rvinen",
+   "revid": 1366222999,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366222999",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jori Lehterä",
+   "title": "Jori Lehterä",
+   "url": "https://en.wikipedia.org/wiki/Jori_Lehter%C3%A4",
+   "revid": 1366328133,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366328133",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jozef Stümpel",
+   "title": "Jozef Stümpel",
+   "url": "https://en.wikipedia.org/wiki/Jozef_St%C3%BCmpel",
+   "revid": 1355155234,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355155234",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Juergen Penker",
+   "title": "Juergen Penker",
+   "url": "https://en.wikipedia.org/wiki/Juergen_Penker",
+   "revid": 1328826767,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1328826767",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Juha Kaunismäki",
+   "title": "Juha Kaunismäki",
+   "url": "https://en.wikipedia.org/wiki/Juha_Kaunism%C3%A4ki",
+   "revid": 1267003867,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1267003867",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Juha-Pekka Haataja",
+   "title": "Juha-Pekka Haataja",
+   "url": "https://en.wikipedia.org/wiki/Juha-Pekka_Haataja",
+   "revid": 1267007865,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1267007865",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Juha-Pekka Hytönen",
+   "title": "Juha-Pekka Hytönen",
+   "url": "https://en.wikipedia.org/wiki/Juha-Pekka_Hyt%C3%B6nen",
+   "revid": 1309121760,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1309121760",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Juhamatti Aaltonen",
+   "title": "Juhamatti Aaltonen",
+   "url": "https://en.wikipedia.org/wiki/Juhamatti_Aaltonen",
+   "revid": 1351719713,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351719713",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Julian Jakobsen",
+   "title": "Julian Jakobsen",
+   "url": "https://en.wikipedia.org/wiki/Julian_Jakobsen",
+   "revid": 1341004853,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341004853",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Julian Walker",
+   "title": "Julian Walker",
+   "url": "https://en.wikipedia.org/wiki/Julian_Walker",
+   "revid": 1366223353,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366223353",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Julien Sprunger",
+   "title": "Julien Sprunger",
+   "url": "https://en.wikipedia.org/wiki/Julien_Sprunger",
+   "revid": 1352510774,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1352510774",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Julien Vauclair",
+   "title": "Julien Vauclair",
+   "url": "https://en.wikipedia.org/wiki/Julien_Vauclair",
+   "revid": 1351730944,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730944",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Juraj Mikúš (ice hockey b. 1987)",
+   "title": "Juraj Mikúš (ice hockey, born 1987)",
+   "url": "https://en.wikipedia.org/wiki/Juraj_Mik%C3%BA%C5%A1_(ice_hockey,_born_1987)",
+   "revid": 1363815889,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1363815889",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Juraj Valach",
+   "title": "Juraj Valach",
+   "url": "https://en.wikipedia.org/wiki/Juraj_Valach",
+   "revid": 1361230557,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361230557",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Juris Štāls",
+   "title": "Juris Štāls",
+   "url": "https://en.wikipedia.org/wiki/Juris_%C5%A0t%C4%81ls",
+   "revid": 1366825189,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366825189",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jussi Jokinen",
+   "title": "Jussi Jokinen",
+   "url": "https://en.wikipedia.org/wiki/Jussi_Jokinen",
+   "revid": 1366744493,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366744493",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Justin Krueger",
+   "title": "Justin Krueger",
+   "url": "https://en.wikipedia.org/wiki/Justin_Krueger",
+   "revid": 1366223471,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366223471",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Juuse Saros",
+   "title": "Juuse Saros",
+   "url": "https://en.wikipedia.org/wiki/Juuse_Saros",
+   "revid": 1367608576,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367608576",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Juuso Hietanen",
+   "title": "Juuso Hietanen",
+   "url": "https://en.wikipedia.org/wiki/Juuso_Hietanen",
+   "revid": 1361787051,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361787051",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jyri Marttinen",
+   "title": "Jyri Marttinen",
+   "url": "https://en.wikipedia.org/wiki/Jyri_Marttinen",
+   "revid": 1332509766,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1332509766",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jyrki Välivaara",
+   "title": "Jyrki Välivaara",
+   "url": "https://en.wikipedia.org/wiki/Jyrki_V%C3%A4livaara",
+   "revid": 1250780008,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1250780008",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ján Brejčák",
+   "title": "Ján Brejčák",
+   "url": "https://en.wikipedia.org/wiki/J%C3%A1n_Brej%C4%8D%C3%A1k",
+   "revid": 1273784490,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1273784490",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ján Laco",
+   "title": "Ján Laco",
+   "url": "https://en.wikipedia.org/wiki/J%C3%A1n_Laco",
+   "revid": 1355155078,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355155078",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ján Lašák",
+   "title": "Ján Lašák",
+   "url": "https://en.wikipedia.org/wiki/J%C3%A1n_La%C5%A1%C3%A1k",
+   "revid": 1374789265,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374789265",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Július Hudáček",
+   "title": "Július Hudáček",
+   "url": "https://en.wikipedia.org/wiki/J%C3%BAlius_Hud%C3%A1%C4%8Dek",
+   "revid": 1372850667,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1372850667",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jānis Andersons",
+   "title": "Jānis Andersons",
+   "url": "https://en.wikipedia.org/wiki/J%C4%81nis_Andersons",
+   "revid": 1334385448,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1334385448",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jānis Jaks",
+   "title": "Jānis Jaks",
+   "url": "https://en.wikipedia.org/wiki/J%C4%81nis_Jaks",
+   "revid": 1364187120,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364187120",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jānis Sprukts",
+   "title": "Jānis Sprukts",
+   "url": "https://en.wikipedia.org/wiki/J%C4%81nis_Sprukts",
+   "revid": 1351712236,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351712236",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Jēkabs Rēdlihs",
+   "title": "Jēkabs Rēdlihs",
+   "url": "https://en.wikipedia.org/wiki/J%C4%93kabs_R%C4%93dlihs",
+   "revid": 1366318488,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366318488",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kai Hospelt",
+   "title": "Kai Hospelt",
+   "url": "https://en.wikipedia.org/wiki/Kai_Hospelt",
+   "revid": 1352510356,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1352510356",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Karel Rachůnek",
+   "title": "Karel Rachůnek",
+   "url": "https://en.wikipedia.org/wiki/Karel_Rach%C5%AFnek",
+   "revid": 1363673069,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1363673069",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kari Lehtonen",
+   "title": "Kari Lehtonen",
+   "url": "https://en.wikipedia.org/wiki/Kari_Lehtonen",
+   "revid": 1367608761,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367608761",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Karol Sloboda",
+   "title": "Karol Sloboda",
+   "url": "https://en.wikipedia.org/wiki/Karol_Sloboda",
+   "revid": 1355154674,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355154674",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Karri Rämö",
+   "title": "Karri Rämö",
+   "url": "https://en.wikipedia.org/wiki/Karri_R%C3%A4m%C3%B6",
+   "revid": 1366744547,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366744547",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kaspars Daugaviņš",
+   "title": "Kaspars Daugaviņš",
+   "url": "https://en.wikipedia.org/wiki/Kaspars_Daugavi%C5%86%C5%A1",
+   "revid": 1364186722,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364186722",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kaspars Saulietis",
+   "title": "Kaspars Saulietis",
+   "url": "https://en.wikipedia.org/wiki/Kaspars_Saulietis",
+   "revid": 1319471972,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1319471972",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kasper Degn",
+   "title": "Kasper Degn",
+   "url": "https://en.wikipedia.org/wiki/Kasper_Degn",
+   "revid": 946761424,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=946761424",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kasper Jensen (ice hockey)",
+   "title": "Kasper Jensen (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Kasper_Jensen_(ice_hockey)",
+   "revid": 1328825617,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1328825617",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ken André Olimb",
+   "title": "Ken André Olimb",
+   "url": "https://en.wikipedia.org/wiki/Ken_Andr%C3%A9_Olimb",
+   "revid": 1337701943,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1337701943",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kevin Fiala",
+   "title": "Kevin Fiala",
+   "url": "https://en.wikipedia.org/wiki/Kevin_Fiala",
+   "revid": 1367608997,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367608997",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kevin Lavallee (ice hockey b. 1981)",
+   "title": "Kevin Lavallée (ice hockey, born 1981)",
+   "url": "https://en.wikipedia.org/wiki/Kevin_Lavall%C3%A9e_(ice_hockey,_born_1981)",
+   "revid": 1178750406,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1178750406",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kevin Lavallée (ice hockey b. 1981)",
+   "title": "Kevin Lavallée (ice hockey, born 1981)",
+   "url": "https://en.wikipedia.org/wiki/Kevin_Lavall%C3%A9e_(ice_hockey,_born_1981)",
+   "revid": 1178750406,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1178750406",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kevin Lotscher",
+   "title": "Kevin Lotscher",
+   "url": "https://en.wikipedia.org/wiki/Kevin_Lotscher",
+   "revid": 1273411724,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1273411724",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kevin Romy",
+   "title": "Kevin Romy",
+   "url": "https://en.wikipedia.org/wiki/Kevin_Romy",
+   "revid": 1351731805,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351731805",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kim Lykkeskov",
+   "title": "Kim Lykkeskov",
+   "url": "https://en.wikipedia.org/wiki/Kim_Lykkeskov",
+   "revid": 1270330848,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1270330848",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kim Staal",
+   "title": "Kim Staal",
+   "url": "https://en.wikipedia.org/wiki/Kim_Staal",
+   "revid": 1351731803,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351731803",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kirill Starkov",
+   "title": "Kirill Starkov",
+   "url": "https://en.wikipedia.org/wiki/Kirill_Starkov",
+   "revid": 1332147238,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1332147238",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Knut Henrik Spets",
+   "title": "Knut Henrik Spets",
+   "url": "https://en.wikipedia.org/wiki/Knut_Henrik_Spets",
+   "revid": 1151459406,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1151459406",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Koba Jass",
+   "title": "Koba Jass",
+   "url": "https://en.wikipedia.org/wiki/Koba_Jass",
+   "revid": 1219174252,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1219174252",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Korbinian Holzer",
+   "title": "Korbinian Holzer",
+   "url": "https://en.wikipedia.org/wiki/Korbinian_Holzer",
+   "revid": 1373696917,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1373696917",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kristaps Sotnieks",
+   "title": "Kristaps Sotnieks",
+   "url": "https://en.wikipedia.org/wiki/Kristaps_Sotnieks",
+   "revid": 1301314831,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1301314831",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kristers Gudļevskis",
+   "title": "Kristers Gudļevskis",
+   "url": "https://en.wikipedia.org/wiki/Kristers_Gud%C4%BCevskis",
+   "revid": 1377261816,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1377261816",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kristian Forsberg",
+   "title": "Kristian Forsberg",
+   "url": "https://en.wikipedia.org/wiki/Kristian_Forsberg",
+   "revid": 1266604753,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1266604753",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Kristián Kudroč",
+   "title": "Kristián Kudroč",
+   "url": "https://en.wikipedia.org/wiki/Kristi%C3%A1n_Kudro%C4%8D",
+   "revid": 1351551483,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351551483",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Krišjānis Rēdlihs",
+   "title": "Krišjānis Rēdlihs",
+   "url": "https://en.wikipedia.org/wiki/Kri%C5%A1j%C4%81nis_R%C4%93dlihs",
+   "revid": 1351718468,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351718468",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ladislav Nagy",
+   "title": "Ladislav Nagy",
+   "url": "https://en.wikipedia.org/wiki/Ladislav_Nagy",
+   "revid": 1340634627,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1340634627",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ladislav Šmíd",
+   "title": "Ladislav Šmíd",
+   "url": "https://en.wikipedia.org/wiki/Ladislav_%C5%A0m%C3%ADd",
+   "revid": 1342464790,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1342464790",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lars Eller",
+   "title": "Lars Eller",
+   "url": "https://en.wikipedia.org/wiki/Lars_Eller",
+   "revid": 1367561618,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367561618",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lars Erik Spets",
+   "title": "Lars Erik Spets",
+   "url": "https://en.wikipedia.org/wiki/Lars_Erik_Spets",
+   "revid": 1338215534,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338215534",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lars Haugen",
+   "title": "Lars Haugen",
+   "url": "https://en.wikipedia.org/wiki/Lars_Haugen",
+   "revid": 1344784602,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1344784602",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lars Løkken Østli",
+   "title": "Lars Løkken Østli",
+   "url": "https://en.wikipedia.org/wiki/Lars_L%C3%B8kken_%C3%98stli",
+   "revid": 1318322259,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1318322259",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lars Volden",
+   "title": "Lars Volden",
+   "url": "https://en.wikipedia.org/wiki/Lars_Volden",
+   "revid": 1349534494,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1349534494",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lasse Kukkonen",
+   "title": "Lasse Kukkonen",
+   "url": "https://en.wikipedia.org/wiki/Lasse_Kukkonen",
+   "revid": 1342464886,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1342464886",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lauri Korpikoski",
+   "title": "Lauri Korpikoski",
+   "url": "https://en.wikipedia.org/wiki/Lauri_Korpikoski",
+   "revid": 1366224516,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366224516",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lauris Dārziņš",
+   "title": "Lauris Dārziņš",
+   "url": "https://en.wikipedia.org/wiki/Lauris_D%C4%81rzi%C5%86%C5%A1",
+   "revid": 1343645375,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1343645375",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Leo Komarov",
+   "title": "Leo Komarov",
+   "url": "https://en.wikipedia.org/wiki/Leo_Komarov",
+   "revid": 1366744785,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366744785",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Leon Draisaitl",
+   "title": "Leon Draisaitl",
+   "url": "https://en.wikipedia.org/wiki/Leon_Draisaitl",
+   "revid": 1375568734,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375568734",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Leonardo Genoni",
+   "title": "Leonardo Genoni",
+   "url": "https://en.wikipedia.org/wiki/Leonardo_Genoni",
+   "revid": 1360750291,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1360750291",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Libor Hudáček",
+   "title": "Libor Hudáček",
+   "url": "https://en.wikipedia.org/wiki/Libor_Hud%C3%A1%C4%8Dek",
+   "revid": 1363979751,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1363979751",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Linus Klasen",
+   "title": "Linus Klasen",
+   "url": "https://en.wikipedia.org/wiki/Linus_Klasen",
+   "revid": 1371605272,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1371605272",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Linus Omark",
+   "title": "Linus Omark",
+   "url": "https://en.wikipedia.org/wiki/Linus_Omark",
+   "revid": 1367609388,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367609388",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Linus Ullmark",
+   "title": "Linus Ullmark",
+   "url": "https://en.wikipedia.org/wiki/Linus_Ullmark",
+   "revid": 1367609395,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367609395",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Loui Eriksson",
+   "title": "Loui Eriksson",
+   "url": "https://en.wikipedia.org/wiki/Loui_Eriksson",
+   "revid": 1375765639,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375765639",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Luca Cunti",
+   "title": "Luca Cunti",
+   "url": "https://en.wikipedia.org/wiki/Luca_Cunti",
+   "revid": 1353836875,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353836875",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Luca Sbisa",
+   "title": "Luca Sbisa",
+   "url": "https://en.wikipedia.org/wiki/Luca_Sbisa",
+   "revid": 1367609833,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367609833",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lukas Flüeler",
+   "title": "Lukas Flüeler",
+   "url": "https://en.wikipedia.org/wiki/Lukas_Fl%C3%BCeler",
+   "revid": 1308761303,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1308761303",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lukáš Kašpar",
+   "title": "Lukáš Kašpar",
+   "url": "https://en.wikipedia.org/wiki/Luk%C3%A1%C5%A1_Ka%C5%A1par",
+   "revid": 1351718461,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351718461",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Lukáš Krajíček",
+   "title": "Lukáš Krajíček",
+   "url": "https://en.wikipedia.org/wiki/Luk%C3%A1%C5%A1_Kraj%C3%AD%C4%8Dek",
+   "revid": 1374581473,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374581473",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mads Bødker",
+   "title": "Mads Bødker",
+   "url": "https://en.wikipedia.org/wiki/Mads_B%C3%B8dker",
+   "revid": 1270999064,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1270999064",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mads Christensen (ice hockey b. 1984)",
+   "title": "Mads Christensen (ice hockey, born 1984)",
+   "url": "https://en.wikipedia.org/wiki/Mads_Christensen_(ice_hockey,_born_1984)",
+   "revid": 1308436096,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1308436096",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mads Christensen (ice hockey b. 1987)",
+   "title": "Mads Christensen (ice hockey, born 1987)",
+   "url": "https://en.wikipedia.org/wiki/Mads_Christensen_(ice_hockey,_born_1987)",
+   "revid": 1270328165,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1270328165",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mads Christensen (ice hockey, born 1987)",
+   "title": "Mads Christensen (ice hockey, born 1987)",
+   "url": "https://en.wikipedia.org/wiki/Mads_Christensen_(ice_hockey,_born_1987)",
+   "revid": 1270328165,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1270328165",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mads Hansen (ice hockey)",
+   "title": "Mads Hansen (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Mads_Hansen_(ice_hockey)",
+   "revid": 1156757682,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1156757682",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Magnus Johansson (ice hockey)",
+   "title": "Magnus Johansson (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Magnus_Johansson_(ice_hockey)",
+   "revid": 1345478501,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1345478501",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Magnus Nygren",
+   "title": "Magnus Nygren",
+   "url": "https://en.wikipedia.org/wiki/Magnus_Nygren",
+   "revid": 1366308492,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366308492",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Magnus Pääjärvi",
+   "title": "Magnus Pääjärvi",
+   "url": "https://en.wikipedia.org/wiki/Magnus_P%C3%A4%C3%A4j%C3%A4rvi",
+   "revid": 1367609923,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367609923",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Magnus Pääjärvi-Svensson",
+   "title": "Magnus Pääjärvi",
+   "url": "https://en.wikipedia.org/wiki/Magnus_P%C3%A4%C3%A4j%C3%A4rvi",
+   "revid": 1367609923,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367609923",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Manuel Latusa",
+   "title": "Manuel Latusa",
+   "url": "https://en.wikipedia.org/wiki/Manuel_Latusa",
+   "revid": 1184689266,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1184689266",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marcel Goc",
+   "title": "Marcel Goc",
+   "url": "https://en.wikipedia.org/wiki/Marcel_Goc",
+   "revid": 1366314867,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366314867",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marcel Haščák",
+   "title": "Marcel Haščák",
+   "url": "https://en.wikipedia.org/wiki/Marcel_Ha%C5%A1%C4%8D%C3%A1k",
+   "revid": 1355154190,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355154190",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marcel Hossa",
+   "title": "Marcel Hossa",
+   "url": "https://en.wikipedia.org/wiki/Marcel_Hossa",
+   "revid": 1366745804,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366745804",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marcel Jenni",
+   "title": "Marcel Jenni",
+   "url": "https://en.wikipedia.org/wiki/Marcel_Jenni",
+   "revid": 1372356573,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1372356573",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marcel Mueller",
+   "title": "Marcel Müller",
+   "url": "https://en.wikipedia.org/wiki/Marcel_M%C3%BCller",
+   "revid": 1351617269,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351617269",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marcel Müller",
+   "title": "Marcel Müller",
+   "url": "https://en.wikipedia.org/wiki/Marcel_M%C3%BCller",
+   "revid": 1351617269,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351617269",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marcel Noebels",
+   "title": "Marcel Noebels",
+   "url": "https://en.wikipedia.org/wiki/Marcel_Noebels",
+   "revid": 1366079883,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366079883",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marco Pewal",
+   "title": "Marco Pewal",
+   "url": "https://en.wikipedia.org/wiki/Marco_Pewal",
+   "revid": 1290169328,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1290169328",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marcus Kink",
+   "title": "Marcus Kink",
+   "url": "https://en.wikipedia.org/wiki/Marcus_Kink",
+   "revid": 1304730643,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1304730643",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marcus Krüger",
+   "title": "Marcus Krüger",
+   "url": "https://en.wikipedia.org/wiki/Marcus_Kr%C3%BCger",
+   "revid": 1366243615,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366243615",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marcus Nilson",
+   "title": "Marcus Nilson",
+   "url": "https://en.wikipedia.org/wiki/Marcus_Nilson",
+   "revid": 1351711854,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351711854",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marek Hovorka (ice hockey)",
+   "title": "Marek Hovorka (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Marek_Hovorka_(ice_hockey)",
+   "revid": 1361234663,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361234663",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marek Hrivík",
+   "title": "Marek Hrivík",
+   "url": "https://en.wikipedia.org/wiki/Marek_Hriv%C3%ADk",
+   "revid": 1366226765,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366226765",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marek Kvapil",
+   "title": "Marek Kvapil",
+   "url": "https://en.wikipedia.org/wiki/Marek_Kvapil",
+   "revid": 1338512375,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338512375",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marek Svatoš",
+   "title": "Marek Svatoš",
+   "url": "https://en.wikipedia.org/wiki/Marek_Svato%C5%A1",
+   "revid": 1376989358,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376989358",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marek Viedensky",
+   "title": "Marek Viedenský",
+   "url": "https://en.wikipedia.org/wiki/Marek_Viedensk%C3%BD",
+   "revid": 1367562121,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367562121",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marek Zagrapan",
+   "title": "Marek Zagrapan",
+   "url": "https://en.wikipedia.org/wiki/Marek_Zagrapan",
+   "revid": 1351551317,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351551317",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marek Ďaloga",
+   "title": "Marek Ďaloga",
+   "url": "https://en.wikipedia.org/wiki/Marek_%C4%8Ealoga",
+   "revid": 1361737084,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361737084",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marek Židlický",
+   "title": "Marek Židlický",
+   "url": "https://en.wikipedia.org/wiki/Marek_%C5%BDidlick%C3%BD",
+   "revid": 1374584981,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374584981",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mario Altmann",
+   "title": "Mario Altmann",
+   "url": "https://en.wikipedia.org/wiki/Mario_Altmann",
+   "revid": 1317563178,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1317563178",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marius Holtet",
+   "title": "Marius Holtet",
+   "url": "https://en.wikipedia.org/wiki/Marius_Holtet",
+   "revid": 1318322221,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1318322221",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marián Gáborík",
+   "title": "Marián Gáborík",
+   "url": "https://en.wikipedia.org/wiki/Mari%C3%A1n_G%C3%A1bor%C3%ADk",
+   "revid": 1367610061,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367610061",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marián Hossa",
+   "title": "Marián Hossa",
+   "url": "https://en.wikipedia.org/wiki/Mari%C3%A1n_Hossa",
+   "revid": 1366745861,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366745861",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mark Streit",
+   "title": "Mark Streit",
+   "url": "https://en.wikipedia.org/wiki/Mark_Streit",
+   "revid": 1366308696,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366308696",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marko Anttila",
+   "title": "Marko Anttila",
+   "url": "https://en.wikipedia.org/wiki/Marko_Anttila",
+   "revid": 1370502858,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1370502858",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Marko Daňo",
+   "title": "Marko Daňo",
+   "url": "https://en.wikipedia.org/wiki/Marko_Da%C5%88o",
+   "revid": 1366745951,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366745951",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Markus Lauridsen",
+   "title": "Markus Lauridsen",
+   "url": "https://en.wikipedia.org/wiki/Markus_Lauridsen",
+   "revid": 1364185135,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364185135",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Markus Peintner",
+   "title": "Markus Peintner",
+   "url": "https://en.wikipedia.org/wiki/Markus_Peintner",
+   "revid": 1273810402,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1273810402",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Bartek",
+   "title": "Martin Bartek",
+   "url": "https://en.wikipedia.org/wiki/Martin_Bartek",
+   "revid": 1355153919,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355153919",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Cibák",
+   "title": "Martin Cibák",
+   "url": "https://en.wikipedia.org/wiki/Martin_Cib%C3%A1k",
+   "revid": 1355154904,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355154904",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Erat",
+   "title": "Martin Erat",
+   "url": "https://en.wikipedia.org/wiki/Martin_Erat",
+   "revid": 1375785148,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375785148",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Gerber",
+   "title": "Martin Gerber",
+   "url": "https://en.wikipedia.org/wiki/Martin_Gerber",
+   "revid": 1366328299,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366328299",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Hanzal",
+   "title": "Martin Hanzal",
+   "url": "https://en.wikipedia.org/wiki/Martin_Hanzal",
+   "revid": 1374580241,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374580241",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Havlát",
+   "title": "Martin Havlát",
+   "url": "https://en.wikipedia.org/wiki/Martin_Havl%C3%A1t",
+   "revid": 1374580294,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374580294",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Laumann Ylven",
+   "title": "Martin Laumann Ylven",
+   "url": "https://en.wikipedia.org/wiki/Martin_Laumann_Ylven",
+   "revid": 1338213730,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338213730",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Marinčin",
+   "title": "Martin Marinčin",
+   "url": "https://en.wikipedia.org/wiki/Martin_Marin%C4%8Din",
+   "revid": 1366083711,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366083711",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Plüss",
+   "title": "Martin Plüss",
+   "url": "https://en.wikipedia.org/wiki/Martin_Pl%C3%BCss",
+   "revid": 1308761352,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1308761352",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Réway",
+   "title": "Martin Réway",
+   "url": "https://en.wikipedia.org/wiki/Martin_R%C3%A9way",
+   "revid": 1366080138,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366080138",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Røymark",
+   "title": "Martin Røymark",
+   "url": "https://en.wikipedia.org/wiki/Martin_R%C3%B8ymark",
+   "revid": 1156758027,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1156758027",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Růžička",
+   "title": "Martin Růžička",
+   "url": "https://en.wikipedia.org/wiki/Martin_R%C5%AF%C5%BEi%C4%8Dka",
+   "revid": 1366227035,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366227035",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Schumig",
+   "title": "Martin Schumnig",
+   "url": "https://en.wikipedia.org/wiki/Martin_Schumnig",
+   "revid": 1239925687,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1239925687",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Schumnig",
+   "title": "Martin Schumnig",
+   "url": "https://en.wikipedia.org/wiki/Martin_Schumnig",
+   "revid": 1239925687,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1239925687",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Thörnberg",
+   "title": "Martin Thörnberg",
+   "url": "https://en.wikipedia.org/wiki/Martin_Th%C3%B6rnberg",
+   "revid": 1280541553,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1280541553",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Zaťovič",
+   "title": "Martin Zaťovič",
+   "url": "https://en.wikipedia.org/wiki/Martin_Za%C5%A5ovi%C4%8D",
+   "revid": 1355154815,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355154815",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Ševc",
+   "title": "Martin Ševc",
+   "url": "https://en.wikipedia.org/wiki/Martin_%C5%A0evc",
+   "revid": 1374583324,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374583324",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Škoula",
+   "title": "Martin Škoula",
+   "url": "https://en.wikipedia.org/wiki/Martin_%C5%A0koula",
+   "revid": 1374583449,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374583449",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Martin Štrbák",
+   "title": "Martin Štrbák",
+   "url": "https://en.wikipedia.org/wiki/Martin_%C5%A0trb%C3%A1k",
+   "revid": 1351718653,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351718653",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mathias Lange",
+   "title": "Mathias Lange",
+   "url": "https://en.wikipedia.org/wiki/Mathias_Lange",
+   "revid": 1296248670,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1296248670",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mathias Seger",
+   "title": "Mathias Seger",
+   "url": "https://en.wikipedia.org/wiki/Mathias_Seger",
+   "revid": 1325894783,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1325894783",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mathis Olimb",
+   "title": "Mathis Olimb",
+   "url": "https://en.wikipedia.org/wiki/Mathis_Olimb",
+   "revid": 1366080233,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366080233",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mats Rosseli Olsen",
+   "title": "Mats Rosseli Olsen",
+   "url": "https://en.wikipedia.org/wiki/Mats_Rosseli_Olsen",
+   "revid": 1335221148,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1335221148",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mats Trygg",
+   "title": "Mats Trygg",
+   "url": "https://en.wikipedia.org/wiki/Mats_Trygg",
+   "revid": 1338686995,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338686995",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mats Zuccarello Aasen",
+   "title": "Mats Zuccarello",
+   "url": "https://en.wikipedia.org/wiki/Mats_Zuccarello",
+   "revid": 1366310905,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366310905",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Matthias Bieber",
+   "title": "Matthias Bieber",
+   "url": "https://en.wikipedia.org/wiki/Matthias_Bieber",
+   "revid": 1252339613,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1252339613",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Matthias Iberer",
+   "title": "Matthias Iberer",
+   "url": "https://en.wikipedia.org/wiki/Matthias_Iberer",
+   "revid": 1338214605,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338214605",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Matthias Plachta",
+   "title": "Matthias Plachta",
+   "url": "https://en.wikipedia.org/wiki/Matthias_Plachta",
+   "revid": 1367562359,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367562359",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Matthias Trattnig",
+   "title": "Matthias Trattnig",
+   "url": "https://en.wikipedia.org/wiki/Matthias_Trattnig",
+   "revid": 1351731822,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351731822",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mattias Ekholm",
+   "title": "Mattias Ekholm",
+   "url": "https://en.wikipedia.org/wiki/Mattias_Ekholm",
+   "revid": 1375573512,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375573512",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mattias Sjögren",
+   "title": "Mattias Sjögren",
+   "url": "https://en.wikipedia.org/wiki/Mattias_Sj%C3%B6gren",
+   "revid": 1285266464,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1285266464",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mattias Tedenby",
+   "title": "Mattias Tedenby",
+   "url": "https://en.wikipedia.org/wiki/Mattias_Tedenby",
+   "revid": 1366326804,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366326804",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mattias Weinhandl",
+   "title": "Mattias Weinhandl",
+   "url": "https://en.wikipedia.org/wiki/Mattias_Weinhandl",
+   "revid": 1366055500,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366055500",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michael Eskesen",
+   "title": "Michael Eskesen",
+   "url": "https://en.wikipedia.org/wiki/Michael_Eskesen",
+   "revid": 1178751093,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1178751093",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michael Frolík",
+   "title": "Michael Frolík",
+   "url": "https://en.wikipedia.org/wiki/Michael_Frol%C3%ADk",
+   "revid": 1376721187,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376721187",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michael Nylander",
+   "title": "Michael Nylander",
+   "url": "https://en.wikipedia.org/wiki/Michael_Nylander",
+   "revid": 1341378796,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341378796",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michael Raffl",
+   "title": "Michael Raffl",
+   "url": "https://en.wikipedia.org/wiki/Michael_Raffl",
+   "revid": 1366227833,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366227833",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michael Schiechl",
+   "title": "Michael Schiechl",
+   "url": "https://en.wikipedia.org/wiki/Michael_Schiechl",
+   "revid": 1374562164,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374562164",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michael Wolf (ice hockey)",
+   "title": "Michael Wolf (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Michael_Wolf_(ice_hockey)",
+   "revid": 1324386873,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1324386873",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michal Barinka",
+   "title": "Michal Barinka",
+   "url": "https://en.wikipedia.org/wiki/Michal_Barinka",
+   "revid": 1362615936,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1362615936",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michal Handzuš",
+   "title": "Michal Handzuš",
+   "url": "https://en.wikipedia.org/wiki/Michal_Handzu%C5%A1",
+   "revid": 1374599260,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374599260",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michal Jordán",
+   "title": "Michal Jordán",
+   "url": "https://en.wikipedia.org/wiki/Michal_Jord%C3%A1n",
+   "revid": 1351712101,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351712101",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michal Macho",
+   "title": "Michal Macho",
+   "url": "https://en.wikipedia.org/wiki/Michal_Macho",
+   "revid": 1353970858,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353970858",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michal Rozsíval",
+   "title": "Michal Rozsíval",
+   "url": "https://en.wikipedia.org/wiki/Michal_Rozs%C3%ADval",
+   "revid": 1374583065,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374583065",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michal Sersen",
+   "title": "Michal Sersen",
+   "url": "https://en.wikipedia.org/wiki/Michal_Sersen",
+   "revid": 1351730952,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730952",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michal Vondrka",
+   "title": "Michal Vondrka",
+   "url": "https://en.wikipedia.org/wiki/Michal_Vondrka",
+   "revid": 1355154796,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355154796",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Michel Miklík",
+   "title": "Michel Miklík",
+   "url": "https://en.wikipedia.org/wiki/Michel_Mikl%C3%ADk",
+   "revid": 1355155115,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355155115",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Miikka Salomäki",
+   "title": "Miikka Salomäki",
+   "url": "https://en.wikipedia.org/wiki/Miikka_Salom%C3%A4ki",
+   "revid": 1366080415,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366080415",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mika Pyörälä",
+   "title": "Mika Pyörälä",
+   "url": "https://en.wikipedia.org/wiki/Mika_Py%C3%B6r%C3%A4l%C3%A4",
+   "revid": 1364844606,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364844606",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mikael Backlund",
+   "title": "Mikael Backlund",
+   "url": "https://en.wikipedia.org/wiki/Mikael_Backlund",
+   "revid": 1366323470,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366323470",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mikael Granlund",
+   "title": "Mikael Granlund",
+   "url": "https://en.wikipedia.org/wiki/Mikael_Granlund",
+   "revid": 1376548372,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376548372",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mikkel Bødker",
+   "title": "Mikkel Bødker",
+   "url": "https://en.wikipedia.org/wiki/Mikkel_B%C3%B8dker",
+   "revid": 1367611275,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367611275",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mikko Koivu",
+   "title": "Mikko Koivu",
+   "url": "https://en.wikipedia.org/wiki/Mikko_Koivu",
+   "revid": 1366228438,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366228438",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mikko Koskinen",
+   "title": "Mikko Koskinen",
+   "url": "https://en.wikipedia.org/wiki/Mikko_Koskinen",
+   "revid": 1366313892,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366313892",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mikko Mäenpää",
+   "title": "Mikko Mäenpää",
+   "url": "https://en.wikipedia.org/wiki/Mikko_M%C3%A4enp%C3%A4%C3%A4",
+   "revid": 1288449145,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1288449145",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Miks Indrašis",
+   "title": "Miks Indrašis",
+   "url": "https://en.wikipedia.org/wiki/Miks_Indra%C5%A1is",
+   "revid": 1366311767,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366311767",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Milan Bartovič",
+   "title": "Milan Bartovič",
+   "url": "https://en.wikipedia.org/wiki/Milan_Bartovi%C4%8D",
+   "revid": 1351711795,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351711795",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Milan Jurčina",
+   "title": "Milan Jurčina",
+   "url": "https://en.wikipedia.org/wiki/Milan_Jur%C4%8Dina",
+   "revid": 1340635295,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1340635295",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Milan Michálek",
+   "title": "Milan Michálek",
+   "url": "https://en.wikipedia.org/wiki/Milan_Mich%C3%A1lek",
+   "revid": 1374581954,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374581954",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Miroslav Blaťák",
+   "title": "Miroslav Blaťák",
+   "url": "https://en.wikipedia.org/wiki/Miroslav_Bla%C5%A5%C3%A1k",
+   "revid": 1352510489,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1352510489",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Miroslav Zálešák",
+   "title": "Miroslav Zálešák",
+   "url": "https://en.wikipedia.org/wiki/Miroslav_Z%C3%A1le%C5%A1%C3%A1k",
+   "revid": 1369603949,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1369603949",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Miroslav Šatan",
+   "title": "Miroslav Šatan",
+   "url": "https://en.wikipedia.org/wiki/Miroslav_%C5%A0atan",
+   "revid": 1372012687,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1372012687",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Miķelis Rēdlihs",
+   "title": "Miķelis Rēdlihs",
+   "url": "https://en.wikipedia.org/wiki/Mi%C4%B7elis_R%C4%93dlihs",
+   "revid": 1237572600,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1237572600",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Moritz Mueller",
+   "title": "Moritz Müller",
+   "url": "https://en.wikipedia.org/wiki/Moritz_M%C3%BCller",
+   "revid": 1364186472,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364186472",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Moritz Müller",
+   "title": "Moritz Müller",
+   "url": "https://en.wikipedia.org/wiki/Moritz_M%C3%BCller",
+   "revid": 1364186472,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364186472",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Morris Trachsler",
+   "title": "Morris Trachsler",
+   "url": "https://en.wikipedia.org/wiki/Morris_Trachsler",
+   "revid": 1259463445,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1259463445",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Morten Ask",
+   "title": "Morten Ask",
+   "url": "https://en.wikipedia.org/wiki/Morten_Ask",
+   "revid": 1302329952,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1302329952",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Morten Green",
+   "title": "Morten Green",
+   "url": "https://en.wikipedia.org/wiki/Morten_Green",
+   "revid": 1296328125,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1296328125",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Morten Madsen",
+   "title": "Morten Madsen",
+   "url": "https://en.wikipedia.org/wiki/Morten_Madsen",
+   "revid": 1351718463,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351718463",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Morten Poulsen",
+   "title": "Morten Poulsen",
+   "url": "https://en.wikipedia.org/wiki/Morten_Poulsen",
+   "revid": 1376999406,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376999406",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mário Bližňák",
+   "title": "Mário Bližňák",
+   "url": "https://en.wikipedia.org/wiki/M%C3%A1rio_Bli%C5%BE%C5%88%C3%A1k",
+   "revid": 1366085282,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366085282",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Māris Jass",
+   "title": "Māris Jass",
+   "url": "https://en.wikipedia.org/wiki/M%C4%81ris_Jass",
+   "revid": 1227533382,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1227533382",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Māris Jučers",
+   "title": "Māris Jučers",
+   "url": "https://en.wikipedia.org/wiki/M%C4%81ris_Ju%C4%8Ders",
+   "revid": 1341342689,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341342689",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mārtiņš Cipulis",
+   "title": "Mārtiņš Cipulis",
+   "url": "https://en.wikipedia.org/wiki/M%C4%81rti%C5%86%C5%A1_Cipulis",
+   "revid": 1225305422,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1225305422",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mārtiņš Karsums",
+   "title": "Mārtiņš Karsums",
+   "url": "https://en.wikipedia.org/wiki/M%C4%81rti%C5%86%C5%A1_Karsums",
+   "revid": 1366227053,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366227053",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Mārtiņš Raitums",
+   "title": "Mārtiņš Raitums",
+   "url": "https://en.wikipedia.org/wiki/M%C4%81rti%C5%86%C5%A1_Raitums",
+   "revid": 1278380934,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1278380934",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Nichlas Hardt",
+   "title": "Nichlas Hardt",
+   "url": "https://en.wikipedia.org/wiki/Nichlas_Hardt",
+   "revid": 1329758058,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1329758058",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Nicklas Bäckström",
+   "title": "Nicklas Bäckström",
+   "url": "https://en.wikipedia.org/wiki/Nicklas_B%C3%A4ckstr%C3%B6m",
+   "revid": 1366310382,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366310382",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Nicklas Danielsson",
+   "title": "Nicklas Danielsson",
+   "url": "https://en.wikipedia.org/wiki/Nicklas_Danielsson",
+   "revid": 1351550501,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351550501",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Nicklas Grossmann",
+   "title": "Nicklas Grossmann",
+   "url": "https://en.wikipedia.org/wiki/Nicklas_Grossmann",
+   "revid": 1366312525,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366312525",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Nicklas Jensen",
+   "title": "Nicklas Jensen",
+   "url": "https://en.wikipedia.org/wiki/Nicklas_Jensen",
+   "revid": 1377260556,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1377260556",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Niclas Andersén",
+   "title": "Niclas Andersén",
+   "url": "https://en.wikipedia.org/wiki/Niclas_Anders%C3%A9n",
+   "revid": 1367563094,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367563094",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Niclas Burström",
+   "title": "Niclas Burström",
+   "url": "https://en.wikipedia.org/wiki/Niclas_Burstr%C3%B6m",
+   "revid": 1351984726,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351984726",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Nicolai Bryhnisveen",
+   "title": "Nicolai Bryhnisveen",
+   "url": "https://en.wikipedia.org/wiki/Nicolai_Bryhnisveen",
+   "revid": 1270733422,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1270733422",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Niklas Hagman",
+   "title": "Niklas Hagman",
+   "url": "https://en.wikipedia.org/wiki/Niklas_Hagman",
+   "revid": 1375452468,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375452468",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Niklas Hjalmarsson",
+   "title": "Niklas Hjalmarsson",
+   "url": "https://en.wikipedia.org/wiki/Niklas_Hjalmarsson",
+   "revid": 1366080927,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366080927",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Niklas Kronwall",
+   "title": "Niklas Kronwall",
+   "url": "https://en.wikipedia.org/wiki/Niklas_Kronwall",
+   "revid": 1366746708,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366746708",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Niklas Persson",
+   "title": "Niklas Persson",
+   "url": "https://en.wikipedia.org/wiki/Niklas_Persson",
+   "revid": 1252473874,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1252473874",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Niklas Roest",
+   "title": "Niklas Roest",
+   "url": "https://en.wikipedia.org/wiki/Niklas_Roest",
+   "revid": 1156758019,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1156758019",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Niko Hovinen",
+   "title": "Niko Hovinen",
+   "url": "https://en.wikipedia.org/wiki/Niko_Hovinen",
+   "revid": 1366080971,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366080971",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Niko Kapanen",
+   "title": "Niko Kapanen",
+   "url": "https://en.wikipedia.org/wiki/Niko_Kapanen",
+   "revid": 1366304470,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366304470",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Nikolai Goc",
+   "title": "Nikolai Goc",
+   "url": "https://en.wikipedia.org/wiki/Nikolai_Goc",
+   "revid": 1333493839,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1333493839",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Nino Niederreiter",
+   "title": "Nino Niederreiter",
+   "url": "https://en.wikipedia.org/wiki/Nino_Niederreiter",
+   "revid": 1366746719,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366746719",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ole-Kristian Tollefsen",
+   "title": "Ole-Kristian Tollefsen",
+   "url": "https://en.wikipedia.org/wiki/Ole-Kristian_Tollefsen",
+   "revid": 1366230184,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366230184",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Oliver Ekman-Larsson",
+   "title": "Oliver Ekman-Larsson",
+   "url": "https://en.wikipedia.org/wiki/Oliver_Ekman-Larsson",
+   "revid": 1366230195,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366230195",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Oliver Lauridsen",
+   "title": "Oliver Lauridsen",
+   "url": "https://en.wikipedia.org/wiki/Oliver_Lauridsen",
+   "revid": 1367563165,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367563165",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Oliver Setzinger",
+   "title": "Oliver Setzinger",
+   "url": "https://en.wikipedia.org/wiki/Oliver_Setzinger",
+   "revid": 1351731550,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351731550",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Olli Jokinen",
+   "title": "Olli Jokinen",
+   "url": "https://en.wikipedia.org/wiki/Olli_Jokinen",
+   "revid": 1376059494,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376059494",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Olli Palola",
+   "title": "Olli Palola",
+   "url": "https://en.wikipedia.org/wiki/Olli_Palola",
+   "revid": 1338512534,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338512534",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ondřej Němec",
+   "title": "Ondřej Němec",
+   "url": "https://en.wikipedia.org/wiki/Ond%C5%99ej_N%C4%9Bmec",
+   "revid": 1355154502,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355154502",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ondřej Pavelec",
+   "title": "Ondřej Pavelec",
+   "url": "https://en.wikipedia.org/wiki/Ond%C5%99ej_Pavelec",
+   "revid": 1374582404,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374582404",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ondřej Vitásek",
+   "title": "Ondřej Vitásek",
+   "url": "https://en.wikipedia.org/wiki/Ond%C5%99ej_Vit%C3%A1sek",
+   "revid": 1374584422,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374584422",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Oscar Lindberg (ice hockey)",
+   "title": "Oscar Lindberg (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Oscar_Lindberg_(ice_hockey)",
+   "revid": 1366320752,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366320752",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Oscar Möller",
+   "title": "Oscar Möller",
+   "url": "https://en.wikipedia.org/wiki/Oscar_M%C3%B6ller",
+   "revid": 1351712239,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351712239",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Oskar Osala",
+   "title": "Oskar Osala",
+   "url": "https://en.wikipedia.org/wiki/Oskar_Osala",
+   "revid": 1366306533,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366306533",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Oskars Bārtulis",
+   "title": "Oskars Bārtulis",
+   "url": "https://en.wikipedia.org/wiki/Oskars_B%C4%81rtulis",
+   "revid": 1366327927,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366327927",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Oskars Cibuļskis",
+   "title": "Oskars Cibuļskis",
+   "url": "https://en.wikipedia.org/wiki/Oskars_Cibu%C4%BCskis",
+   "revid": 1364186875,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364186875",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ossi Väänänen",
+   "title": "Ossi Väänänen",
+   "url": "https://en.wikipedia.org/wiki/Ossi_V%C3%A4%C3%A4n%C3%A4nen",
+   "revid": 1341638559,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341638559",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Paolo Duca",
+   "title": "Paolo Duca",
+   "url": "https://en.wikipedia.org/wiki/Paolo_Duca",
+   "revid": 1274941923,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1274941923",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Pasi Puistola",
+   "title": "Pasi Puistola",
+   "url": "https://en.wikipedia.org/wiki/Pasi_Puistola",
+   "revid": 1318092920,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1318092920",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patric Hörnqvist",
+   "title": "Patric Hörnqvist",
+   "url": "https://en.wikipedia.org/wiki/Patric_H%C3%B6rnqvist",
+   "revid": 1367612307,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367612307",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patrick Bjorkstrand",
+   "title": "Patrick Bjorkstrand",
+   "url": "https://en.wikipedia.org/wiki/Patrick_Bjorkstrand",
+   "revid": 1341005975,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341005975",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patrick Galbraith (ice hockey)",
+   "title": "Patrick Galbraith (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Patrick_Galbraith_(ice_hockey)",
+   "revid": 1341004786,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341004786",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patrick Geering",
+   "title": "Patrick Geering",
+   "url": "https://en.wikipedia.org/wiki/Patrick_Geering",
+   "revid": 1306263788,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1306263788",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patrick Hager",
+   "title": "Patrick Hager",
+   "url": "https://en.wikipedia.org/wiki/Patrick_Hager",
+   "revid": 1365202056,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1365202056",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patrick Harand",
+   "title": "Patrick Harand",
+   "url": "https://en.wikipedia.org/wiki/Patrick_Harand",
+   "revid": 1271144674,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1271144674",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patrick Reimer",
+   "title": "Patrick Reimer",
+   "url": "https://en.wikipedia.org/wiki/Patrick_Reimer",
+   "revid": 1296116468,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1296116468",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patrick Thoresen",
+   "title": "Patrick Thoresen",
+   "url": "https://en.wikipedia.org/wiki/Patrick_Thoresen",
+   "revid": 1362313085,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1362313085",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patrick von Gunten",
+   "title": "Patrick von Gunten",
+   "url": "https://en.wikipedia.org/wiki/Patrick_von_Gunten",
+   "revid": 1306437294,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1306437294",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patrik Berglund",
+   "title": "Patrik Berglund",
+   "url": "https://en.wikipedia.org/wiki/Patrik_Berglund",
+   "revid": 1366230658,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366230658",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Patrik Eliáš",
+   "title": "Patrik Eliáš",
+   "url": "https://en.wikipedia.org/wiki/Patrik_Eli%C3%A1%C5%A1",
+   "revid": 1374579923,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374579923",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Paul Savary",
+   "title": "Paul Savary",
+   "url": "https://en.wikipedia.org/wiki/Paul_Savary",
+   "revid": 1308767700,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1308767700",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Pavel Francouz",
+   "title": "Pavel Francouz",
+   "url": "https://en.wikipedia.org/wiki/Pavel_Francouz",
+   "revid": 1366319654,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366319654",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Pavol Demitra",
+   "title": "Pavol Demitra",
+   "url": "https://en.wikipedia.org/wiki/Pavol_Demitra",
+   "revid": 1367563370,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367563370",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Pekka Jormakka",
+   "title": "Pekka Jormakka",
+   "url": "https://en.wikipedia.org/wiki/Pekka_Jormakka",
+   "revid": 1364625835,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364625835",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Pekka Rinne",
+   "title": "Pekka Rinne",
+   "url": "https://en.wikipedia.org/wiki/Pekka_Rinne",
+   "revid": 1367612451,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367612451",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Per-Åge Skrøder",
+   "title": "Per-Åge Skrøder",
+   "url": "https://en.wikipedia.org/wiki/Per-%C3%85ge_Skr%C3%B8der",
+   "revid": 1338215277,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338215277",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Peter Budaj",
+   "title": "Peter Budaj",
+   "url": "https://en.wikipedia.org/wiki/Peter_Budaj",
+   "revid": 1376989383,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376989383",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Peter Frühauf",
+   "title": "Peter Frühauf",
+   "url": "https://en.wikipedia.org/wiki/Peter_Fr%C3%BChauf",
+   "revid": 1345399050,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1345399050",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Peter Hamerlík",
+   "title": "Peter Hamerlík",
+   "url": "https://en.wikipedia.org/wiki/Peter_Hamerl%C3%ADk",
+   "revid": 1356812226,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1356812226",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Peter Hirsch (ice hockey)",
+   "title": "Peter Hirsch (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Peter_Hirsch_(ice_hockey)",
+   "revid": 1327022768,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1327022768",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Peter Lorentzen",
+   "title": "Peter Lorentzen",
+   "url": "https://en.wikipedia.org/wiki/Peter_Lorentzen",
+   "revid": 1274803439,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1274803439",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Peter Podhradský",
+   "title": "Peter Podhradský",
+   "url": "https://en.wikipedia.org/wiki/Peter_Podhradsk%C3%BD",
+   "revid": 1353834938,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353834938",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Peter Regin",
+   "title": "Peter Regin",
+   "url": "https://en.wikipedia.org/wiki/Peter_Regin",
+   "revid": 1366244714,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366244714",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Peter Ölvecký",
+   "title": "Peter Ölvecký",
+   "url": "https://en.wikipedia.org/wiki/Peter_%C3%96lveck%C3%BD",
+   "revid": 1351731243,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351731243",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Peter Čerešňák",
+   "title": "Peter Čerešňák",
+   "url": "https://en.wikipedia.org/wiki/Peter_%C4%8Cere%C5%A1%C5%88%C3%A1k",
+   "revid": 1366324132,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366324132",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Gřegořek",
+   "title": "Petr Gřegořek",
+   "url": "https://en.wikipedia.org/wiki/Petr_G%C5%99ego%C5%99ek",
+   "revid": 1355154134,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355154134",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Hubáček",
+   "title": "Petr Hubáček",
+   "url": "https://en.wikipedia.org/wiki/Petr_Hub%C3%A1%C4%8Dek",
+   "revid": 1352510423,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1352510423",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Koukal (ice hockey)",
+   "title": "Petr Koukal (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Petr_Koukal_(ice_hockey)",
+   "revid": 1345399231,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1345399231",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Mrázek",
+   "title": "Petr Mrázek",
+   "url": "https://en.wikipedia.org/wiki/Petr_Mr%C3%A1zek",
+   "revid": 1376430344,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376430344",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Nedvěd",
+   "title": "Petr Nedvěd",
+   "url": "https://en.wikipedia.org/wiki/Petr_Nedv%C4%9Bd",
+   "revid": 1367682619,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367682619",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Průcha",
+   "title": "Petr Průcha",
+   "url": "https://en.wikipedia.org/wiki/Petr_Pr%C5%AFcha",
+   "revid": 1351711909,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351711909",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Tenkrát",
+   "title": "Petr Tenkrát",
+   "url": "https://en.wikipedia.org/wiki/Petr_Tenkr%C3%A1t",
+   "revid": 1269418506,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1269418506",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Vampola",
+   "title": "Petr Vampola",
+   "url": "https://en.wikipedia.org/wiki/Petr_Vampola",
+   "revid": 1330085773,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1330085773",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Vrána",
+   "title": "Petr Vrána",
+   "url": "https://en.wikipedia.org/wiki/Petr_Vr%C3%A1na",
+   "revid": 1374584601,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374584601",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Zámorský",
+   "title": "Petr Zámorský",
+   "url": "https://en.wikipedia.org/wiki/Petr_Z%C3%A1morsk%C3%BD",
+   "revid": 1366081394,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366081394",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petr Čáslava",
+   "title": "Petr Čáslava",
+   "url": "https://en.wikipedia.org/wiki/Petr_%C4%8C%C3%A1slava",
+   "revid": 1351586484,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351586484",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petri Kontiola",
+   "title": "Petri Kontiola",
+   "url": "https://en.wikipedia.org/wiki/Petri_Kontiola",
+   "revid": 1366231055,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366231055",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petri Vehanen",
+   "title": "Petri Vehanen",
+   "url": "https://en.wikipedia.org/wiki/Petri_Vehanen",
+   "revid": 1217589381,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1217589381",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petter Granberg",
+   "title": "Petter Granberg",
+   "url": "https://en.wikipedia.org/wiki/Petter_Granberg",
+   "revid": 1366231087,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366231087",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petteri Nokelainen",
+   "title": "Petteri Nokelainen",
+   "url": "https://en.wikipedia.org/wiki/Petteri_Nokelainen",
+   "revid": 1366231093,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366231093",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petteri Nummelin",
+   "title": "Petteri Nummelin",
+   "url": "https://en.wikipedia.org/wiki/Petteri_Nummelin",
+   "revid": 1354302095,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1354302095",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Petteri Wirtanen",
+   "title": "Petteri Wirtanen",
+   "url": "https://en.wikipedia.org/wiki/Petteri_Wirtanen",
+   "revid": 1366231105,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366231105",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Philip Gogulla",
+   "title": "Philip Gogulla",
+   "url": "https://en.wikipedia.org/wiki/Philip_Gogulla",
+   "revid": 1366317354,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366317354",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Philip Hersby",
+   "title": "Philip Hersby",
+   "url": "https://en.wikipedia.org/wiki/Philip_Hersby",
+   "revid": 1328826745,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1328826745",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Philip Larsen",
+   "title": "Philip Larsen",
+   "url": "https://en.wikipedia.org/wiki/Philip_Larsen",
+   "revid": 1366747035,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366747035",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Philipp Grubauer",
+   "title": "Philipp Grubauer",
+   "url": "https://en.wikipedia.org/wiki/Philipp_Grubauer",
+   "revid": 1375291031,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375291031",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Philipp Lukas",
+   "title": "Philipp Lukas",
+   "url": "https://en.wikipedia.org/wiki/Philipp_Lukas",
+   "revid": 1360964689,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1360964689",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Philippe Furrer",
+   "title": "Philippe Furrer",
+   "url": "https://en.wikipedia.org/wiki/Philippe_Furrer",
+   "revid": 1351550740,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351550740",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Philippe Lakos",
+   "title": "Philippe Lakos",
+   "url": "https://en.wikipedia.org/wiki/Philippe_Lakos",
+   "revid": 1356812289,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1356812289",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Phillip Bruggisser",
+   "title": "Phillip Bruggisser",
+   "url": "https://en.wikipedia.org/wiki/Phillip_Bruggisser",
+   "revid": 1364185664,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364185664",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Pål Grotnes",
+   "title": "Pål Grotnes",
+   "url": "https://en.wikipedia.org/wiki/P%C3%A5l_Grotnes",
+   "revid": 1332809507,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1332809507",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Radek Martínek",
+   "title": "Radek Martínek",
+   "url": "https://en.wikipedia.org/wiki/Radek_Mart%C3%ADnek",
+   "revid": 1366325277,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366325277",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Radim Vrbata",
+   "title": "Radim Vrbata",
+   "url": "https://en.wikipedia.org/wiki/Radim_Vrbata",
+   "revid": 1374584656,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374584656",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Radoslav Tybor",
+   "title": "Radoslav Tybor",
+   "url": "https://en.wikipedia.org/wiki/Radoslav_Tybor",
+   "revid": 1265504993,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1265504993",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Rafael Rotter",
+   "title": "Rafael Rotter",
+   "url": "https://en.wikipedia.org/wiki/Rafael_Rotter",
+   "revid": 1135299775,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1135299775",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ralfs Freibergs",
+   "title": "Ralfs Freibergs",
+   "url": "https://en.wikipedia.org/wiki/Ralfs_Freibergs",
+   "revid": 1364186936,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364186936",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Raphael Diaz",
+   "title": "Raphael Diaz",
+   "url": "https://en.wikipedia.org/wiki/Raphael_Diaz",
+   "revid": 1374860726,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374860726",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Raphael Herburger",
+   "title": "Raphael Herburger",
+   "url": "https://en.wikipedia.org/wiki/Raphael_Herburger",
+   "revid": 1363705578,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1363705578",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Rasmus Nielsen (ice hockey)",
+   "title": "Rasmus Nielsen (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Rasmus_Nielsen_(ice_hockey)",
+   "revid": 1301320121,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1301320121",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Rastislav Staňa",
+   "title": "Rastislav Staňa",
+   "url": "https://en.wikipedia.org/wiki/Rastislav_Sta%C5%88a",
+   "revid": 1351718456,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351718456",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Rene Swette",
+   "title": "René Swette",
+   "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Swette",
+   "revid": 1362898700,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1362898700",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "René Vydarený",
+   "title": "René Vydarený",
+   "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Vydaren%C3%BD",
+   "revid": 1366232069,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366232069",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Reto Berra",
+   "title": "Reto Berra",
+   "url": "https://en.wikipedia.org/wiki/Reto_Berra",
+   "revid": 1377255417,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1377255417",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Reto Schäppi",
+   "title": "Reto Schäppi",
+   "url": "https://en.wikipedia.org/wiki/Reto_Sch%C3%A4ppi",
+   "revid": 1319363211,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1319363211",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Reto Suri",
+   "title": "Reto Suri",
+   "url": "https://en.wikipedia.org/wiki/Reto_Suri",
+   "revid": 1366081690,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366081690",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Richard Lintner",
+   "title": "Richard Lintner",
+   "url": "https://en.wikipedia.org/wiki/Richard_Lintner",
+   "revid": 1376238912,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376238912",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Richard Pánik",
+   "title": "Richard Pánik",
+   "url": "https://en.wikipedia.org/wiki/Richard_P%C3%A1nik",
+   "revid": 1376196430,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376196430",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Richard Zedník",
+   "title": "Richard Zedník",
+   "url": "https://en.wikipedia.org/wiki/Richard_Zedn%C3%ADk",
+   "revid": 1375336841,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375336841",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Rickard Wallin",
+   "title": "Rickard Wallin",
+   "url": "https://en.wikipedia.org/wiki/Rickard_Wallin",
+   "revid": 1366081772,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366081772",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Riku Hahl",
+   "title": "Riku Hahl",
+   "url": "https://en.wikipedia.org/wiki/Riku_Hahl",
+   "revid": 1351730957,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730957",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Rob Zepp",
+   "title": "Rob Zepp",
+   "url": "https://en.wikipedia.org/wiki/Rob_Zepp",
+   "revid": 1366308708,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366308708",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Robert Dietrich",
+   "title": "Robert Dietrich",
+   "url": "https://en.wikipedia.org/wiki/Robert_Dietrich",
+   "revid": 1375321937,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375321937",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Robert Dietrich (ice hockey)",
+   "title": "Robert Dietrich",
+   "url": "https://en.wikipedia.org/wiki/Robert_Dietrich",
+   "revid": 1375321937,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1375321937",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Robert Hestmann",
+   "title": "Robert Hestmann",
+   "url": "https://en.wikipedia.org/wiki/Robert_Hestmann",
+   "revid": 1226796389,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1226796389",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Robert Lukas (ice hockey)",
+   "title": "Robert Lukas (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Robert_Lukas_(ice_hockey)",
+   "revid": 1253713765,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1253713765",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Robert Mayer (ice hockey)",
+   "title": "Robert Mayer (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Robert_Mayer_(ice_hockey)",
+   "revid": 1367612962,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367612962",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Robert Nilsson",
+   "title": "Robert Nilsson",
+   "url": "https://en.wikipedia.org/wiki/Robert_Nilsson",
+   "revid": 1351710556,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351710556",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Roberts Bukarts",
+   "title": "Roberts Bukarts",
+   "url": "https://en.wikipedia.org/wiki/Roberts_Bukarts",
+   "revid": 1364187077,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364187077",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Roberts Jekimovs",
+   "title": "Roberts Jekimovs",
+   "url": "https://en.wikipedia.org/wiki/Roberts_Jekimovs",
+   "revid": 1340692156,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1340692156",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Roberts Lipsbergs",
+   "title": "Roberts Lipsbergs",
+   "url": "https://en.wikipedia.org/wiki/Roberts_Lipsbergs",
+   "revid": 1318326302,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1318326302",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Robin Dahlstrøm",
+   "title": "Robin Dahlstrøm",
+   "url": "https://en.wikipedia.org/wiki/Robin_Dahlstr%C3%B8m",
+   "revid": 1366747272,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366747272",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Robin Grossmann",
+   "title": "Robin Grossmann",
+   "url": "https://en.wikipedia.org/wiki/Robin_Grossmann",
+   "revid": 1336166370,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1336166370",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Rodrigo Laviņš",
+   "title": "Rodrigo Laviņš",
+   "url": "https://en.wikipedia.org/wiki/Rodrigo_Lavi%C5%86%C5%A1",
+   "revid": 1369015627,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1369015627",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Roland Kaspitz",
+   "title": "Roland Kaspitz",
+   "url": "https://en.wikipedia.org/wiki/Roland_Kaspitz",
+   "revid": 1328816173,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1328816173",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Roman Josi",
+   "title": "Roman Josi",
+   "url": "https://en.wikipedia.org/wiki/Roman_Josi",
+   "revid": 1367613073,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367613073",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Roman Kukumberg",
+   "title": "Roman Kukumberg",
+   "url": "https://en.wikipedia.org/wiki/Roman_Kukumberg",
+   "revid": 1353834822,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353834822",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Roman Polák",
+   "title": "Roman Polák",
+   "url": "https://en.wikipedia.org/wiki/Roman_Pol%C3%A1k",
+   "revid": 1366232526,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366232526",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Roman Wick",
+   "title": "Roman Wick",
+   "url": "https://en.wikipedia.org/wiki/Roman_Wick",
+   "revid": 1351730931,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730931",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Roman Červenka",
+   "title": "Roman Červenka",
+   "url": "https://en.wikipedia.org/wiki/Roman_%C4%8Cervenka",
+   "revid": 1377249528,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1377249528",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Romano Lemm",
+   "title": "Romano Lemm",
+   "url": "https://en.wikipedia.org/wiki/Romano_Lemm",
+   "revid": 1308761321,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1308761321",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ronalds Ķēniņš",
+   "title": "Ronalds Ķēniņš",
+   "url": "https://en.wikipedia.org/wiki/Ronalds_%C4%B6%C4%93ni%C5%86%C5%A1",
+   "revid": 1367613087,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367613087",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ruben Smith",
+   "title": "Ruben Smith",
+   "url": "https://en.wikipedia.org/wiki/Ruben_Smith",
+   "revid": 1342297632,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1342297632",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ryan Gardner",
+   "title": "Ryan Gardner",
+   "url": "https://en.wikipedia.org/wiki/Ryan_Gardner",
+   "revid": 1343507013,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1343507013",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sakari Salminen",
+   "title": "Sakari Salminen",
+   "url": "https://en.wikipedia.org/wiki/Sakari_Salminen",
+   "revid": 1341639338,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341639338",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sami Kapanen",
+   "title": "Sami Kapanen",
+   "url": "https://en.wikipedia.org/wiki/Sami_Kapanen",
+   "revid": 1374769483,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374769483",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sami Lepistö",
+   "title": "Sami Lepistö",
+   "url": "https://en.wikipedia.org/wiki/Sami_Lepist%C3%B6",
+   "revid": 1342464884,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1342464884",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sami Vatanen",
+   "title": "Sami Vatanen",
+   "url": "https://en.wikipedia.org/wiki/Sami_Vatanen",
+   "revid": 1366747497,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366747497",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sanny Lindström",
+   "title": "Sanny Lindström",
+   "url": "https://en.wikipedia.org/wiki/Sanny_Lindstr%C3%B6m",
+   "revid": 1353831777,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353831777",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sebastian Dahm",
+   "title": "Sebastian Dahm",
+   "url": "https://en.wikipedia.org/wiki/Sebastian_Dahm",
+   "revid": 1341008886,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1341008886",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sebastian Furchner",
+   "title": "Sebastian Furchner",
+   "url": "https://en.wikipedia.org/wiki/Sebastian_Furchner",
+   "revid": 1271926917,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1271926917",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sergejs Pečura",
+   "title": "Sergejs Pečura",
+   "url": "https://en.wikipedia.org/wiki/Sergejs_Pe%C4%8Dura",
+   "revid": 1328819432,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1328819432",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Severin Blindenbacher",
+   "title": "Severin Blindenbacher",
+   "url": "https://en.wikipedia.org/wiki/Severin_Blindenbacher",
+   "revid": 1366082424,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366082424",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Simon Bodenmann",
+   "title": "Simon Bodenmann",
+   "url": "https://en.wikipedia.org/wiki/Simon_Bodenmann",
+   "revid": 1336166524,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1336166524",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Simon Hjalmarsson",
+   "title": "Simon Hjalmarsson",
+   "url": "https://en.wikipedia.org/wiki/Simon_Hjalmarsson",
+   "revid": 1366327031,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366327031",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Simon Moser",
+   "title": "Simon Moser",
+   "url": "https://en.wikipedia.org/wiki/Simon_Moser",
+   "revid": 1366323654,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366323654",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Simon Nielsen (ice hockey)",
+   "title": "Simon Nielsen (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Simon_Nielsen_(ice_hockey)",
+   "revid": 1270328401,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1270328401",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sinan Akdag",
+   "title": "Sinan Akdag",
+   "url": "https://en.wikipedia.org/wiki/Sinan_Akdag",
+   "revid": 1313609130,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1313609130",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sondre Olden",
+   "title": "Sondre Olden",
+   "url": "https://en.wikipedia.org/wiki/Sondre_Olden",
+   "revid": 1364804066,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1364804066",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Staffan Kronwall",
+   "title": "Staffan Kronwall",
+   "url": "https://en.wikipedia.org/wiki/Staffan_Kronwall",
+   "revid": 1351719095,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351719095",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Stanislav Gron",
+   "title": "Stanislav Gron",
+   "url": "https://en.wikipedia.org/wiki/Stanislav_Gron",
+   "revid": 1353834656,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353834656",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Stefan Espeland",
+   "title": "Stefan Espeland",
+   "url": "https://en.wikipedia.org/wiki/Stefan_Espeland",
+   "revid": 1301321288,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1301321288",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Stefan Lassen",
+   "title": "Stefan Lassen",
+   "url": "https://en.wikipedia.org/wiki/Stefan_Lassen",
+   "revid": 1268972076,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1268972076",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Steffen Søberg",
+   "title": "Steffen Søberg",
+   "url": "https://en.wikipedia.org/wiki/Steffen_S%C3%B8berg",
+   "revid": 1351550446,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351550446",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Steffen Thoresen",
+   "title": "Steffen Thoresen",
+   "url": "https://en.wikipedia.org/wiki/Steffen_Thoresen",
+   "revid": 1338213794,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338213794",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Steve Hirschi",
+   "title": "Steve Hirschi",
+   "url": "https://en.wikipedia.org/wiki/Steve_Hirschi",
+   "revid": 1301317204,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1301317204",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sven Butenschön",
+   "title": "Sven Butenschön",
+   "url": "https://en.wikipedia.org/wiki/Sven_Butensch%C3%B6n",
+   "revid": 1360102272,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1360102272",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sven Bärtschi",
+   "title": "Sven Bärtschi",
+   "url": "https://en.wikipedia.org/wiki/Sven_B%C3%A4rtschi",
+   "revid": 1366234510,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366234510",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sven Felski",
+   "title": "Sven Felski",
+   "url": "https://en.wikipedia.org/wiki/Sven_Felski",
+   "revid": 1338215561,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338215561",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Sven Klimbacher",
+   "title": "Sven Klimbacher",
+   "url": "https://en.wikipedia.org/wiki/Sven_Klimbacher",
+   "revid": 1274587844,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1274587844",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Teemu Laakso",
+   "title": "Teemu Laakso",
+   "url": "https://en.wikipedia.org/wiki/Teemu_Laakso",
+   "revid": 1353831769,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353831769",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Teemu Lassila",
+   "title": "Teemu Lassila",
+   "url": "https://en.wikipedia.org/wiki/Teemu_Lassila",
+   "revid": 1353839645,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353839645",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thibaut Monnet",
+   "title": "Thibaut Monnet",
+   "url": "https://en.wikipedia.org/wiki/Thibaut_Monnet",
+   "revid": 1328870983,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1328870983",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thomas Déruns",
+   "title": "Thomas Déruns",
+   "url": "https://en.wikipedia.org/wiki/Thomas_D%C3%A9runs",
+   "revid": 1238749091,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1238749091",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thomas Greilinger",
+   "title": "Thomas Greilinger",
+   "url": "https://en.wikipedia.org/wiki/Thomas_Greilinger",
+   "revid": 1261858580,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1261858580",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thomas Hundertpfund",
+   "title": "Thomas Hundertpfund",
+   "url": "https://en.wikipedia.org/wiki/Thomas_Hundertpfund",
+   "revid": 1363704683,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1363704683",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thomas Koch (ice hockey)",
+   "title": "Thomas Koch (ice hockey)",
+   "url": "https://en.wikipedia.org/wiki/Thomas_Koch_(ice_hockey)",
+   "revid": 1159740720,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1159740720",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thomas Oppenheimer",
+   "title": "Thomas Oppenheimer",
+   "url": "https://en.wikipedia.org/wiki/Thomas_Oppenheimer",
+   "revid": 1309128524,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1309128524",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thomas Pöck",
+   "title": "Thomas Pöck",
+   "url": "https://en.wikipedia.org/wiki/Thomas_P%C3%B6ck",
+   "revid": 1367671462,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367671462",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thomas Raffl",
+   "title": "Thomas Raffl",
+   "url": "https://en.wikipedia.org/wiki/Thomas_Raffl",
+   "revid": 1366748098,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366748098",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thomas Rüfenacht",
+   "title": "Thomas Rüfenacht",
+   "url": "https://en.wikipedia.org/wiki/Thomas_R%C3%BCfenacht",
+   "revid": 1253121764,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1253121764",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thomas Spelling",
+   "title": "Thomas Spelling",
+   "url": "https://en.wikipedia.org/wiki/Thomas_Spelling",
+   "revid": 1363003999,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1363003999",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thomas Vanek",
+   "title": "Thomas Vanek",
+   "url": "https://en.wikipedia.org/wiki/Thomas_Vanek",
+   "revid": 1372730922,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1372730922",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Thor Dresler",
+   "title": "Thor Dresler",
+   "url": "https://en.wikipedia.org/wiki/Thor_Dresler",
+   "revid": 1328826733,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1328826733",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tim Erixon",
+   "title": "Tim Erixon",
+   "url": "https://en.wikipedia.org/wiki/Tim_Erixon",
+   "revid": 1367614257,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367614257",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tim Ramholt",
+   "title": "Tim Ramholt",
+   "url": "https://en.wikipedia.org/wiki/Tim_Ramholt",
+   "revid": 1366324308,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366324308",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Timo Helbling",
+   "title": "Timo Helbling",
+   "url": "https://en.wikipedia.org/wiki/Timo_Helbling",
+   "revid": 1351551974,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351551974",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tobias Rieder",
+   "title": "Tobias Rieder",
+   "url": "https://en.wikipedia.org/wiki/Tobias_Rieder",
+   "revid": 1376054389,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376054389",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tobias Stephan",
+   "title": "Tobias Stephan",
+   "url": "https://en.wikipedia.org/wiki/Tobias_Stephan",
+   "revid": 1351719078,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351719078",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomi Sallinen",
+   "title": "Tomi Sallinen",
+   "url": "https://en.wikipedia.org/wiki/Tomi_Sallinen",
+   "revid": 1298739445,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1298739445",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tommi Huhtala",
+   "title": "Tommi Huhtala",
+   "url": "https://en.wikipedia.org/wiki/Tommi_Huhtala",
+   "revid": 1338216101,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338216101",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tommi Kivistö",
+   "title": "Tommi Kivistö",
+   "url": "https://en.wikipedia.org/wiki/Tommi_Kivist%C3%B6",
+   "revid": 1366312111,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366312111",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tommi Santala",
+   "title": "Tommi Santala",
+   "url": "https://en.wikipedia.org/wiki/Tommi_Santala",
+   "revid": 1353622801,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1353622801",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tommy Jakobsen",
+   "title": "Tommy Jakobsen",
+   "url": "https://en.wikipedia.org/wiki/Tommy_Jakobsen",
+   "revid": 1350647198,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1350647198",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tommy Kristiansen",
+   "title": "Tommy Kristiansen",
+   "url": "https://en.wikipedia.org/wiki/Tommy_Kristiansen",
+   "revid": 1266604759,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1266604759",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Bulík",
+   "title": "Tomáš Bulík",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Bul%C3%ADk",
+   "revid": 1355154887,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355154887",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Fleischmann",
+   "title": "Tomáš Fleischmann",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Fleischmann",
+   "revid": 1366748172,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366748172",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Hertl",
+   "title": "Tomáš Hertl",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Hertl",
+   "revid": 1366748182,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366748182",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Kopecký",
+   "title": "Tomáš Kopecký",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Kopeck%C3%BD",
+   "revid": 1361969501,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361969501",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Marcinko",
+   "title": "Tomáš Marcinko",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Marcinko",
+   "revid": 1371621141,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1371621141",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Mojžíš",
+   "title": "Tomáš Mojžíš",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Moj%C5%BE%C3%AD%C5%A1",
+   "revid": 1352510426,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1352510426",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Plekanec",
+   "title": "Tomáš Plekanec",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Plekanec",
+   "revid": 1366748192,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366748192",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Rolinek",
+   "title": "Tomáš Rolinek",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Rolinek",
+   "revid": 1265482020,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1265482020",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Starosta",
+   "title": "Tomáš Starosta",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Starosta",
+   "revid": 1361233848,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1361233848",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Surový",
+   "title": "Tomáš Surový",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Surov%C3%BD",
+   "revid": 1351712569,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351712569",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Tatar",
+   "title": "Tomáš Tatar",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Tatar",
+   "revid": 1366961406,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366961406",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Vokoun",
+   "title": "Tomáš Vokoun",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Vokoun",
+   "revid": 1366748200,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366748200",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tomáš Záborský",
+   "title": "Tomáš Záborský",
+   "url": "https://en.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Z%C3%A1borsk%C3%BD",
+   "revid": 1362214846,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1362214846",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tony Mårtensson",
+   "title": "Tony Mårtensson",
+   "url": "https://en.wikipedia.org/wiki/Tony_M%C3%A5rtensson",
+   "revid": 1285203905,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1285203905",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Topi Jaakola",
+   "title": "Topi Jaakola",
+   "url": "https://en.wikipedia.org/wiki/Topi_Jaakola",
+   "revid": 1352510777,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1352510777",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Torsten Ankert",
+   "title": "Torsten Ankert",
+   "url": "https://en.wikipedia.org/wiki/Torsten_Ankert",
+   "revid": 1299441296,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1299441296",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tuomas Kiiskinen",
+   "title": "Tuomas Kiiskinen",
+   "url": "https://en.wikipedia.org/wiki/Tuomas_Kiiskinen",
+   "revid": 1303517745,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1303517745",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tuomo Ruutu",
+   "title": "Tuomo Ruutu",
+   "url": "https://en.wikipedia.org/wiki/Tuomo_Ruutu",
+   "revid": 1366083132,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366083132",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Tuukka Mäntylä",
+   "title": "Tuukka Mäntylä",
+   "url": "https://en.wikipedia.org/wiki/Tuukka_M%C3%A4ntyl%C3%A4",
+   "revid": 1367614450,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367614450",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Valtteri Filppula",
+   "title": "Valtteri Filppula",
+   "url": "https://en.wikipedia.org/wiki/Valtteri_Filppula",
+   "revid": 1372375261,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1372375261",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Veli-Matti Savinainen",
+   "title": "Veli-Matti Savinainen",
+   "url": "https://en.wikipedia.org/wiki/Veli-Matti_Savinainen",
+   "revid": 1374916787,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1374916787",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Victor Hedman",
+   "title": "Victor Hedman",
+   "url": "https://en.wikipedia.org/wiki/Victor_Hedman",
+   "revid": 1376871454,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376871454",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Victor Stancescu",
+   "title": "Victor Stăncescu",
+   "url": "https://en.wikipedia.org/wiki/Victor_St%C4%83ncescu",
+   "revid": 1272584952,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1272584952",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Viktor Fasth",
+   "title": "Viktor Fasth",
+   "url": "https://en.wikipedia.org/wiki/Viktor_Fasth",
+   "revid": 1366325139,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366325139",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Viktor Stålberg",
+   "title": "Viktor Stålberg",
+   "url": "https://en.wikipedia.org/wiki/Viktor_St%C3%A5lberg",
+   "revid": 1371501320,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1371501320",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ville Lajunen",
+   "title": "Ville Lajunen",
+   "url": "https://en.wikipedia.org/wiki/Ville_Lajunen",
+   "revid": 1365863965,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1365863965",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ville Viitaluoma",
+   "title": "Ville Viitaluoma",
+   "url": "https://en.wikipedia.org/wiki/Ville_Viitaluoma",
+   "revid": 1281266498,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1281266498",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Vitalijs Pavlovs",
+   "title": "Vitalijs Pavlovs",
+   "url": "https://en.wikipedia.org/wiki/Vitalijs_Pavlovs",
+   "revid": 1338213448,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1338213448",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Vladimír Dravecký",
+   "title": "Vladimír Dravecký",
+   "url": "https://en.wikipedia.org/wiki/Vladim%C3%ADr_Draveck%C3%BD",
+   "revid": 1334223882,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1334223882",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Vladimír Mihálik",
+   "title": "Vladimír Mihálik",
+   "url": "https://en.wikipedia.org/wiki/Vladim%C3%ADr_Mih%C3%A1lik",
+   "revid": 1366324836,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366324836",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Vladimír Sobotka",
+   "title": "Vladimír Sobotka",
+   "url": "https://en.wikipedia.org/wiki/Vladim%C3%ADr_Sobotka",
+   "revid": 1366236712,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366236712",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Yannic Seidenberg",
+   "title": "Yannic Seidenberg",
+   "url": "https://en.wikipedia.org/wiki/Yannic_Seidenberg",
+   "revid": 1304734591,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1304734591",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Yannick Weber",
+   "title": "Yannick Weber",
+   "url": "https://en.wikipedia.org/wiki/Yannick_Weber",
+   "revid": 1367614909,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1367614909",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Yasin Ehliz",
+   "title": "Yasin Ehliz",
+   "url": "https://en.wikipedia.org/wiki/Yasin_Ehliz",
+   "revid": 1366326210,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366326210",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Zbyněk Irgl",
+   "title": "Zbyněk Irgl",
+   "url": "https://en.wikipedia.org/wiki/Zbyn%C4%9Bk_Irgl",
+   "revid": 1357114931,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1357114931",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Zbyněk Michálek",
+   "title": "Zbyněk Michálek",
+   "url": "https://en.wikipedia.org/wiki/Zbyn%C4%9Bk_Mich%C3%A1lek",
+   "revid": 1366237423,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366237423",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Zdeno Chára",
+   "title": "Zdeno Chára",
+   "url": "https://en.wikipedia.org/wiki/Zdeno_Ch%C3%A1ra",
+   "revid": 1371658119,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1371658119",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Zdeněk Kutlák",
+   "title": "Zdeněk Kutlák",
+   "url": "https://en.wikipedia.org/wiki/Zden%C4%9Bk_Kutl%C3%A1k",
+   "revid": 1355154386,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1355154386",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Zemgus Girgensons",
+   "title": "Zemgus Girgensons",
+   "url": "https://en.wikipedia.org/wiki/Zemgus_Girgensons",
+   "revid": 1366748642,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1366748642",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ģirts Ankipāns",
+   "title": "Ģirts Ankipāns",
+   "url": "https://en.wikipedia.org/wiki/%C4%A2irts_Ankip%C4%81ns",
+   "revid": 1237572450,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1237572450",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ľubomír Višňovský",
+   "title": "Ľubomír Višňovský",
+   "url": "https://en.wikipedia.org/wiki/%C4%BDubom%C3%ADr_Vi%C5%A1%C5%88ovsk%C3%BD",
+   "revid": 1376397974,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1376397974",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Ľuboš Bartečko",
+   "title": "Ľuboš Bartečko",
+   "url": "https://en.wikipedia.org/wiki/%C4%BDubo%C5%A1_Barte%C4%8Dko",
+   "revid": 1368250879,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1368250879",
+   "retrieved": "2026-09-29"
+  },
+  {
+   "linked_from": "Štefan Ružička",
+   "title": "Štefan Ružička",
+   "url": "https://en.wikipedia.org/wiki/%C5%A0tefan_Ru%C5%BEi%C4%8Dka",
+   "revid": 1351730905,
+   "revision_url": "https://en.wikipedia.org/w/index.php?oldid=1351730905",
+   "retrieved": "2026-09-29"
+  }
+ ]
+}

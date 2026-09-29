@@ -1,0 +1,145 @@
+[
+ {
+  "dataColumns": [
+   {
+    "name": "Rank",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "Player",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "Team",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "SVS",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "SVSPerc",
+    "type": "percentage_two",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "GP",
+    "type": "integer",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "GPI",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "GA",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "GAA",
+    "type": "float_two",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "W",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "T",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "L",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "SO",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "MIP",
+    "type": "string",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "ValidRanking",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   }
+  ],
+  "stats": [
+   {
+    "Rank": 7,
+    "Player": 0,
+    "Team": 0,
+    "SVS": 1095,
+    "SVSPerc": "90.87",
+    "GP": 51,
+    "GPI": 44,
+    "GA": 110,
+    "GAA": "2.60",
+    "W": 24,
+    "T": 0,
+    "L": 14,
+    "SO": 4,
+    "MIP": "2542:10",
+    "ValidRanking": 1,
+    "info": {
+     "fullName": "Stefan Liv",
+     "firstName": "Stefan",
+     "lastName": "Liv",
+     "birthDate": "N/A",
+     "nationality": "N/A",
+     "number": 1,
+     "gender": "N/A",
+     "team": {
+      "uuid": "3db0-3db09jXTE",
+      "name": "HV71",
+      "code": "HV71",
+      "siteDisplayName": "HV71"
+     },
+     "teamCode": "HV71",
+     "teamId": "3db0-3db09jXTE"
+    }
+   }
+  ],
+  "players": {
+   "862": {
+    "type": "athlete",
+    "id": 862,
+    "firstName": "Stefan",
+    "lastName": "Liv",
+    "jerseyNumber": 1,
+    "gpi": 44,
+    "mip": "2542:10",
+    "validRanking": true
+   }
+  },
+  "totalCount": 1
+ }
+]

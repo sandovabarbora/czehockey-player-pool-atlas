@@ -1,0 +1,2468 @@
+{
+ "meta": {
+  "inputs": {
+   "del_goalies.parquet": "85afcda9b8f8c849800e89086001ebcc7433cd7de6c1e299d82f555801463213",
+   "del_skaters.parquet": "6e8bc872969e5e43e2831abb922d64fca3460db9649ce93f2fcf9cc0fa32a36f",
+   "extraliga_goalies.parquet": "1607e0d36b2852b849a830217a68259802728863163e3ff35cfbfb61a6727b07",
+   "extraliga_skaters.parquet": "7c372c4989dc3af8c6ad044bcbd77626bc3e31347fb6ee5436aecc2698b856ed",
+   "liiga_goalies.parquet": "e7ab79b3f65a225a8d8e9884a3d60446bfc1e354756332811c01cf03975ea3c6",
+   "liiga_skaters.parquet": "141c75ceede7edfa9cacc55f6e1ca71217c04bbd8300e5bbcd6a0c8756cb1ae1",
+   "nhl_careers.parquet": "b1a69457ae320df7985f66d0076e026865606005855d8725a680726b05970643",
+   "nhl_goalies.parquet": "a16be42c492ab8be86eeaa1e63433cbdc9a4d7b699acfdb0dc8aeb306b6bff64",
+   "nhl_skaters.parquet": "d42f3feb41ae5238ab6ad3f3cadfc5889109839fcbc529ef5311701b7da05fc9",
+   "nl_goalies.parquet": "1cbc7d9b50e2d9dbf5e3f6c242a34bd624268eff6b02ee6cbd97897b3d2e1512",
+   "nl_skaters.parquet": "1497f2e2740caba1d4d47cea0ed1cf56ade5647dc99197204de39340a6293c60",
+   "population.parquet": "4f546a213389b432a165753b4d58411a1cedcb8274fc5dc815e61436a7c5ce05",
+   "rosters.parquet": "566d51646bf864e718fa4e5634dd4b013d3099aa05ff4997d16a67a63e338752",
+   "shl_goalies.parquet": "397a50791cebbf0fc8cd2d5f4f68774452e8b313a6c0b3705d6f0b2356cd1aac",
+   "shl_skaters.parquet": "0744828aed80a1c2bdf52f05924d3700fc7d5639be402ddd8c600c67edc4a819"
+  }
+ },
+ "definitions": {
+  "qualifying": "the pro-rated games threshold (20 of 82 games), as for skaters",
+  "save_pct": "saves / (saves + goals against)",
+  "young": "age (season start - birth year) of 23 or less; u21 = 20 or less",
+  "window_abroad": "2020/21–2025/26"
+ },
+ "per_million": {
+  "season": "2025/26",
+  "nations": [
+   {
+    "iso3": "FIN",
+    "name": "Finland",
+    "nhl": 7,
+    "nhl_per_million": 1.238307,
+    "top5": 32,
+    "top5_per_million": 5.66083,
+    "rank_top5": 1
+   },
+   {
+    "iso3": "SWE",
+    "name": "Sweden",
+    "nhl": 9,
+    "nhl_per_million": 0.848614,
+    "top5": 33,
+    "top5_per_million": 3.111585,
+    "rank_top5": 2
+   },
+   {
+    "iso3": "LVA",
+    "name": "Latvia",
+    "nhl": 2,
+    "nhl_per_million": 1.083954,
+    "top5": 5,
+    "top5_per_million": 2.709886,
+    "rank_top5": 3
+   },
+   {
+    "iso3": "CHE",
+    "name": "Switzerland",
+    "nhl": 1,
+    "nhl_per_million": 0.109598,
+    "top5": 10,
+    "top5_per_million": 1.095976,
+    "rank_top5": 4
+   },
+   {
+    "iso3": "CZE",
+    "name": "Czechia",
+    "nhl": 6,
+    "nhl_per_million": 0.54966,
+    "top5": 11,
+    "top5_per_million": 1.00771,
+    "rank_top5": 5
+   },
+   {
+    "iso3": "NOR",
+    "name": "Norway",
+    "nhl": 0,
+    "nhl_per_million": 0.0,
+    "top5": 3,
+    "top5_per_million": 0.533106,
+    "rank_top5": 6
+   },
+   {
+    "iso3": "DEU",
+    "name": "Germany",
+    "nhl": 1,
+    "nhl_per_million": 0.011981,
+    "top5": 16,
+    "top5_per_million": 0.191692,
+    "rank_top5": 7
+   },
+   {
+    "iso3": "SVK",
+    "name": "Slovakia",
+    "nhl": 0,
+    "nhl_per_million": 0.0,
+    "top5": 1,
+    "top5_per_million": 0.184863,
+    "rank_top5": 8
+   },
+   {
+    "iso3": "DNK",
+    "name": "Denmark",
+    "nhl": 1,
+    "nhl_per_million": 0.165958,
+    "top5": 1,
+    "top5_per_million": 0.165958,
+    "rank_top5": 9
+   },
+   {
+    "iso3": "AUT",
+    "name": "Austria",
+    "nhl": 0,
+    "nhl_per_million": 0.0,
+    "top5": 0,
+    "top5_per_million": 0.0,
+    "rank_top5": 10
+   }
+  ],
+  "peer_median": {
+   "nhl_per_million": 0.109598,
+   "top5_per_million": 0.533106
+  }
+ },
+ "nhl_series": {
+  "seasons": [
+   "1995/96",
+   "1996/97",
+   "1997/98",
+   "1998/99",
+   "1999/00",
+   "2000/01",
+   "2001/02",
+   "2002/03",
+   "2003/04",
+   "2004/05",
+   "2005/06",
+   "2006/07",
+   "2007/08",
+   "2008/09",
+   "2009/10",
+   "2010/11",
+   "2011/12",
+   "2012/13",
+   "2013/14",
+   "2014/15",
+   "2015/16",
+   "2016/17",
+   "2017/18",
+   "2018/19",
+   "2019/20",
+   "2020/21",
+   "2021/22",
+   "2022/23",
+   "2023/24",
+   "2024/25",
+   "2025/26"
+  ],
+  "nations": {
+   "CZE": {
+    "n": [
+     1,
+     1,
+     2,
+     3,
+     3,
+     5,
+     5,
+     4,
+     3,
+     null,
+     2,
+     2,
+     2,
+     1,
+     2,
+     3,
+     3,
+     3,
+     2,
+     3,
+     3,
+     2,
+     3,
+     2,
+     3,
+     2,
+     5,
+     5,
+     6,
+     6,
+     6
+    ],
+    "per_million": [
+     0.096887,
+     0.097001,
+     0.194191,
+     0.291556,
+     0.291883,
+     0.488662,
+     0.490139,
+     0.39244,
+     0.294252,
+     null,
+     0.195626,
+     0.195041,
+     0.19336,
+     0.095916,
+     0.191166,
+     0.286076,
+     0.285566,
+     0.285276,
+     0.190251,
+     0.284677,
+     0.284257,
+     0.189057,
+     0.282751,
+     0.187797,
+     0.280533,
+     0.19057,
+     0.475434,
+     0.461786,
+     0.550431,
+     0.549979,
+     0.54966
+    ]
+   },
+   "FIN": {
+    "n": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     2,
+     4,
+     5,
+     null,
+     6,
+     7,
+     8,
+     7,
+     7,
+     7,
+     6,
+     6,
+     7,
+     5,
+     8,
+     6,
+     6,
+     5,
+     6,
+     8,
+     7,
+     6,
+     6,
+     5,
+     7
+    ],
+    "per_million": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.193009,
+     0.384993,
+     0.768301,
+     0.957904,
+     null,
+     1.141644,
+     1.326523,
+     1.509296,
+     1.31423,
+     1.308062,
+     1.302259,
+     1.11085,
+     1.10565,
+     1.284104,
+     0.913784,
+     1.45791,
+     1.090256,
+     1.088311,
+     0.906139,
+     1.085915,
+     1.445663,
+     1.261661,
+     1.078367,
+     1.070692,
+     0.887159,
+     1.238307
+    ]
+   },
+   "SWE": {
+    "n": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     2,
+     2,
+     2,
+     null,
+     2,
+     4,
+     4,
+     4,
+     3,
+     4,
+     4,
+     7,
+     6,
+     6,
+     7,
+     5,
+     5,
+     5,
+     6,
+     5,
+     4,
+     5,
+     7,
+     6,
+     9
+    ],
+    "per_million": [
+     0.113154,
+     0.113065,
+     0.113025,
+     0.112939,
+     0.112849,
+     0.112577,
+     0.224489,
+     0.223694,
+     0.222825,
+     null,
+     0.221049,
+     0.438921,
+     0.435591,
+     0.432136,
+     0.321176,
+     0.424828,
+     0.421814,
+     0.732532,
+     0.622093,
+     0.615552,
+     0.710587,
+     0.500242,
+     0.494059,
+     0.48875,
+     0.580968,
+     0.481728,
+     0.38269,
+     0.475215,
+     0.6634,
+     0.566695,
+     0.848614
+    ]
+   },
+   "CHE": {
+    "n": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     2,
+     2,
+     null,
+     2,
+     2,
+     2,
+     2,
+     1,
+     1,
+     1,
+     1,
+     2,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "per_million": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.138811,
+     0.137824,
+     0.273454,
+     0.271586,
+     null,
+     0.268128,
+     0.266356,
+     0.263383,
+     0.259678,
+     0.128439,
+     0.127063,
+     0.125712,
+     0.124393,
+     0.245711,
+     0.121394,
+     0.120089,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.109598
+    ]
+   },
+   "SVK": {
+    "n": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     null,
+     1,
+     1,
+     1,
+     2,
+     1,
+     2,
+     1,
+     2,
+     2,
+     1,
+     1,
+     2,
+     1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "per_million": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null,
+     0.186118,
+     0.18611,
+     0.18601,
+     0.371581,
+     0.185515,
+     0.370889,
+     0.185037,
+     0.369629,
+     0.36928,
+     0.184456,
+     0.184289,
+     0.367962,
+     0.183718,
+     0.183472,
+     0.183222,
+     0.183158,
+     0.0,
+     0.184203,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "DEU": {
+    "n": [
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     null,
+     1,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     1,
+     1,
+     1
+    ],
+    "per_million": [
+     0.0,
+     0.012193,
+     0.012187,
+     0.01219,
+     0.012171,
+     0.012157,
+     0.01213,
+     0.012116,
+     0.012117,
+     null,
+     0.01213,
+     0.012148,
+     0.012163,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.012381,
+     0.012316,
+     0.024338,
+     0.024236,
+     0.024157,
+     0.024091,
+     0.024048,
+     0.024051,
+     0.024028,
+     0.024062,
+     0.011982,
+     0.011965,
+     0.011981
+    ]
+   },
+   "LVA": {
+    "n": [
+     1,
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     0,
+     null,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     2
+    ],
+    "per_million": [
+     0.404935,
+     0.409013,
+     0.413088,
+     0.833595,
+     0.839731,
+     0.84984,
+     0.861714,
+     0.869796,
+     0.0,
+     null,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.524198,
+     0.5282,
+     0.533118,
+     0.527638,
+     0.532318,
+     0.537471,
+     1.083954
+    ]
+   },
+   "DNK": {
+    "n": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     null,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1
+    ],
+    "per_million": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.177707,
+     0.176687,
+     0.175216,
+     0.17395,
+     0.172975,
+     0.172233,
+     0.17174,
+     0.171232,
+     0.170259,
+     0.168559,
+     0.0,
+     0.166869,
+     0.165958
+    ]
+   },
+   "NOR": {
+    "n": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     null,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "per_million": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "AUT": {
+    "n": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     null,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "per_million": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  }
+ },
+ "abroad": {
+  "summary": {
+   "NHL": {
+    "goalie_seasons": 30,
+    "goalies": 8,
+    "median_save_pct_minus_median": -0.003071,
+    "share_above_median": 0.333333
+   },
+   "Liiga": {
+    "goalie_seasons": 16,
+    "goalies": 7,
+    "median_save_pct_minus_median": 0.010647,
+    "share_above_median": 0.75
+   },
+   "SHL": {
+    "goalie_seasons": 5,
+    "goalies": 3,
+    "median_save_pct_minus_median": -0.005604,
+    "share_above_median": 0.2
+   },
+   "NL": {
+    "goalie_seasons": 5,
+    "goalies": 2,
+    "median_save_pct_minus_median": 0.014368,
+    "share_above_median": 1.0
+   },
+   "DEL": {
+    "goalie_seasons": 0,
+    "goalies": 0,
+    "median_save_pct_minus_median": null,
+    "share_above_median": null
+   }
+  },
+  "players": [
+   {
+    "person_id": "Liiga:40035616",
+    "name": "Dominik Hrachovina",
+    "league": "Liiga",
+    "season": "2020/21",
+    "team": "Tappara",
+    "games": 17.0,
+    "save_pct": 0.862805,
+    "median_save_pct": 0.907075,
+    "save_pct_minus_median": -0.04427
+   },
+   {
+    "person_id": "Liiga:60462059",
+    "name": "Patrik Bartosak",
+    "league": "Liiga",
+    "season": "2020/21",
+    "team": "Pelicans",
+    "games": 41.0,
+    "save_pct": 0.912055,
+    "median_save_pct": 0.907075,
+    "save_pct_minus_median": 0.00498
+   },
+   {
+    "person_id": "NHL:8476986",
+    "name": "Marek Langhamer",
+    "league": "Liiga",
+    "season": "2021/22",
+    "team": "Ilves",
+    "games": 26.0,
+    "save_pct": 0.908333,
+    "median_save_pct": 0.90172,
+    "save_pct_minus_median": 0.006613
+   },
+   {
+    "person_id": "Liiga:60544341",
+    "name": "Nick Malik",
+    "league": "Liiga",
+    "season": "2021/22",
+    "team": "KooKoo",
+    "games": 34.0,
+    "save_pct": 0.92217,
+    "median_save_pct": 0.90172,
+    "save_pct_minus_median": 0.02045
+   },
+   {
+    "person_id": "Liiga:60661830",
+    "name": "Jakub Malek",
+    "league": "Liiga",
+    "season": "2022/23",
+    "team": "Ilves",
+    "games": 22.0,
+    "save_pct": 0.908722,
+    "median_save_pct": 0.907969,
+    "save_pct_minus_median": 0.000753
+   },
+   {
+    "person_id": "NHL:8476986",
+    "name": "Marek Langhamer",
+    "league": "Liiga",
+    "season": "2022/23",
+    "team": "Ilves",
+    "games": 40.0,
+    "save_pct": 0.92381,
+    "median_save_pct": 0.907969,
+    "save_pct_minus_median": 0.01584
+   },
+   {
+    "person_id": "Liiga:60544341",
+    "name": "Nick Malik",
+    "league": "Liiga",
+    "season": "2022/23",
+    "team": "KooKoo",
+    "games": 24.0,
+    "save_pct": 0.891379,
+    "median_save_pct": 0.907969,
+    "save_pct_minus_median": -0.01659
+   },
+   {
+    "person_id": "Liiga:60462059",
+    "name": "Patrik Bartosak",
+    "league": "Liiga",
+    "season": "2022/23",
+    "team": "Pelicans",
+    "games": 33.0,
+    "save_pct": 0.915232,
+    "median_save_pct": 0.907969,
+    "save_pct_minus_median": 0.007262
+   },
+   {
+    "person_id": "Liiga:60661830",
+    "name": "Jakub Malek",
+    "league": "Liiga",
+    "season": "2023/24",
+    "team": "Ilves",
+    "games": 27.0,
+    "save_pct": 0.914493,
+    "median_save_pct": 0.900352,
+    "save_pct_minus_median": 0.01414
+   },
+   {
+    "person_id": "Liiga:60544341",
+    "name": "Nick Malik",
+    "league": "Liiga",
+    "season": "2023/24",
+    "team": "KooKoo",
+    "games": 38.0,
+    "save_pct": 0.889412,
+    "median_save_pct": 0.900352,
+    "save_pct_minus_median": -0.010941
+   },
+   {
+    "person_id": "Liiga:60862140",
+    "name": "Dominik Pavlat",
+    "league": "Liiga",
+    "season": "2024/25",
+    "team": "Ilves",
+    "games": 29.0,
+    "save_pct": 0.910097,
+    "median_save_pct": 0.894187,
+    "save_pct_minus_median": 0.015909
+   },
+   {
+    "person_id": "Liiga:60661830",
+    "name": "Jakub Malek",
+    "league": "Liiga",
+    "season": "2024/25",
+    "team": "Ilves",
+    "games": 33.0,
+    "save_pct": 0.909459,
+    "median_save_pct": 0.894187,
+    "save_pct_minus_median": 0.015272
+   },
+   {
+    "person_id": "Liiga:60462059",
+    "name": "Patrik Bartosak",
+    "league": "Liiga",
+    "season": "2024/25",
+    "team": "Pelicans",
+    "games": 29.0,
+    "save_pct": 0.908219,
+    "median_save_pct": 0.894187,
+    "save_pct_minus_median": 0.014032
+   },
+   {
+    "person_id": "Liiga:60862140",
+    "name": "Dominik Pavlat",
+    "league": "Liiga",
+    "season": "2025/26",
+    "team": "Ilves",
+    "games": 35.0,
+    "save_pct": 0.891026,
+    "median_save_pct": 0.89168,
+    "save_pct_minus_median": -0.000654
+   },
+   {
+    "person_id": "Liiga:60960744",
+    "name": "Jan Bednar",
+    "league": "Liiga",
+    "season": "2025/26",
+    "team": "Ässät",
+    "games": 44.0,
+    "save_pct": 0.907188,
+    "median_save_pct": 0.89168,
+    "save_pct_minus_median": 0.015509
+   },
+   {
+    "person_id": "Liiga:60462059",
+    "name": "Patrik Bartosak",
+    "league": "Liiga",
+    "season": "2025/26",
+    "team": "Pelicans",
+    "games": 45.0,
+    "save_pct": 0.907477,
+    "median_save_pct": 0.89168,
+    "save_pct_minus_median": 0.015797
+   },
+   {
+    "person_id": "NHL:8479496",
+    "name": "David Rittich",
+    "league": "NHL",
+    "season": "2020/21",
+    "team": "CGY,TOR",
+    "games": 19.0,
+    "save_pct": 0.900648,
+    "median_save_pct": 0.907009,
+    "save_pct_minus_median": -0.006362
+   },
+   {
+    "person_id": "NHL:8477970",
+    "name": "Vitek Vanecek",
+    "league": "NHL",
+    "season": "2020/21",
+    "team": "WSH",
+    "games": 37.0,
+    "save_pct": 0.907856,
+    "median_save_pct": 0.907009,
+    "save_pct_minus_median": 0.000847
+   },
+   {
+    "person_id": "NHL:8478435",
+    "name": "Dan Vladar",
+    "league": "NHL",
+    "season": "2021/22",
+    "team": "CGY",
+    "games": 23.0,
+    "save_pct": 0.90625,
+    "median_save_pct": 0.907789,
+    "save_pct_minus_median": -0.001539
+   },
+   {
+    "person_id": "NHL:8478872",
+    "name": "Karel Vejmelka",
+    "league": "NHL",
+    "season": "2021/22",
+    "team": "ARI",
+    "games": 52.0,
+    "save_pct": 0.898143,
+    "median_save_pct": 0.907789,
+    "save_pct_minus_median": -0.009646
+   },
+   {
+    "person_id": "NHL:8480925",
+    "name": "Pavel Francouz",
+    "league": "NHL",
+    "season": "2021/22",
+    "team": "COL",
+    "games": 21.0,
+    "save_pct": 0.916118,
+    "median_save_pct": 0.907789,
+    "save_pct_minus_median": 0.00833
+   },
+   {
+    "person_id": "NHL:8475852",
+    "name": "Petr Mrazek",
+    "league": "NHL",
+    "season": "2021/22",
+    "team": "TOR",
+    "games": 20.0,
+    "save_pct": 0.888462,
+    "median_save_pct": 0.907789,
+    "save_pct_minus_median": -0.019327
+   },
+   {
+    "person_id": "NHL:8477970",
+    "name": "Vitek Vanecek",
+    "league": "NHL",
+    "season": "2021/22",
+    "team": "WSH",
+    "games": 42.0,
+    "save_pct": 0.907789,
+    "median_save_pct": 0.907789,
+    "save_pct_minus_median": 0.0
+   },
+   {
+    "person_id": "NHL:8478435",
+    "name": "Dan Vladar",
+    "league": "NHL",
+    "season": "2022/23",
+    "team": "CGY",
+    "games": 27.0,
+    "save_pct": 0.892377,
+    "median_save_pct": 0.902805,
+    "save_pct_minus_median": -0.010429
+   },
+   {
+    "person_id": "NHL:8479496",
+    "name": "David Rittich",
+    "league": "NHL",
+    "season": "2022/23",
+    "team": "WPG",
+    "games": 21.0,
+    "save_pct": 0.901186,
+    "median_save_pct": 0.902805,
+    "save_pct_minus_median": -0.00162
+   },
+   {
+    "person_id": "NHL:8478872",
+    "name": "Karel Vejmelka",
+    "league": "NHL",
+    "season": "2022/23",
+    "team": "ARI",
+    "games": 50.0,
+    "save_pct": 0.899461,
+    "median_save_pct": 0.902805,
+    "save_pct_minus_median": -0.003344
+   },
+   {
+    "person_id": "NHL:8475852",
+    "name": "Petr Mrazek",
+    "league": "NHL",
+    "season": "2022/23",
+    "team": "CHI",
+    "games": 39.0,
+    "save_pct": 0.894231,
+    "median_save_pct": 0.902805,
+    "save_pct_minus_median": -0.008575
+   },
+   {
+    "person_id": "NHL:8477970",
+    "name": "Vitek Vanecek",
+    "league": "NHL",
+    "season": "2022/23",
+    "team": "NJD",
+    "games": 52.0,
+    "save_pct": 0.910728,
+    "median_save_pct": 0.902805,
+    "save_pct_minus_median": 0.007922
+   },
+   {
+    "person_id": "NHL:8478435",
+    "name": "Dan Vladar",
+    "league": "NHL",
+    "season": "2023/24",
+    "team": "CGY",
+    "games": 20.0,
+    "save_pct": 0.881533,
+    "median_save_pct": 0.905004,
+    "save_pct_minus_median": -0.023471
+   },
+   {
+    "person_id": "NHL:8479496",
+    "name": "David Rittich",
+    "league": "NHL",
+    "season": "2023/24",
+    "team": "LAK",
+    "games": 24.0,
+    "save_pct": 0.921095,
+    "median_save_pct": 0.905004,
+    "save_pct_minus_median": 0.016091
+   },
+   {
+    "person_id": "NHL:8478872",
+    "name": "Karel Vejmelka",
+    "league": "NHL",
+    "season": "2023/24",
+    "team": "ARI",
+    "games": 38.0,
+    "save_pct": 0.895509,
+    "median_save_pct": 0.905004,
+    "save_pct_minus_median": -0.009495
+   },
+   {
+    "person_id": "NHL:8480843",
+    "name": "Lukas Dostal",
+    "league": "NHL",
+    "season": "2023/24",
+    "team": "ANA",
+    "games": 44.0,
+    "save_pct": 0.901527,
+    "median_save_pct": 0.905004,
+    "save_pct_minus_median": -0.003477
+   },
+   {
+    "person_id": "NHL:8475852",
+    "name": "Petr Mrazek",
+    "league": "NHL",
+    "season": "2023/24",
+    "team": "CHI",
+    "games": 56.0,
+    "save_pct": 0.907246,
+    "median_save_pct": 0.905004,
+    "save_pct_minus_median": 0.002243
+   },
+   {
+    "person_id": "NHL:8477970",
+    "name": "Vitek Vanecek",
+    "league": "NHL",
+    "season": "2023/24",
+    "team": "NJD",
+    "games": 32.0,
+    "save_pct": 0.889791,
+    "median_save_pct": 0.905004,
+    "save_pct_minus_median": -0.015212
+   },
+   {
+    "person_id": "NHL:8478435",
+    "name": "Dan Vladar",
+    "league": "NHL",
+    "season": "2024/25",
+    "team": "CGY",
+    "games": 30.0,
+    "save_pct": 0.897531,
+    "median_save_pct": 0.900329,
+    "save_pct_minus_median": -0.002799
+   },
+   {
+    "person_id": "NHL:8479496",
+    "name": "David Rittich",
+    "league": "NHL",
+    "season": "2024/25",
+    "team": "LAK",
+    "games": 34.0,
+    "save_pct": 0.88601,
+    "median_save_pct": 0.900329,
+    "save_pct_minus_median": -0.014319
+   },
+   {
+    "person_id": "NHL:8478872",
+    "name": "Karel Vejmelka",
+    "league": "NHL",
+    "season": "2024/25",
+    "team": "UTA",
+    "games": 58.0,
+    "save_pct": 0.90391,
+    "median_save_pct": 0.900329,
+    "save_pct_minus_median": 0.00358
+   },
+   {
+    "person_id": "NHL:8480843",
+    "name": "Lukas Dostal",
+    "league": "NHL",
+    "season": "2024/25",
+    "team": "ANA",
+    "games": 54.0,
+    "save_pct": 0.902769,
+    "median_save_pct": 0.900329,
+    "save_pct_minus_median": 0.00244
+   },
+   {
+    "person_id": "NHL:8475852",
+    "name": "Petr Mrazek",
+    "league": "NHL",
+    "season": "2024/25",
+    "team": "CHI,DET",
+    "games": 38.0,
+    "save_pct": 0.891182,
+    "median_save_pct": 0.900329,
+    "save_pct_minus_median": -0.009148
+   },
+   {
+    "person_id": "NHL:8477970",
+    "name": "Vitek Vanecek",
+    "league": "NHL",
+    "season": "2024/25",
+    "team": "SJS,FLA",
+    "games": 25.0,
+    "save_pct": 0.883978,
+    "median_save_pct": 0.900329,
+    "save_pct_minus_median": -0.016352
+   },
+   {
+    "person_id": "NHL:8478435",
+    "name": "Dan Vladar",
+    "league": "NHL",
+    "season": "2025/26",
+    "team": "PHI",
+    "games": 52.0,
+    "save_pct": 0.90569,
+    "median_save_pct": 0.89514,
+    "save_pct_minus_median": 0.010549
+   },
+   {
+    "person_id": "NHL:8479496",
+    "name": "David Rittich",
+    "league": "NHL",
+    "season": "2025/26",
+    "team": "NYI",
+    "games": 30.0,
+    "save_pct": 0.894444,
+    "median_save_pct": 0.89514,
+    "save_pct_minus_median": -0.000696
+   },
+   {
+    "person_id": "NHL:8482487",
+    "name": "Jakub Dobes",
+    "league": "NHL",
+    "season": "2025/26",
+    "team": "MTL",
+    "games": 43.0,
+    "save_pct": 0.901432,
+    "median_save_pct": 0.89514,
+    "save_pct_minus_median": 0.006292
+   },
+   {
+    "person_id": "NHL:8478872",
+    "name": "Karel Vejmelka",
+    "league": "NHL",
+    "season": "2025/26",
+    "team": "UTA",
+    "games": 64.0,
+    "save_pct": 0.896128,
+    "median_save_pct": 0.89514,
+    "save_pct_minus_median": 0.000987
+   },
+   {
+    "person_id": "NHL:8480843",
+    "name": "Lukas Dostal",
+    "league": "NHL",
+    "season": "2025/26",
+    "team": "ANA",
+    "games": 56.0,
+    "save_pct": 0.888301,
+    "median_save_pct": 0.89514,
+    "save_pct_minus_median": -0.006839
+   },
+   {
+    "person_id": "NHL:8477970",
+    "name": "Vitek Vanecek",
+    "league": "NHL",
+    "season": "2025/26",
+    "team": "UTA",
+    "games": 22.0,
+    "save_pct": 0.883399,
+    "median_save_pct": 0.89514,
+    "save_pct_minus_median": -0.011741
+   },
+   {
+    "person_id": "NL:jakub kovar",
+    "name": "Jakub Kovar",
+    "league": "NL",
+    "season": "2021/22",
+    "team": "ZSC Lions",
+    "games": 14.0,
+    "save_pct": 0.931973,
+    "median_save_pct": 0.91875,
+    "save_pct_minus_median": 0.013223
+   },
+   {
+    "person_id": "NL:hrubec simon",
+    "name": "Simon Hrubec",
+    "league": "NL",
+    "season": "2022/23",
+    "team": "ZSC Lions",
+    "games": 33.0,
+    "save_pct": 0.926531,
+    "median_save_pct": 0.910654,
+    "save_pct_minus_median": 0.015876
+   },
+   {
+    "person_id": "NL:hrubec simon",
+    "name": "Simon Hrubec",
+    "league": "NL",
+    "season": "2023/24",
+    "team": "ZSC Lions",
+    "games": 42.0,
+    "save_pct": 0.932088,
+    "median_save_pct": 0.915328,
+    "save_pct_minus_median": 0.01676
+   },
+   {
+    "person_id": "NL:hrubec simon",
+    "name": "Simon Hrubec",
+    "league": "NL",
+    "season": "2024/25",
+    "team": "ZSC Lions",
+    "games": 36.0,
+    "save_pct": 0.921305,
+    "median_save_pct": 0.906938,
+    "save_pct_minus_median": 0.014368
+   },
+   {
+    "person_id": "NL:hrubec simon",
+    "name": "Simon Hrubec",
+    "league": "NL",
+    "season": "2025/26",
+    "team": "ZSC Lions",
+    "games": 42.0,
+    "save_pct": 0.926916,
+    "median_save_pct": 0.913658,
+    "save_pct_minus_median": 0.013258
+   },
+   {
+    "person_id": "SHL:qWX-7PQGnSWPu",
+    "name": "Dominik Furch",
+    "league": "SHL",
+    "season": "2021/22",
+    "team": "Färjestad BK",
+    "games": 36.0,
+    "save_pct": 0.902386,
+    "median_save_pct": 0.90799,
+    "save_pct_minus_median": -0.005604
+   },
+   {
+    "person_id": "NHL:8476986",
+    "name": "Marek Langhamer",
+    "league": "SHL",
+    "season": "2023/24",
+    "team": "IK Oskarshamn",
+    "games": 25.0,
+    "save_pct": 0.874797,
+    "median_save_pct": 0.90389,
+    "save_pct_minus_median": -0.029093
+   },
+   {
+    "person_id": "SHL:qcw-3QbGoYY14",
+    "name": "Petr Kvaca",
+    "league": "SHL",
+    "season": "2023/24",
+    "team": "Rögle BK",
+    "games": 18.0,
+    "save_pct": 0.90389,
+    "median_save_pct": 0.90389,
+    "save_pct_minus_median": 0.0
+   },
+   {
+    "person_id": "NHL:8476986",
+    "name": "Marek Langhamer",
+    "league": "SHL",
+    "season": "2024/25",
+    "team": "Malmö Redhawks",
+    "games": 25.0,
+    "save_pct": 0.892283,
+    "median_save_pct": 0.900445,
+    "save_pct_minus_median": -0.008162
+   },
+   {
+    "person_id": "NHL:8476986",
+    "name": "Marek Langhamer",
+    "league": "SHL",
+    "season": "2025/26",
+    "team": "Malmö Redhawks",
+    "games": 28.0,
+    "save_pct": 0.903268,
+    "median_save_pct": 0.892807,
+    "save_pct_minus_median": 0.010461
+   }
+  ]
+ },
+ "youth": {
+  "Extraliga": {
+   "seasons": [
+    {
+     "season": "2014/15",
+     "games": 812.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.383005,
+     "u21_games_share": 0.073892
+    },
+    {
+     "season": "2015/16",
+     "games": 809.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.264524,
+     "u21_games_share": 0.009889
+    },
+    {
+     "season": "2016/17",
+     "games": 798.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.325815,
+     "u21_games_share": 0.055138
+    },
+    {
+     "season": "2017/18",
+     "games": 782.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.222506,
+     "u21_games_share": 0.081841
+    },
+    {
+     "season": "2018/19",
+     "games": 789.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.18251,
+     "u21_games_share": 0.046895
+    },
+    {
+     "season": "2019/20",
+     "games": 795.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.226415,
+     "u21_games_share": 0.049057
+    },
+    {
+     "season": "2020/21",
+     "games": 785.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.254777,
+     "u21_games_share": 0.034395
+    },
+    {
+     "season": "2021/22",
+     "games": 904.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.090708,
+     "u21_games_share": 0.009956
+    },
+    {
+     "season": "2022/23",
+     "games": 779.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.070603,
+     "u21_games_share": 0.003851
+    },
+    {
+     "season": "2023/24",
+     "games": 795.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.14717,
+     "u21_games_share": 0.060377
+    },
+    {
+     "season": "2024/25",
+     "games": 776.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.195876,
+     "u21_games_share": 0.006443
+    },
+    {
+     "season": "2025/26",
+     "games": 768.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.154948,
+     "u21_games_share": 0.02474
+    }
+   ],
+   "mean_u24_games_share": 0.209905
+  },
+  "Liiga": {
+   "seasons": [
+    {
+     "season": "2014/15",
+     "games": 887.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.343856,
+     "u21_games_share": 0.257046
+    },
+    {
+     "season": "2015/16",
+     "games": 962.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.356549,
+     "u21_games_share": 0.136175
+    },
+    {
+     "season": "2016/17",
+     "games": 943.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.423118,
+     "u21_games_share": 0.152704
+    },
+    {
+     "season": "2017/18",
+     "games": 947.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.42661,
+     "u21_games_share": 0.071806
+    },
+    {
+     "season": "2018/19",
+     "games": 955.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.364398,
+     "u21_games_share": 0.106806
+    },
+    {
+     "season": "2019/20",
+     "games": 949.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.384615,
+     "u21_games_share": 0.169652
+    },
+    {
+     "season": "2020/21",
+     "games": 886.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.460497,
+     "u21_games_share": 0.085779
+    },
+    {
+     "season": "2021/22",
+     "games": 961.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.354839,
+     "u21_games_share": 0.139438
+    },
+    {
+     "season": "2022/23",
+     "games": 957.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.393939,
+     "u21_games_share": 0.197492
+    },
+    {
+     "season": "2023/24",
+     "games": 954.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.310273,
+     "u21_games_share": 0.062893
+    },
+    {
+     "season": "2024/25",
+     "games": 1011.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.343225,
+     "u21_games_share": 0.16815
+    },
+    {
+     "season": "2025/26",
+     "games": 1007.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.323734,
+     "u21_games_share": 0.197617
+    }
+   ],
+   "mean_u24_games_share": 0.373804
+  },
+  "SHL": {
+   "seasons": [
+    {
+     "season": "2014/15",
+     "games": 740.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.309459,
+     "u21_games_share": 0.067568
+    },
+    {
+     "season": "2015/16",
+     "games": 806.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.405707,
+     "u21_games_share": 0.07196
+    },
+    {
+     "season": "2016/17",
+     "games": 778.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.321337,
+     "u21_games_share": 0.088689
+    },
+    {
+     "season": "2017/18",
+     "games": 789.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.126743,
+     "u21_games_share": 0.067174
+    },
+    {
+     "season": "2018/19",
+     "games": 808.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.164604,
+     "u21_games_share": 0.045792
+    },
+    {
+     "season": "2019/20",
+     "games": 778.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.164524,
+     "u21_games_share": 0.082262
+    },
+    {
+     "season": "2020/21",
+     "games": 774.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.21447,
+     "u21_games_share": 0.074935
+    },
+    {
+     "season": "2021/22",
+     "games": 777.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.144144,
+     "u21_games_share": 0.069498
+    },
+    {
+     "season": "2022/23",
+     "games": 768.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.164062,
+     "u21_games_share": 0.053385
+    },
+    {
+     "season": "2023/24",
+     "games": 759.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.1278,
+     "u21_games_share": 0.040843
+    },
+    {
+     "season": "2024/25",
+     "games": 775.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.203871,
+     "u21_games_share": 0.076129
+    },
+    {
+     "season": "2025/26",
+     "games": 767.0,
+     "age_known_games_share": 1.0,
+     "u24_games_share": 0.156454,
+     "u21_games_share": 0.112125
+    }
+   ],
+   "mean_u24_games_share": 0.208598
+  }
+ },
+ "extraliga_goal": [
+  {
+   "season": "1995/96",
+   "goalies": 37,
+   "home_games_share": 1.0,
+   "unidentified_games_share": 0.0
+  },
+  {
+   "season": "1996/97",
+   "goalies": 39,
+   "home_games_share": 0.964634,
+   "unidentified_games_share": 0.035366
+  },
+  {
+   "season": "1997/98",
+   "goalies": 37,
+   "home_games_share": 1.0,
+   "unidentified_games_share": 0.0
+  },
+  {
+   "season": "1998/99",
+   "goalies": 35,
+   "home_games_share": 1.0,
+   "unidentified_games_share": 0.0
+  },
+  {
+   "season": "1999/00",
+   "goalies": 37,
+   "home_games_share": 0.977273,
+   "unidentified_games_share": 0.022727
+  },
+  {
+   "season": "2000/01",
+   "goalies": 34,
+   "home_games_share": 1.0,
+   "unidentified_games_share": 0.0
+  },
+  {
+   "season": "2001/02",
+   "goalies": 38,
+   "home_games_share": 0.994981,
+   "unidentified_games_share": 0.005019
+  },
+  {
+   "season": "2002/03",
+   "goalies": 38,
+   "home_games_share": 1.0,
+   "unidentified_games_share": 0.0
+  },
+  {
+   "season": "2003/04",
+   "goalies": 40,
+   "home_games_share": 0.94321,
+   "unidentified_games_share": 0.05679
+  },
+  {
+   "season": "2004/05",
+   "goalies": 44,
+   "home_games_share": 0.865915,
+   "unidentified_games_share": 0.076441
+  },
+  {
+   "season": "2005/06",
+   "goalies": 38,
+   "home_games_share": 0.853383,
+   "unidentified_games_share": 0.058897
+  },
+  {
+   "season": "2006/07",
+   "goalies": 50,
+   "home_games_share": 0.863913,
+   "unidentified_games_share": 0.046173
+  },
+  {
+   "season": "2007/08",
+   "goalies": 41,
+   "home_games_share": 0.899128,
+   "unidentified_games_share": 0.043587
+  },
+  {
+   "season": "2008/09",
+   "goalies": 40,
+   "home_games_share": 0.92689,
+   "unidentified_games_share": 0.017348
+  },
+  {
+   "season": "2009/10",
+   "goalies": 42,
+   "home_games_share": 0.874543,
+   "unidentified_games_share": 0.024361
+  },
+  {
+   "season": "2010/11",
+   "goalies": 41,
+   "home_games_share": 0.895,
+   "unidentified_games_share": 0.015
+  },
+  {
+   "season": "2011/12",
+   "goalies": 33,
+   "home_games_share": 0.886169,
+   "unidentified_games_share": 0.02448
+  },
+  {
+   "season": "2012/13",
+   "goalies": 39,
+   "home_games_share": 0.891331,
+   "unidentified_games_share": 0.04884
+  },
+  {
+   "season": "2013/14",
+   "goalies": 37,
+   "home_games_share": 0.83908,
+   "unidentified_games_share": 0.051086
+  },
+  {
+   "season": "2014/15",
+   "goalies": 45,
+   "home_games_share": 0.763547,
+   "unidentified_games_share": 0.013547
+  },
+  {
+   "season": "2015/16",
+   "goalies": 39,
+   "home_games_share": 0.682324,
+   "unidentified_games_share": 0.002472
+  },
+  {
+   "season": "2016/17",
+   "goalies": 40,
+   "home_games_share": 0.66416,
+   "unidentified_games_share": 0.005013
+  },
+  {
+   "season": "2017/18",
+   "goalies": 40,
+   "home_games_share": 0.607417,
+   "unidentified_games_share": 0.0
+  },
+  {
+   "season": "2018/19",
+   "goalies": 41,
+   "home_games_share": 0.742712,
+   "unidentified_games_share": 0.058302
+  },
+  {
+   "season": "2019/20",
+   "goalies": 45,
+   "home_games_share": 0.700629,
+   "unidentified_games_share": 0.028931
+  },
+  {
+   "season": "2020/21",
+   "goalies": 42,
+   "home_games_share": 0.788535,
+   "unidentified_games_share": 0.0
+  },
+  {
+   "season": "2021/22",
+   "goalies": 43,
+   "home_games_share": 0.712389,
+   "unidentified_games_share": 0.002212
+  },
+  {
+   "season": "2022/23",
+   "goalies": 35,
+   "home_games_share": 0.743261,
+   "unidentified_games_share": 0.0
+  },
+  {
+   "season": "2023/24",
+   "goalies": 39,
+   "home_games_share": 0.792453,
+   "unidentified_games_share": 0.018868
+  },
+  {
+   "season": "2024/25",
+   "goalies": 40,
+   "home_games_share": 0.887887,
+   "unidentified_games_share": 0.020619
+  },
+  {
+   "season": "2025/26",
+   "goalies": 38,
+   "home_games_share": 0.859375,
+   "unidentified_games_share": 0.0
+  }
+ ],
+ "national_team": {
+  "roster_spots": 63,
+  "by_category": {
+   "home": 14,
+   "1": 19,
+   "khl": 22,
+   "other": 2,
+   "2": 6
+  },
+  "players": [
+   {
+    "event": "OG",
+    "year": 2010,
+    "name": "Jakub Štěpánek",
+    "club": "Vítkovice",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "OG",
+    "year": 2010,
+    "name": "Ondřej Pavelec",
+    "club": "Atlanta Thrashers",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "OG",
+    "year": 2010,
+    "name": "Tomáš Vokoun",
+    "club": "Florida Panthers",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2010,
+    "name": "Jakub Štěpánek",
+    "club": "Vítkovice Steel",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "WC",
+    "year": 2010,
+    "name": "Ondřej Pavelec",
+    "club": "Atlanta Thrashers",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2010,
+    "name": "Tomáš Vokoun",
+    "club": "Florida Panthers",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2011,
+    "name": "Jakub Kovář",
+    "club": "Motor České Budějovice",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "WC",
+    "year": 2011,
+    "name": "Jakub Štěpánek",
+    "club": "SKA Saint Petersburg",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2011,
+    "name": "Ondřej Pavelec",
+    "club": "Atlanta Thrashers",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2012,
+    "name": "Jakub Kovář",
+    "club": "Motor České Budějovice",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "WC",
+    "year": 2012,
+    "name": "Jakub Štěpánek",
+    "club": "SKA Saint Petersburg",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2012,
+    "name": "Petr Mrázek",
+    "club": "Ottawa 67's",
+    "league": "OHL",
+    "category": "other"
+   },
+   {
+    "event": "WC",
+    "year": 2013,
+    "name": "Alexander Salák",
+    "club": "Färjestad BK",
+    "league": "SHL",
+    "category": "2"
+   },
+   {
+    "event": "WC",
+    "year": 2013,
+    "name": "Ondřej Pavelec",
+    "club": "Winnipeg Jets",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2013,
+    "name": "Pavel Francouz",
+    "club": "HC Litvínov",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "OG",
+    "year": 2014,
+    "name": "Alexander Salák",
+    "club": "SKA Saint Petersburg",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "OG",
+    "year": 2014,
+    "name": "Jakub Kovář",
+    "club": "Avtomobilist Yekaterinburg",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "OG",
+    "year": 2014,
+    "name": "Ondřej Pavelec",
+    "club": "Winnipeg Jets",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2014,
+    "name": "Alexander Salák",
+    "club": "SKA Saint Petersburg",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2014,
+    "name": "Jakub Kovář",
+    "club": "Avt. Yekaterinburg",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2014,
+    "name": "Pavel Francouz",
+    "club": "HC Litvínov",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "WC",
+    "year": 2015,
+    "name": "Alexander Salák",
+    "club": "Sibir Novosibirsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2015,
+    "name": "Jakub Kovář",
+    "club": "Avtomobilist Yekaterinburg",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2015,
+    "name": "Ondřej Pavelec",
+    "club": "Winnipeg Jets",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2016,
+    "name": "Dominik Furch",
+    "club": "Avangard Omsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2016,
+    "name": "Matěj Machovský",
+    "club": "HC Plzeň",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "WC",
+    "year": 2016,
+    "name": "Pavel Francouz",
+    "club": "Traktor Chelyabinsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2017,
+    "name": "Dominik Furch",
+    "club": "Avangard Omsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2017,
+    "name": "Pavel Francouz",
+    "club": "Traktor Chelyabinsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2017,
+    "name": "Petr Mrázek",
+    "club": "Detroit Red Wings",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "OG",
+    "year": 2018,
+    "name": "Dominik Furch",
+    "club": "Avangard Omsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "OG",
+    "year": 2018,
+    "name": "Patrik Bartošák",
+    "club": "HC Vítkovice",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "OG",
+    "year": 2018,
+    "name": "Pavel Francouz",
+    "club": "Traktor Chelyabinsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2018,
+    "name": "David Rittich",
+    "club": "Calgary Flames",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2018,
+    "name": "Dominik Hrachovina",
+    "club": "Tappara",
+    "league": "Liiga",
+    "category": "2"
+   },
+   {
+    "event": "WC",
+    "year": 2018,
+    "name": "Pavel Francouz",
+    "club": "Traktor Chelyabinsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2019,
+    "name": "Patrik Bartošák",
+    "club": "HC Vítkovice Ridera",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "WC",
+    "year": 2019,
+    "name": "Pavel Francouz",
+    "club": "Colorado Avalanche",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2019,
+    "name": "Šimon Hrubec",
+    "club": "HC Oceláři Třinec",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "WC",
+    "year": 2021,
+    "name": "Petr Kváča",
+    "club": "Bílí Tygři Liberec",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "WC",
+    "year": 2021,
+    "name": "Roman Will",
+    "club": "Traktor Chelyabinsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2021,
+    "name": "Šimon Hrubec",
+    "club": "Avangard Omsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "OG",
+    "year": 2022,
+    "name": "Patrik Bartošák",
+    "club": "Amur Khabarovsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "OG",
+    "year": 2022,
+    "name": "Roman Will",
+    "club": "Traktor Chelyabinsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "OG",
+    "year": 2022,
+    "name": "Šimon Hrubec",
+    "club": "Avangard Omsk",
+    "league": "KHL",
+    "category": "khl"
+   },
+   {
+    "event": "WC",
+    "year": 2022,
+    "name": "Karel Vejmelka",
+    "club": "Arizona Coyotes",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2022,
+    "name": "Lukáš Dostál",
+    "club": "San Diego Gulls",
+    "league": "AHL",
+    "category": "other"
+   },
+   {
+    "event": "WC",
+    "year": 2022,
+    "name": "Marek Langhamer",
+    "club": "Ilves",
+    "league": "Liiga",
+    "category": "2"
+   },
+   {
+    "event": "WC",
+    "year": 2023,
+    "name": "Karel Vejmelka",
+    "club": "Arizona Coyotes",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2023,
+    "name": "Marek Langhamer",
+    "club": "Ilves",
+    "league": "Liiga",
+    "category": "2"
+   },
+   {
+    "event": "WC",
+    "year": 2023,
+    "name": "Šimon Hrubec",
+    "club": "ZSC Lions",
+    "league": "NL",
+    "category": "2"
+   },
+   {
+    "event": "WC",
+    "year": 2024,
+    "name": "Karel Vejmelka",
+    "club": "Arizona Coyotes",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2024,
+    "name": "Lukáš Dostál",
+    "club": "Anaheim Ducks",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2024,
+    "name": "Petr Mrázek",
+    "club": "Chicago Blackhawks",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2025,
+    "name": "Daniel Vladař",
+    "club": "Calgary Flames",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2025,
+    "name": "Josef Kořenář",
+    "club": "Sparta Praha",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "WC",
+    "year": 2025,
+    "name": "Karel Vejmelka",
+    "club": "Utah Mammoth",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "OG",
+    "year": 2026,
+    "name": "Daniel Vladař",
+    "club": "Philadelphia Flyers",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "OG",
+    "year": 2026,
+    "name": "Karel Vejmelka",
+    "club": "Utah Mammoth",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "OG",
+    "year": 2026,
+    "name": "Lukáš Dostál",
+    "club": "Anaheim Ducks",
+    "league": "NHL",
+    "category": "1"
+   },
+   {
+    "event": "WC",
+    "year": 2026,
+    "name": "Dominik Pavlát",
+    "club": "Ilves",
+    "league": "Liiga",
+    "category": "2"
+   },
+   {
+    "event": "WC",
+    "year": 2026,
+    "name": "Josef Kořenář",
+    "club": "HC Sparta Praha",
+    "league": "Extraliga",
+    "category": "home"
+   },
+   {
+    "event": "WC",
+    "year": 2026,
+    "name": "Petr Kváča",
+    "club": "HC Bílí Tygři Liberec",
+    "league": "Extraliga",
+    "category": "home"
+   }
+  ]
+ }
+}

@@ -1,0 +1,41 @@
+{% extends "_base.html.j2" %}
+{% block title %}Players — Czech Hockey Atlas{% endblock %}
+{% block description %}Every Czech player with a season in a covered league, {{ pool.window }}: games by season and by rung of the league, and each player's seasons in a table.{% endblock %}
+{% block canonical %}https://hockey.bsandova.com/atlas/{% endblock %}
+{% block scripts %}<script defer src="../atlas.app.js?v={{ v }}"></script>{% endblock %}
+{% block body_attrs %} class="ax-page"{% endblock %}
+
+{% block body %}
+<main class="ax container" data-atlas-app>
+  <header class="ax-head">
+    <p class="ax-kicker">Player pool · {{ pool.players }} players · {{ pool.window }} · {{ pool.latest }} in {{ pool.latest_season }}</p>
+    <h1 class="ax-title">Every Czech player in the covered leagues.</h1>
+    <p class="ax-lead">The <a href="../">report</a> measures the pool against its peers. This is the pool itself: every player of Czech nationality with a regular-season game in the NHL, the SHL, the Liiga, the National League, the DEL or the Extraliga since {{ pool.window[:7] }}, his games by season coloured by the rung of the league, and his seasons when you open his row.</p>
+  </header>
+  <div class="ax-body">
+    <section class="ax-overview" data-ax-overview aria-label="The pool, season by season">
+      <p class="ax-statement">In {{ pool.latest_season }}, {{ pool.by_rung['1'] }} Czech players had NHL games, {{ pool.by_rung['2'] }} played in rung 2 and {{ pool.by_rung['home'] }} in the Extraliga.</p>
+      <div class="ax-chart" data-ax-overview-chart></div>
+      <p class="ax-note">Players by season, each counted once in the highest rung he played in that season. Hover a bar for the numbers.</p>
+    </section>
+    <div class="ax-controls" aria-label="Filter the players">
+      <label class="pool-control pool-control-search">Search <input type="search" data-ax-search autocomplete="off" placeholder="name, team or league"></label>
+      <label class="pool-control">Position <select data-ax-pos><option value="">all</option><option value="F">forwards</option><option value="D">defencemen</option><option value="G">goalkeepers</option></select></label>
+      <label class="pool-control">League {{ pool.latest_season }} <select data-ax-rung><option value="">all</option><option value="1">NHL</option><option value="2">rung 2</option><option value="home">Extraliga</option><option value="none">not in a covered league</option></select></label>
+      <label class="pool-control">Sort by <select data-ax-sort><option value="games">games {{ pool.latest_season }}</option><option value="total">games since {{ pool.window[:7] }}</option><option value="rung">highest rung</option><option value="age">age</option><option value="name">name</option></select></label>
+    </div>
+    <p class="ax-legend ax-rungs" data-ax-rungs aria-label="Rung of the league"></p>
+    <p class="ax-count"><span data-ax-count>{{ pool.players }} players</span> · click a row to open his seasons</p>
+    <table class="ax-grid" aria-label="players">
+      <thead data-ax-head><tr><th scope="col">player</th><th scope="col" class="num">age</th><th scope="col">pos.</th><th scope="col">team, league</th><th scope="col" class="ax-col-spark">games by season</th><th scope="col" class="num">GP {{ pool.latest_season[2:] }}</th></tr></thead>
+      <tbody data-ax-list></tbody>
+    </table>
+    <p class="chart-empty" data-ax-empty hidden>no player matches</p>
+    <p class="ax-more-row"><button type="button" class="ax-btn ax-more" data-ax-more hidden>show 50 more</button></p>
+    <noscript><p class="ax-note">The list needs JavaScript. The same data is in <a href="pool.json">pool.json</a>.</p></noscript>
+  </div>
+  <footer class="ax-foot">
+    <p>Czech nationality follows the report's <a href="../#nationality">one definition</a>: citizenship where a league publishes it, then the national-team roster, then eligibility. For {{ pool.eligibility_only }} of the {{ pool.players }} players the only evidence is the Extraliga foreigner flag or a licence ({{ pool.by_basis.citizenship }} by citizenship, {{ pool.by_basis.national_team }} by a national-team roster). Age is the season start year minus the birth year. Not covered: the KHL (by design), the AHL (its terms), the Czech 1st league and every other league; a season there is absent here, not zero. Sources and access dates are on the <a href="../#data-sources">report page</a>.</p>
+  </footer>
+</main>
+{% endblock %}

@@ -1,4 +1,6 @@
-.PHONY: help install install-browsers fetch features reduce render all clean test lint check
+.PHONY: help install install-browsers fetch features reduce render all clean test lint check \
+	fetch-nhl fetch-eurostat fetch-liiga fetch-shl fetch-extraliga verify-snapshot restore-snapshot \
+	analysis analysis-fast pages
 
 PYTHON ?= python
 VENV   ?= .venv
@@ -9,9 +11,19 @@ help:
 	@echo "  install          Create .venv, install deps with uv (or pip fallback)"
 	@echo "  install-browsers Install Playwright browsers (Chromium only)"
 	@echo "  fetch            Run all fetchers (NHL, MoneyPuck, Liiga, SHL, NL, Extraliga, IIHF)"
+	@echo "  fetch-nhl        NHL skaters, goalies and careers 1995/96-2025/26 -> data/snapshot/"
+	@echo "  fetch-eurostat   Eurostat 1 January population 1995-2026 -> data/snapshot/"
+	@echo "  fetch-liiga      Liiga skaters and goalies 1995/96-2025/26 -> data/snapshot/"
+	@echo "  fetch-shl        SHL skaters and goalies 1995/96-2025/26 -> data/snapshot/"
+	@echo "  fetch-extraliga  Extraliga skaters, goalies, birth dates 1995/96-2025/26 (hokej.cz, ~1 h cold)"
+	@echo "  verify-snapshot  Check data/snapshot/ against its SHA256SUMS"
+	@echo "  analysis         Spec questions 1-7, linking and the pool list -> outputs/*.json (~6 min, PyMC)"
+	@echo "  analysis-fast    The same without refitting the break model (q2)"
+	@echo "  restore-snapshot Copy data/snapshot/ into data/processed/ (never overwrites newer files)"
 	@echo "  features         Build position-specific feature vectors"
 	@echo "  reduce           Run PCA + UMAP + KMeans"
-	@echo "  render           Render HTML + PDF report"
+	@echo "  render           Render the legacy HTML + PDF report (not the site)"
+	@echo "  pages            Render the site (docs/index.html, docs/atlas/) from outputs/"
 	@echo "  all              fetch -> features -> reduce -> render"
 	@echo "  test             Run pytest"
 	@echo "  lint             Run ruff check"
@@ -37,6 +49,33 @@ fetch:
 	$(ACT) python -m src.fetch_extraliga
 	$(ACT) python -m src.fetch_iihf
 	$(ACT) python -m src.crosswalk
+
+fetch-nhl:
+	$(ACT) python -m src.fetch.nhl
+
+fetch-eurostat:
+	$(ACT) python -m src.fetch.eurostat
+
+fetch-liiga:
+	$(ACT) python -m src.fetch.liiga
+
+fetch-shl:
+	$(ACT) python -m src.fetch.shl
+
+fetch-extraliga:
+	$(ACT) python -m src.fetch.extraliga
+
+verify-snapshot:
+	$(ACT) python -m src.snapshot verify
+
+analysis:
+	$(ACT) python -m src.analysis
+
+analysis-fast:
+	$(ACT) python -m src.analysis --skip-model
+
+restore-snapshot:
+	$(ACT) python -m src.snapshot restore
 
 features:
 	$(ACT) python -m src.features_forwards
@@ -66,13 +105,7 @@ clean:
 	@echo "Cleaned processed/ and outputs/ (raw/ preserved)"
 
 pages:
-	# The Czech render is the content source; the published page is English
-	# (site/translate_index.py). The pristine, Czech-labelled figures live in
-	# site/source/figures/: site/svg_labels.py writes the English copies into
-	# docs/ and site/svg_theme.py recolours them into the register.
-	cp outputs/index.html site/source/index.cs.html
-	cp outputs/style.css docs/
-	cp outputs/atlas_forwards.svg outputs/atlas_defense.svg outputs/intl_cohort_heatmap.svg site/source/figures/
-	cp outputs/report.pdf docs/
+	# The report (docs/index.html) and the pool page (docs/atlas/) from outputs/*.json:
+	# src/web renders templates/site/ and copies its static assets; CNAME and img/ stay.
 	./site/build.sh
 	@echo "Built docs/ for GitHub Pages (English)"

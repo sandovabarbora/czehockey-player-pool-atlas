@@ -88,6 +88,18 @@ make all                # fetch -> features -> reduce -> render
 
 Output at `outputs/index.html` and `outputs/report.pdf`.
 
+### The published site
+
+```bash
+make analysis           # outputs/*.json from the committed snapshot (~6 min)
+make pages              # docs/index.html (report) and docs/atlas/ (pool page)
+```
+
+`src/web/` renders `templates/site/*.html.j2` from `outputs/*.json` and copies the
+static assets in `templates/site/static/` (the football atlas's A24 register, held
+colour #1F5FD6, and the chart scripts) into `docs/`. Every number on the pages is
+read from `outputs/`; `tests/test_site_render.py` fails when `docs/` is stale.
+
 ## What this project is not
 
 - It is not a selection recommendation.

@@ -1,0 +1,171 @@
+{
+ "source": "data.sihf.ch Statistic API (cache300), National League, regular season",
+ "nationality_basis": "licence only: Swiss or foreign licence (eligibility, not citizenship); skaters only, goalies unknown",
+ "birth_date": "not published by the source",
+ "player_id": "not published by the source; players are keyed by name and team",
+ "time_on_ice": "goalies only (time played); skaters have none",
+ "seasons": [
+  {
+   "season": "2008/09",
+   "phase_id": "1",
+   "skaters": 333,
+   "goalies": 32,
+   "teams": 13,
+   "foreign_licence": 69,
+   "max_games": 51
+  },
+  {
+   "season": "2009/10",
+   "phase_id": "153",
+   "skaters": 360,
+   "goalies": 26,
+   "teams": 13,
+   "foreign_licence": 68,
+   "max_games": 51
+  },
+  {
+   "season": "2010/11",
+   "phase_id": "431",
+   "skaters": 361,
+   "goalies": 27,
+   "teams": 13,
+   "foreign_licence": 67,
+   "max_games": 50
+  },
+  {
+   "season": "2011/12",
+   "phase_id": "766",
+   "skaters": 377,
+   "goalies": 26,
+   "teams": 13,
+   "foreign_licence": 71,
+   "max_games": 51
+  },
+  {
+   "season": "2012/13",
+   "phase_id": "1047",
+   "skaters": 375,
+   "goalies": 32,
+   "teams": 13,
+   "foreign_licence": 84,
+   "max_games": 50
+  },
+  {
+   "season": "2013/14",
+   "phase_id": "1346",
+   "skaters": 358,
+   "goalies": 33,
+   "teams": 13,
+   "foreign_licence": 69,
+   "max_games": 50
+  },
+  {
+   "season": "2014/15",
+   "phase_id": "1634",
+   "skaters": 362,
+   "goalies": 35,
+   "teams": 13,
+   "foreign_licence": 70,
+   "max_games": 50
+  },
+  {
+   "season": "2015/16",
+   "phase_id": "1833",
+   "skaters": 364,
+   "goalies": 30,
+   "teams": 13,
+   "foreign_licence": 72,
+   "max_games": 50
+  },
+  {
+   "season": "2016/17",
+   "phase_id": "2158",
+   "skaters": 347,
+   "goalies": 28,
+   "teams": 13,
+   "foreign_licence": 70,
+   "max_games": 50
+  },
+  {
+   "season": "2017/18",
+   "phase_id": "2443",
+   "skaters": 369,
+   "goalies": 33,
+   "teams": 13,
+   "foreign_licence": 73,
+   "max_games": 50
+  },
+  {
+   "season": "2018/19",
+   "phase_id": "2823",
+   "skaters": 345,
+   "goalies": 26,
+   "teams": 13,
+   "foreign_licence": 72,
+   "max_games": 50
+  },
+  {
+   "season": "2019/20",
+   "phase_id": "3092",
+   "skaters": 351,
+   "goalies": 32,
+   "teams": 13,
+   "foreign_licence": 74,
+   "max_games": 50
+  },
+  {
+   "season": "2020/21",
+   "phase_id": "3478",
+   "skaters": 375,
+   "goalies": 34,
+   "teams": 13,
+   "foreign_licence": 64,
+   "max_games": 52
+  },
+  {
+   "season": "2021/22",
+   "phase_id": "3572",
+   "skaters": 398,
+   "goalies": 47,
+   "teams": 14,
+   "foreign_licence": 78,
+   "max_games": 52
+  },
+  {
+   "season": "2022/23",
+   "phase_id": "3884",
+   "skaters": 413,
+   "goalies": 44,
+   "teams": 15,
+   "foreign_licence": 107,
+   "max_games": 52
+  },
+  {
+   "season": "2023/24",
+   "phase_id": "4259",
+   "skaters": 408,
+   "goalies": 40,
+   "teams": 15,
+   "foreign_licence": 106,
+   "max_games": 52
+  },
+  {
+   "season": "2024/25",
+   "phase_id": "4595",
+   "skaters": 410,
+   "goalies": 40,
+   "teams": 15,
+   "foreign_licence": 104,
+   "max_games": 52
+  },
+  {
+   "season": "2025/26",
+   "phase_id": "4940",
+   "skaters": 425,
+   "goalies": 35,
+   "teams": 15,
+   "foreign_licence": 116,
+   "max_games": 52
+  }
+ ]
+}

@@ -1,0 +1,844 @@
+{
+ "source": "shl.se statistics-v2 JSON, SHL regular season",
+ "toi_from": "2009/10",
+ "seasons": [
+  {
+   "season": "1995/96",
+   "skater_rows": 280,
+   "goalie_rows": 36,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.057,
+   "birth_date_share": 0.057,
+   "nationality_share": 0.057,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.9357,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 18,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "1996/97",
+   "skater_rows": 314,
+   "goalie_rows": 41,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.0817,
+   "birth_date_share": 0.0817,
+   "nationality_share": 0.0817,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.9076,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 1,
+    "SWE": 28,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "1997/98",
+   "skater_rows": 288,
+   "goalie_rows": 40,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.0945,
+   "birth_date_share": 0.0945,
+   "nationality_share": 0.0945,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.8924,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 31,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "1998/99",
+   "skater_rows": 271,
+   "goalie_rows": 36,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.1205,
+   "birth_date_share": 0.1205,
+   "nationality_share": 0.1205,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.8635,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 36,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 1,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "1999/00",
+   "skater_rows": 291,
+   "goalie_rows": 39,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.1303,
+   "birth_date_share": 0.1303,
+   "nationality_share": 0.1303,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.8522,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 42,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 1,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2000/01",
+   "skater_rows": 303,
+   "goalie_rows": 42,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.1652,
+   "birth_date_share": 0.1652,
+   "nationality_share": 0.1623,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.8119,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 1,
+    "SWE": 53,
+    "CHE": 0,
+    "SVK": 1,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 1,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2001/02",
+   "skater_rows": 316,
+   "goalie_rows": 36,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.1733,
+   "birth_date_share": 0.1733,
+   "nationality_share": 0.1705,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.807,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 56,
+    "CHE": 1,
+    "SVK": 2,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 1,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2002/03",
+   "skater_rows": 321,
+   "goalie_rows": 30,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.1909,
+   "birth_date_share": 0.1909,
+   "nationality_share": 0.188,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.7913,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 1,
+    "FIN": 3,
+    "SWE": 61,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 1,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2003/04",
+   "skater_rows": 328,
+   "goalie_rows": 35,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.2562,
+   "birth_date_share": 0.2562,
+   "nationality_share": 0.2534,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.7165,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 1,
+    "FIN": 4,
+    "SWE": 83,
+    "CHE": 0,
+    "SVK": 2,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 2,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2004/05",
+   "skater_rows": 353,
+   "goalie_rows": 36,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.329,
+   "birth_date_share": 0.329,
+   "nationality_share": 0.3239,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.6402,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 1,
+    "FIN": 6,
+    "SWE": 113,
+    "CHE": 1,
+    "SVK": 3,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 2,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2005/06",
+   "skater_rows": 344,
+   "goalie_rows": 29,
+   "goalie_source": [
+    "players_summary"
+   ],
+   "uuid_share": 0.3432,
+   "birth_date_share": 0.3432,
+   "nationality_share": 0.3405,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.6366,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 0.0,
+   "nations": {
+    "CZE": 2,
+    "FIN": 4,
+    "SWE": 115,
+    "CHE": 0,
+    "SVK": 1,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 1,
+    "NOR": 3,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2006/07",
+   "skater_rows": 354,
+   "goalie_rows": 31,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.3896,
+   "birth_date_share": 0.3896,
+   "nationality_share": 0.3896,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.613,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 1,
+    "FIN": 9,
+    "SWE": 131,
+    "CHE": 0,
+    "SVK": 3,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 1,
+    "NOR": 5,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2007/08",
+   "skater_rows": 350,
+   "goalie_rows": 30,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.4947,
+   "birth_date_share": 0.4947,
+   "nationality_share": 0.4895,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.5257,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 1,
+    "FIN": 8,
+    "SWE": 166,
+    "CHE": 0,
+    "SVK": 3,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 4,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2008/09",
+   "skater_rows": 359,
+   "goalie_rows": 34,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.5471,
+   "birth_date_share": 0.5471,
+   "nationality_share": 0.542,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.4958,
+   "skater_toi_share": 0.0,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 5,
+    "FIN": 11,
+    "SWE": 177,
+    "CHE": 0,
+    "SVK": 3,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 7,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2009/10",
+   "skater_rows": 373,
+   "goalie_rows": 30,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.6278,
+   "birth_date_share": 0.6278,
+   "nationality_share": 0.6278,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.437,
+   "skater_toi_share": 0.9759,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 4,
+    "FIN": 8,
+    "SWE": 218,
+    "CHE": 0,
+    "SVK": 2,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 1,
+    "NOR": 10,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2010/11",
+   "skater_rows": 373,
+   "goalie_rows": 33,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.7488,
+   "birth_date_share": 0.7488,
+   "nationality_share": 0.7488,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.3137,
+   "skater_toi_share": 0.9866,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 6,
+    "FIN": 17,
+    "SWE": 257,
+    "CHE": 0,
+    "SVK": 3,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 1,
+    "NOR": 10,
+    "AUT": 1
+   }
+  },
+  {
+   "season": "2011/12",
+   "skater_rows": 378,
+   "goalie_rows": 29,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.9459,
+   "birth_date_share": 0.9459,
+   "nationality_share": 0.9459,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.1349,
+   "skater_toi_share": 0.9788,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 8,
+    "FIN": 21,
+    "SWE": 304,
+    "CHE": 3,
+    "SVK": 4,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 2,
+    "NOR": 14,
+    "AUT": 2
+   }
+  },
+  {
+   "season": "2012/13",
+   "skater_rows": 377,
+   "goalie_rows": 29,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.9409,
+   "birth_date_share": 0.9409,
+   "nationality_share": 0.9409,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.183,
+   "skater_toi_share": 0.9814,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 7,
+    "FIN": 18,
+    "SWE": 289,
+    "CHE": 3,
+    "SVK": 8,
+    "DEU": 2,
+    "LVA": 1,
+    "DNK": 4,
+    "NOR": 13,
+    "AUT": 1
+   }
+  },
+  {
+   "season": "2013/14",
+   "skater_rows": 386,
+   "goalie_rows": 38,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.9528,
+   "birth_date_share": 0.9528,
+   "nationality_share": 0.9528,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.1788,
+   "skater_toi_share": 0.987,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 6,
+    "FIN": 20,
+    "SWE": 303,
+    "CHE": 3,
+    "SVK": 1,
+    "DEU": 0,
+    "LVA": 3,
+    "DNK": 0,
+    "NOR": 10,
+    "AUT": 1
+   }
+  },
+  {
+   "season": "2014/15",
+   "skater_rows": 399,
+   "goalie_rows": 33,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.9931,
+   "birth_date_share": 0.9931,
+   "nationality_share": 0.9931,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.1454,
+   "skater_toi_share": 0.9674,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 8,
+    "FIN": 31,
+    "SWE": 320,
+    "CHE": 3,
+    "SVK": 7,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 1,
+    "NOR": 8,
+    "AUT": 1
+   }
+  },
+  {
+   "season": "2015/16",
+   "skater_rows": 461,
+   "goalie_rows": 35,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.998,
+   "birth_date_share": 0.998,
+   "nationality_share": 0.998,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.1388,
+   "skater_toi_share": 0.9588,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 5,
+    "FIN": 28,
+    "SWE": 371,
+    "CHE": 1,
+    "SVK": 8,
+    "DEU": 1,
+    "LVA": 0,
+    "DNK": 7,
+    "NOR": 12,
+    "AUT": 1
+   }
+  },
+  {
+   "season": "2016/17",
+   "skater_rows": 445,
+   "goalie_rows": 32,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 1.0,
+   "birth_date_share": 1.0,
+   "nationality_share": 1.0,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.1708,
+   "skater_toi_share": 0.9708,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 2,
+    "FIN": 22,
+    "SWE": 365,
+    "CHE": 1,
+    "SVK": 6,
+    "DEU": 2,
+    "LVA": 0,
+    "DNK": 9,
+    "NOR": 15,
+    "AUT": 3
+   }
+  },
+  {
+   "season": "2017/18",
+   "skater_rows": 455,
+   "goalie_rows": 36,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 1.0,
+   "birth_date_share": 1.0,
+   "nationality_share": 1.0,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.1802,
+   "skater_toi_share": 0.9648,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 1,
+    "FIN": 22,
+    "SWE": 380,
+    "CHE": 0,
+    "SVK": 3,
+    "DEU": 1,
+    "LVA": 1,
+    "DNK": 10,
+    "NOR": 8,
+    "AUT": 2
+   }
+  },
+  {
+   "season": "2018/19",
+   "skater_rows": 455,
+   "goalie_rows": 34,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.9877,
+   "birth_date_share": 0.9877,
+   "nationality_share": 0.9877,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.2374,
+   "skater_toi_share": 0.9495,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 4,
+    "FIN": 22,
+    "SWE": 386,
+    "CHE": 1,
+    "SVK": 3,
+    "DEU": 1,
+    "LVA": 1,
+    "DNK": 11,
+    "NOR": 7,
+    "AUT": 1
+   }
+  },
+  {
+   "season": "2019/20",
+   "skater_rows": 446,
+   "goalie_rows": 37,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 0.9959,
+   "birth_date_share": 0.9959,
+   "nationality_share": 0.9938,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.2691,
+   "skater_toi_share": 0.9731,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 5,
+    "FIN": 22,
+    "SWE": 388,
+    "CHE": 0,
+    "SVK": 2,
+    "DEU": 2,
+    "LVA": 0,
+    "DNK": 8,
+    "NOR": 9,
+    "AUT": 1
+   }
+  },
+  {
+   "season": "2020/21",
+   "skater_rows": 451,
+   "goalie_rows": 35,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 1.0,
+   "birth_date_share": 1.0,
+   "nationality_share": 1.0,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.2794,
+   "skater_toi_share": 0.9667,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 4,
+    "FIN": 27,
+    "SWE": 375,
+    "CHE": 1,
+    "SVK": 3,
+    "DEU": 2,
+    "LVA": 1,
+    "DNK": 8,
+    "NOR": 10,
+    "AUT": 2
+   }
+  },
+  {
+   "season": "2021/22",
+   "skater_rows": 461,
+   "goalie_rows": 35,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 1.0,
+   "birth_date_share": 1.0,
+   "nationality_share": 1.0,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.3145,
+   "skater_toi_share": 0.9479,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 13,
+    "FIN": 26,
+    "SWE": 370,
+    "CHE": 1,
+    "SVK": 2,
+    "DEU": 3,
+    "LVA": 7,
+    "DNK": 9,
+    "NOR": 9,
+    "AUT": 2
+   }
+  },
+  {
+   "season": "2022/23",
+   "skater_rows": 457,
+   "goalie_rows": 36,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 1.0,
+   "birth_date_share": 1.0,
+   "nationality_share": 1.0,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.3392,
+   "skater_toi_share": 0.9694,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 10,
+    "FIN": 46,
+    "SWE": 359,
+    "CHE": 1,
+    "SVK": 3,
+    "DEU": 2,
+    "LVA": 2,
+    "DNK": 10,
+    "NOR": 8,
+    "AUT": 2
+   }
+  },
+  {
+   "season": "2023/24",
+   "skater_rows": 428,
+   "goalie_rows": 38,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 1.0,
+   "birth_date_share": 1.0,
+   "nationality_share": 1.0,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.4346,
+   "skater_toi_share": 0.9579,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 11,
+    "FIN": 35,
+    "SWE": 347,
+    "CHE": 1,
+    "SVK": 5,
+    "DEU": 1,
+    "LVA": 3,
+    "DNK": 9,
+    "NOR": 7,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2024/25",
+   "skater_rows": 445,
+   "goalie_rows": 37,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 1.0,
+   "birth_date_share": 1.0,
+   "nationality_share": 0.9378,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.5124,
+   "skater_toi_share": 0.9708,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 8,
+    "FIN": 37,
+    "SWE": 336,
+    "CHE": 3,
+    "SVK": 5,
+    "DEU": 0,
+    "LVA": 2,
+    "DNK": 9,
+    "NOR": 9,
+    "AUT": 2
+   }
+  },
+  {
+   "season": "2025/26",
+   "skater_rows": 432,
+   "goalie_rows": 36,
+   "goalie_source": [
+    "goalkeepers_summary"
+   ],
+   "uuid_share": 1.0,
+   "birth_date_share": 1.0,
+   "nationality_share": 0.9124,
+   "nationality_backfilled": 0,
+   "skater_position_share": 0.6597,
+   "skater_toi_share": 0.9838,
+   "goalie_toi_share": 1.0,
+   "nations": {
+    "CZE": 9,
+    "FIN": 38,
+    "SWE": 310,
+    "CHE": 4,
+    "SVK": 4,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 3,
+    "NOR": 12,
+    "AUT": 1
+   }
+  }
+ ],
+ "unmapped_nationality_codes": []
+}

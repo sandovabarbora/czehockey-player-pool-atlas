@@ -1,0 +1,313 @@
+[
+ {
+  "dataColumns": [
+   {
+    "name": "Rank",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "Player",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "Team",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "TOI_GP",
+    "type": "string",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "TOI",
+    "type": "string",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "GP",
+    "type": "integer",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "PPTOI_GP",
+    "type": "string",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "SHTOI_GP",
+    "type": "string",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "PPTOIPerc",
+    "type": "percentage_two",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "SHTOIPerc",
+    "type": "percentage_two",
+    "highlighted": false,
+    "group": ""
+   }
+  ],
+  "stats": [
+   {
+    "Rank": 17,
+    "Player": 0,
+    "Team": 0,
+    "TOI_GP": "22:17",
+    "TOI": "20:25:08",
+    "GP": 55,
+    "PPTOI_GP": "4:43",
+    "SHTOI_GP": "1:47",
+    "PPTOIPerc": "21.16",
+    "SHTOIPerc": "7.97",
+    "info": {
+     "fullName": "Mats Zuccarello Aasen",
+     "firstName": "Mats",
+     "lastName": "Zuccarello Aasen",
+     "birthDate": "N/A",
+     "nationality": "N/A",
+     "number": 36,
+     "position": "F",
+     "gender": "N/A",
+     "team": {
+      "uuid": "110b-110bJcIAI",
+      "name": "MoDo Hockey",
+      "code": "MoDo",
+      "siteDisplayName": "MoDo Hockey"
+     },
+     "teamCode": "MODO",
+     "teamId": "110b-110bJcIAI"
+    }
+   },
+   {
+    "Rank": 29,
+    "Player": 0,
+    "Team": 0,
+    "TOI_GP": "21:26",
+    "TOI": "19:38:49",
+    "GP": 55,
+    "PPTOI_GP": "4:16",
+    "SHTOI_GP": "2:08",
+    "PPTOIPerc": "19.92",
+    "SHTOIPerc": "9.95",
+    "info": {
+     "uuid": "qTM-5cO3AVdOO",
+     "fullName": "Tony Mårtensson",
+     "firstName": "Tony",
+     "lastName": "Mårtensson",
+     "birthDate": "1980-06-23",
+     "nationality": "SE",
+     "gender": "",
+     "team": {
+      "uuid": "41c4-41c4BiYZU",
+      "name": "Linköping HC",
+      "code": "LHC",
+      "siteDisplayName": "Linköping HC"
+     },
+     "teamCode": "LHC",
+     "teamId": "41c4-41c4BiYZU"
+    }
+   },
+   {
+    "Rank": 91,
+    "Player": 0,
+    "Team": 0,
+    "TOI_GP": "17:44",
+    "TOI": "15:58:03",
+    "GP": 54,
+    "PPTOI_GP": "3:17",
+    "SHTOI_GP": "0:44",
+    "PPTOIPerc": "18.49",
+    "SHTOIPerc": "4.17",
+    "info": {
+     "fullName": "Niklas Andersson",
+     "firstName": "Niklas",
+     "lastName": "Andersson",
+     "birthDate": "N/A",
+     "nationality": "N/A",
+     "number": 24,
+     "position": "F",
+     "gender": "N/A",
+     "team": {
+      "uuid": "087a-087aTQv9u",
+      "name": "Frölunda HC",
+      "code": "FHC",
+      "siteDisplayName": "Frölunda HC"
+     },
+     "teamCode": "FHC",
+     "teamId": "087a-087aTQv9u"
+    }
+   },
+   {
+    "Rank": 121,
+    "Player": 0,
+    "Team": 0,
+    "TOI_GP": "16:54",
+    "TOI": "12:40:46",
+    "GP": 45,
+    "PPTOI_GP": "3:06",
+    "SHTOI_GP": "1:58",
+    "PPTOIPerc": "18.32",
+    "SHTOIPerc": "11.63",
+    "info": {
+     "uuid": "qQ9-ff61SpluS",
+     "fullName": "Patrik Zackrisson",
+     "firstName": "Patrik",
+     "lastName": "Zackrisson",
+     "birthDate": "1987-03-27",
+     "nationality": "SE",
+     "number": 9,
+     "position": "F",
+     "gender": "male",
+     "team": {
+      "uuid": "41c4-41c4BiYZU",
+      "name": "Linköping HC",
+      "code": "LHC",
+      "siteDisplayName": "Linköping HC"
+     },
+     "teamCode": "LHC",
+     "teamId": "41c4-41c4BiYZU"
+    }
+   },
+   {
+    "Rank": 133,
+    "Player": 0,
+    "Team": 0,
+    "TOI_GP": "16:25",
+    "TOI": "14:29:51",
+    "GP": 53,
+    "PPTOI_GP": "3:00",
+    "SHTOI_GP": "1:25",
+    "PPTOIPerc": "18.23",
+    "SHTOIPerc": "8.67",
+    "info": {
+     "uuid": "qQ9-e9d5REkBM",
+     "fullName": "Per Åslund",
+     "firstName": "Per",
+     "lastName": "Åslund",
+     "birthDate": "1986-08-21",
+     "nationality": "SE",
+     "number": 22,
+     "position": "F",
+     "gender": "male",
+     "team": {
+      "uuid": "752c-752c12zB7Z",
+      "name": "Färjestad BK",
+      "code": "FBK",
+      "siteDisplayName": "Färjestad BK"
+     },
+     "teamCode": "FBK",
+     "teamId": "752c-752c12zB7Z"
+    }
+   },
+   {
+    "Rank": 345,
+    "Player": 0,
+    "Team": 0,
+    "TOI_GP": "0:09",
+    "TOI": "0:01:00",
+    "GP": 7,
+    "PPTOI_GP": "0:00",
+    "SHTOI_GP": "0:00",
+    "PPTOIPerc": 0,
+    "SHTOIPerc": 0,
+    "info": {
+     "fullName": "Niklas Andersson",
+     "firstName": "Niklas",
+     "lastName": "Andersson",
+     "birthDate": "N/A",
+     "nationality": "N/A",
+     "number": 24,
+     "position": "D",
+     "gender": "N/A",
+     "team": {
+      "uuid": "2459-2459QTs1f",
+      "name": "Djurgårdens IF",
+      "code": "DIF",
+      "siteDisplayName": "Djurgårdens IF"
+     },
+     "teamCode": "DIF",
+     "teamId": "2459-2459QTs1f"
+    }
+   }
+  ],
+  "players": {
+   "422": {
+    "type": "athlete",
+    "id": 422,
+    "firstName": "Tony",
+    "lastName": "Mårtensson",
+    "uuid": "qTM-5cO3AVdOO",
+    "fullName": "Tony Mårtensson",
+    "dateOfBirth": "1980-06-23",
+    "nationality": "SE",
+    "gender": ""
+   },
+   "481": {
+    "type": "athlete",
+    "id": 481,
+    "firstName": "Niklas",
+    "lastName": "Andersson",
+    "jerseyNumber": 24,
+    "position": "F"
+   },
+   "664": {
+    "type": "athlete",
+    "id": 664,
+    "firstName": "Per",
+    "lastName": "Åslund",
+    "jerseyNumber": 22,
+    "position": "F",
+    "uuid": "qQ9-e9d5REkBM",
+    "fullName": "Per Åslund",
+    "dateOfBirth": "1986-08-21",
+    "nationality": "SE",
+    "gender": "male"
+   },
+   "904": {
+    "type": "athlete",
+    "id": 904,
+    "firstName": "Patrik",
+    "lastName": "Zackrisson",
+    "jerseyNumber": 9,
+    "position": "F",
+    "uuid": "qQ9-ff61SpluS",
+    "fullName": "Patrik Zackrisson",
+    "dateOfBirth": "1987-03-27",
+    "nationality": "SE",
+    "gender": "male"
+   },
+   "1144": {
+    "type": "athlete",
+    "id": 1144,
+    "firstName": "Mats",
+    "lastName": "Zuccarello Aasen",
+    "jerseyNumber": 36,
+    "position": "F"
+   },
+   "1194": {
+    "type": "athlete",
+    "id": 1194,
+    "firstName": "Niklas",
+    "lastName": "Andersson",
+    "jerseyNumber": 24,
+    "position": "D"
+   }
+  },
+  "totalCount": 6
+ }
+]

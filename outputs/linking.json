@@ -1,0 +1,2282 @@
+{
+ "meta": {
+  "inputs": {
+   "del_goalies.parquet": "85afcda9b8f8c849800e89086001ebcc7433cd7de6c1e299d82f555801463213",
+   "del_skaters.parquet": "6e8bc872969e5e43e2831abb922d64fca3460db9649ce93f2fcf9cc0fa32a36f",
+   "extraliga_goalies.parquet": "1607e0d36b2852b849a830217a68259802728863163e3ff35cfbfb61a6727b07",
+   "extraliga_skaters.parquet": "7c372c4989dc3af8c6ad044bcbd77626bc3e31347fb6ee5436aecc2698b856ed",
+   "liiga_goalies.parquet": "e7ab79b3f65a225a8d8e9884a3d60446bfc1e354756332811c01cf03975ea3c6",
+   "liiga_skaters.parquet": "141c75ceede7edfa9cacc55f6e1ca71217c04bbd8300e5bbcd6a0c8756cb1ae1",
+   "nhl_goalies.parquet": "a16be42c492ab8be86eeaa1e63433cbdc9a4d7b699acfdb0dc8aeb306b6bff64",
+   "nhl_skaters.parquet": "d42f3feb41ae5238ab6ad3f3cadfc5889109839fcbc529ef5311701b7da05fc9",
+   "nl_goalies.parquet": "1cbc7d9b50e2d9dbf5e3f6c242a34bd624268eff6b02ee6cbd97897b3d2e1512",
+   "nl_skaters.parquet": "1497f2e2740caba1d4d47cea0ed1cf56ade5647dc99197204de39340a6293c60",
+   "rosters.parquet": "566d51646bf864e718fa4e5634dd4b013d3099aa05ff4997d16a67a63e338752",
+   "shl_goalies.parquet": "397a50791cebbf0fc8cd2d5f4f68774452e8b313a6c0b3705d6f0b2356cd1aac",
+   "shl_skaters.parquet": "0744828aed80a1c2bdf52f05924d3700fc7d5639be402ddd8c600c67edc4a819"
+  }
+ },
+ "definitions": {
+  "link_key": "name: diacritics folded, lower case, hyphens as spaces, tokens sorted",
+  "step_1": "name + full birth date",
+  "step_1b": "first-name initial + surname + full birth date (first-name variants such as Dan/Daniel)",
+  "step_2": "records without a birth date: name only, when exactly one person with that name has seasons within 4 seasons and no contradicting birth year",
+  "step_2b": "records still unmatched: same league, same name, seasons within 4",
+  "nationality_order": [
+   "citizenship (NHL first, else most frequent Liiga/SHL code)",
+   "national-team roster (IIHF eligibility)",
+   "eligibility or licence (DEL Nat, Extraliga foreigner flag, NL Swiss licence)"
+  ],
+  "czechoslovakia": "the NHL recodes Czechoslovak-era births to CZE or SVK; that code is used",
+  "sources": {
+   "NHL": "nationalityCode: citizenship",
+   "Liiga": "nationality: citizenship",
+   "SHL": "nationality where not N/A: citizenship (N/A before about 2010)",
+   "Extraliga": "foreigner flag: not a foreigner -> CZE (eligibility); foreigners have no code",
+   "DEL": "Nat, 2022/23 onward: licence (eligibility)",
+   "NL": "Swiss licence -> CHE (eligibility); foreign licence and goalies have no code",
+   "roster": "World Championship and Olympic rosters from 2010: national team"
+  }
+ },
+ "persons": 17991,
+ "persons_with_nationality": 14309,
+ "records_by_league": {
+  "NHL": {
+   "records": 5004,
+   "with_birth_date": 5004,
+   "with_birth_date_share": 1.0,
+   "linked_on_name_and_birth_date_to_another_source": 2602,
+   "linked_on_first_name_variant": 0,
+   "without_birth_date": 0,
+   "name_only_linked": 0,
+   "ambiguous": 0,
+   "unmatched": 0,
+   "joined_within_league_on_name": 0,
+   "name_only_link_rate": null
+  },
+  "SHL": {
+   "records": 4023,
+   "with_birth_date": 2423,
+   "with_birth_date_share": 0.602287,
+   "linked_on_name_and_birth_date_to_another_source": 1213,
+   "linked_on_first_name_variant": 5,
+   "without_birth_date": 1600,
+   "name_only_linked": 566,
+   "ambiguous": 12,
+   "unmatched": 956,
+   "joined_within_league_on_name": 66,
+   "name_only_link_rate": 0.35375
+  },
+  "Liiga": {
+   "records": 4036,
+   "with_birth_date": 4036,
+   "with_birth_date_share": 1.0,
+   "linked_on_name_and_birth_date_to_another_source": 1692,
+   "linked_on_first_name_variant": 25,
+   "without_birth_date": 0,
+   "name_only_linked": 0,
+   "ambiguous": 0,
+   "unmatched": 0,
+   "joined_within_league_on_name": 0,
+   "name_only_link_rate": null
+  },
+  "NL": {
+   "records": 1865,
+   "with_birth_date": 0,
+   "with_birth_date_share": 0.0,
+   "linked_on_name_and_birth_date_to_another_source": 0,
+   "linked_on_first_name_variant": 0,
+   "without_birth_date": 1865,
+   "name_only_linked": 781,
+   "ambiguous": 21,
+   "unmatched": 1063,
+   "joined_within_league_on_name": 0,
+   "name_only_link_rate": 0.418767
+  },
+  "DEL": {
+   "records": 3963,
+   "with_birth_date": 0,
+   "with_birth_date_share": 0.0,
+   "linked_on_name_and_birth_date_to_another_source": 0,
+   "linked_on_first_name_variant": 0,
+   "without_birth_date": 3963,
+   "name_only_linked": 1269,
+   "ambiguous": 24,
+   "unmatched": 2287,
+   "joined_within_league_on_name": 383,
+   "name_only_link_rate": 0.320212
+  },
+  "Extraliga": {
+   "records": 3250,
+   "with_birth_date": 1788,
+   "with_birth_date_share": 0.550154,
+   "linked_on_name_and_birth_date_to_another_source": 593,
+   "linked_on_first_name_variant": 6,
+   "without_birth_date": 1462,
+   "name_only_linked": 226,
+   "ambiguous": 4,
+   "unmatched": 1218,
+   "joined_within_league_on_name": 14,
+   "name_only_link_rate": 0.154583
+  },
+  "roster": {
+   "records": 2711,
+   "with_birth_date": 2711,
+   "with_birth_date_share": 1.0,
+   "linked_on_name_and_birth_date_to_another_source": 1960,
+   "linked_on_first_name_variant": 42,
+   "without_birth_date": 0,
+   "name_only_linked": 0,
+   "ambiguous": 0,
+   "unmatched": 0,
+   "joined_within_league_on_name": 0,
+   "name_only_link_rate": null
+  }
+ },
+ "nationality_basis_by_league": {
+  "NHL": {
+   "all_rows": {
+    "citizenship": 29102
+   },
+   "qualifying_rows": {
+    "citizenship": 21714
+   }
+  },
+  "Liiga": {
+   "all_rows": {
+    "citizenship": 14311,
+    "unknown": 177,
+    "linked: citizenship": 91,
+    "linked: eligibility": 4,
+    "linked: national_team": 2
+   },
+   "qualifying_rows": {
+    "citizenship": 10975,
+    "unknown": 107,
+    "linked: citizenship": 80,
+    "linked: eligibility": 2,
+    "linked: national_team": 1
+   }
+  },
+  "SHL": {
+   "all_rows": {
+    "citizenship": 8611,
+    "unknown": 2750,
+    "linked: citizenship": 1322,
+    "linked: national_team": 78,
+    "linked: eligibility": 11
+   },
+   "qualifying_rows": {
+    "citizenship": 6694,
+    "unknown": 1981,
+    "linked: citizenship": 1156,
+    "linked: national_team": 72,
+    "linked: eligibility": 8
+   }
+  },
+  "Extraliga": {
+   "all_rows": {
+    "eligibility": 9660,
+    "linked: citizenship": 3233,
+    "unknown": 874,
+    "linked: national_team": 755,
+    "linked: eligibility": 9
+   },
+   "qualifying_rows": {
+    "eligibility": 6571,
+    "linked: citizenship": 2798,
+    "unknown": 691,
+    "linked: national_team": 669,
+    "linked: eligibility": 7
+   }
+  },
+  "DEL": {
+   "all_rows": {
+    "unknown": 6491,
+    "linked: citizenship": 2529,
+    "linked: national_team": 1228,
+    "eligibility": 1043,
+    "linked: eligibility": 708
+   },
+   "qualifying_rows": {
+    "unknown": 5576,
+    "linked: citizenship": 2370,
+    "linked: national_team": 1154,
+    "eligibility": 868,
+    "linked: eligibility": 597
+   }
+  },
+  "NL": {
+   "all_rows": {
+    "eligibility": 3906,
+    "linked: citizenship": 1676,
+    "linked: national_team": 1182,
+    "unknown": 541,
+    "linked: eligibility": 4
+   },
+   "qualifying_rows": {
+    "eligibility": 2971,
+    "linked: citizenship": 1453,
+    "linked: national_team": 1108,
+    "unknown": 311
+   }
+  }
+ },
+ "league_seasons": [
+  {
+   "league": "DEL",
+   "season": "1995/96",
+   "rows": 471.0,
+   "qualifying": 401.0,
+   "identified_share": 0.03397,
+   "qualifying_identified_share": 0.024938,
+   "birth_year_share": 0.038217,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "1996/97",
+   "rows": 398.0,
+   "qualifying": 370.0,
+   "identified_share": 0.105528,
+   "qualifying_identified_share": 0.108108,
+   "birth_year_share": 0.113065,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "1997/98",
+   "rows": 393.0,
+   "qualifying": 357.0,
+   "identified_share": 0.152672,
+   "qualifying_identified_share": 0.159664,
+   "birth_year_share": 0.160305,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "1998/99",
+   "rows": 346.0,
+   "qualifying": 310.0,
+   "identified_share": 0.15896,
+   "qualifying_identified_share": 0.16129,
+   "birth_year_share": 0.17052,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "1999/00",
+   "rows": 381.0,
+   "qualifying": 343.0,
+   "identified_share": 0.209974,
+   "qualifying_identified_share": 0.209913,
+   "birth_year_share": 0.215223,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2000/01",
+   "rows": 399.0,
+   "qualifying": 357.0,
+   "identified_share": 0.205514,
+   "qualifying_identified_share": 0.221289,
+   "birth_year_share": 0.213033,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2001/02",
+   "rows": 399.0,
+   "qualifying": 359.0,
+   "identified_share": 0.225564,
+   "qualifying_identified_share": 0.236769,
+   "birth_year_share": 0.233083,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2002/03",
+   "rows": 356.0,
+   "qualifying": 317.0,
+   "identified_share": 0.25,
+   "qualifying_identified_share": 0.274448,
+   "birth_year_share": 0.255618,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2003/04",
+   "rows": 350.0,
+   "qualifying": 319.0,
+   "identified_share": 0.271429,
+   "qualifying_identified_share": 0.278997,
+   "birth_year_share": 0.277143,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2004/05",
+   "rows": 385.0,
+   "qualifying": 326.0,
+   "identified_share": 0.322078,
+   "qualifying_identified_share": 0.340491,
+   "birth_year_share": 0.327273,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2005/06",
+   "rows": 376.0,
+   "qualifying": 328.0,
+   "identified_share": 0.316489,
+   "qualifying_identified_share": 0.347561,
+   "birth_year_share": 0.319149,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2006/07",
+   "rows": 379.0,
+   "qualifying": 321.0,
+   "identified_share": 0.343008,
+   "qualifying_identified_share": 0.367601,
+   "birth_year_share": 0.345646,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2007/08",
+   "rows": 392.0,
+   "qualifying": 340.0,
+   "identified_share": 0.336735,
+   "qualifying_identified_share": 0.35,
+   "birth_year_share": 0.339286,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2008/09",
+   "rows": 421.0,
+   "qualifying": 361.0,
+   "identified_share": 0.368171,
+   "qualifying_identified_share": 0.404432,
+   "birth_year_share": 0.351544,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2009/10",
+   "rows": 399.0,
+   "qualifying": 335.0,
+   "identified_share": 0.365915,
+   "qualifying_identified_share": 0.402985,
+   "birth_year_share": 0.353383,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2010/11",
+   "rows": 368.0,
+   "qualifying": 323.0,
+   "identified_share": 0.36413,
+   "qualifying_identified_share": 0.396285,
+   "birth_year_share": 0.339674,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2011/12",
+   "rows": 354.0,
+   "qualifying": 319.0,
+   "identified_share": 0.355932,
+   "qualifying_identified_share": 0.376176,
+   "birth_year_share": 0.330508,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2012/13",
+   "rows": 374.0,
+   "qualifying": 328.0,
+   "identified_share": 0.379679,
+   "qualifying_identified_share": 0.396341,
+   "birth_year_share": 0.34492,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2013/14",
+   "rows": 382.0,
+   "qualifying": 333.0,
+   "identified_share": 0.400524,
+   "qualifying_identified_share": 0.429429,
+   "birth_year_share": 0.350785,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2014/15",
+   "rows": 384.0,
+   "qualifying": 333.0,
+   "identified_share": 0.440104,
+   "qualifying_identified_share": 0.465465,
+   "birth_year_share": 0.372396,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2015/16",
+   "rows": 370.0,
+   "qualifying": 331.0,
+   "identified_share": 0.527027,
+   "qualifying_identified_share": 0.546828,
+   "birth_year_share": 0.443243,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2016/17",
+   "rows": 379.0,
+   "qualifying": 331.0,
+   "identified_share": 0.548813,
+   "qualifying_identified_share": 0.564955,
+   "birth_year_share": 0.435356,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2017/18",
+   "rows": 381.0,
+   "qualifying": 335.0,
+   "identified_share": 0.572178,
+   "qualifying_identified_share": 0.59403,
+   "birth_year_share": 0.43832,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2018/19",
+   "rows": 378.0,
+   "qualifying": 338.0,
+   "identified_share": 0.645503,
+   "qualifying_identified_share": 0.653846,
+   "birth_year_share": 0.465608,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2019/20",
+   "rows": 378.0,
+   "qualifying": 336.0,
+   "identified_share": 0.698413,
+   "qualifying_identified_share": 0.714286,
+   "birth_year_share": 0.470899,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2020/21",
+   "rows": 382.0,
+   "qualifying": 344.0,
+   "identified_share": 0.751309,
+   "qualifying_identified_share": 0.758721,
+   "birth_year_share": 0.439791,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2021/22",
+   "rows": 419.0,
+   "qualifying": 376.0,
+   "identified_share": 0.830549,
+   "qualifying_identified_share": 0.845745,
+   "birth_year_share": 0.429594,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2022/23",
+   "rows": 430.0,
+   "qualifying": 364.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 0.306977,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2023/24",
+   "rows": 388.0,
+   "qualifying": 344.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 0.350515,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2024/25",
+   "rows": 395.0,
+   "qualifying": 338.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 0.362025,
+   "position_share": 1.0
+  },
+  {
+   "league": "DEL",
+   "season": "2025/26",
+   "rows": 392.0,
+   "qualifying": 348.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 0.372449,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "1995/96",
+   "rows": 397.0,
+   "qualifying": 312.0,
+   "identified_share": 0.982368,
+   "qualifying_identified_share": 0.983974,
+   "birth_year_share": 0.332494,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "1996/97",
+   "rows": 414.0,
+   "qualifying": 315.0,
+   "identified_share": 0.975845,
+   "qualifying_identified_share": 0.968254,
+   "birth_year_share": 0.425121,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "1997/98",
+   "rows": 409.0,
+   "qualifying": 313.0,
+   "identified_share": 0.982885,
+   "qualifying_identified_share": 0.977636,
+   "birth_year_share": 0.471883,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "1998/99",
+   "rows": 419.0,
+   "qualifying": 312.0,
+   "identified_share": 0.98568,
+   "qualifying_identified_share": 0.980769,
+   "birth_year_share": 0.560859,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "1999/00",
+   "rows": 434.0,
+   "qualifying": 324.0,
+   "identified_share": 0.963134,
+   "qualifying_identified_share": 0.95679,
+   "birth_year_share": 0.523041,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2000/01",
+   "rows": 415.0,
+   "qualifying": 317.0,
+   "identified_share": 0.951807,
+   "qualifying_identified_share": 0.946372,
+   "birth_year_share": 0.573494,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2001/02",
+   "rows": 442.0,
+   "qualifying": 315.0,
+   "identified_share": 0.959276,
+   "qualifying_identified_share": 0.952381,
+   "birth_year_share": 0.606335,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2002/03",
+   "rows": 468.0,
+   "qualifying": 331.0,
+   "identified_share": 0.935897,
+   "qualifying_identified_share": 0.924471,
+   "birth_year_share": 0.615385,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2003/04",
+   "rows": 476.0,
+   "qualifying": 340.0,
+   "identified_share": 0.926471,
+   "qualifying_identified_share": 0.911765,
+   "birth_year_share": 0.632353,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2004/05",
+   "rows": 478.0,
+   "qualifying": 357.0,
+   "identified_share": 0.926778,
+   "qualifying_identified_share": 0.932773,
+   "birth_year_share": 0.682008,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2005/06",
+   "rows": 473.0,
+   "qualifying": 343.0,
+   "identified_share": 0.917548,
+   "qualifying_identified_share": 0.915452,
+   "birth_year_share": 0.693446,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2006/07",
+   "rows": 495.0,
+   "qualifying": 347.0,
+   "identified_share": 0.921212,
+   "qualifying_identified_share": 0.910663,
+   "birth_year_share": 0.735354,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2007/08",
+   "rows": 456.0,
+   "qualifying": 353.0,
+   "identified_share": 0.914474,
+   "qualifying_identified_share": 0.917847,
+   "birth_year_share": 0.745614,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2008/09",
+   "rows": 467.0,
+   "qualifying": 358.0,
+   "identified_share": 0.91863,
+   "qualifying_identified_share": 0.913408,
+   "birth_year_share": 0.783726,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2009/10",
+   "rows": 480.0,
+   "qualifying": 353.0,
+   "identified_share": 0.914583,
+   "qualifying_identified_share": 0.912181,
+   "birth_year_share": 0.825,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2010/11",
+   "rows": 492.0,
+   "qualifying": 353.0,
+   "identified_share": 0.934959,
+   "qualifying_identified_share": 0.923513,
+   "birth_year_share": 0.849593,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2011/12",
+   "rows": 475.0,
+   "qualifying": 367.0,
+   "identified_share": 0.913684,
+   "qualifying_identified_share": 0.899183,
+   "birth_year_share": 0.856842,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2012/13",
+   "rows": 494.0,
+   "qualifying": 379.0,
+   "identified_share": 0.925101,
+   "qualifying_identified_share": 0.920844,
+   "birth_year_share": 0.912955,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2013/14",
+   "rows": 467.0,
+   "qualifying": 352.0,
+   "identified_share": 0.937901,
+   "qualifying_identified_share": 0.931818,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2014/15",
+   "rows": 486.0,
+   "qualifying": 365.0,
+   "identified_share": 0.942387,
+   "qualifying_identified_share": 0.936986,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2015/16",
+   "rows": 483.0,
+   "qualifying": 360.0,
+   "identified_share": 0.942029,
+   "qualifying_identified_share": 0.933333,
+   "birth_year_share": 0.99793,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2016/17",
+   "rows": 500.0,
+   "qualifying": 354.0,
+   "identified_share": 0.942,
+   "qualifying_identified_share": 0.940678,
+   "birth_year_share": 0.998,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2017/18",
+   "rows": 470.0,
+   "qualifying": 344.0,
+   "identified_share": 0.940426,
+   "qualifying_identified_share": 0.936047,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2018/19",
+   "rows": 483.0,
+   "qualifying": 350.0,
+   "identified_share": 0.933747,
+   "qualifying_identified_share": 0.917143,
+   "birth_year_share": 0.995859,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2019/20",
+   "rows": 495.0,
+   "qualifying": 358.0,
+   "identified_share": 0.941414,
+   "qualifying_identified_share": 0.941341,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2020/21",
+   "rows": 494.0,
+   "qualifying": 365.0,
+   "identified_share": 0.947368,
+   "qualifying_identified_share": 0.950685,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2021/22",
+   "rows": 544.0,
+   "qualifying": 390.0,
+   "identified_share": 0.935662,
+   "qualifying_identified_share": 0.935897,
+   "birth_year_share": 0.988971,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2022/23",
+   "rows": 491.0,
+   "qualifying": 348.0,
+   "identified_share": 0.961303,
+   "qualifying_identified_share": 0.956897,
+   "birth_year_share": 0.997963,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2023/24",
+   "rows": 468.0,
+   "qualifying": 348.0,
+   "identified_share": 0.942308,
+   "qualifying_identified_share": 0.951149,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2024/25",
+   "rows": 495.0,
+   "qualifying": 360.0,
+   "identified_share": 0.931313,
+   "qualifying_identified_share": 0.938889,
+   "birth_year_share": 0.99798,
+   "position_share": 1.0
+  },
+  {
+   "league": "Extraliga",
+   "season": "2025/26",
+   "rows": 471.0,
+   "qualifying": 353.0,
+   "identified_share": 0.915074,
+   "qualifying_identified_share": 0.909348,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "1995/96",
+   "rows": 365.0,
+   "qualifying": 281.0,
+   "identified_share": 0.991781,
+   "qualifying_identified_share": 0.989324,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "1996/97",
+   "rows": 359.0,
+   "qualifying": 294.0,
+   "identified_share": 0.991643,
+   "qualifying_identified_share": 0.989796,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "1997/98",
+   "rows": 372.0,
+   "qualifying": 307.0,
+   "identified_share": 0.983871,
+   "qualifying_identified_share": 0.990228,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "1998/99",
+   "rows": 371.0,
+   "qualifying": 299.0,
+   "identified_share": 0.975741,
+   "qualifying_identified_share": 0.986622,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "1999/00",
+   "rows": 388.0,
+   "qualifying": 304.0,
+   "identified_share": 0.981959,
+   "qualifying_identified_share": 0.990132,
+   "birth_year_share": 1.0,
+   "position_share": 0.997423
+  },
+  {
+   "league": "Liiga",
+   "season": "2000/01",
+   "rows": 400.0,
+   "qualifying": 319.0,
+   "identified_share": 0.9875,
+   "qualifying_identified_share": 0.99373,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2001/02",
+   "rows": 415.0,
+   "qualifying": 329.0,
+   "identified_share": 0.975904,
+   "qualifying_identified_share": 0.987842,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2002/03",
+   "rows": 403.0,
+   "qualifying": 339.0,
+   "identified_share": 0.987593,
+   "qualifying_identified_share": 0.985251,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2003/04",
+   "rows": 422.0,
+   "qualifying": 337.0,
+   "identified_share": 0.985782,
+   "qualifying_identified_share": 0.985163,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2004/05",
+   "rows": 421.0,
+   "qualifying": 332.0,
+   "identified_share": 0.985748,
+   "qualifying_identified_share": 0.981928,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2005/06",
+   "rows": 462.0,
+   "qualifying": 369.0,
+   "identified_share": 0.984848,
+   "qualifying_identified_share": 0.98916,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2006/07",
+   "rows": 468.0,
+   "qualifying": 363.0,
+   "identified_share": 0.989316,
+   "qualifying_identified_share": 0.986226,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2007/08",
+   "rows": 466.0,
+   "qualifying": 365.0,
+   "identified_share": 0.976395,
+   "qualifying_identified_share": 0.978082,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2008/09",
+   "rows": 491.0,
+   "qualifying": 379.0,
+   "identified_share": 0.983707,
+   "qualifying_identified_share": 0.98153,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2009/10",
+   "rows": 459.0,
+   "qualifying": 355.0,
+   "identified_share": 0.982571,
+   "qualifying_identified_share": 0.983099,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2010/11",
+   "rows": 472.0,
+   "qualifying": 353.0,
+   "identified_share": 0.987288,
+   "qualifying_identified_share": 0.991501,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2011/12",
+   "rows": 469.0,
+   "qualifying": 359.0,
+   "identified_share": 0.987207,
+   "qualifying_identified_share": 0.988858,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2012/13",
+   "rows": 509.0,
+   "qualifying": 350.0,
+   "identified_share": 0.988212,
+   "qualifying_identified_share": 0.991429,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2013/14",
+   "rows": 480.0,
+   "qualifying": 358.0,
+   "identified_share": 0.977083,
+   "qualifying_identified_share": 0.977654,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2014/15",
+   "rows": 479.0,
+   "qualifying": 366.0,
+   "identified_share": 0.966597,
+   "qualifying_identified_share": 0.983607,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2015/16",
+   "rows": 513.0,
+   "qualifying": 395.0,
+   "identified_share": 0.964912,
+   "qualifying_identified_share": 0.977215,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2016/17",
+   "rows": 532.0,
+   "qualifying": 393.0,
+   "identified_share": 0.983083,
+   "qualifying_identified_share": 0.989822,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2017/18",
+   "rows": 527.0,
+   "qualifying": 389.0,
+   "identified_share": 0.994307,
+   "qualifying_identified_share": 0.997429,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2018/19",
+   "rows": 534.0,
+   "qualifying": 392.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2019/20",
+   "rows": 534.0,
+   "qualifying": 400.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2020/21",
+   "rows": 526.0,
+   "qualifying": 403.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2021/22",
+   "rows": 563.0,
+   "qualifying": 400.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2022/23",
+   "rows": 510.0,
+   "qualifying": 394.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2023/24",
+   "rows": 536.0,
+   "qualifying": 392.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2024/25",
+   "rows": 566.0,
+   "qualifying": 420.0,
+   "identified_share": 0.998233,
+   "qualifying_identified_share": 0.997619,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "Liiga",
+   "season": "2025/26",
+   "rows": 573.0,
+   "qualifying": 429.0,
+   "identified_share": 0.99651,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "1995/96",
+   "rows": 855.0,
+   "qualifying": 633.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "1996/97",
+   "rows": 846.0,
+   "qualifying": 642.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "1997/98",
+   "rows": 835.0,
+   "qualifying": 632.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "1998/99",
+   "rows": 899.0,
+   "qualifying": 660.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "1999/00",
+   "rows": 921.0,
+   "qualifying": 701.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2000/01",
+   "rows": 973.0,
+   "qualifying": 735.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2001/02",
+   "rows": 963.0,
+   "qualifying": 724.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2002/03",
+   "rows": 979.0,
+   "qualifying": 722.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2003/04",
+   "rows": 1010.0,
+   "qualifying": 725.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2005/06",
+   "rows": 961.0,
+   "qualifying": 726.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2006/07",
+   "rows": 942.0,
+   "qualifying": 704.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2007/08",
+   "rows": 941.0,
+   "qualifying": 726.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2008/09",
+   "rows": 974.0,
+   "qualifying": 721.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2009/10",
+   "rows": 962.0,
+   "qualifying": 725.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2010/11",
+   "rows": 978.0,
+   "qualifying": 725.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2011/12",
+   "rows": 983.0,
+   "qualifying": 728.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2012/13",
+   "rows": 921.0,
+   "qualifying": 723.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2013/14",
+   "rows": 983.0,
+   "qualifying": 733.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2014/15",
+   "rows": 974.0,
+   "qualifying": 715.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2015/16",
+   "rows": 990.0,
+   "qualifying": 733.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2016/17",
+   "rows": 983.0,
+   "qualifying": 718.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2017/18",
+   "rows": 985.0,
+   "qualifying": 747.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2018/19",
+   "rows": 999.0,
+   "qualifying": 759.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2019/20",
+   "rows": 970.0,
+   "qualifying": 741.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2020/21",
+   "rows": 1011.0,
+   "qualifying": 748.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2021/22",
+   "rows": 1123.0,
+   "qualifying": 784.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2022/23",
+   "rows": 1058.0,
+   "qualifying": 758.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2023/24",
+   "rows": 1022.0,
+   "qualifying": 786.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2024/25",
+   "rows": 1023.0,
+   "qualifying": 759.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NHL",
+   "season": "2025/26",
+   "rows": 1038.0,
+   "qualifying": 781.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2008/09",
+   "rows": 363.0,
+   "qualifying": 303.0,
+   "identified_share": 0.884298,
+   "qualifying_identified_share": 0.910891,
+   "birth_year_share": 0.300275,
+   "position_share": 0.997245
+  },
+  {
+   "league": "NL",
+   "season": "2009/10",
+   "rows": 384.0,
+   "qualifying": 294.0,
+   "identified_share": 0.901042,
+   "qualifying_identified_share": 0.928571,
+   "birth_year_share": 0.296875,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2010/11",
+   "rows": 387.0,
+   "qualifying": 304.0,
+   "identified_share": 0.914729,
+   "qualifying_identified_share": 0.930921,
+   "birth_year_share": 0.328165,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2011/12",
+   "rows": 402.0,
+   "qualifying": 317.0,
+   "identified_share": 0.915423,
+   "qualifying_identified_share": 0.92429,
+   "birth_year_share": 0.323383,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2012/13",
+   "rows": 405.0,
+   "qualifying": 318.0,
+   "identified_share": 0.908642,
+   "qualifying_identified_share": 0.949686,
+   "birth_year_share": 0.385185,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2013/14",
+   "rows": 390.0,
+   "qualifying": 307.0,
+   "identified_share": 0.925641,
+   "qualifying_identified_share": 0.947883,
+   "birth_year_share": 0.389744,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2014/15",
+   "rows": 396.0,
+   "qualifying": 318.0,
+   "identified_share": 0.936869,
+   "qualifying_identified_share": 0.946541,
+   "birth_year_share": 0.409091,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2015/16",
+   "rows": 392.0,
+   "qualifying": 314.0,
+   "identified_share": 0.933673,
+   "qualifying_identified_share": 0.955414,
+   "birth_year_share": 0.40051,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2016/17",
+   "rows": 374.0,
+   "qualifying": 314.0,
+   "identified_share": 0.959893,
+   "qualifying_identified_share": 0.974522,
+   "birth_year_share": 0.454545,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2017/18",
+   "rows": 401.0,
+   "qualifying": 319.0,
+   "identified_share": 0.937656,
+   "qualifying_identified_share": 0.965517,
+   "birth_year_share": 0.426434,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2018/19",
+   "rows": 370.0,
+   "qualifying": 315.0,
+   "identified_share": 0.956757,
+   "qualifying_identified_share": 0.971429,
+   "birth_year_share": 0.437838,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2019/20",
+   "rows": 382.0,
+   "qualifying": 310.0,
+   "identified_share": 0.950262,
+   "qualifying_identified_share": 0.974194,
+   "birth_year_share": 0.447644,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2020/21",
+   "rows": 408.0,
+   "qualifying": 314.0,
+   "identified_share": 0.931373,
+   "qualifying_identified_share": 0.961783,
+   "birth_year_share": 0.397059,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2021/22",
+   "rows": 444.0,
+   "qualifying": 332.0,
+   "identified_share": 0.90991,
+   "qualifying_identified_share": 0.939759,
+   "birth_year_share": 0.371622,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2022/23",
+   "rows": 456.0,
+   "qualifying": 360.0,
+   "identified_share": 0.905702,
+   "qualifying_identified_share": 0.925,
+   "birth_year_share": 0.423246,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2023/24",
+   "rows": 447.0,
+   "qualifying": 372.0,
+   "identified_share": 0.928412,
+   "qualifying_identified_share": 0.948925,
+   "birth_year_share": 0.442953,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2024/25",
+   "rows": 449.0,
+   "qualifying": 367.0,
+   "identified_share": 0.933185,
+   "qualifying_identified_share": 0.948229,
+   "birth_year_share": 0.418708,
+   "position_share": 1.0
+  },
+  {
+   "league": "NL",
+   "season": "2025/26",
+   "rows": 459.0,
+   "qualifying": 365.0,
+   "identified_share": 0.936819,
+   "qualifying_identified_share": 0.939726,
+   "birth_year_share": 0.422658,
+   "position_share": 1.0
+  },
+  {
+   "league": "SHL",
+   "season": "1995/96",
+   "rows": 316.0,
+   "qualifying": 271.0,
+   "identified_share": 0.243671,
+   "qualifying_identified_share": 0.276753,
+   "birth_year_share": 0.253165,
+   "position_share": 0.981013
+  },
+  {
+   "league": "SHL",
+   "season": "1996/97",
+   "rows": 355.0,
+   "qualifying": 293.0,
+   "identified_share": 0.307042,
+   "qualifying_identified_share": 0.331058,
+   "birth_year_share": 0.312676,
+   "position_share": 0.983099
+  },
+  {
+   "league": "SHL",
+   "season": "1997/98",
+   "rows": 328.0,
+   "qualifying": 277.0,
+   "identified_share": 0.359756,
+   "qualifying_identified_share": 0.389892,
+   "birth_year_share": 0.365854,
+   "position_share": 0.981707
+  },
+  {
+   "league": "SHL",
+   "season": "1998/99",
+   "rows": 307.0,
+   "qualifying": 268.0,
+   "identified_share": 0.351792,
+   "qualifying_identified_share": 0.365672,
+   "birth_year_share": 0.355049,
+   "position_share": 0.973941
+  },
+  {
+   "league": "SHL",
+   "season": "1999/00",
+   "rows": 330.0,
+   "qualifying": 270.0,
+   "identified_share": 0.351515,
+   "qualifying_identified_share": 0.377778,
+   "birth_year_share": 0.357576,
+   "position_share": 0.960606
+  },
+  {
+   "league": "SHL",
+   "season": "2000/01",
+   "rows": 345.0,
+   "qualifying": 286.0,
+   "identified_share": 0.371014,
+   "qualifying_identified_share": 0.402098,
+   "birth_year_share": 0.37971,
+   "position_share": 0.95942
+  },
+  {
+   "league": "SHL",
+   "season": "2001/02",
+   "rows": 352.0,
+   "qualifying": 291.0,
+   "identified_share": 0.411932,
+   "qualifying_identified_share": 0.426117,
+   "birth_year_share": 0.423295,
+   "position_share": 0.951705
+  },
+  {
+   "league": "SHL",
+   "season": "2002/03",
+   "rows": 351.0,
+   "qualifying": 293.0,
+   "identified_share": 0.435897,
+   "qualifying_identified_share": 0.47099,
+   "birth_year_share": 0.441595,
+   "position_share": 0.948718
+  },
+  {
+   "league": "SHL",
+   "season": "2003/04",
+   "rows": 363.0,
+   "qualifying": 288.0,
+   "identified_share": 0.512397,
+   "qualifying_identified_share": 0.569444,
+   "birth_year_share": 0.520661,
+   "position_share": 0.914601
+  },
+  {
+   "league": "SHL",
+   "season": "2004/05",
+   "rows": 389.0,
+   "qualifying": 307.0,
+   "identified_share": 0.676093,
+   "qualifying_identified_share": 0.697068,
+   "birth_year_share": 0.686375,
+   "position_share": 0.897172
+  },
+  {
+   "league": "SHL",
+   "season": "2005/06",
+   "rows": 373.0,
+   "qualifying": 297.0,
+   "identified_share": 0.632708,
+   "qualifying_identified_share": 0.649832,
+   "birth_year_share": 0.643432,
+   "position_share": 0.86059
+  },
+  {
+   "league": "SHL",
+   "season": "2006/07",
+   "rows": 385.0,
+   "qualifying": 302.0,
+   "identified_share": 0.709091,
+   "qualifying_identified_share": 0.758278,
+   "birth_year_share": 0.716883,
+   "position_share": 0.846753
+  },
+  {
+   "league": "SHL",
+   "season": "2007/08",
+   "rows": 380.0,
+   "qualifying": 294.0,
+   "identified_share": 0.757895,
+   "qualifying_identified_share": 0.782313,
+   "birth_year_share": 0.773684,
+   "position_share": 0.807895
+  },
+  {
+   "league": "SHL",
+   "season": "2008/09",
+   "rows": 393.0,
+   "qualifying": 306.0,
+   "identified_share": 0.750636,
+   "qualifying_identified_share": 0.781046,
+   "birth_year_share": 0.75827,
+   "position_share": 0.798982
+  },
+  {
+   "league": "SHL",
+   "season": "2009/10",
+   "rows": 403.0,
+   "qualifying": 299.0,
+   "identified_share": 0.789082,
+   "qualifying_identified_share": 0.87291,
+   "birth_year_share": 0.794045,
+   "position_share": 0.776675
+  },
+  {
+   "league": "SHL",
+   "season": "2010/11",
+   "rows": 406.0,
+   "qualifying": 311.0,
+   "identified_share": 0.871921,
+   "qualifying_identified_share": 0.945338,
+   "birth_year_share": 0.871921,
+   "position_share": 0.729064
+  },
+  {
+   "league": "SHL",
+   "season": "2011/12",
+   "rows": 407.0,
+   "qualifying": 318.0,
+   "identified_share": 0.948403,
+   "qualifying_identified_share": 0.996855,
+   "birth_year_share": 0.948403,
+   "position_share": 0.668305
+  },
+  {
+   "league": "SHL",
+   "season": "2012/13",
+   "rows": 406.0,
+   "qualifying": 309.0,
+   "identified_share": 0.945813,
+   "qualifying_identified_share": 0.996764,
+   "birth_year_share": 0.945813,
+   "position_share": 0.660099
+  },
+  {
+   "league": "SHL",
+   "season": "2013/14",
+   "rows": 424.0,
+   "qualifying": 314.0,
+   "identified_share": 0.95283,
+   "qualifying_identified_share": 0.996815,
+   "birth_year_share": 0.95283,
+   "position_share": 0.67217
+  },
+  {
+   "league": "SHL",
+   "season": "2014/15",
+   "rows": 432.0,
+   "qualifying": 321.0,
+   "identified_share": 0.993056,
+   "qualifying_identified_share": 0.996885,
+   "birth_year_share": 0.993056,
+   "position_share": 0.655093
+  },
+  {
+   "league": "SHL",
+   "season": "2015/16",
+   "rows": 496.0,
+   "qualifying": 366.0,
+   "identified_share": 0.997984,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 0.997984,
+   "position_share": 0.618952
+  },
+  {
+   "league": "SHL",
+   "season": "2016/17",
+   "rows": 477.0,
+   "qualifying": 366.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 0.639413
+  },
+  {
+   "league": "SHL",
+   "season": "2017/18",
+   "rows": 491.0,
+   "qualifying": 364.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 0.668024
+  },
+  {
+   "league": "SHL",
+   "season": "2018/19",
+   "rows": 489.0,
+   "qualifying": 365.0,
+   "identified_share": 0.989775,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 0.989775,
+   "position_share": 0.683027
+  },
+  {
+   "league": "SHL",
+   "season": "2019/20",
+   "rows": 483.0,
+   "qualifying": 364.0,
+   "identified_share": 0.995859,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 0.99793,
+   "position_share": 0.718427
+  },
+  {
+   "league": "SHL",
+   "season": "2020/21",
+   "rows": 486.0,
+   "qualifying": 373.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 0.757202
+  },
+  {
+   "league": "SHL",
+   "season": "2021/22",
+   "rows": 496.0,
+   "qualifying": 359.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 0.729839
+  },
+  {
+   "league": "SHL",
+   "season": "2022/23",
+   "rows": 493.0,
+   "qualifying": 352.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 0.732252
+  },
+  {
+   "league": "SHL",
+   "season": "2023/24",
+   "rows": 466.0,
+   "qualifying": 355.0,
+   "identified_share": 1.0,
+   "qualifying_identified_share": 1.0,
+   "birth_year_share": 1.0,
+   "position_share": 0.755365
+  },
+  {
+   "league": "SHL",
+   "season": "2024/25",
+   "rows": 482.0,
+   "qualifying": 367.0,
+   "identified_share": 0.943983,
+   "qualifying_identified_share": 0.997275,
+   "birth_year_share": 1.0,
+   "position_share": 0.757261
+  },
+  {
+   "league": "SHL",
+   "season": "2025/26",
+   "rows": 468.0,
+   "qualifying": 365.0,
+   "identified_share": 0.91453,
+   "qualifying_identified_share": 0.989041,
+   "birth_year_share": 1.0,
+   "position_share": 0.794872
+  }
+ ],
+ "conflicts": {
+  "persons": 189,
+  "czech_eligibility_overridden_by_citizenship": 50,
+  "examples": [
+   {
+    "person_id": "DEL:archive:2720",
+    "name": "Michael Connolly",
+    "values": "CAN,DEU",
+    "chosen": "CAN",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:archive:2737",
+    "name": "Alex Trivellato",
+    "values": "DEU,ITA",
+    "chosen": "ITA",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "DEL:archive:2916",
+    "name": "Andrew LeBlanc",
+    "values": "DEU,USA",
+    "chosen": "USA",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:archive:3032",
+    "name": "Trevor Parkes",
+    "values": "CAN,DEU",
+    "chosen": "CAN",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:archive:3083",
+    "name": "Louis-Marc Aubry",
+    "values": "CAN,DEU",
+    "chosen": "CAN",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:archive:3090",
+    "name": "Thomas Larkin",
+    "values": "DEU,ITA",
+    "chosen": "ITA",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "DEL:archive:3135",
+    "name": "Nicholas B. Jensen",
+    "values": "DEU,DNK",
+    "chosen": "DNK",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "DEL:archive:3203",
+    "name": "Phillip Bruggisser",
+    "values": "DEU,DNK",
+    "chosen": "DNK",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "DEL:archive:3339",
+    "name": "Stanislav Dietz",
+    "values": "CZE,DEU",
+    "chosen": "CZE",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:archive:4970",
+    "name": "Peter Spornberger",
+    "values": "DEU,ITA",
+    "chosen": "ITA",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "DEL:archive:5326",
+    "name": "Marcel Barinka",
+    "values": "CZE,DEU",
+    "chosen": "CZE",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:archive:6704",
+    "name": "Christian Wejse",
+    "values": "DEU,DNK",
+    "chosen": "DNK",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "DEL:archive:6709",
+    "name": "Matthew Puempel",
+    "values": "CAN,DEU",
+    "chosen": "DEU",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:current:1466",
+    "name": "John Ramage",
+    "values": "CAN,USA",
+    "chosen": "CAN",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:current:1796",
+    "name": "Markus Vikingstad",
+    "values": "DEU,NOR",
+    "chosen": "DEU",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:current:1903",
+    "name": "Hayden Shaw",
+    "values": "DEU,USA",
+    "chosen": "USA",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:current:2212",
+    "name": "Jacob Virtanen",
+    "values": "CAN,FIN",
+    "chosen": "CAN",
+    "basis": "eligibility"
+   },
+   {
+    "person_id": "DEL:current:2423",
+    "name": "Matt Bradley",
+    "values": "CAN,ITA",
+    "chosen": "ITA",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "DEL:current:2868",
+    "name": "Sam Ruopp",
+    "values": "DEU,GBR",
+    "chosen": "GBR",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "Extraliga:10082119",
+    "name": "Tomáš Hrnka",
+    "values": "CZE,SVK",
+    "chosen": "SVK",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "Extraliga:10099341",
+    "name": "Bartosz Ciura",
+    "values": "CZE,POL",
+    "chosen": "POL",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "Extraliga:11971",
+    "name": "Lukáš Horák",
+    "values": "CZE,SVN",
+    "chosen": "SVN",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "Extraliga:13843",
+    "name": "Jurij Repe",
+    "values": "CZE,SVN",
+    "chosen": "SVN",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "Extraliga:14028",
+    "name": "Šimon Szathmáry",
+    "values": "CZE,HUN",
+    "chosen": "HUN",
+    "basis": "national_team"
+   },
+   {
+    "person_id": "Extraliga:318537",
+    "name": "Cory Kane",
+    "values": "CHN,CZE",
+    "chosen": "CHN",
+    "basis": "national_team"
+   }
+  ]
+ },
+ "roster_birth_dates_swapped": [
+  {
+   "event": "OG",
+   "year": 2010,
+   "player": "Hnat Domenichelli",
+   "roster_date": "1976-02-16",
+   "used": "1976-02-17",
+   "reason": "one day"
+  },
+  {
+   "event": "OG",
+   "year": 2014,
+   "player": "Martin Erat",
+   "roster_date": "1981-08-28",
+   "used": "1981-08-29",
+   "reason": "one day"
+  },
+  {
+   "event": "WC",
+   "year": 2016,
+   "player": "Ivan Švarný",
+   "roster_date": "1984-10-31",
+   "used": "1984-10-30",
+   "reason": "one day"
+  },
+  {
+   "event": "WC",
+   "year": 2017,
+   "player": "Vladimír Sobotka",
+   "roster_date": "1987-02-07",
+   "used": "1987-07-02",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2017,
+   "player": "Julius Honka",
+   "roster_date": "1995-03-12",
+   "used": "1995-12-03",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2017,
+   "player": "Kristofers Bindulis",
+   "roster_date": "1995-09-17",
+   "used": "1995-09-18",
+   "reason": "one day"
+  },
+  {
+   "event": "WC",
+   "year": 2017,
+   "player": "Andreas Martinsen",
+   "roster_date": "1990-06-12",
+   "used": "1990-06-13",
+   "reason": "one day"
+  },
+  {
+   "event": "WC",
+   "year": 2017,
+   "player": "Lukáš Cingeľ",
+   "roster_date": "1992-10-06",
+   "used": "1992-06-10",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2018,
+   "player": "Bo Horvat",
+   "roster_date": "1995-05-04",
+   "used": "1995-04-05",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2018,
+   "player": "Michael DiPietro",
+   "roster_date": "1999-09-06",
+   "used": "1999-06-09",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2018,
+   "player": "Filip Chytil",
+   "roster_date": "1999-05-09",
+   "used": "1999-09-05",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2018,
+   "player": "Michal Moravčík",
+   "roster_date": "1994-07-12",
+   "used": "1994-12-07",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2018,
+   "player": "Radek Faksa",
+   "roster_date": "1994-09-01",
+   "used": "1994-01-09",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2018,
+   "player": "Robert Kousal",
+   "roster_date": "1990-07-10",
+   "used": "1990-10-07",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2018,
+   "player": "Lukáš Cingeľ",
+   "roster_date": "1992-10-06",
+   "used": "1992-06-10",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2019,
+   "player": "Patrick Galbraith",
+   "roster_date": "1986-11-03",
+   "used": "1986-03-11",
+   "reason": "day and month swapped"
+  },
+  {
+   "event": "WC",
+   "year": 2025,
+   "player": "Benedikt Oschgan",
+   "roster_date": "2005-07-04",
+   "used": "2005-07-05",
+   "reason": "one day"
+  },
+  {
+   "event": "WC",
+   "year": 2025,
+   "player": "Brayden Schenn",
+   "roster_date": "1991-08-21",
+   "used": "1991-08-22",
+   "reason": "one day"
+  },
+  {
+   "event": "OG",
+   "year": 2026,
+   "player": "David Pastrňák",
+   "roster_date": "1996-05-26",
+   "used": "1996-05-25",
+   "reason": "one day"
+  }
+ ]
+}

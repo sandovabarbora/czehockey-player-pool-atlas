@@ -1,0 +1,755 @@
+{
+ "source": "penny-del.org statistics pages (HTML), regular season (Hauptrunde)",
+ "nationality_basis": "DEL 'Nat' = licence (sporting) nationality, 2022/23 onward only",
+ "birth_date": "not published by the source",
+ "seasons": [
+  {
+   "season": "1995/96",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 426,
+   "goalies": 45,
+   "teams": 18,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "1996/97",
+   "source": "archive",
+   "phases": [
+    "hauptrunde",
+    "meisterrunde",
+    "qualifikationsrunde"
+   ],
+   "skaters": 708,
+   "goalies": 66,
+   "teams": 16,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "1997/98",
+   "source": "archive",
+   "phases": [
+    "hauptrunde",
+    "meisterrunde",
+    "qualifikationsrunde"
+   ],
+   "skaters": 673,
+   "goalies": 71,
+   "teams": 16,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "1998/99",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 314,
+   "goalies": 33,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "1999/00",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 344,
+   "goalies": 37,
+   "teams": 15,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2000/01",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 362,
+   "goalies": 37,
+   "teams": 16,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2001/02",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 359,
+   "goalies": 40,
+   "teams": 16,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2002/03",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 323,
+   "goalies": 33,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2003/04",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 319,
+   "goalies": 31,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2004/05",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 345,
+   "goalies": 40,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2005/06",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 338,
+   "goalies": 38,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2006/07",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 343,
+   "goalies": 36,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2007/08",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 354,
+   "goalies": 38,
+   "teams": 15,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2008/09",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 379,
+   "goalies": 42,
+   "teams": 16,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2009/10",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 358,
+   "goalies": 41,
+   "teams": 15,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2010/11",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 330,
+   "goalies": 38,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2011/12",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 320,
+   "goalies": 34,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2012/13",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 343,
+   "goalies": 31,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2013/14",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 346,
+   "goalies": 36,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2014/15",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 348,
+   "goalies": 36,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2015/16",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 333,
+   "goalies": 37,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2016/17",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 344,
+   "goalies": 35,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2017/18",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 346,
+   "goalies": 35,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2018/19",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 348,
+   "goalies": 30,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2019/20",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 342,
+   "goalies": 36,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2020/21",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 348,
+   "goalies": 34,
+   "teams": 14,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2021/22",
+   "source": "archive",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 377,
+   "goalies": 42,
+   "teams": 15,
+   "nationality_share": 0.0,
+   "skater_toi_share": 0.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 0,
+    "SWE": 0,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 0,
+    "LVA": 0,
+    "DNK": 0,
+    "NOR": 0,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2022/23",
+   "source": "current",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 391,
+   "goalies": 39,
+   "teams": 15,
+   "nationality_share": 1.0,
+   "skater_toi_share": 1.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 10,
+    "SWE": 8,
+    "CHE": 0,
+    "SVK": 0,
+    "DEU": 276,
+    "LVA": 2,
+    "DNK": 5,
+    "NOR": 3,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2023/24",
+   "source": "current",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 354,
+   "goalies": 34,
+   "teams": 14,
+   "nationality_share": 1.0,
+   "skater_toi_share": 1.0,
+   "nations": {
+    "CZE": 1,
+    "FIN": 9,
+    "SWE": 10,
+    "CHE": 0,
+    "SVK": 1,
+    "DEU": 240,
+    "LVA": 1,
+    "DNK": 5,
+    "NOR": 3,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2024/25",
+   "source": "current",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 356,
+   "goalies": 39,
+   "teams": 14,
+   "nationality_share": 1.0,
+   "skater_toi_share": 1.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 11,
+    "SWE": 9,
+    "CHE": 0,
+    "SVK": 1,
+    "DEU": 244,
+    "LVA": 1,
+    "DNK": 2,
+    "NOR": 2,
+    "AUT": 0
+   }
+  },
+  {
+   "season": "2025/26",
+   "source": "current",
+   "phases": [
+    "hauptrunde"
+   ],
+   "skaters": 355,
+   "goalies": 38,
+   "teams": 14,
+   "nationality_share": 1.0,
+   "skater_toi_share": 1.0,
+   "nations": {
+    "CZE": 0,
+    "FIN": 11,
+    "SWE": 12,
+    "CHE": 0,
+    "SVK": 2,
+    "DEU": 243,
+    "LVA": 2,
+    "DNK": 2,
+    "NOR": 2,
+    "AUT": 0
+   }
+  }
+ ]
+}
