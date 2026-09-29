@@ -174,7 +174,7 @@ def test_autumn_section(site: Path, outputs: dict) -> None:
     sec = sec[: sec.index("</section>")]
     text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", sec))
     assert "Atlas data as of 29 September 2026; news as of 29 September 2026" in text
-    assert "Note · Czech hockey atlas" in text and "n.d.)" in text  # one source shows no date
+    assert "Note · Czech hockey atlas" in text and "n.d.)" not in text  # every source carries its date
     news = config.news()
     assert news is not None
     for s in news["sources"]:
@@ -232,6 +232,12 @@ def test_intervals_match_point_values(outputs: dict) -> None:
     for lg, v in iv["q7"].items():
         if v:
             assert v["median"] == pytest.approx(outputs["q7_goalkeepers"]["abroad"]["summary"][lg]["median_save_pct_minus_median"], abs=1e-5)
+    for lg, v in iv["q7_youth"].items():
+        assert v["mean"] == pytest.approx(outputs["q7_goalkeepers"]["youth"][lg]["mean_u24_games_share"], abs=1e-5)
+        assert v["lo"] <= v["mean"] <= v["hi"]
+    for lg in ("Liiga", "SHL"):
+        s = outputs["q5_abroad"]["home_by_position"][lg]["F"]
+        assert iv["q5_positions"][lg]["F"]["ppg"]["median"] == pytest.approx(s["median_ppg_ratio"], abs=1e-5)
     last = [r for r in iv["q3"]["u21_by_season"] if r["season"] == outputs["q3_cohort_gaps"]["definitions"]["season"]]
     top = next(c for c in outputs["q3_cohort_gaps"]["cells"] if c["position"] == "F" and c["age_band"] == "≤21")
     assert next(r for r in last if r["position"] == "F")["shortfall"] == pytest.approx(top["shortfall"])

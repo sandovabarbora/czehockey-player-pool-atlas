@@ -40,7 +40,7 @@ sources:
     author: "Hedbávný, M."
     title: "Oficiálně: Pastrňák je kapitánem Bostonu! V historii NHL jako šestý Čech"
     publisher: hokej.cz (Czech Ice Hockey Association)
-    date: null
+    date: 2026-09-27
     url: "https://www.hokej.cz/oficialne-pastrnak-je-kapitanem-bostonu-v-historii-nhl-jako-sesty-cech/5098230"
     accessed: 2026-09-29
   - key: sport_motak
@@ -67,7 +67,7 @@ captain:
   named: 2026-09-27
   nth: 28
   previous: Brad Marchand
-  previous_note: captain 2023–25, traded in March 2025
+  previous_note: captain 2023–25
   czech_nth: 6
   sources_named: [bruins_captain, bruins_reaction]
   sources_previous: [bruins_captain]
@@ -85,7 +85,7 @@ coach:
   goalkeeping_coach: Jaroslav Kameš
   general_manager: Patrik Eliáš
   previous_general_manager: Jiří Šlégr
-  sources_staff: [hokej_motak]
+  sources_staff: [sport_motak, hokej_motak]
   first_game:
     date: 2026-11-05
     opponent: Sweden
