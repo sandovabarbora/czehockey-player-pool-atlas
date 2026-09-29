@@ -216,7 +216,7 @@
           .attr('x', ([, i]) => x(seasons[i]) - bw + k * bw).attr('width', bw).attr('y', ([p]) => yb(p)).attr('height', ([p]) => yb(0) - yb(p))
           .attr('fill', s.direction === 'down' ? C.ink : C.pale);
       });
-      label(svg, M.l + 4, top + 26, 'probability that a step falls in this season');
+      label(svg, M.l + 4, top + 26, narrow ? 'probability of a step, by season' : 'probability that a step falls in this season');
       svg.append('line').attr('x1', M.l).attr('x2', w - M.r).attr('y1', yb(0)).attr('y2', yb(0)).attr('stroke', C.rule);
       svg.on('mousemove', (ev) => {
         const [mx] = d3.pointer(ev, svg.node());
