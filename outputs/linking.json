@@ -38,8 +38,8 @@
    "roster": "World Championship and Olympic rosters from 2010: national team"
   }
  },
- "persons": 17984,
- "persons_with_nationality": 14302,
+ "persons": 17991,
+ "persons_with_nationality": 14309,
  "records_by_league": {
   "NHL": {
    "records": 5004,
@@ -57,22 +57,22 @@
   "SHL": {
    "records": 4023,
    "with_birth_date": 2423,
-   "with_birth_date_share": 0.6023,
-   "linked_on_name_and_birth_date_to_another_source": 1214,
-   "linked_on_first_name_variant": 9,
+   "with_birth_date_share": 0.602287,
+   "linked_on_name_and_birth_date_to_another_source": 1213,
+   "linked_on_first_name_variant": 5,
    "without_birth_date": 1600,
    "name_only_linked": 566,
    "ambiguous": 12,
    "unmatched": 956,
    "joined_within_league_on_name": 66,
-   "name_only_link_rate": 0.3538
+   "name_only_link_rate": 0.35375
   },
   "Liiga": {
    "records": 4036,
    "with_birth_date": 4036,
    "with_birth_date_share": 1.0,
-   "linked_on_name_and_birth_date_to_another_source": 1694,
-   "linked_on_first_name_variant": 28,
+   "linked_on_name_and_birth_date_to_another_source": 1692,
+   "linked_on_first_name_variant": 25,
    "without_birth_date": 0,
    "name_only_linked": 0,
    "ambiguous": 0,
@@ -91,7 +91,7 @@
    "ambiguous": 21,
    "unmatched": 1063,
    "joined_within_league_on_name": 0,
-   "name_only_link_rate": 0.4188
+   "name_only_link_rate": 0.418767
   },
   "DEL": {
    "records": 3963,
@@ -100,24 +100,24 @@
    "linked_on_name_and_birth_date_to_another_source": 0,
    "linked_on_first_name_variant": 0,
    "without_birth_date": 3963,
-   "name_only_linked": 1267,
+   "name_only_linked": 1269,
    "ambiguous": 24,
    "unmatched": 2287,
-   "joined_within_league_on_name": 385,
-   "name_only_link_rate": 0.3197
+   "joined_within_league_on_name": 383,
+   "name_only_link_rate": 0.320212
   },
   "Extraliga": {
    "records": 3250,
    "with_birth_date": 1788,
-   "with_birth_date_share": 0.5502,
+   "with_birth_date_share": 0.550154,
    "linked_on_name_and_birth_date_to_another_source": 593,
-   "linked_on_first_name_variant": 7,
+   "linked_on_first_name_variant": 6,
    "without_birth_date": 1462,
    "name_only_linked": 226,
    "ambiguous": 4,
    "unmatched": 1218,
    "joined_within_league_on_name": 14,
-   "name_only_link_rate": 0.1546
+   "name_only_link_rate": 0.154583
   },
   "roster": {
    "records": 2711,
@@ -144,16 +144,16 @@
   },
   "Liiga": {
    "all_rows": {
-    "citizenship": 14309,
+    "citizenship": 14311,
     "unknown": 177,
-    "linked: citizenship": 93,
+    "linked: citizenship": 91,
     "linked: eligibility": 4,
     "linked: national_team": 2
    },
    "qualifying_rows": {
-    "citizenship": 10974,
+    "citizenship": 10975,
     "unknown": 107,
-    "linked: citizenship": 81,
+    "linked: citizenship": 80,
     "linked: eligibility": 2,
     "linked: national_team": 1
    }
@@ -193,17 +193,17 @@
   "DEL": {
    "all_rows": {
     "unknown": 6491,
-    "linked: citizenship": 2523,
+    "linked: citizenship": 2529,
     "linked: national_team": 1228,
-    "eligibility": 1047,
-    "linked: eligibility": 710
+    "eligibility": 1043,
+    "linked: eligibility": 708
    },
    "qualifying_rows": {
     "unknown": 5576,
-    "linked: citizenship": 2364,
+    "linked: citizenship": 2370,
     "linked: national_team": 1154,
-    "eligibility": 872,
-    "linked: eligibility": 599
+    "eligibility": 868,
+    "linked: eligibility": 597
    }
   },
   "NL": {
@@ -228,9 +228,9 @@
    "season": "1995/96",
    "rows": 471.0,
    "qualifying": 401.0,
-   "identified_share": 0.034,
-   "qualifying_identified_share": 0.0249,
-   "birth_year_share": 0.0382,
+   "identified_share": 0.03397,
+   "qualifying_identified_share": 0.024938,
+   "birth_year_share": 0.038217,
    "position_share": 1.0
   },
   {
@@ -238,9 +238,9 @@
    "season": "1996/97",
    "rows": 398.0,
    "qualifying": 370.0,
-   "identified_share": 0.1055,
-   "qualifying_identified_share": 0.1081,
-   "birth_year_share": 0.1131,
+   "identified_share": 0.105528,
+   "qualifying_identified_share": 0.108108,
+   "birth_year_share": 0.113065,
    "position_share": 1.0
   },
   {
@@ -248,9 +248,9 @@
    "season": "1997/98",
    "rows": 393.0,
    "qualifying": 357.0,
-   "identified_share": 0.1527,
-   "qualifying_identified_share": 0.1597,
-   "birth_year_share": 0.1603,
+   "identified_share": 0.152672,
+   "qualifying_identified_share": 0.159664,
+   "birth_year_share": 0.160305,
    "position_share": 1.0
   },
   {
@@ -258,9 +258,9 @@
    "season": "1998/99",
    "rows": 346.0,
    "qualifying": 310.0,
-   "identified_share": 0.159,
-   "qualifying_identified_share": 0.1613,
-   "birth_year_share": 0.1705,
+   "identified_share": 0.15896,
+   "qualifying_identified_share": 0.16129,
+   "birth_year_share": 0.17052,
    "position_share": 1.0
   },
   {
@@ -268,9 +268,9 @@
    "season": "1999/00",
    "rows": 381.0,
    "qualifying": 343.0,
-   "identified_share": 0.21,
-   "qualifying_identified_share": 0.2099,
-   "birth_year_share": 0.2152,
+   "identified_share": 0.209974,
+   "qualifying_identified_share": 0.209913,
+   "birth_year_share": 0.215223,
    "position_share": 1.0
   },
   {
@@ -278,9 +278,9 @@
    "season": "2000/01",
    "rows": 399.0,
    "qualifying": 357.0,
-   "identified_share": 0.2055,
-   "qualifying_identified_share": 0.2213,
-   "birth_year_share": 0.213,
+   "identified_share": 0.205514,
+   "qualifying_identified_share": 0.221289,
+   "birth_year_share": 0.213033,
    "position_share": 1.0
   },
   {
@@ -288,9 +288,9 @@
    "season": "2001/02",
    "rows": 399.0,
    "qualifying": 359.0,
-   "identified_share": 0.2256,
-   "qualifying_identified_share": 0.2368,
-   "birth_year_share": 0.2331,
+   "identified_share": 0.225564,
+   "qualifying_identified_share": 0.236769,
+   "birth_year_share": 0.233083,
    "position_share": 1.0
   },
   {
@@ -299,8 +299,8 @@
    "rows": 356.0,
    "qualifying": 317.0,
    "identified_share": 0.25,
-   "qualifying_identified_share": 0.2744,
-   "birth_year_share": 0.2556,
+   "qualifying_identified_share": 0.274448,
+   "birth_year_share": 0.255618,
    "position_share": 1.0
   },
   {
@@ -308,9 +308,9 @@
    "season": "2003/04",
    "rows": 350.0,
    "qualifying": 319.0,
-   "identified_share": 0.2714,
-   "qualifying_identified_share": 0.279,
-   "birth_year_share": 0.2771,
+   "identified_share": 0.271429,
+   "qualifying_identified_share": 0.278997,
+   "birth_year_share": 0.277143,
    "position_share": 1.0
   },
   {
@@ -318,9 +318,9 @@
    "season": "2004/05",
    "rows": 385.0,
    "qualifying": 326.0,
-   "identified_share": 0.3221,
-   "qualifying_identified_share": 0.3405,
-   "birth_year_share": 0.3273,
+   "identified_share": 0.322078,
+   "qualifying_identified_share": 0.340491,
+   "birth_year_share": 0.327273,
    "position_share": 1.0
   },
   {
@@ -328,9 +328,9 @@
    "season": "2005/06",
    "rows": 376.0,
    "qualifying": 328.0,
-   "identified_share": 0.3165,
-   "qualifying_identified_share": 0.3476,
-   "birth_year_share": 0.3191,
+   "identified_share": 0.316489,
+   "qualifying_identified_share": 0.347561,
+   "birth_year_share": 0.319149,
    "position_share": 1.0
   },
   {
@@ -338,9 +338,9 @@
    "season": "2006/07",
    "rows": 379.0,
    "qualifying": 321.0,
-   "identified_share": 0.343,
-   "qualifying_identified_share": 0.3676,
-   "birth_year_share": 0.3456,
+   "identified_share": 0.343008,
+   "qualifying_identified_share": 0.367601,
+   "birth_year_share": 0.345646,
    "position_share": 1.0
   },
   {
@@ -348,9 +348,9 @@
    "season": "2007/08",
    "rows": 392.0,
    "qualifying": 340.0,
-   "identified_share": 0.3367,
+   "identified_share": 0.336735,
    "qualifying_identified_share": 0.35,
-   "birth_year_share": 0.3393,
+   "birth_year_share": 0.339286,
    "position_share": 1.0
   },
   {
@@ -358,9 +358,9 @@
    "season": "2008/09",
    "rows": 421.0,
    "qualifying": 361.0,
-   "identified_share": 0.3682,
-   "qualifying_identified_share": 0.4044,
-   "birth_year_share": 0.3515,
+   "identified_share": 0.368171,
+   "qualifying_identified_share": 0.404432,
+   "birth_year_share": 0.351544,
    "position_share": 1.0
   },
   {
@@ -368,9 +368,9 @@
    "season": "2009/10",
    "rows": 399.0,
    "qualifying": 335.0,
-   "identified_share": 0.3659,
-   "qualifying_identified_share": 0.403,
-   "birth_year_share": 0.3534,
+   "identified_share": 0.365915,
+   "qualifying_identified_share": 0.402985,
+   "birth_year_share": 0.353383,
    "position_share": 1.0
   },
   {
@@ -378,9 +378,9 @@
    "season": "2010/11",
    "rows": 368.0,
    "qualifying": 323.0,
-   "identified_share": 0.3641,
-   "qualifying_identified_share": 0.3963,
-   "birth_year_share": 0.3397,
+   "identified_share": 0.36413,
+   "qualifying_identified_share": 0.396285,
+   "birth_year_share": 0.339674,
    "position_share": 1.0
   },
   {
@@ -388,9 +388,9 @@
    "season": "2011/12",
    "rows": 354.0,
    "qualifying": 319.0,
-   "identified_share": 0.3559,
-   "qualifying_identified_share": 0.3762,
-   "birth_year_share": 0.3305,
+   "identified_share": 0.355932,
+   "qualifying_identified_share": 0.376176,
+   "birth_year_share": 0.330508,
    "position_share": 1.0
   },
   {
@@ -398,9 +398,9 @@
    "season": "2012/13",
    "rows": 374.0,
    "qualifying": 328.0,
-   "identified_share": 0.3797,
-   "qualifying_identified_share": 0.3963,
-   "birth_year_share": 0.3449,
+   "identified_share": 0.379679,
+   "qualifying_identified_share": 0.396341,
+   "birth_year_share": 0.34492,
    "position_share": 1.0
   },
   {
@@ -408,9 +408,9 @@
    "season": "2013/14",
    "rows": 382.0,
    "qualifying": 333.0,
-   "identified_share": 0.4005,
-   "qualifying_identified_share": 0.4294,
-   "birth_year_share": 0.3508,
+   "identified_share": 0.400524,
+   "qualifying_identified_share": 0.429429,
+   "birth_year_share": 0.350785,
    "position_share": 1.0
   },
   {
@@ -418,9 +418,9 @@
    "season": "2014/15",
    "rows": 384.0,
    "qualifying": 333.0,
-   "identified_share": 0.4401,
-   "qualifying_identified_share": 0.4655,
-   "birth_year_share": 0.3724,
+   "identified_share": 0.440104,
+   "qualifying_identified_share": 0.465465,
+   "birth_year_share": 0.372396,
    "position_share": 1.0
   },
   {
@@ -428,9 +428,9 @@
    "season": "2015/16",
    "rows": 370.0,
    "qualifying": 331.0,
-   "identified_share": 0.527,
-   "qualifying_identified_share": 0.5468,
-   "birth_year_share": 0.4432,
+   "identified_share": 0.527027,
+   "qualifying_identified_share": 0.546828,
+   "birth_year_share": 0.443243,
    "position_share": 1.0
   },
   {
@@ -438,9 +438,9 @@
    "season": "2016/17",
    "rows": 379.0,
    "qualifying": 331.0,
-   "identified_share": 0.5488,
-   "qualifying_identified_share": 0.565,
-   "birth_year_share": 0.4354,
+   "identified_share": 0.548813,
+   "qualifying_identified_share": 0.564955,
+   "birth_year_share": 0.435356,
    "position_share": 1.0
   },
   {
@@ -448,9 +448,9 @@
    "season": "2017/18",
    "rows": 381.0,
    "qualifying": 335.0,
-   "identified_share": 0.5722,
-   "qualifying_identified_share": 0.594,
-   "birth_year_share": 0.4383,
+   "identified_share": 0.572178,
+   "qualifying_identified_share": 0.59403,
+   "birth_year_share": 0.43832,
    "position_share": 1.0
   },
   {
@@ -458,9 +458,9 @@
    "season": "2018/19",
    "rows": 378.0,
    "qualifying": 338.0,
-   "identified_share": 0.6455,
-   "qualifying_identified_share": 0.6538,
-   "birth_year_share": 0.4656,
+   "identified_share": 0.645503,
+   "qualifying_identified_share": 0.653846,
+   "birth_year_share": 0.465608,
    "position_share": 1.0
   },
   {
@@ -468,9 +468,9 @@
    "season": "2019/20",
    "rows": 378.0,
    "qualifying": 336.0,
-   "identified_share": 0.6984,
-   "qualifying_identified_share": 0.7143,
-   "birth_year_share": 0.4709,
+   "identified_share": 0.698413,
+   "qualifying_identified_share": 0.714286,
+   "birth_year_share": 0.470899,
    "position_share": 1.0
   },
   {
@@ -478,9 +478,9 @@
    "season": "2020/21",
    "rows": 382.0,
    "qualifying": 344.0,
-   "identified_share": 0.7513,
-   "qualifying_identified_share": 0.7587,
-   "birth_year_share": 0.4372,
+   "identified_share": 0.751309,
+   "qualifying_identified_share": 0.758721,
+   "birth_year_share": 0.439791,
    "position_share": 1.0
   },
   {
@@ -488,9 +488,9 @@
    "season": "2021/22",
    "rows": 419.0,
    "qualifying": 376.0,
-   "identified_share": 0.8305,
-   "qualifying_identified_share": 0.8457,
-   "birth_year_share": 0.4272,
+   "identified_share": 0.830549,
+   "qualifying_identified_share": 0.845745,
+   "birth_year_share": 0.429594,
    "position_share": 1.0
   },
   {
@@ -500,7 +500,7 @@
    "qualifying": 364.0,
    "identified_share": 1.0,
    "qualifying_identified_share": 1.0,
-   "birth_year_share": 0.3047,
+   "birth_year_share": 0.306977,
    "position_share": 1.0
   },
   {
@@ -510,7 +510,7 @@
    "qualifying": 344.0,
    "identified_share": 1.0,
    "qualifying_identified_share": 1.0,
-   "birth_year_share": 0.3479,
+   "birth_year_share": 0.350515,
    "position_share": 1.0
   },
   {
@@ -520,7 +520,7 @@
    "qualifying": 338.0,
    "identified_share": 1.0,
    "qualifying_identified_share": 1.0,
-   "birth_year_share": 0.3595,
+   "birth_year_share": 0.362025,
    "position_share": 1.0
   },
   {
@@ -530,7 +530,7 @@
    "qualifying": 348.0,
    "identified_share": 1.0,
    "qualifying_identified_share": 1.0,
-   "birth_year_share": 0.3699,
+   "birth_year_share": 0.372449,
    "position_share": 1.0
   },
   {
@@ -538,9 +538,9 @@
    "season": "1995/96",
    "rows": 397.0,
    "qualifying": 312.0,
-   "identified_share": 0.9824,
-   "qualifying_identified_share": 0.984,
-   "birth_year_share": 0.3325,
+   "identified_share": 0.982368,
+   "qualifying_identified_share": 0.983974,
+   "birth_year_share": 0.332494,
    "position_share": 1.0
   },
   {
@@ -548,9 +548,9 @@
    "season": "1996/97",
    "rows": 414.0,
    "qualifying": 315.0,
-   "identified_share": 0.9758,
-   "qualifying_identified_share": 0.9683,
-   "birth_year_share": 0.4251,
+   "identified_share": 0.975845,
+   "qualifying_identified_share": 0.968254,
+   "birth_year_share": 0.425121,
    "position_share": 1.0
   },
   {
@@ -558,9 +558,9 @@
    "season": "1997/98",
    "rows": 409.0,
    "qualifying": 313.0,
-   "identified_share": 0.9829,
-   "qualifying_identified_share": 0.9776,
-   "birth_year_share": 0.4719,
+   "identified_share": 0.982885,
+   "qualifying_identified_share": 0.977636,
+   "birth_year_share": 0.471883,
    "position_share": 1.0
   },
   {
@@ -568,9 +568,9 @@
    "season": "1998/99",
    "rows": 419.0,
    "qualifying": 312.0,
-   "identified_share": 0.9857,
-   "qualifying_identified_share": 0.9808,
-   "birth_year_share": 0.5609,
+   "identified_share": 0.98568,
+   "qualifying_identified_share": 0.980769,
+   "birth_year_share": 0.560859,
    "position_share": 1.0
   },
   {
@@ -578,9 +578,9 @@
    "season": "1999/00",
    "rows": 434.0,
    "qualifying": 324.0,
-   "identified_share": 0.9631,
-   "qualifying_identified_share": 0.9568,
-   "birth_year_share": 0.523,
+   "identified_share": 0.963134,
+   "qualifying_identified_share": 0.95679,
+   "birth_year_share": 0.523041,
    "position_share": 1.0
   },
   {
@@ -588,9 +588,9 @@
    "season": "2000/01",
    "rows": 415.0,
    "qualifying": 317.0,
-   "identified_share": 0.9518,
-   "qualifying_identified_share": 0.9464,
-   "birth_year_share": 0.5735,
+   "identified_share": 0.951807,
+   "qualifying_identified_share": 0.946372,
+   "birth_year_share": 0.573494,
    "position_share": 1.0
   },
   {
@@ -598,9 +598,9 @@
    "season": "2001/02",
    "rows": 442.0,
    "qualifying": 315.0,
-   "identified_share": 0.9593,
-   "qualifying_identified_share": 0.9524,
-   "birth_year_share": 0.6063,
+   "identified_share": 0.959276,
+   "qualifying_identified_share": 0.952381,
+   "birth_year_share": 0.606335,
    "position_share": 1.0
   },
   {
@@ -608,9 +608,9 @@
    "season": "2002/03",
    "rows": 468.0,
    "qualifying": 331.0,
-   "identified_share": 0.9359,
-   "qualifying_identified_share": 0.9245,
-   "birth_year_share": 0.6154,
+   "identified_share": 0.935897,
+   "qualifying_identified_share": 0.924471,
+   "birth_year_share": 0.615385,
    "position_share": 1.0
   },
   {
@@ -618,9 +618,9 @@
    "season": "2003/04",
    "rows": 476.0,
    "qualifying": 340.0,
-   "identified_share": 0.9265,
-   "qualifying_identified_share": 0.9118,
-   "birth_year_share": 0.6324,
+   "identified_share": 0.926471,
+   "qualifying_identified_share": 0.911765,
+   "birth_year_share": 0.632353,
    "position_share": 1.0
   },
   {
@@ -628,9 +628,9 @@
    "season": "2004/05",
    "rows": 478.0,
    "qualifying": 357.0,
-   "identified_share": 0.9268,
-   "qualifying_identified_share": 0.9328,
-   "birth_year_share": 0.682,
+   "identified_share": 0.926778,
+   "qualifying_identified_share": 0.932773,
+   "birth_year_share": 0.682008,
    "position_share": 1.0
   },
   {
@@ -638,9 +638,9 @@
    "season": "2005/06",
    "rows": 473.0,
    "qualifying": 343.0,
-   "identified_share": 0.9175,
-   "qualifying_identified_share": 0.9155,
-   "birth_year_share": 0.6934,
+   "identified_share": 0.917548,
+   "qualifying_identified_share": 0.915452,
+   "birth_year_share": 0.693446,
    "position_share": 1.0
   },
   {
@@ -648,9 +648,9 @@
    "season": "2006/07",
    "rows": 495.0,
    "qualifying": 347.0,
-   "identified_share": 0.9212,
-   "qualifying_identified_share": 0.9107,
-   "birth_year_share": 0.7354,
+   "identified_share": 0.921212,
+   "qualifying_identified_share": 0.910663,
+   "birth_year_share": 0.735354,
    "position_share": 1.0
   },
   {
@@ -658,9 +658,9 @@
    "season": "2007/08",
    "rows": 456.0,
    "qualifying": 353.0,
-   "identified_share": 0.9145,
-   "qualifying_identified_share": 0.9178,
-   "birth_year_share": 0.7456,
+   "identified_share": 0.914474,
+   "qualifying_identified_share": 0.917847,
+   "birth_year_share": 0.745614,
    "position_share": 1.0
   },
   {
@@ -668,9 +668,9 @@
    "season": "2008/09",
    "rows": 467.0,
    "qualifying": 358.0,
-   "identified_share": 0.9186,
-   "qualifying_identified_share": 0.9134,
-   "birth_year_share": 0.7837,
+   "identified_share": 0.91863,
+   "qualifying_identified_share": 0.913408,
+   "birth_year_share": 0.783726,
    "position_share": 1.0
   },
   {
@@ -678,8 +678,8 @@
    "season": "2009/10",
    "rows": 480.0,
    "qualifying": 353.0,
-   "identified_share": 0.9146,
-   "qualifying_identified_share": 0.9122,
+   "identified_share": 0.914583,
+   "qualifying_identified_share": 0.912181,
    "birth_year_share": 0.825,
    "position_share": 1.0
   },
@@ -688,9 +688,9 @@
    "season": "2010/11",
    "rows": 492.0,
    "qualifying": 353.0,
-   "identified_share": 0.935,
-   "qualifying_identified_share": 0.9235,
-   "birth_year_share": 0.8496,
+   "identified_share": 0.934959,
+   "qualifying_identified_share": 0.923513,
+   "birth_year_share": 0.849593,
    "position_share": 1.0
   },
   {
@@ -698,9 +698,9 @@
    "season": "2011/12",
    "rows": 475.0,
    "qualifying": 367.0,
-   "identified_share": 0.9137,
-   "qualifying_identified_share": 0.8992,
-   "birth_year_share": 0.8568,
+   "identified_share": 0.913684,
+   "qualifying_identified_share": 0.899183,
+   "birth_year_share": 0.856842,
    "position_share": 1.0
   },
   {
@@ -708,9 +708,9 @@
    "season": "2012/13",
    "rows": 494.0,
    "qualifying": 379.0,
-   "identified_share": 0.9251,
-   "qualifying_identified_share": 0.9208,
-   "birth_year_share": 0.913,
+   "identified_share": 0.925101,
+   "qualifying_identified_share": 0.920844,
+   "birth_year_share": 0.912955,
    "position_share": 1.0
   },
   {
@@ -718,8 +718,8 @@
    "season": "2013/14",
    "rows": 467.0,
    "qualifying": 352.0,
-   "identified_share": 0.9379,
-   "qualifying_identified_share": 0.9318,
+   "identified_share": 0.937901,
+   "qualifying_identified_share": 0.931818,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -728,8 +728,8 @@
    "season": "2014/15",
    "rows": 486.0,
    "qualifying": 365.0,
-   "identified_share": 0.9424,
-   "qualifying_identified_share": 0.937,
+   "identified_share": 0.942387,
+   "qualifying_identified_share": 0.936986,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -738,9 +738,9 @@
    "season": "2015/16",
    "rows": 483.0,
    "qualifying": 360.0,
-   "identified_share": 0.942,
-   "qualifying_identified_share": 0.9333,
-   "birth_year_share": 0.9979,
+   "identified_share": 0.942029,
+   "qualifying_identified_share": 0.933333,
+   "birth_year_share": 0.99793,
    "position_share": 1.0
   },
   {
@@ -749,7 +749,7 @@
    "rows": 500.0,
    "qualifying": 354.0,
    "identified_share": 0.942,
-   "qualifying_identified_share": 0.9407,
+   "qualifying_identified_share": 0.940678,
    "birth_year_share": 0.998,
    "position_share": 1.0
   },
@@ -758,8 +758,8 @@
    "season": "2017/18",
    "rows": 470.0,
    "qualifying": 344.0,
-   "identified_share": 0.9404,
-   "qualifying_identified_share": 0.936,
+   "identified_share": 0.940426,
+   "qualifying_identified_share": 0.936047,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -768,9 +768,9 @@
    "season": "2018/19",
    "rows": 483.0,
    "qualifying": 350.0,
-   "identified_share": 0.9337,
-   "qualifying_identified_share": 0.9171,
-   "birth_year_share": 0.9959,
+   "identified_share": 0.933747,
+   "qualifying_identified_share": 0.917143,
+   "birth_year_share": 0.995859,
    "position_share": 1.0
   },
   {
@@ -778,8 +778,8 @@
    "season": "2019/20",
    "rows": 495.0,
    "qualifying": 358.0,
-   "identified_share": 0.9414,
-   "qualifying_identified_share": 0.9413,
+   "identified_share": 0.941414,
+   "qualifying_identified_share": 0.941341,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -788,8 +788,8 @@
    "season": "2020/21",
    "rows": 494.0,
    "qualifying": 365.0,
-   "identified_share": 0.9474,
-   "qualifying_identified_share": 0.9507,
+   "identified_share": 0.947368,
+   "qualifying_identified_share": 0.950685,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -798,9 +798,9 @@
    "season": "2021/22",
    "rows": 544.0,
    "qualifying": 390.0,
-   "identified_share": 0.9357,
-   "qualifying_identified_share": 0.9359,
-   "birth_year_share": 0.989,
+   "identified_share": 0.935662,
+   "qualifying_identified_share": 0.935897,
+   "birth_year_share": 0.988971,
    "position_share": 1.0
   },
   {
@@ -808,9 +808,9 @@
    "season": "2022/23",
    "rows": 491.0,
    "qualifying": 348.0,
-   "identified_share": 0.9613,
-   "qualifying_identified_share": 0.9569,
-   "birth_year_share": 0.998,
+   "identified_share": 0.961303,
+   "qualifying_identified_share": 0.956897,
+   "birth_year_share": 0.997963,
    "position_share": 1.0
   },
   {
@@ -818,8 +818,8 @@
    "season": "2023/24",
    "rows": 468.0,
    "qualifying": 348.0,
-   "identified_share": 0.9423,
-   "qualifying_identified_share": 0.9511,
+   "identified_share": 0.942308,
+   "qualifying_identified_share": 0.951149,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -828,9 +828,9 @@
    "season": "2024/25",
    "rows": 495.0,
    "qualifying": 360.0,
-   "identified_share": 0.9313,
-   "qualifying_identified_share": 0.9389,
-   "birth_year_share": 0.998,
+   "identified_share": 0.931313,
+   "qualifying_identified_share": 0.938889,
+   "birth_year_share": 0.99798,
    "position_share": 1.0
   },
   {
@@ -838,8 +838,8 @@
    "season": "2025/26",
    "rows": 471.0,
    "qualifying": 353.0,
-   "identified_share": 0.9151,
-   "qualifying_identified_share": 0.9093,
+   "identified_share": 0.915074,
+   "qualifying_identified_share": 0.909348,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -848,8 +848,8 @@
    "season": "1995/96",
    "rows": 365.0,
    "qualifying": 281.0,
-   "identified_share": 0.9918,
-   "qualifying_identified_share": 0.9893,
+   "identified_share": 0.991781,
+   "qualifying_identified_share": 0.989324,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -858,8 +858,8 @@
    "season": "1996/97",
    "rows": 359.0,
    "qualifying": 294.0,
-   "identified_share": 0.9916,
-   "qualifying_identified_share": 0.9898,
+   "identified_share": 0.991643,
+   "qualifying_identified_share": 0.989796,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -868,8 +868,8 @@
    "season": "1997/98",
    "rows": 372.0,
    "qualifying": 307.0,
-   "identified_share": 0.9839,
-   "qualifying_identified_share": 0.9902,
+   "identified_share": 0.983871,
+   "qualifying_identified_share": 0.990228,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -878,8 +878,8 @@
    "season": "1998/99",
    "rows": 371.0,
    "qualifying": 299.0,
-   "identified_share": 0.9757,
-   "qualifying_identified_share": 0.9866,
+   "identified_share": 0.975741,
+   "qualifying_identified_share": 0.986622,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -888,10 +888,10 @@
    "season": "1999/00",
    "rows": 388.0,
    "qualifying": 304.0,
-   "identified_share": 0.982,
-   "qualifying_identified_share": 0.9901,
+   "identified_share": 0.981959,
+   "qualifying_identified_share": 0.990132,
    "birth_year_share": 1.0,
-   "position_share": 0.9974
+   "position_share": 0.997423
   },
   {
    "league": "Liiga",
@@ -899,7 +899,7 @@
    "rows": 400.0,
    "qualifying": 319.0,
    "identified_share": 0.9875,
-   "qualifying_identified_share": 0.9937,
+   "qualifying_identified_share": 0.99373,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -908,8 +908,8 @@
    "season": "2001/02",
    "rows": 415.0,
    "qualifying": 329.0,
-   "identified_share": 0.9759,
-   "qualifying_identified_share": 0.9878,
+   "identified_share": 0.975904,
+   "qualifying_identified_share": 0.987842,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -918,8 +918,8 @@
    "season": "2002/03",
    "rows": 403.0,
    "qualifying": 339.0,
-   "identified_share": 0.9876,
-   "qualifying_identified_share": 0.9853,
+   "identified_share": 0.987593,
+   "qualifying_identified_share": 0.985251,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -928,8 +928,8 @@
    "season": "2003/04",
    "rows": 422.0,
    "qualifying": 337.0,
-   "identified_share": 0.9858,
-   "qualifying_identified_share": 0.9852,
+   "identified_share": 0.985782,
+   "qualifying_identified_share": 0.985163,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -938,8 +938,8 @@
    "season": "2004/05",
    "rows": 421.0,
    "qualifying": 332.0,
-   "identified_share": 0.9857,
-   "qualifying_identified_share": 0.9819,
+   "identified_share": 0.985748,
+   "qualifying_identified_share": 0.981928,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -948,8 +948,8 @@
    "season": "2005/06",
    "rows": 462.0,
    "qualifying": 369.0,
-   "identified_share": 0.9848,
-   "qualifying_identified_share": 0.9892,
+   "identified_share": 0.984848,
+   "qualifying_identified_share": 0.98916,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -958,8 +958,8 @@
    "season": "2006/07",
    "rows": 468.0,
    "qualifying": 363.0,
-   "identified_share": 0.9893,
-   "qualifying_identified_share": 0.9862,
+   "identified_share": 0.989316,
+   "qualifying_identified_share": 0.986226,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -968,8 +968,8 @@
    "season": "2007/08",
    "rows": 466.0,
    "qualifying": 365.0,
-   "identified_share": 0.9764,
-   "qualifying_identified_share": 0.9781,
+   "identified_share": 0.976395,
+   "qualifying_identified_share": 0.978082,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -978,8 +978,8 @@
    "season": "2008/09",
    "rows": 491.0,
    "qualifying": 379.0,
-   "identified_share": 0.9837,
-   "qualifying_identified_share": 0.9815,
+   "identified_share": 0.983707,
+   "qualifying_identified_share": 0.98153,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -988,8 +988,8 @@
    "season": "2009/10",
    "rows": 459.0,
    "qualifying": 355.0,
-   "identified_share": 0.9826,
-   "qualifying_identified_share": 0.9831,
+   "identified_share": 0.982571,
+   "qualifying_identified_share": 0.983099,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -998,8 +998,8 @@
    "season": "2010/11",
    "rows": 472.0,
    "qualifying": 353.0,
-   "identified_share": 0.9873,
-   "qualifying_identified_share": 0.9915,
+   "identified_share": 0.987288,
+   "qualifying_identified_share": 0.991501,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -1008,8 +1008,8 @@
    "season": "2011/12",
    "rows": 469.0,
    "qualifying": 359.0,
-   "identified_share": 0.9872,
-   "qualifying_identified_share": 0.9889,
+   "identified_share": 0.987207,
+   "qualifying_identified_share": 0.988858,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -1018,8 +1018,8 @@
    "season": "2012/13",
    "rows": 509.0,
    "qualifying": 350.0,
-   "identified_share": 0.9882,
-   "qualifying_identified_share": 0.9914,
+   "identified_share": 0.988212,
+   "qualifying_identified_share": 0.991429,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -1028,8 +1028,8 @@
    "season": "2013/14",
    "rows": 480.0,
    "qualifying": 358.0,
-   "identified_share": 0.9771,
-   "qualifying_identified_share": 0.9777,
+   "identified_share": 0.977083,
+   "qualifying_identified_share": 0.977654,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -1038,8 +1038,8 @@
    "season": "2014/15",
    "rows": 479.0,
    "qualifying": 366.0,
-   "identified_share": 0.9666,
-   "qualifying_identified_share": 0.9836,
+   "identified_share": 0.966597,
+   "qualifying_identified_share": 0.983607,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -1048,8 +1048,8 @@
    "season": "2015/16",
    "rows": 513.0,
    "qualifying": 395.0,
-   "identified_share": 0.9649,
-   "qualifying_identified_share": 0.9772,
+   "identified_share": 0.964912,
+   "qualifying_identified_share": 0.977215,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -1058,8 +1058,8 @@
    "season": "2016/17",
    "rows": 532.0,
    "qualifying": 393.0,
-   "identified_share": 0.9831,
-   "qualifying_identified_share": 0.9898,
+   "identified_share": 0.983083,
+   "qualifying_identified_share": 0.989822,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -1068,8 +1068,8 @@
    "season": "2017/18",
    "rows": 527.0,
    "qualifying": 389.0,
-   "identified_share": 0.9943,
-   "qualifying_identified_share": 0.9974,
+   "identified_share": 0.994307,
+   "qualifying_identified_share": 0.997429,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -1138,8 +1138,8 @@
    "season": "2024/25",
    "rows": 566.0,
    "qualifying": 420.0,
-   "identified_share": 0.9982,
-   "qualifying_identified_share": 0.9976,
+   "identified_share": 0.998233,
+   "qualifying_identified_share": 0.997619,
    "birth_year_share": 1.0,
    "position_share": 1.0
   },
@@ -1148,7 +1148,7 @@
    "season": "2025/26",
    "rows": 573.0,
    "qualifying": 429.0,
-   "identified_share": 0.9965,
+   "identified_share": 0.99651,
    "qualifying_identified_share": 1.0,
    "birth_year_share": 1.0,
    "position_share": 1.0
@@ -1458,19 +1458,19 @@
    "season": "2008/09",
    "rows": 363.0,
    "qualifying": 303.0,
-   "identified_share": 0.8843,
-   "qualifying_identified_share": 0.9109,
-   "birth_year_share": 0.3003,
-   "position_share": 0.9972
+   "identified_share": 0.884298,
+   "qualifying_identified_share": 0.910891,
+   "birth_year_share": 0.300275,
+   "position_share": 0.997245
   },
   {
    "league": "NL",
    "season": "2009/10",
    "rows": 384.0,
    "qualifying": 294.0,
-   "identified_share": 0.901,
-   "qualifying_identified_share": 0.9286,
-   "birth_year_share": 0.2969,
+   "identified_share": 0.901042,
+   "qualifying_identified_share": 0.928571,
+   "birth_year_share": 0.296875,
    "position_share": 1.0
   },
   {
@@ -1478,9 +1478,9 @@
    "season": "2010/11",
    "rows": 387.0,
    "qualifying": 304.0,
-   "identified_share": 0.9147,
-   "qualifying_identified_share": 0.9309,
-   "birth_year_share": 0.3282,
+   "identified_share": 0.914729,
+   "qualifying_identified_share": 0.930921,
+   "birth_year_share": 0.328165,
    "position_share": 1.0
   },
   {
@@ -1488,9 +1488,9 @@
    "season": "2011/12",
    "rows": 402.0,
    "qualifying": 317.0,
-   "identified_share": 0.9154,
-   "qualifying_identified_share": 0.9243,
-   "birth_year_share": 0.3234,
+   "identified_share": 0.915423,
+   "qualifying_identified_share": 0.92429,
+   "birth_year_share": 0.323383,
    "position_share": 1.0
   },
   {
@@ -1498,9 +1498,9 @@
    "season": "2012/13",
    "rows": 405.0,
    "qualifying": 318.0,
-   "identified_share": 0.9086,
-   "qualifying_identified_share": 0.9497,
-   "birth_year_share": 0.3852,
+   "identified_share": 0.908642,
+   "qualifying_identified_share": 0.949686,
+   "birth_year_share": 0.385185,
    "position_share": 1.0
   },
   {
@@ -1508,9 +1508,9 @@
    "season": "2013/14",
    "rows": 390.0,
    "qualifying": 307.0,
-   "identified_share": 0.9256,
-   "qualifying_identified_share": 0.9479,
-   "birth_year_share": 0.3897,
+   "identified_share": 0.925641,
+   "qualifying_identified_share": 0.947883,
+   "birth_year_share": 0.389744,
    "position_share": 1.0
   },
   {
@@ -1518,9 +1518,9 @@
    "season": "2014/15",
    "rows": 396.0,
    "qualifying": 318.0,
-   "identified_share": 0.9369,
-   "qualifying_identified_share": 0.9465,
-   "birth_year_share": 0.4091,
+   "identified_share": 0.936869,
+   "qualifying_identified_share": 0.946541,
+   "birth_year_share": 0.409091,
    "position_share": 1.0
   },
   {
@@ -1528,9 +1528,9 @@
    "season": "2015/16",
    "rows": 392.0,
    "qualifying": 314.0,
-   "identified_share": 0.9337,
-   "qualifying_identified_share": 0.9554,
-   "birth_year_share": 0.4005,
+   "identified_share": 0.933673,
+   "qualifying_identified_share": 0.955414,
+   "birth_year_share": 0.40051,
    "position_share": 1.0
   },
   {
@@ -1538,9 +1538,9 @@
    "season": "2016/17",
    "rows": 374.0,
    "qualifying": 314.0,
-   "identified_share": 0.9599,
-   "qualifying_identified_share": 0.9745,
-   "birth_year_share": 0.4545,
+   "identified_share": 0.959893,
+   "qualifying_identified_share": 0.974522,
+   "birth_year_share": 0.454545,
    "position_share": 1.0
   },
   {
@@ -1548,9 +1548,9 @@
    "season": "2017/18",
    "rows": 401.0,
    "qualifying": 319.0,
-   "identified_share": 0.9377,
-   "qualifying_identified_share": 0.9655,
-   "birth_year_share": 0.4264,
+   "identified_share": 0.937656,
+   "qualifying_identified_share": 0.965517,
+   "birth_year_share": 0.426434,
    "position_share": 1.0
   },
   {
@@ -1558,9 +1558,9 @@
    "season": "2018/19",
    "rows": 370.0,
    "qualifying": 315.0,
-   "identified_share": 0.9568,
-   "qualifying_identified_share": 0.9714,
-   "birth_year_share": 0.4378,
+   "identified_share": 0.956757,
+   "qualifying_identified_share": 0.971429,
+   "birth_year_share": 0.437838,
    "position_share": 1.0
   },
   {
@@ -1568,9 +1568,9 @@
    "season": "2019/20",
    "rows": 382.0,
    "qualifying": 310.0,
-   "identified_share": 0.9503,
-   "qualifying_identified_share": 0.9742,
-   "birth_year_share": 0.4476,
+   "identified_share": 0.950262,
+   "qualifying_identified_share": 0.974194,
+   "birth_year_share": 0.447644,
    "position_share": 1.0
   },
   {
@@ -1578,9 +1578,9 @@
    "season": "2020/21",
    "rows": 408.0,
    "qualifying": 314.0,
-   "identified_share": 0.9314,
-   "qualifying_identified_share": 0.9618,
-   "birth_year_share": 0.3971,
+   "identified_share": 0.931373,
+   "qualifying_identified_share": 0.961783,
+   "birth_year_share": 0.397059,
    "position_share": 1.0
   },
   {
@@ -1588,9 +1588,9 @@
    "season": "2021/22",
    "rows": 444.0,
    "qualifying": 332.0,
-   "identified_share": 0.9099,
-   "qualifying_identified_share": 0.9398,
-   "birth_year_share": 0.3716,
+   "identified_share": 0.90991,
+   "qualifying_identified_share": 0.939759,
+   "birth_year_share": 0.371622,
    "position_share": 1.0
   },
   {
@@ -1598,9 +1598,9 @@
    "season": "2022/23",
    "rows": 456.0,
    "qualifying": 360.0,
-   "identified_share": 0.9057,
+   "identified_share": 0.905702,
    "qualifying_identified_share": 0.925,
-   "birth_year_share": 0.4232,
+   "birth_year_share": 0.423246,
    "position_share": 1.0
   },
   {
@@ -1608,9 +1608,9 @@
    "season": "2023/24",
    "rows": 447.0,
    "qualifying": 372.0,
-   "identified_share": 0.9284,
-   "qualifying_identified_share": 0.9489,
-   "birth_year_share": 0.443,
+   "identified_share": 0.928412,
+   "qualifying_identified_share": 0.948925,
+   "birth_year_share": 0.442953,
    "position_share": 1.0
   },
   {
@@ -1618,9 +1618,9 @@
    "season": "2024/25",
    "rows": 449.0,
    "qualifying": 367.0,
-   "identified_share": 0.9332,
-   "qualifying_identified_share": 0.9482,
-   "birth_year_share": 0.4187,
+   "identified_share": 0.933185,
+   "qualifying_identified_share": 0.948229,
+   "birth_year_share": 0.418708,
    "position_share": 1.0
   },
   {
@@ -1628,9 +1628,9 @@
    "season": "2025/26",
    "rows": 459.0,
    "qualifying": 365.0,
-   "identified_share": 0.9368,
-   "qualifying_identified_share": 0.9397,
-   "birth_year_share": 0.4227,
+   "identified_share": 0.936819,
+   "qualifying_identified_share": 0.939726,
+   "birth_year_share": 0.422658,
    "position_share": 1.0
   },
   {
@@ -1638,210 +1638,210 @@
    "season": "1995/96",
    "rows": 316.0,
    "qualifying": 271.0,
-   "identified_share": 0.2437,
-   "qualifying_identified_share": 0.2768,
-   "birth_year_share": 0.2532,
-   "position_share": 0.981
+   "identified_share": 0.243671,
+   "qualifying_identified_share": 0.276753,
+   "birth_year_share": 0.253165,
+   "position_share": 0.981013
   },
   {
    "league": "SHL",
    "season": "1996/97",
    "rows": 355.0,
    "qualifying": 293.0,
-   "identified_share": 0.307,
-   "qualifying_identified_share": 0.3311,
-   "birth_year_share": 0.3127,
-   "position_share": 0.9831
+   "identified_share": 0.307042,
+   "qualifying_identified_share": 0.331058,
+   "birth_year_share": 0.312676,
+   "position_share": 0.983099
   },
   {
    "league": "SHL",
    "season": "1997/98",
    "rows": 328.0,
    "qualifying": 277.0,
-   "identified_share": 0.3598,
-   "qualifying_identified_share": 0.3899,
-   "birth_year_share": 0.3659,
-   "position_share": 0.9817
+   "identified_share": 0.359756,
+   "qualifying_identified_share": 0.389892,
+   "birth_year_share": 0.365854,
+   "position_share": 0.981707
   },
   {
    "league": "SHL",
    "season": "1998/99",
    "rows": 307.0,
    "qualifying": 268.0,
-   "identified_share": 0.3518,
-   "qualifying_identified_share": 0.3657,
-   "birth_year_share": 0.355,
-   "position_share": 0.9739
+   "identified_share": 0.351792,
+   "qualifying_identified_share": 0.365672,
+   "birth_year_share": 0.355049,
+   "position_share": 0.973941
   },
   {
    "league": "SHL",
    "season": "1999/00",
    "rows": 330.0,
    "qualifying": 270.0,
-   "identified_share": 0.3515,
-   "qualifying_identified_share": 0.3778,
-   "birth_year_share": 0.3576,
-   "position_share": 0.9606
+   "identified_share": 0.351515,
+   "qualifying_identified_share": 0.377778,
+   "birth_year_share": 0.357576,
+   "position_share": 0.960606
   },
   {
    "league": "SHL",
    "season": "2000/01",
    "rows": 345.0,
    "qualifying": 286.0,
-   "identified_share": 0.371,
-   "qualifying_identified_share": 0.4021,
-   "birth_year_share": 0.3797,
-   "position_share": 0.9594
+   "identified_share": 0.371014,
+   "qualifying_identified_share": 0.402098,
+   "birth_year_share": 0.37971,
+   "position_share": 0.95942
   },
   {
    "league": "SHL",
    "season": "2001/02",
    "rows": 352.0,
    "qualifying": 291.0,
-   "identified_share": 0.4119,
-   "qualifying_identified_share": 0.4261,
-   "birth_year_share": 0.4233,
-   "position_share": 0.9517
+   "identified_share": 0.411932,
+   "qualifying_identified_share": 0.426117,
+   "birth_year_share": 0.423295,
+   "position_share": 0.951705
   },
   {
    "league": "SHL",
    "season": "2002/03",
    "rows": 351.0,
    "qualifying": 293.0,
-   "identified_share": 0.4359,
-   "qualifying_identified_share": 0.471,
-   "birth_year_share": 0.4416,
-   "position_share": 0.9487
+   "identified_share": 0.435897,
+   "qualifying_identified_share": 0.47099,
+   "birth_year_share": 0.441595,
+   "position_share": 0.948718
   },
   {
    "league": "SHL",
    "season": "2003/04",
    "rows": 363.0,
    "qualifying": 288.0,
-   "identified_share": 0.5124,
-   "qualifying_identified_share": 0.5694,
-   "birth_year_share": 0.5207,
-   "position_share": 0.9146
+   "identified_share": 0.512397,
+   "qualifying_identified_share": 0.569444,
+   "birth_year_share": 0.520661,
+   "position_share": 0.914601
   },
   {
    "league": "SHL",
    "season": "2004/05",
    "rows": 389.0,
    "qualifying": 307.0,
-   "identified_share": 0.6761,
-   "qualifying_identified_share": 0.6971,
-   "birth_year_share": 0.6864,
-   "position_share": 0.8972
+   "identified_share": 0.676093,
+   "qualifying_identified_share": 0.697068,
+   "birth_year_share": 0.686375,
+   "position_share": 0.897172
   },
   {
    "league": "SHL",
    "season": "2005/06",
    "rows": 373.0,
    "qualifying": 297.0,
-   "identified_share": 0.6327,
-   "qualifying_identified_share": 0.6498,
-   "birth_year_share": 0.6434,
-   "position_share": 0.8606
+   "identified_share": 0.632708,
+   "qualifying_identified_share": 0.649832,
+   "birth_year_share": 0.643432,
+   "position_share": 0.86059
   },
   {
    "league": "SHL",
    "season": "2006/07",
    "rows": 385.0,
    "qualifying": 302.0,
-   "identified_share": 0.7091,
-   "qualifying_identified_share": 0.7583,
-   "birth_year_share": 0.7169,
-   "position_share": 0.8468
+   "identified_share": 0.709091,
+   "qualifying_identified_share": 0.758278,
+   "birth_year_share": 0.716883,
+   "position_share": 0.846753
   },
   {
    "league": "SHL",
    "season": "2007/08",
    "rows": 380.0,
    "qualifying": 294.0,
-   "identified_share": 0.7579,
-   "qualifying_identified_share": 0.7823,
-   "birth_year_share": 0.7737,
-   "position_share": 0.8079
+   "identified_share": 0.757895,
+   "qualifying_identified_share": 0.782313,
+   "birth_year_share": 0.773684,
+   "position_share": 0.807895
   },
   {
    "league": "SHL",
    "season": "2008/09",
    "rows": 393.0,
    "qualifying": 306.0,
-   "identified_share": 0.7506,
-   "qualifying_identified_share": 0.781,
-   "birth_year_share": 0.7583,
-   "position_share": 0.799
+   "identified_share": 0.750636,
+   "qualifying_identified_share": 0.781046,
+   "birth_year_share": 0.75827,
+   "position_share": 0.798982
   },
   {
    "league": "SHL",
    "season": "2009/10",
    "rows": 403.0,
    "qualifying": 299.0,
-   "identified_share": 0.7891,
-   "qualifying_identified_share": 0.8729,
-   "birth_year_share": 0.794,
-   "position_share": 0.7767
+   "identified_share": 0.789082,
+   "qualifying_identified_share": 0.87291,
+   "birth_year_share": 0.794045,
+   "position_share": 0.776675
   },
   {
    "league": "SHL",
    "season": "2010/11",
    "rows": 406.0,
    "qualifying": 311.0,
-   "identified_share": 0.8719,
-   "qualifying_identified_share": 0.9453,
-   "birth_year_share": 0.8719,
-   "position_share": 0.7291
+   "identified_share": 0.871921,
+   "qualifying_identified_share": 0.945338,
+   "birth_year_share": 0.871921,
+   "position_share": 0.729064
   },
   {
    "league": "SHL",
    "season": "2011/12",
    "rows": 407.0,
    "qualifying": 318.0,
-   "identified_share": 0.9484,
-   "qualifying_identified_share": 0.9969,
-   "birth_year_share": 0.9484,
-   "position_share": 0.6683
+   "identified_share": 0.948403,
+   "qualifying_identified_share": 0.996855,
+   "birth_year_share": 0.948403,
+   "position_share": 0.668305
   },
   {
    "league": "SHL",
    "season": "2012/13",
    "rows": 406.0,
    "qualifying": 309.0,
-   "identified_share": 0.9458,
-   "qualifying_identified_share": 0.9968,
-   "birth_year_share": 0.9458,
-   "position_share": 0.6601
+   "identified_share": 0.945813,
+   "qualifying_identified_share": 0.996764,
+   "birth_year_share": 0.945813,
+   "position_share": 0.660099
   },
   {
    "league": "SHL",
    "season": "2013/14",
    "rows": 424.0,
    "qualifying": 314.0,
-   "identified_share": 0.9528,
-   "qualifying_identified_share": 0.9968,
-   "birth_year_share": 0.9528,
-   "position_share": 0.6722
+   "identified_share": 0.95283,
+   "qualifying_identified_share": 0.996815,
+   "birth_year_share": 0.95283,
+   "position_share": 0.67217
   },
   {
    "league": "SHL",
    "season": "2014/15",
    "rows": 432.0,
    "qualifying": 321.0,
-   "identified_share": 0.9931,
-   "qualifying_identified_share": 0.9969,
-   "birth_year_share": 0.9931,
-   "position_share": 0.6551
+   "identified_share": 0.993056,
+   "qualifying_identified_share": 0.996885,
+   "birth_year_share": 0.993056,
+   "position_share": 0.655093
   },
   {
    "league": "SHL",
    "season": "2015/16",
    "rows": 496.0,
    "qualifying": 366.0,
-   "identified_share": 0.998,
+   "identified_share": 0.997984,
    "qualifying_identified_share": 1.0,
-   "birth_year_share": 0.998,
-   "position_share": 0.619
+   "birth_year_share": 0.997984,
+   "position_share": 0.618952
   },
   {
    "league": "SHL",
@@ -1851,7 +1851,7 @@
    "identified_share": 1.0,
    "qualifying_identified_share": 1.0,
    "birth_year_share": 1.0,
-   "position_share": 0.6394
+   "position_share": 0.639413
   },
   {
    "league": "SHL",
@@ -1861,27 +1861,27 @@
    "identified_share": 1.0,
    "qualifying_identified_share": 1.0,
    "birth_year_share": 1.0,
-   "position_share": 0.668
+   "position_share": 0.668024
   },
   {
    "league": "SHL",
    "season": "2018/19",
    "rows": 489.0,
    "qualifying": 365.0,
-   "identified_share": 0.9898,
+   "identified_share": 0.989775,
    "qualifying_identified_share": 1.0,
-   "birth_year_share": 0.9898,
-   "position_share": 0.683
+   "birth_year_share": 0.989775,
+   "position_share": 0.683027
   },
   {
    "league": "SHL",
    "season": "2019/20",
    "rows": 483.0,
    "qualifying": 364.0,
-   "identified_share": 0.9959,
+   "identified_share": 0.995859,
    "qualifying_identified_share": 1.0,
-   "birth_year_share": 0.9979,
-   "position_share": 0.7184
+   "birth_year_share": 0.99793,
+   "position_share": 0.718427
   },
   {
    "league": "SHL",
@@ -1891,7 +1891,7 @@
    "identified_share": 1.0,
    "qualifying_identified_share": 1.0,
    "birth_year_share": 1.0,
-   "position_share": 0.7593
+   "position_share": 0.757202
   },
   {
    "league": "SHL",
@@ -1901,7 +1901,7 @@
    "identified_share": 1.0,
    "qualifying_identified_share": 1.0,
    "birth_year_share": 1.0,
-   "position_share": 0.7319
+   "position_share": 0.729839
   },
   {
    "league": "SHL",
@@ -1911,7 +1911,7 @@
    "identified_share": 1.0,
    "qualifying_identified_share": 1.0,
    "birth_year_share": 1.0,
-   "position_share": 0.7323
+   "position_share": 0.732252
   },
   {
    "league": "SHL",
@@ -1921,31 +1921,31 @@
    "identified_share": 1.0,
    "qualifying_identified_share": 1.0,
    "birth_year_share": 1.0,
-   "position_share": 0.7554
+   "position_share": 0.755365
   },
   {
    "league": "SHL",
    "season": "2024/25",
    "rows": 482.0,
    "qualifying": 367.0,
-   "identified_share": 0.944,
-   "qualifying_identified_share": 0.9973,
+   "identified_share": 0.943983,
+   "qualifying_identified_share": 0.997275,
    "birth_year_share": 1.0,
-   "position_share": 0.7573
+   "position_share": 0.757261
   },
   {
    "league": "SHL",
    "season": "2025/26",
    "rows": 468.0,
    "qualifying": 365.0,
-   "identified_share": 0.9145,
-   "qualifying_identified_share": 0.989,
+   "identified_share": 0.91453,
+   "qualifying_identified_share": 0.989041,
    "birth_year_share": 1.0,
-   "position_share": 0.7949
+   "position_share": 0.794872
   }
  ],
  "conflicts": {
-  "persons": 190,
+  "persons": 189,
   "czech_eligibility_overridden_by_citizenship": 50,
   "examples": [
    {

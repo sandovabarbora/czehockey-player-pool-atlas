@@ -28,108 +28,108 @@
    "CZE": {
     "player_seasons": 111,
     "players": 35,
-    "median_toi_ratio": 0.9824,
-    "median_ppg_ratio": 0.8653,
-    "share_above_median_toi": 0.4595,
-    "share_above_median_ppg": 0.4505
+    "median_toi_ratio": 0.982448,
+    "median_ppg_ratio": 0.86526,
+    "share_above_median_toi": 0.459459,
+    "share_above_median_ppg": 0.45045
    },
    "FIN": {
     "player_seasons": 201,
     "players": 57,
-    "median_toi_ratio": 0.9986,
-    "median_ppg_ratio": 1.01,
-    "share_above_median_toi": 0.4876,
-    "share_above_median_ppg": 0.5174
+    "median_toi_ratio": 0.998563,
+    "median_ppg_ratio": 1.009957,
+    "share_above_median_toi": 0.487562,
+    "share_above_median_ppg": 0.517413
    },
    "SWE": {
     "player_seasons": 411,
     "players": 119,
-    "median_toi_ratio": 1.0128,
-    "median_ppg_ratio": 1.1018,
-    "share_above_median_toi": 0.5158,
-    "share_above_median_ppg": 0.5596
+    "median_toi_ratio": 1.012773,
+    "median_ppg_ratio": 1.101761,
+    "share_above_median_toi": 0.515815,
+    "share_above_median_ppg": 0.559611
    },
    "CHE": {
     "player_seasons": 61,
     "players": 15,
-    "median_toi_ratio": 1.097,
-    "median_ppg_ratio": 1.2251,
-    "share_above_median_toi": 0.7377,
-    "share_above_median_ppg": 0.6557
+    "median_toi_ratio": 1.09697,
+    "median_ppg_ratio": 1.225069,
+    "share_above_median_toi": 0.737705,
+    "share_above_median_ppg": 0.655738
    },
    "SVK": {
     "player_seasons": 37,
     "players": 13,
-    "median_toi_ratio": 0.9825,
-    "median_ppg_ratio": 0.8541,
-    "share_above_median_toi": 0.4595,
-    "share_above_median_ppg": 0.3243
+    "median_toi_ratio": 0.982468,
+    "median_ppg_ratio": 0.854135,
+    "share_above_median_toi": 0.459459,
+    "share_above_median_ppg": 0.324324
    },
    "DEU": {
     "player_seasons": 35,
     "players": 10,
-    "median_toi_ratio": 1.1192,
-    "median_ppg_ratio": 1.4597,
-    "share_above_median_toi": 0.6286,
+    "median_toi_ratio": 1.119174,
+    "median_ppg_ratio": 1.459719,
+    "share_above_median_toi": 0.628571,
     "share_above_median_ppg": 0.6
    },
    "LVA": {
     "player_seasons": 18,
     "players": 5,
-    "median_toi_ratio": 0.917,
-    "median_ppg_ratio": 0.7611,
-    "share_above_median_toi": 0.3889,
-    "share_above_median_ppg": 0.2778
+    "median_toi_ratio": 0.917009,
+    "median_ppg_ratio": 0.761054,
+    "share_above_median_toi": 0.388889,
+    "share_above_median_ppg": 0.277778
    },
    "DNK": {
     "player_seasons": 21,
     "players": 5,
-    "median_toi_ratio": 1.0654,
-    "median_ppg_ratio": 1.2944,
-    "share_above_median_toi": 0.6667,
-    "share_above_median_ppg": 0.619
+    "median_toi_ratio": 1.06545,
+    "median_ppg_ratio": 1.294372,
+    "share_above_median_toi": 0.666667,
+    "share_above_median_ppg": 0.619048
    },
    "NOR": {
     "player_seasons": 9,
     "players": 2,
-    "median_toi_ratio": 1.2726,
-    "median_ppg_ratio": 1.9088,
-    "share_above_median_toi": 0.6667,
-    "share_above_median_ppg": 0.6667
+    "median_toi_ratio": 1.272593,
+    "median_ppg_ratio": 1.908832,
+    "share_above_median_toi": 0.666667,
+    "share_above_median_ppg": 0.666667
    },
    "AUT": {
     "player_seasons": 7,
     "players": 3,
-    "median_toi_ratio": 1.0422,
-    "median_ppg_ratio": 1.1376,
-    "share_above_median_toi": 0.5714,
-    "share_above_median_ppg": 0.5714
+    "median_toi_ratio": 1.042241,
+    "median_ppg_ratio": 1.137642,
+    "share_above_median_toi": 0.571429,
+    "share_above_median_ppg": 0.571429
    }
   },
   "Liiga": {
    "CZE": {
     "player_seasons": 72,
     "players": 40,
-    "median_toi_ratio": 1.0867,
-    "median_ppg_ratio": 1.4029,
-    "share_above_median_toi": 0.7778,
-    "share_above_median_ppg": 0.7639
+    "median_toi_ratio": 1.086651,
+    "median_ppg_ratio": 1.402941,
+    "share_above_median_toi": 0.777778,
+    "share_above_median_ppg": 0.763889
    },
    "FIN": {
     "player_seasons": 1705,
-    "players": 622,
-    "median_toi_ratio": 0.9606,
-    "median_ppg_ratio": 0.8833,
-    "share_above_median_toi": 0.4317,
-    "share_above_median_ppg": 0.4375
+    "players": 623,
+    "median_toi_ratio": 0.960594,
+    "median_ppg_ratio": 0.883333,
+    "share_above_median_toi": 0.431672,
+    "share_above_median_ppg": 0.437537
    },
    "SWE": {
     "player_seasons": 198,
-    "players": 101,
-    "median_toi_ratio": 1.0758,
-    "median_ppg_ratio": 1.1656,
-    "share_above_median_toi": 0.7121,
-    "share_above_median_ppg": 0.6263
+    "players": 102,
+    "median_toi_ratio": 1.07583,
+    "median_ppg_ratio": 1.165581,
+    "share_above_median_toi": 0.712121,
+    "share_above_median_ppg": 0.626263
    },
    "CHE": {
     "player_seasons": 0,
@@ -142,8 +142,8 @@
    "SVK": {
     "player_seasons": 14,
     "players": 9,
-    "median_toi_ratio": 1.0278,
-    "median_ppg_ratio": 0.9779,
+    "median_toi_ratio": 1.027822,
+    "median_ppg_ratio": 0.977938,
     "share_above_median_toi": 0.5,
     "share_above_median_ppg": 0.5
    },
@@ -158,26 +158,26 @@
    "LVA": {
     "player_seasons": 11,
     "players": 7,
-    "median_toi_ratio": 0.9101,
-    "median_ppg_ratio": 0.6509,
-    "share_above_median_toi": 0.3636,
-    "share_above_median_ppg": 0.4545
+    "median_toi_ratio": 0.910069,
+    "median_ppg_ratio": 0.650877,
+    "share_above_median_toi": 0.363636,
+    "share_above_median_ppg": 0.454545
    },
    "DNK": {
     "player_seasons": 12,
     "players": 6,
-    "median_toi_ratio": 1.0705,
-    "median_ppg_ratio": 1.6947,
-    "share_above_median_toi": 0.5833,
-    "share_above_median_ppg": 0.6667
+    "median_toi_ratio": 1.070546,
+    "median_ppg_ratio": 1.694673,
+    "share_above_median_toi": 0.583333,
+    "share_above_median_ppg": 0.666667
    },
    "NOR": {
     "player_seasons": 18,
     "players": 10,
-    "median_toi_ratio": 0.9926,
-    "median_ppg_ratio": 0.8827,
+    "median_toi_ratio": 0.99262,
+    "median_ppg_ratio": 0.882676,
     "share_above_median_toi": 0.5,
-    "share_above_median_ppg": 0.3889
+    "share_above_median_ppg": 0.388889
    },
    "AUT": {
     "player_seasons": 0,
@@ -192,80 +192,80 @@
    "CZE": {
     "player_seasons": 39,
     "players": 21,
-    "median_toi_ratio": 1.0753,
+    "median_toi_ratio": 1.075325,
     "median_ppg_ratio": 1.3,
-    "share_above_median_toi": 0.641,
-    "share_above_median_ppg": 0.6923
+    "share_above_median_toi": 0.641026,
+    "share_above_median_ppg": 0.692308
    },
    "FIN": {
     "player_seasons": 174,
     "players": 95,
-    "median_toi_ratio": 1.0729,
-    "median_ppg_ratio": 1.1545,
-    "share_above_median_toi": 0.7069,
-    "share_above_median_ppg": 0.5575
+    "median_toi_ratio": 1.072931,
+    "median_ppg_ratio": 1.154514,
+    "share_above_median_toi": 0.706897,
+    "share_above_median_ppg": 0.557471
    },
    "SWE": {
     "player_seasons": 1138,
-    "players": 423,
-    "median_toi_ratio": 0.9629,
+    "players": 424,
+    "median_toi_ratio": 0.962907,
     "median_ppg_ratio": 0.9,
-    "share_above_median_toi": 0.4183,
-    "share_above_median_ppg": 0.4394
+    "share_above_median_toi": 0.418278,
+    "share_above_median_ppg": 0.439367
    },
    "CHE": {
     "player_seasons": 11,
     "players": 6,
-    "median_toi_ratio": 0.828,
-    "median_ppg_ratio": 0.5306,
-    "share_above_median_toi": 0.2727,
-    "share_above_median_ppg": 0.2727
+    "median_toi_ratio": 0.828014,
+    "median_ppg_ratio": 0.530612,
+    "share_above_median_toi": 0.272727,
+    "share_above_median_ppg": 0.272727
    },
    "SVK": {
     "player_seasons": 13,
     "players": 6,
-    "median_toi_ratio": 1.1122,
-    "median_ppg_ratio": 1.4222,
-    "share_above_median_toi": 0.8462,
-    "share_above_median_ppg": 0.9231
+    "median_toi_ratio": 1.112204,
+    "median_ppg_ratio": 1.422222,
+    "share_above_median_toi": 0.846154,
+    "share_above_median_ppg": 0.923077
    },
    "DEU": {
     "player_seasons": 8,
     "players": 5,
-    "median_toi_ratio": 0.9782,
-    "median_ppg_ratio": 1.2234,
+    "median_toi_ratio": 0.978189,
+    "median_ppg_ratio": 1.223438,
     "share_above_median_toi": 0.5,
     "share_above_median_ppg": 0.625
    },
    "LVA": {
     "player_seasons": 8,
     "players": 4,
-    "median_toi_ratio": 1.1321,
-    "median_ppg_ratio": 1.4564,
+    "median_toi_ratio": 1.132077,
+    "median_ppg_ratio": 1.456382,
     "share_above_median_toi": 0.75,
     "share_above_median_ppg": 0.625
    },
    "DNK": {
     "player_seasons": 32,
     "players": 12,
-    "median_toi_ratio": 0.9938,
-    "median_ppg_ratio": 1.0526,
-    "share_above_median_toi": 0.4688,
-    "share_above_median_ppg": 0.5312
+    "median_toi_ratio": 0.99381,
+    "median_ppg_ratio": 1.052642,
+    "share_above_median_toi": 0.46875,
+    "share_above_median_ppg": 0.53125
    },
    "NOR": {
     "player_seasons": 16,
     "players": 13,
-    "median_toi_ratio": 0.8141,
-    "median_ppg_ratio": 0.6118,
+    "median_toi_ratio": 0.814051,
+    "median_ppg_ratio": 0.611837,
     "share_above_median_toi": 0.125,
     "share_above_median_ppg": 0.0625
    },
    "AUT": {
     "player_seasons": 4,
     "players": 2,
-    "median_toi_ratio": 0.9649,
-    "median_ppg_ratio": 0.9976,
+    "median_toi_ratio": 0.964924,
+    "median_ppg_ratio": 0.997596,
     "share_above_median_toi": 0.25,
     "share_above_median_ppg": 0.25
    }
@@ -276,54 +276,54 @@
    "F": {
     "player_seasons": 84,
     "players": 26,
-    "median_toi_ratio": 1.0035,
-    "median_ppg_ratio": 1.0138,
+    "median_toi_ratio": 1.003497,
+    "median_ppg_ratio": 1.01385,
     "share_above_median_toi": 0.5,
     "share_above_median_ppg": 0.5
    },
    "D": {
     "player_seasons": 27,
     "players": 9,
-    "median_toi_ratio": 0.9054,
-    "median_ppg_ratio": 0.8318,
-    "share_above_median_toi": 0.3333,
-    "share_above_median_ppg": 0.2963
+    "median_toi_ratio": 0.905435,
+    "median_ppg_ratio": 0.831757,
+    "share_above_median_toi": 0.333333,
+    "share_above_median_ppg": 0.296296
    }
   },
   "Liiga": {
    "F": {
     "player_seasons": 38,
     "players": 19,
-    "median_toi_ratio": 1.0778,
-    "median_ppg_ratio": 1.528,
-    "share_above_median_toi": 0.7895,
-    "share_above_median_ppg": 0.8421
+    "median_toi_ratio": 1.077795,
+    "median_ppg_ratio": 1.527988,
+    "share_above_median_toi": 0.789474,
+    "share_above_median_ppg": 0.842105
    },
    "D": {
     "player_seasons": 34,
     "players": 21,
-    "median_toi_ratio": 1.0867,
-    "median_ppg_ratio": 1.1901,
-    "share_above_median_toi": 0.7647,
-    "share_above_median_ppg": 0.6765
+    "median_toi_ratio": 1.086651,
+    "median_ppg_ratio": 1.190113,
+    "share_above_median_toi": 0.764706,
+    "share_above_median_ppg": 0.676471
    }
   },
   "SHL": {
    "F": {
     "player_seasons": 28,
     "players": 14,
-    "median_toi_ratio": 1.1301,
-    "median_ppg_ratio": 1.4981,
-    "share_above_median_toi": 0.7857,
-    "share_above_median_ppg": 0.7857
+    "median_toi_ratio": 1.130112,
+    "median_ppg_ratio": 1.498065,
+    "share_above_median_toi": 0.785714,
+    "share_above_median_ppg": 0.785714
    },
    "D": {
     "player_seasons": 11,
     "players": 7,
-    "median_toi_ratio": 0.9384,
-    "median_ppg_ratio": 0.9854,
-    "share_above_median_toi": 0.2727,
-    "share_above_median_ppg": 0.4545
+    "median_toi_ratio": 0.938429,
+    "median_ppg_ratio": 0.985423,
+    "share_above_median_toi": 0.272727,
+    "share_above_median_ppg": 0.454545
    }
   }
  },
@@ -333,8 +333,8 @@
     "season": "2020/21",
     "player_seasons": 20,
     "players": 20,
-    "median_toi_ratio": 1.0923,
-    "median_ppg_ratio": 1.4887,
+    "median_toi_ratio": 1.09231,
+    "median_ppg_ratio": 1.488662,
     "share_above_median_toi": 0.6,
     "share_above_median_ppg": 0.6
    },
@@ -342,8 +342,8 @@
     "season": "2021/22",
     "player_seasons": 20,
     "players": 20,
-    "median_toi_ratio": 1.0082,
-    "median_ppg_ratio": 0.9082,
+    "median_toi_ratio": 1.008197,
+    "median_ppg_ratio": 0.908186,
     "share_above_median_toi": 0.5,
     "share_above_median_ppg": 0.45
    },
@@ -351,37 +351,37 @@
     "season": "2022/23",
     "player_seasons": 21,
     "players": 21,
-    "median_toi_ratio": 0.9735,
-    "median_ppg_ratio": 0.8823,
-    "share_above_median_toi": 0.381,
-    "share_above_median_ppg": 0.4762
+    "median_toi_ratio": 0.973497,
+    "median_ppg_ratio": 0.88231,
+    "share_above_median_toi": 0.380952,
+    "share_above_median_ppg": 0.47619
    },
    {
     "season": "2023/24",
     "player_seasons": 19,
     "players": 19,
-    "median_toi_ratio": 0.9108,
-    "median_ppg_ratio": 0.7647,
-    "share_above_median_toi": 0.4211,
-    "share_above_median_ppg": 0.4211
+    "median_toi_ratio": 0.910757,
+    "median_ppg_ratio": 0.764731,
+    "share_above_median_toi": 0.421053,
+    "share_above_median_ppg": 0.421053
    },
    {
     "season": "2024/25",
     "player_seasons": 17,
     "players": 17,
-    "median_toi_ratio": 0.9278,
-    "median_ppg_ratio": 0.8499,
-    "share_above_median_toi": 0.4118,
-    "share_above_median_ppg": 0.3529
+    "median_toi_ratio": 0.927801,
+    "median_ppg_ratio": 0.849881,
+    "share_above_median_toi": 0.411765,
+    "share_above_median_ppg": 0.352941
    },
    {
     "season": "2025/26",
     "player_seasons": 14,
     "players": 14,
-    "median_toi_ratio": 0.9227,
-    "median_ppg_ratio": 0.6048,
-    "share_above_median_toi": 0.4286,
-    "share_above_median_ppg": 0.3571
+    "median_toi_ratio": 0.922726,
+    "median_ppg_ratio": 0.604826,
+    "share_above_median_toi": 0.428571,
+    "share_above_median_ppg": 0.357143
    }
   ],
   "Liiga": [
@@ -389,8 +389,8 @@
     "season": "2020/21",
     "player_seasons": 9,
     "players": 9,
-    "median_toi_ratio": 1.0886,
-    "median_ppg_ratio": 1.532,
+    "median_toi_ratio": 1.088577,
+    "median_ppg_ratio": 1.532028,
     "share_above_median_toi": 1.0,
     "share_above_median_ppg": 1.0
    },
@@ -398,44 +398,44 @@
     "season": "2021/22",
     "player_seasons": 12,
     "players": 12,
-    "median_toi_ratio": 1.0912,
-    "median_ppg_ratio": 1.2485,
-    "share_above_median_toi": 0.6667,
-    "share_above_median_ppg": 0.6667
+    "median_toi_ratio": 1.091194,
+    "median_ppg_ratio": 1.248548,
+    "share_above_median_toi": 0.666667,
+    "share_above_median_ppg": 0.666667
    },
    {
     "season": "2022/23",
     "player_seasons": 7,
     "players": 7,
-    "median_toi_ratio": 1.0437,
-    "median_ppg_ratio": 1.2871,
-    "share_above_median_toi": 0.7143,
-    "share_above_median_ppg": 0.7143
+    "median_toi_ratio": 1.043651,
+    "median_ppg_ratio": 1.287143,
+    "share_above_median_toi": 0.714286,
+    "share_above_median_ppg": 0.714286
    },
    {
     "season": "2023/24",
     "player_seasons": 13,
     "players": 13,
-    "median_toi_ratio": 1.138,
-    "median_ppg_ratio": 1.6525,
+    "median_toi_ratio": 1.138011,
+    "median_ppg_ratio": 1.652542,
     "share_above_median_toi": 1.0,
-    "share_above_median_ppg": 0.8462
+    "share_above_median_ppg": 0.846154
    },
    {
     "season": "2024/25",
     "player_seasons": 21,
     "players": 21,
-    "median_toi_ratio": 1.0866,
-    "median_ppg_ratio": 1.2632,
-    "share_above_median_toi": 0.619,
-    "share_above_median_ppg": 0.6667
+    "median_toi_ratio": 1.086574,
+    "median_ppg_ratio": 1.263158,
+    "share_above_median_toi": 0.619048,
+    "share_above_median_ppg": 0.666667
    },
    {
     "season": "2025/26",
     "player_seasons": 10,
     "players": 10,
-    "median_toi_ratio": 1.1154,
-    "median_ppg_ratio": 1.5641,
+    "median_toi_ratio": 1.115386,
+    "median_ppg_ratio": 1.564103,
     "share_above_median_toi": 0.8,
     "share_above_median_ppg": 0.8
    }
@@ -445,8 +445,8 @@
     "season": "2020/21",
     "player_seasons": 3,
     "players": 3,
-    "median_toi_ratio": 0.7904,
-    "median_ppg_ratio": 0.3704,
+    "median_toi_ratio": 0.790447,
+    "median_ppg_ratio": 0.37037,
     "share_above_median_toi": 0.0,
     "share_above_median_ppg": 0.0
    },
@@ -454,17 +454,17 @@
     "season": "2021/22",
     "player_seasons": 9,
     "players": 9,
-    "median_toi_ratio": 1.0408,
-    "median_ppg_ratio": 1.5104,
-    "share_above_median_toi": 0.5556,
-    "share_above_median_ppg": 0.6667
+    "median_toi_ratio": 1.040769,
+    "median_ppg_ratio": 1.510417,
+    "share_above_median_toi": 0.555556,
+    "share_above_median_ppg": 0.666667
    },
    {
     "season": "2022/23",
     "player_seasons": 8,
     "players": 8,
-    "median_toi_ratio": 1.0791,
-    "median_ppg_ratio": 1.1594,
+    "median_toi_ratio": 1.079072,
+    "median_ppg_ratio": 1.159434,
     "share_above_median_toi": 0.5,
     "share_above_median_ppg": 0.625
    },
@@ -472,17 +472,17 @@
     "season": "2023/24",
     "player_seasons": 6,
     "players": 6,
-    "median_toi_ratio": 1.1204,
-    "median_ppg_ratio": 1.3679,
-    "share_above_median_toi": 0.8333,
-    "share_above_median_ppg": 0.8333
+    "median_toi_ratio": 1.120359,
+    "median_ppg_ratio": 1.367857,
+    "share_above_median_toi": 0.833333,
+    "share_above_median_ppg": 0.833333
    },
    {
     "season": "2024/25",
     "player_seasons": 5,
     "players": 5,
-    "median_toi_ratio": 1.1807,
-    "median_ppg_ratio": 1.2378,
+    "median_toi_ratio": 1.180738,
+    "median_ppg_ratio": 1.237847,
     "share_above_median_toi": 0.8,
     "share_above_median_ppg": 0.8
    },
@@ -490,8 +490,8 @@
     "season": "2025/26",
     "player_seasons": 8,
     "players": 8,
-    "median_toi_ratio": 1.0977,
-    "median_ppg_ratio": 1.5641,
+    "median_toi_ratio": 1.097669,
+    "median_ppg_ratio": 1.564103,
     "share_above_median_toi": 0.875,
     "share_above_median_ppg": 0.875
    }
@@ -507,12 +507,12 @@
    "position": "D",
    "team": "Jukurit",
    "games": 47.0,
-   "toi_per_game_s": 1098.4043,
-   "points_per_game": 0.234,
-   "median_toi_per_game_s": 1024.0839,
-   "median_points_per_game": 0.2099,
-   "toi_ratio": 1.0726,
-   "ppg_ratio": 1.1149
+   "toi_per_game_s": 1098.404255,
+   "points_per_game": 0.234043,
+   "median_toi_per_game_s": 1024.083851,
+   "median_points_per_game": 0.209914,
+   "toi_ratio": 1.072573,
+   "ppg_ratio": 1.114943
   },
   {
    "person_id": "NHL:8484314",
@@ -522,12 +522,12 @@
    "position": "F",
    "team": "Tappara",
    "games": 48.0,
-   "toi_per_game_s": 927.1667,
-   "points_per_game": 0.5417,
-   "median_toi_per_game_s": 881.0179,
-   "median_points_per_game": 0.3821,
-   "toi_ratio": 1.0524,
-   "ppg_ratio": 1.4177
+   "toi_per_game_s": 927.166667,
+   "points_per_game": 0.541667,
+   "median_toi_per_game_s": 881.017857,
+   "median_points_per_game": 0.382086,
+   "toi_ratio": 1.052381,
+   "ppg_ratio": 1.417658
   },
   {
    "person_id": "NHL:8480161",
@@ -537,12 +537,12 @@
    "position": "D",
    "team": "Kärpät",
    "games": 45.0,
-   "toi_per_game_s": 1198.2222,
-   "points_per_game": 0.3111,
-   "median_toi_per_game_s": 1024.0839,
-   "median_points_per_game": 0.2099,
-   "toi_ratio": 1.17,
-   "ppg_ratio": 1.4821
+   "toi_per_game_s": 1198.222222,
+   "points_per_game": 0.311111,
+   "median_toi_per_game_s": 1024.083851,
+   "median_points_per_game": 0.209914,
+   "toi_ratio": 1.170043,
+   "ppg_ratio": 1.482086
   },
   {
    "person_id": "SHL:qbT-6fzC8GOAL",
@@ -552,11 +552,11 @@
    "position": "D",
    "team": "Lukko",
    "games": 46.0,
-   "toi_per_game_s": 1364.2174,
-   "points_per_game": 0.4565,
-   "median_toi_per_game_s": 1024.0839,
-   "median_points_per_game": 0.2099,
-   "toi_ratio": 1.3321,
+   "toi_per_game_s": 1364.217391,
+   "points_per_game": 0.456522,
+   "median_toi_per_game_s": 1024.083851,
+   "median_points_per_game": 0.209914,
+   "toi_ratio": 1.332134,
    "ppg_ratio": 2.1748
   },
   {
@@ -567,12 +567,12 @@
    "position": "F",
    "team": "Tappara",
    "games": 18.0,
-   "toi_per_game_s": 959.0556,
-   "points_per_game": 0.7222,
-   "median_toi_per_game_s": 881.0179,
-   "median_points_per_game": 0.3821,
-   "toi_ratio": 1.0886,
-   "ppg_ratio": 1.8902
+   "toi_per_game_s": 959.055556,
+   "points_per_game": 0.722222,
+   "median_toi_per_game_s": 881.017857,
+   "median_points_per_game": 0.382086,
+   "toi_ratio": 1.088577,
+   "ppg_ratio": 1.890211
   },
   {
    "person_id": "Liiga:60455235",
@@ -582,12 +582,12 @@
    "position": "D",
    "team": "Tappara",
    "games": 46.0,
-   "toi_per_game_s": 1149.3478,
-   "points_per_game": 0.3261,
-   "median_toi_per_game_s": 1024.0839,
-   "median_points_per_game": 0.2099,
-   "toi_ratio": 1.1223,
-   "ppg_ratio": 1.5534
+   "toi_per_game_s": 1149.347826,
+   "points_per_game": 0.326087,
+   "median_toi_per_game_s": 1024.083851,
+   "median_points_per_game": 0.209914,
+   "toi_ratio": 1.122318,
+   "ppg_ratio": 1.553429
   },
   {
    "person_id": "Liiga:40245614",
@@ -597,12 +597,12 @@
    "position": "F",
    "team": "Kärpät",
    "games": 41.0,
-   "toi_per_game_s": 916.9512,
-   "points_per_game": 0.5854,
-   "median_toi_per_game_s": 881.0179,
-   "median_points_per_game": 0.3821,
-   "toi_ratio": 1.0408,
-   "ppg_ratio": 1.532
+   "toi_per_game_s": 916.95122,
+   "points_per_game": 0.585366,
+   "median_toi_per_game_s": 881.017857,
+   "median_points_per_game": 0.382086,
+   "toi_ratio": 1.040786,
+   "ppg_ratio": 1.532028
   },
   {
    "person_id": "SHL:qWU-5m3nHPVnj",
@@ -612,12 +612,12 @@
    "position": "F",
    "team": "Pelicans",
    "games": 56.0,
-   "toi_per_game_s": 1099.4821,
-   "points_per_game": 0.6786,
-   "median_toi_per_game_s": 881.0179,
-   "median_points_per_game": 0.3821,
-   "toi_ratio": 1.248,
-   "ppg_ratio": 1.776
+   "toi_per_game_s": 1099.482143,
+   "points_per_game": 0.678571,
+   "median_toi_per_game_s": 881.017857,
+   "median_points_per_game": 0.382086,
+   "toi_ratio": 1.247968,
+   "ppg_ratio": 1.775967
   },
   {
    "person_id": "Liiga:60466255",
@@ -627,12 +627,12 @@
    "position": "F",
    "team": "Jukurit",
    "games": 46.0,
-   "toi_per_game_s": 915.3478,
+   "toi_per_game_s": 915.347826,
    "points_per_game": 0.5,
-   "median_toi_per_game_s": 881.0179,
-   "median_points_per_game": 0.3821,
-   "toi_ratio": 1.039,
-   "ppg_ratio": 1.3086
+   "median_toi_per_game_s": 881.017857,
+   "median_points_per_game": 0.382086,
+   "toi_ratio": 1.038966,
+   "ppg_ratio": 1.308607
   },
   {
    "person_id": "Liiga:60545332",
@@ -644,10 +644,10 @@
    "games": 15.0,
    "toi_per_game_s": 988.4,
    "points_per_game": 0.4,
-   "median_toi_per_game_s": 880.5455,
-   "median_points_per_game": 0.3778,
-   "toi_ratio": 1.1225,
-   "ppg_ratio": 1.0588
+   "median_toi_per_game_s": 880.545455,
+   "median_points_per_game": 0.377778,
+   "toi_ratio": 1.122486,
+   "ppg_ratio": 1.058824
   },
   {
    "person_id": "Liiga:60579549",
@@ -657,12 +657,12 @@
    "position": "D",
    "team": "Ilves",
    "games": 44.0,
-   "toi_per_game_s": 1111.1818,
+   "toi_per_game_s": 1111.181818,
    "points_per_game": 0.25,
-   "median_toi_per_game_s": 1033.2322,
-   "median_points_per_game": 0.2175,
-   "toi_ratio": 1.0754,
-   "ppg_ratio": 1.1495
+   "median_toi_per_game_s": 1033.232203,
+   "median_points_per_game": 0.217494,
+   "toi_ratio": 1.075442,
+   "ppg_ratio": 1.149457
   },
   {
    "person_id": "SHL:qbK-5yI9RZHDn",
@@ -672,12 +672,12 @@
    "position": "D",
    "team": "SaiPa",
    "games": 43.0,
-   "toi_per_game_s": 1254.3023,
-   "points_per_game": 0.186,
-   "median_toi_per_game_s": 1033.2322,
-   "median_points_per_game": 0.2175,
-   "toi_ratio": 1.214,
-   "ppg_ratio": 0.8554
+   "toi_per_game_s": 1254.302326,
+   "points_per_game": 0.186047,
+   "median_toi_per_game_s": 1033.232203,
+   "median_points_per_game": 0.217494,
+   "toi_ratio": 1.21396,
+   "ppg_ratio": 0.85541
   },
   {
    "person_id": "Liiga:60349563",
@@ -687,12 +687,12 @@
    "position": "F",
    "team": "Ilves",
    "games": 17.0,
-   "toi_per_game_s": 431.8824,
-   "points_per_game": 0.1765,
-   "median_toi_per_game_s": 880.5455,
-   "median_points_per_game": 0.3778,
-   "toi_ratio": 0.4905,
-   "ppg_ratio": 0.4671
+   "toi_per_game_s": 431.882353,
+   "points_per_game": 0.176471,
+   "median_toi_per_game_s": 880.545455,
+   "median_points_per_game": 0.377778,
+   "toi_ratio": 0.490471,
+   "ppg_ratio": 0.467128
   },
   {
    "person_id": "Liiga:60536680",
@@ -702,12 +702,12 @@
    "position": "D",
    "team": "JYP",
    "games": 51.0,
-   "toi_per_game_s": 1226.9804,
-   "points_per_game": 0.1569,
-   "median_toi_per_game_s": 1033.2322,
-   "median_points_per_game": 0.2175,
-   "toi_ratio": 1.1875,
-   "ppg_ratio": 0.7212
+   "toi_per_game_s": 1226.980392,
+   "points_per_game": 0.156863,
+   "median_toi_per_game_s": 1033.232203,
+   "median_points_per_game": 0.217494,
+   "toi_ratio": 1.187517,
+   "ppg_ratio": 0.721228
   },
   {
    "person_id": "NHL:8484314",
@@ -717,12 +717,12 @@
    "position": "F",
    "team": "Pelicans",
    "games": 44.0,
-   "toi_per_game_s": 1248.6591,
-   "points_per_game": 1.0227,
-   "median_toi_per_game_s": 880.5455,
-   "median_points_per_game": 0.3778,
-   "toi_ratio": 1.4181,
-   "ppg_ratio": 2.7072
+   "toi_per_game_s": 1248.659091,
+   "points_per_game": 1.022727,
+   "median_toi_per_game_s": 880.545455,
+   "median_points_per_game": 0.377778,
+   "toi_ratio": 1.418052,
+   "ppg_ratio": 2.707219
   },
   {
    "person_id": "Liiga:60544388",
@@ -732,12 +732,12 @@
    "position": "D",
    "team": "Jukurit",
    "games": 58.0,
-   "toi_per_game_s": 1108.2586,
-   "points_per_game": 0.2931,
-   "median_toi_per_game_s": 1033.2322,
-   "median_points_per_game": 0.2175,
-   "toi_ratio": 1.0726,
-   "ppg_ratio": 1.3476
+   "toi_per_game_s": 1108.258621,
+   "points_per_game": 0.293103,
+   "median_toi_per_game_s": 1033.232203,
+   "median_points_per_game": 0.217494,
+   "toi_ratio": 1.072613,
+   "ppg_ratio": 1.347639
   },
   {
    "person_id": "SHL:qcw-3Qb8CMpfh",
@@ -747,11 +747,11 @@
    "position": "F",
    "team": "Pelicans",
    "games": 54.0,
-   "toi_per_game_s": 1241.037,
-   "points_per_game": 0.9444,
-   "median_toi_per_game_s": 880.5455,
-   "median_points_per_game": 0.3778,
-   "toi_ratio": 1.4094,
+   "toi_per_game_s": 1241.037037,
+   "points_per_game": 0.944444,
+   "median_toi_per_game_s": 880.545455,
+   "median_points_per_game": 0.377778,
+   "toi_ratio": 1.409396,
    "ppg_ratio": 2.5
   },
   {
@@ -762,12 +762,12 @@
    "position": "D",
    "team": "Lukko",
    "games": 27.0,
-   "toi_per_game_s": 1003.0741,
-   "points_per_game": 0.2963,
-   "median_toi_per_game_s": 1033.2322,
-   "median_points_per_game": 0.2175,
-   "toi_ratio": 0.9708,
-   "ppg_ratio": 1.3623
+   "toi_per_game_s": 1003.074074,
+   "points_per_game": 0.296296,
+   "median_toi_per_game_s": 1033.232203,
+   "median_points_per_game": 0.217494,
+   "toi_ratio": 0.970812,
+   "ppg_ratio": 1.362319
   },
   {
    "person_id": "Liiga:40245614",
@@ -777,12 +777,12 @@
    "position": "F",
    "team": null,
    "games": 56.0,
-   "toi_per_game_s": 879.5179,
-   "points_per_game": 0.5357,
-   "median_toi_per_game_s": 880.5455,
-   "median_points_per_game": 0.3778,
-   "toi_ratio": 0.9988,
-   "ppg_ratio": 1.4181
+   "toi_per_game_s": 879.517857,
+   "points_per_game": 0.535714,
+   "median_toi_per_game_s": 880.545455,
+   "median_points_per_game": 0.377778,
+   "toi_ratio": 0.998833,
+   "ppg_ratio": 1.418067
   },
   {
    "person_id": "Liiga:60466255",
@@ -792,12 +792,12 @@
    "position": "F",
    "team": "Jukurit",
    "games": 60.0,
-   "toi_per_game_s": 974.7167,
-   "points_per_game": 0.6167,
-   "median_toi_per_game_s": 880.5455,
-   "median_points_per_game": 0.3778,
-   "toi_ratio": 1.1069,
-   "ppg_ratio": 1.6324
+   "toi_per_game_s": 974.716667,
+   "points_per_game": 0.616667,
+   "median_toi_per_game_s": 880.545455,
+   "median_points_per_game": 0.377778,
+   "toi_ratio": 1.106946,
+   "ppg_ratio": 1.632353
   },
   {
    "person_id": "Liiga:100034138",
@@ -807,12 +807,12 @@
    "position": "D",
    "team": "Tappara",
    "games": 24.0,
-   "toi_per_game_s": 646.5417,
-   "points_per_game": 0.0833,
-   "median_toi_per_game_s": 1033.2322,
-   "median_points_per_game": 0.2175,
-   "toi_ratio": 0.6257,
-   "ppg_ratio": 0.3832
+   "toi_per_game_s": 646.541667,
+   "points_per_game": 0.083333,
+   "median_toi_per_game_s": 1033.232203,
+   "median_points_per_game": 0.217494,
+   "toi_ratio": 0.625747,
+   "ppg_ratio": 0.383152
   },
   {
    "person_id": "Liiga:60579549",
@@ -822,12 +822,12 @@
    "position": "D",
    "team": "Ilves",
    "games": 36.0,
-   "toi_per_game_s": 1112.6111,
-   "points_per_game": 0.2222,
-   "median_toi_per_game_s": 1023.8182,
-   "median_points_per_game": 0.2292,
-   "toi_ratio": 1.0867,
-   "ppg_ratio": 0.9697
+   "toi_per_game_s": 1112.611111,
+   "points_per_game": 0.222222,
+   "median_toi_per_game_s": 1023.818182,
+   "median_points_per_game": 0.229167,
+   "toi_ratio": 1.086727,
+   "ppg_ratio": 0.969697
   },
   {
    "person_id": "Liiga:60544388",
@@ -837,12 +837,12 @@
    "position": "D",
    "team": "Jukurit",
    "games": 57.0,
-   "toi_per_game_s": 1068.5088,
-   "points_per_game": 0.2632,
-   "median_toi_per_game_s": 1023.8182,
-   "median_points_per_game": 0.2292,
-   "toi_ratio": 1.0437,
-   "ppg_ratio": 1.1483
+   "toi_per_game_s": 1068.508772,
+   "points_per_game": 0.263158,
+   "median_toi_per_game_s": 1023.818182,
+   "median_points_per_game": 0.229167,
+   "toi_ratio": 1.043651,
+   "ppg_ratio": 1.148325
   },
   {
    "person_id": "SHL:qcw-3Qb8CMpfh",
@@ -852,12 +852,12 @@
    "position": "F",
    "team": "Pelicans",
    "games": 57.0,
-   "toi_per_game_s": 1225.9825,
-   "points_per_game": 0.6842,
-   "median_toi_per_game_s": 881.5862,
-   "median_points_per_game": 0.3774,
-   "toi_ratio": 1.3907,
-   "ppg_ratio": 1.8132
+   "toi_per_game_s": 1225.982456,
+   "points_per_game": 0.684211,
+   "median_toi_per_game_s": 881.586207,
+   "median_points_per_game": 0.377358,
+   "toi_ratio": 1.390655,
+   "ppg_ratio": 1.813158
   },
   {
    "person_id": "Liiga:60716456",
@@ -867,12 +867,12 @@
    "position": "F",
    "team": "KalPa",
    "games": 17.0,
-   "toi_per_game_s": 882.9412,
-   "points_per_game": 0.5294,
-   "median_toi_per_game_s": 881.5862,
-   "median_points_per_game": 0.3774,
-   "toi_ratio": 1.0015,
-   "ppg_ratio": 1.4029
+   "toi_per_game_s": 882.941176,
+   "points_per_game": 0.529412,
+   "median_toi_per_game_s": 881.586207,
+   "median_points_per_game": 0.377358,
+   "toi_ratio": 1.001537,
+   "ppg_ratio": 1.402941
   },
   {
    "person_id": "Liiga:60660706",
@@ -882,12 +882,12 @@
    "position": "F",
    "team": "Jukurit",
    "games": 51.0,
-   "toi_per_game_s": 922.6078,
-   "points_per_game": 0.5294,
-   "median_toi_per_game_s": 881.5862,
-   "median_points_per_game": 0.3774,
-   "toi_ratio": 1.0465,
-   "ppg_ratio": 1.4029
+   "toi_per_game_s": 922.607843,
+   "points_per_game": 0.529412,
+   "median_toi_per_game_s": 881.586207,
+   "median_points_per_game": 0.377358,
+   "toi_ratio": 1.046532,
+   "ppg_ratio": 1.402941
   },
   {
    "person_id": "Liiga:60660707",
@@ -897,12 +897,12 @@
    "position": "F",
    "team": "Jukurit",
    "games": 35.0,
-   "toi_per_game_s": 842.7143,
-   "points_per_game": 0.4857,
-   "median_toi_per_game_s": 881.5862,
-   "median_points_per_game": 0.3774,
-   "toi_ratio": 0.9559,
-   "ppg_ratio": 1.2871
+   "toi_per_game_s": 842.714286,
+   "points_per_game": 0.485714,
+   "median_toi_per_game_s": 881.586207,
+   "median_points_per_game": 0.377358,
+   "toi_ratio": 0.955907,
+   "ppg_ratio": 1.287143
   },
   {
    "person_id": "Liiga:60651673",
@@ -912,12 +912,12 @@
    "position": "D",
    "team": "Lukko",
    "games": 53.0,
-   "toi_per_game_s": 846.6604,
-   "points_per_game": 0.1509,
-   "median_toi_per_game_s": 1023.8182,
-   "median_points_per_game": 0.2292,
-   "toi_ratio": 0.827,
-   "ppg_ratio": 0.6587
+   "toi_per_game_s": 846.660377,
+   "points_per_game": 0.150943,
+   "median_toi_per_game_s": 1023.818182,
+   "median_points_per_game": 0.229167,
+   "toi_ratio": 0.826964,
+   "ppg_ratio": 0.658662
   },
   {
    "person_id": "Liiga:60579549",
@@ -927,12 +927,12 @@
    "position": "D",
    "team": "Ilves",
    "games": 41.0,
-   "toi_per_game_s": 1200.0732,
-   "points_per_game": 0.3902,
-   "median_toi_per_game_s": 1054.5357,
-   "median_points_per_game": 0.2158,
-   "toi_ratio": 1.138,
-   "ppg_ratio": 1.808
+   "toi_per_game_s": 1200.073171,
+   "points_per_game": 0.390244,
+   "median_toi_per_game_s": 1054.535714,
+   "median_points_per_game": 0.215839,
+   "toi_ratio": 1.138011,
+   "ppg_ratio": 1.808036
   },
   {
    "person_id": "NHL:8480820",
@@ -942,12 +942,12 @@
    "position": "D",
    "team": "Pelicans",
    "games": 46.0,
-   "toi_per_game_s": 1275.4348,
-   "points_per_game": 0.8043,
-   "median_toi_per_game_s": 1054.5357,
-   "median_points_per_game": 0.2158,
-   "toi_ratio": 1.2095,
-   "ppg_ratio": 3.7266
+   "toi_per_game_s": 1275.434783,
+   "points_per_game": 0.804348,
+   "median_toi_per_game_s": 1054.535714,
+   "median_points_per_game": 0.215839,
+   "toi_ratio": 1.209475,
+   "ppg_ratio": 3.726619
   },
   {
    "person_id": "Liiga:60544388",
@@ -957,12 +957,12 @@
    "position": "D",
    "team": "Ässät",
    "games": 57.0,
-   "toi_per_game_s": 1056.5789,
-   "points_per_game": 0.2105,
-   "median_toi_per_game_s": 1054.5357,
-   "median_points_per_game": 0.2158,
-   "toi_ratio": 1.0019,
-   "ppg_ratio": 0.9754
+   "toi_per_game_s": 1056.578947,
+   "points_per_game": 0.210526,
+   "median_toi_per_game_s": 1054.535714,
+   "median_points_per_game": 0.215839,
+   "toi_ratio": 1.001938,
+   "ppg_ratio": 0.975388
   },
   {
    "person_id": "SHL:kcotty8qn8",
@@ -973,11 +973,11 @@
    "team": "Pelicans",
    "games": 60.0,
    "toi_per_game_s": 903.55,
-   "points_per_game": 0.5333,
-   "median_toi_per_game_s": 892.4686,
+   "points_per_game": 0.533333,
+   "median_toi_per_game_s": 892.468561,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.0124,
-   "ppg_ratio": 1.3333
+   "toi_ratio": 1.012417,
+   "ppg_ratio": 1.333333
   },
   {
    "person_id": "Liiga:60747516",
@@ -987,12 +987,12 @@
    "position": "D",
    "team": "Kärpät",
    "games": 51.0,
-   "toi_per_game_s": 1097.5882,
-   "points_per_game": 0.3137,
-   "median_toi_per_game_s": 1054.5357,
-   "median_points_per_game": 0.2158,
-   "toi_ratio": 1.0408,
-   "ppg_ratio": 1.4535
+   "toi_per_game_s": 1097.588235,
+   "points_per_game": 0.313725,
+   "median_toi_per_game_s": 1054.535714,
+   "median_points_per_game": 0.215839,
+   "toi_ratio": 1.040826,
+   "ppg_ratio": 1.45352
   },
   {
    "person_id": "Liiga:60716456",
@@ -1003,11 +1003,11 @@
    "team": "KalPa",
    "games": 60.0,
    "toi_per_game_s": 918.7,
-   "points_per_game": 0.7667,
-   "median_toi_per_game_s": 892.4686,
+   "points_per_game": 0.766667,
+   "median_toi_per_game_s": 892.468561,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.0294,
-   "ppg_ratio": 1.9167
+   "toi_ratio": 1.029392,
+   "ppg_ratio": 1.916667
   },
   {
    "person_id": "NHL:8474661",
@@ -1017,12 +1017,12 @@
    "position": "D",
    "team": "Pelicans",
    "games": 56.0,
-   "toi_per_game_s": 1253.8571,
-   "points_per_game": 0.4107,
-   "median_toi_per_game_s": 1054.5357,
-   "median_points_per_game": 0.2158,
-   "toi_ratio": 1.189,
-   "ppg_ratio": 1.9029
+   "toi_per_game_s": 1253.857143,
+   "points_per_game": 0.410714,
+   "median_toi_per_game_s": 1054.535714,
+   "median_points_per_game": 0.215839,
+   "toi_ratio": 1.189013,
+   "ppg_ratio": 1.902878
   },
   {
    "person_id": "Liiga:60660706",
@@ -1032,12 +1032,12 @@
    "position": "F",
    "team": "Jukurit",
    "games": 55.0,
-   "toi_per_game_s": 1070.2545,
-   "points_per_game": 0.8182,
-   "median_toi_per_game_s": 892.4686,
+   "toi_per_game_s": 1070.254545,
+   "points_per_game": 0.818182,
+   "median_toi_per_game_s": 892.468561,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.1992,
-   "ppg_ratio": 2.0455
+   "toi_ratio": 1.199207,
+   "ppg_ratio": 2.045455
   },
   {
    "person_id": "Liiga:60660707",
@@ -1048,11 +1048,11 @@
    "team": "Jukurit",
    "games": 57.0,
    "toi_per_game_s": 1034.0,
-   "points_per_game": 0.7193,
-   "median_toi_per_game_s": 892.4686,
+   "points_per_game": 0.719298,
+   "median_toi_per_game_s": 892.468561,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.1586,
-   "ppg_ratio": 1.7982
+   "toi_ratio": 1.158584,
+   "ppg_ratio": 1.798246
   },
   {
    "person_id": "Liiga:60762062",
@@ -1062,12 +1062,12 @@
    "position": "D",
    "team": "SaiPa",
    "games": 56.0,
-   "toi_per_game_s": 1084.6071,
-   "points_per_game": 0.1786,
-   "median_toi_per_game_s": 1054.5357,
-   "median_points_per_game": 0.2158,
-   "toi_ratio": 1.0285,
-   "ppg_ratio": 0.8273
+   "toi_per_game_s": 1084.607143,
+   "points_per_game": 0.178571,
+   "median_toi_per_game_s": 1054.535714,
+   "median_points_per_game": 0.215839,
+   "toi_ratio": 1.028516,
+   "ppg_ratio": 0.827338
   },
   {
    "person_id": "Liiga:60751920",
@@ -1077,12 +1077,12 @@
    "position": "F",
    "team": "Ilves",
    "games": 59.0,
-   "toi_per_game_s": 1031.4746,
-   "points_per_game": 0.6271,
-   "median_toi_per_game_s": 892.4686,
+   "toi_per_game_s": 1031.474576,
+   "points_per_game": 0.627119,
+   "median_toi_per_game_s": 892.468561,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.1558,
-   "ppg_ratio": 1.5678
+   "toi_ratio": 1.155755,
+   "ppg_ratio": 1.567797
   },
   {
    "person_id": "Liiga:40245614",
@@ -1092,12 +1092,12 @@
    "position": "F",
    "team": "KooKoo",
    "games": 59.0,
-   "toi_per_game_s": 1058.4576,
-   "points_per_game": 0.661,
-   "median_toi_per_game_s": 892.4686,
+   "toi_per_game_s": 1058.457627,
+   "points_per_game": 0.661017,
+   "median_toi_per_game_s": 892.468561,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.186,
-   "ppg_ratio": 1.6525
+   "toi_ratio": 1.185989,
+   "ppg_ratio": 1.652542
   },
   {
    "person_id": "Liiga:60466255",
@@ -1107,12 +1107,12 @@
    "position": "F",
    "team": "Ilves",
    "games": 56.0,
-   "toi_per_game_s": 942.8393,
-   "points_per_game": 0.6071,
-   "median_toi_per_game_s": 892.4686,
+   "toi_per_game_s": 942.839286,
+   "points_per_game": 0.607143,
+   "median_toi_per_game_s": 892.468561,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.0564,
-   "ppg_ratio": 1.5179
+   "toi_ratio": 1.05644,
+   "ppg_ratio": 1.517857
   },
   {
    "person_id": "Liiga:60498506",
@@ -1123,11 +1123,11 @@
    "team": "Pelicans",
    "games": 28.0,
    "toi_per_game_s": 425.0,
-   "points_per_game": 0.0357,
+   "points_per_game": 0.035714,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 0.4708,
-   "ppg_ratio": 0.0824
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 0.470789,
+   "ppg_ratio": 0.082418
   },
   {
    "person_id": "Liiga:60860539",
@@ -1137,12 +1137,12 @@
    "position": "F",
    "team": "Ilves",
    "games": 27.0,
-   "toi_per_game_s": 960.1481,
-   "points_per_game": 0.3704,
+   "toi_per_game_s": 960.148148,
+   "points_per_game": 0.37037,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 1.0636,
-   "ppg_ratio": 0.8547
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 1.063593,
+   "ppg_ratio": 0.854701
   },
   {
    "person_id": "NHL:8477205",
@@ -1152,12 +1152,12 @@
    "position": "D",
    "team": "Tappara",
    "games": 38.0,
-   "toi_per_game_s": 1015.1842,
-   "points_per_game": 0.3158,
+   "toi_per_game_s": 1015.184211,
+   "points_per_game": 0.315789,
    "median_toi_per_game_s": 1023.4,
    "median_points_per_game": 0.25,
-   "toi_ratio": 0.992,
-   "ppg_ratio": 1.2632
+   "toi_ratio": 0.991972,
+   "ppg_ratio": 1.263158
   },
   {
    "person_id": "Liiga:60621357",
@@ -1167,12 +1167,12 @@
    "position": "D",
    "team": "Ilves",
    "games": 52.0,
-   "toi_per_game_s": 1150.6346,
-   "points_per_game": 0.6731,
+   "toi_per_game_s": 1150.634615,
+   "points_per_game": 0.673077,
    "median_toi_per_game_s": 1023.4,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.1243,
-   "ppg_ratio": 2.6923
+   "toi_ratio": 1.124325,
+   "ppg_ratio": 2.692308
   },
   {
    "person_id": "Liiga:60579549",
@@ -1182,12 +1182,12 @@
    "position": "D",
    "team": "Kärpät",
    "games": 26.0,
-   "toi_per_game_s": 1247.5385,
-   "points_per_game": 0.3077,
+   "toi_per_game_s": 1247.538462,
+   "points_per_game": 0.307692,
    "median_toi_per_game_s": 1023.4,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.219,
-   "ppg_ratio": 1.2308
+   "toi_ratio": 1.219014,
+   "ppg_ratio": 1.230769
   },
   {
    "person_id": "Liiga:60544388",
@@ -1197,12 +1197,12 @@
    "position": "D",
    "team": "Pelicans",
    "games": 21.0,
-   "toi_per_game_s": 942.6667,
-   "points_per_game": 0.2857,
+   "toi_per_game_s": 942.666667,
+   "points_per_game": 0.285714,
    "median_toi_per_game_s": 1023.4,
    "median_points_per_game": 0.25,
-   "toi_ratio": 0.9211,
-   "ppg_ratio": 1.1429
+   "toi_ratio": 0.921113,
+   "ppg_ratio": 1.142857
   },
   {
    "person_id": "SHL:kcotty8qn8",
@@ -1212,12 +1212,12 @@
    "position": "F",
    "team": "Pelicans",
    "games": 47.0,
-   "toi_per_game_s": 938.7872,
-   "points_per_game": 0.6596,
+   "toi_per_game_s": 938.787234,
+   "points_per_game": 0.659574,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 1.0399,
-   "ppg_ratio": 1.5221
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 1.039931,
+   "ppg_ratio": 1.522095
   },
   {
    "person_id": "Liiga:60866738",
@@ -1227,12 +1227,12 @@
    "position": "D",
    "team": "KalPa",
    "games": 58.0,
-   "toi_per_game_s": 982.3621,
-   "points_per_game": 0.2759,
+   "toi_per_game_s": 982.362069,
+   "points_per_game": 0.275862,
    "median_toi_per_game_s": 1023.4,
    "median_points_per_game": 0.25,
    "toi_ratio": 0.9599,
-   "ppg_ratio": 1.1034
+   "ppg_ratio": 1.103448
   },
   {
    "person_id": "Liiga:60826467",
@@ -1242,12 +1242,12 @@
    "position": "F",
    "team": "Sport",
    "games": 44.0,
-   "toi_per_game_s": 982.8636,
-   "points_per_game": 0.5682,
+   "toi_per_game_s": 982.863636,
+   "points_per_game": 0.568182,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 1.0888,
-   "ppg_ratio": 1.3112
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 1.088756,
+   "ppg_ratio": 1.311189
   },
   {
    "person_id": "Liiga:60747516",
@@ -1257,12 +1257,12 @@
    "position": "D",
    "team": "Kärpät",
    "games": 33.0,
-   "toi_per_game_s": 953.9091,
-   "points_per_game": 0.1515,
+   "toi_per_game_s": 953.909091,
+   "points_per_game": 0.151515,
    "median_toi_per_game_s": 1023.4,
    "median_points_per_game": 0.25,
-   "toi_ratio": 0.9321,
-   "ppg_ratio": 0.6061
+   "toi_ratio": 0.932098,
+   "ppg_ratio": 0.606061
   },
   {
    "person_id": "Liiga:60716456",
@@ -1272,12 +1272,12 @@
    "position": "F",
    "team": "KalPa",
    "games": 59.0,
-   "toi_per_game_s": 1026.5763,
-   "points_per_game": 0.8983,
+   "toi_per_game_s": 1026.576271,
+   "points_per_game": 0.898305,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 1.1372,
-   "ppg_ratio": 2.073
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 1.137178,
+   "ppg_ratio": 2.073012
   },
   {
    "person_id": "NHL:8474661",
@@ -1287,12 +1287,12 @@
    "position": "D",
    "team": "Pelicans",
    "games": 51.0,
-   "toi_per_game_s": 1184.5098,
-   "points_per_game": 0.3333,
+   "toi_per_game_s": 1184.509804,
+   "points_per_game": 0.333333,
    "median_toi_per_game_s": 1023.4,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.1574,
-   "ppg_ratio": 1.3333
+   "toi_ratio": 1.157426,
+   "ppg_ratio": 1.333333
   },
   {
    "person_id": "Liiga:60660706",
@@ -1302,12 +1302,12 @@
    "position": "F",
    "team": "Kärpät",
    "games": 53.0,
-   "toi_per_game_s": 1083.7358,
-   "points_per_game": 1.1698,
+   "toi_per_game_s": 1083.735849,
+   "points_per_game": 1.169811,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 1.2005,
-   "ppg_ratio": 2.6996
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 1.200496,
+   "ppg_ratio": 2.699565
   },
   {
    "person_id": "Liiga:60661835",
@@ -1317,12 +1317,12 @@
    "position": "F",
    "team": "Ilves",
    "games": 26.0,
-   "toi_per_game_s": 548.5769,
-   "points_per_game": 0.1923,
+   "toi_per_game_s": 548.576923,
+   "points_per_game": 0.192308,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 0.6077,
-   "ppg_ratio": 0.4438
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 0.60768,
+   "ppg_ratio": 0.443787
   },
   {
    "person_id": "Liiga:60762062",
@@ -1333,11 +1333,11 @@
    "team": "SaiPa",
    "games": 58.0,
    "toi_per_game_s": 1112.0,
-   "points_per_game": 0.2069,
+   "points_per_game": 0.206897,
    "median_toi_per_game_s": 1023.4,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.0866,
-   "ppg_ratio": 0.8276
+   "toi_ratio": 1.086574,
+   "ppg_ratio": 0.827586
   },
   {
    "person_id": "Liiga:60751920",
@@ -1347,12 +1347,12 @@
    "position": "F",
    "team": "HIFK",
    "games": 53.0,
-   "toi_per_game_s": 1161.0943,
-   "points_per_game": 0.6604,
+   "toi_per_game_s": 1161.09434,
+   "points_per_game": 0.660377,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 1.2862,
-   "ppg_ratio": 1.5239
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 1.286189,
+   "ppg_ratio": 1.523948
   },
   {
    "person_id": "Liiga:40245614",
@@ -1365,8 +1365,8 @@
    "toi_per_game_s": 1078.62,
    "points_per_game": 0.78,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 1.1948,
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 1.194829,
    "ppg_ratio": 1.8
   },
   {
@@ -1377,12 +1377,12 @@
    "position": "D",
    "team": "Ässät",
    "games": 59.0,
-   "toi_per_game_s": 1159.2203,
-   "points_per_game": 0.2203,
+   "toi_per_game_s": 1159.220339,
+   "points_per_game": 0.220339,
    "median_toi_per_game_s": 1023.4,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.1327,
-   "ppg_ratio": 0.8814
+   "toi_ratio": 1.132715,
+   "ppg_ratio": 0.881356
   },
   {
    "person_id": "SHL:qipegv31qs",
@@ -1396,7 +1396,7 @@
    "points_per_game": 0.4,
    "median_toi_per_game_s": 1023.4,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.1996,
+   "toi_ratio": 1.199609,
    "ppg_ratio": 1.6
   },
   {
@@ -1407,12 +1407,12 @@
    "position": "F",
    "team": "Ilves",
    "games": 17.0,
-   "toi_per_game_s": 878.1765,
-   "points_per_game": 0.5882,
+   "toi_per_game_s": 878.176471,
+   "points_per_game": 0.588235,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 0.9728,
-   "ppg_ratio": 1.3575
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 0.97279,
+   "ppg_ratio": 1.357466
   },
   {
    "person_id": "Liiga:60773813",
@@ -1425,8 +1425,8 @@
    "toi_per_game_s": 623.2,
    "points_per_game": 0.0,
    "median_toi_per_game_s": 902.74,
-   "median_points_per_game": 0.4333,
-   "toi_ratio": 0.6903,
+   "median_points_per_game": 0.433333,
+   "toi_ratio": 0.690343,
    "ppg_ratio": 0.0
   },
   {
@@ -1437,12 +1437,12 @@
    "position": "D",
    "team": "Kärpät",
    "games": 48.0,
-   "toi_per_game_s": 1263.4792,
-   "points_per_game": 0.6458,
-   "median_toi_per_game_s": 1023.6296,
+   "toi_per_game_s": 1263.479167,
+   "points_per_game": 0.645833,
+   "median_toi_per_game_s": 1023.62963,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.2343,
-   "ppg_ratio": 2.5833
+   "toi_ratio": 1.234313,
+   "ppg_ratio": 2.583333
   },
   {
    "person_id": "SHL:qcw-3Qb8CMpfh",
@@ -1452,12 +1452,12 @@
    "position": "F",
    "team": "Ilves",
    "games": 56.0,
-   "toi_per_game_s": 1225.9286,
-   "points_per_game": 0.8929,
+   "toi_per_game_s": 1225.928571,
+   "points_per_game": 0.892857,
    "median_toi_per_game_s": 903.3,
-   "median_points_per_game": 0.4262,
-   "toi_ratio": 1.3572,
-   "ppg_ratio": 2.0948
+   "median_points_per_game": 0.42623,
+   "toi_ratio": 1.357167,
+   "ppg_ratio": 2.09478
   },
   {
    "person_id": "Liiga:60866738",
@@ -1467,12 +1467,12 @@
    "position": "D",
    "team": "KalPa",
    "games": 56.0,
-   "toi_per_game_s": 1006.9821,
-   "points_per_game": 0.2679,
-   "median_toi_per_game_s": 1023.6296,
+   "toi_per_game_s": 1006.982143,
+   "points_per_game": 0.267857,
+   "median_toi_per_game_s": 1023.62963,
    "median_points_per_game": 0.25,
-   "toi_ratio": 0.9837,
-   "ppg_ratio": 1.0714
+   "toi_ratio": 0.983737,
+   "ppg_ratio": 1.071429
   },
   {
    "person_id": "Liiga:60716456",
@@ -1482,12 +1482,12 @@
    "position": "F",
    "team": "Kärpät",
    "games": 58.0,
-   "toi_per_game_s": 1030.1379,
-   "points_per_game": 0.8966,
+   "toi_per_game_s": 1030.137931,
+   "points_per_game": 0.896552,
    "median_toi_per_game_s": 903.3,
-   "median_points_per_game": 0.4262,
-   "toi_ratio": 1.1404,
-   "ppg_ratio": 2.1034
+   "median_points_per_game": 0.42623,
+   "toi_ratio": 1.140416,
+   "ppg_ratio": 2.103448
   },
   {
    "person_id": "NHL:8474661",
@@ -1497,12 +1497,12 @@
    "position": "D",
    "team": "Pelicans",
    "games": 60.0,
-   "toi_per_game_s": 1234.6667,
-   "points_per_game": 0.4167,
-   "median_toi_per_game_s": 1023.6296,
+   "toi_per_game_s": 1234.666667,
+   "points_per_game": 0.416667,
+   "median_toi_per_game_s": 1023.62963,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.2062,
-   "ppg_ratio": 1.6667
+   "toi_ratio": 1.206165,
+   "ppg_ratio": 1.666667
   },
   {
    "person_id": "NHL:8484259",
@@ -1512,12 +1512,12 @@
    "position": "F",
    "team": "Tappara",
    "games": 42.0,
-   "toi_per_game_s": 800.381,
-   "points_per_game": 0.2857,
+   "toi_per_game_s": 800.380952,
+   "points_per_game": 0.285714,
    "median_toi_per_game_s": 903.3,
-   "median_points_per_game": 0.4262,
-   "toi_ratio": 0.8861,
-   "ppg_ratio": 0.6703
+   "median_points_per_game": 0.42623,
+   "toi_ratio": 0.886063,
+   "ppg_ratio": 0.67033
   },
   {
    "person_id": "Liiga:60762062",
@@ -1529,9 +1529,9 @@
    "games": 60.0,
    "toi_per_game_s": 1040.7,
    "points_per_game": 0.25,
-   "median_toi_per_game_s": 1023.6296,
+   "median_toi_per_game_s": 1023.62963,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.0167,
+   "toi_ratio": 1.016676,
    "ppg_ratio": 1.0
   },
   {
@@ -1542,12 +1542,12 @@
    "position": "F",
    "team": "HIFK",
    "games": 54.0,
-   "toi_per_game_s": 1175.4259,
-   "points_per_game": 0.6667,
+   "toi_per_game_s": 1175.425926,
+   "points_per_game": 0.666667,
    "median_toi_per_game_s": 903.3,
-   "median_points_per_game": 0.4262,
-   "toi_ratio": 1.3013,
-   "ppg_ratio": 1.5641
+   "median_points_per_game": 0.42623,
+   "toi_ratio": 1.301258,
+   "ppg_ratio": 1.564103
   },
   {
    "person_id": "Liiga:40245614",
@@ -1557,12 +1557,12 @@
    "position": "F",
    "team": "KooKoo",
    "games": 24.0,
-   "toi_per_game_s": 963.8333,
-   "points_per_game": 0.6667,
+   "toi_per_game_s": 963.833333,
+   "points_per_game": 0.666667,
    "median_toi_per_game_s": 903.3,
-   "median_points_per_game": 0.4262,
-   "toi_ratio": 1.067,
-   "ppg_ratio": 1.5641
+   "median_points_per_game": 0.42623,
+   "toi_ratio": 1.067014,
+   "ppg_ratio": 1.564103
   },
   {
    "person_id": "Liiga:60855338",
@@ -1572,12 +1572,12 @@
    "position": "D",
    "team": "Ilves",
    "games": 58.0,
-   "toi_per_game_s": 1116.1207,
-   "points_per_game": 0.3276,
-   "median_toi_per_game_s": 1023.6296,
+   "toi_per_game_s": 1116.12069,
+   "points_per_game": 0.327586,
+   "median_toi_per_game_s": 1023.62963,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.0904,
-   "ppg_ratio": 1.3103
+   "toi_ratio": 1.090356,
+   "ppg_ratio": 1.310345
   },
   {
    "person_id": "NHL:8480144",
@@ -1588,11 +1588,11 @@
    "team": "CHI",
    "games": 56.0,
    "toi_per_game_s": 880.0178,
-   "points_per_game": 0.2143,
+   "points_per_game": 0.214286,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 0.9913,
-   "ppg_ratio": 0.5306
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 0.991306,
+   "ppg_ratio": 0.530612
   },
   {
    "person_id": "NHL:8471276",
@@ -1603,11 +1603,11 @@
    "team": "BOS",
    "games": 51.0,
    "toi_per_game_s": 1028.0784,
-   "points_per_game": 0.8627,
+   "points_per_game": 0.862745,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.1581,
-   "ppg_ratio": 2.1363
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.158091,
+   "ppg_ratio": 2.136321
   },
   {
    "person_id": "NHL:8477956",
@@ -1620,9 +1620,9 @@
    "toi_per_game_s": 1116.8541,
    "points_per_game": 1.0,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.2581,
-   "ppg_ratio": 2.4762
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.258093,
+   "ppg_ratio": 2.47619
   },
   {
    "person_id": "NHL:8477330",
@@ -1633,11 +1633,11 @@
    "team": "CHI",
    "games": 56.0,
    "toi_per_game_s": 931.0178,
-   "points_per_game": 0.6786,
+   "points_per_game": 0.678571,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.0488,
-   "ppg_ratio": 1.6803
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.048755,
+   "ppg_ratio": 1.680272
   },
   {
    "person_id": "NHL:8480078",
@@ -1648,11 +1648,11 @@
    "team": "NYR",
    "games": 42.0,
    "toi_per_game_s": 793.5,
-   "points_per_game": 0.5238,
+   "points_per_game": 0.52381,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 0.8938,
-   "ppg_ratio": 1.2971
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 0.893847,
+   "ppg_ratio": 1.297052
   },
   {
    "person_id": "NHL:8479425",
@@ -1663,11 +1663,11 @@
    "team": "DET",
    "games": 56.0,
    "toi_per_game_s": 1403.1607,
-   "points_per_game": 0.4643,
+   "points_per_game": 0.464286,
    "median_toi_per_game_s": 1122.6341,
-   "median_points_per_game": 0.2571,
-   "toi_ratio": 1.2499,
-   "ppg_ratio": 1.8056
+   "median_points_per_game": 0.257143,
+   "toi_ratio": 1.249882,
+   "ppg_ratio": 1.805556
   },
   {
    "person_id": "NHL:8480821",
@@ -1678,11 +1678,11 @@
    "team": "DET",
    "games": 49.0,
    "toi_per_game_s": 1008.3469,
-   "points_per_game": 0.3878,
+   "points_per_game": 0.387755,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.1359,
-   "ppg_ratio": 0.9602
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.135864,
+   "ppg_ratio": 0.960155
   },
   {
    "person_id": "NHL:8474161",
@@ -1693,11 +1693,11 @@
    "team": "PHI",
    "games": 53.0,
    "toi_per_game_s": 1015.0188,
-   "points_per_game": 0.8113,
+   "points_per_game": 0.811321,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.1434,
-   "ppg_ratio": 2.009
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.143379,
+   "ppg_ratio": 2.008985
   },
   {
    "person_id": "NHL:8477944",
@@ -1710,9 +1710,9 @@
    "toi_per_game_s": 900.42,
    "points_per_game": 0.72,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.0143,
-   "ppg_ratio": 1.7829
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.014288,
+   "ppg_ratio": 1.782857
   },
   {
    "person_id": "NHL:8478415",
@@ -1723,11 +1723,11 @@
    "team": "BOS",
    "games": 42.0,
    "toi_per_game_s": 1023.1666,
-   "points_per_game": 0.2143,
+   "points_per_game": 0.214286,
    "median_toi_per_game_s": 1122.6341,
-   "median_points_per_game": 0.2571,
-   "toi_ratio": 0.9114,
-   "ppg_ratio": 0.8333
+   "median_points_per_game": 0.257143,
+   "toi_ratio": 0.911398,
+   "ppg_ratio": 0.833333
   },
   {
    "person_id": "NHL:8480172",
@@ -1738,11 +1738,11 @@
    "team": "TBL",
    "games": 35.0,
    "toi_per_game_s": 961.9428,
-   "points_per_game": 0.2286,
+   "points_per_game": 0.228571,
    "median_toi_per_game_s": 1122.6341,
-   "median_points_per_game": 0.2571,
-   "toi_ratio": 0.8569,
-   "ppg_ratio": 0.8889
+   "median_points_per_game": 0.257143,
+   "toi_ratio": 0.856862,
+   "ppg_ratio": 0.888889
   },
   {
    "person_id": "NHL:8479333",
@@ -1753,11 +1753,11 @@
    "team": "NYR",
    "games": 44.0,
    "toi_per_game_s": 916.2727,
-   "points_per_game": 0.0909,
+   "points_per_game": 0.090909,
    "median_toi_per_game_s": 1122.6341,
-   "median_points_per_game": 0.2571,
-   "toi_ratio": 0.8162,
-   "ppg_ratio": 0.3535
+   "median_points_per_game": 0.257143,
+   "toi_ratio": 0.816181,
+   "ppg_ratio": 0.353535
   },
   {
    "person_id": "NHL:8480039",
@@ -1768,11 +1768,11 @@
    "team": "CAR",
    "games": 53.0,
    "toi_per_game_s": 1037.4905,
-   "points_per_game": 0.7736,
+   "points_per_game": 0.773585,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.1687,
-   "ppg_ratio": 1.9155
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.168693,
+   "ppg_ratio": 1.915544
   },
   {
    "person_id": "NHL:8476292",
@@ -1783,11 +1783,11 @@
    "team": "TBL",
    "games": 55.0,
    "toi_per_game_s": 1047.3272,
-   "points_per_game": 0.8364,
+   "points_per_game": 0.836364,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.1798,
-   "ppg_ratio": 2.071
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.179774,
+   "ppg_ratio": 2.070996
   },
   {
    "person_id": "NHL:8478401",
@@ -1800,9 +1800,9 @@
    "toi_per_game_s": 1029.3,
    "points_per_game": 0.7,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.1595,
-   "ppg_ratio": 1.7333
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.159467,
+   "ppg_ratio": 1.733333
   },
   {
    "person_id": "NHL:8476889",
@@ -1813,11 +1813,11 @@
    "team": "DAL",
    "games": 55.0,
    "toi_per_game_s": 1045.8363,
-   "points_per_game": 0.2545,
+   "points_per_game": 0.254545,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.1781,
-   "ppg_ratio": 0.6303
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.178094,
+   "ppg_ratio": 0.630303
   },
   {
    "person_id": "NHL:8480160",
@@ -1830,9 +1830,9 @@
    "toi_per_game_s": 852.725,
    "points_per_game": 0.15,
    "median_toi_per_game_s": 1122.6341,
-   "median_points_per_game": 0.2571,
-   "toi_ratio": 0.7596,
-   "ppg_ratio": 0.5833
+   "median_points_per_game": 0.257143,
+   "toi_ratio": 0.759575,
+   "ppg_ratio": 0.583333
   },
   {
    "person_id": "NHL:8475462",
@@ -1843,11 +1843,11 @@
    "team": "FLA",
    "games": 54.0,
    "toi_per_game_s": 1054.1666,
-   "points_per_game": 0.2037,
+   "points_per_game": 0.203704,
    "median_toi_per_game_s": 1122.6341,
-   "median_points_per_game": 0.2571,
-   "toi_ratio": 0.939,
-   "ppg_ratio": 0.7922
+   "median_points_per_game": 0.257143,
+   "toi_ratio": 0.939012,
+   "ppg_ratio": 0.792181
   },
   {
    "person_id": "NHL:8476881",
@@ -1860,9 +1860,9 @@
    "toi_per_game_s": 1148.14,
    "points_per_game": 0.86,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 1.2933,
-   "ppg_ratio": 2.1295
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 1.293335,
+   "ppg_ratio": 2.129524
   },
   {
    "person_id": "NHL:8477931",
@@ -1873,11 +1873,11 @@
    "team": "VGK",
    "games": 38.0,
    "toi_per_game_s": 780.0526,
-   "points_per_game": 0.4737,
+   "points_per_game": 0.473684,
    "median_toi_per_game_s": 887.7358,
-   "median_points_per_game": 0.4038,
-   "toi_ratio": 0.8787,
-   "ppg_ratio": 1.1729
+   "median_points_per_game": 0.403846,
+   "toi_ratio": 0.878699,
+   "ppg_ratio": 1.172932
   },
   {
    "person_id": "NHL:8477205",
@@ -1888,11 +1888,11 @@
    "team": "TBL,ANA",
    "games": 38.0,
    "toi_per_game_s": 883.3947,
-   "points_per_game": 0.1579,
-   "median_toi_per_game_s": 1138.7888,
-   "median_points_per_game": 0.2847,
-   "toi_ratio": 0.7757,
-   "ppg_ratio": 0.5545
+   "points_per_game": 0.157895,
+   "median_toi_per_game_s": 1138.78885,
+   "median_points_per_game": 0.284749,
+   "toi_ratio": 0.775732,
+   "ppg_ratio": 0.554505
   },
   {
    "person_id": "NHL:8480144",
@@ -1903,11 +1903,11 @@
    "team": "TOR",
    "games": 82.0,
    "toi_per_game_s": 915.9512,
-   "points_per_game": 0.3171,
+   "points_per_game": 0.317073,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 1.0451,
-   "ppg_ratio": 0.761
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 1.045076,
+   "ppg_ratio": 0.760976
   },
   {
    "person_id": "NHL:8477956",
@@ -1918,11 +1918,11 @@
    "team": "BOS",
    "games": 72.0,
    "toi_per_game_s": 1116.4583,
-   "points_per_game": 1.0694,
+   "points_per_game": 1.069444,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 1.2738,
-   "ppg_ratio": 2.5667
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 1.27385,
+   "ppg_ratio": 2.566667
   },
   {
    "person_id": "NHL:8477330",
@@ -1933,11 +1933,11 @@
    "team": "CHI",
    "games": 78.0,
    "toi_per_game_s": 871.2564,
-   "points_per_game": 0.4103,
+   "points_per_game": 0.410256,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 0.9941,
-   "ppg_ratio": 0.9846
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 0.994081,
+   "ppg_ratio": 0.984615
   },
   {
    "person_id": "NHL:8478866",
@@ -1948,11 +1948,11 @@
    "team": "PIT,ANA",
    "games": 72.0,
    "toi_per_game_s": 617.1527,
-   "points_per_game": 0.1806,
+   "points_per_game": 0.180556,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 0.7042,
-   "ppg_ratio": 0.4333
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 0.704155,
+   "ppg_ratio": 0.433333
   },
   {
    "person_id": "NHL:8480078",
@@ -1963,11 +1963,11 @@
    "team": "NYR",
    "games": 67.0,
    "toi_per_game_s": 790.5074,
-   "points_per_game": 0.3284,
+   "points_per_game": 0.328358,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 0.9019,
-   "ppg_ratio": 0.7881
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 0.901948,
+   "ppg_ratio": 0.78806
   },
   {
    "person_id": "NHL:8479425",
@@ -1978,11 +1978,11 @@
    "team": "DET",
    "games": 78.0,
    "toi_per_game_s": 1321.6153,
-   "points_per_game": 0.4872,
-   "median_toi_per_game_s": 1138.7888,
-   "median_points_per_game": 0.2847,
-   "toi_ratio": 1.1605,
-   "ppg_ratio": 1.7109
+   "points_per_game": 0.487179,
+   "median_toi_per_game_s": 1138.78885,
+   "median_points_per_game": 0.284749,
+   "toi_ratio": 1.160545,
+   "ppg_ratio": 1.710908
   },
   {
    "person_id": "NHL:8480821",
@@ -1993,11 +1993,11 @@
    "team": "DET",
    "games": 74.0,
    "toi_per_game_s": 850.581,
-   "points_per_game": 0.3243,
+   "points_per_game": 0.324324,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 0.9705,
-   "ppg_ratio": 0.7784
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 0.970491,
+   "ppg_ratio": 0.778378
   },
   {
    "person_id": "NHL:8474161",
@@ -2008,11 +2008,11 @@
    "team": "CBJ",
    "games": 79.0,
    "toi_per_game_s": 1047.5569,
-   "points_per_game": 0.7848,
+   "points_per_game": 0.78481,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 1.1952,
-   "ppg_ratio": 1.8835
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 1.195235,
+   "ppg_ratio": 1.883544
   },
   {
    "person_id": "NHL:8477944",
@@ -2023,11 +2023,11 @@
    "team": "DET",
    "games": 26.0,
    "toi_per_game_s": 896.0,
-   "points_per_game": 0.7308,
+   "points_per_game": 0.730769,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 1.0223,
-   "ppg_ratio": 1.7538
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 1.022312,
+   "ppg_ratio": 1.753846
   },
   {
    "person_id": "NHL:8480172",
@@ -2038,11 +2038,11 @@
    "team": "TBL",
    "games": 76.0,
    "toi_per_game_s": 983.2368,
-   "points_per_game": 0.2368,
-   "median_toi_per_game_s": 1138.7888,
-   "median_points_per_game": 0.2847,
-   "toi_ratio": 0.8634,
-   "ppg_ratio": 0.8318
+   "points_per_game": 0.236842,
+   "median_toi_per_game_s": 1138.78885,
+   "median_points_per_game": 0.284749,
+   "toi_ratio": 0.863406,
+   "ppg_ratio": 0.831757
   },
   {
    "person_id": "NHL:8480039",
@@ -2053,11 +2053,11 @@
    "team": "CAR",
    "games": 78.0,
    "toi_per_game_s": 971.282,
-   "points_per_game": 0.5128,
+   "points_per_game": 0.512821,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 1.1082,
-   "ppg_ratio": 1.2308
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 1.108207,
+   "ppg_ratio": 1.230769
   },
   {
    "person_id": "NHL:8478131",
@@ -2070,8 +2070,8 @@
    "toi_per_game_s": 839.24,
    "points_per_game": 0.54,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 0.9576,
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 0.957551,
    "ppg_ratio": 1.296
   },
   {
@@ -2083,11 +2083,11 @@
    "team": "TBL",
    "games": 77.0,
    "toi_per_game_s": 989.8051,
-   "points_per_game": 0.6364,
+   "points_per_game": 0.636364,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 1.1293,
-   "ppg_ratio": 1.5273
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 1.129342,
+   "ppg_ratio": 1.527273
   },
   {
    "person_id": "NHL:8478401",
@@ -2098,11 +2098,11 @@
    "team": "NJD",
    "games": 70.0,
    "toi_per_game_s": 1010.7571,
-   "points_per_game": 0.5143,
+   "points_per_game": 0.514286,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 1.1532,
-   "ppg_ratio": 1.2343
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 1.153247,
+   "ppg_ratio": 1.234286
   },
   {
    "person_id": "NHL:8476889",
@@ -2113,11 +2113,11 @@
    "team": "DAL",
    "games": 77.0,
    "toi_per_game_s": 946.1298,
-   "points_per_game": 0.2468,
+   "points_per_game": 0.246753,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 1.0795,
-   "ppg_ratio": 0.5922
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 1.079509,
+   "ppg_ratio": 0.592208
   },
   {
    "person_id": "NHL:8480160",
@@ -2128,11 +2128,11 @@
    "team": "SJS",
    "games": 36.0,
    "toi_per_game_s": 796.8888,
-   "points_per_game": 0.0556,
-   "median_toi_per_game_s": 1138.7888,
-   "median_points_per_game": 0.2847,
-   "toi_ratio": 0.6998,
-   "ppg_ratio": 0.1951
+   "points_per_game": 0.055556,
+   "median_toi_per_game_s": 1138.78885,
+   "median_points_per_game": 0.284749,
+   "toi_ratio": 0.699769,
+   "ppg_ratio": 0.195104
   },
   {
    "person_id": "NHL:8475462",
@@ -2143,11 +2143,11 @@
    "team": "FLA",
    "games": 77.0,
    "toi_per_game_s": 1080.935,
-   "points_per_game": 0.2078,
-   "median_toi_per_game_s": 1138.7888,
-   "median_points_per_game": 0.2847,
-   "toi_ratio": 0.9492,
-   "ppg_ratio": 0.7297
+   "points_per_game": 0.207792,
+   "median_toi_per_game_s": 1138.78885,
+   "median_points_per_game": 0.284749,
+   "toi_ratio": 0.949197,
+   "ppg_ratio": 0.729738
   },
   {
    "person_id": "NHL:8476881",
@@ -2158,11 +2158,11 @@
    "team": "SJS",
    "games": 82.0,
    "toi_per_game_s": 1196.4146,
-   "points_per_game": 0.7805,
+   "points_per_game": 0.780488,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 1.3651,
-   "ppg_ratio": 1.8732
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 1.365078,
+   "ppg_ratio": 1.873171
   },
   {
    "person_id": "NHL:8477931",
@@ -2173,10 +2173,10 @@
    "team": "BOS",
    "games": 75.0,
    "toi_per_game_s": 800.5066,
-   "points_per_game": 0.2267,
+   "points_per_game": 0.226667,
    "median_toi_per_game_s": 876.4444,
-   "median_points_per_game": 0.4167,
-   "toi_ratio": 0.9134,
+   "median_points_per_game": 0.416667,
+   "toi_ratio": 0.913357,
    "ppg_ratio": 0.544
   },
   {
@@ -2188,11 +2188,11 @@
    "team": "TOR",
    "games": 82.0,
    "toi_per_game_s": 918.4512,
-   "points_per_game": 0.3293,
+   "points_per_game": 0.329268,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 1.0242,
-   "ppg_ratio": 0.7317
+   "toi_ratio": 1.02418,
+   "ppg_ratio": 0.731707
   },
   {
    "person_id": "NHL:8471276",
@@ -2206,8 +2206,8 @@
    "points_per_game": 0.8,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 1.1504,
-   "ppg_ratio": 1.7778
+   "toi_ratio": 1.150434,
+   "ppg_ratio": 1.777778
   },
   {
    "person_id": "NHL:8477956",
@@ -2218,11 +2218,11 @@
    "team": "BOS",
    "games": 82.0,
    "toi_per_game_s": 1173.8658,
-   "points_per_game": 1.378,
+   "points_per_game": 1.378049,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 1.309,
-   "ppg_ratio": 3.0623
+   "toi_ratio": 1.308997,
+   "ppg_ratio": 3.062331
   },
   {
    "person_id": "NHL:8477330",
@@ -2233,11 +2233,11 @@
    "team": "DET",
    "games": 81.0,
    "toi_per_game_s": 894.8148,
-   "points_per_game": 0.5556,
+   "points_per_game": 0.555556,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.9978,
-   "ppg_ratio": 1.2346
+   "toi_ratio": 0.997823,
+   "ppg_ratio": 1.234568
   },
   {
    "person_id": "NHL:8480078",
@@ -2248,11 +2248,11 @@
    "team": "NYR",
    "games": 74.0,
    "toi_per_game_s": 881.027,
-   "points_per_game": 0.6081,
+   "points_per_game": 0.608108,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.9824,
-   "ppg_ratio": 1.3514
+   "toi_ratio": 0.982448,
+   "ppg_ratio": 1.351351
   },
   {
    "person_id": "NHL:8479425",
@@ -2263,11 +2263,11 @@
    "team": "DET,VAN",
    "games": 64.0,
    "toi_per_game_s": 1301.9843,
-   "points_per_game": 0.6094,
+   "points_per_game": 0.609375,
    "median_toi_per_game_s": 1150.4444,
-   "median_points_per_game": 0.2676,
-   "toi_ratio": 1.1317,
-   "ppg_ratio": 2.2771
+   "median_points_per_game": 0.267606,
+   "toi_ratio": 1.131723,
+   "ppg_ratio": 2.277138
   },
   {
    "person_id": "NHL:8480821",
@@ -2278,11 +2278,11 @@
    "team": "DET",
    "games": 30.0,
    "toi_per_game_s": 785.8,
-   "points_per_game": 0.2333,
+   "points_per_game": 0.233333,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.8763,
-   "ppg_ratio": 0.5185
+   "toi_ratio": 0.876258,
+   "ppg_ratio": 0.518519
   },
   {
    "person_id": "NHL:8480880",
@@ -2293,11 +2293,11 @@
    "team": "BOS",
    "games": 23.0,
    "toi_per_game_s": 531.8695,
-   "points_per_game": 0.3043,
+   "points_per_game": 0.304348,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.5931,
-   "ppg_ratio": 0.6763
+   "toi_ratio": 0.593096,
+   "ppg_ratio": 0.676329
   },
   {
    "person_id": "NHL:8477944",
@@ -2311,8 +2311,8 @@
    "points_per_game": 0.64,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.9735,
-   "ppg_ratio": 1.4222
+   "toi_ratio": 0.973497,
+   "ppg_ratio": 1.422222
   },
   {
    "person_id": "NHL:8478415",
@@ -2323,11 +2323,11 @@
    "team": "BOS",
    "games": 22.0,
    "toi_per_game_s": 797.3636,
-   "points_per_game": 0.1818,
+   "points_per_game": 0.181818,
    "median_toi_per_game_s": 1150.4444,
-   "median_points_per_game": 0.2676,
-   "toi_ratio": 0.6931,
-   "ppg_ratio": 0.6794
+   "median_points_per_game": 0.267606,
+   "toi_ratio": 0.693092,
+   "ppg_ratio": 0.679426
   },
   {
    "person_id": "NHL:8480172",
@@ -2338,11 +2338,11 @@
    "team": "PIT",
    "games": 56.0,
    "toi_per_game_s": 1027.2142,
-   "points_per_game": 0.1607,
+   "points_per_game": 0.160714,
    "median_toi_per_game_s": 1150.4444,
-   "median_points_per_game": 0.2676,
-   "toi_ratio": 0.8929,
-   "ppg_ratio": 0.6006
+   "median_points_per_game": 0.267606,
+   "toi_ratio": 0.892885,
+   "ppg_ratio": 0.600564
   },
   {
    "person_id": "NHL:8476310",
@@ -2353,11 +2353,11 @@
    "team": "COL,PHI",
    "games": 30.0,
    "toi_per_game_s": 732.2666,
-   "points_per_game": 0.2667,
+   "points_per_game": 0.266667,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.8166,
-   "ppg_ratio": 0.5926
+   "toi_ratio": 0.816562,
+   "ppg_ratio": 0.592593
   },
   {
    "person_id": "NHL:8480822",
@@ -2368,11 +2368,11 @@
    "team": "COL,SJS",
    "games": 36.0,
    "toi_per_game_s": 624.0833,
-   "points_per_game": 0.2222,
+   "points_per_game": 0.222222,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.6959,
-   "ppg_ratio": 0.4938
+   "toi_ratio": 0.695925,
+   "ppg_ratio": 0.493827
   },
   {
    "person_id": "NHL:8480039",
@@ -2383,11 +2383,11 @@
    "team": "CAR",
    "games": 82.0,
    "toi_per_game_s": 1104.7317,
-   "points_per_game": 0.8659,
+   "points_per_game": 0.865854,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 1.2319,
-   "ppg_ratio": 1.9241
+   "toi_ratio": 1.231904,
+   "ppg_ratio": 1.924119
   },
   {
    "person_id": "NHL:8476292",
@@ -2398,11 +2398,11 @@
    "team": "NJD",
    "games": 49.0,
    "toi_per_game_s": 932.1224,
-   "points_per_game": 0.4694,
+   "points_per_game": 0.469388,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 1.0394,
-   "ppg_ratio": 1.0431
+   "toi_ratio": 1.039425,
+   "ppg_ratio": 1.043084
   },
   {
    "person_id": "NHL:8478401",
@@ -2413,11 +2413,11 @@
    "team": "BOS",
    "games": 82.0,
    "toi_per_game_s": 963.3536,
-   "points_per_game": 0.6951,
+   "points_per_game": 0.695122,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 1.0743,
-   "ppg_ratio": 1.5447
+   "toi_ratio": 1.074251,
+   "ppg_ratio": 1.544715
   },
   {
    "person_id": "NHL:8476889",
@@ -2428,11 +2428,11 @@
    "team": "DAL",
    "games": 81.0,
    "toi_per_game_s": 823.2345,
-   "points_per_game": 0.2469,
+   "points_per_game": 0.246914,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.918,
-   "ppg_ratio": 0.5487
+   "toi_ratio": 0.918002,
+   "ppg_ratio": 0.548697
   },
   {
    "person_id": "NHL:8480160",
@@ -2443,11 +2443,11 @@
    "team": "SJS",
    "games": 44.0,
    "toi_per_game_s": 877.409,
-   "points_per_game": 0.0682,
+   "points_per_game": 0.068182,
    "median_toi_per_game_s": 1150.4444,
-   "median_points_per_game": 0.2676,
-   "toi_ratio": 0.7627,
-   "ppg_ratio": 0.2548
+   "median_points_per_game": 0.267606,
+   "toi_ratio": 0.76267,
+   "ppg_ratio": 0.254785
   },
   {
    "person_id": "NHL:8475462",
@@ -2458,11 +2458,11 @@
    "team": "FLA",
    "games": 72.0,
    "toi_per_game_s": 1041.6527,
-   "points_per_game": 0.2361,
+   "points_per_game": 0.236111,
    "median_toi_per_game_s": 1150.4444,
-   "median_points_per_game": 0.2676,
-   "toi_ratio": 0.9054,
-   "ppg_ratio": 0.8823
+   "median_points_per_game": 0.267606,
+   "toi_ratio": 0.905435,
+   "ppg_ratio": 0.88231
   },
   {
    "person_id": "NHL:8476881",
@@ -2473,11 +2473,11 @@
    "team": "SJS",
    "games": 79.0,
    "toi_per_game_s": 1156.8734,
-   "points_per_game": 0.7975,
+   "points_per_game": 0.797468,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 1.29,
-   "ppg_ratio": 1.7722
+   "toi_ratio": 1.290048,
+   "ppg_ratio": 1.772152
   },
   {
    "person_id": "NHL:8477931",
@@ -2488,11 +2488,11 @@
    "team": "BOS",
    "games": 66.0,
    "toi_per_game_s": 753.1515,
-   "points_per_game": 0.2727,
+   "points_per_game": 0.272727,
    "median_toi_per_game_s": 896.7674,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.8399,
-   "ppg_ratio": 0.6061
+   "toi_ratio": 0.839852,
+   "ppg_ratio": 0.606061
   },
   {
    "person_id": "NHL:8483460",
@@ -2503,11 +2503,11 @@
    "team": "CBJ",
    "games": 43.0,
    "toi_per_game_s": 875.8604,
-   "points_per_game": 0.2326,
-   "median_toi_per_game_s": 1125.1792,
-   "median_points_per_game": 0.2712,
-   "toi_ratio": 0.7784,
-   "ppg_ratio": 0.8575
+   "points_per_game": 0.232558,
+   "median_toi_per_game_s": 1125.17925,
+   "median_points_per_game": 0.271219,
+   "toi_ratio": 0.778419,
+   "ppg_ratio": 0.857455
   },
   {
    "person_id": "NHL:8480144",
@@ -2518,11 +2518,11 @@
    "team": "TOR",
    "games": 78.0,
    "toi_per_game_s": 809.2179,
-   "points_per_game": 0.2436,
+   "points_per_game": 0.24359,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 0.9208,
-   "ppg_ratio": 0.5831
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 0.920804,
+   "ppg_ratio": 0.583139
   },
   {
    "person_id": "NHL:8477956",
@@ -2533,11 +2533,11 @@
    "team": "BOS",
    "games": 82.0,
    "toi_per_game_s": 1195.7804,
-   "points_per_game": 1.3415,
+   "points_per_game": 1.341463,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 1.3607,
-   "ppg_ratio": 3.2114
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 1.360671,
+   "ppg_ratio": 3.211382
   },
   {
    "person_id": "NHL:8477330",
@@ -2548,11 +2548,11 @@
    "team": "OTT",
    "games": 74.0,
    "toi_per_game_s": 727.3108,
-   "points_per_game": 0.2027,
+   "points_per_game": 0.202703,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 0.8276,
-   "ppg_ratio": 0.4853
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 0.827602,
+   "ppg_ratio": 0.485258
   },
   {
    "person_id": "NHL:8479425",
@@ -2563,11 +2563,11 @@
    "team": "VAN",
    "games": 81.0,
    "toi_per_game_s": 1406.4814,
-   "points_per_game": 0.5926,
-   "median_toi_per_game_s": 1125.1792,
-   "median_points_per_game": 0.2712,
-   "toi_ratio": 1.25,
-   "ppg_ratio": 2.1849
+   "points_per_game": 0.592593,
+   "median_toi_per_game_s": 1125.17925,
+   "median_points_per_game": 0.271219,
+   "toi_ratio": 1.250007,
+   "ppg_ratio": 2.184922
   },
   {
    "person_id": "NHL:8480821",
@@ -2578,11 +2578,11 @@
    "team": "SJS",
    "games": 72.0,
    "toi_per_game_s": 800.3888,
-   "points_per_game": 0.3194,
+   "points_per_game": 0.319444,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 0.9108,
-   "ppg_ratio": 0.7647
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 0.910757,
+   "ppg_ratio": 0.764731
   },
   {
    "person_id": "NHL:8480880",
@@ -2593,11 +2593,11 @@
    "team": "BOS",
    "games": 60.0,
    "toi_per_game_s": 589.25,
-   "points_per_game": 0.1667,
+   "points_per_game": 0.166667,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 0.6705,
-   "ppg_ratio": 0.399
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 0.670504,
+   "ppg_ratio": 0.39899
   },
   {
    "person_id": "NHL:8477944",
@@ -2608,11 +2608,11 @@
    "team": "STL",
    "games": 21.0,
    "toi_per_game_s": 727.5714,
-   "points_per_game": 0.2857,
+   "points_per_game": 0.285714,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 0.8279,
-   "ppg_ratio": 0.684
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 0.827899,
+   "ppg_ratio": 0.683983
   },
   {
    "person_id": "NHL:8480172",
@@ -2623,11 +2623,11 @@
    "team": "SJS",
    "games": 69.0,
    "toi_per_game_s": 1183.2318,
-   "points_per_game": 0.2754,
-   "median_toi_per_game_s": 1125.1792,
-   "median_points_per_game": 0.2712,
-   "toi_ratio": 1.0516,
-   "ppg_ratio": 1.0153
+   "points_per_game": 0.275362,
+   "median_toi_per_game_s": 1125.17925,
+   "median_points_per_game": 0.271219,
+   "toi_ratio": 1.051594,
+   "ppg_ratio": 1.015276
   },
   {
    "person_id": "NHL:8484314",
@@ -2640,9 +2640,9 @@
    "toi_per_game_s": 568.7,
    "points_per_game": 0.1,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 0.6471,
-   "ppg_ratio": 0.2394
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 0.64712,
+   "ppg_ratio": 0.239394
   },
   {
    "person_id": "NHL:8481206",
@@ -2653,11 +2653,11 @@
    "team": "PIT",
    "games": 33.0,
    "toi_per_game_s": 708.3636,
-   "points_per_game": 0.1515,
-   "median_toi_per_game_s": 1125.1792,
-   "median_points_per_game": 0.2712,
-   "toi_ratio": 0.6296,
-   "ppg_ratio": 0.5586
+   "points_per_game": 0.151515,
+   "median_toi_per_game_s": 1125.17925,
+   "median_points_per_game": 0.271219,
+   "toi_ratio": 0.629556,
+   "ppg_ratio": 0.558645
   },
   {
    "person_id": "NHL:8480039",
@@ -2668,11 +2668,11 @@
    "team": "CAR",
    "games": 77.0,
    "toi_per_game_s": 1041.3766,
-   "points_per_game": 0.6883,
+   "points_per_game": 0.688312,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 1.185,
-   "ppg_ratio": 1.6478
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 1.184975,
+   "ppg_ratio": 1.647776
   },
   {
    "person_id": "NHL:8476292",
@@ -2683,11 +2683,11 @@
    "team": "NJD",
    "games": 71.0,
    "toi_per_game_s": 938.9154,
-   "points_per_game": 0.4366,
+   "points_per_game": 0.43662,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 1.0684,
-   "ppg_ratio": 1.0452
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 1.068386,
+   "ppg_ratio": 1.045241
   },
   {
    "person_id": "NHL:8478401",
@@ -2698,10 +2698,10 @@
    "team": "BOS",
    "games": 78.0,
    "toi_per_game_s": 1086.3974,
-   "points_per_game": 0.7564,
+   "points_per_game": 0.75641,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 1.2362,
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 1.236204,
    "ppg_ratio": 1.8108
   },
   {
@@ -2713,11 +2713,11 @@
    "team": "DAL",
    "games": 74.0,
    "toi_per_game_s": 750.9324,
-   "points_per_game": 0.2568,
+   "points_per_game": 0.256757,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 0.8545,
-   "ppg_ratio": 0.6147
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 0.854481,
+   "ppg_ratio": 0.61466
   },
   {
    "person_id": "NHL:8482241",
@@ -2728,11 +2728,11 @@
    "team": "PIT",
    "games": 33.0,
    "toi_per_game_s": 585.8787,
-   "points_per_game": 0.2121,
+   "points_per_game": 0.212121,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 0.6667,
-   "ppg_ratio": 0.5078
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 0.666667,
+   "ppg_ratio": 0.507805
   },
   {
    "person_id": "NHL:8475462",
@@ -2743,11 +2743,11 @@
    "team": "ANA",
    "games": 66.0,
    "toi_per_game_s": 1170.2727,
-   "points_per_game": 0.2727,
-   "median_toi_per_game_s": 1125.1792,
-   "median_points_per_game": 0.2712,
-   "toi_ratio": 1.0401,
-   "ppg_ratio": 1.0056
+   "points_per_game": 0.272727,
+   "median_toi_per_game_s": 1125.17925,
+   "median_points_per_game": 0.271219,
+   "toi_ratio": 1.040077,
+   "ppg_ratio": 1.005561
   },
   {
    "person_id": "NHL:8476881",
@@ -2758,11 +2758,11 @@
    "team": "SJS,VGK",
    "games": 54.0,
    "toi_per_game_s": 1229.3703,
-   "points_per_game": 0.7037,
+   "points_per_game": 0.703704,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 1.3989,
-   "ppg_ratio": 1.6846
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 1.398892,
+   "ppg_ratio": 1.684624
   },
   {
    "person_id": "NHL:8477931",
@@ -2773,11 +2773,11 @@
    "team": "NJD",
    "games": 36.0,
    "toi_per_game_s": 708.5277,
-   "points_per_game": 0.1667,
+   "points_per_game": 0.166667,
    "median_toi_per_game_s": 878.817,
-   "median_points_per_game": 0.4177,
-   "toi_ratio": 0.8062,
-   "ppg_ratio": 0.399
+   "median_points_per_game": 0.417722,
+   "toi_ratio": 0.806229,
+   "ppg_ratio": 0.39899
   },
   {
    "person_id": "NHL:8483609",
@@ -2788,11 +2788,11 @@
    "team": "CGY",
    "games": 31.0,
    "toi_per_game_s": 579.129,
-   "points_per_game": 0.3226,
+   "points_per_game": 0.322581,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 0.6511,
-   "ppg_ratio": 0.7637
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 0.651087,
+   "ppg_ratio": 0.763718
   },
   {
    "person_id": "NHL:8480144",
@@ -2803,11 +2803,11 @@
    "team": "TOR",
    "games": 59.0,
    "toi_per_game_s": 743.5762,
-   "points_per_game": 0.2203,
+   "points_per_game": 0.220339,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 0.836,
-   "ppg_ratio": 0.5217
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 0.835968,
+   "ppg_ratio": 0.521658
   },
   {
    "person_id": "NHL:8477956",
@@ -2818,11 +2818,11 @@
    "team": "BOS",
    "games": 82.0,
    "toi_per_game_s": 1211.1707,
-   "points_per_game": 1.2927,
+   "points_per_game": 1.292683,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 1.3617,
-   "ppg_ratio": 3.0605
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 1.361662,
+   "ppg_ratio": 3.060461
   },
   {
    "person_id": "NHL:8480078",
@@ -2833,11 +2833,11 @@
    "team": "NYR,VAN",
    "games": 56.0,
    "toi_per_game_s": 898.0714,
-   "points_per_game": 0.4643,
+   "points_per_game": 0.464286,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 1.0097,
-   "ppg_ratio": 1.0992
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 1.009659,
+   "ppg_ratio": 1.099209
   },
   {
    "person_id": "NHL:8479425",
@@ -2848,11 +2848,11 @@
    "team": "VAN",
    "games": 61.0,
    "toi_per_game_s": 1433.6557,
-   "points_per_game": 0.541,
-   "median_toi_per_game_s": 1138.8919,
-   "median_points_per_game": 0.2685,
-   "toi_ratio": 1.2588,
-   "ppg_ratio": 2.0151
+   "points_per_game": 0.540984,
+   "median_toi_per_game_s": 1138.89195,
+   "median_points_per_game": 0.268468,
+   "toi_ratio": 1.258816,
+   "ppg_ratio": 2.015073
   },
   {
    "person_id": "NHL:8483930",
@@ -2865,9 +2865,9 @@
    "toi_per_game_s": 602.25,
    "points_per_game": 0.2,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 0.6771,
-   "ppg_ratio": 0.4735
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 0.677081,
+   "ppg_ratio": 0.473505
   },
   {
    "person_id": "NHL:8480880",
@@ -2878,11 +2878,11 @@
    "team": "MIN,BOS",
    "games": 56.0,
    "toi_per_game_s": 642.8392,
-   "points_per_game": 0.1964,
+   "points_per_game": 0.196429,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 0.7227,
-   "ppg_ratio": 0.465
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 0.722714,
+   "ppg_ratio": 0.46505
   },
   {
    "person_id": "NHL:8477944",
@@ -2893,11 +2893,11 @@
    "team": "WSH,NSH",
    "games": 39.0,
    "toi_per_game_s": 621.0256,
-   "points_per_game": 0.359,
+   "points_per_game": 0.358974,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 0.6982,
-   "ppg_ratio": 0.8499
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 0.69819,
+   "ppg_ratio": 0.849881
   },
   {
    "person_id": "NHL:8480172",
@@ -2908,11 +2908,11 @@
    "team": "SJS",
    "games": 54.0,
    "toi_per_game_s": 1035.3703,
-   "points_per_game": 0.1667,
-   "median_toi_per_game_s": 1138.8919,
-   "median_points_per_game": 0.2685,
-   "toi_ratio": 0.9091,
-   "ppg_ratio": 0.6208
+   "points_per_game": 0.166667,
+   "median_toi_per_game_s": 1138.89195,
+   "median_points_per_game": 0.268468,
+   "toi_ratio": 0.909103,
+   "ppg_ratio": 0.620805
   },
   {
    "person_id": "NHL:8483468",
@@ -2923,11 +2923,11 @@
    "team": "BUF",
    "games": 62.0,
    "toi_per_game_s": 887.5645,
-   "points_per_game": 0.3871,
+   "points_per_game": 0.387097,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 0.9978,
-   "ppg_ratio": 0.9165
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 0.997847,
+   "ppg_ratio": 0.916462
   },
   {
    "person_id": "NHL:8480039",
@@ -2938,11 +2938,11 @@
    "team": "CAR,COL",
    "games": 79.0,
    "toi_per_game_s": 1139.9113,
-   "points_per_game": 1.0506,
+   "points_per_game": 1.050633,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 1.2815,
-   "ppg_ratio": 2.4874
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 1.281549,
+   "ppg_ratio": 2.487401
   },
   {
    "person_id": "NHL:8476292",
@@ -2953,11 +2953,11 @@
    "team": "NJD",
    "games": 77.0,
    "toi_per_game_s": 825.2597,
-   "points_per_game": 0.3636,
+   "points_per_game": 0.363636,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 0.9278,
-   "ppg_ratio": 0.8609
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 0.927801,
+   "ppg_ratio": 0.860919
   },
   {
    "person_id": "NHL:8478401",
@@ -2968,11 +2968,11 @@
    "team": "BOS",
    "games": 82.0,
    "toi_per_game_s": 1143.7439,
-   "points_per_game": 0.5732,
+   "points_per_game": 0.573171,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 1.2859,
-   "ppg_ratio": 1.357
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 1.285857,
+   "ppg_ratio": 1.356997
   },
   {
    "person_id": "NHL:8476889",
@@ -2983,11 +2983,11 @@
    "team": "STL",
    "games": 70.0,
    "toi_per_game_s": 781.4142,
-   "points_per_game": 0.2143,
+   "points_per_game": 0.214286,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 0.8785,
-   "ppg_ratio": 0.5073
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 0.878507,
+   "ppg_ratio": 0.507327
   },
   {
    "person_id": "NHL:8475462",
@@ -2998,11 +2998,11 @@
    "team": "ANA",
    "games": 81.0,
    "toi_per_game_s": 1191.9382,
-   "points_per_game": 0.1975,
-   "median_toi_per_game_s": 1138.8919,
-   "median_points_per_game": 0.2685,
-   "toi_ratio": 1.0466,
-   "ppg_ratio": 0.7358
+   "points_per_game": 0.197531,
+   "median_toi_per_game_s": 1138.89195,
+   "median_points_per_game": 0.268468,
+   "toi_ratio": 1.046577,
+   "ppg_ratio": 0.735769
   },
   {
    "person_id": "NHL:8476881",
@@ -3013,11 +3013,11 @@
    "team": "VGK",
    "games": 73.0,
    "toi_per_game_s": 1027.0,
-   "points_per_game": 0.8356,
+   "points_per_game": 0.835616,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 1.1546,
-   "ppg_ratio": 1.9783
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 1.154608,
+   "ppg_ratio": 1.978344
   },
   {
    "person_id": "NHL:8477931",
@@ -3028,11 +3028,11 @@
    "team": "FLA",
    "games": 59.0,
    "toi_per_game_s": 589.0169,
-   "points_per_game": 0.1525,
+   "points_per_game": 0.152542,
    "median_toi_per_game_s": 889.4796,
-   "median_points_per_game": 0.4224,
-   "toi_ratio": 0.6622,
-   "ppg_ratio": 0.3611
+   "median_points_per_game": 0.422382,
+   "toi_ratio": 0.662204,
+   "ppg_ratio": 0.361148
   },
   {
    "person_id": "NHL:8483609",
@@ -3043,11 +3043,11 @@
    "team": "CGY",
    "games": 79.0,
    "toi_per_game_s": 638.0632,
-   "points_per_game": 0.2278,
+   "points_per_game": 0.227848,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 0.7286,
-   "ppg_ratio": 0.5291
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 0.72864,
+   "ppg_ratio": 0.529064
   },
   {
    "person_id": "NHL:8483460",
@@ -3060,8 +3060,8 @@
    "toi_per_game_s": 720.923,
    "points_per_game": 0.0,
    "median_toi_per_game_s": 1137.6506,
-   "median_points_per_game": 0.2683,
-   "toi_ratio": 0.6337,
+   "median_points_per_game": 0.268293,
+   "toi_ratio": 0.633695,
    "ppg_ratio": 0.0
   },
   {
@@ -3075,9 +3075,9 @@
    "toi_per_game_s": 883.7,
    "points_per_game": 0.15,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 1.0091,
-   "ppg_ratio": 0.3483
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 1.009146,
+   "ppg_ratio": 0.348301
   },
   {
    "person_id": "NHL:8477956",
@@ -3088,11 +3088,11 @@
    "team": "BOS",
    "games": 77.0,
    "toi_per_game_s": 1239.3376,
-   "points_per_game": 1.2987,
+   "points_per_game": 1.298701,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 1.4153,
-   "ppg_ratio": 3.0156
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 1.415269,
+   "ppg_ratio": 3.01559
   },
   {
    "person_id": "NHL:8485493",
@@ -3103,11 +3103,11 @@
    "team": "EDM",
    "games": 22.0,
    "toi_per_game_s": 645.5,
-   "points_per_game": 0.2273,
+   "points_per_game": 0.227273,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 0.7371,
-   "ppg_ratio": 0.5277
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 0.737133,
+   "ppg_ratio": 0.527728
   },
   {
    "person_id": "NHL:8479425",
@@ -3118,11 +3118,11 @@
    "team": "VAN",
    "games": 82.0,
    "toi_per_game_s": 1500.3414,
-   "points_per_game": 0.5976,
+   "points_per_game": 0.597561,
    "median_toi_per_game_s": 1137.6506,
-   "median_points_per_game": 0.2683,
-   "toi_ratio": 1.3188,
-   "ppg_ratio": 2.2273
+   "median_points_per_game": 0.268293,
+   "toi_ratio": 1.318807,
+   "ppg_ratio": 2.227273
   },
   {
    "person_id": "NHL:8482877",
@@ -3133,11 +3133,11 @@
    "team": "NYR",
    "games": 28.0,
    "toi_per_game_s": 549.0714,
-   "points_per_game": 0.2143,
+   "points_per_game": 0.214286,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 0.627,
-   "ppg_ratio": 0.4976
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 0.627015,
+   "ppg_ratio": 0.497572
   },
   {
    "person_id": "NHL:8480039",
@@ -3148,11 +3148,11 @@
    "team": "COL",
    "games": 78.0,
    "toi_per_game_s": 1289.8846,
-   "points_per_game": 1.2821,
+   "points_per_game": 1.282051,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 1.473,
-   "ppg_ratio": 2.9769
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 1.472991,
+   "ppg_ratio": 2.976929
   },
   {
    "person_id": "NHL:8476292",
@@ -3165,9 +3165,9 @@
    "toi_per_game_s": 769.1875,
    "points_per_game": 0.1875,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 0.8784,
-   "ppg_ratio": 0.4354
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 0.878378,
+   "ppg_ratio": 0.435376
   },
   {
    "person_id": "NHL:8478401",
@@ -3178,11 +3178,11 @@
    "team": "BOS",
    "games": 78.0,
    "toi_per_game_s": 1010.7692,
-   "points_per_game": 0.8333,
+   "points_per_game": 0.833333,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 1.1543,
-   "ppg_ratio": 1.935
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 1.154254,
+   "ppg_ratio": 1.935004
   },
   {
    "person_id": "NHL:8476889",
@@ -3193,11 +3193,11 @@
    "team": "DAL",
    "games": 58.0,
    "toi_per_game_s": 704.0862,
-   "points_per_game": 0.2931,
+   "points_per_game": 0.293103,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 0.804,
-   "ppg_ratio": 0.6806
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 0.804035,
+   "ppg_ratio": 0.680588
   },
   {
    "person_id": "NHL:8475462",
@@ -3208,11 +3208,11 @@
    "team": "ANA",
    "games": 56.0,
    "toi_per_game_s": 970.9821,
-   "points_per_game": 0.2321,
+   "points_per_game": 0.232143,
    "median_toi_per_game_s": 1137.6506,
-   "median_points_per_game": 0.2683,
-   "toi_ratio": 0.8535,
-   "ppg_ratio": 0.8653
+   "median_points_per_game": 0.268293,
+   "toi_ratio": 0.853498,
+   "ppg_ratio": 0.86526
   },
   {
    "person_id": "NHL:8476881",
@@ -3223,11 +3223,11 @@
    "team": "VGK",
    "games": 82.0,
    "toi_per_game_s": 1022.0365,
-   "points_per_game": 0.7073,
+   "points_per_game": 0.707317,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 1.1671,
-   "ppg_ratio": 1.6424
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 1.167121,
+   "ppg_ratio": 1.642393
   },
   {
    "person_id": "NHL:8477931",
@@ -3238,11 +3238,11 @@
    "team": "FLA",
    "games": 21.0,
    "toi_per_game_s": 846.8571,
-   "points_per_game": 0.1905,
+   "points_per_game": 0.190476,
    "median_toi_per_game_s": 875.6905,
-   "median_points_per_game": 0.4307,
-   "toi_ratio": 0.9671,
-   "ppg_ratio": 0.4423
+   "median_points_per_game": 0.430662,
+   "toi_ratio": 0.967074,
+   "ppg_ratio": 0.442287
   },
   {
    "person_id": "SHL:qY9-1ihvHbrnB",
@@ -3252,12 +3252,12 @@
    "position": "F",
    "team": "IK Oskarshamn",
    "games": 44.0,
-   "toi_per_game_s": 713.4773,
-   "points_per_game": 0.2727,
+   "toi_per_game_s": 713.477273,
+   "points_per_game": 0.272727,
    "median_toi_per_game_s": 902.625,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.7904,
-   "ppg_ratio": 0.6061
+   "toi_ratio": 0.790447,
+   "ppg_ratio": 0.606061
   },
   {
    "person_id": "SHL:qZs-2kPAuIDNE",
@@ -3267,12 +3267,12 @@
    "position": "F",
    "team": "Luleå Hockey",
    "games": 30.0,
-   "toi_per_game_s": 421.8667,
-   "points_per_game": 0.1667,
+   "toi_per_game_s": 421.866667,
+   "points_per_game": 0.166667,
    "median_toi_per_game_s": 902.625,
    "median_points_per_game": 0.45,
-   "toi_ratio": 0.4674,
-   "ppg_ratio": 0.3704
+   "toi_ratio": 0.467378,
+   "ppg_ratio": 0.37037
   },
   {
    "person_id": "NHL:8478584",
@@ -3284,10 +3284,10 @@
    "games": 16.0,
    "toi_per_game_s": 973.8125,
    "points_per_game": 0.0625,
-   "median_toi_per_game_s": 1057.9808,
+   "median_toi_per_game_s": 1057.980769,
    "median_points_per_game": 0.24,
-   "toi_ratio": 0.9204,
-   "ppg_ratio": 0.2604
+   "toi_ratio": 0.920444,
+   "ppg_ratio": 0.260417
   },
   {
    "person_id": "SHL:qbK-5yI9RZHDn",
@@ -3297,12 +3297,12 @@
    "position": "D",
    "team": "Luleå Hockey",
    "games": 13.0,
-   "toi_per_game_s": 665.5385,
-   "points_per_game": 0.1538,
-   "median_toi_per_game_s": 1060.4466,
+   "toi_per_game_s": 665.538462,
+   "points_per_game": 0.153846,
+   "median_toi_per_game_s": 1060.446591,
    "median_points_per_game": 0.245,
-   "toi_ratio": 0.6276,
-   "ppg_ratio": 0.6279
+   "toi_ratio": 0.627602,
+   "ppg_ratio": 0.627943
   },
   {
    "person_id": "SHL:qZl-8ZODmzBUX",
@@ -3312,12 +3312,12 @@
    "position": "F",
    "team": "IK Oskarshamn",
    "games": 48.0,
-   "toi_per_game_s": 1010.1458,
-   "points_per_game": 0.6042,
-   "median_toi_per_game_s": 893.2955,
+   "toi_per_game_s": 1010.145833,
+   "points_per_game": 0.604167,
+   "median_toi_per_game_s": 893.295455,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.1308,
-   "ppg_ratio": 1.5104
+   "toi_ratio": 1.130808,
+   "ppg_ratio": 1.510417
   },
   {
    "person_id": "SHL:qZl-8qPqEcbu5",
@@ -3327,12 +3327,12 @@
    "position": "F",
    "team": "Frölunda HC",
    "games": 49.0,
-   "toi_per_game_s": 1028.6531,
-   "points_per_game": 0.9388,
-   "median_toi_per_game_s": 893.2955,
+   "toi_per_game_s": 1028.653061,
+   "points_per_game": 0.938776,
+   "median_toi_per_game_s": 893.295455,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.1515,
-   "ppg_ratio": 2.3469
+   "toi_ratio": 1.151526,
+   "ppg_ratio": 2.346939
   },
   {
    "person_id": "SHL:qQ9-02dd7wFpH",
@@ -3342,12 +3342,12 @@
    "position": "D",
    "team": "Örebro Hockey",
    "games": 49.0,
-   "toi_per_game_s": 1034.102,
-   "points_per_game": 0.2653,
-   "median_toi_per_game_s": 1060.4466,
+   "toi_per_game_s": 1034.102041,
+   "points_per_game": 0.265306,
+   "median_toi_per_game_s": 1060.446591,
    "median_points_per_game": 0.245,
-   "toi_ratio": 0.9752,
-   "ppg_ratio": 1.0829
+   "toi_ratio": 0.975157,
+   "ppg_ratio": 1.082882
   },
   {
    "person_id": "SHL:qbK-3rB6JiICw",
@@ -3357,12 +3357,12 @@
    "position": "F",
    "team": "Frölunda HC",
    "games": 14.0,
-   "toi_per_game_s": 929.7143,
-   "points_per_game": 0.7143,
-   "median_toi_per_game_s": 893.2955,
+   "toi_per_game_s": 929.714286,
+   "points_per_game": 0.714286,
+   "median_toi_per_game_s": 893.295455,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.0408,
-   "ppg_ratio": 1.7857
+   "toi_ratio": 1.040769,
+   "ppg_ratio": 1.785714
   },
   {
    "person_id": "SHL:qZs-2kPAuIDNE",
@@ -3373,11 +3373,11 @@
    "team": "Luleå Hockey",
    "games": 48.0,
    "toi_per_game_s": 380.625,
-   "points_per_game": 0.1667,
-   "median_toi_per_game_s": 893.2955,
+   "points_per_game": 0.166667,
+   "median_toi_per_game_s": 893.295455,
    "median_points_per_game": 0.4,
-   "toi_ratio": 0.4261,
-   "ppg_ratio": 0.4167
+   "toi_ratio": 0.426091,
+   "ppg_ratio": 0.416667
   },
   {
    "person_id": "SHL:qZm-71a1Att2a",
@@ -3387,12 +3387,12 @@
    "position": "F",
    "team": "Timrå IK",
    "games": 52.0,
-   "toi_per_game_s": 1215.3654,
-   "points_per_game": 0.7692,
-   "median_toi_per_game_s": 893.2955,
+   "toi_per_game_s": 1215.365385,
+   "points_per_game": 0.769231,
+   "median_toi_per_game_s": 893.295455,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.3605,
-   "ppg_ratio": 1.9231
+   "toi_ratio": 1.360541,
+   "ppg_ratio": 1.923077
   },
   {
    "person_id": "SHL:qZn-77CfMziWH",
@@ -3402,12 +3402,12 @@
    "position": "F",
    "team": "IK Oskarshamn",
    "games": 51.0,
-   "toi_per_game_s": 1054.549,
-   "points_per_game": 0.6078,
-   "median_toi_per_game_s": 893.2955,
+   "toi_per_game_s": 1054.54902,
+   "points_per_game": 0.607843,
+   "median_toi_per_game_s": 893.295455,
    "median_points_per_game": 0.4,
-   "toi_ratio": 1.1805,
-   "ppg_ratio": 1.5196
+   "toi_ratio": 1.180515,
+   "ppg_ratio": 1.519608
   },
   {
    "person_id": "NHL:8478584",
@@ -3417,12 +3417,12 @@
    "position": "D",
    "team": "Rögle BK",
    "games": 13.0,
-   "toi_per_game_s": 995.1538,
-   "points_per_game": 0.0769,
-   "median_toi_per_game_s": 1060.4466,
+   "toi_per_game_s": 995.153846,
+   "points_per_game": 0.076923,
+   "median_toi_per_game_s": 1060.446591,
    "median_points_per_game": 0.245,
-   "toi_ratio": 0.9384,
-   "ppg_ratio": 0.314
+   "toi_ratio": 0.938429,
+   "ppg_ratio": 0.313972
   },
   {
    "person_id": "SHL:qbN-3UDduN40O",
@@ -3435,9 +3435,9 @@
    "toi_per_game_s": 1356.16,
    "points_per_game": 0.62,
    "median_toi_per_game_s": 1099.0,
-   "median_points_per_game": 0.2692,
-   "toi_ratio": 1.234,
-   "ppg_ratio": 2.3029
+   "median_points_per_game": 0.269231,
+   "toi_ratio": 1.233995,
+   "ppg_ratio": 2.302857
   },
   {
    "person_id": "SHL:qbK-5yI9RZHDn",
@@ -3447,12 +3447,12 @@
    "position": "D",
    "team": "Luleå Hockey",
    "games": 52.0,
-   "toi_per_game_s": 481.5962,
-   "points_per_game": 0.1154,
+   "toi_per_game_s": 481.596154,
+   "points_per_game": 0.115385,
    "median_toi_per_game_s": 1099.0,
-   "median_points_per_game": 0.2692,
-   "toi_ratio": 0.4382,
-   "ppg_ratio": 0.4286
+   "median_points_per_game": 0.269231,
+   "toi_ratio": 0.438213,
+   "ppg_ratio": 0.428571
   },
   {
    "person_id": "SHL:qZl-8ZODmzBUX",
@@ -3462,11 +3462,11 @@
    "position": "F",
    "team": "IK Oskarshamn",
    "games": 45.0,
-   "toi_per_game_s": 1064.8222,
-   "points_per_game": 0.5778,
-   "median_toi_per_game_s": 919.4214,
-   "median_points_per_game": 0.4444,
-   "toi_ratio": 1.1581,
+   "toi_per_game_s": 1064.822222,
+   "points_per_game": 0.577778,
+   "median_toi_per_game_s": 919.421402,
+   "median_points_per_game": 0.444444,
+   "toi_ratio": 1.158144,
    "ppg_ratio": 1.3
   },
   {
@@ -3477,12 +3477,12 @@
    "position": "F",
    "team": "IK Oskarshamn",
    "games": 49.0,
-   "toi_per_game_s": 1150.1633,
-   "points_per_game": 0.8776,
-   "median_toi_per_game_s": 919.4214,
-   "median_points_per_game": 0.4444,
-   "toi_ratio": 1.251,
-   "ppg_ratio": 1.9745
+   "toi_per_game_s": 1150.163265,
+   "points_per_game": 0.877551,
+   "median_toi_per_game_s": 919.421402,
+   "median_points_per_game": 0.444444,
+   "toi_ratio": 1.250964,
+   "ppg_ratio": 1.97449
   },
   {
    "person_id": "SHL:qbK-3rB6JiICw",
@@ -3492,12 +3492,12 @@
    "position": "F",
    "team": "Frölunda HC",
    "games": 53.0,
-   "toi_per_game_s": 911.6415,
-   "points_per_game": 0.4528,
-   "median_toi_per_game_s": 919.4214,
-   "median_points_per_game": 0.4444,
-   "toi_ratio": 0.9915,
-   "ppg_ratio": 1.0189
+   "toi_per_game_s": 911.641509,
+   "points_per_game": 0.45283,
+   "median_toi_per_game_s": 919.421402,
+   "median_points_per_game": 0.444444,
+   "toi_ratio": 0.991538,
+   "ppg_ratio": 1.018868
   },
   {
    "person_id": "SHL:qZs-2kPAuIDNE",
@@ -3508,11 +3508,11 @@
    "team": "Luleå Hockey",
    "games": 44.0,
    "toi_per_game_s": 211.75,
-   "points_per_game": 0.0455,
-   "median_toi_per_game_s": 919.4214,
-   "median_points_per_game": 0.4444,
-   "toi_ratio": 0.2303,
-   "ppg_ratio": 0.1023
+   "points_per_game": 0.045455,
+   "median_toi_per_game_s": 919.421402,
+   "median_points_per_game": 0.444444,
+   "toi_ratio": 0.230308,
+   "ppg_ratio": 0.102273
   },
   {
    "person_id": "SHL:qZm-71a1Att2a",
@@ -3522,12 +3522,12 @@
    "position": "F",
    "team": "Timrå IK",
    "games": 46.0,
-   "toi_per_game_s": 1124.7391,
-   "points_per_game": 0.6522,
-   "median_toi_per_game_s": 919.4214,
-   "median_points_per_game": 0.4444,
-   "toi_ratio": 1.2233,
-   "ppg_ratio": 1.4674
+   "toi_per_game_s": 1124.73913,
+   "points_per_game": 0.652174,
+   "median_toi_per_game_s": 919.421402,
+   "median_points_per_game": 0.444444,
+   "toi_ratio": 1.223312,
+   "ppg_ratio": 1.467391
   },
   {
    "person_id": "NHL:8478584",
@@ -3538,11 +3538,11 @@
    "team": "Rögle BK",
    "games": 49.0,
    "toi_per_game_s": 1099.0,
-   "points_per_game": 0.2653,
+   "points_per_game": 0.265306,
    "median_toi_per_game_s": 1099.0,
-   "median_points_per_game": 0.2692,
+   "median_points_per_game": 0.269231,
    "toi_ratio": 1.0,
-   "ppg_ratio": 0.9854
+   "ppg_ratio": 0.985423
   },
   {
    "person_id": "NHL:8485493",
@@ -3553,10 +3553,10 @@
    "team": "Färjestad BK",
    "games": 52.0,
    "toi_per_game_s": 1034.5,
-   "points_per_game": 0.8654,
-   "median_toi_per_game_s": 916.8077,
-   "median_points_per_game": 0.3846,
-   "toi_ratio": 1.1284,
+   "points_per_game": 0.865385,
+   "median_toi_per_game_s": 916.807692,
+   "median_points_per_game": 0.384615,
+   "toi_ratio": 1.128372,
    "ppg_ratio": 2.25
   },
   {
@@ -3568,11 +3568,11 @@
    "team": "IK Oskarshamn",
    "games": 48.0,
    "toi_per_game_s": 934.5625,
-   "points_per_game": 0.2708,
-   "median_toi_per_game_s": 916.8077,
-   "median_points_per_game": 0.3846,
-   "toi_ratio": 1.0194,
-   "ppg_ratio": 0.7042
+   "points_per_game": 0.270833,
+   "median_toi_per_game_s": 916.807692,
+   "median_points_per_game": 0.384615,
+   "toi_ratio": 1.019366,
+   "ppg_ratio": 0.704167
   },
   {
    "person_id": "NHL:8480231",
@@ -3582,12 +3582,12 @@
    "position": "D",
    "team": "Malmö Redhawks",
    "games": 45.0,
-   "toi_per_game_s": 987.0667,
-   "points_per_game": 0.2889,
-   "median_toi_per_game_s": 1078.9762,
-   "median_points_per_game": 0.2722,
-   "toi_ratio": 0.9148,
-   "ppg_ratio": 1.0614
+   "toi_per_game_s": 987.066667,
+   "points_per_game": 0.288889,
+   "median_toi_per_game_s": 1078.976244,
+   "median_points_per_game": 0.272188,
+   "toi_ratio": 0.914818,
+   "ppg_ratio": 1.061358
   },
   {
    "person_id": "SHL:qcw-3Qb8CMpfh",
@@ -3598,11 +3598,11 @@
    "team": "IK Oskarshamn",
    "games": 49.0,
    "toi_per_game_s": 1286.0,
-   "points_per_game": 0.5714,
-   "median_toi_per_game_s": 916.8077,
-   "median_points_per_game": 0.3846,
-   "toi_ratio": 1.4027,
-   "ppg_ratio": 1.4857
+   "points_per_game": 0.571429,
+   "median_toi_per_game_s": 916.807692,
+   "median_points_per_game": 0.384615,
+   "toi_ratio": 1.402693,
+   "ppg_ratio": 1.485714
   },
   {
    "person_id": "SHL:qbK-3rB6JiICw",
@@ -3612,11 +3612,11 @@
    "position": "F",
    "team": "HV71",
    "games": 52.0,
-   "toi_per_game_s": 1019.8077,
-   "points_per_game": 0.4808,
-   "median_toi_per_game_s": 916.8077,
-   "median_points_per_game": 0.3846,
-   "toi_ratio": 1.1123,
+   "toi_per_game_s": 1019.807692,
+   "points_per_game": 0.480769,
+   "median_toi_per_game_s": 916.807692,
+   "median_points_per_game": 0.384615,
+   "toi_ratio": 1.112346,
    "ppg_ratio": 1.25
   },
   {
@@ -3627,11 +3627,11 @@
    "position": "F",
    "team": "Timrå IK",
    "games": 52.0,
-   "toi_per_game_s": 1112.8077,
-   "points_per_game": 0.6346,
-   "median_toi_per_game_s": 916.8077,
-   "median_points_per_game": 0.3846,
-   "toi_ratio": 1.2138,
+   "toi_per_game_s": 1112.807692,
+   "points_per_game": 0.634615,
+   "median_toi_per_game_s": 916.807692,
+   "median_points_per_game": 0.384615,
+   "toi_ratio": 1.213785,
    "ppg_ratio": 1.65
   },
   {
@@ -3642,12 +3642,12 @@
    "position": "F",
    "team": "Färjestad BK",
    "games": 47.0,
-   "toi_per_game_s": 1070.7021,
-   "points_per_game": 1.2128,
-   "median_toi_per_game_s": 906.8077,
-   "median_points_per_game": 0.3871,
-   "toi_ratio": 1.1807,
-   "ppg_ratio": 3.133
+   "toi_per_game_s": 1070.702128,
+   "points_per_game": 1.212766,
+   "median_toi_per_game_s": 906.807692,
+   "median_points_per_game": 0.387097,
+   "toi_ratio": 1.180738,
+   "ppg_ratio": 3.132979
   },
   {
    "person_id": "NHL:8480231",
@@ -3657,12 +3657,12 @@
    "position": "D",
    "team": "Malmö Redhawks",
    "games": 45.0,
-   "toi_per_game_s": 1179.7556,
-   "points_per_game": 0.4889,
-   "median_toi_per_game_s": 1097.4667,
+   "toi_per_game_s": 1179.755556,
+   "points_per_game": 0.488889,
+   "median_toi_per_game_s": 1097.466667,
    "median_points_per_game": 0.25,
-   "toi_ratio": 1.075,
-   "ppg_ratio": 1.9556
+   "toi_ratio": 1.074981,
+   "ppg_ratio": 1.955556
   },
   {
    "person_id": "SHL:qcw-3Qb8CMpfh",
@@ -3672,12 +3672,12 @@
    "position": "F",
    "team": "MoDo Hockey",
    "games": 52.0,
-   "toi_per_game_s": 1146.2692,
-   "points_per_game": 0.3462,
-   "median_toi_per_game_s": 906.8077,
-   "median_points_per_game": 0.3871,
-   "toi_ratio": 1.2641,
-   "ppg_ratio": 0.8942
+   "toi_per_game_s": 1146.269231,
+   "points_per_game": 0.346154,
+   "median_toi_per_game_s": 906.807692,
+   "median_points_per_game": 0.387097,
+   "toi_ratio": 1.264071,
+   "ppg_ratio": 0.894231
   },
   {
    "person_id": "SHL:qbK-3rB6JiICw",
@@ -3687,12 +3687,12 @@
    "position": "F",
    "team": "HV71",
    "games": 51.0,
-   "toi_per_game_s": 874.1176,
-   "points_per_game": 0.4118,
-   "median_toi_per_game_s": 906.8077,
-   "median_points_per_game": 0.3871,
-   "toi_ratio": 0.964,
-   "ppg_ratio": 1.0637
+   "toi_per_game_s": 874.117647,
+   "points_per_game": 0.411765,
+   "median_toi_per_game_s": 906.807692,
+   "median_points_per_game": 0.387097,
+   "toi_ratio": 0.96395,
+   "ppg_ratio": 1.063725
   },
   {
    "person_id": "SHL:qZm-71a1Att2a",
@@ -3702,12 +3702,12 @@
    "position": "F",
    "team": "Malmö Redhawks",
    "games": 48.0,
-   "toi_per_game_s": 1085.9167,
-   "points_per_game": 0.4792,
-   "median_toi_per_game_s": 906.8077,
-   "median_points_per_game": 0.3871,
-   "toi_ratio": 1.1975,
-   "ppg_ratio": 1.2378
+   "toi_per_game_s": 1085.916667,
+   "points_per_game": 0.479167,
+   "median_toi_per_game_s": 906.807692,
+   "median_points_per_game": 0.387097,
+   "toi_ratio": 1.197516,
+   "ppg_ratio": 1.237847
   },
   {
    "person_id": "NHL:8485493",
@@ -3717,12 +3717,12 @@
    "position": "F",
    "team": "Färjestad BK",
    "games": 19.0,
-   "toi_per_game_s": 1173.5263,
+   "toi_per_game_s": 1173.526316,
    "points_per_game": 1.0,
-   "median_toi_per_game_s": 892.5714,
+   "median_toi_per_game_s": 892.571429,
    "median_points_per_game": 0.375,
-   "toi_ratio": 1.3148,
-   "ppg_ratio": 2.6667
+   "toi_ratio": 1.31477,
+   "ppg_ratio": 2.666667
   },
   {
    "person_id": "NHL:8477944",
@@ -3732,12 +3732,12 @@
    "position": "F",
    "team": "Linköping HC",
    "games": 46.0,
-   "toi_per_game_s": 930.6304,
-   "points_per_game": 0.6087,
-   "median_toi_per_game_s": 892.5714,
+   "toi_per_game_s": 930.630435,
+   "points_per_game": 0.608696,
+   "median_toi_per_game_s": 892.571429,
    "median_points_per_game": 0.375,
-   "toi_ratio": 1.0426,
-   "ppg_ratio": 1.6232
+   "toi_ratio": 1.04264,
+   "ppg_ratio": 1.623188
   },
   {
    "person_id": "SHL:kcotty8qn8",
@@ -3747,12 +3747,12 @@
    "position": "F",
    "team": "Rögle BK",
    "games": 46.0,
-   "toi_per_game_s": 959.8043,
-   "points_per_game": 0.4783,
-   "median_toi_per_game_s": 892.5714,
+   "toi_per_game_s": 959.804348,
+   "points_per_game": 0.478261,
+   "median_toi_per_game_s": 892.571429,
    "median_points_per_game": 0.375,
-   "toi_ratio": 1.0753,
-   "ppg_ratio": 1.2754
+   "toi_ratio": 1.075325,
+   "ppg_ratio": 1.275362
   },
   {
    "person_id": "NHL:8481751",
@@ -3762,12 +3762,12 @@
    "position": "F",
    "team": "HV71",
    "games": 52.0,
-   "toi_per_game_s": 1093.3846,
-   "points_per_game": 0.5962,
-   "median_toi_per_game_s": 892.5714,
+   "toi_per_game_s": 1093.384615,
+   "points_per_game": 0.596154,
+   "median_toi_per_game_s": 892.571429,
    "median_points_per_game": 0.375,
-   "toi_ratio": 1.225,
-   "ppg_ratio": 1.5897
+   "toi_ratio": 1.224983,
+   "ppg_ratio": 1.589744
   },
   {
    "person_id": "NHL:8479482",
@@ -3777,12 +3777,12 @@
    "position": "D",
    "team": "Brynäs IF",
    "games": 39.0,
-   "toi_per_game_s": 1144.1795,
-   "points_per_game": 0.3846,
-   "median_toi_per_game_s": 1100.8077,
+   "toi_per_game_s": 1144.179487,
+   "points_per_game": 0.384615,
+   "median_toi_per_game_s": 1100.807692,
    "median_points_per_game": 0.25,
    "toi_ratio": 1.0394,
-   "ppg_ratio": 1.5385
+   "ppg_ratio": 1.538462
   },
   {
    "person_id": "NHL:8482241",
@@ -3792,12 +3792,12 @@
    "position": "F",
    "team": "Färjestad BK",
    "games": 47.0,
-   "toi_per_game_s": 1008.0851,
-   "points_per_game": 0.5745,
-   "median_toi_per_game_s": 892.5714,
+   "toi_per_game_s": 1008.085106,
+   "points_per_game": 0.574468,
+   "median_toi_per_game_s": 892.571429,
    "median_points_per_game": 0.375,
-   "toi_ratio": 1.1294,
-   "ppg_ratio": 1.5319
+   "toi_ratio": 1.129417,
+   "ppg_ratio": 1.531915
   },
   {
    "person_id": "SHL:qZm-71a1Att2a",
@@ -3807,12 +3807,12 @@
    "position": "F",
    "team": "Malmö Redhawks",
    "games": 39.0,
-   "toi_per_game_s": 999.6923,
-   "points_per_game": 0.6667,
-   "median_toi_per_game_s": 892.5714,
+   "toi_per_game_s": 999.692308,
+   "points_per_game": 0.666667,
+   "median_toi_per_game_s": 892.571429,
    "median_points_per_game": 0.375,
-   "toi_ratio": 1.12,
-   "ppg_ratio": 1.7778
+   "toi_ratio": 1.120014,
+   "ppg_ratio": 1.777778
   },
   {
    "person_id": "SHL:qipegv31qs",
@@ -3822,12 +3822,12 @@
    "position": "D",
    "team": "Färjestad BK",
    "games": 33.0,
-   "toi_per_game_s": 984.0303,
-   "points_per_game": 0.1212,
-   "median_toi_per_game_s": 1100.8077,
+   "toi_per_game_s": 984.030303,
+   "points_per_game": 0.121212,
+   "median_toi_per_game_s": 1100.807692,
    "median_points_per_game": 0.25,
-   "toi_ratio": 0.8939,
-   "ppg_ratio": 0.4848
+   "toi_ratio": 0.893917,
+   "ppg_ratio": 0.484848
   }
  ],
  "nhl_series": {
@@ -3866,24 +3866,24 @@
     {
      "player_seasons": 28,
      "players": 28,
-     "median_toi_ratio": 1.0132,
-     "median_ppg_ratio": 1.1353,
+     "median_toi_ratio": 1.013227,
+     "median_ppg_ratio": 1.135344,
      "share_above_median_toi": 0.5,
-     "share_above_median_ppg": 0.6786
+     "share_above_median_ppg": 0.678571
     },
     {
      "player_seasons": 36,
      "players": 36,
-     "median_toi_ratio": 1.0993,
-     "median_ppg_ratio": 1.3897,
-     "share_above_median_toi": 0.6389,
+     "median_toi_ratio": 1.09931,
+     "median_ppg_ratio": 1.389655,
+     "share_above_median_toi": 0.638889,
      "share_above_median_ppg": 0.75
     },
     {
      "player_seasons": 40,
      "players": 40,
-     "median_toi_ratio": 1.0953,
-     "median_ppg_ratio": 1.4796,
+     "median_toi_ratio": 1.095348,
+     "median_ppg_ratio": 1.479584,
      "share_above_median_toi": 0.725,
      "share_above_median_ppg": 0.75
     },
@@ -3891,653 +3891,653 @@
      "player_seasons": 48,
      "players": 48,
      "median_toi_ratio": 1.0645,
-     "median_ppg_ratio": 1.3378,
-     "share_above_median_toi": 0.6458,
-     "share_above_median_ppg": 0.6667
+     "median_ppg_ratio": 1.337791,
+     "share_above_median_toi": 0.645833,
+     "share_above_median_ppg": 0.666667
     },
     {
      "player_seasons": 53,
      "players": 53,
-     "median_toi_ratio": 1.0547,
-     "median_ppg_ratio": 1.1893,
-     "share_above_median_toi": 0.6415,
-     "share_above_median_ppg": 0.6604
+     "median_toi_ratio": 1.054668,
+     "median_ppg_ratio": 1.189335,
+     "share_above_median_toi": 0.641509,
+     "share_above_median_ppg": 0.660377
     },
     {
      "player_seasons": 53,
      "players": 53,
-     "median_toi_ratio": 1.0917,
-     "median_ppg_ratio": 1.2295,
-     "share_above_median_toi": 0.6415,
-     "share_above_median_ppg": 0.717
+     "median_toi_ratio": 1.091693,
+     "median_ppg_ratio": 1.229508,
+     "share_above_median_toi": 0.641509,
+     "share_above_median_ppg": 0.716981
     },
     {
      "player_seasons": 51,
      "players": 51,
-     "median_toi_ratio": 1.0854,
-     "median_ppg_ratio": 1.3252,
-     "share_above_median_toi": 0.6275,
-     "share_above_median_ppg": 0.7255
+     "median_toi_ratio": 1.08542,
+     "median_ppg_ratio": 1.325158,
+     "share_above_median_toi": 0.627451,
+     "share_above_median_ppg": 0.72549
     },
     {
      "player_seasons": 49,
      "players": 49,
-     "median_toi_ratio": 1.0931,
-     "median_ppg_ratio": 1.3939,
-     "share_above_median_toi": 0.7347,
-     "share_above_median_ppg": 0.6531
+     "median_toi_ratio": 1.093081,
+     "median_ppg_ratio": 1.393939,
+     "share_above_median_toi": 0.734694,
+     "share_above_median_ppg": 0.653061
     },
     {
      "player_seasons": 50,
      "players": 50,
-     "median_toi_ratio": 1.0727,
-     "median_ppg_ratio": 1.2654,
+     "median_toi_ratio": 1.072687,
+     "median_ppg_ratio": 1.265361,
      "share_above_median_toi": 0.66,
      "share_above_median_ppg": 0.64
     },
     {
      "player_seasons": 51,
      "players": 51,
-     "median_toi_ratio": 1.1028,
-     "median_ppg_ratio": 1.1414,
-     "share_above_median_toi": 0.7647,
-     "share_above_median_ppg": 0.6275
+     "median_toi_ratio": 1.102849,
+     "median_ppg_ratio": 1.141369,
+     "share_above_median_toi": 0.764706,
+     "share_above_median_ppg": 0.627451
     },
     {
      "player_seasons": 45,
      "players": 45,
-     "median_toi_ratio": 1.0953,
-     "median_ppg_ratio": 1.1668,
-     "share_above_median_toi": 0.6444,
-     "share_above_median_ppg": 0.6444
+     "median_toi_ratio": 1.09534,
+     "median_ppg_ratio": 1.166846,
+     "share_above_median_toi": 0.644444,
+     "share_above_median_ppg": 0.644444
     },
     {
      "player_seasons": 37,
      "players": 37,
-     "median_toi_ratio": 1.1073,
-     "median_ppg_ratio": 1.2308,
-     "share_above_median_toi": 0.7568,
-     "share_above_median_ppg": 0.6486
+     "median_toi_ratio": 1.107331,
+     "median_ppg_ratio": 1.230769,
+     "share_above_median_toi": 0.756757,
+     "share_above_median_ppg": 0.648649
     },
     {
      "player_seasons": 37,
      "players": 37,
-     "median_toi_ratio": 1.0725,
-     "median_ppg_ratio": 1.1695,
-     "share_above_median_toi": 0.7027,
-     "share_above_median_ppg": 0.7027
+     "median_toi_ratio": 1.072545,
+     "median_ppg_ratio": 1.169492,
+     "share_above_median_toi": 0.702703,
+     "share_above_median_ppg": 0.702703
     },
     {
      "player_seasons": 35,
      "players": 35,
-     "median_toi_ratio": 1.0876,
-     "median_ppg_ratio": 1.3651,
-     "share_above_median_toi": 0.7429,
+     "median_toi_ratio": 1.087646,
+     "median_ppg_ratio": 1.365079,
+     "share_above_median_toi": 0.742857,
      "share_above_median_ppg": 0.6
     },
     {
      "player_seasons": 35,
      "players": 35,
-     "median_toi_ratio": 1.0549,
-     "median_ppg_ratio": 1.1725,
+     "median_toi_ratio": 1.054943,
+     "median_ppg_ratio": 1.172495,
      "share_above_median_toi": 0.6,
      "share_above_median_ppg": 0.6
     },
     {
      "player_seasons": 29,
      "players": 29,
-     "median_toi_ratio": 1.1213,
-     "median_ppg_ratio": 1.232,
-     "share_above_median_toi": 0.6897,
-     "share_above_median_ppg": 0.6897
+     "median_toi_ratio": 1.121308,
+     "median_ppg_ratio": 1.232007,
+     "share_above_median_toi": 0.689655,
+     "share_above_median_ppg": 0.689655
     },
     {
      "player_seasons": 31,
      "players": 31,
-     "median_toi_ratio": 1.0684,
-     "median_ppg_ratio": 1.0365,
-     "share_above_median_toi": 0.6129,
-     "share_above_median_ppg": 0.5484
+     "median_toi_ratio": 1.068364,
+     "median_ppg_ratio": 1.036475,
+     "share_above_median_toi": 0.612903,
+     "share_above_median_ppg": 0.548387
     },
     {
      "player_seasons": 29,
      "players": 29,
-     "median_toi_ratio": 0.994,
-     "median_ppg_ratio": 1.0997,
-     "share_above_median_toi": 0.4483,
-     "share_above_median_ppg": 0.5517
+     "median_toi_ratio": 0.994021,
+     "median_ppg_ratio": 1.099663,
+     "share_above_median_toi": 0.448276,
+     "share_above_median_ppg": 0.551724
     },
     {
      "player_seasons": 23,
      "players": 23,
-     "median_toi_ratio": 1.0059,
-     "median_ppg_ratio": 0.9231,
-     "share_above_median_toi": 0.5217,
-     "share_above_median_ppg": 0.4783
+     "median_toi_ratio": 1.005941,
+     "median_ppg_ratio": 0.923077,
+     "share_above_median_toi": 0.521739,
+     "share_above_median_ppg": 0.478261
     },
     {
      "player_seasons": 28,
      "players": 28,
-     "median_toi_ratio": 0.9139,
-     "median_ppg_ratio": 0.8618,
-     "share_above_median_toi": 0.3571,
-     "share_above_median_ppg": 0.2857
+     "median_toi_ratio": 0.913909,
+     "median_ppg_ratio": 0.861779,
+     "share_above_median_toi": 0.357143,
+     "share_above_median_ppg": 0.285714
     },
     {
      "player_seasons": 25,
      "players": 25,
-     "median_toi_ratio": 0.9687,
-     "median_ppg_ratio": 0.9859,
+     "median_toi_ratio": 0.968744,
+     "median_ppg_ratio": 0.985915,
      "share_above_median_toi": 0.44,
      "share_above_median_ppg": 0.44
     },
     {
      "player_seasons": 26,
      "players": 26,
-     "median_toi_ratio": 0.9887,
-     "median_ppg_ratio": 1.1036,
-     "share_above_median_toi": 0.4615,
-     "share_above_median_ppg": 0.5385
+     "median_toi_ratio": 0.98873,
+     "median_ppg_ratio": 1.103631,
+     "share_above_median_toi": 0.461538,
+     "share_above_median_ppg": 0.538462
     },
     {
      "player_seasons": 20,
      "players": 20,
-     "median_toi_ratio": 1.0923,
-     "median_ppg_ratio": 1.4887,
+     "median_toi_ratio": 1.09231,
+     "median_ppg_ratio": 1.488662,
      "share_above_median_toi": 0.6,
      "share_above_median_ppg": 0.6
     },
     {
      "player_seasons": 20,
      "players": 20,
-     "median_toi_ratio": 1.0082,
-     "median_ppg_ratio": 0.9082,
+     "median_toi_ratio": 1.008197,
+     "median_ppg_ratio": 0.908186,
      "share_above_median_toi": 0.5,
      "share_above_median_ppg": 0.45
     },
     {
      "player_seasons": 21,
      "players": 21,
-     "median_toi_ratio": 0.9735,
-     "median_ppg_ratio": 0.8823,
-     "share_above_median_toi": 0.381,
-     "share_above_median_ppg": 0.4762
+     "median_toi_ratio": 0.973497,
+     "median_ppg_ratio": 0.88231,
+     "share_above_median_toi": 0.380952,
+     "share_above_median_ppg": 0.47619
     },
     {
      "player_seasons": 19,
      "players": 19,
-     "median_toi_ratio": 0.9108,
-     "median_ppg_ratio": 0.7647,
-     "share_above_median_toi": 0.4211,
-     "share_above_median_ppg": 0.4211
+     "median_toi_ratio": 0.910757,
+     "median_ppg_ratio": 0.764731,
+     "share_above_median_toi": 0.421053,
+     "share_above_median_ppg": 0.421053
     },
     {
      "player_seasons": 17,
      "players": 17,
-     "median_toi_ratio": 0.9278,
-     "median_ppg_ratio": 0.8499,
-     "share_above_median_toi": 0.4118,
-     "share_above_median_ppg": 0.3529
+     "median_toi_ratio": 0.927801,
+     "median_ppg_ratio": 0.849881,
+     "share_above_median_toi": 0.411765,
+     "share_above_median_ppg": 0.352941
     },
     {
      "player_seasons": 14,
      "players": 14,
-     "median_toi_ratio": 0.9227,
-     "median_ppg_ratio": 0.6048,
-     "share_above_median_toi": 0.4286,
-     "share_above_median_ppg": 0.3571
+     "median_toi_ratio": 0.922726,
+     "median_ppg_ratio": 0.604826,
+     "share_above_median_toi": 0.428571,
+     "share_above_median_ppg": 0.357143
     }
    ],
    "FIN": [
     {
      "player_seasons": 14,
      "players": 14,
-     "median_toi_ratio": 1.2011,
-     "median_ppg_ratio": 1.5596,
-     "share_above_median_toi": 0.7143,
-     "share_above_median_ppg": 0.6429
+     "median_toi_ratio": 1.201145,
+     "median_ppg_ratio": 1.559556,
+     "share_above_median_toi": 0.714286,
+     "share_above_median_ppg": 0.642857
     },
     {
      "player_seasons": 14,
      "players": 14,
-     "median_toi_ratio": 1.1689,
-     "median_ppg_ratio": 1.6443,
-     "share_above_median_toi": 0.7143,
-     "share_above_median_ppg": 0.7143
+     "median_toi_ratio": 1.168922,
+     "median_ppg_ratio": 1.64431,
+     "share_above_median_toi": 0.714286,
+     "share_above_median_ppg": 0.714286
     },
     {
      "player_seasons": 21,
      "players": 21,
-     "median_toi_ratio": 1.0168,
-     "median_ppg_ratio": 1.1102,
-     "share_above_median_toi": 0.5714,
-     "share_above_median_ppg": 0.5238
+     "median_toi_ratio": 1.016801,
+     "median_ppg_ratio": 1.110204,
+     "share_above_median_toi": 0.571429,
+     "share_above_median_ppg": 0.52381
     },
     {
      "player_seasons": 28,
      "players": 28,
-     "median_toi_ratio": 1.0002,
-     "median_ppg_ratio": 1.0369,
+     "median_toi_ratio": 1.000163,
+     "median_ppg_ratio": 1.036863,
      "share_above_median_toi": 0.5,
      "share_above_median_ppg": 0.5
     },
     {
      "player_seasons": 26,
      "players": 26,
-     "median_toi_ratio": 0.988,
-     "median_ppg_ratio": 0.9446,
+     "median_toi_ratio": 0.987961,
+     "median_ppg_ratio": 0.944602,
      "share_above_median_toi": 0.5,
-     "share_above_median_ppg": 0.4615
+     "share_above_median_ppg": 0.461538
     },
     {
      "player_seasons": 24,
      "players": 24,
-     "median_toi_ratio": 1.0323,
-     "median_ppg_ratio": 1.0617,
-     "share_above_median_toi": 0.5417,
-     "share_above_median_ppg": 0.5833
+     "median_toi_ratio": 1.032307,
+     "median_ppg_ratio": 1.061672,
+     "share_above_median_toi": 0.541667,
+     "share_above_median_ppg": 0.583333
     },
     {
      "player_seasons": 23,
      "players": 23,
-     "median_toi_ratio": 1.0891,
-     "median_ppg_ratio": 1.0266,
-     "share_above_median_toi": 0.5652,
-     "share_above_median_ppg": 0.5217
+     "median_toi_ratio": 1.089066,
+     "median_ppg_ratio": 1.026605,
+     "share_above_median_toi": 0.565217,
+     "share_above_median_ppg": 0.521739
     },
     {
      "player_seasons": 24,
      "players": 24,
-     "median_toi_ratio": 1.0067,
-     "median_ppg_ratio": 0.9621,
+     "median_toi_ratio": 1.006689,
+     "median_ppg_ratio": 0.962081,
      "share_above_median_toi": 0.5,
-     "share_above_median_ppg": 0.4167
+     "share_above_median_ppg": 0.416667
     },
     {
      "player_seasons": 27,
      "players": 27,
-     "median_toi_ratio": 1.0514,
-     "median_ppg_ratio": 1.0699,
-     "share_above_median_toi": 0.5185,
-     "share_above_median_ppg": 0.5185
+     "median_toi_ratio": 1.051398,
+     "median_ppg_ratio": 1.069919,
+     "share_above_median_toi": 0.518519,
+     "share_above_median_ppg": 0.518519
     },
     {
      "player_seasons": 23,
      "players": 23,
-     "median_toi_ratio": 1.0863,
+     "median_toi_ratio": 1.086326,
      "median_ppg_ratio": 1.3,
-     "share_above_median_toi": 0.5652,
-     "share_above_median_ppg": 0.6957
+     "share_above_median_toi": 0.565217,
+     "share_above_median_ppg": 0.695652
     },
     {
      "player_seasons": 25,
      "players": 25,
-     "median_toi_ratio": 1.0268,
-     "median_ppg_ratio": 1.1383,
+     "median_toi_ratio": 1.026827,
+     "median_ppg_ratio": 1.138282,
      "share_above_median_toi": 0.6,
      "share_above_median_ppg": 0.6
     },
     {
      "player_seasons": 23,
      "players": 23,
-     "median_toi_ratio": 1.0504,
-     "median_ppg_ratio": 1.2864,
-     "share_above_median_toi": 0.5652,
-     "share_above_median_ppg": 0.5652
+     "median_toi_ratio": 1.050415,
+     "median_ppg_ratio": 1.286431,
+     "share_above_median_toi": 0.565217,
+     "share_above_median_ppg": 0.565217
     },
     {
      "player_seasons": 20,
      "players": 20,
-     "median_toi_ratio": 1.1185,
-     "median_ppg_ratio": 1.352,
+     "median_toi_ratio": 1.118548,
+     "median_ppg_ratio": 1.351977,
      "share_above_median_toi": 0.7,
      "share_above_median_ppg": 0.7
     },
     {
      "player_seasons": 19,
      "players": 19,
-     "median_toi_ratio": 1.116,
-     "median_ppg_ratio": 1.2729,
-     "share_above_median_toi": 0.6842,
-     "share_above_median_ppg": 0.5789
+     "median_toi_ratio": 1.116022,
+     "median_ppg_ratio": 1.272947,
+     "share_above_median_toi": 0.684211,
+     "share_above_median_ppg": 0.578947
     },
     {
      "player_seasons": 17,
      "players": 17,
-     "median_toi_ratio": 1.0542,
-     "median_ppg_ratio": 1.0803,
-     "share_above_median_toi": 0.7059,
-     "share_above_median_ppg": 0.5294
+     "median_toi_ratio": 1.054196,
+     "median_ppg_ratio": 1.080347,
+     "share_above_median_toi": 0.705882,
+     "share_above_median_ppg": 0.529412
     },
     {
      "player_seasons": 19,
      "players": 19,
-     "median_toi_ratio": 1.0121,
-     "median_ppg_ratio": 1.0843,
-     "share_above_median_toi": 0.5263,
-     "share_above_median_ppg": 0.6316
+     "median_toi_ratio": 1.01205,
+     "median_ppg_ratio": 1.084273,
+     "share_above_median_toi": 0.526316,
+     "share_above_median_ppg": 0.631579
     },
     {
      "player_seasons": 21,
      "players": 21,
-     "median_toi_ratio": 1.0072,
-     "median_ppg_ratio": 0.9231,
-     "share_above_median_toi": 0.5238,
-     "share_above_median_ppg": 0.4762
+     "median_toi_ratio": 1.007174,
+     "median_ppg_ratio": 0.92311,
+     "share_above_median_toi": 0.52381,
+     "share_above_median_ppg": 0.47619
     },
     {
      "player_seasons": 22,
      "players": 22,
-     "median_toi_ratio": 1.0106,
-     "median_ppg_ratio": 1.1533,
+     "median_toi_ratio": 1.010598,
+     "median_ppg_ratio": 1.15329,
      "share_above_median_toi": 0.5,
-     "share_above_median_ppg": 0.5909
+     "share_above_median_ppg": 0.590909
     },
     {
      "player_seasons": 24,
      "players": 24,
-     "median_toi_ratio": 1.135,
-     "median_ppg_ratio": 1.0272,
-     "share_above_median_toi": 0.6667,
-     "share_above_median_ppg": 0.5833
+     "median_toi_ratio": 1.135006,
+     "median_ppg_ratio": 1.027219,
+     "share_above_median_toi": 0.666667,
+     "share_above_median_ppg": 0.583333
     },
     {
      "player_seasons": 27,
      "players": 27,
-     "median_toi_ratio": 1.1037,
-     "median_ppg_ratio": 1.1693,
-     "share_above_median_toi": 0.5926,
-     "share_above_median_ppg": 0.5185
+     "median_toi_ratio": 1.103712,
+     "median_ppg_ratio": 1.16934,
+     "share_above_median_toi": 0.592593,
+     "share_above_median_ppg": 0.518519
     },
     {
      "player_seasons": 35,
      "players": 35,
      "median_toi_ratio": 0.9814,
-     "median_ppg_ratio": 0.9987,
-     "share_above_median_toi": 0.4571,
-     "share_above_median_ppg": 0.4857
+     "median_ppg_ratio": 0.998748,
+     "share_above_median_toi": 0.457143,
+     "share_above_median_ppg": 0.485714
     },
     {
      "player_seasons": 28,
      "players": 28,
-     "median_toi_ratio": 1.0862,
-     "median_ppg_ratio": 1.1879,
-     "share_above_median_toi": 0.6429,
-     "share_above_median_ppg": 0.5714
+     "median_toi_ratio": 1.086203,
+     "median_ppg_ratio": 1.187884,
+     "share_above_median_toi": 0.642857,
+     "share_above_median_ppg": 0.571429
     },
     {
      "player_seasons": 35,
      "players": 35,
-     "median_toi_ratio": 0.994,
-     "median_ppg_ratio": 1.0196,
-     "share_above_median_toi": 0.4571,
-     "share_above_median_ppg": 0.5143
+     "median_toi_ratio": 0.993978,
+     "median_ppg_ratio": 1.019608,
+     "share_above_median_toi": 0.457143,
+     "share_above_median_ppg": 0.514286
     },
     {
      "player_seasons": 35,
      "players": 35,
-     "median_toi_ratio": 1.0157,
-     "median_ppg_ratio": 0.8514,
-     "share_above_median_toi": 0.5143,
-     "share_above_median_ppg": 0.4571
+     "median_toi_ratio": 1.015725,
+     "median_ppg_ratio": 0.851361,
+     "share_above_median_toi": 0.514286,
+     "share_above_median_ppg": 0.457143
     },
     {
      "player_seasons": 33,
      "players": 33,
-     "median_toi_ratio": 1.0082,
-     "median_ppg_ratio": 1.1293,
-     "share_above_median_toi": 0.5152,
-     "share_above_median_ppg": 0.6667
+     "median_toi_ratio": 1.008179,
+     "median_ppg_ratio": 1.129326,
+     "share_above_median_toi": 0.515152,
+     "share_above_median_ppg": 0.666667
     },
     {
      "player_seasons": 31,
      "players": 31,
-     "median_toi_ratio": 1.0498,
-     "median_ppg_ratio": 0.9218,
-     "share_above_median_toi": 0.5806,
-     "share_above_median_ppg": 0.4194
+     "median_toi_ratio": 1.049794,
+     "median_ppg_ratio": 0.921764,
+     "share_above_median_toi": 0.580645,
+     "share_above_median_ppg": 0.419355
     },
     {
      "player_seasons": 33,
      "players": 33,
-     "median_toi_ratio": 0.966,
-     "median_ppg_ratio": 1.0016,
-     "share_above_median_toi": 0.4545,
-     "share_above_median_ppg": 0.5152
+     "median_toi_ratio": 0.965955,
+     "median_ppg_ratio": 1.001646,
+     "share_above_median_toi": 0.454545,
+     "share_above_median_ppg": 0.515152
     },
     {
      "player_seasons": 34,
      "players": 34,
-     "median_toi_ratio": 0.9843,
-     "median_ppg_ratio": 1.0487,
-     "share_above_median_toi": 0.4118,
-     "share_above_median_ppg": 0.5294
+     "median_toi_ratio": 0.984321,
+     "median_ppg_ratio": 1.048703,
+     "share_above_median_toi": 0.411765,
+     "share_above_median_ppg": 0.529412
     }
    ],
    "SWE": [
     {
      "player_seasons": 34,
      "players": 34,
-     "median_toi_ratio": 1.0633,
-     "median_ppg_ratio": 1.0522,
-     "share_above_median_toi": 0.5588,
-     "share_above_median_ppg": 0.5294
+     "median_toi_ratio": 1.063349,
+     "median_ppg_ratio": 1.052152,
+     "share_above_median_toi": 0.558824,
+     "share_above_median_ppg": 0.529412
     },
     {
      "player_seasons": 36,
      "players": 36,
-     "median_toi_ratio": 1.0751,
-     "median_ppg_ratio": 1.1953,
-     "share_above_median_toi": 0.6389,
-     "share_above_median_ppg": 0.6389
+     "median_toi_ratio": 1.075077,
+     "median_ppg_ratio": 1.195256,
+     "share_above_median_toi": 0.638889,
+     "share_above_median_ppg": 0.638889
     },
     {
      "player_seasons": 42,
      "players": 42,
-     "median_toi_ratio": 1.0575,
-     "median_ppg_ratio": 1.1483,
-     "share_above_median_toi": 0.5952,
-     "share_above_median_ppg": 0.5714
+     "median_toi_ratio": 1.057492,
+     "median_ppg_ratio": 1.148341,
+     "share_above_median_toi": 0.595238,
+     "share_above_median_ppg": 0.571429
     },
     {
      "player_seasons": 40,
      "players": 40,
-     "median_toi_ratio": 1.0997,
-     "median_ppg_ratio": 1.2587,
+     "median_toi_ratio": 1.099719,
+     "median_ppg_ratio": 1.258676,
      "share_above_median_toi": 0.65,
      "share_above_median_ppg": 0.625
     },
     {
      "player_seasons": 44,
      "players": 44,
-     "median_toi_ratio": 1.045,
-     "median_ppg_ratio": 1.0689,
-     "share_above_median_toi": 0.5455,
-     "share_above_median_ppg": 0.5455
+     "median_toi_ratio": 1.044983,
+     "median_ppg_ratio": 1.068917,
+     "share_above_median_toi": 0.545455,
+     "share_above_median_ppg": 0.545455
     },
     {
      "player_seasons": 47,
      "players": 47,
-     "median_toi_ratio": 1.052,
-     "median_ppg_ratio": 1.1029,
-     "share_above_median_toi": 0.5532,
-     "share_above_median_ppg": 0.5745
+     "median_toi_ratio": 1.052026,
+     "median_ppg_ratio": 1.102941,
+     "share_above_median_toi": 0.553191,
+     "share_above_median_ppg": 0.574468
     },
     {
      "player_seasons": 42,
      "players": 42,
-     "median_toi_ratio": 1.0533,
-     "median_ppg_ratio": 1.1034,
-     "share_above_median_toi": 0.5714,
-     "share_above_median_ppg": 0.5714
+     "median_toi_ratio": 1.053253,
+     "median_ppg_ratio": 1.103433,
+     "share_above_median_toi": 0.571429,
+     "share_above_median_ppg": 0.571429
     },
     {
      "player_seasons": 40,
      "players": 40,
-     "median_toi_ratio": 1.0677,
-     "median_ppg_ratio": 1.3024,
+     "median_toi_ratio": 1.067709,
+     "median_ppg_ratio": 1.30235,
      "share_above_median_toi": 0.625,
      "share_above_median_ppg": 0.575
     },
     {
      "player_seasons": 39,
      "players": 39,
-     "median_toi_ratio": 1.0815,
-     "median_ppg_ratio": 1.0984,
-     "share_above_median_toi": 0.6667,
-     "share_above_median_ppg": 0.6154
+     "median_toi_ratio": 1.081462,
+     "median_ppg_ratio": 1.098431,
+     "share_above_median_toi": 0.666667,
+     "share_above_median_ppg": 0.615385
     },
     {
      "player_seasons": 42,
      "players": 42,
-     "median_toi_ratio": 1.1078,
-     "median_ppg_ratio": 1.2427,
-     "share_above_median_toi": 0.6667,
-     "share_above_median_ppg": 0.6429
+     "median_toi_ratio": 1.10781,
+     "median_ppg_ratio": 1.242696,
+     "share_above_median_toi": 0.666667,
+     "share_above_median_ppg": 0.642857
     },
     {
      "player_seasons": 42,
      "players": 42,
-     "median_toi_ratio": 1.0572,
-     "median_ppg_ratio": 1.1728,
-     "share_above_median_toi": 0.5714,
-     "share_above_median_ppg": 0.5952
+     "median_toi_ratio": 1.057242,
+     "median_ppg_ratio": 1.172793,
+     "share_above_median_toi": 0.571429,
+     "share_above_median_ppg": 0.595238
     },
     {
      "player_seasons": 43,
      "players": 43,
-     "median_toi_ratio": 1.0592,
-     "median_ppg_ratio": 1.0811,
-     "share_above_median_toi": 0.6512,
-     "share_above_median_ppg": 0.5349
+     "median_toi_ratio": 1.059214,
+     "median_ppg_ratio": 1.081081,
+     "share_above_median_toi": 0.651163,
+     "share_above_median_ppg": 0.534884
     },
     {
      "player_seasons": 44,
      "players": 44,
-     "median_toi_ratio": 1.0235,
-     "median_ppg_ratio": 1.2114,
-     "share_above_median_toi": 0.5682,
-     "share_above_median_ppg": 0.5455
+     "median_toi_ratio": 1.023463,
+     "median_ppg_ratio": 1.211366,
+     "share_above_median_toi": 0.568182,
+     "share_above_median_ppg": 0.545455
     },
     {
      "player_seasons": 44,
      "players": 44,
-     "median_toi_ratio": 1.0687,
-     "median_ppg_ratio": 1.2884,
-     "share_above_median_toi": 0.6591,
-     "share_above_median_ppg": 0.5455
+     "median_toi_ratio": 1.06873,
+     "median_ppg_ratio": 1.28841,
+     "share_above_median_toi": 0.659091,
+     "share_above_median_ppg": 0.545455
     },
     {
      "player_seasons": 42,
      "players": 42,
-     "median_toi_ratio": 1.0951,
-     "median_ppg_ratio": 1.2579,
-     "share_above_median_toi": 0.6429,
-     "share_above_median_ppg": 0.6667
+     "median_toi_ratio": 1.095093,
+     "median_ppg_ratio": 1.257894,
+     "share_above_median_toi": 0.642857,
+     "share_above_median_ppg": 0.666667
     },
     {
      "player_seasons": 47,
      "players": 47,
-     "median_toi_ratio": 1.0516,
-     "median_ppg_ratio": 1.1623,
-     "share_above_median_toi": 0.5957,
-     "share_above_median_ppg": 0.5532
+     "median_toi_ratio": 1.051552,
+     "median_ppg_ratio": 1.162302,
+     "share_above_median_toi": 0.595745,
+     "share_above_median_ppg": 0.553191
     },
     {
      "player_seasons": 60,
      "players": 60,
-     "median_toi_ratio": 1.0759,
-     "median_ppg_ratio": 1.1367,
-     "share_above_median_toi": 0.6167,
-     "share_above_median_ppg": 0.6167
+     "median_toi_ratio": 1.075915,
+     "median_ppg_ratio": 1.136715,
+     "share_above_median_toi": 0.616667,
+     "share_above_median_ppg": 0.616667
     },
     {
      "player_seasons": 64,
      "players": 64,
-     "median_toi_ratio": 1.0877,
-     "median_ppg_ratio": 1.2507,
-     "share_above_median_toi": 0.6719,
-     "share_above_median_ppg": 0.5781
+     "median_toi_ratio": 1.087718,
+     "median_ppg_ratio": 1.250678,
+     "share_above_median_toi": 0.671875,
+     "share_above_median_ppg": 0.578125
     },
     {
      "player_seasons": 60,
      "players": 60,
-     "median_toi_ratio": 1.107,
-     "median_ppg_ratio": 1.1643,
+     "median_toi_ratio": 1.107018,
+     "median_ppg_ratio": 1.164286,
      "share_above_median_toi": 0.65,
-     "share_above_median_ppg": 0.5667
+     "share_above_median_ppg": 0.566667
     },
     {
      "player_seasons": 76,
      "players": 76,
-     "median_toi_ratio": 1.0405,
-     "median_ppg_ratio": 1.1009,
-     "share_above_median_toi": 0.5658,
-     "share_above_median_ppg": 0.5658
+     "median_toi_ratio": 1.040549,
+     "median_ppg_ratio": 1.100887,
+     "share_above_median_toi": 0.565789,
+     "share_above_median_ppg": 0.565789
     },
     {
      "player_seasons": 78,
      "players": 78,
-     "median_toi_ratio": 1.0116,
-     "median_ppg_ratio": 0.928,
-     "share_above_median_toi": 0.5256,
-     "share_above_median_ppg": 0.4744
+     "median_toi_ratio": 1.011574,
+     "median_ppg_ratio": 0.927989,
+     "share_above_median_toi": 0.525641,
+     "share_above_median_ppg": 0.474359
     },
     {
      "player_seasons": 79,
      "players": 79,
-     "median_toi_ratio": 1.0237,
-     "median_ppg_ratio": 1.049,
-     "share_above_median_toi": 0.5443,
-     "share_above_median_ppg": 0.5443
+     "median_toi_ratio": 1.023682,
+     "median_ppg_ratio": 1.049015,
+     "share_above_median_toi": 0.544304,
+     "share_above_median_ppg": 0.544304
     },
     {
      "player_seasons": 68,
      "players": 68,
-     "median_toi_ratio": 1.0388,
-     "median_ppg_ratio": 1.1497,
-     "share_above_median_toi": 0.5735,
-     "share_above_median_ppg": 0.5588
+     "median_toi_ratio": 1.038799,
+     "median_ppg_ratio": 1.149691,
+     "share_above_median_toi": 0.573529,
+     "share_above_median_ppg": 0.558824
     },
     {
      "player_seasons": 75,
      "players": 75,
-     "median_toi_ratio": 1.0139,
-     "median_ppg_ratio": 1.0915,
-     "share_above_median_toi": 0.5067,
+     "median_toi_ratio": 1.013908,
+     "median_ppg_ratio": 1.091525,
+     "share_above_median_toi": 0.506667,
      "share_above_median_ppg": 0.6
     },
     {
      "player_seasons": 71,
      "players": 71,
-     "median_toi_ratio": 0.9718,
-     "median_ppg_ratio": 1.1765,
-     "share_above_median_toi": 0.4648,
-     "share_above_median_ppg": 0.5493
+     "median_toi_ratio": 0.971798,
+     "median_ppg_ratio": 1.176471,
+     "share_above_median_toi": 0.464789,
+     "share_above_median_ppg": 0.549296
     },
     {
      "player_seasons": 64,
      "players": 64,
-     "median_toi_ratio": 1.044,
-     "median_ppg_ratio": 1.0654,
-     "share_above_median_toi": 0.5156,
-     "share_above_median_ppg": 0.5156
+     "median_toi_ratio": 1.044017,
+     "median_ppg_ratio": 1.065359,
+     "share_above_median_toi": 0.515625,
+     "share_above_median_ppg": 0.515625
     },
     {
      "player_seasons": 65,
      "players": 65,
-     "median_toi_ratio": 1.0113,
-     "median_ppg_ratio": 1.1088,
-     "share_above_median_toi": 0.5231,
-     "share_above_median_ppg": 0.5538
+     "median_toi_ratio": 1.011303,
+     "median_ppg_ratio": 1.108841,
+     "share_above_median_toi": 0.523077,
+     "share_above_median_ppg": 0.553846
     },
     {
      "player_seasons": 68,
      "players": 68,
-     "median_toi_ratio": 1.0065,
-     "median_ppg_ratio": 1.0635,
-     "share_above_median_toi": 0.5147,
-     "share_above_median_ppg": 0.5735
+     "median_toi_ratio": 1.006474,
+     "median_ppg_ratio": 1.063507,
+     "share_above_median_toi": 0.514706,
+     "share_above_median_ppg": 0.573529
     }
    ]
   }

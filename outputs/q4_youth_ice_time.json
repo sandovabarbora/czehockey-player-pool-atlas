@@ -33,38 +33,38 @@
      "u21_skaters": 73,
      "games": 13602.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.0995,
+     "u21_games_share": 0.099471,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0617,
-     "u21_toi_per_game_s": 576.6046,
-     "all_toi_per_game_s": 930.2597
+     "u21_toi_share": 0.061655,
+     "u21_toi_per_game_s": 576.604582,
+     "all_toi_per_game_s": 930.259668
     },
     {
      "season": "2015/16",
      "skaters": 444,
      "u21_skaters": 73,
      "games": 13563.0,
-     "age_known_games_share": 0.9992,
-     "u21_games_share": 0.0872,
+     "age_known_games_share": 0.999189,
+     "u21_games_share": 0.08722,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0624,
-     "u21_toi_per_game_s": 675.1988,
-     "all_toi_per_game_s": 943.7235
+     "u21_toi_share": 0.062402,
+     "u21_toi_per_game_s": 675.198816,
+     "all_toi_per_game_s": 943.723509
     },
     {
      "season": "2016/17",
      "skaters": 460,
      "u21_skaters": 85,
      "games": 13615.0,
-     "age_known_games_share": 0.9968,
-     "u21_games_share": 0.0908,
+     "age_known_games_share": 0.996842,
+     "u21_games_share": 0.090775,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0593,
-     "u21_toi_per_game_s": 614.0722,
-     "all_toi_per_game_s": 939.6602
+     "u21_toi_share": 0.059322,
+     "u21_toi_per_game_s": 614.07224,
+     "all_toi_per_game_s": 939.660183
     },
     {
      "season": "2017/18",
@@ -72,25 +72,25 @@
      "u21_skaters": 74,
      "games": 13544.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.0854,
+     "u21_games_share": 0.085425,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0604,
-     "u21_toi_per_game_s": 669.5445,
-     "all_toi_per_game_s": 947.2366
+     "u21_toi_share": 0.060382,
+     "u21_toi_per_game_s": 669.544512,
+     "all_toi_per_game_s": 947.236562
     },
     {
      "season": "2018/19",
      "skaters": 442,
      "u21_skaters": 74,
      "games": 13618.0,
-     "age_known_games_share": 0.9991,
-     "u21_games_share": 0.0822,
+     "age_known_games_share": 0.999119,
+     "u21_games_share": 0.08217,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0593,
-     "u21_toi_per_game_s": 679.2013,
-     "all_toi_per_game_s": 940.364
+     "u21_toi_share": 0.059349,
+     "u21_toi_per_game_s": 679.201252,
+     "all_toi_per_game_s": 940.363957
     },
     {
      "season": "2019/20",
@@ -98,12 +98,12 @@
      "u21_skaters": 92,
      "games": 13588.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.0766,
+     "u21_games_share": 0.076612,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0527,
-     "u21_toi_per_game_s": 647.0048,
-     "all_toi_per_game_s": 939.7612
+     "u21_toi_share": 0.052745,
+     "u21_toi_per_game_s": 647.004803,
+     "all_toi_per_game_s": 939.761186
     },
     {
      "season": "2020/21",
@@ -111,38 +111,38 @@
      "u21_skaters": 102,
      "games": 13558.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1051,
+     "u21_games_share": 0.105104,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0777,
-     "u21_toi_per_game_s": 698.5649,
-     "all_toi_per_game_s": 944.4133
+     "u21_toi_share": 0.077743,
+     "u21_toi_per_game_s": 698.564912,
+     "all_toi_per_game_s": 944.413262
     },
     {
      "season": "2021/22",
      "skaters": 501,
      "u21_skaters": 98,
      "games": 15739.0,
-     "age_known_games_share": 0.9949,
-     "u21_games_share": 0.0899,
+     "age_known_games_share": 0.994917,
+     "u21_games_share": 0.089852,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0628,
-     "u21_toi_per_game_s": 659.3952,
-     "all_toi_per_game_s": 943.1664
+     "u21_toi_share": 0.062818,
+     "u21_toi_per_game_s": 659.395167,
+     "all_toi_per_game_s": 943.166422
     },
     {
      "season": "2022/23",
      "skaters": 456,
      "u21_skaters": 83,
      "games": 13569.0,
-     "age_known_games_share": 0.9987,
-     "u21_games_share": 0.061,
+     "age_known_games_share": 0.998673,
+     "u21_games_share": 0.061029,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0387,
-     "u21_toi_per_game_s": 601.6518,
-     "all_toi_per_game_s": 948.5237
+     "u21_toi_share": 0.038711,
+     "u21_toi_per_game_s": 601.651753,
+     "all_toi_per_game_s": 948.523725
     },
     {
      "season": "2023/24",
@@ -150,25 +150,25 @@
      "u21_skaters": 71,
      "games": 13641.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.0554,
+     "u21_games_share": 0.055421,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0358,
-     "u21_toi_per_game_s": 611.1852,
-     "all_toi_per_game_s": 945.3529
+     "u21_toi_share": 0.035831,
+     "u21_toi_per_game_s": 611.185185,
+     "all_toi_per_game_s": 945.352907
     },
     {
      "season": "2024/25",
      "skaters": 455,
      "u21_skaters": 79,
      "games": 13833.0,
-     "age_known_games_share": 0.9997,
-     "u21_games_share": 0.0639,
+     "age_known_games_share": 0.999711,
+     "u21_games_share": 0.063924,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0448,
-     "u21_toi_per_game_s": 654.0509,
-     "all_toi_per_game_s": 933.1978
+     "u21_toi_share": 0.044802,
+     "u21_toi_per_game_s": 654.050905,
+     "all_toi_per_game_s": 933.197845
     },
     {
      "season": "2025/26",
@@ -176,22 +176,22 @@
      "u21_skaters": 63,
      "games": 13973.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.0566,
+     "u21_games_share": 0.056609,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0407,
-     "u21_toi_per_game_s": 662.8786,
-     "all_toi_per_game_s": 922.1039
+     "u21_toi_share": 0.040695,
+     "u21_toi_per_game_s": 662.878635,
+     "all_toi_per_game_s": 922.103915
     }
    ],
    "summary": {
     "measured_seasons": 12,
-    "mean_u21_games_share": 0.0795,
-    "mean_u21_toi_share": 0.0547,
+    "mean_u21_games_share": 0.079468,
+    "mean_u21_toi_share": 0.054705,
     "latest": {
      "season": "2025/26",
-     "u21_games_share": 0.0566,
-     "u21_toi_share": 0.0407,
+     "u21_games_share": 0.056609,
+     "u21_toi_share": 0.040695,
      "age_known_games_share": 1.0,
      "measured": true
     }
@@ -205,12 +205,12 @@
      "u21_skaters": 97,
      "games": 15905.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.13,
+     "u21_games_share": 0.129959,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.104,
-     "u21_toi_per_game_s": 752.7238,
-     "all_toi_per_game_s": 940.8548
+     "u21_toi_share": 0.103973,
+     "u21_toi_per_game_s": 752.723754,
+     "all_toi_per_game_s": 940.854763
     },
     {
      "season": "2015/16",
@@ -218,12 +218,12 @@
      "u21_skaters": 97,
      "games": 17005.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1438,
+     "u21_games_share": 0.14384,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.1164,
-     "u21_toi_per_game_s": 752.3622,
-     "all_toi_per_game_s": 930.1158
+     "u21_toi_share": 0.116351,
+     "u21_toi_per_game_s": 752.362224,
+     "all_toi_per_game_s": 930.115789
     },
     {
      "season": "2016/17",
@@ -231,12 +231,12 @@
      "u21_skaters": 105,
      "games": 17013.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1252,
+     "u21_games_share": 0.125198,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.1013,
-     "u21_toi_per_game_s": 763.4761,
-     "all_toi_per_game_s": 943.3022
+     "u21_toi_share": 0.101331,
+     "u21_toi_per_game_s": 763.476056,
+     "all_toi_per_game_s": 943.302181
     },
     {
      "season": "2017/18",
@@ -244,12 +244,12 @@
      "u21_skaters": 102,
      "games": 17017.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1187,
+     "u21_games_share": 0.118705,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.1012,
-     "u21_toi_per_game_s": 802.6173,
-     "all_toi_per_game_s": 941.3319
+     "u21_toi_share": 0.101212,
+     "u21_toi_per_game_s": 802.617327,
+     "all_toi_per_game_s": 941.331903
     },
     {
      "season": "2018/19",
@@ -257,12 +257,12 @@
      "u21_skaters": 116,
      "games": 17031.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1561,
+     "u21_games_share": 0.156068,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.1362,
-     "u21_toi_per_game_s": 820.9379,
-     "all_toi_per_game_s": 940.5165
+     "u21_toi_share": 0.136226,
+     "u21_toi_per_game_s": 820.937923,
+     "all_toi_per_game_s": 940.516529
     },
     {
      "season": "2019/20",
@@ -270,12 +270,12 @@
      "u21_skaters": 116,
      "games": 16790.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1489,
+     "u21_games_share": 0.148898,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.1272,
+     "u21_toi_share": 0.127156,
      "u21_toi_per_game_s": 802.2828,
-     "all_toi_per_game_s": 939.4622
+     "all_toi_per_game_s": 939.462239
     },
     {
      "season": "2020/21",
@@ -286,9 +286,9 @@
      "u21_games_share": 0.1925,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.1661,
-     "u21_toi_per_game_s": 809.3092,
-     "all_toi_per_game_s": 937.6682
+     "u21_toi_share": 0.166148,
+     "u21_toi_per_game_s": 809.309238,
+     "all_toi_per_game_s": 937.668164
     },
     {
      "season": "2021/22",
@@ -296,12 +296,12 @@
      "u21_skaters": 131,
      "games": 16943.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1852,
+     "u21_games_share": 0.185209,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.1571,
-     "u21_toi_per_game_s": 800.1836,
-     "all_toi_per_game_s": 943.2319
+     "u21_toi_share": 0.157121,
+     "u21_toi_per_game_s": 800.183556,
+     "all_toi_per_game_s": 943.231895
     },
     {
      "season": "2022/23",
@@ -309,12 +309,12 @@
      "u21_skaters": 105,
      "games": 17062.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1488,
+     "u21_games_share": 0.148752,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.1214,
-     "u21_toi_per_game_s": 758.7648,
-     "all_toi_per_game_s": 929.6924
+     "u21_toi_share": 0.121403,
+     "u21_toi_per_game_s": 758.764775,
+     "all_toi_per_game_s": 929.692357
     },
     {
      "season": "2023/24",
@@ -322,12 +322,12 @@
      "u21_skaters": 94,
      "games": 17055.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1268,
+     "u21_games_share": 0.126825,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.1041,
-     "u21_toi_per_game_s": 773.8964,
-     "all_toi_per_game_s": 943.2055
+     "u21_toi_share": 0.104059,
+     "u21_toi_per_game_s": 773.89644,
+     "all_toi_per_game_s": 943.205453
     },
     {
      "season": "2024/25",
@@ -335,12 +335,12 @@
      "u21_skaters": 96,
      "games": 18205.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1023,
+     "u21_games_share": 0.102335,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.0837,
-     "u21_toi_per_game_s": 770.0236,
-     "all_toi_per_game_s": 941.2548
+     "u21_toi_share": 0.083718,
+     "u21_toi_per_game_s": 770.023618,
+     "all_toi_per_game_s": 941.254765
     },
     {
      "season": "2025/26",
@@ -348,22 +348,22 @@
      "u21_skaters": 128,
      "games": 18180.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1365,
+     "u21_games_share": 0.136469,
      "measured": true,
      "toi_games_share": 1.0,
-     "u21_toi_share": 0.1109,
-     "u21_toi_per_game_s": 765.4236,
-     "all_toi_per_game_s": 942.2136
+     "u21_toi_share": 0.110863,
+     "u21_toi_per_game_s": 765.42362,
+     "all_toi_per_game_s": 942.213586
     }
    ],
    "summary": {
     "measured_seasons": 12,
-    "mean_u21_games_share": 0.1429,
-    "mean_u21_toi_share": 0.1191,
+    "mean_u21_games_share": 0.142896,
+    "mean_u21_toi_share": 0.11913,
     "latest": {
      "season": "2025/26",
-     "u21_games_share": 0.1365,
-     "u21_toi_share": 0.1109,
+     "u21_games_share": 0.136469,
+     "u21_toi_share": 0.110863,
      "age_known_games_share": 1.0,
      "measured": true
     }
@@ -373,169 +373,169 @@
    "seasons": [
     {
      "season": "2014/15",
-     "skaters": 243,
-     "u21_skaters": 76,
-     "games": 9014.0,
-     "age_known_games_share": 0.993,
-     "u21_games_share": 0.2258,
+     "skaters": 392,
+     "u21_skaters": 136,
+     "games": 13142.0,
+     "age_known_games_share": 0.995206,
+     "u21_games_share": 0.197798,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.1779,
-     "u21_toi_per_game_s": 727.7729,
-     "all_toi_per_game_s": 923.6805
+     "toi_games_share": 0.998402,
+     "u21_toi_share": 0.146884,
+     "u21_toi_per_game_s": 670.256041,
+     "all_toi_per_game_s": 896.697121
     },
     {
      "season": "2015/16",
-     "skaters": 265,
-     "u21_skaters": 74,
-     "games": 9506.0,
-     "age_known_games_share": 0.9996,
-     "u21_games_share": 0.1917,
+     "skaters": 454,
+     "u21_skaters": 161,
+     "games": 14462.0,
+     "age_known_games_share": 0.999723,
+     "u21_games_share": 0.176788,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.1494,
-     "u21_toi_per_game_s": 734.7278,
-     "all_toi_per_game_s": 942.9234
+     "toi_games_share": 0.996681,
+     "u21_toi_share": 0.125963,
+     "u21_toi_per_game_s": 650.059011,
+     "all_toi_per_game_s": 898.203053
     },
     {
      "season": "2016/17",
-     "skaters": 271,
-     "u21_skaters": 82,
-     "games": 9971.0,
+     "skaters": 443,
+     "u21_skaters": 161,
+     "games": 14503.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.2263,
+     "u21_games_share": 0.202924,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.1738,
-     "u21_toi_per_game_s": 712.7105,
-     "all_toi_per_game_s": 927.6039
+     "toi_games_share": 0.997587,
+     "u21_toi_share": 0.1428,
+     "u21_toi_per_game_s": 636.512036,
+     "all_toi_per_game_s": 895.908073
     },
     {
      "season": "2017/18",
-     "skaters": 285,
-     "u21_skaters": 75,
-     "games": 10487.0,
+     "skaters": 448,
+     "u21_skaters": 145,
+     "games": 14488.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1766,
+     "u21_games_share": 0.174558,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.1332,
-     "u21_toi_per_game_s": 709.9622,
-     "all_toi_per_game_s": 941.3623
+     "toi_games_share": 0.998205,
+     "u21_toi_share": 0.123311,
+     "u21_toi_per_game_s": 636.96249,
+     "all_toi_per_game_s": 895.087263
     },
     {
      "season": "2018/19",
-     "skaters": 289,
-     "u21_skaters": 76,
-     "games": 10627.0,
-     "age_known_games_share": 0.9989,
-     "u21_games_share": 0.1874,
+     "skaters": 444,
+     "u21_skaters": 136,
+     "games": 14517.0,
+     "age_known_games_share": 0.999173,
+     "u21_games_share": 0.168838,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.1453,
-     "u21_toi_per_game_s": 723.811,
-     "all_toi_per_game_s": 933.4601
+     "toi_games_share": 0.9969,
+     "u21_toi_share": 0.122654,
+     "u21_toi_per_game_s": 659.33209,
+     "all_toi_per_game_s": 896.665353
     },
     {
      "season": "2019/20",
-     "skaters": 306,
-     "u21_skaters": 76,
-     "games": 11044.0,
-     "age_known_games_share": 0.9994,
-     "u21_games_share": 0.1428,
+     "skaters": 442,
+     "u21_skaters": 132,
+     "games": 14492.0,
+     "age_known_games_share": 0.999517,
+     "u21_games_share": 0.134898,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.1013,
-     "u21_toi_per_game_s": 653.1713,
-     "all_toi_per_game_s": 920.5364
+     "toi_games_share": 0.998551,
+     "u21_toi_share": 0.090236,
+     "u21_toi_per_game_s": 602.915806,
+     "all_toi_per_game_s": 894.326051
     },
     {
      "season": "2020/21",
-     "skaters": 330,
-     "u21_skaters": 88,
-     "games": 11768.0,
+     "skaters": 447,
+     "u21_skaters": 147,
+     "games": 14501.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1795,
+     "u21_games_share": 0.18378,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.1367,
-     "u21_toi_per_game_s": 705.8977,
-     "all_toi_per_game_s": 926.6149
+     "toi_games_share": 0.996069,
+     "u21_toi_share": 0.131969,
+     "u21_toi_per_game_s": 655.39839,
+     "all_toi_per_game_s": 896.715522
     },
     {
      "season": "2021/22",
-     "skaters": 323,
-     "u21_skaters": 72,
-     "games": 11664.0,
+     "skaters": 456,
+     "u21_skaters": 150,
+     "games": 14441.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1289,
+     "u21_games_share": 0.166332,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.0812,
-     "u21_toi_per_game_s": 590.0605,
-     "all_toi_per_game_s": 937.0243
+     "toi_games_share": 0.994391,
+     "u21_toi_share": 0.101819,
+     "u21_toi_per_game_s": 567.090013,
+     "all_toi_per_game_s": 904.866783
     },
     {
      "season": "2022/23",
-     "skaters": 322,
-     "u21_skaters": 65,
-     "games": 12016.0,
+     "skaters": 454,
+     "u21_skaters": 155,
+     "games": 14404.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1162,
+     "u21_games_share": 0.145376,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.0741,
-     "u21_toi_per_game_s": 601.4133,
-     "all_toi_per_game_s": 942.8673
+     "toi_games_share": 0.997431,
+     "u21_toi_share": 0.088294,
+     "u21_toi_per_game_s": 557.791545,
+     "all_toi_per_game_s": 904.936034
     },
     {
      "season": "2023/24",
-     "skaters": 314,
-     "u21_skaters": 59,
-     "games": 12008.0,
+     "skaters": 428,
+     "u21_skaters": 133,
+     "games": 14378.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1154,
+     "u21_games_share": 0.153012,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.0854,
-     "u21_toi_per_game_s": 699.3824,
-     "all_toi_per_game_s": 945.2715
+     "toi_games_share": 0.997357,
+     "u21_toi_share": 0.106156,
+     "u21_toi_per_game_s": 638.977388,
+     "all_toi_per_game_s": 909.596304
     },
     {
      "season": "2024/25",
-     "skaters": 325,
-     "u21_skaters": 61,
-     "games": 12184.0,
+     "skaters": 442,
+     "u21_skaters": 138,
+     "games": 14431.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.0936,
+     "u21_games_share": 0.146837,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.061,
-     "u21_toi_per_game_s": 615.7239,
-     "all_toi_per_game_s": 945.6405
+     "toi_games_share": 0.998476,
+     "u21_toi_share": 0.092257,
+     "u21_toi_per_game_s": 572.881429,
+     "all_toi_per_game_s": 905.003539
     },
     {
      "season": "2025/26",
-     "skaters": 336,
-     "u21_skaters": 63,
-     "games": 12517.0,
+     "skaters": 432,
+     "u21_skaters": 124,
+     "games": 14445.0,
      "age_known_games_share": 1.0,
-     "u21_games_share": 0.1143,
+     "u21_games_share": 0.150225,
      "measured": true,
-     "toi_games_share": 1.0,
-     "u21_toi_share": 0.0733,
-     "u21_toi_per_game_s": 597.7114,
-     "all_toi_per_game_s": 932.6486
+     "toi_games_share": 0.998615,
+     "u21_toi_share": 0.094438,
+     "u21_toi_per_game_s": 570.874652,
+     "all_toi_per_game_s": 902.660035
     }
    ],
    "summary": {
     "measured_seasons": 12,
-    "mean_u21_games_share": 0.1582,
-    "mean_u21_toi_share": 0.1161,
+    "mean_u21_games_share": 0.166781,
+    "mean_u21_toi_share": 0.113898,
     "latest": {
      "season": "2025/26",
-     "u21_games_share": 0.1143,
-     "u21_toi_share": 0.0733,
+     "u21_games_share": 0.150225,
+     "u21_toi_share": 0.094438,
      "age_known_games_share": 1.0,
      "measured": true
     }
@@ -548,8 +548,8 @@
      "skaters": 362,
      "u21_skaters": 12,
      "games": 11917.0,
-     "age_known_games_share": 0.4551,
-     "u21_games_share": 0.0776,
+     "age_known_games_share": 0.455148,
+     "u21_games_share": 0.077618,
      "measured": false
     },
     {
@@ -557,8 +557,8 @@
      "skaters": 363,
      "u21_skaters": 15,
      "games": 11923.0,
-     "age_known_games_share": 0.4542,
-     "u21_games_share": 0.0944,
+     "age_known_games_share": 0.454164,
+     "u21_games_share": 0.094367,
      "measured": false
     },
     {
@@ -566,8 +566,8 @@
      "skaters": 347,
      "u21_skaters": 10,
      "games": 11860.0,
-     "age_known_games_share": 0.4712,
-     "u21_games_share": 0.0446,
+     "age_known_games_share": 0.471164,
+     "u21_games_share": 0.04456,
      "measured": false
     },
     {
@@ -575,8 +575,8 @@
      "skaters": 369,
      "u21_skaters": 11,
      "games": 11853.0,
-     "age_known_games_share": 0.4628,
-     "u21_games_share": 0.0439,
+     "age_known_games_share": 0.462752,
+     "u21_games_share": 0.043938,
      "measured": false
     },
     {
@@ -584,8 +584,8 @@
      "skaters": 345,
      "u21_skaters": 6,
      "games": 11915.0,
-     "age_known_games_share": 0.4665,
-     "u21_games_share": 0.0408,
+     "age_known_games_share": 0.466471,
+     "u21_games_share": 0.040842,
      "measured": false
     },
     {
@@ -593,8 +593,8 @@
      "skaters": 351,
      "u21_skaters": 10,
      "games": 11840.0,
-     "age_known_games_share": 0.4742,
-     "u21_games_share": 0.05,
+     "age_known_games_share": 0.47424,
+     "u21_games_share": 0.050045,
      "measured": false
     },
     {
@@ -602,8 +602,8 @@
      "skaters": 375,
      "u21_skaters": 10,
      "games": 11997.0,
-     "age_known_games_share": 0.4641,
-     "u21_games_share": 0.0445,
+     "age_known_games_share": 0.464116,
+     "u21_games_share": 0.04454,
      "measured": false
     },
     {
@@ -611,8 +611,8 @@
      "skaters": 398,
      "u21_skaters": 3,
      "games": 13172.0,
-     "age_known_games_share": 0.4264,
-     "u21_games_share": 0.0112,
+     "age_known_games_share": 0.426435,
+     "u21_games_share": 0.011216,
      "measured": false
     },
     {
@@ -620,8 +620,8 @@
      "skaters": 413,
      "u21_skaters": 6,
      "games": 14442.0,
-     "age_known_games_share": 0.4787,
-     "u21_games_share": 0.0288,
+     "age_known_games_share": 0.478743,
+     "u21_games_share": 0.028782,
      "measured": false
     },
     {
@@ -629,8 +629,8 @@
      "skaters": 408,
      "u21_skaters": 5,
      "games": 14429.0,
-     "age_known_games_share": 0.5016,
-     "u21_games_share": 0.0268,
+     "age_known_games_share": 0.501629,
+     "u21_games_share": 0.026803,
      "measured": false
     },
     {
@@ -638,8 +638,8 @@
      "skaters": 410,
      "u21_skaters": 3,
      "games": 14434.0,
-     "age_known_games_share": 0.4754,
-     "u21_games_share": 0.0187,
+     "age_known_games_share": 0.475405,
+     "u21_games_share": 0.018653,
      "measured": false
     },
     {
@@ -647,8 +647,8 @@
      "skaters": 425,
      "u21_skaters": 1,
      "games": 14412.0,
-     "age_known_games_share": 0.4593,
-     "u21_games_share": 0.0017,
+     "age_known_games_share": 0.45927,
+     "u21_games_share": 0.001662,
      "measured": false
     }
    ],
@@ -657,9 +657,9 @@
     "mean_u21_games_share": null,
     "latest": {
      "season": "2025/26",
-     "u21_games_share": 0.0017,
+     "u21_games_share": 0.001662,
      "u21_toi_share": null,
-     "age_known_games_share": 0.4593,
+     "age_known_games_share": 0.45927,
      "measured": false
     }
    }
@@ -671,8 +671,8 @@
      "skaters": 348,
      "u21_skaters": 5,
      "games": 13321.0,
-     "age_known_games_share": 0.3973,
-     "u21_games_share": 0.0227,
+     "age_known_games_share": 0.397267,
+     "u21_games_share": 0.022676,
      "measured": false
     },
     {
@@ -680,8 +680,8 @@
      "skaters": 333,
      "u21_skaters": 6,
      "games": 13501.0,
-     "age_known_games_share": 0.4552,
-     "u21_games_share": 0.0299,
+     "age_known_games_share": 0.455151,
+     "u21_games_share": 0.029943,
      "measured": false
     },
     {
@@ -689,8 +689,8 @@
      "skaters": 344,
      "u21_skaters": 3,
      "games": 13465.0,
-     "age_known_games_share": 0.4553,
-     "u21_games_share": 0.0202,
+     "age_known_games_share": 0.455329,
+     "u21_games_share": 0.020225,
      "measured": false
     },
     {
@@ -698,8 +698,8 @@
      "skaters": 346,
      "u21_skaters": 2,
      "games": 13543.0,
-     "age_known_games_share": 0.4534,
-     "u21_games_share": 0.0008,
+     "age_known_games_share": 0.453371,
+     "u21_games_share": 0.000814,
      "measured": false
     },
     {
@@ -707,8 +707,8 @@
      "skaters": 348,
      "u21_skaters": 6,
      "games": 13453.0,
-     "age_known_games_share": 0.4739,
-     "u21_games_share": 0.0196,
+     "age_known_games_share": 0.473946,
+     "u21_games_share": 0.019605,
      "measured": false
     },
     {
@@ -716,8 +716,8 @@
      "skaters": 342,
      "u21_skaters": 7,
      "games": 13483.0,
-     "age_known_games_share": 0.4827,
-     "u21_games_share": 0.0281,
+     "age_known_games_share": 0.482682,
+     "u21_games_share": 0.028119,
      "measured": false
     },
     {
@@ -725,8 +725,8 @@
      "skaters": 348,
      "u21_skaters": 7,
      "games": 9888.0,
-     "age_known_games_share": 0.4887,
-     "u21_games_share": 0.0362,
+     "age_known_games_share": 0.492516,
+     "u21_games_share": 0.035934,
      "measured": false
     },
     {
@@ -734,8 +734,8 @@
      "skaters": 377,
      "u21_skaters": 4,
      "games": 15075.0,
-     "age_known_games_share": 0.4693,
-     "u21_games_share": 0.0189,
+     "age_known_games_share": 0.47204,
+     "u21_games_share": 0.018831,
      "measured": false
     },
     {
@@ -743,8 +743,8 @@
      "skaters": 391,
      "u21_skaters": 3,
      "games": 15539.0,
-     "age_known_games_share": 0.3379,
-     "u21_games_share": 0.0105,
+     "age_known_games_share": 0.341528,
+     "u21_games_share": 0.010364,
      "measured": false
     },
     {
@@ -752,7 +752,7 @@
      "skaters": 354,
      "u21_skaters": 0,
      "games": 13674.0,
-     "age_known_games_share": 0.3685,
+     "age_known_games_share": 0.371727,
      "u21_games_share": 0.0,
      "measured": false
     },
@@ -761,7 +761,7 @@
      "skaters": 356,
      "u21_skaters": 0,
      "games": 13606.0,
-     "age_known_games_share": 0.3929,
+     "age_known_games_share": 0.396369,
      "u21_games_share": 0.0,
      "measured": false
     },
@@ -770,8 +770,8 @@
      "skaters": 355,
      "u21_skaters": 1,
      "games": 13532.0,
-     "age_known_games_share": 0.4081,
-     "u21_games_share": 0.0009,
+     "age_known_games_share": 0.411839,
+     "u21_games_share": 0.000897,
      "measured": false
     }
    ],
@@ -780,9 +780,9 @@
     "mean_u21_games_share": null,
     "latest": {
      "season": "2025/26",
-     "u21_games_share": 0.0009,
+     "u21_games_share": 0.000897,
      "u21_toi_share": null,
-     "age_known_games_share": 0.4081,
+     "age_known_games_share": 0.411839,
      "measured": false
     }
    }
@@ -790,12 +790,12 @@
  },
  "comparison": {
   "Liiga": {
-   "games_share_ratio_home_to_league": 0.5561,
-   "toi_share_ratio_home_to_league": 0.4592
+   "games_share_ratio_home_to_league": 0.55612,
+   "toi_share_ratio_home_to_league": 0.459201
   },
   "SHL": {
-   "games_share_ratio_home_to_league": 0.5023,
-   "toi_share_ratio_home_to_league": 0.4714
+   "games_share_ratio_home_to_league": 0.47648,
+   "toi_share_ratio_home_to_league": 0.480294
   },
   "NL": {
    "games_share_ratio_home_to_league": null,

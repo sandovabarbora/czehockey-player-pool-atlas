@@ -37,12 +37,12 @@
    "age_unknown": 0
   },
   "FIN": {
-   "players": 424,
+   "players": 425,
    "position_unknown": 0,
    "age_unknown": 2
   },
   "SWE": {
-   "players": 407,
+   "players": 408,
    "position_unknown": 37,
    "age_unknown": 2
   },
@@ -99,20 +99,20 @@
     "AUT": 0
    },
    "per_million": {
-    "CZE": 0.2748,
-    "FIN": 7.4298,
-    "SWE": 2.6401,
-    "CHE": 0.2192,
+    "CZE": 0.27483,
+    "FIN": 7.42984,
+    "SWE": 2.640132,
+    "CHE": 0.219195,
     "SVK": 0.0,
-    "DEU": 0.0479,
-    "LVA": 0.542,
+    "DEU": 0.047923,
+    "LVA": 0.541977,
     "DNK": 0.0,
-    "NOR": 0.1777,
+    "NOR": 0.177702,
     "AUT": 0.0
    },
-   "peer_median": 0.1777,
-   "home_minus_median": 0.0971,
-   "home_to_median": 1.5466,
+   "peer_median": 0.177702,
+   "home_minus_median": 0.097128,
+   "home_to_median": 1.546578,
    "home_rank": 4,
    "peers_in_median": [
     "FIN",
@@ -123,7 +123,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": -1.0602
+   "shortfall": -1.060234
   },
   {
    "position": "D",
@@ -141,20 +141,20 @@
     "AUT": 1
    },
    "per_million": {
-    "CZE": 0.3664,
-    "FIN": 6.0146,
-    "SWE": 4.0545,
-    "CHE": 0.6576,
-    "SVK": 0.3697,
-    "DEU": 0.0359,
-    "LVA": 0.542,
-    "DNK": 0.3319,
-    "NOR": 0.1777,
-    "AUT": 0.1085
+    "CZE": 0.36644,
+    "FIN": 6.014632,
+    "SWE": 4.054489,
+    "CHE": 0.657586,
+    "SVK": 0.369726,
+    "DEU": 0.035942,
+    "LVA": 0.541977,
+    "DNK": 0.331917,
+    "NOR": 0.177702,
+    "AUT": 0.108507
    },
-   "peer_median": 0.3697,
-   "home_minus_median": -0.0033,
-   "home_to_median": 0.9911,
+   "peer_median": 0.369726,
+   "home_minus_median": -0.003286,
+   "home_to_median": 0.991112,
    "home_rank": 5,
    "peers_in_median": [
     "FIN",
@@ -165,7 +165,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": 0.0359
+   "shortfall": 0.035873
   },
   {
    "position": "D",
@@ -183,19 +183,19 @@
     "AUT": 0
    },
    "per_million": {
-    "CZE": 0.6413,
-    "FIN": 6.7222,
-    "SWE": 4.5259,
-    "CHE": 1.644,
+    "CZE": 0.64127,
+    "FIN": 6.722236,
+    "SWE": 4.525941,
+    "CHE": 1.643964,
     "SVK": 0.0,
-    "DEU": 0.0719,
+    "DEU": 0.071885,
     "LVA": 0.0,
-    "DNK": 0.4979,
+    "DNK": 0.497875,
     "NOR": 0.0,
     "AUT": 0.0
    },
    "peer_median": 0.0,
-   "home_minus_median": 0.6413,
+   "home_minus_median": 0.64127,
    "home_to_median": null,
    "home_rank": 3,
    "peers_in_median": [
@@ -228,9 +228,9 @@
     "CZE": 0.0,
     "FIN": 0.0,
     "SWE": 0.0,
-    "CHE": 7.891,
+    "CHE": 7.891027,
     "SVK": 0.0,
-    "DEU": 0.5871,
+    "DEU": 0.587058,
     "LVA": 0.0,
     "DNK": 0.0,
     "NOR": 0.0,
@@ -268,18 +268,18 @@
    },
    "per_million": {
     "CZE": 0.0,
-    "FIN": 3.7149,
-    "SWE": 1.8858,
-    "CHE": 0.2192,
-    "SVK": 0.1849,
-    "DEU": 0.012,
-    "LVA": 0.542,
+    "FIN": 3.71492,
+    "SWE": 1.885809,
+    "CHE": 0.219195,
+    "SVK": 0.184863,
+    "DEU": 0.011981,
+    "LVA": 0.541977,
     "DNK": 0.0,
     "NOR": 0.0,
     "AUT": 0.0
    },
-   "peer_median": 0.1849,
-   "home_minus_median": -0.1849,
+   "peer_median": 0.184863,
+   "home_minus_median": -0.184863,
    "home_to_median": 0.0,
    "home_rank": 5,
    "peers_in_median": [
@@ -291,7 +291,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": 2.0179
+   "shortfall": 2.017936
   },
   {
    "position": "F",
@@ -309,20 +309,20 @@
     "AUT": 2
    },
    "per_million": {
-    "CZE": 0.2748,
-    "FIN": 13.9752,
-    "SWE": 3.3945,
-    "CHE": 0.6576,
-    "SVK": 0.1849,
-    "DEU": 0.0839,
-    "LVA": 0.542,
+    "CZE": 0.27483,
+    "FIN": 13.975175,
+    "SWE": 3.394456,
+    "CHE": 0.657586,
+    "SVK": 0.184863,
+    "DEU": 0.083865,
+    "LVA": 0.541977,
     "DNK": 0.0,
-    "NOR": 0.5331,
-    "AUT": 0.217
+    "NOR": 0.533106,
+    "AUT": 0.217015
    },
-   "peer_median": 0.5331,
-   "home_minus_median": -0.2583,
-   "home_to_median": 0.5155,
+   "peer_median": 0.533106,
+   "home_minus_median": -0.258276,
+   "home_to_median": 0.515526,
    "home_rank": 5,
    "peers_in_median": [
     "FIN",
@@ -333,14 +333,14 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": 2.8193
+   "shortfall": 2.819298
   },
   {
    "position": "F",
    "age_band": "26–29",
    "counts": {
     "CZE": 15,
-    "FIN": 62,
+    "FIN": 63,
     "SWE": 58,
     "CHE": 11,
     "SVK": 3,
@@ -351,20 +351,20 @@
     "AUT": 1
    },
    "per_million": {
-    "CZE": 1.3741,
-    "FIN": 10.9679,
-    "SWE": 5.4688,
-    "CHE": 1.2056,
-    "SVK": 0.5546,
-    "DEU": 0.0599,
-    "LVA": 1.6259,
-    "DNK": 0.6638,
-    "NOR": 0.1777,
-    "AUT": 0.1085
+    "CZE": 1.37415,
+    "FIN": 11.14476,
+    "SWE": 5.468846,
+    "CHE": 1.205574,
+    "SVK": 0.554589,
+    "DEU": 0.059904,
+    "LVA": 1.625932,
+    "DNK": 0.663834,
+    "NOR": 0.177702,
+    "AUT": 0.108507
    },
-   "peer_median": 0.6638,
-   "home_minus_median": 0.7103,
-   "home_to_median": 2.07,
+   "peer_median": 0.663834,
+   "home_minus_median": 0.710316,
+   "home_to_median": 2.070021,
    "home_rank": 4,
    "peers_in_median": [
     "FIN",
@@ -375,7 +375,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": -7.7537
+   "shortfall": -7.753695
   },
   {
    "position": "F",
@@ -383,7 +383,7 @@
    "counts": {
     "CZE": 10,
     "FIN": 58,
-    "SWE": 72,
+    "SWE": 73,
     "CHE": 19,
     "SVK": 2,
     "DEU": 19,
@@ -394,19 +394,19 @@
    },
    "per_million": {
     "CZE": 0.9161,
-    "FIN": 10.2603,
-    "SWE": 6.7889,
-    "CHE": 2.0824,
-    "SVK": 0.3697,
-    "DEU": 0.2276,
-    "LVA": 1.6259,
-    "DNK": 0.9958,
-    "NOR": 0.5331,
-    "AUT": 0.1085
+    "FIN": 10.260255,
+    "SWE": 6.883202,
+    "CHE": 2.082354,
+    "SVK": 0.369726,
+    "DEU": 0.227635,
+    "LVA": 1.625932,
+    "DNK": 0.995751,
+    "NOR": 0.533106,
+    "AUT": 0.108507
    },
-   "peer_median": 0.9958,
-   "home_minus_median": -0.0797,
-   "home_to_median": 0.92,
+   "peer_median": 0.995751,
+   "home_minus_median": -0.079651,
+   "home_to_median": 0.920009,
    "home_rank": 5,
    "peers_in_median": [
     "FIN",
@@ -417,7 +417,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": 0.8695
+   "shortfall": 0.869457
   },
   {
    "position": "F",
@@ -437,10 +437,10 @@
    "per_million": {
     "CZE": 0.0,
     "FIN": 0.0,
-    "SWE": 0.0943,
-    "CHE": 11.2886,
+    "SWE": 0.09429,
+    "CHE": 11.288552,
     "SVK": 0.0,
-    "DEU": 1.0543,
+    "DEU": 1.054307,
     "LVA": 0.0,
     "DNK": 0.0,
     "NOR": 0.0,
@@ -478,18 +478,18 @@
    },
    "per_million": {
     "CZE": 0.0,
-    "FIN": 10.2603,
-    "SWE": 2.923,
-    "CHE": 0.2192,
-    "SVK": 0.5546,
+    "FIN": 10.260255,
+    "SWE": 2.923004,
+    "CHE": 0.219195,
+    "SVK": 0.554589,
     "DEU": 0.0,
     "LVA": 0.0,
     "DNK": 0.0,
-    "NOR": 0.7108,
-    "AUT": 0.217
+    "NOR": 0.710808,
+    "AUT": 0.217015
    },
-   "peer_median": 0.5546,
-   "home_minus_median": -0.5546,
+   "peer_median": 0.554589,
+   "home_minus_median": -0.554589,
    "home_to_median": 0.0,
    "home_rank": 6,
    "peers_in_median": [
@@ -501,7 +501,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": 6.0538
+   "shortfall": 6.053809
   },
   {
    "position": "G",
@@ -519,20 +519,20 @@
     "AUT": 0
    },
    "per_million": {
-    "CZE": 0.2748,
-    "FIN": 0.8845,
-    "SWE": 0.5657,
-    "CHE": 0.2192,
+    "CZE": 0.27483,
+    "FIN": 0.884505,
+    "SWE": 0.565743,
+    "CHE": 0.219195,
     "SVK": 0.0,
-    "DEU": 0.012,
-    "LVA": 0.542,
+    "DEU": 0.011981,
+    "LVA": 0.541977,
     "DNK": 0.0,
-    "NOR": 0.1777,
+    "NOR": 0.177702,
     "AUT": 0.0
    },
-   "peer_median": 0.1777,
-   "home_minus_median": 0.0971,
-   "home_to_median": 1.5466,
+   "peer_median": 0.177702,
+   "home_minus_median": 0.097128,
+   "home_to_median": 1.546578,
    "home_rank": 4,
    "peers_in_median": [
     "FIN",
@@ -543,7 +543,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": -1.0602
+   "shortfall": -1.060234
   },
   {
    "position": "G",
@@ -561,20 +561,20 @@
     "AUT": 0
    },
    "per_million": {
-    "CZE": 0.3664,
-    "FIN": 1.4152,
-    "SWE": 0.9429,
-    "CHE": 0.2192,
+    "CZE": 0.36644,
+    "FIN": 1.415208,
+    "SWE": 0.942904,
+    "CHE": 0.219195,
     "SVK": 0.0,
-    "DEU": 0.012,
-    "LVA": 0.542,
+    "DEU": 0.011981,
+    "LVA": 0.541977,
     "DNK": 0.0,
-    "NOR": 0.1777,
+    "NOR": 0.177702,
     "AUT": 0.0
    },
-   "peer_median": 0.1777,
-   "home_minus_median": 0.1887,
-   "home_to_median": 2.0621,
+   "peer_median": 0.177702,
+   "home_minus_median": 0.188738,
+   "home_to_median": 2.062104,
    "home_rank": 4,
    "peers_in_median": [
     "FIN",
@@ -585,7 +585,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": -2.0602
+   "shortfall": -2.060234
   },
   {
    "position": "G",
@@ -603,20 +603,20 @@
     "AUT": 0
    },
    "per_million": {
-    "CZE": 0.3664,
-    "FIN": 1.9459,
-    "SWE": 1.2258,
-    "CHE": 0.6576,
-    "SVK": 0.1849,
-    "DEU": 0.0479,
-    "LVA": 1.6259,
-    "DNK": 0.166,
-    "NOR": 0.1777,
+    "CZE": 0.36644,
+    "FIN": 1.94591,
+    "SWE": 1.225776,
+    "CHE": 0.657586,
+    "SVK": 0.184863,
+    "DEU": 0.047923,
+    "LVA": 1.625932,
+    "DNK": 0.165958,
+    "NOR": 0.177702,
     "AUT": 0.0
    },
-   "peer_median": 0.1849,
-   "home_minus_median": 0.1816,
-   "home_to_median": 1.9822,
+   "peer_median": 0.184863,
+   "home_minus_median": 0.181577,
+   "home_to_median": 1.982223,
    "home_rank": 4,
    "peers_in_median": [
     "FIN",
@@ -627,7 +627,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": -1.9821
+   "shortfall": -1.982064
   },
   {
    "position": "G",
@@ -646,11 +646,11 @@
    },
    "per_million": {
     "CZE": 0.0,
-    "FIN": 0.3538,
-    "SWE": 0.0943,
+    "FIN": 0.353802,
+    "SWE": 0.09429,
     "CHE": 0.0,
     "SVK": 0.0,
-    "DEU": 0.1198,
+    "DEU": 0.119808,
     "LVA": 0.0,
     "DNK": 0.0,
     "NOR": 0.0,
@@ -688,8 +688,8 @@
    },
    "per_million": {
     "CZE": 0.0,
-    "FIN": 1.0614,
-    "SWE": 0.2829,
+    "FIN": 1.061406,
+    "SWE": 0.282871,
     "CHE": 0.0,
     "SVK": 0.0,
     "DEU": 0.0,
@@ -731,13 +731,13 @@
    "per_million": {
     "CZE": 0.0,
     "FIN": 0.0,
-    "SWE": 0.5657,
+    "SWE": 0.565743,
     "CHE": 0.0,
     "SVK": 0.0,
     "DEU": 0.0,
     "LVA": 0.0,
     "DNK": 0.0,
-    "NOR": 0.1777,
+    "NOR": 0.177702,
     "AUT": 0.0
    },
    "peer_median": 0.0,
@@ -773,13 +773,13 @@
    "per_million": {
     "CZE": 0.0,
     "FIN": 0.0,
-    "SWE": 0.3772,
+    "SWE": 0.377162,
     "CHE": 0.0,
     "SVK": 0.0,
     "DEU": 0.0,
     "LVA": 0.0,
     "DNK": 0.0,
-    "NOR": 0.1777,
+    "NOR": 0.177702,
     "AUT": 0.0
    },
    "peer_median": 0.0,
@@ -815,7 +815,7 @@
    "per_million": {
     "CZE": 0.0,
     "FIN": 0.0,
-    "SWE": 0.9429,
+    "SWE": 0.942904,
     "CHE": 0.0,
     "SVK": 0.0,
     "DEU": 0.0,
@@ -857,14 +857,14 @@
    "per_million": {
     "CZE": 0.0,
     "FIN": 0.0,
-    "SWE": 1.6029,
+    "SWE": 1.602937,
     "CHE": 0.0,
     "SVK": 0.0,
     "DEU": 0.0,
     "LVA": 0.0,
     "DNK": 0.0,
-    "NOR": 0.3554,
-    "AUT": 0.1085
+    "NOR": 0.355404,
+    "AUT": 0.108507
    },
    "peer_median": 0.0,
    "home_minus_median": 0.0,
@@ -898,20 +898,20 @@
     "AUT": 1
    },
    "per_million": {
-    "CZE": 1.2825,
-    "FIN": 23.8816,
-    "SWE": 13.1064,
-    "CHE": 10.631,
-    "SVK": 0.5546,
-    "DEU": 0.7548,
-    "LVA": 1.6259,
-    "DNK": 0.8298,
-    "NOR": 0.3554,
-    "AUT": 0.1085
+    "CZE": 1.28254,
+    "FIN": 23.881628,
+    "SWE": 13.106371,
+    "CHE": 10.630966,
+    "SVK": 0.554589,
+    "DEU": 0.754788,
+    "LVA": 1.625932,
+    "DNK": 0.829792,
+    "NOR": 0.355404,
+    "AUT": 0.108507
    },
-   "peer_median": 0.8298,
-   "home_minus_median": 0.4527,
-   "home_to_median": 1.5456,
+   "peer_median": 0.829792,
+   "home_minus_median": 0.452748,
+   "home_to_median": 1.545615,
    "home_rank": 5,
    "peers_in_median": [
     "FIN",
@@ -924,14 +924,14 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": -4.9421
+   "shortfall": -4.942119
   },
   {
    "position": "F",
    "counts": {
     "CZE": 28,
-    "FIN": 257,
-    "SWE": 198,
+    "FIN": 258,
+    "SWE": 199,
     "CHE": 141,
     "SVK": 9,
     "DEU": 119,
@@ -941,20 +941,20 @@
     "AUT": 6
    },
    "per_million": {
-    "CZE": 2.5651,
-    "FIN": 45.4635,
-    "SWE": 18.6695,
-    "CHE": 15.4533,
-    "SVK": 1.6638,
-    "DEU": 1.4257,
-    "LVA": 3.7938,
-    "DNK": 1.6596,
-    "NOR": 1.9547,
-    "AUT": 0.651
+    "CZE": 2.56508,
+    "FIN": 45.640444,
+    "SWE": 18.763798,
+    "CHE": 15.453261,
+    "SVK": 1.663768,
+    "DEU": 1.425711,
+    "LVA": 3.793841,
+    "DNK": 1.659585,
+    "NOR": 1.954722,
+    "AUT": 0.651045
    },
-   "peer_median": 1.9547,
-   "home_minus_median": 0.6104,
-   "home_to_median": 1.3122,
+   "peer_median": 1.954722,
+   "home_minus_median": 0.610358,
+   "home_to_median": 1.312248,
    "home_rank": 5,
    "peers_in_median": [
     "FIN",
@@ -967,7 +967,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": -6.6626
+   "shortfall": -6.662574
   },
   {
    "position": "G",
@@ -984,20 +984,20 @@
     "AUT": 0
    },
    "per_million": {
-    "CZE": 1.0077,
-    "FIN": 5.6608,
-    "SWE": 3.1116,
-    "CHE": 1.096,
-    "SVK": 0.1849,
-    "DEU": 0.1917,
-    "LVA": 2.7099,
-    "DNK": 0.166,
-    "NOR": 0.5331,
+    "CZE": 1.00771,
+    "FIN": 5.66083,
+    "SWE": 3.111585,
+    "CHE": 1.095976,
+    "SVK": 0.184863,
+    "DEU": 0.191692,
+    "LVA": 2.709886,
+    "DNK": 0.165958,
+    "NOR": 0.533106,
     "AUT": 0.0
    },
-   "peer_median": 0.5331,
-   "home_minus_median": 0.4746,
-   "home_to_median": 1.8903,
+   "peer_median": 0.533106,
+   "home_minus_median": 0.474604,
+   "home_to_median": 1.890262,
    "home_rank": 5,
    "peers_in_median": [
     "FIN",
@@ -1010,7 +1010,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": -5.1807
+   "shortfall": -5.180702
   },
   {
    "position": "unknown",
@@ -1029,14 +1029,14 @@
    "per_million": {
     "CZE": 0.0,
     "FIN": 0.0,
-    "SWE": 3.4887,
+    "SWE": 3.488746,
     "CHE": 0.0,
     "SVK": 0.0,
     "DEU": 0.0,
     "LVA": 0.0,
     "DNK": 0.0,
-    "NOR": 0.7108,
-    "AUT": 0.1085
+    "NOR": 0.710808,
+    "AUT": 0.108507
    },
    "peer_median": 0.0,
    "home_minus_median": 0.0,
@@ -1072,20 +1072,20 @@
     "AUT": 2
    },
    "per_million": {
-    "CZE": 0.8245,
-    "FIN": 22.2895,
-    "SWE": 7.1661,
-    "CHE": 1.096,
-    "SVK": 0.1849,
-    "DEU": 0.1438,
-    "LVA": 1.6259,
+    "CZE": 0.82449,
+    "FIN": 22.289519,
+    "SWE": 7.166073,
+    "CHE": 1.095976,
+    "SVK": 0.184863,
+    "DEU": 0.143769,
+    "LVA": 1.625932,
     "DNK": 0.0,
-    "NOR": 1.0662,
-    "AUT": 0.217
+    "NOR": 1.066212,
+    "AUT": 0.217015
    },
-   "peer_median": 1.0662,
-   "home_minus_median": -0.2417,
-   "home_to_median": 0.7733,
+   "peer_median": 1.066212,
+   "home_minus_median": -0.241722,
+   "home_to_median": 0.773289,
    "home_rank": 5,
    "peers_in_median": [
     "FIN",
@@ -1096,13 +1096,13 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": 2.6386
+   "shortfall": 2.638596
   },
   {
    "age_band": "26–29",
    "counts": {
     "CZE": 23,
-    "FIN": 104,
+    "FIN": 105,
     "SWE": 115,
     "CHE": 19,
     "SVK": 5,
@@ -1113,20 +1113,20 @@
     "AUT": 2
    },
    "per_million": {
-    "CZE": 2.107,
-    "FIN": 18.3977,
-    "SWE": 10.8434,
-    "CHE": 2.0824,
-    "SVK": 0.9243,
-    "DEU": 0.1078,
-    "LVA": 2.7099,
-    "DNK": 0.9958,
-    "NOR": 0.7108,
-    "AUT": 0.217
+    "CZE": 2.10703,
+    "FIN": 18.574599,
+    "SWE": 10.843401,
+    "CHE": 2.082354,
+    "SVK": 0.924316,
+    "DEU": 0.107827,
+    "LVA": 2.709886,
+    "DNK": 0.995751,
+    "NOR": 0.710808,
+    "AUT": 0.217015
    },
-   "peer_median": 0.9958,
-   "home_minus_median": 1.1113,
-   "home_to_median": 2.116,
+   "peer_median": 0.995751,
+   "home_minus_median": 1.111279,
+   "home_to_median": 2.116021,
    "home_rank": 4,
    "peers_in_median": [
     "FIN",
@@ -1137,14 +1137,14 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": -12.1305
+   "shortfall": -12.130543
   },
   {
    "age_band": "30+",
    "counts": {
     "CZE": 21,
     "FIN": 107,
-    "SWE": 143,
+    "SWE": 144,
     "CHE": 40,
     "SVK": 3,
     "DEU": 29,
@@ -1154,20 +1154,20 @@
     "AUT": 1
    },
    "per_million": {
-    "CZE": 1.9238,
-    "FIN": 18.9284,
-    "SWE": 13.4835,
-    "CHE": 4.3839,
-    "SVK": 0.5546,
-    "DEU": 0.3474,
-    "LVA": 3.2519,
-    "DNK": 1.6596,
-    "NOR": 0.7108,
-    "AUT": 0.1085
+    "CZE": 1.92381,
+    "FIN": 18.928401,
+    "SWE": 13.577823,
+    "CHE": 4.383904,
+    "SVK": 0.554589,
+    "DEU": 0.347442,
+    "LVA": 3.251863,
+    "DNK": 1.659585,
+    "NOR": 0.710808,
+    "AUT": 0.108507
    },
-   "peer_median": 1.6596,
-   "home_minus_median": 0.2642,
-   "home_to_median": 1.1592,
+   "peer_median": 1.659585,
+   "home_minus_median": 0.264225,
+   "home_to_median": 1.159212,
    "home_rank": 4,
    "peers_in_median": [
     "FIN",
@@ -1178,7 +1178,7 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": -2.8842
+   "shortfall": -2.884238
   },
   {
    "age_band": "unknown",
@@ -1196,11 +1196,11 @@
    },
    "per_million": {
     "CZE": 0.0,
-    "FIN": 0.3538,
-    "SWE": 0.1886,
-    "CHE": 19.1796,
+    "FIN": 0.353802,
+    "SWE": 0.188581,
+    "CHE": 19.179579,
     "SVK": 0.0,
-    "DEU": 1.7612,
+    "DEU": 1.761173,
     "LVA": 0.0,
     "DNK": 0.0,
     "NOR": 0.0,
@@ -1237,18 +1237,18 @@
    },
    "per_million": {
     "CZE": 0.0,
-    "FIN": 15.0366,
-    "SWE": 6.6946,
-    "CHE": 0.4384,
-    "SVK": 0.7395,
-    "DEU": 0.012,
-    "LVA": 0.542,
+    "FIN": 15.03658,
+    "SWE": 6.694621,
+    "CHE": 0.43839,
+    "SVK": 0.739453,
+    "DEU": 0.011981,
+    "LVA": 0.541977,
     "DNK": 0.0,
-    "NOR": 1.0662,
-    "AUT": 0.3255
+    "NOR": 1.066212,
+    "AUT": 0.325522
    },
-   "peer_median": 0.7395,
-   "home_minus_median": -0.7395,
+   "peer_median": 0.739453,
+   "home_minus_median": -0.739453,
    "home_to_median": 0.0,
    "home_rank": 7,
    "peers_in_median": [
@@ -1260,39 +1260,39 @@
     "NOR",
     "AUT"
    ],
-   "shortfall": 8.0717
+   "shortfall": 8.071745
   }
  ],
  "largest_shortfalls": [
   {
    "position": "F",
    "age_band": "≤21",
-   "shortfall": 6.0538,
+   "shortfall": 6.053809,
    "home_to_median": 0.0
   },
   {
    "position": "F",
    "age_band": "22–25",
-   "shortfall": 2.8193,
-   "home_to_median": 0.5155
+   "shortfall": 2.819298,
+   "home_to_median": 0.515526
   },
   {
    "position": "D",
    "age_band": "≤21",
-   "shortfall": 2.0179,
+   "shortfall": 2.017936,
    "home_to_median": 0.0
   },
   {
    "position": "F",
    "age_band": "30+",
-   "shortfall": 0.8695,
-   "home_to_median": 0.92
+   "shortfall": 0.869457,
+   "home_to_median": 0.920009
   },
   {
    "position": "D",
    "age_band": "26–29",
-   "shortfall": 0.0359,
-   "home_to_median": 0.9911
+   "shortfall": 0.035873,
+   "home_to_median": 0.991112
   }
  ]
 }
