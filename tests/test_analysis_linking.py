@@ -120,3 +120,24 @@ def test_report_counts(lk: linking.Linked) -> None:
 )
 def test_games_threshold(schedule: int, expected: int) -> None:
     assert common.games_threshold(schedule) == expected
+
+
+def test_twins_in_one_league_are_not_merged_as_name_variants() -> None:
+    ids = pd.DataFrame(
+        {
+            "league": ["Extraliga", "Extraliga", "NHL", "Liiga"],
+            "source_id": ["1", "2", "3", "4"],
+            "key": ["kevin klima", "kelly klima", "dan vladar", "daniel vladar"],
+            "key_initial": ["k klima", "k klima", "d vladar", "d vladar"],
+            "birth_date": ["1997-06-05", "1997-06-05", "1997-08-20", "1997-08-20"],
+            "birth_year": [1997.0, 1997.0, 1997.0, 1997.0],
+            "first": [2018, 2019, 2020, 2016],
+            "last": [2025, 2025, 2025, 2018],
+            "rows": [8, 7, 6, 3],
+            "roster_nat": [pd.NA] * 4,
+        }
+    )
+    out = linking.link(ids)
+    assert out.at[0, "person_idx"] != out.at[1, "person_idx"]  # twins, both in the Extraliga
+    assert out.at[2, "person_idx"] == out.at[3, "person_idx"]  # Dan / Daniel still link
+    assert out.at[3, "link_basis"] == "dob_name_variant"

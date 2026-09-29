@@ -461,6 +461,23 @@ def identity_table(stints: pd.DataFrame, rosters: pd.DataFrame | None) -> pd.Dat
     return ids.drop(columns="_order")
 
 
+def _twins_in_one_league(grp: pd.DataFrame) -> bool:
+    """Two different names with the same initial, surname and birth date playing in the
+    same league in overlapping seasons are two people (twins such as Kevin and Kelly
+    Klíma), not a first-name variant of one. Roster pages are left out: two spellings of
+    one player there are a Wikipedia variant, not a second person."""
+    for league, g in grp.groupby("league"):
+        if league == "roster" or g["key"].nunique() < 2:
+            continue
+        rows = list(g.itertuples())
+        for a in range(len(rows)):
+            for b in range(a + 1, len(rows)):
+                x, y = rows[a], rows[b]
+                if x.key != y.key and x.first <= y.last and y.first <= x.last:
+                    return True
+    return False
+
+
 def link(ids: pd.DataFrame) -> pd.DataFrame:
     """Adds `person_idx` and `link_basis` to the identity table (see module docstring)."""
     ids = ids.copy()
@@ -479,6 +496,8 @@ def link(ids: pd.DataFrame) -> pd.DataFrame:
     sub = ids[has_dob & ids["key_initial"].notna()]
     for _, idx in sub.groupby(["key_initial", "birth_date"]).groups.items():
         idx = list(idx)
+        if _twins_in_one_league(ids.loc[idx]):
+            continue
         for j in idx[1:]:
             if uf.find(idx[0]) != uf.find(j):
                 uf.union(idx[0], j)
