@@ -1,0 +1,2566 @@
+{
+ "source": "Eurostat demo_gind, indic_de=JAN (population on 1 January)",
+ "updated": "2026-07-21T23:00:00+0200",
+ "rows": [
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 1995,
+   "population": 7943489,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 1996,
+   "population": 7953067,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 1997,
+   "population": 7964966,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 1998,
+   "population": 7971116,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 1999,
+   "population": 7982461,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2000,
+   "population": 8002186,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2001,
+   "population": 8020946,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2002,
+   "population": 8063640,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2003,
+   "population": 8100273,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2004,
+   "population": 8142573,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2005,
+   "population": 8201359,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2006,
+   "population": 8254298,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2007,
+   "population": 8282984,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2008,
+   "population": 8307989,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2009,
+   "population": 8335003,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2010,
+   "population": 8351643,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2011,
+   "population": 8375164,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2012,
+   "population": 8408121,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2013,
+   "population": 8451860,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2014,
+   "population": 8507786,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2015,
+   "population": 8584926,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2016,
+   "population": 8700471,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2017,
+   "population": 8772865,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2018,
+   "population": 8822267,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2019,
+   "population": 8858775,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2020,
+   "population": 8901064,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2021,
+   "population": 8932664,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2022,
+   "population": 8978929,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2023,
+   "population": 9104772,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2024,
+   "population": 9158750,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2025,
+   "population": 9197213,
+   "flag": null
+  },
+  {
+   "geo": "AT",
+   "iso3": "AUT",
+   "nation": "Austria",
+   "year": 2026,
+   "population": 9215956,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 1995,
+   "population": 7019019,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 1996,
+   "population": 7062354,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 1997,
+   "population": 7081346,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 1998,
+   "population": 7096465,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 1999,
+   "population": 7123537,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2000,
+   "population": 7164444,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2001,
+   "population": 7204055,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2002,
+   "population": 7255653,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2003,
+   "population": 7313853,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2004,
+   "population": 7364148,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2005,
+   "population": 7415102,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2006,
+   "population": 7459128,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2007,
+   "population": 7508739,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2008,
+   "population": 7593494,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2009,
+   "population": 7701856,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2010,
+   "population": 7785806,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2011,
+   "population": 7870134,
+   "flag": "b"
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2012,
+   "population": 7954662,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2013,
+   "population": 8039060,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2014,
+   "population": 8139631,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2015,
+   "population": 8237666,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2016,
+   "population": 8327126,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2017,
+   "population": 8419550,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2018,
+   "population": 8484130,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2019,
+   "population": 8544527,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2020,
+   "population": 8606033,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2021,
+   "population": 8670300,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2022,
+   "population": 8738791,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2023,
+   "population": 8815385,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2024,
+   "population": 8962258,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2025,
+   "population": 9051029,
+   "flag": null
+  },
+  {
+   "geo": "CH",
+   "iso3": "CHE",
+   "nation": "Switzerland",
+   "year": 2026,
+   "population": 9124288,
+   "flag": "p"
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 1995,
+   "population": 10333161,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 1996,
+   "population": 10321344,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 1997,
+   "population": 10309137,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 1998,
+   "population": 10299125,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 1999,
+   "population": 10289621,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2000,
+   "population": 10278098,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2001,
+   "population": 10232027,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2002,
+   "population": 10201182,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2003,
+   "population": 10192649,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2004,
+   "population": 10195347,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2005,
+   "population": 10198855,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2006,
+   "population": 10223577,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2007,
+   "population": 10254233,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2008,
+   "population": 10343422,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2009,
+   "population": 10425783,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2010,
+   "population": 10462088,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2011,
+   "population": 10486731,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2012,
+   "population": 10505445,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2013,
+   "population": 10516125,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2014,
+   "population": 10512419,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2015,
+   "population": 10538275,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2016,
+   "population": 10553843,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2017,
+   "population": 10578820,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2018,
+   "population": 10610055,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2019,
+   "population": 10649800,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2020,
+   "population": 10693939,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2021,
+   "population": 10494836,
+   "flag": "b"
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2022,
+   "population": 10516707,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2023,
+   "population": 10827529,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2024,
+   "population": 10900555,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2025,
+   "population": 10909500,
+   "flag": null
+  },
+  {
+   "geo": "CZ",
+   "iso3": "CZE",
+   "nation": "Czechia",
+   "year": 2026,
+   "population": 10915839,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 1995,
+   "population": 81538603,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 1996,
+   "population": 81817499,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 1997,
+   "population": 82012162,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 1998,
+   "population": 82057379,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 1999,
+   "population": 82037011,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2000,
+   "population": 82163475,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2001,
+   "population": 82259540,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2002,
+   "population": 82440309,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2003,
+   "population": 82536680,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2004,
+   "population": 82531671,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2005,
+   "population": 82500849,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2006,
+   "population": 82437995,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2007,
+   "population": 82314906,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2008,
+   "population": 82217837,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2009,
+   "population": 82002356,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2010,
+   "population": 81802257,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2011,
+   "population": 80222065,
+   "flag": "b"
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2012,
+   "population": 80327900,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2013,
+   "population": 80523746,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2014,
+   "population": 80767463,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2015,
+   "population": 81197537,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2016,
+   "population": 82175684,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2017,
+   "population": 82521653,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2018,
+   "population": 82792351,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2019,
+   "population": 83019213,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2020,
+   "population": 83166711,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2021,
+   "population": 83155031,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2022,
+   "population": 83237124,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2023,
+   "population": 83118501,
+   "flag": "b"
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2024,
+   "population": 83456045,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2025,
+   "population": 83577140,
+   "flag": null
+  },
+  {
+   "geo": "DE",
+   "iso3": "DEU",
+   "nation": "Germany",
+   "year": 2026,
+   "population": 83467117,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 1995,
+   "population": 5215718,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 1996,
+   "population": 5251027,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 1997,
+   "population": 5275121,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 1998,
+   "population": 5294860,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 1999,
+   "population": 5313577,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2000,
+   "population": 5330020,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2001,
+   "population": 5349212,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2002,
+   "population": 5368354,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2003,
+   "population": 5383507,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2004,
+   "population": 5397640,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2005,
+   "population": 5411405,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2006,
+   "population": 5427459,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2007,
+   "population": 5447084,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2008,
+   "population": 5475791,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2009,
+   "population": 5511451,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2010,
+   "population": 5534738,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2011,
+   "population": 5560628,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2012,
+   "population": 5580516,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2013,
+   "population": 5602628,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2014,
+   "population": 5627235,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2015,
+   "population": 5659715,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2016,
+   "population": 5707251,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2017,
+   "population": 5748769,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2018,
+   "population": 5781190,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2019,
+   "population": 5806081,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2020,
+   "population": 5822763,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2021,
+   "population": 5840045,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2022,
+   "population": 5873420,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2023,
+   "population": 5932654,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2024,
+   "population": 5961249,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2025,
+   "population": 5992734,
+   "flag": null
+  },
+  {
+   "geo": "DK",
+   "iso3": "DNK",
+   "nation": "Denmark",
+   "year": 2026,
+   "population": 6025603,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 1995,
+   "population": 5098754,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 1996,
+   "population": 5116826,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 1997,
+   "population": 5132320,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 1998,
+   "population": 5147349,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 1999,
+   "population": 5159646,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2000,
+   "population": 5171302,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2001,
+   "population": 5181115,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2002,
+   "population": 5194901,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2003,
+   "population": 5206295,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2004,
+   "population": 5219732,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2005,
+   "population": 5236611,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2006,
+   "population": 5255580,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2007,
+   "population": 5276955,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2008,
+   "population": 5300484,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2009,
+   "population": 5326314,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2010,
+   "population": 5351427,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2011,
+   "population": 5375276,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2012,
+   "population": 5401267,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2013,
+   "population": 5426674,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2014,
+   "population": 5451270,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2015,
+   "population": 5471753,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2016,
+   "population": 5487308,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2017,
+   "population": 5503297,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2018,
+   "population": 5513130,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2019,
+   "population": 5517919,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2020,
+   "population": 5525292,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2021,
+   "population": 5533793,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2022,
+   "population": 5548241,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2023,
+   "population": 5563970,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2024,
+   "population": 5603851,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2025,
+   "population": 5635971,
+   "flag": null
+  },
+  {
+   "geo": "FI",
+   "iso3": "FIN",
+   "nation": "Finland",
+   "year": 2026,
+   "population": 5652881,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 1995,
+   "population": 2500580,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 1996,
+   "population": 2469531,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 1997,
+   "population": 2444912,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 1998,
+   "population": 2420789,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 1999,
+   "population": 2399248,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2000,
+   "population": 2381715,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2001,
+   "population": 2353384,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2002,
+   "population": 2320956,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2003,
+   "population": 2299390,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2004,
+   "population": 2276520,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2005,
+   "population": 2249724,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2006,
+   "population": 2227874,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2007,
+   "population": 2208840,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2008,
+   "population": 2191810,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2009,
+   "population": 2162834,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2010,
+   "population": 2120504,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2011,
+   "population": 2074605,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2012,
+   "population": 2044813,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2013,
+   "population": 2023825,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2014,
+   "population": 2001468,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2015,
+   "population": 1986096,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2016,
+   "population": 1968957,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2017,
+   "population": 1950116,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2018,
+   "population": 1934379,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2019,
+   "population": 1919968,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2020,
+   "population": 1907675,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2021,
+   "population": 1893223,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2022,
+   "population": 1875757,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2023,
+   "population": 1895239,
+   "flag": "b"
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2024,
+   "population": 1878575,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2025,
+   "population": 1860565,
+   "flag": null
+  },
+  {
+   "geo": "LV",
+   "iso3": "LVA",
+   "nation": "Latvia",
+   "year": 2026,
+   "population": 1845096,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 1995,
+   "population": 4348410,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 1996,
+   "population": 4369957,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 1997,
+   "population": 4392714,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 1998,
+   "population": 4417599,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 1999,
+   "population": 4445329,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2000,
+   "population": 4478497,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2001,
+   "population": 4503436,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2002,
+   "population": 4524066,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2003,
+   "population": 4552252,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2004,
+   "population": 4577457,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2005,
+   "population": 4606363,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2006,
+   "population": 4640219,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2007,
+   "population": 4681134,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2008,
+   "population": 4737171,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2009,
+   "population": 4799252,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2010,
+   "population": 4858199,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2011,
+   "population": 4920305,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2012,
+   "population": 4985870,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2013,
+   "population": 5051275,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2014,
+   "population": 5109056,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2015,
+   "population": 5165802,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2016,
+   "population": 5213985,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2017,
+   "population": 5258317,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2018,
+   "population": 5295619,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2019,
+   "population": 5328212,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2020,
+   "population": 5367580,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2021,
+   "population": 5391369,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2022,
+   "population": 5425270,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2023,
+   "population": 5488984,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2024,
+   "population": 5550203,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2025,
+   "population": 5594340,
+   "flag": null
+  },
+  {
+   "geo": "NO",
+   "iso3": "NOR",
+   "nation": "Norway",
+   "year": 2026,
+   "population": 5627400,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 1995,
+   "population": 5356207,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 1996,
+   "population": 5367790,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 1997,
+   "population": 5378932,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 1998,
+   "population": 5387650,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 1999,
+   "population": 5393382,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2000,
+   "population": 5398657,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2001,
+   "population": 5378783,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2002,
+   "population": 5378951,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2003,
+   "population": 5374873,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2004,
+   "population": 5371875,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2005,
+   "population": 5372685,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2006,
+   "population": 5372928,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2007,
+   "population": 5373180,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2008,
+   "population": 5376064,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2009,
+   "population": 5382401,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2010,
+   "population": 5390410,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2011,
+   "population": 5392446,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2012,
+   "population": 5404322,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2013,
+   "population": 5410836,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2014,
+   "population": 5415949,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2015,
+   "population": 5421349,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2016,
+   "population": 5426252,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2017,
+   "population": 5435343,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2018,
+   "population": 5443120,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2019,
+   "population": 5450421,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2020,
+   "population": 5457873,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2021,
+   "population": 5459781,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2022,
+   "population": 5434712,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2023,
+   "population": 5428792,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2024,
+   "population": 5424687,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2025,
+   "population": 5419451,
+   "flag": null
+  },
+  {
+   "geo": "SK",
+   "iso3": "SVK",
+   "nation": "Slovakia",
+   "year": 2026,
+   "population": 5409407,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 1995,
+   "population": 8816381,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 1996,
+   "population": 8837496,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 1997,
+   "population": 8844499,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 1998,
+   "population": 8847625,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 1999,
+   "population": 8854322,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2000,
+   "population": 8861426,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2001,
+   "population": 8882792,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2002,
+   "population": 8909128,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2003,
+   "population": 8940788,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2004,
+   "population": 8975670,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2005,
+   "population": 9011392,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2006,
+   "population": 9047752,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2007,
+   "population": 9113257,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2008,
+   "population": 9182927,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2009,
+   "population": 9256347,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2010,
+   "population": 9340682,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2011,
+   "population": 9415570,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2012,
+   "population": 9482855,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2013,
+   "population": 9555893,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2014,
+   "population": 9644864,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2015,
+   "population": 9747355,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2016,
+   "population": 9851017,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2017,
+   "population": 9995153,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2018,
+   "population": 10120242,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2019,
+   "population": 10230185,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2020,
+   "population": 10327589,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2021,
+   "population": 10379295,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2022,
+   "population": 10452326,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2023,
+   "population": 10521556,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2024,
+   "population": 10551707,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2025,
+   "population": 10587710,
+   "flag": null
+  },
+  {
+   "geo": "SE",
+   "iso3": "SWE",
+   "nation": "Sweden",
+   "year": 2026,
+   "population": 10605529,
+   "flag": null
+  }
+ ]
+}

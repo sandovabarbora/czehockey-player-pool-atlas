@@ -1,4 +1,5 @@
-.PHONY: help install install-browsers fetch features reduce render all clean test lint check
+.PHONY: help install install-browsers fetch features reduce render all clean test lint check \
+	fetch-nhl fetch-eurostat verify-snapshot restore-snapshot
 
 PYTHON ?= python
 VENV   ?= .venv
@@ -9,6 +10,10 @@ help:
 	@echo "  install          Create .venv, install deps with uv (or pip fallback)"
 	@echo "  install-browsers Install Playwright browsers (Chromium only)"
 	@echo "  fetch            Run all fetchers (NHL, MoneyPuck, Liiga, SHL, NL, Extraliga, IIHF)"
+	@echo "  fetch-nhl        NHL skaters, goalies and careers 1995/96-2025/26 -> data/snapshot/"
+	@echo "  fetch-eurostat   Eurostat 1 January population 1995-2026 -> data/snapshot/"
+	@echo "  verify-snapshot  Check data/snapshot/ against its SHA256SUMS"
+	@echo "  restore-snapshot Copy data/snapshot/ into data/processed/ (never overwrites newer files)"
 	@echo "  features         Build position-specific feature vectors"
 	@echo "  reduce           Run PCA + UMAP + KMeans"
 	@echo "  render           Render HTML + PDF report"
@@ -37,6 +42,18 @@ fetch:
 	$(ACT) python -m src.fetch_extraliga
 	$(ACT) python -m src.fetch_iihf
 	$(ACT) python -m src.crosswalk
+
+fetch-nhl:
+	$(ACT) python -m src.fetch.nhl
+
+fetch-eurostat:
+	$(ACT) python -m src.fetch.eurostat
+
+verify-snapshot:
+	$(ACT) python -m src.snapshot verify
+
+restore-snapshot:
+	$(ACT) python -m src.snapshot restore
 
 features:
 	$(ACT) python -m src.features_forwards
