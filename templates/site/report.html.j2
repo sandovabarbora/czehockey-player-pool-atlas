@@ -287,7 +287,9 @@
         <div><dt>{{ s.league }} games, {{ s.season }}</dt><dd>{{ num(s.games) }}</dd></div>
         <div><dt>Points</dt><dd>{{ num(s.points) }} <span class="muted">{{ num(s.goals) }} goals, {{ num(s.assists) }} assists</span></dd></div>
         <div><dt>Ice time per game</dt><dd>{{ mmss(s.toi_per_game_s) }}{% if a %} <span class="muted">median {{ mmss(a.median_toi_per_game_s) }}</span>{% endif %}</dd></div>
-        {% if a %}<div><dt>Points per game</dt><dd>{{ f2(a.points_per_game) }} <span class="muted">median {{ f2(a.median_points_per_game) }}</span></dd></div>{% endif %}
+        {% if a %}
+        <div><dt>Points per game</dt><dd>{{ f2(a.points_per_game) }} <span class="muted">median {{ f2(a.median_points_per_game) }}</span></dd></div>
+        {% endif %}
       </dl>
       <p class="capita-note">From the atlas's pool data, {{ s.league }} {{ s.season }}. The median is over all {{ s.league }} {{ cp.position_word }} who reached the games threshold that season, as in <a href="#q5">question 5</a>. His seasons since {{ pool.window.split('–')[0] }} are on the <a href="atlas/">pool page</a>.</p>
 
