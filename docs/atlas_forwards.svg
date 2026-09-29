@@ -1618,7 +1618,7 @@ z
      <use xlink:href="#C0_0_b7848ba6f6" x="118.408714" y="245.775235" style="fill: none; stroke: #1f5fd6; stroke-opacity: 0.9; stroke-width: 1.35"/>
     </g>
    </g>
-   <g id="legend_1">
+   <g id="legend_1" transform="translate(0 -305)">
     <g id="PathCollection_6">
      <g>
       <use xlink:href="#m365e0dd00b" x="390.465591" y="394.030703" style="fill: #111111; fill-opacity: 0.78; stroke: #ffffff; stroke-opacity: 0.78; stroke-width: 0.55"/>
