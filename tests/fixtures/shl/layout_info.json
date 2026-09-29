@@ -1,0 +1,496 @@
+[
+ {
+  "seasonSeriesGameTypeTeams": [
+   {
+    "state": "closed",
+    "ssgtUuid": "o6ewwfpus7",
+    "gameType": {
+     "uuid": "qQ9-af37Ti40B",
+     "code": "regular",
+     "deleted": false,
+     "name": "Grundserie"
+    },
+    "season": {
+     "uuid": "xs4m9qupsi",
+     "code": "2025",
+     "deleted": false,
+     "name": "2025/2026"
+    },
+    "series": {
+     "uuid": "qQ9-9397drVEh",
+     "code": "CHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2024-01-02T09:33:30.000Z",
+     "names": [
+      {
+       "language": "en",
+       "translation": "CHL"
+      },
+      {
+       "language": "sv",
+       "translation": "CHL"
+      }
+     ],
+     "name": "CHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "fg2i6uu9dt",
+    "gameType": {
+     "uuid": "qQ9-7debq38kX",
+     "code": "playoff",
+     "deleted": false,
+     "name": "Slutspel"
+    },
+    "season": {
+     "uuid": "qeb-73bZkIm9A",
+     "code": "2024",
+     "deleted": false,
+     "name": "2024/2025"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "iuzqg7dqk9",
+    "gameType": {
+     "uuid": "qQ9-af37Ti40B",
+     "code": "regular",
+     "deleted": false,
+     "name": "Grundserie"
+    },
+    "season": {
+     "uuid": "xs4m9qupsi",
+     "code": "2025",
+     "deleted": false,
+     "name": "2025/2026"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "jjruyvpqht",
+    "gameType": {
+     "uuid": "qRf-347BaDIOc",
+     "code": "qualdown",
+     "deleted": false,
+     "name": "Kvalspel nedflyttning"
+    },
+    "season": {
+     "uuid": "xs4m9qupsi",
+     "code": "2025",
+     "deleted": false,
+     "name": "2025/2026"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "kr8hte1o7s",
+    "gameType": {
+     "uuid": "qRf-347BaDIOc",
+     "code": "qualdown",
+     "deleted": false,
+     "name": "Kvalspel nedflyttning"
+    },
+    "season": {
+     "uuid": "qeb-73bZkIm9A",
+     "code": "2024",
+     "deleted": false,
+     "name": "2024/2025"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "qeb-73qtP8d19",
+    "gameType": {
+     "uuid": "qQ9-af37Ti40B",
+     "code": "regular",
+     "deleted": false,
+     "name": "Grundserie"
+    },
+    "season": {
+     "uuid": "qeb-73bZkIm9A",
+     "code": "2024",
+     "deleted": false,
+     "name": "2024/2025"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "zg0pa4po75",
+    "gameType": {
+     "uuid": "qQ9-7debq38kX",
+     "code": "playoff",
+     "deleted": false,
+     "name": "Slutspel"
+    },
+    "season": {
+     "uuid": "xs4m9qupsi",
+     "code": "2025",
+     "deleted": false,
+     "name": "2025/2026"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "o6ewwfpus7",
+    "gameType": {
+     "uuid": "qQ9-af37Ti40B",
+     "code": "regular",
+     "deleted": false,
+     "name": "Grundserie"
+    },
+    "season": {
+     "uuid": "xs4m9qupsi",
+     "code": "2025",
+     "deleted": false,
+     "name": "2025/2026"
+    },
+    "series": {
+     "uuid": "qQ9-9397drVEh",
+     "code": "CHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2024-01-02T09:33:30.000Z",
+     "names": [
+      {
+       "language": "en",
+       "translation": "CHL"
+      },
+      {
+       "language": "sv",
+       "translation": "CHL"
+      }
+     ],
+     "name": "CHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "fg2i6uu9dt",
+    "gameType": {
+     "uuid": "qQ9-7debq38kX",
+     "code": "playoff",
+     "deleted": false,
+     "name": "Slutspel"
+    },
+    "season": {
+     "uuid": "qeb-73bZkIm9A",
+     "code": "2024",
+     "deleted": false,
+     "name": "2024/2025"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "iuzqg7dqk9",
+    "gameType": {
+     "uuid": "qQ9-af37Ti40B",
+     "code": "regular",
+     "deleted": false,
+     "name": "Grundserie"
+    },
+    "season": {
+     "uuid": "xs4m9qupsi",
+     "code": "2025",
+     "deleted": false,
+     "name": "2025/2026"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "jjruyvpqht",
+    "gameType": {
+     "uuid": "qRf-347BaDIOc",
+     "code": "qualdown",
+     "deleted": false,
+     "name": "Kvalspel nedflyttning"
+    },
+    "season": {
+     "uuid": "xs4m9qupsi",
+     "code": "2025",
+     "deleted": false,
+     "name": "2025/2026"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "kr8hte1o7s",
+    "gameType": {
+     "uuid": "qRf-347BaDIOc",
+     "code": "qualdown",
+     "deleted": false,
+     "name": "Kvalspel nedflyttning"
+    },
+    "season": {
+     "uuid": "qeb-73bZkIm9A",
+     "code": "2024",
+     "deleted": false,
+     "name": "2024/2025"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "qeb-73qtP8d19",
+    "gameType": {
+     "uuid": "qQ9-af37Ti40B",
+     "code": "regular",
+     "deleted": false,
+     "name": "Grundserie"
+    },
+    "season": {
+     "uuid": "qeb-73bZkIm9A",
+     "code": "2024",
+     "deleted": false,
+     "name": "2024/2025"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   },
+   {
+    "state": "closed",
+    "ssgtUuid": "zg0pa4po75",
+    "gameType": {
+     "uuid": "qQ9-7debq38kX",
+     "code": "playoff",
+     "deleted": false,
+     "name": "Slutspel"
+    },
+    "season": {
+     "uuid": "xs4m9qupsi",
+     "code": "2025",
+     "deleted": false,
+     "name": "2025/2026"
+    },
+    "series": {
+     "uuid": "qQ9-bb0bzEWUk",
+     "code": "SHL",
+     "createdAt": null,
+     "createdBy": null,
+     "deleted": false,
+     "lastModified": "2023-03-01T13:47:40.000Z",
+     "names": [
+      {
+       "language": "sv",
+       "translation": "SHL"
+      },
+      {
+       "language": "en",
+       "translation": "SHL"
+      }
+     ],
+     "name": "SHL"
+    }
+   }
+  ]
+ }
+]

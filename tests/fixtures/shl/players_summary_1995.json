@@ -1,0 +1,232 @@
+[
+ {
+  "dataColumns": [
+   {
+    "name": "Rank",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "Player",
+    "type": "string",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "Team",
+    "type": "string",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "GP",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "TP",
+    "type": "integer",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "G",
+    "type": "integer",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "A",
+    "type": "integer",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "PIM",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "GWG",
+    "type": "integer",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "PPG",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "SOG",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "Hits",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "BkS",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "Plus",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "Minus",
+    "type": "integer",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "PlusMinus",
+    "type": "integer",
+    "highlighted": true,
+    "group": ""
+   },
+   {
+    "name": "TOI_GP",
+    "type": "string",
+    "highlighted": false,
+    "group": ""
+   },
+   {
+    "name": "TPPG",
+    "type": "float_two",
+    "highlighted": false,
+    "group": ""
+   }
+  ],
+  "stats": [
+   {
+    "Rank": 223,
+    "Player": 0,
+    "Team": 0,
+    "GP": 40,
+    "TP": 2,
+    "G": 0,
+    "A": 2,
+    "PIM": 0,
+    "GWG": 0,
+    "PPG": 0,
+    "SOG": 0,
+    "Hits": 0,
+    "BkS": 0,
+    "Plus": 0,
+    "Minus": 0,
+    "PlusMinus": 0,
+    "TOI_GP": null,
+    "TPPG": "0.05",
+    "info": {
+     "fullName": "Jarmo Myllys",
+     "firstName": "Jarmo",
+     "lastName": "Myllys",
+     "birthDate": "N/A",
+     "nationality": "N/A",
+     "number": 0,
+     "position": "Gk",
+     "gender": "N/A",
+     "team": {
+      "uuid": "1a71-1a71gTHKh",
+      "name": "Luleå Hockey",
+      "code": "LHF",
+      "siteDisplayName": "Luleå Hockey"
+     },
+     "teamCode": "LHF",
+     "teamId": "1a71-1a71gTHKh"
+    }
+   },
+   {
+    "Rank": 235,
+    "Player": 0,
+    "Team": 0,
+    "GP": 22,
+    "TP": 1,
+    "G": 0,
+    "A": 1,
+    "PIM": 0,
+    "GWG": 0,
+    "PPG": 0,
+    "SOG": 0,
+    "Hits": 0,
+    "BkS": 0,
+    "Plus": 0,
+    "Minus": 0,
+    "PlusMinus": 0,
+    "TOI_GP": null,
+    "TPPG": "0.05",
+    "info": {
+     "fullName": "Mikael Sundlöv",
+     "firstName": "Mikael",
+     "lastName": "Sundlöv",
+     "birthDate": "N/A",
+     "nationality": "N/A",
+     "number": 0,
+     "position": "Gk",
+     "gender": "N/A",
+     "team": {
+      "uuid": "1ab8-1ab8bfj7N",
+      "name": "Brynäs IF",
+      "code": "BIF",
+      "siteDisplayName": "Brynäs IF"
+     },
+     "teamCode": "BIF",
+     "teamId": "1ab8-1ab8bfj7N"
+    }
+   },
+   {
+    "Rank": 9,
+    "Player": 0,
+    "Team": 0,
+    "GP": 40,
+    "TP": 34,
+    "G": 15,
+    "A": 19,
+    "PIM": 61,
+    "GWG": 2,
+    "PPG": 0,
+    "SOG": 0,
+    "Hits": 0,
+    "BkS": 0,
+    "Plus": 0,
+    "Minus": 0,
+    "PlusMinus": 0,
+    "TOI_GP": null,
+    "TPPG": "0.85",
+    "info": {
+     "fullName": "Petter Nilsson",
+     "firstName": "Petter",
+     "lastName": "Nilsson",
+     "birthDate": "N/A",
+     "nationality": "N/A",
+     "number": 0,
+     "position": "D",
+     "gender": "N/A",
+     "team": {
+      "uuid": "1a71-1a71gTHKh",
+      "name": "Luleå Hockey",
+      "code": "LHF",
+      "siteDisplayName": "Luleå Hockey"
+     },
+     "teamCode": "LHF",
+     "teamId": "1a71-1a71gTHKh"
+    }
+   }
+  ],
+  "players": {},
+  "totalCount": 3
+ }
+]
