@@ -6,9 +6,8 @@
  * oxblood (oklch ~0.45 0.13 28) is the secondary accent reserved for the CZE
  * row in benchmarks and the hero rank-pull. Cream remains the page surface.
  *
- * Typography: Spectral (display, body where dramatic) + Bricolage Grotesque
- * (body, UI labels) + JetBrains Mono (tabular cells, code). Reflex defaults
- * (Georgia, system sans) replaced.
+ * Typography (A24 register, 2026-09-29): Inter Tight 400/500 for everything;
+ * JetBrains Mono for small labels, source lines and tables.
  *
  * References that informed this register: Financial Times Visual Storytelling,
  * OECD Economic Outlook interactives, Reportér.cz long-form layout.
@@ -23,60 +22,61 @@
    Tokens
    ========================================================================= */
 :root {
-  /* Concrete register (2026-09-21), from bsandova.com -- the author's own
-     system: concrete dark ground, chalk text, hairlines, one acid accent,
-     a light serif for what is said and mono capitals for what labels it.
-     Token NAMES are kept from the cream / navy / oxblood original so no
-     selector had to change; they name roles now. cream-* is the ground,
-     oxblood-* the acid accent (the home nation, always), navy-* the cool
-     neutral used for the comparison countries and links. src/figstyle.py
-     carries the same values as hex for the figures. */
-  --navy-900: #111111;   /* hero ground */
-  --navy-800: #161616;
-  --navy-700: #F2F2EE;   /* "hot": peer A, links, the brightest text */
-  --navy-500: #DCDCD6;
-  --navy-300: #7E7E78;
-  --navy-100: #2A2A27;
+  /* A24 register (2026-09-29), from bsandova.com: white paper, black type,
+     hairlines, one colour held from the hero photograph (the jersey blue of
+     img/hockey.jpg) for the home nation, and nothing else. Token NAMES are
+     kept from the cream / navy / oxblood original so no selector had to
+     change; they name roles now. cream-* is the paper, oxblood-* the held
+     colour (the home nation, always), navy-* the ink and the grey used for
+     the comparison countries. site/svg_theme.py carries the same values as
+     hex for the figures. */
+  --navy-900: #0B0B0B;   /* the ground under the hero photograph */
+  --navy-800: #111111;
+  --navy-700: #111111;   /* ink: peer A, links, the strongest text */
+  --navy-500: #444444;
+  --navy-300: #8A8A8A;   /* grey: the second comparison country */
+  --navy-100: #ECECEA;
 
-  /* Ground ramp */
-  --cream-50:  #161616;   /* = figstyle.CREAM */
-  --cream-100: #1F1F1F;   /* = figstyle.CREAM_TINT */
-  --cream-200: #262624;   /* = figstyle.GRID */
+  /* Paper */
+  --cream-50:  #FFFFFF;   /* = svg_theme.PAPER */
+  --cream-100: #F6F6F4;   /* = svg_theme.PAPER_TINT */
+  --cream-200: #ECECEA;   /* = svg_theme.GRID */
 
-  /* Acid (the home nation, always) */
-  --oxblood-700: #D6FF3A;
-  --oxblood-500: #E3FF6B;
-  --oxblood-200: #3F4A12;
+  /* Held colour (the home nation, always); 5.7:1 on the paper */
+  --oxblood-700: #1F5FD6;
+  --oxblood-500: #3D78E6;
+  --oxblood-200: #E3ECFB;
 
-  /* Chalk neutrals */
-  --ink:       #DCDCD6;
-  --ink-soft:  #B9B9B3;
-  --muted:     #8B8B85;   /* 5.3:1 on the ground (AA); bsandova.com's #7E7E78 was 4.4 */
-  --rule:      #3A3A36;   /* = figstyle.RULE */
-  --rule-soft: #2C2C29;
+  /* Ink and neutrals */
+  --ink:       #111111;
+  --ink-soft:  #333333;
+  --muted:     #666666;   /* 5.7:1 on the paper */
+  --rule:      #D9D9D5;   /* = svg_theme.RULE */
+  --rule-soft: #ECECEA;
 
-  /* Sequencer colours for multi-category marks (tiers, clusters) */
-  --seq-orange: #FF6A3D;
-  --seq-mint:   #7ED9A6;
-  --seq-violet: #B78CFF;
+  /* Categorical colours, only where more than two categories are needed (tiers, clusters) */
+  --seq-orange: #C8531F;
+  --seq-mint:   #2A8C8C;
+  --seq-violet: #6B4BB8;
 
-  /* On-hero text variants */
-  --cream-on-navy:       #F2F2EE;
-  --cream-on-navy-soft:  #DCDCD6;
-  --cream-on-navy-muted: #7E7E78;
-  --navy-divider:        #3A3A36;
+  /* "On-navy" text: ink on the paper; white only over the hero photograph
+     (modern.css redefines these inside .hero and the dark tooltip) */
+  --cream-on-navy:       #111111;
+  --cream-on-navy-soft:  #333333;
+  --cream-on-navy-muted: #666666;
+  --navy-divider:        #D9D9D5;
 
   /* Semantic */
   --page-bg: var(--cream-50);
-  --surface: #1F1F1F;
+  --surface: #F6F6F4;
   --text:    var(--ink);
   --link:    var(--navy-700);
   --accent:  var(--navy-700);
   --accent-2: var(--oxblood-700);
 
   /* Typography */
-  --font-display: "Spectral", "Source Serif 4", Cambria, Georgia, serif;
-  --font-sans:    "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-sans:    "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   --font-mono:    "JetBrains Mono", "SF Mono", Menlo, Monaco, monospace;
 
   /* Spacing scale (1.5× modular) */
@@ -404,7 +404,7 @@ h2[id], h3[id] { scroll-margin-top: 2rem; }
   right: max(1.4rem, calc((100vw - var(--container)) / 2 + 1.4rem));
   z-index: 2;
   padding: 0.55rem 0.85rem 0.5rem;
-  background: oklch(0.155 0.05 252);
+  background: var(--navy-900);
   border: 1px solid var(--navy-divider);
   font-family: var(--font-mono);
   font-size: 0.68rem;

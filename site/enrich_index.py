@@ -66,7 +66,7 @@ def sub(pat, repl, want, flags=0):
 
 # ---------------------------------------------------------------- head
 sub(r'<link href="https://fonts\.googleapis\.com/css2\?family=Spectral[^"]*" rel="stylesheet">',
-    '<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">',
+    '<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">',
     1)
 sub(r'<link rel="stylesheet" href="style\.css">',
     '<link rel="stylesheet" href="style.css">\n  <link rel="stylesheet" href="modern.css">\n'
@@ -119,16 +119,19 @@ cast_html = f'''
 sub(r'(<dl class="masthead-meta">.*?</dl>\n)', lambda m: m.group(1) + cast_html, 1, re.S)
 
 
-# ---------------------------------------------------------------- hero: asterisk rule + posterised cut-out
+# ---------------------------------------------------------------- hero: asterisk rule + the photograph's credit
 sub(r'<span class="hero-num-figure">1,38</span>',
     '<span class="hero-num-figure">1,38<span class="ast" aria-hidden="true">*</span></span>', 1)
 sub(r'(\s*)<dl class="hero-meta">',
     lambda m: (m.group(1) + '<p class="hero-footnote">* 15 hráčů s birth_country = CZE na soupiskách NHL 2025/26 '
                '(NHL Stats API) ÷ 10,9 M obyvatel (odhad 2024); peer země počítány stejně. '
                '<a href="#metodologie">Metodologie</a>.</p>' + m.group(1) + '<dl class="hero-meta">'), 1)
-_pasta = player("David Pastrňák")
+# the hero is a film (modern.css): docs/img/hockey.jpg, black and white with the
+# jersey blue held; the credit is the one bsandova.com gives the same photograph
+HERO_CREDIT = ('<p class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Jake_Levin_(Air_Force_Falcon%27s_men%27s_ice_hockey)_during_game_against_Bentley_Falcons_men%27s_ice_hockey_at_Cadet_Arena_in_Colorado_Springs_on_November_9,_2018_(45170233234).jpg">'
+               'U.S. Air Force Academy</a> · public domain, colour held</p>')
 sub(r'<section class="hero" id="shrnuti">',
-    f'<section class="hero" id="shrnuti">\n  <img class="hero-cutout" src="{_pasta["headshot"]}" alt="" aria-hidden="true" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">', 1)
+    '<section class="hero" id="shrnuti">\n  ' + HERO_CREDIT, 1)
 
 
 # ---------------------------------------------------------------- Nečas card (data: docs/cards/martin-necas.json + docs/briefs/martin-necas.md)
