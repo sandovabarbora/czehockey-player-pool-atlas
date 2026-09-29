@@ -23,7 +23,7 @@ help:
 	@echo "  features         Build position-specific feature vectors"
 	@echo "  reduce           Run PCA + UMAP + KMeans"
 	@echo "  render           Render the legacy HTML + PDF report (not the site)"
-	@echo "  pages            Render the site (docs/index.html, docs/atlas/) from outputs/"
+	@echo "  pages            Render the site (summary, q/<slug>/, methodology/, players/ ...) from outputs/"
 	@echo "  all              fetch -> features -> reduce -> render"
 	@echo "  test             Run pytest"
 	@echo "  lint             Run ruff check"
@@ -105,7 +105,7 @@ clean:
 	@echo "Cleaned processed/ and outputs/ (raw/ preserved)"
 
 pages:
-	# The report (docs/index.html) and the pool page (docs/atlas/) from outputs/*.json:
+	# The summary, one page per question, this-autumn/, methodology/ and players/ from outputs/*.json:
 	# src/web renders templates/site/ and copies its static assets; CNAME and img/ stay.
 	./site/build.sh
 	@echo "Built docs/ for GitHub Pages (English)"

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-home="CZE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>When did it break? — Czech Hockey Atlas</title>
+  <meta name="description" content="Question 2 of the Czech hockey player pool atlas: When did it break?">
+  <link rel="canonical" href="https://hockey.bsandova.com/q/break/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css?v=5eb2262dfe">
+  <link rel="stylesheet" href="../../modern.css?v=5eb2262dfe">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script defer src="../../charts.js?v=5eb2262dfe"></script></head>
+<body id="top">
+<nav class="topbar" aria-label="Navigation">
+  <a class="topbar-brand" href="../../">Czech Hockey <span>Atlas</span></a>
+  <div class="topbar-links">
+    <a href="../../">Summary</a>
+    <details class="nav-q" data-nav-q>
+      <summary class="is-current">Questions</summary>
+      <ol class="nav-q-list">
+        <li><a href="../../q/per-head/"><span class="nav-q-n">1</span>Is the Czech pool thin?</a></li>
+        <li><a href="../../q/break/" aria-current="page"><span class="nav-q-n">2</span>When did it break?</a></li>
+        <li><a href="../../q/cohorts/"><span class="nav-q-n">3</span>Where is it thin?</a></li>
+        <li><a href="../../q/youth/"><span class="nav-q-n">4</span>Do young players get ice time at home?</a></li>
+        <li><a href="../../q/abroad/"><span class="nav-q-n">5</span>How do they fare abroad?</a></li>
+        <li><a href="../../q/national-team/"><span class="nav-q-n">6</span>What is the national team built from?</a></li>
+        <li><a href="../../q/goalkeepers/"><span class="nav-q-n">7</span>Goalkeepers</a></li>
+      </ol>
+    </details>
+    <a href="../../this-autumn/">This autumn</a>
+    <a href="../../methodology/">Methodology</a>
+    <a href="../../players/">Players</a>
+  </div>
+</nav>
+<script>
+  /* the Questions menu: close on a click outside it or on Escape */
+  (function () {
+    var d = document.querySelector('[data-nav-q]');
+    if (!d) return;
+    document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+  })();
+</script>
+<main id="content" class="qpage">
+<section class="slide" id="q2">
+  <div class="container">
+<p class="close-kicker">Question 2</p>
+    <h1 class="slide-q">When did it break?</h1>
+    <p class="slide-a">It did not break in one season: <strong>it wore down</strong>. The most likely fall is 2009/10, with 9% probability; the fitted level is now 43% of its 2002/03 peak.</p>
+    <figure class="figure-bleed" data-chart="q2-break">
+      <table class="fig-table">
+        <thead><tr><th scope="col">Nation</th><th scope="col">Step</th><th scope="col">Most likely season</th><th scope="col" class="num">Probability</th><th scope="col" class="num">Level after ÷ before (90% interval)</th></tr></thead>
+        <tbody>
+          <tr><td>Czechia</td><td>rise</td><td>1998/99</td><td class="num">39%</td><td class="num">×1.47 (0.73–1.97)</td></tr>
+          <tr><td>Czechia</td><td>fall</td><td>2009/10</td><td class="num">9%</td><td class="num">×0.83 (0.56–1.14)</td></tr>
+          <tr><td>Finland</td><td>rise</td><td>1999/00</td><td class="num">54%</td><td class="num">×1.89 (1.35–2.53)</td></tr>
+          <tr><td>Finland</td><td>rise</td><td>2018/19</td><td class="num">22%</td><td class="num">×1.28 (0.86–1.54)</td></tr>
+          <tr><td>Sweden</td><td>rise</td><td>1999/00</td><td class="num">22%</td><td class="num">×1.26 (0.93–1.60)</td></tr>
+          <tr><td>Sweden</td><td>rise</td><td>2014/15</td><td class="num">53%</td><td class="num">×1.42 (0.90–1.73)</td></tr>
+        </tbody>
+      </table>
+      <figcaption>How to read it: dots are the players with 20 or more games each season, the line and the band are the model's level and its 90% interval. The bars underneath say how likely each season is to be where a step happened: ink for a fall, pale for a rise. A tall single bar would be a sharp break. For Czechia, 87% of the fall's probability is spread over 2008/09–2023/24, with no season above 9%. Switch to Finland and Sweden: both have only rises.</figcaption>
+    </figure>
+    <details class="fold slide-method" open>
+      <summary>How we know</summary>
+      <p class="slide-did"><span class="slide-did-label">The model</span> A Poisson local-level model, the one the football atlas uses for its series: the log of the expected count follows a random walk plus two step changes, and the step seasons are marginalised over every allowed pair (at least three seasons from the ends and from each other). 2004/05, the lockout, stays in the time index with no likelihood. Priors: σ ~ HalfNormal(0.2), step ~ Normal(0, 1).</p>
+    <p class="slide-did"><span class="slide-did-label">The Czech fall</span> The step is ×0.83 (90% interval 0.56–1.14); the probability that it lowers the level is 0.80. The earlier rise is dated to 1998/99. The fitted level peaked at about 53 players in 2002/03 and is 23 in 2025/26.</p>  <p class="slide-how"><span class="slide-how-label">Diagnostics</span> 4 chains × 1000 draws after 1000 tuning, seed 42; largest R-hat 1.007, 1 divergent transition over the three fits. There is no forecast: the atlas is descriptive.</p>
+    </details>
+    <section class="q-limits" aria-labelledby="q2-limits">
+      <h2 class="q-sub" id="q2-limits">What this does not show</h2>
+      <ul class="nx-limits">
+        <li><strong>KHL</strong> Excluded by design. It is where 25% of Czech national-team roster spots since 2010 came from, so the pool counted here is smaller than the pool the national team drew on, most of all before 2014 and before 2022.</li>
+
+        <li><strong>Population</strong> A per-million rate compares nations of very different sizes; a handful of players moves a small nation's rate a lot.</li>
+
+        <li><strong>Descriptive only</strong> Nothing here predicts a season, rates a player beyond his published statistics or advises selection.</li>
+
+      </ul>
+      <p class="q-limits-more"><a href="../../methodology/#limitations">Limitations</a></p>
+    </section>
+    <nav class="q-pager" aria-label="Questions">
+<a class="q-pager-prev" href="../../q/per-head/"><span class="q-pager-label">← Question 1</span>Is the Czech pool thin?</a>      <a class="q-pager-home" href="../../#take">Summary</a>
+<a class="q-pager-next" href="../../q/cohorts/"><span class="q-pager-label">Question 3 →</span>Where is it thin?</a>    </nav>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="role-block">
+      <p class="role-kicker">Built by Barbora Šandová — data &amp; cloud engineer</p>
+      <p class="role-body">A descriptive, reproducible benchmark from public statistics: the fetchers, the snapshot, the analysis and this page are one repository. No predictions, no selection advice.</p>
+      <p class="role-author">
+        <span class="role-author-name">Barbora Šandová</span>
+        <span class="role-author-contact">
+          <a href="mailto:hello@bsandova.com">hello@bsandova.com</a>
+          &middot;
+          <a href="https://github.com/sandovabarbora/czehockey-player-pool-atlas">github.com/sandovabarbora/czehockey-player-pool-atlas</a>
+        </span>
+      </p>
+    </div>
+    <p class="rendered-at">Built 2026-09-29 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+  </div>
+</footer>
+</body>
+</html>

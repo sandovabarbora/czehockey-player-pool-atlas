@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-home="CZE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology — Czech Hockey Atlas</title>
+  <meta name="description" content="How the Czech hockey atlas is built: the league ladder, one definition of nationality, what is left out, sources, linking players across leagues, definitions, reproducibility, limitations and the change log.">
+  <link rel="canonical" href="https://hockey.bsandova.com/methodology/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=5eb2262dfe">
+  <link rel="stylesheet" href="../modern.css?v=5eb2262dfe">
+</head>
+<body id="top">
+<nav class="topbar" aria-label="Navigation">
+  <a class="topbar-brand" href="../">Czech Hockey <span>Atlas</span></a>
+  <div class="topbar-links">
+    <a href="../">Summary</a>
+    <details class="nav-q" data-nav-q>
+      <summary>Questions</summary>
+      <ol class="nav-q-list">
+        <li><a href="../q/per-head/"><span class="nav-q-n">1</span>Is the Czech pool thin?</a></li>
+        <li><a href="../q/break/"><span class="nav-q-n">2</span>When did it break?</a></li>
+        <li><a href="../q/cohorts/"><span class="nav-q-n">3</span>Where is it thin?</a></li>
+        <li><a href="../q/youth/"><span class="nav-q-n">4</span>Do young players get ice time at home?</a></li>
+        <li><a href="../q/abroad/"><span class="nav-q-n">5</span>How do they fare abroad?</a></li>
+        <li><a href="../q/national-team/"><span class="nav-q-n">6</span>What is the national team built from?</a></li>
+        <li><a href="../q/goalkeepers/"><span class="nav-q-n">7</span>Goalkeepers</a></li>
+      </ol>
+    </details>
+    <a href="../this-autumn/">This autumn</a>
+    <a href="../methodology/" aria-current="page">Methodology</a>
+    <a href="../players/">Players</a>
+  </div>
+</nav>
+<script>
+  /* the Questions menu: close on a click outside it or on Escape */
+  (function () {
+    var d = document.querySelector('[data-nav-q]');
+    if (!d) return;
+    document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+  })();
+</script>
+<main id="content" class="page-methodology">
+<header class="page-head">
+  <div class="container">
+    <h1 class="page-title">Methodology</h1>
+  </div>
+</header>
+
+<section class="slide scope" id="scope">
+  <div class="container">
+    <h2 class="slide-q">What is counted</h2>
+    <p class="slide-a">Ten nations, six leagues, one definition of nationality, and three leagues and one database left out on purpose.</p>
+    <div class="scope-grid">
+      <div>
+        <h3>The ladder</h3>
+        <dl class="scope-list">
+          <dt><i class="sw" style="background:var(--acid)"></i>Rung 1</dt><dd>NHL.</dd>
+          <dt><i class="sw" style="background:#111111"></i>Rung 2</dt><dd>SHL (Sweden), Liiga (Finland), National League (Switzerland), DEL (Germany). "NHL + rung 2" is the headline's five leagues.</dd>
+          <dt><i class="sw" style="background:#c9c9c4"></i>Home</dt><dd>The Czech Extraliga. For Finland, Sweden, Switzerland and Germany the home league is already rung 2.</dd>
+          <dt><i class="sw" style="background:#8a8a8a"></i>Other</dt><dd>Everything else in the data.</dd>
+        </dl>
+        <p class="scope-note">Nations: Czechia against Finland, Sweden, Switzerland, Slovakia, Germany, Latvia, Denmark, Norway, Austria. Population: Eurostat, 1 January of the season's second year.</p>
+      </div>
+      <div>
+        <h3 id="nationality">Nationality, one definition</h3>
+        <p>A player's nationality is taken, in this order, from:</p>
+        <ol class="scope-ol">
+          <li><strong>citizenship</strong> where a league publishes it: the NHL's <code>nationalityCode</code>, the Liiga's and the SHL's <code>nationality</code> (the SHL's is mostly "N/A" before about 2010);</li>
+          <li>the <strong>national-team roster</strong> at a World Championship or Olympics since 2010 (IIHF eligibility);</li>
+          <li><strong>eligibility or licence</strong> where that is all a source has: the Extraliga's foreigner flag, the DEL's licence nationality (from 2022/23), the National League's Swiss licence.</li>
+        </ol>
+        <p>Players are linked across leagues on the folded name plus the birth date, so a Czech in the SHL is recognised from his NHL or Extraliga record. Czechoslovak-era births take the present-day state the NHL recodes them to. Of the 867 players on the <a href="../players/">pool page</a>, 649 are Czech on eligibility alone.</p>
+      </div>
+      <div>
+        <h3 id="exclusions">Left out</h3>
+        <ul class="scope-ul">
+          <li><strong>KHL</strong>, by design. It removes a real destination, especially before 2014, and it is where 25% of the Czech national team's roster spots since 2010 came from.</li>
+          <li><strong>AHL</strong>: its terms forbid automated access. AHL seasons appear only in NHL players' career records, a survivor-biased view.</li>
+          <li><strong>Slovak Extraliga</strong>: its robots.txt blocks automated access. Slovakia is measured through its players in the covered leagues.</li>
+          <li><strong>Elite Prospects</strong>: its terms forbid scraping.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="methodology" id="methodology">
+  <div class="container">
+    <h2>How it is built, and where it stops</h2>
+
+    <h3 id="data-sources">Sources</h3>
+    <table class="sources-table">
+      <thead><tr><th scope="col">Source</th><th scope="col">What</th><th scope="col">Fields used</th><th scope="col">Accessed</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://api.nhle.com/stats/rest">NHL</a></td><td>NHL stats REST: skater and goalie summaries and bios per season, player career records</td><td>citizenship (nationalityCode), full birth date; time on ice from 1997/98</td><td class="mono">2026-09-29</td></tr>
+        <tr><td><a href="https://liiga.fi">Liiga</a></td><td>liiga.fi JSON API (api/v2), regular season (runkosarja)</td><td>citizenship, full birth date; time on ice from 2014/15</td><td class="mono">2026-09-29</td></tr>
+        <tr><td><a href="https://www.shl.se">SHL</a></td><td>shl.se statistics-v2 JSON, SHL regular season</td><td>citizenship where given (mostly N/A before about 2010), birth date; time on ice from 2009/10</td><td class="mono">2026-09-29</td></tr>
+        <tr><td><a href="https://www.hokej.cz">Extraliga</a></td><td>hokej.cz player statistics (HTML), Extraliga regular season</td><td>foreigner flag (eligibility), birth date from player profiles; time on ice from 2013/14</td><td class="mono">2026-09-29</td></tr>
+        <tr><td><a href="https://www.penny-del.org">DEL</a></td><td>penny-del.org statistics pages (HTML), regular season (Hauptrunde)</td><td>licence nationality from 2022/23; no birth dates</td><td class="mono">2026-09-29</td></tr>
+        <tr><td><a href="https://data.sihf.ch">National League</a></td><td>data.sihf.ch Statistic API (cache300), National League, regular season</td><td>Swiss or foreign licence (eligibility); no birth dates</td><td class="mono">2026-09-29</td></tr>
+        <tr><td><a href="https://ec.europa.eu/eurostat/databrowser/view/demo_gind/default/table">Eurostat</a></td><td>Eurostat demo_gind, indic_de=JAN (population on 1 January)</td><td>population on 1 January; dataset updated 2026-07-21</td><td class="mono">2026-09-29</td></tr>
+        <tr><td><a href="https://en.wikipedia.org">Wikipedia</a></td><td>English Wikipedia roster articles for the World Championship and the Olympics, each at a fixed revision (CC BY-SA 4.0)</td><td>21 roster pages, 614 player articles for missing birth dates</td><td class="mono">2026-09-29</td></tr>
+      </tbody>
+    </table>
+    <p>Only public statistics are used: names, birth dates, nationality and season statistics. Every source was fetched once, with at least a second between requests and within its robots.txt, into a raw cache; the processed tables are committed in <code>data/snapshot/</code> with a SHA-256 list, so a clean clone rebuilds every number here without fetching. The NHL's terms allow non-commercial informational use; this is a non-commercial page that cites its sources. Wikipedia rosters are used under CC BY-SA 4.0, each page at the revision listed in <code>data/snapshot/rosters_sources.json</code>.</p>
+
+    <h3 id="linking">Linking players across leagues</h3>
+    <p>17,991 people in all, 14,309 of them with a nationality. Records are matched in four steps: folded name plus full birth date; first initial, surname and birth date (for Dan and Daniel); for records without a birth date, the name alone when exactly one person of that name played within four seasons and his birth year does not contradict it; and finally records still unmatched are joined within the same league on the same name.</p>
+    <div class="table-scroll">
+    <table class="linking-table">
+      <thead><tr><th scope="col">League</th><th scope="col" class="num">Records</th><th scope="col" class="num">With birth date</th><th scope="col" class="num">Linked on name + birth date</th><th scope="col" class="num">Linked on name only</th><th scope="col" class="num">Ambiguous</th><th scope="col" class="num">Unmatched</th><th scope="col" class="num">Joined within league</th></tr></thead>
+      <tbody>
+        <tr><td>NHL</td><td class="num">5,004</td><td class="num">100%</td><td class="num">2,602</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td></tr>
+        <tr><td>SHL</td><td class="num">4,023</td><td class="num">60%</td><td class="num">1,213</td><td class="num">566</td><td class="num">12</td><td class="num">956</td><td class="num">66</td></tr>
+        <tr><td>Liiga</td><td class="num">4,036</td><td class="num">100%</td><td class="num">1,692</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td></tr>
+        <tr><td>National League</td><td class="num">1,865</td><td class="num">0%</td><td class="num">0</td><td class="num">781</td><td class="num">21</td><td class="num">1,063</td><td class="num">0</td></tr>
+        <tr><td>DEL</td><td class="num">3,963</td><td class="num">0%</td><td class="num">0</td><td class="num">1,269</td><td class="num">24</td><td class="num">2,287</td><td class="num">383</td></tr>
+        <tr><td>Extraliga</td><td class="num">3,250</td><td class="num">55%</td><td class="num">593</td><td class="num">226</td><td class="num">4</td><td class="num">1,218</td><td class="num">14</td></tr>
+        <tr><td>Rosters</td><td class="num">2,711</td><td class="num">100%</td><td class="num">1,960</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>"Unmatched" records keep the nationality their own league gives them, which for the DEL before 2022/23 and for foreign licences in the National League is none. 189 people carry conflicting nationality codes; in 50 of them an Extraliga "Czech" (the foreigner flag) is overridden by a citizenship or national-team code. 19 Wikipedia roster birth dates matched no league record until day and month were swapped or moved by one day; they are corrected in the analysis and listed in <code>outputs/linking.json</code>.</p>
+
+    <h3 id="definitions">Definitions</h3>
+    <dl class="defs">
+      <dt>Games threshold</dt><dd>at least 20 of 82 games, pro-rated to the league-season&#39;s schedule (95th percentile of skater games played). The headline also reports any game and a flat 20.</dd>
+      <dt>Age</dt><dd>Season start year minus birth year; under 21 means 20 or less.</dd>
+      <dt>Population</dt><dd>Eurostat <code>demo_gind</code>, 1 January of the season's second year.</dd>
+      <dt>Complete season</dt><dd>A rung 1 + 2 season counts as complete when every rung-2 league has at least 90% of its qualifying players' nationality identified.</dd>
+      <dt>Season</dt><dd>Regular season only, every league.</dd>
+    </dl>
+
+    <h3 id="reproducibility">Reproducibility</h3>
+    <p><code>make restore-snapshot</code> puts the committed snapshot in place, <code>make verify-snapshot</code> checks its hashes, <code>make analysis</code> recomputes <code>outputs/</code> (about six minutes, mostly the break model) and <code>make pages</code> renders this page and the pool page from them. Each output file records the SHA-256 of the snapshot files it was built from, and the tests fail when the snapshot changes without the outputs being rebuilt. Every number in this text is read from <code>outputs/</code> at render time.</p>
+
+    <h3 id="limitations">Limitations</h3>
+    <ul class="nx-limits">
+      <li><strong>KHL</strong> Excluded by design. It is where 25% of Czech national-team roster spots since 2010 came from, so the pool counted here is smaller than the pool the national team drew on, most of all before 2014 and before 2022.</li>
+
+      <li><strong>AHL</strong> Not fetched (terms). An AHL season appears only when the player also has an NHL career record, which favours those who made it.</li>
+
+      <li><strong>Birth dates</strong> The National League and the DEL publish none, so their players' ages come only from a link to another league. That removes Switzerland and Germany from the age medians in question 3 and leaves the NL and DEL youth shares in question 4 unmeasured.</li>
+
+      <li><strong>Nationality</strong> For 649 of the 867 Czech players on the pool page, the only evidence is the Extraliga foreigner flag or a licence, which is eligibility, not citizenship. The DEL published no nationality before 2022/23, so the rung 1 + 2 series before 2022/23 is a lower bound.</li>
+
+      <li><strong>Name-only links</strong> Records without a birth date are linked on the name alone, only when one candidate exists within four seasons; ambiguous and unmatched counts are in the table above.</li>
+
+      <li><strong>Population</strong> A per-million rate compares nations of very different sizes; a handful of players moves a small nation's rate a lot.</li>
+
+      <li><strong>Descriptive only</strong> Nothing here predicts a season, rates a player beyond his published statistics or advises selection.</li>
+
+    </ul>
+
+    <h3 id="changes">Change log</h3>
+    <ul class="changelog">
+      <li><span class="mono">2026-09-29</span> A <a href="../this-autumn/">This autumn</a> section: two dated, sourced items of news (the national team's new head coach and staff; David Pastrňák's club captaincy in Boston), beside the atlas's own numbers.</li>
+      <li><span class="mono">2026-09-29</span> Rebuilt on the football atlas's model: ten nations, a two-rung league ladder, fetchers with a committed snapshot, one analysis module per question, interactive charts drawn from <code>outputs/</code>, and a <a href="../players/">pool page</a>. The style map, the AI layer and the video proof of concept of the earlier version are withdrawn.</li>
+      <li><span class="mono">2026-09-22</span> The site became English only.</li>
+      <li><span class="mono">2026-05-18</span> First version: a style map of Czech players from a crosswalk of league statistics.</li>
+    </ul>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="role-block">
+      <p class="role-kicker">Built by Barbora Šandová — data &amp; cloud engineer</p>
+      <p class="role-body">A descriptive, reproducible benchmark from public statistics: the fetchers, the snapshot, the analysis and this page are one repository. No predictions, no selection advice.</p>
+      <p class="role-author">
+        <span class="role-author-name">Barbora Šandová</span>
+        <span class="role-author-contact">
+          <a href="mailto:hello@bsandova.com">hello@bsandova.com</a>
+          &middot;
+          <a href="https://github.com/sandovabarbora/czehockey-player-pool-atlas">github.com/sandovabarbora/czehockey-player-pool-atlas</a>
+        </span>
+      </p>
+    </div>
+    <p class="rendered-at">Built 2026-09-29 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{# Shared pieces of the site's pages. `limit` renders one limitation by key, so the methodology
+   page's list and each question page's "What this does not show" carry the same sentences. #}
+{% macro nation_table(rows, key_n, key_pm, noun) %}
+<table class="fig-table">
+  <thead><tr><th scope="col">Nation</th><th scope="col" class="num">{{ noun }}</th><th scope="col" class="num">per million</th></tr></thead>
+  <tbody>
+  {% for n in rows|sort(attribute=key_pm, reverse=True) %}
+    <tr{% if n.iso3 == 'CZE' %} class="is-home"{% endif %}><td>{{ n.name }}</td><td class="num">{{ n[key_n] }}</td><td class="num">{{ f2(n[key_pm]) }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endmacro %}
+
+{% macro limit(key) %}
+{% if key == 'khl' %}
+<li><strong>KHL</strong> Excluded by design. It is where {{ pct0(q6.home.khl) }} of Czech national-team roster spots since 2010 came from, so the pool counted here is smaller than the pool the national team drew on, most of all before 2014 and before 2022.</li>
+{% elif key == 'ahl' %}
+<li><strong>AHL</strong> Not fetched (terms). An AHL season appears only when the player also has an NHL career record, which favours those who made it.</li>
+{% elif key == 'birth' %}
+<li><strong>Birth dates</strong> The National League and the DEL publish none, so their players' ages come only from a link to another league. That removes {{ q3.excluded_age|join(' and ') }} from the age medians in question 3 and leaves the NL and DEL youth shares in question 4 unmeasured.</li>
+{% elif key == 'nationality' %}
+<li><strong>Nationality</strong> For {{ pool.eligibility_only }} of the {{ pool.players }} Czech players on the pool page, the only evidence is the Extraliga foreigner flag or a licence, which is eligibility, not citizenship. The DEL published no nationality before 2022/23, so the rung 1 + 2 series before {{ q1.complete_first }} is a lower bound.</li>
+{% elif key == 'name_links' %}
+<li><strong>Name-only links</strong> Records without a birth date are linked on the name alone, only when one candidate exists within four seasons; ambiguous and unmatched counts are in the table above.</li>
+{% elif key == 'population' %}
+<li><strong>Population</strong> A per-million rate compares nations of very different sizes; a handful of players moves a small nation's rate a lot.</li>
+{% elif key == 'descriptive' %}
+<li><strong>Descriptive only</strong> Nothing here predicts a season, rates a player beyond his published statistics or advises selection.</li>
+{% endif %}
+{% endmacro %}
+
+{% macro fn(ns) %}<sup class="fn">{% for n in ns %}{% if not loop.first %},{% endif %}<a href="#autumn-src-{{ n }}">{{ n }}</a>{% endfor %}</sup>{% endmacro %}

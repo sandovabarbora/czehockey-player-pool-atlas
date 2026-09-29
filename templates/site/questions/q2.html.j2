@@ -1,0 +1,21 @@
+<p class="close-kicker">Question 2</p>
+<h1 class="slide-q">When did it break?</h1>
+{% set fall = q2.CZE.fall %}
+<p class="slide-a">{% if q2.CZE.sharp %}In <strong>{{ fall.modal.season }}</strong>.{% else %}It did not break in one season: <strong>it wore down</strong>.{% endif %} {% if fall %}The most likely fall is {{ fall.modal.season }}, with {{ pct0(fall.modal.prob) }} probability; the fitted level is now {{ pct0(q2.CZE.fitted.latest_to_peak) }} of its {{ q2.CZE.fitted.peak.season }} peak.{% endif %}</p>
+<figure class="figure-bleed" data-chart="q2-break">
+  <table class="fig-table">
+    <thead><tr><th scope="col">Nation</th><th scope="col">Step</th><th scope="col">Most likely season</th><th scope="col" class="num">Probability</th><th scope="col" class="num">Level after ÷ before (90% interval)</th></tr></thead>
+    <tbody>
+    {% for code in ['CZE'] + q2.compared %}{% for s in q2[code].steps %}
+      <tr><td>{{ q2[code].name }}</td><td>{{ 'fall' if s.direction == 'down' else 'rise' }}</td><td>{{ s.modal.season }}</td><td class="num">{{ pct0(s.modal.prob) }}</td><td class="num">{{ times(s.delta_factor.median) }} ({{ f2(s.delta_factor.lo) }}–{{ f2(s.delta_factor.hi) }})</td></tr>
+    {% endfor %}{% endfor %}
+    </tbody>
+  </table>
+  <figcaption>How to read it: dots are the players with 20 or more games each season, the line and the band are the model's level and its 90% interval. The bars underneath say how likely each season is to be where a step happened: ink for a fall, pale for a rise. A tall single bar would be a sharp break.{% if fall and q2.CZE.fall_spread %} For Czechia, {{ pct0(q2.CZE.fall_mass_in_spread) }} of the fall's probability is spread over {{ q2.CZE.fall_spread[0] }}–{{ q2.CZE.fall_spread[1] }}, with no season above {{ pct0(fall.modal.prob) }}.{% endif %} Switch to {{ q2[q2.compared[0]].name }} and {{ q2[q2.compared[1]].name }}{% if q2[q2.compared[0]].only_up and q2[q2.compared[1]].only_up %}: both have only rises{% endif %}.</figcaption>
+</figure>
+<details class="fold slide-method" open>
+  <summary>How we know</summary>
+  <p class="slide-did"><span class="slide-did-label">The model</span> A Poisson local-level model, the one the football atlas uses for its series: the log of the expected count follows a random walk plus two step changes, and the step seasons are marginalised over every allowed pair (at least three seasons from the ends and from each other). 2004/05, the lockout, stays in the time index with no likelihood. Priors: σ ~ {{ q2.definitions.priors.sigma }}, step ~ {{ q2.definitions.priors.delta }}.</p>
+  {% if fall %}<p class="slide-did"><span class="slide-did-label">The Czech fall</span> The step is {{ times(fall.delta_factor.median) }} (90% interval {{ f2(fall.delta_factor.lo) }}–{{ f2(fall.delta_factor.hi) }}); the probability that it lowers the level is {{ f2(fall.p_down) }}. The earlier rise is dated to {{ q2.CZE.ups[0].modal.season if q2.CZE.ups else '–' }}. The fitted level peaked at about {{ q2.CZE.fitted.peak.level|round|int }} players in {{ q2.CZE.fitted.peak.season }} and is {{ q2.CZE.fitted.latest.level|round|int }} in {{ q2.CZE.fitted.latest.season }}.</p>{% endif %}
+  <p class="slide-how"><span class="slide-how-label">Diagnostics</span> {{ q2.definitions.sampler.chains }} chains × {{ q2.definitions.sampler.draws }} draws after {{ q2.definitions.sampler.tune }} tuning, seed {{ q2.definitions.sampler.seed }}; largest R-hat {{ '%.3f'|format(q2.max_rhat) }}, {{ q2.divergences }} divergent transition{{ '' if q2.divergences == 1 else 's' }} over the three fits. There is no forecast: the atlas is descriptive.</p>
+</details>

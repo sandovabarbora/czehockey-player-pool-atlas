@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-home="CZE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Players — Czech Hockey Atlas</title>
+  <meta name="description" content="Every Czech player with a season in a covered league, 2020/21–2025/26: games by season and by rung of the league, and each player's seasons in a table.">
+  <link rel="canonical" href="https://hockey.bsandova.com/players/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=5eb2262dfe">
+  <link rel="stylesheet" href="../modern.css?v=5eb2262dfe">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script defer src="../atlas.app.js?v=5eb2262dfe"></script></head>
+<body id="top" class="ax-page">
+<nav class="topbar" aria-label="Navigation">
+  <a class="topbar-brand" href="../">Czech Hockey <span>Atlas</span></a>
+  <div class="topbar-links">
+    <a href="../">Summary</a>
+    <details class="nav-q" data-nav-q>
+      <summary>Questions</summary>
+      <ol class="nav-q-list">
+        <li><a href="../q/per-head/"><span class="nav-q-n">1</span>Is the Czech pool thin?</a></li>
+        <li><a href="../q/break/"><span class="nav-q-n">2</span>When did it break?</a></li>
+        <li><a href="../q/cohorts/"><span class="nav-q-n">3</span>Where is it thin?</a></li>
+        <li><a href="../q/youth/"><span class="nav-q-n">4</span>Do young players get ice time at home?</a></li>
+        <li><a href="../q/abroad/"><span class="nav-q-n">5</span>How do they fare abroad?</a></li>
+        <li><a href="../q/national-team/"><span class="nav-q-n">6</span>What is the national team built from?</a></li>
+        <li><a href="../q/goalkeepers/"><span class="nav-q-n">7</span>Goalkeepers</a></li>
+      </ol>
+    </details>
+    <a href="../this-autumn/">This autumn</a>
+    <a href="../methodology/">Methodology</a>
+    <a href="../players/" aria-current="page">Players</a>
+  </div>
+</nav>
+<script>
+  /* the Questions menu: close on a click outside it or on Escape */
+  (function () {
+    var d = document.querySelector('[data-nav-q]');
+    if (!d) return;
+    document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+  })();
+</script>
+<main class="ax container" data-atlas-app>
+  <header class="ax-head">
+    <p class="ax-kicker">Player pool · 867 players · 2020/21–2025/26 · 417 in 2025/26</p>
+    <h1 class="ax-title">Every Czech player in the covered leagues.</h1>
+    <p class="ax-lead">The <a href="../">report</a> measures the pool against its peers. This is the pool itself: every player of Czech nationality with a regular-season game in the NHL, the SHL, the Liiga, the National League, the DEL or the Extraliga since 2020/21, his games by season coloured by the rung of the league, and his seasons when you open his row.</p>
+  </header>
+  <div class="ax-body">
+    <section class="ax-overview" data-ax-overview aria-label="The pool, season by season">
+      <p class="ax-statement">In 2025/26, 29 Czech players had NHL games, 41 played in rung 2 and 347 in the Extraliga.</p>
+      <div class="ax-chart" data-ax-overview-chart></div>
+      <p class="ax-note">Players by season, each counted once in the highest rung he played in that season. Hover a bar for the numbers.</p>
+    </section>
+    <div class="ax-controls" aria-label="Filter the players">
+      <label class="pool-control pool-control-search">Search <input type="search" data-ax-search autocomplete="off" placeholder="name, team or league"></label>
+      <label class="pool-control">Position <select data-ax-pos><option value="">all</option><option value="F">forwards</option><option value="D">defencemen</option><option value="G">goalkeepers</option></select></label>
+      <label class="pool-control">League 2025/26 <select data-ax-rung><option value="">all</option><option value="1">NHL</option><option value="2">rung 2</option><option value="home">Extraliga</option><option value="none">not in a covered league</option></select></label>
+      <label class="pool-control">Sort by <select data-ax-sort><option value="games">games 2025/26</option><option value="total">games since 2020/21</option><option value="rung">highest rung</option><option value="age">age</option><option value="name">name</option></select></label>
+    </div>
+    <p class="ax-legend ax-rungs" data-ax-rungs aria-label="Rung of the league"></p>
+    <p class="ax-count"><span data-ax-count>867 players</span> · click a row to open his seasons</p>
+    <table class="ax-grid" aria-label="players">
+      <thead data-ax-head><tr><th scope="col">player</th><th scope="col" class="num">age</th><th scope="col">pos.</th><th scope="col">team, league</th><th scope="col" class="ax-col-spark">games by season</th><th scope="col" class="num">GP 25/26</th></tr></thead>
+      <tbody data-ax-list></tbody>
+    </table>
+    <p class="chart-empty" data-ax-empty hidden>no player matches</p>
+    <p class="ax-more-row"><button type="button" class="ax-btn ax-more" data-ax-more hidden>show 50 more</button></p>
+    <noscript><p class="ax-note">The list needs JavaScript. The same data is in <a href="pool.json">pool.json</a>.</p></noscript>
+  </div>
+  <footer class="ax-foot">
+    <p>Czech nationality follows the report's <a href="../methodology/#nationality">one definition</a>: citizenship where a league publishes it, then the national-team roster, then eligibility. For 649 of the 867 players the only evidence is the Extraliga foreigner flag or a licence (193 by citizenship, 25 by a national-team roster). Age is the season start year minus the birth year. Not covered: the KHL (by design), the AHL (its terms), the Czech 1st league and every other league; a season there is absent here, not zero. Sources and access dates are on the <a href="../methodology/#data-sources">report page</a>.</p>
+  </footer>
+</main>
+<footer>
+  <div class="container">
+    <div class="role-block">
+      <p class="role-kicker">Built by Barbora Šandová — data &amp; cloud engineer</p>
+      <p class="role-body">A descriptive, reproducible benchmark from public statistics: the fetchers, the snapshot, the analysis and this page are one repository. No predictions, no selection advice.</p>
+      <p class="role-author">
+        <span class="role-author-name">Barbora Šandová</span>
+        <span class="role-author-contact">
+          <a href="mailto:hello@bsandova.com">hello@bsandova.com</a>
+          &middot;
+          <a href="https://github.com/sandovabarbora/czehockey-player-pool-atlas">github.com/sandovabarbora/czehockey-player-pool-atlas</a>
+        </span>
+      </p>
+    </div>
+    <p class="rendered-at">Built 2026-09-29 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+  </div>
+</footer>
+</body>
+</html>

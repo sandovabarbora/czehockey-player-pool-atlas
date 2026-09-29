@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-home="CZE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Is the Czech pool thin? — Czech Hockey Atlas</title>
+  <meta name="description" content="Question 1 of the Czech hockey player pool atlas: Is the Czech pool thin?">
+  <link rel="canonical" href="https://hockey.bsandova.com/q/per-head/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css?v=5eb2262dfe">
+  <link rel="stylesheet" href="../../modern.css?v=5eb2262dfe">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script defer src="../../charts.js?v=5eb2262dfe"></script></head>
+<body id="top">
+<nav class="topbar" aria-label="Navigation">
+  <a class="topbar-brand" href="../../">Czech Hockey <span>Atlas</span></a>
+  <div class="topbar-links">
+    <a href="../../">Summary</a>
+    <details class="nav-q" data-nav-q>
+      <summary class="is-current">Questions</summary>
+      <ol class="nav-q-list">
+        <li><a href="../../q/per-head/" aria-current="page"><span class="nav-q-n">1</span>Is the Czech pool thin?</a></li>
+        <li><a href="../../q/break/"><span class="nav-q-n">2</span>When did it break?</a></li>
+        <li><a href="../../q/cohorts/"><span class="nav-q-n">3</span>Where is it thin?</a></li>
+        <li><a href="../../q/youth/"><span class="nav-q-n">4</span>Do young players get ice time at home?</a></li>
+        <li><a href="../../q/abroad/"><span class="nav-q-n">5</span>How do they fare abroad?</a></li>
+        <li><a href="../../q/national-team/"><span class="nav-q-n">6</span>What is the national team built from?</a></li>
+        <li><a href="../../q/goalkeepers/"><span class="nav-q-n">7</span>Goalkeepers</a></li>
+      </ol>
+    </details>
+    <a href="../../this-autumn/">This autumn</a>
+    <a href="../../methodology/">Methodology</a>
+    <a href="../../players/">Players</a>
+  </div>
+</nav>
+<script>
+  /* the Questions menu: close on a click outside it or on Escape */
+  (function () {
+    var d = document.querySelector('[data-nav-q]');
+    if (!d) return;
+    document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+  })();
+</script>
+<main id="content" class="qpage">
+<section class="slide" id="q1">
+  <div class="container">
+<p class="close-kicker">Question 1</p>
+    <h1 class="slide-q">Is the Czech pool thin?</h1>
+    <p class="slide-a">Not per head. Czechia ranks <strong>4th of 10</strong> for NHL players at 1.83 per million, above the peer median of 1.21; Sweden leads at 7.26.</p>
+    <figure class="figure-bleed" data-chart="q1-bars">
+      <table class="fig-table">
+      <thead><tr><th scope="col">Nation</th><th scope="col" class="num">NHL players</th><th scope="col" class="num">per million</th></tr></thead>
+      <tbody>
+        <tr><td>Sweden</td><td class="num">77</td><td class="num">7.26</td></tr>
+        <tr><td>Finland</td><td class="num">41</td><td class="num">7.25</td></tr>
+        <tr><td>Latvia</td><td class="num">6</td><td class="num">3.25</td></tr>
+        <tr class="is-home"><td>Czechia</td><td class="num">20</td><td class="num">1.83</td></tr>
+        <tr><td>Slovakia</td><td class="num">7</td><td class="num">1.29</td></tr>
+        <tr><td>Switzerland</td><td class="num">11</td><td class="num">1.21</td></tr>
+        <tr><td>Denmark</td><td class="num">4</td><td class="num">0.66</td></tr>
+        <tr><td>Norway</td><td class="num">2</td><td class="num">0.36</td></tr>
+        <tr><td>Austria</td><td class="num">2</td><td class="num">0.22</td></tr>
+        <tr><td>Germany</td><td class="num">8</td><td class="num">0.10</td></tr>
+      </tbody>
+    </table>
+
+      <figcaption>How to read it: one bar per nation, players with at least the games threshold in 2025/26 divided by the population in millions; the dashed line is the median of the nine peers. Switch to "NHL + rung 2" to add the SHL, Liiga, National League and DEL: Czechia has 53 players there, 4.86 per million, 5th of 10 (peer median 3.55).</figcaption>
+    </figure>
+    <figure class="figure-bleed" data-chart="q1-series">
+      <table class="fig-table">
+        <thead><tr><th scope="col">Season</th><th scope="col" class="num">Czech NHL players</th></tr></thead>
+        <tbody><tr><td>1995/96</td><td class="num">25</td></tr><tr><td>1996/97</td><td class="num">26</td></tr><tr><td>1997/98</td><td class="num">30</td></tr><tr><td>1998/99</td><td class="num">39</td></tr><tr><td>1999/00</td><td class="num">43</td></tr><tr><td>2000/01</td><td class="num">53</td></tr><tr><td>2001/02</td><td class="num">58</td></tr><tr><td>2002/03</td><td class="num">57</td></tr><tr><td>2003/04</td><td class="num">54</td></tr><tr><td>2004/05</td><td class="num">lockout</td></tr><tr><td>2005/06</td><td class="num">51</td></tr><tr><td>2006/07</td><td class="num">52</td></tr><tr><td>2007/08</td><td class="num">53</td></tr><tr><td>2008/09</td><td class="num">46</td></tr><tr><td>2009/10</td><td class="num">39</td></tr><tr><td>2010/11</td><td class="num">40</td></tr><tr><td>2011/12</td><td class="num">38</td></tr><tr><td>2012/13</td><td class="num">38</td></tr><tr><td>2013/14</td><td class="num">31</td></tr><tr><td>2014/15</td><td class="num">34</td></tr><tr><td>2015/16</td><td class="num">32</td></tr><tr><td>2016/17</td><td class="num">25</td></tr><tr><td>2017/18</td><td class="num">31</td></tr><tr><td>2018/19</td><td class="num">27</td></tr><tr><td>2019/20</td><td class="num">29</td></tr><tr><td>2020/21</td><td class="num">22</td></tr><tr><td>2021/22</td><td class="num">25</td></tr><tr><td>2022/23</td><td class="num">26</td></tr><tr><td>2023/24</td><td class="num">25</td></tr><tr><td>2024/25</td><td class="num">23</td></tr><tr><td>2025/26</td><td class="num">20</td></tr></tbody>
+      </table>
+      <figcaption>How to read it: each line is a nation's count per million, season by season; Czechia is the blue line, the two peers picked in the chips are ink and grey. The NHL series starts in 1995/96 with 25 Czech players, rises to 58 in 2001/02 and falls to 20 in 2025/26; 2004/05 was not played. The rung 1 + 2 series starts in 2008/09; seasons before 2022/23 are shaded because the DEL did not publish nationality, so they are lower bounds.</figcaption>
+    </figure>
+    <details class="fold slide-method" open>
+      <summary>How we know</summary>
+      <p class="slide-did"><span class="slide-did-label">What we did</span> For each nation and season we counted the distinct players of that nationality who reached the games threshold in the NHL (or in any of the five leagues), then divided by the population. The threshold is at least 20 of 82 games, pro-rated to the league-season&#39;s schedule (95th percentile of skater games played): 20 games in a full NHL season, fewer in the short 2012/13 and 2020/21 seasons and in shorter European schedules.</p>
+      <p class="slide-did"><span class="slide-did-label">Sensitivity</span> Counting any game at all, Czechia has 29 NHL players (2.66 per million, 4th) and 69 in the five leagues (5th). With a flat 20 games everywhere, 20 and 53 (5th).</p>
+      <p class="slide-how"><span class="slide-how-label">Coverage</span> In 2025/26 every qualifying NHL, Liiga and DEL player has a nationality; the National League has 22 of 365 unidentified (foreign licences with no match), the SHL 4 of 365. Only 4 seasons of the rung 1 + 2 series (2022/23–2025/26) have every rung-2 league at least 90% identified.</p>
+    </details>
+    <section class="q-limits" aria-labelledby="q1-limits">
+      <h2 class="q-sub" id="q1-limits">What this does not show</h2>
+      <ul class="nx-limits">
+        <li><strong>KHL</strong> Excluded by design. It is where 25% of Czech national-team roster spots since 2010 came from, so the pool counted here is smaller than the pool the national team drew on, most of all before 2014 and before 2022.</li>
+
+        <li><strong>Nationality</strong> For 649 of the 867 Czech players on the pool page, the only evidence is the Extraliga foreigner flag or a licence, which is eligibility, not citizenship. The DEL published no nationality before 2022/23, so the rung 1 + 2 series before 2022/23 is a lower bound.</li>
+
+        <li><strong>Population</strong> A per-million rate compares nations of very different sizes; a handful of players moves a small nation's rate a lot.</li>
+
+      </ul>
+      <p class="q-limits-more"><a href="../../methodology/#limitations">Limitations</a></p>
+    </section>
+    <nav class="q-pager" aria-label="Questions">
+<span></span>      <a class="q-pager-home" href="../../#take">Summary</a>
+<a class="q-pager-next" href="../../q/break/"><span class="q-pager-label">Question 2 →</span>When did it break?</a>    </nav>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="role-block">
+      <p class="role-kicker">Built by Barbora Šandová — data &amp; cloud engineer</p>
+      <p class="role-body">A descriptive, reproducible benchmark from public statistics: the fetchers, the snapshot, the analysis and this page are one repository. No predictions, no selection advice.</p>
+      <p class="role-author">
+        <span class="role-author-name">Barbora Šandová</span>
+        <span class="role-author-contact">
+          <a href="mailto:hello@bsandova.com">hello@bsandova.com</a>
+          &middot;
+          <a href="https://github.com/sandovabarbora/czehockey-player-pool-atlas">github.com/sandovabarbora/czehockey-player-pool-atlas</a>
+        </span>
+      </p>
+    </div>
+    <p class="rendered-at">Built 2026-09-29 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+  </div>
+</footer>
+</body>
+</html>

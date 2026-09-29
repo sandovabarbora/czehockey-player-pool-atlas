@@ -9,22 +9,50 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1ee413b9d0">
-  <link rel="stylesheet" href="modern.css?v=1ee413b9d0">
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-<script defer src="charts.js?v=1ee413b9d0"></script></head>
+  <link rel="stylesheet" href="style.css?v=5eb2262dfe">
+  <link rel="stylesheet" href="modern.css?v=5eb2262dfe">
+<script>
+  /* The report used to be one page. Its old anchors (#q1 … #q7, #methodology, #autumn …) now live
+     on their own pages: send an old link to the page that holds that part. */
+  (function () {
+    var map = {"autumn": "this-autumn/", "changes": "methodology/#changes", "data-sources": "methodology/#data-sources", "definitions": "methodology/#definitions", "exclusions": "methodology/#exclusions", "limitations": "methodology/#limitations", "linking": "methodology/#linking", "methodology": "methodology/#methodology", "nationality": "methodology/#nationality", "q1": "q/per-head/", "q2": "q/break/", "q3": "q/cohorts/", "q4": "q/youth/", "q5": "q/abroad/", "q6": "q/national-team/", "q7": "q/goalkeepers/", "reproducibility": "methodology/#reproducibility", "scope": "methodology/#scope"};
+    var id = decodeURIComponent(location.hash.slice(1));
+    var to = map[id] || (id.indexOf('autumn-src-') === 0 ? 'this-autumn/#' + id : null);
+    if (to) location.replace(to);
+  })();
+</script>
+</head>
 <body id="top">
 <nav class="topbar" aria-label="Navigation">
   <a class="topbar-brand" href="">Czech Hockey <span>Atlas</span></a>
   <div class="topbar-links">
-    <a href="#take">Summary</a>
-    <a href="#q1">Questions</a>
-    <a href="#q7">Goalkeepers</a>
-    <a href="#autumn">This autumn</a>
-    <a href="#methodology">Methodology</a>
-    <a href="atlas/">Players</a>
+    <a href="" aria-current="page">Summary</a>
+    <details class="nav-q" data-nav-q>
+      <summary>Questions</summary>
+      <ol class="nav-q-list">
+        <li><a href="q/per-head/"><span class="nav-q-n">1</span>Is the Czech pool thin?</a></li>
+        <li><a href="q/break/"><span class="nav-q-n">2</span>When did it break?</a></li>
+        <li><a href="q/cohorts/"><span class="nav-q-n">3</span>Where is it thin?</a></li>
+        <li><a href="q/youth/"><span class="nav-q-n">4</span>Do young players get ice time at home?</a></li>
+        <li><a href="q/abroad/"><span class="nav-q-n">5</span>How do they fare abroad?</a></li>
+        <li><a href="q/national-team/"><span class="nav-q-n">6</span>What is the national team built from?</a></li>
+        <li><a href="q/goalkeepers/"><span class="nav-q-n">7</span>Goalkeepers</a></li>
+      </ol>
+    </details>
+    <a href="this-autumn/">This autumn</a>
+    <a href="methodology/">Methodology</a>
+    <a href="players/">Players</a>
   </div>
 </nav>
+<script>
+  /* the Questions menu: close on a click outside it or on Escape */
+  (function () {
+    var d = document.querySelector('[data-nav-q]');
+    if (!d) return;
+    document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+  })();
+</script>
 <a class="skip-link" href="#take">Skip to content</a>
 
 <header class="report-header">
@@ -50,366 +78,33 @@
         <p class="hero-path">Three minutes: this number and the six findings below. The rest is the evidence.</p>
       </div>
     </div>
-    <p class="hero-footnote">* 20 Czech players with at least 20 of 82 NHL games (pro-rated to the schedule) in 2025/26, per 10.9 million inhabitants (Eurostat); every peer counted the same way. <a href="#methodology">Methodology</a>.</p>
+    <p class="hero-footnote">* 20 Czech players with at least 20 of 82 NHL games (pro-rated to the schedule) in 2025/26, per 10.9 million inhabitants (Eurostat); every peer counted the same way. <a href="methodology/">Methodology</a>.</p>
   </div>
   <p class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Jake_Levin_(Air_Force_Falcon%27s_men%27s_ice_hockey)_during_game_against_Bentley_Falcons_men%27s_ice_hockey_at_Cadet_Arena_in_Colorado_Springs_on_November_9,_2018_(45170233234).jpg">U.S. Air Force Academy</a> · public domain, colour held</p>
+</section>
+
+<section class="autumn-teaser" aria-labelledby="autumn-teaser-h">
+  <div class="container">
+    <p class="close-kicker">News</p>
+    <h2 class="slide-q" id="autumn-teaser-h"><a href="this-autumn/">This autumn</a></h2>
+    <p class="autumn-asof">Atlas data as of 29 September 2026; news as of 29 September 2026</p>
+    <ul class="autumn-teaser-list">
+      <li><a href="this-autumn/#autumn-coach">A new head coach of the national team</a></li>
+      <li><a href="this-autumn/#autumn-captain">A club captaincy in the NHL</a></li>
+    </ul>
+  </div>
 </section>
 
 <section class="take" id="take">
   <div class="container">
     <p class="close-kicker">What to take from it</p>
-    <div class="nx-take"><p class="nx-take-n">1</p><div><p class="nx-take-head">Per head, the Czech pool sits above the peer median, not at the bottom: 4th of 10 in the NHL.</p><p class="nx-take-body">20 Czech players reached the games threshold in the NHL in 2025/26, 1.83 per million inhabitants against a peer median of 1.21. Counting the four strongest European leagues as well, 53 players, 4.86 per million, 5th of 10.</p><p class="nx-take-body">Sweden and Finland are in another class: 7.26 and 7.25 NHL players per million, about 4 times the Czech rate.</p></div></div>
-    <div class="nx-take"><p class="nx-take-n">2</p><div><p class="nx-take-head">The Czech NHL group fell from 58 players in 2001/02 to 20 in 2025/26 — gradually, not in one break.</p><p class="nx-take-body">The most likely season for a fall is 2009/10, with only 9% probability; the step is ×0.83 (90% interval 0.56–1.14). The fitted level is now 43% of its 2002/03 peak.</p><p class="nx-take-body">Finland and Sweden show only upward steps over the same seasons.</p></div></div>
-    <div class="nx-take"><p class="nx-take-n">3</p><div><p class="nx-take-head">The gap is young: no Czech skater aged 21 or under reaches the games threshold in the NHL or rung 2.</p><p class="nx-take-body">The largest shortfall against the peer median is forwards aged 21 or under: 6.1 players, then forwards aged 22–25 (2.8).</p></div></div>
-    <div class="nx-take"><p class="nx-take-n">4</p><div><p class="nx-take-head">At home, under-21 skaters get 7.9% of Extraliga games; the Liiga gives its young 14.3% and the SHL 16.7%.</p><p class="nx-take-body">On ice time the gap is wider: 5.5% against 11.9% and 11.4%, averaged over 2014/15–2025/26. In 2025/26 the Extraliga share was 5.7% of games.</p></div></div>
-    <div class="nx-take"><p class="nx-take-n">5</p><div><p class="nx-take-head">Abroad, Czech skaters in the NHL play the median ice time for their position and score below it; in the Liiga and the SHL they are above the median on both.</p><p class="nx-take-body">Over 2020/21–2025/26, Czech NHL skaters played 0.98 times the median ice time of their position and scored 0.87 times its points per game. In the Liiga the ratios are 1.09 and 1.40, in the SHL 1.08 and 1.30.</p></div></div>
-    <div class="nx-take"><p class="nx-take-n">6</p><div><p class="nx-take-head">Since 2010 the national team has drawn on the NHL (30%), the Extraliga (28%) and the KHL (25%) in about equal parts; rung 2 gives 13%.</p><p class="nx-take-body">Averaged over 21 World Championship and Olympic rosters. The KHL is outside the atlas&#39;s leagues, so 25% of the roster spots come from a league the atlas does not measure.</p></div></div>
-    <p class="take-line close-links"><a href="#scope">What is counted</a> · <a href="#limitations">Limitations</a> · <a href="#autumn">This autumn</a> · <a href="atlas/">Every Czech player in the pool</a></p>
-  </div>
-</section>
-
-<section class="slide scope" id="scope">
-  <div class="container">
-    <h2 class="slide-q">What is counted</h2>
-    <p class="slide-a">Ten nations, six leagues, one definition of nationality, and three leagues and one database left out on purpose.</p>
-    <div class="scope-grid">
-      <div>
-        <h3>The ladder</h3>
-        <dl class="scope-list">
-          <dt><i class="sw" style="background:var(--acid)"></i>Rung 1</dt><dd>NHL.</dd>
-          <dt><i class="sw" style="background:#111111"></i>Rung 2</dt><dd>SHL (Sweden), Liiga (Finland), National League (Switzerland), DEL (Germany). "NHL + rung 2" is the headline's five leagues.</dd>
-          <dt><i class="sw" style="background:#c9c9c4"></i>Home</dt><dd>The Czech Extraliga. For Finland, Sweden, Switzerland and Germany the home league is already rung 2.</dd>
-          <dt><i class="sw" style="background:#8a8a8a"></i>Other</dt><dd>Everything else in the data.</dd>
-        </dl>
-        <p class="scope-note">Nations: Czechia against Finland, Sweden, Switzerland, Slovakia, Germany, Latvia, Denmark, Norway, Austria. Population: Eurostat, 1 January of the season's second year.</p>
-      </div>
-      <div>
-        <h3 id="nationality">Nationality, one definition</h3>
-        <p>A player's nationality is taken, in this order, from:</p>
-        <ol class="scope-ol">
-          <li><strong>citizenship</strong> where a league publishes it: the NHL's <code>nationalityCode</code>, the Liiga's and the SHL's <code>nationality</code> (the SHL's is mostly "N/A" before about 2010);</li>
-          <li>the <strong>national-team roster</strong> at a World Championship or Olympics since 2010 (IIHF eligibility);</li>
-          <li><strong>eligibility or licence</strong> where that is all a source has: the Extraliga's foreigner flag, the DEL's licence nationality (from 2022/23), the National League's Swiss licence.</li>
-        </ol>
-        <p>Players are linked across leagues on the folded name plus the birth date, so a Czech in the SHL is recognised from his NHL or Extraliga record. Czechoslovak-era births take the present-day state the NHL recodes them to. Of the 867 players on the <a href="atlas/">pool page</a>, 649 are Czech on eligibility alone.</p>
-      </div>
-      <div>
-        <h3 id="exclusions">Left out</h3>
-        <ul class="scope-ul">
-          <li><strong>KHL</strong>, by design. It removes a real destination, especially before 2014, and it is where 25% of the Czech national team's roster spots since 2010 came from.</li>
-          <li><strong>AHL</strong>: its terms forbid automated access. AHL seasons appear only in NHL players' career records, a survivor-biased view.</li>
-          <li><strong>Slovak Extraliga</strong>: its robots.txt blocks automated access. Slovakia is measured through its players in the covered leagues.</li>
-          <li><strong>Elite Prospects</strong>: its terms forbid scraping.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide" id="q1">
-  <div class="container">
-    <p class="close-kicker">Question 1</p>
-    <h2 class="slide-q">Is the Czech pool thin?</h2>
-    <p class="slide-a">Not per head. Czechia ranks <strong>4th of 10</strong> for NHL players at 1.83 per million, above the peer median of 1.21; Sweden leads at 7.26.</p>
-    <figure class="figure-bleed" data-chart="q1-bars">
-      <table class="fig-table">
-  <thead><tr><th scope="col">Nation</th><th scope="col" class="num">NHL players</th><th scope="col" class="num">per million</th></tr></thead>
-  <tbody>
-    <tr><td>Sweden</td><td class="num">77</td><td class="num">7.26</td></tr>
-    <tr><td>Finland</td><td class="num">41</td><td class="num">7.25</td></tr>
-    <tr><td>Latvia</td><td class="num">6</td><td class="num">3.25</td></tr>
-    <tr class="is-home"><td>Czechia</td><td class="num">20</td><td class="num">1.83</td></tr>
-    <tr><td>Slovakia</td><td class="num">7</td><td class="num">1.29</td></tr>
-    <tr><td>Switzerland</td><td class="num">11</td><td class="num">1.21</td></tr>
-    <tr><td>Denmark</td><td class="num">4</td><td class="num">0.66</td></tr>
-    <tr><td>Norway</td><td class="num">2</td><td class="num">0.36</td></tr>
-    <tr><td>Austria</td><td class="num">2</td><td class="num">0.22</td></tr>
-    <tr><td>Germany</td><td class="num">8</td><td class="num">0.10</td></tr>
-  </tbody>
-</table>
-
-      <figcaption>How to read it: one bar per nation, players with at least the games threshold in 2025/26 divided by the population in millions; the dashed line is the median of the nine peers. Switch to "NHL + rung 2" to add the SHL, Liiga, National League and DEL: Czechia has 53 players there, 4.86 per million, 5th of 10 (peer median 3.55).</figcaption>
-    </figure>
-    <figure class="figure-bleed" data-chart="q1-series">
-      <table class="fig-table">
-        <thead><tr><th scope="col">Season</th><th scope="col" class="num">Czech NHL players</th></tr></thead>
-        <tbody><tr><td>1995/96</td><td class="num">25</td></tr><tr><td>1996/97</td><td class="num">26</td></tr><tr><td>1997/98</td><td class="num">30</td></tr><tr><td>1998/99</td><td class="num">39</td></tr><tr><td>1999/00</td><td class="num">43</td></tr><tr><td>2000/01</td><td class="num">53</td></tr><tr><td>2001/02</td><td class="num">58</td></tr><tr><td>2002/03</td><td class="num">57</td></tr><tr><td>2003/04</td><td class="num">54</td></tr><tr><td>2004/05</td><td class="num">lockout</td></tr><tr><td>2005/06</td><td class="num">51</td></tr><tr><td>2006/07</td><td class="num">52</td></tr><tr><td>2007/08</td><td class="num">53</td></tr><tr><td>2008/09</td><td class="num">46</td></tr><tr><td>2009/10</td><td class="num">39</td></tr><tr><td>2010/11</td><td class="num">40</td></tr><tr><td>2011/12</td><td class="num">38</td></tr><tr><td>2012/13</td><td class="num">38</td></tr><tr><td>2013/14</td><td class="num">31</td></tr><tr><td>2014/15</td><td class="num">34</td></tr><tr><td>2015/16</td><td class="num">32</td></tr><tr><td>2016/17</td><td class="num">25</td></tr><tr><td>2017/18</td><td class="num">31</td></tr><tr><td>2018/19</td><td class="num">27</td></tr><tr><td>2019/20</td><td class="num">29</td></tr><tr><td>2020/21</td><td class="num">22</td></tr><tr><td>2021/22</td><td class="num">25</td></tr><tr><td>2022/23</td><td class="num">26</td></tr><tr><td>2023/24</td><td class="num">25</td></tr><tr><td>2024/25</td><td class="num">23</td></tr><tr><td>2025/26</td><td class="num">20</td></tr></tbody>
-      </table>
-      <figcaption>How to read it: each line is a nation's count per million, season by season; Czechia is the blue line, the two peers picked in the chips are ink and grey. The NHL series starts in 1995/96 with 25 Czech players, rises to 58 in 2001/02 and falls to 20 in 2025/26; 2004/05 was not played. The rung 1 + 2 series starts in 2008/09; seasons before 2022/23 are shaded because the DEL did not publish nationality, so they are lower bounds.</figcaption>
-    </figure>
-    <details class="fold slide-method">
-      <summary>How we know</summary>
-      <p class="slide-did"><span class="slide-did-label">What we did</span> For each nation and season we counted the distinct players of that nationality who reached the games threshold in the NHL (or in any of the five leagues), then divided by the population. The threshold is at least 20 of 82 games, pro-rated to the league-season&#39;s schedule (95th percentile of skater games played): 20 games in a full NHL season, fewer in the short 2012/13 and 2020/21 seasons and in shorter European schedules.</p>
-      <p class="slide-did"><span class="slide-did-label">Sensitivity</span> Counting any game at all, Czechia has 29 NHL players (2.66 per million, 4th) and 69 in the five leagues (5th). With a flat 20 games everywhere, 20 and 53 (5th).</p>
-      <p class="slide-how"><span class="slide-how-label">Coverage</span> In 2025/26 every qualifying NHL, Liiga and DEL player has a nationality; the National League has 22 of 365 unidentified (foreign licences with no match), the SHL 4 of 365. Only 4 seasons of the rung 1 + 2 series (2022/23–2025/26) have every rung-2 league at least 90% identified.</p>
-    </details>
-  </div>
-</section>
-
-<section class="slide" id="q2">
-  <div class="container">
-    <p class="close-kicker">Question 2</p>
-    <h2 class="slide-q">When did it break?</h2>
-    <p class="slide-a">It did not break in one season: <strong>it wore down</strong>. The most likely fall is 2009/10, with 9% probability; the fitted level is now 43% of its 2002/03 peak.</p>
-    <figure class="figure-bleed" data-chart="q2-break">
-      <table class="fig-table">
-        <thead><tr><th scope="col">Nation</th><th scope="col">Step</th><th scope="col">Most likely season</th><th scope="col" class="num">Probability</th><th scope="col" class="num">Level after ÷ before (90% interval)</th></tr></thead>
-        <tbody>
-          <tr><td>Czechia</td><td>rise</td><td>1998/99</td><td class="num">39%</td><td class="num">×1.47 (0.73–1.97)</td></tr>
-          <tr><td>Czechia</td><td>fall</td><td>2009/10</td><td class="num">9%</td><td class="num">×0.83 (0.56–1.14)</td></tr>
-          <tr><td>Finland</td><td>rise</td><td>1999/00</td><td class="num">54%</td><td class="num">×1.89 (1.35–2.53)</td></tr>
-          <tr><td>Finland</td><td>rise</td><td>2018/19</td><td class="num">22%</td><td class="num">×1.28 (0.86–1.54)</td></tr>
-          <tr><td>Sweden</td><td>rise</td><td>1999/00</td><td class="num">22%</td><td class="num">×1.26 (0.93–1.60)</td></tr>
-          <tr><td>Sweden</td><td>rise</td><td>2014/15</td><td class="num">53%</td><td class="num">×1.42 (0.90–1.73)</td></tr>
-        </tbody>
-      </table>
-      <figcaption>How to read it: dots are the players with 20 or more games each season, the line and the band are the model's level and its 90% interval. The bars underneath say how likely each season is to be where a step happened: ink for a fall, pale for a rise. A tall single bar would be a sharp break. For Czechia, 87% of the fall's probability is spread over 2008/09–2023/24, with no season above 9%. Switch to Finland and Sweden: both have only rises.</figcaption>
-    </figure>
-    <details class="fold slide-method">
-      <summary>How we know</summary>
-      <p class="slide-did"><span class="slide-did-label">The model</span> A Poisson local-level model, the one the football atlas uses for its series: the log of the expected count follows a random walk plus two step changes, and the step seasons are marginalised over every allowed pair (at least three seasons from the ends and from each other). 2004/05, the lockout, stays in the time index with no likelihood. Priors: σ ~ HalfNormal(0.2), step ~ Normal(0, 1).</p>
-<p class="slide-did"><span class="slide-did-label">The Czech fall</span> The step is ×0.83 (90% interval 0.56–1.14); the probability that it lowers the level is 0.80. The earlier rise is dated to 1998/99. The fitted level peaked at about 53 players in 2002/03 and is 23 in 2025/26.</p>      <p class="slide-how"><span class="slide-how-label">Diagnostics</span> 4 chains × 1000 draws after 1000 tuning, seed 42; largest R-hat 1.007, 1 divergent transition over the three fits. There is no forecast: the atlas is descriptive.</p>
-    </details>
-  </div>
-</section>
-
-<section class="slide" id="q3">
-  <div class="container">
-    <p class="close-kicker">Question 3</p>
-    <h2 class="slide-q">Where is it thin?</h2>
-    <p class="slide-a">In the youngest band: <strong>no Czech skater aged 21 or under</strong> reaches the games threshold in the NHL or rung 2 in 2025/26. The largest shortfall is forwards aged 21 or under: 6.1 players below the peer median.</p>
-    <figure class="figure-bleed" data-chart="q3-cohorts">
-      <table class="fig-table">
-        <thead><tr><th scope="col">Position, age</th><th scope="col" class="num">Czech players</th><th scope="col" class="num">per million</th><th scope="col" class="num">peer median</th><th scope="col" class="num">short of the median</th></tr></thead>
-        <tbody>
-          <tr><td>defencemen, 22–25</td><td class="num">3</td><td class="num">0.27</td><td class="num">0.18</td><td class="num">–</td></tr>
-          <tr><td>defencemen, 26–29</td><td class="num">4</td><td class="num">0.37</td><td class="num">0.37</td><td class="num">0.0</td></tr>
-          <tr><td>defencemen, 30+</td><td class="num">7</td><td class="num">0.64</td><td class="num">0.00</td><td class="num">–</td></tr>
-          <tr><td>defencemen, ≤21</td><td class="num">0</td><td class="num">0.00</td><td class="num">0.18</td><td class="num">2.0</td></tr>
-          <tr><td>forwards, 22–25</td><td class="num">3</td><td class="num">0.27</td><td class="num">0.53</td><td class="num">2.8</td></tr>
-          <tr><td>forwards, 26–29</td><td class="num">15</td><td class="num">1.37</td><td class="num">0.66</td><td class="num">–</td></tr>
-          <tr><td>forwards, 30+</td><td class="num">10</td><td class="num">0.92</td><td class="num">1.00</td><td class="num">0.9</td></tr>
-          <tr><td>forwards, ≤21</td><td class="num">0</td><td class="num">0.00</td><td class="num">0.55</td><td class="num">6.1</td></tr>
-          <tr><td>goalkeepers, 22–25</td><td class="num">3</td><td class="num">0.27</td><td class="num">0.18</td><td class="num">–</td></tr>
-          <tr><td>goalkeepers, 26–29</td><td class="num">4</td><td class="num">0.37</td><td class="num">0.18</td><td class="num">–</td></tr>
-          <tr><td>goalkeepers, 30+</td><td class="num">4</td><td class="num">0.37</td><td class="num">0.18</td><td class="num">–</td></tr>
-          <tr><td>goalkeepers, ≤21</td><td class="num">0</td><td class="num">0.00</td><td class="num">0.00</td><td class="num">–</td></tr>
-        </tbody>
-      </table>
-      <figcaption>How to read it: one row per position and age band in 2025/26. The blue dot is Czechia, the ink tick the peer median, the grey dots the peers (hover for names). A hollow dot is a peer left out of that median because more than a quarter of its players have no known age or position: Switzerland and Germany in every age band, as the National League and the DEL publish no birth dates. The scale is logarithmic so the small nations stay readable next to Finland and Sweden.</figcaption>
-    </figure>
-    <details class="fold slide-method">
-      <summary>How we know</summary>
-      <p class="slide-did"><span class="slide-did-label">What we did</span> Qualifying players in the NHL and rung 2 in 2025/26, counted once per person, split by position and by age (season start year minus birth year). The shortfall is the gap to the peer median per million times the Czech population (10.9 million): the number of players Czechia would need to reach the median.</p>
-      <p class="slide-how"><span class="slide-how-label">Largest shortfalls</span> forwards ≤21: 6.1; forwards 22–25: 2.8; defencemen ≤21: 2.0; forwards 30+: 0.9; defencemen 26–29: 0.0.</p>
-    </details>
-  </div>
-</section>
-
-<section class="slide" id="q4">
-  <div class="container">
-    <p class="close-kicker">Question 4</p>
-    <h2 class="slide-q">Do young players get ice time at home?</h2>
-    <p class="slide-a">Less than in Finland and Sweden. Under-21 skaters play <strong>7.9% of Extraliga games</strong> and 5.5% of its ice time; the Liiga gives them 14.3% and 11.9%, the SHL 16.7% and 11.4%.</p>
-    <figure class="figure-bleed" data-chart="q4-youth">
-      <table class="fig-table">
-        <thead><tr><th scope="col">League</th><th scope="col" class="num">Under-21 share of games</th><th scope="col" class="num">of ice time</th><th scope="col" class="num">Seasons measured</th></tr></thead>
-        <tbody>
-          <tr class="is-home"><td>Extraliga</td><td class="num">7.9%</td><td class="num">5.5%</td><td class="num">12</td></tr>
-<tr><td>Liiga</td><td class="num">14.3%</td><td class="num">11.9%</td><td class="num">12</td></tr><tr><td>SHL</td><td class="num">16.7%</td><td class="num">11.4%</td><td class="num">12</td></tr>        </tbody>
-      </table>
-      <figcaption>How to read it: the share of all skater games (or of skater ice time) played by skaters aged 20 or less, season by season over 2014/15–2025/26. The Extraliga is blue, the Liiga ink, the SHL grey. The National League and the DEL are dashed and marked "not measured": they publish no birth dates, so ages are known for only about 47% and 43% of their games, and their shares only count the young players who could be linked to another league.</figcaption>
-    </figure>
-    <details class="fold slide-method">
-      <summary>How we know</summary>
-      <p class="slide-did"><span class="slide-did-label">What we did</span> Every skater of every nationality, regular season. A league-season counts as measured when ages are known for at least 90% of its skater games; the Extraliga, Liiga and SHL are measured in all 12 seasons. Ice time is published by the Extraliga from 2013/14, the Liiga from 2014/15 and the SHL from 2009/10. Goalkeepers are in <a href="#q7">question 7</a>.</p>
-      <p class="slide-how"><span class="slide-how-label">Ratios</span> The Extraliga's under-21 share of games is 0.56 times the Liiga's and 0.48 times the SHL's; of ice time, 0.46 and 0.48. In 2025/26 the Extraliga share was 5.7% of games and 4.1% of ice time.</p>
-    </details>
-  </div>
-</section>
-
-<section class="slide" id="q5">
-  <div class="container">
-    <p class="close-kicker">Question 5</p>
-    <h2 class="slide-q">How do they fare abroad?</h2>
-    <p class="slide-a">In the NHL, Czech skaters play <strong>0.98 times</strong> the median ice time of their position and score 0.87 times its points per game. In the Liiga (1.09, 1.40) and the SHL (1.08, 1.30) they are above the median on both counts.</p>
-    <figure class="figure-bleed" data-chart="q5-abroad">
-      <table class="fig-table">
-        <thead><tr><th scope="col">League</th><th scope="col" class="num">Czech players</th><th scope="col" class="num">player-seasons</th><th scope="col" class="num">ice time ÷ median</th><th scope="col" class="num">points per game ÷ median</th></tr></thead>
-        <tbody><tr><td>NHL</td><td class="num">35</td><td class="num">111</td><td class="num">0.98</td><td class="num">0.87</td></tr><tr><td>Liiga</td><td class="num">40</td><td class="num">72</td><td class="num">1.09</td><td class="num">1.40</td></tr><tr><td>SHL</td><td class="num">21</td><td class="num">39</td><td class="num">1.08</td><td class="num">1.30</td></tr></tbody>
-      </table>
-      <figcaption>How to read it: each dot is a nation's median skater in a league over 2020/21–2025/26, as a multiple of the league-season median at the same position (1.0 = the median). Czechia is the blue dot; filled ink dots are peers with ten or more player-seasons in that league, hollow ones fewer. Switch between ice time and points per game. A league's own players (Finns in the Liiga, Swedes in the SHL) sit below 1.0: they make up most of the roster, depth included, and the imported players are compared with them.</figcaption>
-    </figure>
-    <details class="fold slide-method">
-      <summary>How we know</summary>
-      <p class="slide-did"><span class="slide-did-label">What we did</span> Qualifying skaters (the games threshold) over 2020/21–2025/26; each player-season is divided by the median of all qualifying skaters of the same league, season and position (forward or defenceman), and the table shows the median of those ratios. 222 Czech player-seasons in all; 3 have no position and are left out.</p>
-      <p class="slide-how"><span class="slide-how-label">By position</span> NHL forwards 1.00 (ice time) and 1.01 (points), NHL defencemen 0.91 and 0.83; Liiga forwards 1.53 on points, SHL forwards 1.50.</p>
-    </details>
-  </div>
-</section>
-
-<section class="slide" id="q6">
-  <div class="container">
-    <p class="close-kicker">Question 6</p>
-    <h2 class="slide-q">What is the national team built from?</h2>
-    <p class="slide-a">Since 2010, Czech World Championship and Olympic rosters have been on average <strong>30% NHL</strong>, 28% Extraliga, 25% KHL and 13% rung 2.</p>
-    <figure class="figure-bleed" data-chart="q6-roster">
-      <table class="fig-table">
-        <thead><tr><th scope="col">Tournament</th><th scope="col" class="num">NHL</th><th scope="col" class="num">rung 2</th><th scope="col" class="num">Extraliga</th><th scope="col" class="num">KHL</th><th scope="col" class="num">other</th><th scope="col" class="num">players</th></tr></thead>
-        <tbody><tr><td>Olympics 2010</td><td class="num">16</td><td class="num">0</td><td class="num">2</td><td class="num">5</td><td class="num">0</td><td class="num">23</td></tr><tr><td>World Championship 2010</td><td class="num">3</td><td class="num">3</td><td class="num">10</td><td class="num">9</td><td class="num">0</td><td class="num">25</td></tr><tr><td>World Championship 2011</td><td class="num">9</td><td class="num">0</td><td class="num">3</td><td class="num">13</td><td class="num">0</td><td class="num">25</td></tr><tr><td>World Championship 2012</td><td class="num">6</td><td class="num">2</td><td class="num">6</td><td class="num">10</td><td class="num">1</td><td class="num">25</td></tr><tr><td>World Championship 2013</td><td class="num">12</td><td class="num">3</td><td class="num">4</td><td class="num">6</td><td class="num">0</td><td class="num">25</td></tr><tr><td>Olympics 2014</td><td class="num">17</td><td class="num">0</td><td class="num">3</td><td class="num">5</td><td class="num">0</td><td class="num">25</td></tr><tr><td>World Championship 2014</td><td class="num">6</td><td class="num">0</td><td class="num">6</td><td class="num">12</td><td class="num">1</td><td class="num">25</td></tr><tr><td>World Championship 2015</td><td class="num">8</td><td class="num">3</td><td class="num">4</td><td class="num">10</td><td class="num">0</td><td class="num">25</td></tr><tr><td>World Championship 2016</td><td class="num">4</td><td class="num">2</td><td class="num">7</td><td class="num">12</td><td class="num">0</td><td class="num">25</td></tr><tr><td>World Championship 2017</td><td class="num">7</td><td class="num">2</td><td class="num">7</td><td class="num">7</td><td class="num">2</td><td class="num">25</td></tr><tr><td>Olympics 2018</td><td class="num">0</td><td class="num">3</td><td class="num">8</td><td class="num">14</td><td class="num">0</td><td class="num">25</td></tr><tr><td>World Championship 2018</td><td class="num">8</td><td class="num">3</td><td class="num">6</td><td class="num">5</td><td class="num">3</td><td class="num">25</td></tr><tr><td>World Championship 2019</td><td class="num">12</td><td class="num">2</td><td class="num">7</td><td class="num">3</td><td class="num">1</td><td class="num">25</td></tr><tr><td>World Championship 2021</td><td class="num">6</td><td class="num">5</td><td class="num">10</td><td class="num">7</td><td class="num">0</td><td class="num">28</td></tr><tr><td>Olympics 2022</td><td class="num">0</td><td class="num">8</td><td class="num">4</td><td class="num">12</td><td class="num">0</td><td class="num">24</td></tr><tr><td>World Championship 2022</td><td class="num">9</td><td class="num">8</td><td class="num">6</td><td class="num">1</td><td class="num">1</td><td class="num">25</td></tr><tr><td>World Championship 2023</td><td class="num">4</td><td class="num">7</td><td class="num">12</td><td class="num">0</td><td class="num">4</td><td class="num">27</td></tr><tr><td>World Championship 2024</td><td class="num">11</td><td class="num">3</td><td class="num">11</td><td class="num">0</td><td class="num">1</td><td class="num">26</td></tr><tr><td>World Championship 2025</td><td class="num">8</td><td class="num">5</td><td class="num">12</td><td class="num">0</td><td class="num">1</td><td class="num">26</td></tr><tr><td>Olympics 2026</td><td class="num">10</td><td class="num">6</td><td class="num">7</td><td class="num">0</td><td class="num">2</td><td class="num">25</td></tr><tr class="is-home"><td>World Championship 2026</td><td class="num">4</td><td class="num">6</td><td class="num">14</td><td class="num">0</td><td class="num">1</td><td class="num">25</td></tr></tbody>
-      </table>
-      <figcaption>How to read it: each bar is a nation's roster spots by the league the player's club was in at the time of the tournament, averaged over the 21 World Championships and Olympics since 2010: NHL in blue, rung 2 in ink, the Extraliga pale, the KHL hatched, other leagues grey. The second view is Czechia tournament by tournament: no KHL player has been on the Czech roster since the World Championship 2022; at the World Championship 2026 the roster had 4 NHL players, 6 from rung 2 and 14 from the Extraliga.</figcaption>
-    </figure>
-    <details class="fold slide-method">
-      <summary>How we know</summary>
-      <p class="slide-did"><span class="slide-did-label">What we did</span> Rosters from the English Wikipedia articles for each World Championship and Olympic tournament since 2010 (CC BY-SA 4.0), each player linked to his league records. A player's club is placed in a league by these rules in order: the league Wikipedia gives, a list of KHL clubs, his NHL career record for that season, his own league row, a team-name match, then the club's country.</p>
-      <p class="slide-how"><span class="slide-how-label">Placement</span> nhl career 1,367, league row 1,356, club country 625, khl club 565, club league 559, team name 249, unknown 128 roster rows (all nations). The Czech NHL share ranks 2nd of the ten nations.</p>
-    </details>
-  </div>
-</section>
-
-<section class="slide" id="q7">
-  <div class="container">
-    <p class="close-kicker">Question 7</p>
-    <h2 class="slide-q">Goalkeepers</h2>
-    <p class="slide-a">6 Czech goalkeepers reached the threshold in the NHL in 2025/26 and 11 in the NHL plus rung 2: <strong>1.01 per million</strong>, 5th of 10, against a peer median of 0.53.</p>
-    <figure class="figure-bleed" data-chart="q7-bars">
-      <table class="fig-table">
-  <thead><tr><th scope="col">Nation</th><th scope="col" class="num">NHL goalkeepers</th><th scope="col" class="num">per million</th></tr></thead>
-  <tbody>
-    <tr><td>Finland</td><td class="num">7</td><td class="num">1.24</td></tr>
-    <tr><td>Latvia</td><td class="num">2</td><td class="num">1.08</td></tr>
-    <tr><td>Sweden</td><td class="num">9</td><td class="num">0.85</td></tr>
-    <tr class="is-home"><td>Czechia</td><td class="num">6</td><td class="num">0.55</td></tr>
-    <tr><td>Denmark</td><td class="num">1</td><td class="num">0.17</td></tr>
-    <tr><td>Switzerland</td><td class="num">1</td><td class="num">0.11</td></tr>
-    <tr><td>Germany</td><td class="num">1</td><td class="num">0.01</td></tr>
-    <tr><td>Norway</td><td class="num">0</td><td class="num">0.00</td></tr>
-    <tr><td>Slovakia</td><td class="num">0</td><td class="num">0.00</td></tr>
-    <tr><td>Austria</td><td class="num">0</td><td class="num">0.00</td></tr>
-  </tbody>
-</table>
-
-      <figcaption>How to read it: as in question 1, for goalkeepers with at least the pro-rated games threshold in 2025/26. Czechia is 4th in the NHL at 0.55 per million (peer median 0.11).</figcaption>
-    </figure>
-    <figure class="figure-bleed" data-chart="q7-series">
-      <table class="fig-table">
-        <thead><tr><th scope="col">Season</th><th scope="col" class="num">Czech NHL goalkeepers</th></tr></thead>
-        <tbody><tr><td>1995/96</td><td class="num">1</td></tr><tr><td>1996/97</td><td class="num">1</td></tr><tr><td>1997/98</td><td class="num">2</td></tr><tr><td>1998/99</td><td class="num">3</td></tr><tr><td>1999/00</td><td class="num">3</td></tr><tr><td>2000/01</td><td class="num">5</td></tr><tr><td>2001/02</td><td class="num">5</td></tr><tr><td>2002/03</td><td class="num">4</td></tr><tr><td>2003/04</td><td class="num">3</td></tr><tr><td>2004/05</td><td class="num">lockout</td></tr><tr><td>2005/06</td><td class="num">2</td></tr><tr><td>2006/07</td><td class="num">2</td></tr><tr><td>2007/08</td><td class="num">2</td></tr><tr><td>2008/09</td><td class="num">1</td></tr><tr><td>2009/10</td><td class="num">2</td></tr><tr><td>2010/11</td><td class="num">3</td></tr><tr><td>2011/12</td><td class="num">3</td></tr><tr><td>2012/13</td><td class="num">3</td></tr><tr><td>2013/14</td><td class="num">2</td></tr><tr><td>2014/15</td><td class="num">3</td></tr><tr><td>2015/16</td><td class="num">3</td></tr><tr><td>2016/17</td><td class="num">2</td></tr><tr><td>2017/18</td><td class="num">3</td></tr><tr><td>2018/19</td><td class="num">2</td></tr><tr><td>2019/20</td><td class="num">3</td></tr><tr><td>2020/21</td><td class="num">2</td></tr><tr><td>2021/22</td><td class="num">5</td></tr><tr><td>2022/23</td><td class="num">5</td></tr><tr><td>2023/24</td><td class="num">6</td></tr><tr><td>2024/25</td><td class="num">6</td></tr><tr><td>2025/26</td><td class="num">6</td></tr></tbody>
-      </table>
-      <figcaption>How to read it: qualifying NHL goalkeepers per nation, season by season. The Czech count is 6 in 2025/26, as many as in any season since 1995/96.</figcaption>
-    </figure>
-    <details class="fold slide-method">
-      <summary>How we know</summary>
-      <p class="slide-did"><span class="slide-did-label">Abroad</span> Czech goalkeepers' save percentage against the league-season median, 2020/21–2025/26: NHL -0.3 points (8 goalkeepers), Liiga +1.1 (7), SHL -0.6 (3). Small numbers: read them as descriptive.</p>
-      <p class="slide-did"><span class="slide-did-label">Young goalkeepers at home</span> Goalkeepers aged 23 or less play 21.0% of Extraliga goalkeeper games, against 37.4% in the Liiga and 20.9% in the SHL (2014/15–2025/26). Czech goalkeepers played 86% of Extraliga goalkeeper games in 2025/26.</p>
-      <p class="slide-how"><span class="slide-how-label">National team</span> Of 63 goalkeeper roster spots since 2010, 19 went to NHL goalkeepers, 22 to KHL goalkeepers, 14 to Extraliga goalkeepers and 6 to rung 2.</p>
-    </details>
-  </div>
-</section>
-
-<section class="slide autumn" id="autumn">
-  <div class="container">
-    <p class="close-kicker">News</p>
-    <h2 class="slide-q">This autumn</h2>
-    <p class="autumn-asof">Atlas data as of 29 September 2026; news as of 29 September 2026</p>
-    <div class="autumn-body">
-      <p class="autumn-lede">Two dated items of news, with their sources listed at the end of this section. The numbers beside them are the atlas's own, from its snapshot, which this section does not refresh.</p>
-
-      <h3>A new head coach of the national team</h3>
-      <p>Zdeněk Moták succeeds Radim Rulík as head coach of the Czech men's national team. The executive board of the Czech Ice Hockey Association approved the appointment on 16 April 2026, with two-year contracts.<sup class="fn"><a href="#autumn-src-1">1</a></sup> The staff: Zdeněk Moták with coaches Pavel Gross and Richard Král, goalkeeping coach Jaroslav Kameš, and Patrik Eliáš as general manager in place of Jiří Šlégr.<sup class="fn"><a href="#autumn-src-2">2</a></sup> The first game under the new staff is on 5 November 2026 against Sweden at the O2 Arena, Prague (Euro Hockey Tour).<sup class="fn"><a href="#autumn-src-2">2</a></sup></p>
-      <p class="capita-note">What the national team's rosters have been built from since 2010, by league: <a href="#q6">question 6</a>.</p>
-
-      <h3>A club captaincy in the NHL</h3>
-      <p>On 27 September 2026 the Boston Bruins named David Pastrňák the 28th captain in the club's history.<sup class="fn"><a href="#autumn-src-3">3</a>,<a href="#autumn-src-4">4</a></sup> The previous captain was Brad Marchand (captain 2023–25, traded in March 2025).<sup class="fn"><a href="#autumn-src-3">3</a></sup> According to hokej.cz, Pastrňák is the sixth Czech to be a permanent captain in the NHL.<sup class="fn"><a href="#autumn-src-5">5</a></sup> The captaincy is with his NHL club, not a national-team role.</p>
-      <dl class="autumn-stats" aria-label="David Pastrňák, NHL 2025/26, from the atlas">
-        <div><dt>NHL games, 2025/26</dt><dd>77</dd></div>
-        <div><dt>Points</dt><dd>100 <span class="muted">29 goals, 71 assists</span></dd></div>
-        <div><dt>Ice time per game</dt><dd>20:39 <span class="muted">median 14:36</span></dd></div>
-        <div><dt>Points per game</dt><dd>1.30 <span class="muted">median 0.43</span></dd></div>
-      </dl>
-      <p class="capita-note">From the atlas's pool data, NHL 2025/26. The median is over all NHL forwards who reached the games threshold that season, as in <a href="#q5">question 5</a>. His seasons since 2020/21 are on the <a href="atlas/">pool page</a>.</p>
-
-      <h3 class="autumn-sources-h">Sources</h3>
-      <ol class="autumn-sources">
-        <li id="autumn-src-1">Sport.cz (16 April 2026). <a href="https://www.sport.cz/clanek/hokej-reprezentace-o-rulikove-nastupci-u-reprezentace-je-rozhodnuto-5437460" rel="noopener">https://www.sport.cz/clanek/hokej-reprezentace-o-rulikove-nastupci-u-reprezentace-je-rozhodnuto-5437460</a>, accessed 29 September 2026.</li>
-        <li id="autumn-src-2">hokej.cz (Czech Ice Hockey Association) (15 September 2026). <a href="https://www.hokej.cz/poprve-od-zlateho-ms-motak-zacne-reprezentacni-misi-v-o2-arene/5097991" rel="noopener">https://www.hokej.cz/poprve-od-zlateho-ms-motak-zacne-reprezentacni-misi-v-o2-arene/5097991</a>, accessed 29 September 2026.</li>
-        <li id="autumn-src-3">Boston Bruins / NHL.com (27 September 2026). <a href="https://www.nhl.com/bruins/news/bruins-name-david-pastrnak-28th-captain-in-team-history" rel="noopener">https://www.nhl.com/bruins/news/bruins-name-david-pastrnak-28th-captain-in-team-history</a>, accessed 29 September 2026.</li>
-        <li id="autumn-src-4">Boston Bruins / NHL.com (n.d.). <a href="https://www.nhl.com/bruins/news/pastrnak-reacts-to-being-named-28th-bruins-captain-grateful-humbled-and-honored" rel="noopener">https://www.nhl.com/bruins/news/pastrnak-reacts-to-being-named-28th-bruins-captain-grateful-humbled-and-honored</a>, accessed 29 September 2026.</li>
-        <li id="autumn-src-5">hokej.cz (Czech Ice Hockey Association) (n.d.). <a href="https://www.hokej.cz/oficialne-pastrnak-je-kapitanem-bostonu-v-historii-nhl-jako-sesty-cech/5098230" rel="noopener">https://www.hokej.cz/oficialne-pastrnak-je-kapitanem-bostonu-v-historii-nhl-jako-sesty-cech/5098230</a>, accessed 29 September 2026.</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section class="methodology" id="methodology">
-  <div class="container">
-    <h2>How it is built, and where it stops</h2>
-
-    <h3 id="data-sources">Sources</h3>
-    <table class="sources-table">
-      <thead><tr><th scope="col">Source</th><th scope="col">What</th><th scope="col">Fields used</th><th scope="col">Accessed</th></tr></thead>
-      <tbody>
-        <tr><td><a href="https://api.nhle.com/stats/rest">NHL</a></td><td>NHL stats REST: skater and goalie summaries and bios per season, player career records</td><td>citizenship (nationalityCode), full birth date; time on ice from 1997/98</td><td class="mono">2026-09-29</td></tr>
-        <tr><td><a href="https://liiga.fi">Liiga</a></td><td>liiga.fi JSON API (api/v2), regular season (runkosarja)</td><td>citizenship, full birth date; time on ice from 2014/15</td><td class="mono">2026-09-29</td></tr>
-        <tr><td><a href="https://www.shl.se">SHL</a></td><td>shl.se statistics-v2 JSON, SHL regular season</td><td>citizenship where given (mostly N/A before about 2010), birth date; time on ice from 2009/10</td><td class="mono">2026-09-29</td></tr>
-        <tr><td><a href="https://www.hokej.cz">Extraliga</a></td><td>hokej.cz player statistics (HTML), Extraliga regular season</td><td>foreigner flag (eligibility), birth date from player profiles; time on ice from 2013/14</td><td class="mono">2026-09-29</td></tr>
-        <tr><td><a href="https://www.penny-del.org">DEL</a></td><td>penny-del.org statistics pages (HTML), regular season (Hauptrunde)</td><td>licence nationality from 2022/23; no birth dates</td><td class="mono">2026-09-29</td></tr>
-        <tr><td><a href="https://data.sihf.ch">National League</a></td><td>data.sihf.ch Statistic API (cache300), National League, regular season</td><td>Swiss or foreign licence (eligibility); no birth dates</td><td class="mono">2026-09-29</td></tr>
-        <tr><td><a href="https://ec.europa.eu/eurostat/databrowser/view/demo_gind/default/table">Eurostat</a></td><td>Eurostat demo_gind, indic_de=JAN (population on 1 January)</td><td>population on 1 January; dataset updated 2026-07-21</td><td class="mono">2026-09-29</td></tr>
-        <tr><td><a href="https://en.wikipedia.org">Wikipedia</a></td><td>English Wikipedia roster articles for the World Championship and the Olympics, each at a fixed revision (CC BY-SA 4.0)</td><td>21 roster pages, 614 player articles for missing birth dates</td><td class="mono">2026-09-29</td></tr>
-      </tbody>
-    </table>
-    <p>Only public statistics are used: names, birth dates, nationality and season statistics. Every source was fetched once, with at least a second between requests and within its robots.txt, into a raw cache; the processed tables are committed in <code>data/snapshot/</code> with a SHA-256 list, so a clean clone rebuilds every number here without fetching. The NHL's terms allow non-commercial informational use; this is a non-commercial page that cites its sources. Wikipedia rosters are used under CC BY-SA 4.0, each page at the revision listed in <code>data/snapshot/rosters_sources.json</code>.</p>
-
-    <h3 id="linking">Linking players across leagues</h3>
-    <p>17,991 people in all, 14,309 of them with a nationality. Records are matched in four steps: folded name plus full birth date; first initial, surname and birth date (for Dan and Daniel); for records without a birth date, the name alone when exactly one person of that name played within four seasons and his birth year does not contradict it; and finally records still unmatched are joined within the same league on the same name.</p>
-    <div class="table-scroll">
-    <table class="linking-table">
-      <thead><tr><th scope="col">League</th><th scope="col" class="num">Records</th><th scope="col" class="num">With birth date</th><th scope="col" class="num">Linked on name + birth date</th><th scope="col" class="num">Linked on name only</th><th scope="col" class="num">Ambiguous</th><th scope="col" class="num">Unmatched</th><th scope="col" class="num">Joined within league</th></tr></thead>
-      <tbody>
-        <tr><td>NHL</td><td class="num">5,004</td><td class="num">100%</td><td class="num">2,602</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td></tr>
-        <tr><td>SHL</td><td class="num">4,023</td><td class="num">60%</td><td class="num">1,213</td><td class="num">566</td><td class="num">12</td><td class="num">956</td><td class="num">66</td></tr>
-        <tr><td>Liiga</td><td class="num">4,036</td><td class="num">100%</td><td class="num">1,692</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td></tr>
-        <tr><td>National League</td><td class="num">1,865</td><td class="num">0%</td><td class="num">0</td><td class="num">781</td><td class="num">21</td><td class="num">1,063</td><td class="num">0</td></tr>
-        <tr><td>DEL</td><td class="num">3,963</td><td class="num">0%</td><td class="num">0</td><td class="num">1,269</td><td class="num">24</td><td class="num">2,287</td><td class="num">383</td></tr>
-        <tr><td>Extraliga</td><td class="num">3,250</td><td class="num">55%</td><td class="num">593</td><td class="num">226</td><td class="num">4</td><td class="num">1,218</td><td class="num">14</td></tr>
-        <tr><td>Rosters</td><td class="num">2,711</td><td class="num">100%</td><td class="num">1,960</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p>"Unmatched" records keep the nationality their own league gives them, which for the DEL before 2022/23 and for foreign licences in the National League is none. 189 people carry conflicting nationality codes; in 50 of them an Extraliga "Czech" (the foreigner flag) is overridden by a citizenship or national-team code. 19 Wikipedia roster birth dates matched no league record until day and month were swapped or moved by one day; they are corrected in the analysis and listed in <code>outputs/linking.json</code>.</p>
-
-    <h3 id="definitions">Definitions</h3>
-    <dl class="defs">
-      <dt>Games threshold</dt><dd>at least 20 of 82 games, pro-rated to the league-season&#39;s schedule (95th percentile of skater games played). The headline also reports any game and a flat 20.</dd>
-      <dt>Age</dt><dd>Season start year minus birth year; under 21 means 20 or less.</dd>
-      <dt>Population</dt><dd>Eurostat <code>demo_gind</code>, 1 January of the season's second year.</dd>
-      <dt>Complete season</dt><dd>A rung 1 + 2 season counts as complete when every rung-2 league has at least 90% of its qualifying players' nationality identified.</dd>
-      <dt>Season</dt><dd>Regular season only, every league.</dd>
-    </dl>
-
-    <h3 id="reproducibility">Reproducibility</h3>
-    <p><code>make restore-snapshot</code> puts the committed snapshot in place, <code>make verify-snapshot</code> checks its hashes, <code>make analysis</code> recomputes <code>outputs/</code> (about six minutes, mostly the break model) and <code>make pages</code> renders this page and the pool page from them. Each output file records the SHA-256 of the snapshot files it was built from, and the tests fail when the snapshot changes without the outputs being rebuilt. Every number in this text is read from <code>outputs/</code> at render time.</p>
-
-    <h3 id="limitations">Limitations</h3>
-    <ul class="nx-limits">
-      <li><strong>KHL</strong> Excluded by design. It is where 25% of Czech national-team roster spots since 2010 came from, so the pool counted here is smaller than the pool the national team drew on, most of all before 2014 and before 2022.</li>
-      <li><strong>AHL</strong> Not fetched (terms). An AHL season appears only when the player also has an NHL career record, which favours those who made it.</li>
-      <li><strong>Birth dates</strong> The National League and the DEL publish none, so their players' ages come only from a link to another league. That removes Switzerland and Germany from the age medians in question 3 and leaves the NL and DEL youth shares in question 4 unmeasured.</li>
-      <li><strong>Nationality</strong> For 649 of the 867 Czech players on the pool page, the only evidence is the Extraliga foreigner flag or a licence, which is eligibility, not citizenship. The DEL published no nationality before 2022/23, so the rung 1 + 2 series before 2022/23 is a lower bound.</li>
-      <li><strong>Name-only links</strong> Records without a birth date are linked on the name alone, only when one candidate exists within four seasons; ambiguous and unmatched counts are in the table above.</li>
-      <li><strong>Population</strong> A per-million rate compares nations of very different sizes; a handful of players moves a small nation's rate a lot.</li>
-      <li><strong>Descriptive only</strong> Nothing here predicts a season, rates a player beyond his published statistics or advises selection.</li>
-    </ul>
-
-    <h3 id="changes">Change log</h3>
-    <ul class="changelog">
-      <li><span class="mono">2026-09-29</span> A <a href="#autumn">This autumn</a> section: two dated, sourced items of news (the national team's new head coach and staff; David Pastrňák's club captaincy in Boston), beside the atlas's own numbers.</li>
-      <li><span class="mono">2026-09-29</span> Rebuilt on the football atlas's model: ten nations, a two-rung league ladder, fetchers with a committed snapshot, one analysis module per question, interactive charts drawn from <code>outputs/</code>, and a <a href="atlas/">pool page</a>. The style map, the AI layer and the video proof of concept of the earlier version are withdrawn.</li>
-      <li><span class="mono">2026-09-22</span> The site became English only.</li>
-      <li><span class="mono">2026-05-18</span> First version: a style map of Czech players from a crosswalk of league statistics.</li>
-    </ul>
+    <div class="nx-take"><p class="nx-take-n">1</p><div><p class="nx-take-head">Per head, the Czech pool sits above the peer median, not at the bottom: 4th of 10 in the NHL.</p><p class="nx-take-body">20 Czech players reached the games threshold in the NHL in 2025/26, 1.83 per million inhabitants against a peer median of 1.21. Counting the four strongest European leagues as well, 53 players, 4.86 per million, 5th of 10.</p><p class="nx-take-body">Sweden and Finland are in another class: 7.26 and 7.25 NHL players per million, about 4 times the Czech rate.</p><p class="nx-take-link"><a href="q/per-head/">Read the evidence →</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">2</p><div><p class="nx-take-head">The Czech NHL group fell from 58 players in 2001/02 to 20 in 2025/26 — gradually, not in one break.</p><p class="nx-take-body">The most likely season for a fall is 2009/10, with only 9% probability; the step is ×0.83 (90% interval 0.56–1.14). The fitted level is now 43% of its 2002/03 peak.</p><p class="nx-take-body">Finland and Sweden show only upward steps over the same seasons.</p><p class="nx-take-link"><a href="q/break/">Read the evidence →</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">3</p><div><p class="nx-take-head">The gap is young: no Czech skater aged 21 or under reaches the games threshold in the NHL or rung 2.</p><p class="nx-take-body">The largest shortfall against the peer median is forwards aged 21 or under: 6.1 players, then forwards aged 22–25 (2.8).</p><p class="nx-take-link"><a href="q/cohorts/">Read the evidence →</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">4</p><div><p class="nx-take-head">At home, under-21 skaters get 7.9% of Extraliga games; the Liiga gives its young 14.3% and the SHL 16.7%.</p><p class="nx-take-body">On ice time the gap is wider: 5.5% against 11.9% and 11.4%, averaged over 2014/15–2025/26. In 2025/26 the Extraliga share was 5.7% of games.</p><p class="nx-take-link"><a href="q/youth/">Read the evidence →</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">5</p><div><p class="nx-take-head">Abroad, Czech skaters in the NHL play the median ice time for their position and score below it; in the Liiga and the SHL they are above the median on both.</p><p class="nx-take-body">Over 2020/21–2025/26, Czech NHL skaters played 0.98 times the median ice time of their position and scored 0.87 times its points per game. In the Liiga the ratios are 1.09 and 1.40, in the SHL 1.08 and 1.30.</p><p class="nx-take-link"><a href="q/abroad/">Read the evidence →</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">6</p><div><p class="nx-take-head">Since 2010 the national team has drawn on the NHL (30%), the Extraliga (28%) and the KHL (25%) in about equal parts; rung 2 gives 13%.</p><p class="nx-take-body">Averaged over 21 World Championship and Olympic rosters. The KHL is outside the atlas&#39;s leagues, so 25% of the roster spots come from a league the atlas does not measure.</p><p class="nx-take-link"><a href="q/national-team/">Read the evidence →</a></p></div></div>
+    <p class="take-line close-links"><a href="methodology/#scope">What is counted</a> · <a href="methodology/#limitations">Limitations</a> · <a href="this-autumn/">This autumn</a> · <a href="players/">Every Czech player in the pool</a></p>
   </div>
 </section>
 
@@ -417,7 +112,7 @@
   <div class="container">
     <p class="close-kicker">What this is for</p>
     <p class="close-statement">The same measured questions, asked every summer and answered the same way, with the uncertainty on the page — and a name behind every number.</p>
-    <p class="close-links"><a href="atlas/">Every Czech player in the pool</a> · <a href="#take">What to take from it</a> · <a href="#limitations">Limitations</a> · <a href="https://football.bsandova.com/">The football atlas</a></p>
+    <p class="close-links"><a href="players/">Every Czech player in the pool</a> · <a href="#take">What to take from it</a> · <a href="methodology/#limitations">Limitations</a> · <a href="https://football.bsandova.com/">The football atlas</a></p>
   </div>
 </section>
 <footer>

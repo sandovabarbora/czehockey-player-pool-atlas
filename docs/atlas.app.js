@@ -3,7 +3,7 @@
  * Every Czech player with a season in a covered league in the window, one row
  * each: games by season coloured by the rung of the league (a sparkline), and
  * his seasons in a table that opens under the row. Above the list, the pool
- * season by season by rung. Data: atlas/pool.json (src/web/charts.py, from
+ * season by season by rung. Data: players/pool.json (src/web/charts.py, from
  * outputs/pool.json). The list is plain HTML; the overview chart needs D3.
  */
 (function () {

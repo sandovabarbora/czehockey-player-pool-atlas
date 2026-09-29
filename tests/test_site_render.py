@@ -14,6 +14,12 @@ from src.web import charts, context, fmt
 from src.web.render import render
 
 DOCS = config.ROOT_DIR / "docs"
+QPAGES = tuple(f"q/{slug}/index.html" for slug in ("per-head", "break", "cohorts", "youth", "abroad", "national-team", "goalkeepers"))
+PAGES = ("index.html", *QPAGES, "this-autumn/index.html", "methodology/index.html", "players/index.html")
+
+
+def _all(site: Path) -> str:
+    return "\n".join((site / rel).read_text(encoding="utf-8") for rel in PAGES)
 
 
 @pytest.fixture(scope="module")
@@ -39,7 +45,7 @@ def test_fmt() -> None:
 
 
 def test_pages_and_assets_written(site: Path) -> None:
-    for rel in ("index.html", "atlas/index.html", "charts/report.json", "atlas/pool.json",
+    for rel in (*PAGES, "atlas/index.html", "charts/report.json", "players/pool.json",
                 "style.css", "modern.css", "charts.js", "atlas.app.js"):
         assert (site / rel).stat().st_size > 0, rel
     assert not (site / "CNAME").exists(), "the render must not write CNAME"
@@ -47,21 +53,48 @@ def test_pages_and_assets_written(site: Path) -> None:
 
 
 def test_report_structure(site: Path) -> None:
-    html = (site / "index.html").read_text(encoding="utf-8")
-    assert '<html lang="en"' in html
-    for anchor in ("take", "scope", "nationality", "exclusions", "q1", "q2", "q3", "q4", "q5", "q6", "q7",
-                   "methodology", "data-sources", "linking", "limitations", "changes"):
-        assert f'id="{anchor}"' in html, anchor
-    assert "img/hockey.jpg" in html and "U.S. Air Force Academy" in html
+    home = (site / "index.html").read_text(encoding="utf-8")
+    assert '<html lang="en"' in home and 'id="take"' in home
+    assert "img/hockey.jpg" in home and "U.S. Air Force Academy" in home
+    assert home.count("Read the evidence") == 6
+    for i, rel in enumerate(QPAGES, 1):
+        assert f'id="q{i}"' in (site / rel).read_text(encoding="utf-8"), rel
+    meth = (site / "methodology/index.html").read_text(encoding="utf-8")
+    for anchor in ("scope", "nationality", "exclusions", "methodology", "data-sources", "linking", "limitations", "changes"):
+        assert f'id="{anchor}"' in meth, anchor
     for excluded in ("KHL", "AHL", "Slovak Extraliga", "Elite Prospects"):
-        assert excluded in html
+        assert excluded in meth
     js = (site / "charts.js").read_text(encoding="utf-8")
-    for name in re.findall(r'data-chart="([^"]+)"', html):
+    for name in re.findall(r'data-chart="([^"]+)"', _all(site)):
         assert f"'{name}'" in js, f"no chart function for {name}"
 
 
+def test_navigation_and_old_links(site: Path) -> None:
+    """Every page has the same top bar; old one-page anchors and /atlas/ still lead somewhere."""
+    for rel in PAGES:
+        html = (site / rel).read_text(encoding="utf-8")
+        for label in ("Summary", "Questions", "This autumn", "Methodology", "Players"):
+            assert f">{label}<" in html, (rel, label)
+        assert html.count('class="nav-q-list"') == 1
+    home = (site / "index.html").read_text(encoding="utf-8")
+    for old, new in (("q1", "q/per-head/"), ("q7", "q/goalkeepers/"), ("methodology", "methodology/#methodology"),
+                     ("nationality", "methodology/#nationality"), ("autumn", "this-autumn/")):
+        assert f'"{old}": "{new}"' in home, old
+    redirect = (site / "atlas/index.html").read_text(encoding="utf-8")
+    assert 'url=../players/' in redirect and not (site / "atlas/pool.json").exists()
+    # every relative link on every page points at a page or file the render wrote
+    for rel in PAGES:
+        base = (site / rel).parent
+        for href in re.findall(r'href="([^"]*)"', (site / rel).read_text(encoding="utf-8")):
+            path = href.split("#")[0].split("?")[0]
+            if ":" in href or not path or "img/" in path:
+                continue
+            target = (base / path).resolve()
+            assert target.is_file() or (target / "index.html").is_file(), (rel, href)
+
+
 def test_no_withdrawn_material(site: Path) -> None:
-    for rel in ("index.html", "atlas/index.html"):
+    for rel in PAGES:
         text = re.sub(r"<[^>]+>", " ", (site / rel).read_text(encoding="utf-8"))
         text = text.replace("the AI layer and the video proof of concept of the earlier version are withdrawn", "")
         for word in ("YOLO", "multimodal", "LLM", "Claude", "video", " AI ", "UMAP", "cluster"):
@@ -69,7 +102,7 @@ def test_no_withdrawn_material(site: Path) -> None:
 
 
 def test_numbers_come_from_outputs(site: Path, outputs: dict) -> None:
-    html = (site / "index.html").read_text(encoding="utf-8")
+    html = _all(site)
     head = outputs["q1_per_million"]["headline"]
     home = head["home"]
     assert f"{home['nhl_per_million']:.2f}" in html
@@ -81,7 +114,7 @@ def test_numbers_come_from_outputs(site: Path, outputs: dict) -> None:
     q4 = outputs["q4_youth_ice_time"]["leagues"]
     assert fmt.pct(q4["Liiga"]["summary"]["mean_u21_games_share"]) in html
     assert f"{outputs['linking']['persons']:,}" in html
-    atlas = (site / "atlas/index.html").read_text(encoding="utf-8")
+    atlas = (site / "players/index.html").read_text(encoding="utf-8")
     assert f"{outputs['pool']['counts']['players']} players" in atlas
 
 
@@ -89,7 +122,7 @@ def test_chart_data_matches_outputs(site: Path, outputs: dict) -> None:
     rep = json.loads((site / "charts/report.json").read_text(encoding="utf-8"))
     assert rep["q1"]["nhl_series"]["nations"]["CZE"]["n"] == outputs["q1_per_million"]["nhl_series"]["nations"]["CZE"]["n"]
     assert len(rep["q3"]["rows"]) == 12
-    pool = json.loads((site / "atlas/pool.json").read_text(encoding="utf-8"))
+    pool = json.loads((site / "players/pool.json").read_text(encoding="utf-8"))
     assert len(pool["players"]) == outputs["pool"]["counts"]["players"]
     for season, by in pool["by_season_rung"].items():
         assert sum(by.values()) == outputs["pool"]["counts"]["seasons"][season]
@@ -97,10 +130,11 @@ def test_chart_data_matches_outputs(site: Path, outputs: dict) -> None:
 
 def test_published_site_is_current(site: Path) -> None:
     """docs/ must be re-rendered after outputs/ or the templates change (`make pages`)."""
-    for rel in ("charts/report.json", "atlas/pool.json", "charts.js", "atlas.app.js", "modern.css"):
+    for rel in ("charts/report.json", "players/pool.json", "charts.js", "atlas.app.js", "modern.css", "atlas/index.html"):
         assert (DOCS / rel).read_bytes() == (site / rel).read_bytes(), f"docs/{rel} is stale: run `make pages`"
     strip = lambda s: re.sub(r"Built \d{4}-\d{2}-\d{2}", "", s)  # noqa: E731
-    assert strip((DOCS / "index.html").read_text(encoding="utf-8")) == strip((site / "index.html").read_text(encoding="utf-8"))
+    for rel in PAGES:
+        assert strip((DOCS / rel).read_text(encoding="utf-8")) == strip((site / rel).read_text(encoding="utf-8")), f"docs/{rel} is stale"
 
 
 def test_words_follow_numbers(outputs: dict) -> None:
@@ -124,7 +158,7 @@ def test_pool_data_rows(outputs: dict) -> None:
 
 def test_autumn_section(site: Path, outputs: dict) -> None:
     """This autumn: the as-of line, only confirmed news, footnoted, the captain's numbers from outputs/."""
-    html = (site / "index.html").read_text(encoding="utf-8")
+    html = (site / "this-autumn/index.html").read_text(encoding="utf-8")
     assert 'id="autumn"' in html
     sec = html[html.index('id="autumn"'):]
     sec = sec[: sec.index("</section>")]
@@ -149,7 +183,7 @@ def test_autumn_section(site: Path, outputs: dict) -> None:
     assert f"Points {int(last['points'])}" in text
     assert fmt.mmss(last["toi_per_game_s"]) in text and fmt.mmss(row["median_toi_per_game_s"]) in text
     assert fmt.f2(row["median_points_per_game"]) in text
-    assert 'href="#q6"' in sec
+    assert 'href="../q/national-team/"' in sec
 
 
 def test_mmss() -> None:

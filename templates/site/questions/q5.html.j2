@@ -1,0 +1,16 @@
+<p class="close-kicker">Question 5</p>
+<h1 class="slide-q">How do they fare abroad?</h1>
+{% set n = q5.home.NHL %}
+<p class="slide-a">In the NHL, Czech skaters play <strong>{{ f2(n.median_toi_ratio) }} times</strong> the median ice time of their position and score {{ f2(n.median_ppg_ratio) }} times its points per game. In the Liiga ({{ f2(q5.home.Liiga.median_toi_ratio) }}, {{ f2(q5.home.Liiga.median_ppg_ratio) }}) and the SHL ({{ f2(q5.home.SHL.median_toi_ratio) }}, {{ f2(q5.home.SHL.median_ppg_ratio) }}){% if q5.words.Liiga == ('above', 'above') and q5.words.SHL == ('above', 'above') %} they are above the median on both counts{% else %} the ratios are as shown{% endif %}.</p>
+<figure class="figure-bleed" data-chart="q5-abroad">
+  <table class="fig-table">
+    <thead><tr><th scope="col">League</th><th scope="col" class="num">Czech players</th><th scope="col" class="num">player-seasons</th><th scope="col" class="num">ice time ÷ median</th><th scope="col" class="num">points per game ÷ median</th></tr></thead>
+    <tbody>{% for lg, v in q5.home.items() %}<tr><td>{{ lg }}</td><td class="num">{{ v.players }}</td><td class="num">{{ v.player_seasons }}</td><td class="num">{{ f2(v.median_toi_ratio) }}</td><td class="num">{{ f2(v.median_ppg_ratio) }}</td></tr>{% endfor %}</tbody>
+  </table>
+  <figcaption>How to read it: each dot is a nation's median skater in a league over {{ q5.window }}, as a multiple of the league-season median at the same position (1.0 = the median). Czechia is the blue dot; filled ink dots are peers with ten or more player-seasons in that league, hollow ones fewer. Switch between ice time and points per game. {% if q5.own_below_one %}A league's own players (Finns in the Liiga, Swedes in the SHL) sit below 1.0: they make up most of the roster, depth included, and the imported players are compared with them.{% endif %}</figcaption>
+</figure>
+<details class="fold slide-method" open>
+  <summary>How we know</summary>
+  <p class="slide-did"><span class="slide-did-label">What we did</span> Qualifying skaters (the games threshold) over {{ q5.window }}; each player-season is divided by the median of all qualifying skaters of the same league, season and position (forward or defenceman), and the table shows the median of those ratios. {{ q5.n_player_seasons }} Czech player-seasons in all; {{ q5.unknown_position }} have no position and are left out.</p>
+  <p class="slide-how"><span class="slide-how-label">By position</span> NHL forwards {{ f2(q5.by_position.NHL.F.median_toi_ratio) }} (ice time) and {{ f2(q5.by_position.NHL.F.median_ppg_ratio) }} (points), NHL defencemen {{ f2(q5.by_position.NHL.D.median_toi_ratio) }} and {{ f2(q5.by_position.NHL.D.median_ppg_ratio) }}; Liiga forwards {{ f2(q5.by_position.Liiga.F.median_ppg_ratio) }} on points, SHL forwards {{ f2(q5.by_position.SHL.F.median_ppg_ratio) }}.</p>
+</details>

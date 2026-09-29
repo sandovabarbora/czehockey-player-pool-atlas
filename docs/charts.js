@@ -12,6 +12,9 @@
  */
 (function () {
   if (typeof d3 === 'undefined') return;
+  // the site root, from this script's own address: the question pages sit two levels down
+  const SELF = document.currentScript && document.currentScript.src;
+  const BASE = SELF ? new URL('.', SELF).href : '';
   const CSS = getComputedStyle(document.documentElement);
   const tok = (n, d) => CSS.getPropertyValue(n).trim() || d;
   const C = {
@@ -390,7 +393,7 @@
   }
 
   // ------------------------------------------------------------ run
-  fetch('charts/report.json').then((r) => (r.ok ? r.json() : null)).then((D) => {
+  fetch(BASE + 'charts/report.json').then((r) => (r.ok ? r.json() : null)).then((D) => {
     if (!D) return;
     const home = D.home;
     const run = {
