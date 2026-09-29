@@ -1063,3 +1063,72 @@ a:hover, .topbar-links a:hover { color: var(--acid); }
 .cycle-stats { background: var(--cream-100); }
 .toc-sticky li > a[aria-current="true"] { background: var(--ink); color: var(--page-bg); }
 figure.figure-bleed img { background: var(--page-bg); }
+
+/* =========================================================================
+   Pool layout pass (2026-09-29): full-width overviews, one control row,
+   legend always in view, compact lists, a 16px phone gutter
+   ========================================================================= */
+.masthead-meta dd { margin: 0; }
+/* a label that wraps (phone) keeps its number on the shared baseline row */
+.masthead-meta > div { display: flex; flex-direction: column; justify-content: space-between; }
+
+/* atlas controls: one row across the figure, held under the topbar while the
+   chart is on screen, so the cluster legend never scrolls away */
+.atlas-controls {
+  flex-wrap: nowrap; gap: 0.2rem; overflow-x: auto; scrollbar-width: none;
+  position: sticky; top: 56px; z-index: 4; background: var(--page-bg);
+  padding: 0.45rem 0; margin: 0 0 0.35rem;
+}
+.atlas-controls::-webkit-scrollbar { display: none; }
+.atlas-chip { flex: none; white-space: nowrap; padding: 0.28rem 0.4rem; font-size: 0.7rem; gap: 0.3rem; }
+.atlas-chip b { font-size: 0.64rem; letter-spacing: 0.04em; }
+.atlas-chip small { font-size: 0.62rem; margin-left: 0; }
+.atlas-chip i { width: 8px; height: 8px; }
+.atlas-hint { display: block; margin: -0.1rem 0 0.5rem; text-align: right; }
+/* narrower than the eight chips of the defence atlas: the row wraps rather than hides a chip */
+@media (max-width: 1239px) { .atlas-controls { flex-wrap: wrap; overflow: visible; } }
+
+/* under a chart that pans inside its frame (phone) */
+.atlas-pan { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.04em; color: var(--muted); text-align: right; margin: 0.35rem 0 0; }
+.atlas-pan[hidden] { display: none; }
+
+/* heatmap legend, always above the chart */
+.fig-legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.25rem; margin: 0 0 0.6rem;
+  font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+}
+.fig-legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+.fig-legend .lg-ramp { width: 96px; height: 10px; background: linear-gradient(90deg, #F6F6F4, #A3A39E); border: 1px solid var(--rule); }
+.fig-legend .lg-home { width: 18px; height: 10px; border: 2px solid var(--acid); }
+.fig-legend .lg-dash { font-family: var(--font-sans); color: var(--ink); }
+
+@media (max-width: 719px) {
+  :root { --container: 100vw; }
+  .container { padding-left: 16px; padding-right: 16px; }
+  .atlas-controls { flex-wrap: wrap; overflow: visible; position: static; }
+  .atlas-chip { font-size: 0.7rem; padding: 0.26rem 0.42rem; }
+  .atlas-hint { display: none; }
+  /* a two-panel scatter at phone width is unreadable: it keeps a legible
+     width and pans inside its own frame */
+  .atlas-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .atlas-wrap > .atlas-svg { min-width: 680px; }
+  figure[data-atlas="heatmap"] .atlas-wrap > .atlas-svg { min-width: 560px; }
+  /* cluster rows: player chips wrap two to a line */
+  .cluster-top .pchip { font-size: 0.8rem; gap: 0.35rem; padding: 0.15rem 0.5rem 0.15rem 0.15rem; margin: 0.15rem 0.25rem 0.15rem 0; }
+  .cluster-top .pchip-img, .cluster-top .pchip-initials { width: 24px; height: 24px; }
+  details.cluster > summary { column-gap: 0.6rem; }
+}
+/* the two movers tables side by side need ~1000px; below that they stack (no page-wide scroll on tablets) */
+@media (max-width: 1099px) { .movers-grid { grid-template-columns: minmax(0, 1fr); } .movers-col { min-width: 0; } }
+/* phone: the movers rows fit the column, Δ included, without sideways scroll */
+@media (max-width: 719px) {
+  .movers-table { display: table; overflow: visible; }
+  .movers-table th, .movers-table td { padding-left: 0.3rem; padding-right: 0.3rem; }
+  .movers-table th { letter-spacing: 0.06em; }
+  .movers-table th, .movers-table td { padding-left: 0.2rem; padding-right: 0.2rem; }
+  /* the table is a bordered box: its outer cells keep an inset off the hairline */
+  .movers-table th:first-child, .movers-table td:first-child { padding-left: 0.6rem; }
+  .movers-table th:last-child, .movers-table td:last-child { padding-right: 0.6rem; }
+  .movers-table td:nth-child(2) { letter-spacing: 0.02em; }
+  .movers-table .pchip-sm { padding-right: 0; gap: 0.35rem; }
+}
