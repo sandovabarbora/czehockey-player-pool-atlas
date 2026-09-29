@@ -217,7 +217,7 @@ def snapshot_hashes(names: Iterable[str]) -> dict[str, str]:
 
 
 def clean(obj: Any) -> Any:
-    """JSON-safe copy: NaN/NA -> None, numpy scalars -> Python, floats rounded to 4 places."""
+    """JSON-safe copy: NaN/NA -> None, numpy scalars -> Python, floats rounded to 6 places (enough for a one-decimal percentage)."""
     if isinstance(obj, dict):
         return {str(k): clean(v) for k, v in obj.items()}
     if isinstance(obj, (list, tuple)):
@@ -232,7 +232,7 @@ def clean(obj: Any) -> Any:
         f = float(obj)
         if math.isnan(f) or math.isinf(f):
             return None
-        return round(f, 4)
+        return round(f, 6)
     return obj
 
 

@@ -36,7 +36,7 @@ MIN_AGE_KNOWN = 0.9
 def youth_rows(stints: pd.DataFrame) -> pd.DataFrame:
     s = stints[
         stints["league"].isin(LEAGUES)
-        & (stints["position"] != "G")
+        & (stints["position"].fillna("") != "G")  # SHL skaters without a position stay
         & stints["season_start"].between(FIRST, LAST)
     ].copy()
     s["age"] = [

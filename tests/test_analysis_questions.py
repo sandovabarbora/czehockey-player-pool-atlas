@@ -54,10 +54,10 @@ def test_population_for_season_uses_second_year_and_falls_back() -> None:
 
 
 def test_clean_makes_json_safe() -> None:
-    assert common.clean({"a": float("nan"), "b": pd.NA, "c": 1.234567}) == {
+    assert common.clean({"a": float("nan"), "b": pd.NA, "c": 1.23456789}) == {
         "a": None,
         "b": None,
-        "c": 1.2346,
+        "c": 1.234568,
     }
 
 
@@ -110,6 +110,13 @@ def test_q3_peers_with_unknown_ages_leave_the_age_median(lk: linking.Linked) -> 
     assert "FIN" in peers
 
 
+def test_outputs_keep_enough_places_for_one_decimal_percent() -> None:
+    # 0.079467 must read 7.9%, not 8.0% after a first rounding to 0.0795
+    from src.web import fmt
+
+    assert fmt.pct(common.clean(0.0794667)) == "7.9%"
+
+
 # -- Q4 -------------------------------------------------------------------------------
 
 
@@ -125,6 +132,23 @@ def test_q4_u21_shares(lk: linking.Linked) -> None:
         s[(s["league"] == "DEL") & (s["season_start"] == SEASON)], False
     )
     assert de["measured"] is False  # one of two DEL players has an age
+
+
+def test_q4_keeps_skaters_without_a_position() -> None:
+    stints = pd.DataFrame(
+        {
+            "league": ["SHL", "SHL", "SHL"],
+            "position": pd.array(["F", pd.NA, "G"], dtype="string"),
+            "season_start": [SEASON] * 3,
+            "birth_year": [1990, SEASON - 19, 1990],
+            "games_played": [50.0, 50.0, 50.0],
+            "toi_s": [50000.0, 30000.0, 180000.0],
+        }
+    )
+    s = q4_youth_ice_time.youth_rows(stints)
+    assert len(s) == 2  # the goalkeeper goes, the skater with no position stays
+    out = q4_youth_ice_time.league_season(s, True)
+    assert out["u21_games_share"] == pytest.approx(0.5)
 
 
 # -- Q5 -------------------------------------------------------------------------------
