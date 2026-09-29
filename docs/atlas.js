@@ -9,10 +9,10 @@
   const cs = document.documentElement.lang === 'cs';
   const T = cs ? {
     ringOnly: 'Jen MS 24/25', reset: 'Reset', players: 'hráčů', hint: 'Najeď na bod → PC1/PC2 · klik na jméno → karta hráče',
-    median: 'medián P/GP', nodata: 'bez dat', wc: 'MS 24/25', open: 'Otevřít kartu', cluster: 'cluster', all: 'vše',
+    median: 'medián P/GP', pan: 'Graf lze posunout do strany →', nodata: 'bez dat', wc: 'MS 24/25', open: 'Otevřít kartu', cluster: 'cluster', all: 'vše',
   } : {
     ringOnly: 'WC 24/25 only', reset: 'Reset', players: 'players', hint: 'Hover a point → PC1/PC2 · click a name → player card',
-    median: 'median P/GP', nodata: 'no data', wc: 'WC 24/25', open: 'Open card', cluster: 'cluster', all: 'all',
+    median: 'median P/GP', pan: 'Scroll the chart sideways →', nodata: 'no data', wc: 'WC 24/25', open: 'Open card', cluster: 'cluster', all: 'all',
   };
   const ascii = (s) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase();
   const fmt = (v) => (Math.round(v * 100) / 100).toFixed(2);
@@ -42,6 +42,12 @@
     const tip = document.createElement('div');
     tip.className = 'atlas-tip'; tip.hidden = true;
     wrap.appendChild(tip);
+    // a chart held at a legible width on a phone pans inside its frame; say so while it does
+    const pan = document.createElement('p');
+    pan.className = 'atlas-pan'; pan.textContent = T.pan; pan.hidden = true;
+    wrap.after(pan);
+    const sync = () => { pan.hidden = wrap.scrollWidth <= wrap.clientWidth + 1; };
+    if ('ResizeObserver' in window) new ResizeObserver(sync).observe(wrap); else sync();
     return { svg, wrap, tip };
   };
 
@@ -54,7 +60,10 @@
     const tw = tip.offsetWidth, th = tip.offsetHeight;
     let left = px + 14, top = py - th - 10;
     if (left + tw > r.width - 8) left = px - tw - 14;
-    if (top < 4) top = py + 14;
+    // never above the stuck control row (or the viewport top): flip below the point instead
+    const ctl = wrap.parentElement.querySelector('.atlas-controls');
+    const floor = Math.max(4, (ctl ? ctl.getBoundingClientRect().bottom : 0) - r.top + 4, -r.top + 4);
+    if (top < floor) top = py + 14;
     tip.style.left = `${left}px`; tip.style.top = `${top}px`;
   };
 

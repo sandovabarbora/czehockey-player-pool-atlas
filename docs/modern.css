@@ -1069,6 +1069,8 @@ figure.figure-bleed img { background: var(--page-bg); }
    legend always in view, compact lists, a 16px phone gutter
    ========================================================================= */
 .masthead-meta dd { margin: 0; }
+/* a label that wraps (phone) keeps its number on the shared baseline row */
+.masthead-meta > div { display: flex; flex-direction: column; justify-content: space-between; }
 
 /* atlas controls: one row across the figure, held under the topbar while the
    chart is on screen, so the cluster legend never scrolls away */
@@ -1085,6 +1087,10 @@ figure.figure-bleed img { background: var(--page-bg); }
 .atlas-hint { display: block; margin: -0.1rem 0 0.5rem; text-align: right; }
 /* narrower than the eight chips of the defence atlas: the row wraps rather than hides a chip */
 @media (max-width: 1239px) { .atlas-controls { flex-wrap: wrap; overflow: visible; } }
+
+/* under a chart that pans inside its frame (phone) */
+.atlas-pan { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.04em; color: var(--muted); text-align: right; margin: 0.35rem 0 0; }
+.atlas-pan[hidden] { display: none; }
 
 /* heatmap legend, always above the chart */
 .fig-legend {
@@ -1119,8 +1125,10 @@ figure.figure-bleed img { background: var(--page-bg); }
   .movers-table { display: table; overflow: visible; }
   .movers-table th, .movers-table td { padding-left: 0.3rem; padding-right: 0.3rem; }
   .movers-table th { letter-spacing: 0.06em; }
-  .movers-table th:first-child, .movers-table td:first-child { padding-left: 0; }
-  .movers-table th:last-child, .movers-table td:last-child { padding-right: 0; }
+  .movers-table th, .movers-table td { padding-left: 0.2rem; padding-right: 0.2rem; }
+  /* the table is a bordered box: its outer cells keep an inset off the hairline */
+  .movers-table th:first-child, .movers-table td:first-child { padding-left: 0.6rem; }
+  .movers-table th:last-child, .movers-table td:last-child { padding-right: 0.6rem; }
   .movers-table td:nth-child(2) { letter-spacing: 0.02em; }
   .movers-table .pchip-sm { padding-right: 0; gap: 0.35rem; }
 }
