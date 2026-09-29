@@ -1,5 +1,5 @@
 .PHONY: help install install-browsers fetch features reduce render all clean test lint check \
-	fetch-nhl fetch-eurostat verify-snapshot restore-snapshot
+	fetch-nhl fetch-eurostat fetch-liiga fetch-shl fetch-extraliga verify-snapshot restore-snapshot
 
 PYTHON ?= python
 VENV   ?= .venv
@@ -12,6 +12,9 @@ help:
 	@echo "  fetch            Run all fetchers (NHL, MoneyPuck, Liiga, SHL, NL, Extraliga, IIHF)"
 	@echo "  fetch-nhl        NHL skaters, goalies and careers 1995/96-2025/26 -> data/snapshot/"
 	@echo "  fetch-eurostat   Eurostat 1 January population 1995-2026 -> data/snapshot/"
+	@echo "  fetch-liiga      Liiga skaters and goalies 1995/96-2025/26 -> data/snapshot/"
+	@echo "  fetch-shl        SHL skaters and goalies 1995/96-2025/26 -> data/snapshot/"
+	@echo "  fetch-extraliga  Extraliga skaters, goalies, birth dates 1995/96-2025/26 (hokej.cz, ~1 h cold)"
 	@echo "  verify-snapshot  Check data/snapshot/ against its SHA256SUMS"
 	@echo "  restore-snapshot Copy data/snapshot/ into data/processed/ (never overwrites newer files)"
 	@echo "  features         Build position-specific feature vectors"
@@ -48,6 +51,15 @@ fetch-nhl:
 
 fetch-eurostat:
 	$(ACT) python -m src.fetch.eurostat
+
+fetch-liiga:
+	$(ACT) python -m src.fetch.liiga
+
+fetch-shl:
+	$(ACT) python -m src.fetch.shl
+
+fetch-extraliga:
+	$(ACT) python -m src.fetch.extraliga
 
 verify-snapshot:
 	$(ACT) python -m src.snapshot verify
