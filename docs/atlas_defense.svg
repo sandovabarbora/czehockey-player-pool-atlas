@@ -3307,8 +3307,8 @@ L 588.554596 338.149189
     <text x="14.613047" y="19.970625" font-family="Georgia, 'Times New Roman', serif" font-size="14.00" fill="#111111" text-anchor="start">Czech Hockey · Defensemen 2025/26</text>
    </g>
   <g id="text_67">
-    <!-- PCA projection of a four-dimensional vector (G/GP, A/GP, PIM/GP, age). Acid rings mark WC 24/25 participation. Arrows show the 2024/25 → 2025/26 trajectory; the arrowhead points in the direction of movement. -->
-    <text x="14.613047" y="496.26" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="8.20" fill="#666666" text-anchor="start">PCA projection of a four-dimensional vector (G/GP, A/GP, PIM/GP, age). Acid rings mark WC 24/25 participation. Arrows show the 2024/25 → 2025/26 trajectory; the arrowhead points in the direction of movement.</text>
+    <!-- PCA projection of a four-dimensional vector (G/GP, A/GP, PIM/GP, age). Blue rings mark WC 24/25 participation. Arrows show the 2024/25 → 2025/26 trajectory; the arrowhead points in the direction of movement. -->
+    <text x="14.613047" y="496.26" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="8.20" fill="#666666" text-anchor="start">PCA projection of a four-dimensional vector (G/GP, A/GP, PIM/GP, age). Blue rings mark WC 24/25 participation. Arrows show the 2024/25 → 2025/26 trajectory; the arrowhead points in the direction of movement.</text>
    </g>
  </g>
  <defs>

@@ -167,10 +167,10 @@ R('''ČR má <strong>4 obránce v NHL</strong> napříč všemi věkovými skupi
   '''CZE has <strong>4 defensemen in the NHL</strong> across all age groups.
       For comparison: Finland 14, Sweden 30. In the U22 cohort: 0 Czech defensemen.''')
 R('alt="Dvoupanelový atlas útočníků 2025/26 v PCA projekci. Levý panel (style mapa bez ligových násobiček) ukazuje Pastrňáka, Nečase a Červenku ve společné produkční zóně. Pravý panel (kvalitou upravená mapa) NHL elitu výrazně odpoutává od EU hráčů. Zelené kroužky vyznačují účastníky MS 2024 a MS 2025; šipky znázorňují trajektorii mezi sezónami."',
-  'alt="Two-panel atlas of forwards 2025/26 in PCA projection. The left panel (style map without league multipliers) shows Pastrňák, Nečas and Červenka in a shared production zone. The right panel (quality-adjusted map) pulls the NHL elite well away from EU players. Acid rings mark participants of WC 2024 and WC 2025; arrows show the trajectory between seasons."')
+  'alt="Two-panel atlas of forwards 2025/26 in PCA projection. The left panel (style map without league multipliers) shows Pastrňák, Nečas and Červenka in a shared production zone. The right panel (quality-adjusted map) pulls the NHL elite well away from EU players. Blue rings mark participants of WC 2024 and WC 2025; arrows show the trajectory between seasons."')
 R('''Atlas útočníků 2025/26 v obou projekcích. Zelené kroužky vyznačují aktivní
         reprezentační pool (MS 24/25). Šipky znázorňují trajektorii mezi sezónami.''',
-  '''Forwards atlas 2025/26 in both projections. Acid rings mark the active
+  '''Forwards atlas 2025/26 in both projections. Blue rings mark the active
         national-team pool (WC 24/25). Arrows show the trajectory between seasons.''')
 
 # observations
