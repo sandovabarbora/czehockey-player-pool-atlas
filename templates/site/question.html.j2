@@ -1,5 +1,5 @@
 {% extends "_base.html.j2" %}
-{% from "_macros.html.j2" import limit with context %}
+{% from "_macros.html.j2" import limit_short, meta_line with context %}
 {% block title %}{{ cur.title }} — Czech Hockey Atlas{% endblock %}
 {% block description %}{{ cur.description }}{% endblock %}
 {% block canonical %}https://hockey.bsandova.com/{{ cur.url }}{% endblock %}
@@ -12,19 +12,11 @@
     {% filter indent(4) %}
 {% include "questions/" ~ cur.id ~ ".html.j2" %}
     {% endfilter %}
-    <section class="q-limits" aria-labelledby="{{ cur.id }}-limits">
-      <h2 class="q-sub" id="{{ cur.id }}-limits">What this does not show</h2>
-      <ul class="nx-limits">
-        {% for k in cur.limits %}
-        {{ limit(k) }}
-        {% endfor %}
-      </ul>
-      <p class="q-limits-more"><a href="{{ prefix }}methodology/#limitations">Limitations</a></p>
-    </section>
+    {{ meta_line(prefix) }}
     <nav class="q-pager" aria-label="Questions">
-      {% if prev %}<a class="q-pager-prev" href="{{ prefix }}{{ prev.url }}"><span class="q-pager-label">← Question {{ prev.n }}</span>{{ prev.title }}</a>{% else %}<span></span>{% endif %}
+      {% if prev %}<a class="q-pager-prev" href="{{ prefix }}{{ prev.url }}"><span class="q-pager-label">← Question {{ prev.n }}</span>{{ prev.label }}</a>{% else %}<span></span>{% endif %}
       <a class="q-pager-home" href="{{ prefix }}#take">Summary</a>
-      {% if next %}<a class="q-pager-next" href="{{ prefix }}{{ next.url }}"><span class="q-pager-label">Question {{ next.n }} →</span>{{ next.title }}</a>{% else %}<span></span>{% endif %}
+      {% if next %}<a class="q-pager-next" href="{{ prefix }}{{ next.url }}"><span class="q-pager-label">Question {{ next.n }} →</span>{{ next.label }}</a>{% else %}<span></span>{% endif %}
     </nav>
   </div>
 </section>

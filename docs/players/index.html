@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=5eb2262dfe">
-  <link rel="stylesheet" href="../modern.css?v=5eb2262dfe">
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script defer src="../atlas.app.js?v=5eb2262dfe"></script></head>
+  <link rel="stylesheet" href="../style.css?v=5449fcf567">
+  <link rel="stylesheet" href="../modern.css?v=5449fcf567">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script defer src="../atlas.app.js?v=5449fcf567"></script></head>
 <body id="top" class="ax-page">
 <nav class="topbar" aria-label="Navigation">
   <a class="topbar-brand" href="../">Czech Hockey <span>Atlas</span></a>
@@ -20,16 +20,15 @@
     <details class="nav-q" data-nav-q>
       <summary>Questions</summary>
       <ol class="nav-q-list">
-        <li><a href="../q/per-head/"><span class="nav-q-n">1</span>Is the Czech pool thin?</a></li>
-        <li><a href="../q/break/"><span class="nav-q-n">2</span>When did it break?</a></li>
-        <li><a href="../q/cohorts/"><span class="nav-q-n">3</span>Where is it thin?</a></li>
-        <li><a href="../q/youth/"><span class="nav-q-n">4</span>Do young players get ice time at home?</a></li>
-        <li><a href="../q/abroad/"><span class="nav-q-n">5</span>How do they fare abroad?</a></li>
-        <li><a href="../q/national-team/"><span class="nav-q-n">6</span>What is the national team built from?</a></li>
+        <li><a href="../q/per-head/"><span class="nav-q-n">1</span>Players per million</a></li>
+        <li><a href="../q/break/"><span class="nav-q-n">2</span>Timing of changes</a></li>
+        <li><a href="../q/cohorts/"><span class="nav-q-n">3</span>Position and age</a></li>
+        <li><a href="../q/youth/"><span class="nav-q-n">4</span>Young skaters at home</a></li>
+        <li><a href="../q/abroad/"><span class="nav-q-n">5</span>Czech skaters abroad</a></li>
+        <li><a href="../q/national-team/"><span class="nav-q-n">6</span>National-team rosters</a></li>
         <li><a href="../q/goalkeepers/"><span class="nav-q-n">7</span>Goalkeepers</a></li>
       </ol>
     </details>
-    <a href="../this-autumn/">This autumn</a>
     <a href="../methodology/">Methodology</a>
     <a href="../players/" aria-current="page">Players</a>
   </div>
@@ -47,7 +46,7 @@
   <header class="ax-head">
     <p class="ax-kicker">Player pool · 867 players · 2020/21–2025/26 · 417 in 2025/26</p>
     <h1 class="ax-title">Every Czech player in the covered leagues.</h1>
-    <p class="ax-lead">The <a href="../">report</a> measures the pool against its peers. This is the pool itself: every player of Czech nationality with a regular-season game in the NHL, the SHL, the Liiga, the National League, the DEL or the Extraliga since 2020/21, his games by season coloured by the rung of the league, and his seasons when you open his row.</p>
+    <p class="ax-lead">The <a href="../">atlas</a> measures the pool against its peers. This is the pool itself: every player of Czech nationality with a regular-season game in the NHL, the SHL, the Liiga, the National League, the DEL or the Extraliga since 2020/21, his games by season coloured by the rung of the league, and his seasons when you open his row.</p>
   </header>
   <div class="ax-body">
     <section class="ax-overview" data-ax-overview aria-label="The pool, season by season">
@@ -72,14 +71,14 @@
     <noscript><p class="ax-note">The list needs JavaScript. The same data is in <a href="pool.json">pool.json</a>.</p></noscript>
   </div>
   <footer class="ax-foot">
-    <p>Czech nationality follows the report's <a href="../methodology/#nationality">one definition</a>: citizenship where a league publishes it, then the national-team roster, then eligibility. For 649 of the 867 players the only evidence is the Extraliga foreigner flag or a licence (193 by citizenship, 25 by a national-team roster). Age is the season start year minus the birth year. Not covered: the KHL (by design), the AHL (its terms), the Czech 1st league and every other league; a season there is absent here, not zero. Sources and access dates are on the <a href="../methodology/#data-sources">report page</a>.</p>
+    <p>Czech nationality follows the atlas's <a href="../methodology/#nationality">one definition</a>: citizenship where a league publishes it, then the national-team roster, then eligibility. For 649 of the 867 players the only evidence is the Extraliga foreigner flag or a licence (193 by citizenship, 25 by a national-team roster). Age is the season start year minus the birth year. Not covered: the KHL (by design), the AHL (its terms), the Czech 1st league and every other league; a season there is absent here, not zero. Sources and access dates are on the <a href="../methodology/#data-sources">methodology page</a>.</p>
   </footer>
 </main>
 <footer>
   <div class="container">
     <div class="role-block">
       <p class="role-kicker">Built by Barbora Šandová — data &amp; cloud engineer</p>
-      <p class="role-body">A descriptive, reproducible benchmark from public statistics: the fetchers, the snapshot, the analysis and this page are one repository. No predictions, no selection advice.</p>
+      <p class="role-body">An exploratory, descriptive atlas built from public statistics; the fetchers, the snapshot, the analysis and these pages are one repository. It makes no forecasts and gives no selection advice.</p>
       <p class="role-author">
         <span class="role-author-name">Barbora Šandová</span>
         <span class="role-author-contact">
@@ -89,7 +88,7 @@
         </span>
       </p>
     </div>
-    <p class="rendered-at">Built 2026-09-29 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+    <p class="rendered-at">Built 29 September 2026 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
   </div>
 </footer>
 </body>

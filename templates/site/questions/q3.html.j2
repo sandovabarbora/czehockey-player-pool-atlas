@@ -1,20 +1,42 @@
-<p class="close-kicker">Question 3</p>
-<h1 class="slide-q">Where is it thin?</h1>
+{% from "_macros.html.j2" import means, does_not_show with context %}
 {% set top = q3.top_shortfall %}
-<p class="slide-a">{% if q3.u21_home == 0 %}In the youngest band: <strong>no Czech skater aged 21 or under</strong> reaches the games threshold in the NHL or rung 2 in {{ q3.season }}.{% else %}{{ q3.u21_home }} Czech skaters aged 21 or under reach the threshold in {{ q3.season }}.{% endif %}{% if top %} The largest shortfall is {{ position_word[top.position] }} aged {{ band_word[top.age_band] }}: {{ f1(top.shortfall) }} players below the peer median.{% endif %}</p>
+{% set rng = {} %}
+{% for r in iv.q3.peer_range %}{% set _ = rng.update({r.position ~ r.age_band: r}) %}{% endfor %}
+<p class="close-kicker">Question 3 · Czech hockey atlas · {{ q3.season }}</p>
+<h1 class="slide-q">{{ cur.title }}</h1>
+<p class="slide-a">{% if q3.u21_home == 0 %}In {{ q3.season }} <strong>no Czech forward or defenceman aged 21 or under</strong> reached the games threshold in the NHL or rung 2{% else %}In {{ q3.season }}, {{ q3.u21_home }} Czech forwards and defencemen aged 21 or under reached the games threshold in the NHL or rung 2{% endif %}{% if top %}, and the largest difference from the median of {{ q3.n_peers }} peers, expressed in players at the Czech population, is {{ f1(top.shortfall) }} for {{ position_word[top.position] }} aged {{ band_word[top.age_band] }}{% endif %}.</p>
 <figure class="figure-bleed" data-chart="q3-cohorts">
   <table class="fig-table">
-    <thead><tr><th scope="col">Position, age</th><th scope="col" class="num">Czech players</th><th scope="col" class="num">per million</th><th scope="col" class="num">peer median</th><th scope="col" class="num">short of the median</th></tr></thead>
+    <thead><tr><th scope="col">Position, age</th><th scope="col" class="num">Czech players</th><th scope="col" class="num">per million</th><th scope="col" class="num">median of {{ q3.n_peers }} peers</th><th scope="col" class="num">peer range</th><th scope="col" class="num">difference from the median, in players</th></tr></thead>
     <tbody>
     {% for c in q3.cells|sort(attribute='position') %}
-      <tr><td>{{ position_word[c.position] }}, {{ c.age_band }}</td><td class="num">{{ c.counts.CZE }}</td><td class="num">{{ f2(c.per_million.CZE) }}</td><td class="num">{{ f2(c.peer_median) }}</td><td class="num">{{ f1(c.shortfall) if c.shortfall > 0 else '–' }}</td></tr>
+      {% set r = rng[c.position ~ c.age_band] %}
+      <tr><td>{{ position_word[c.position] }}, {{ c.age_band }}</td><td class="num">{{ c.counts.CZE }}</td><td class="num">{{ f2(c.per_million.CZE) }}</td><td class="num">{{ f2(c.peer_median) }}</td><td class="num">{{ f2(r.peer_min) }}–{{ f2(r.peer_max) }}</td><td class="num">{{ f1(c.shortfall) if c.shortfall|round(1) > 0 else ('0' if c.shortfall|round(1) == 0 else 'above median') }}</td></tr>
     {% endfor %}
     </tbody>
   </table>
-  <figcaption>How to read it: one row per position and age band in {{ q3.season }}. The blue dot is Czechia, the ink tick the peer median, the grey dots the peers (hover for names). A hollow dot is a peer left out of that median because more than a quarter of its players have no known age or position: {{ q3.excluded_age|join(' and ') }} in every age band, as the National League and the DEL publish no birth dates. The scale is logarithmic so the small nations stay readable next to Finland and Sweden.</figcaption>
+  <figcaption><strong>Figure 1.</strong> Players who reached the games threshold in the NHL or rung 2 in {{ q3.season }}, per million inhabitants, by position and age band (administrative counts; age = 2025 minus birth year). How to read it: the blue dot is Czechia, the ink tick the median of the {{ q3.n_peers }} peers that enter it, the grey dots the peers (hover for names). A hollow dot is a peer left out of the median because more than a quarter of its players have no known age or position: {{ q3.excluded_age|join(' and ') }} in every age band, as the National League and the DEL publish no birth dates. The scale is logarithmic. Several peer medians are small or zero, and a median of small integer counts jumps when one player is added or removed.</figcaption>
 </figure>
-<details class="fold slide-method" open>
-  <summary>How we know</summary>
-  <p class="slide-did"><span class="slide-did-label">What we did</span> Qualifying players in the NHL and rung 2 in {{ q3.season }}, counted once per person, split by position and by age (season start year minus birth year). The shortfall is the gap to the peer median per million times the Czech population ({{ f1(population_m) }} million): the number of players Czechia would need to reach the median.</p>
-  <p class="slide-how"><span class="slide-how-label">Largest shortfalls</span> {% for s in q3.shortfalls %}{{ position_word[s.position] }} {{ s.age_band }}: {{ f1(s.shortfall) }}{{ '; ' if not loop.last else '.' }}{% endfor %}</p>
-</details>
+<section class="q-evidence" aria-labelledby="q3-evidence">
+  <h2 class="q-sub" id="q3-evidence">Evidence</h2>
+  <p class="slide-did"><span class="slide-did-label">What was counted</span> Qualifying players in the NHL and rung 2 in {{ q3.season }}, each counted once, split by position and by age (season start year minus birth year). The difference from the median is the gap between the peer median per million and the Czech rate, multiplied by the Czech population ({{ f1(population_m) }} million), so it is expressed in players. The peer range is the lowest and highest rate among the {{ q3.n_peers }} peers in the median; the counts are the whole record for the season and have no sampling interval.</p>
+  <p class="slide-how"><span class="slide-how-label">Largest differences</span> {% for s in q3.shortfalls %}{{ position_word[s.position] }} {{ s.age_band }}: {{ f1(s.shortfall) }}{{ '; ' if not loop.last else '.' }}{% endfor %}</p>
+  <table class="fig-table">
+    <caption>Czech players aged 21 or under who reached the games threshold in the NHL or rung 2, by season (administrative counts)</caption>
+    <thead><tr><th scope="col">Season</th><th scope="col" class="num">forwards</th><th scope="col" class="num">difference from the peer median, in players</th><th scope="col" class="num">defencemen</th><th scope="col" class="num">difference from the peer median, in players</th><th scope="col" class="num">peers in the median</th></tr></thead>
+    <tbody>
+    {% for s in iv.q3.u21_by_season|groupby('season') %}
+      {% set f = s.list|selectattr('position', 'eq', 'F')|first %}{% set d = s.list|selectattr('position', 'eq', 'D')|first %}
+      <tr><td>{{ s.grouper }}</td><td class="num">{{ f.count }}</td><td class="num">{{ signed(f.shortfall) }}</td><td class="num">{{ d.count }}</td><td class="num">{{ signed(d.shortfall) }}</td><td class="num">{{ f.peers }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="slide-how">A positive difference means fewer Czech players than the peer median. In seasons where Switzerland or Germany has more players of known age, the number of peers in the median changes.</p>
+</section>
+{% call means() %}
+{% set fw = iv.q3.u21_by_season|selectattr('position', 'eq', 'F')|list %}
+<p>In {{ q3.season }} the Czech count is furthest below the peer median among the youngest forwards. The season-by-season table shows how much one season moves: Czech forwards aged 21 or under who reached the threshold numbered {% for r in fw %}{{ r.count }}{{ ', ' if not loop.last else '' }}{% endfor %} from {{ fw[0].season }} to {{ fw[-1].season }}, and the count was at or above the peer median in {{ fw|selectattr('shortfall', 'le', 0)|list|length }} of those {{ fw|length }} seasons. The table describes where the Czech count is below other nations of its size in one season. It does not show why, whether the gap persists, or what number of players would be appropriate.</p>
+{% endcall %}
+{% call does_not_show() %}
+<li>Whether young Czech players are developing more slowly; the counts only show who had reached these leagues by this age.</li>
+{% endcall %}

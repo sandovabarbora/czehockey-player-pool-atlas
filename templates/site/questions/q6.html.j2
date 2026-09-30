@@ -1,15 +1,33 @@
-<p class="close-kicker">Question 6</p>
-<h1 class="slide-q">What is the national team built from?</h1>
-<p class="slide-a">Since {{ q6.first_year }}, Czech World Championship and Olympic rosters have been on average <strong>{{ pct0(q6.home['1']) }} NHL</strong>, {{ pct0(q6.home['home']) }} Extraliga, {{ pct0(q6.home.khl) }} KHL and {{ pct0(q6.home['2']) }} rung 2.</p>
+{% from "_macros.html.j2" import means, does_not_show, ref with context %}
+{% set S = iv.q6 %}
+<p class="close-kicker">Question 6 · Czech hockey atlas · {{ S.all.first }}–{{ S.all.last }}</p>
+<h1 class="slide-q">{{ cur.title }}</h1>
+<p class="slide-a">Across {{ S.all.events }} World Championship and Olympic rosters from {{ S.all.first }} to {{ S.all.last }}, Czech roster spots came on average <strong>{{ pct0(S.all.shares['1']) }} from NHL clubs</strong>, {{ pct0(S.all.shares.home) }} from the Extraliga, {{ pct0(S.all.shares.khl) }} from the KHL and {{ pct0(S.all.shares['2']) }} from rung 2, with the KHL share at {{ pct0(S.to_2022.shares.khl) }} over {{ S.to_2022.first }}–{{ S.to_2022.last }} and {{ pct0(S.from_2023.shares.khl) }} over {{ S.from_2023.first }}–{{ S.from_2023.last }}.</p>
 <figure class="figure-bleed" data-chart="q6-roster">
   <table class="fig-table">
     <thead><tr><th scope="col">Tournament</th><th scope="col" class="num">NHL</th><th scope="col" class="num">rung 2</th><th scope="col" class="num">Extraliga</th><th scope="col" class="num">KHL</th><th scope="col" class="num">other</th><th scope="col" class="num">players</th></tr></thead>
     <tbody>{% for e in q6.events %}<tr{% if e is sameas q6.last_event %} class="is-home"{% endif %}><td>{{ 'Olympics' if e.event == 'OG' else 'World Championship' }} {{ e.year }}</td><td class="num">{{ e['1'] }}</td><td class="num">{{ e['2'] }}</td><td class="num">{{ e.home }}</td><td class="num">{{ e.khl }}</td><td class="num">{{ e.other + e.unknown }}</td><td class="num">{{ e.players }}</td></tr>{% endfor %}</tbody>
   </table>
-  <figcaption>How to read it: each bar is a nation's roster spots by the league the player's club was in at the time of the tournament, averaged over the {{ q6.n_events }} World Championships and Olympics since {{ q6.first_year }}: NHL in blue, rung 2 in ink, the Extraliga pale, the KHL hatched, other leagues grey. The second view is Czechia tournament by tournament{% if q6.last_khl_event and q6.last_khl_event is not sameas q6.last_event %}: no KHL player has been on the Czech roster since the {{ 'Olympics' if q6.last_khl_event.event == 'OG' else 'World Championship' }} {{ q6.last_khl_event.year }}{% endif %}; at the {{ q6.last_label }} the roster had {{ q6.last_event['1'] }} NHL players, {{ q6.last_event['2'] }} from rung 2 and {{ q6.last_event.home }} from the Extraliga.</figcaption>
+  <figcaption><strong>Figure 1.</strong> Roster spots by the league of the player's club at the time of the tournament, {{ S.all.first }}–{{ S.all.last }} (administrative counts from the English Wikipedia roster articles, CC BY-SA 4.0). How to read it: the first view averages each nation's shares over its {{ q6.n_events }} tournaments: NHL in blue, rung 2 in ink, the Extraliga pale, the KHL hatched, other leagues grey. The second view is Czechia tournament by tournament{% if q6.last_khl_event and q6.last_khl_event is not sameas q6.last_event %}; no KHL player has been on the Czech roster since the {{ 'Olympics' if q6.last_khl_event.event == 'OG' else 'World Championship' }} {{ q6.last_khl_event.year }}{% endif %}. NHL players did not take part in the 2018 and 2022 Olympics {{ ref(['og2018', 'og2022'], prefix ~ 'methodology/') }}, which is why those two rosters have no NHL players.</figcaption>
 </figure>
-<details class="fold slide-method" open>
-  <summary>How we know</summary>
-  <p class="slide-did"><span class="slide-did-label">What we did</span> Rosters from the English Wikipedia articles for each World Championship and Olympic tournament since {{ q6.first_year }} (CC BY-SA 4.0), each player linked to his league records. A player's club is placed in a league by these rules in order: the league Wikipedia gives, a list of KHL clubs, his NHL career record for that season, his own league row, a team-name match, then the club's country.</p>
-  <p class="slide-how"><span class="slide-how-label">Placement</span> {% for k, v in q6.basis_counts.items() %}{{ k|replace('_', ' ') }} {{ num(v) }}{{ ', ' if not loop.last else '' }}{% endfor %} roster rows (all nations). The Czech NHL share ranks {{ ordinal(q6.nhl_rank) }} of the ten nations.</p>
-</details>
+<section class="q-evidence" aria-labelledby="q6-evidence">
+  <h2 class="q-sub" id="q6-evidence">Evidence</h2>
+  <table class="fig-table">
+    <caption>Czech roster shares by period, mean over tournaments</caption>
+    <thead><tr><th scope="col">Tournaments</th><th scope="col" class="num">n</th><th scope="col" class="num">NHL</th><th scope="col" class="num">rung 2</th><th scope="col" class="num">Extraliga</th><th scope="col" class="num">KHL</th><th scope="col" class="num">other</th></tr></thead>
+    <tbody>
+    {% for label, x in [('All, ' ~ S.all.first ~ '–' ~ S.all.last, S.all), (S.to_2022.first ~ '–' ~ S.to_2022.last, S.to_2022), (S.from_2023.first ~ '–' ~ S.from_2023.last, S.from_2023), ('All, without the 2018 and 2022 Olympics', S.without_2018_2022_olympics)] %}
+      <tr><td>{{ label }}</td><td class="num">{{ x.events }}</td><td class="num">{{ pct0(x.shares['1']) }}</td><td class="num">{{ pct0(x.shares['2']) }}</td><td class="num">{{ pct0(x.shares.home) }}</td><td class="num">{{ pct0(x.shares.khl) }}</td><td class="num">{{ pct0(x.shares.other + x.shares.unknown) }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="slide-did"><span class="slide-did-label">What was counted</span> Rosters from the English Wikipedia articles for each World Championship and Olympic tournament since {{ q6.first_year }}, each player linked to his league records. A player's club is placed in a league by these rules in order: the league Wikipedia gives, a list of KHL clubs, his NHL career record for that season, his own league row, a team-name match, then the club's country. The shares are means over tournaments of each roster's shares; they are counts of whole rosters and carry no sampling interval.</p>
+  <p class="slide-how"><span class="slide-how-label">Placement of the Czech rows</span> Of the {{ S.home_rows }} Czech roster rows, {% for k, v in S.home_basis.items() %}{{ num(v) }} {{ 'were placed ' if loop.first else '' }}by {{ k|replace('nhl_career', 'the NHL career record')|replace('league_row', 'the player\'s own league row')|replace('khl_club', 'the KHL club list')|replace('club_league', 'the league Wikipedia gives')|replace('club_country', 'the club\'s country')|replace('team_name', 'a team-name match') }}{{ ', ' if not loop.last else '' }}{% endfor %}; {{ S.home_unknown }} could not be placed. The eight Czech rows that were placed by the two weakest rules (the club's country or a team-name match) before this version were checked by hand: one was an NHL player at the 2026 Olympics whose roster birth date differed from his league record, so he was not linked; the linking rule was extended and he is now placed in the NHL (see the <a href="{{ prefix }}methodology/#changes">change log</a>). The other seven follow the club the roster article gives. Across all ten nations: {% for k, v in q6.basis_counts.items() %}{{ k|replace('_', ' ') }} {{ num(v) }}{{ ', ' if not loop.last else '' }}{% endfor %} roster rows. The Czech NHL share ranks {{ ordinal(q6.nhl_rank) }} of the ten nations.</p>
+</section>
+{% call means() %}
+<p>Czech rosters since {{ S.all.first }} have drawn on NHL clubs, the Extraliga and, until {{ S.to_2022.last }}, the KHL. From {{ S.from_2023.first }} the KHL share is {{ pct0(S.from_2023.shares.khl) }} and the Extraliga share {{ pct0(S.from_2023.shares.home) }}, against {{ pct0(S.to_2022.shares.home) }} before. The composition of a roster follows from who is available and who is nominated, as well as from where Czech players play; the change after {{ S.to_2022.last }} is a change in the rosters and does not by itself show a change in the pool.</p>
+{% endcall %}
+{% call does_not_show() %}
+<li>Why a player was or was not nominated; the atlas records rosters, not selection decisions.</li>
+<li>Players' form or role at the tournament.</li>
+{% endcall %}

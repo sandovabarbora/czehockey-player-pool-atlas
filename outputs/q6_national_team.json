@@ -38,12 +38,12 @@
   ]
  },
  "basis_counts": {
-  "nhl_career": 1367,
-  "league_row": 1356,
-  "club_country": 625,
+  "nhl_career": 1370,
+  "league_row": 1357,
+  "club_country": 623,
   "khl_club": 565,
   "club_league": 559,
-  "team_name": 249,
+  "team_name": 247,
   "unknown": 128
  },
  "linked_share": 1.0,
@@ -2232,19 +2232,19 @@
    "nation": "CHE",
    "players": 25,
    "counts": {
-    "1": 4,
+    "1": 5,
     "2": 16,
     "home": 0,
     "khl": 0,
-    "other": 5,
+    "other": 4,
     "unknown": 0
    },
    "shares": {
-    "1": 0.16,
+    "1": 0.2,
     "2": 0.64,
     "home": 0.0,
     "khl": 0.0,
-    "other": 0.2,
+    "other": 0.16,
     "unknown": 0.0
    }
   },
@@ -3926,19 +3926,19 @@
    "nation": "CZE",
    "players": 25,
    "counts": {
-    "1": 10,
+    "1": 11,
     "2": 6,
     "home": 7,
     "khl": 0,
-    "other": 2,
+    "other": 1,
     "unknown": 0
    },
    "shares": {
-    "1": 0.4,
+    "1": 0.44,
     "2": 0.24,
     "home": 0.28,
     "khl": 0.0,
-    "other": 0.08,
+    "other": 0.04,
     "unknown": 0.0
    }
   },
@@ -4297,11 +4297,11 @@
  ],
  "mean_shares": {
   "CZE": {
-   "1": 0.304231,
+   "1": 0.306136,
    "2": 0.133279,
    "home": 0.279039,
    "khl": 0.249876,
-   "other": 0.033575,
+   "other": 0.03167,
    "unknown": 0.0
   },
   "FIN": {
@@ -4321,11 +4321,11 @@
    "unknown": 0.001905
   },
   "CHE": {
-   "1": 0.164761,
+   "1": 0.166666,
    "2": 0.790853,
    "home": 0.0,
    "khl": 0.001905,
-   "other": 0.040576,
+   "other": 0.038671,
    "unknown": 0.001905
   },
   "SVK": {
@@ -4590,11 +4590,11 @@
   {
    "event": "OG",
    "year": 2026,
-   "1": 10,
+   "1": 11,
    "2": 6,
    "home": 7,
    "khl": 0,
-   "other": 2,
+   "other": 1,
    "unknown": 0,
    "players": 25
   },
@@ -9951,11 +9951,11 @@
    "year": 2026,
    "name": "Radko Gudas",
    "position": "D",
-   "birth_date": "1990-06-30",
+   "birth_date": "1990-06-05",
    "club": "Anaheim Ducks",
-   "league": "not covered (United States)",
-   "category": "other",
-   "basis": "club_country"
+   "league": "NHL",
+   "category": "1",
+   "basis": "nhl_career"
   },
   {
    "event": "OG",

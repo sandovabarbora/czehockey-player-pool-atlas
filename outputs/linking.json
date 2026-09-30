@@ -38,8 +38,8 @@
    "roster": "World Championship and Olympic rosters from 2010: national team"
   }
  },
- "persons": 17991,
- "persons_with_nationality": 14309,
+ "persons": 17982,
+ "persons_with_nationality": 14303,
  "records_by_league": {
   "NHL": {
    "records": 5004,
@@ -61,11 +61,11 @@
    "linked_on_name_and_birth_date_to_another_source": 1213,
    "linked_on_first_name_variant": 5,
    "without_birth_date": 1600,
-   "name_only_linked": 566,
-   "ambiguous": 12,
+   "name_only_linked": 567,
+   "ambiguous": 11,
    "unmatched": 956,
    "joined_within_league_on_name": 66,
-   "name_only_link_rate": 0.35375
+   "name_only_link_rate": 0.354375
   },
   "Liiga": {
    "records": 4036,
@@ -87,11 +87,11 @@
    "linked_on_name_and_birth_date_to_another_source": 0,
    "linked_on_first_name_variant": 0,
    "without_birth_date": 1865,
-   "name_only_linked": 781,
-   "ambiguous": 21,
+   "name_only_linked": 782,
+   "ambiguous": 20,
    "unmatched": 1063,
    "joined_within_league_on_name": 0,
-   "name_only_link_rate": 0.418767
+   "name_only_link_rate": 0.419303
   },
   "DEL": {
    "records": 3963,
@@ -100,11 +100,11 @@
    "linked_on_name_and_birth_date_to_another_source": 0,
    "linked_on_first_name_variant": 0,
    "without_birth_date": 3963,
-   "name_only_linked": 1269,
-   "ambiguous": 24,
+   "name_only_linked": 1270,
+   "ambiguous": 23,
    "unmatched": 2287,
    "joined_within_league_on_name": 383,
-   "name_only_link_rate": 0.320212
+   "name_only_link_rate": 0.320464
   },
   "Extraliga": {
    "records": 3250,
@@ -120,8 +120,8 @@
    "name_only_link_rate": 0.154583
   },
   "roster": {
-   "records": 2711,
-   "with_birth_date": 2711,
+   "records": 2705,
+   "with_birth_date": 2705,
    "with_birth_date_share": 1.0,
    "linked_on_name_and_birth_date_to_another_source": 1960,
    "linked_on_first_name_variant": 42,
@@ -161,15 +161,15 @@
   "SHL": {
    "all_rows": {
     "citizenship": 8611,
-    "unknown": 2750,
-    "linked: citizenship": 1322,
+    "unknown": 2749,
+    "linked: citizenship": 1323,
     "linked: national_team": 78,
     "linked: eligibility": 11
    },
    "qualifying_rows": {
     "citizenship": 6694,
-    "unknown": 1981,
-    "linked: citizenship": 1156,
+    "unknown": 1980,
+    "linked: citizenship": 1157,
     "linked: national_team": 72,
     "linked: eligibility": 8
    }
@@ -192,15 +192,15 @@
   },
   "DEL": {
    "all_rows": {
-    "unknown": 6491,
-    "linked: citizenship": 2529,
+    "unknown": 6487,
+    "linked: citizenship": 2533,
     "linked: national_team": 1228,
     "eligibility": 1043,
     "linked: eligibility": 708
    },
    "qualifying_rows": {
-    "unknown": 5576,
-    "linked: citizenship": 2370,
+    "unknown": 5575,
+    "linked: citizenship": 2371,
     "linked: national_team": 1154,
     "eligibility": 868,
     "linked: eligibility": 597
@@ -209,16 +209,16 @@
   "NL": {
    "all_rows": {
     "eligibility": 3906,
-    "linked: citizenship": 1676,
+    "linked: citizenship": 1679,
     "linked: national_team": 1182,
-    "unknown": 541,
+    "unknown": 538,
     "linked: eligibility": 4
    },
    "qualifying_rows": {
     "eligibility": 2971,
-    "linked: citizenship": 1453,
+    "linked: citizenship": 1456,
     "linked: national_team": 1108,
-    "unknown": 311
+    "unknown": 308
    }
   }
  },
@@ -308,9 +308,9 @@
    "season": "2003/04",
    "rows": 350.0,
    "qualifying": 319.0,
-   "identified_share": 0.271429,
+   "identified_share": 0.274286,
    "qualifying_identified_share": 0.278997,
-   "birth_year_share": 0.277143,
+   "birth_year_share": 0.28,
    "position_share": 1.0
   },
   {
@@ -318,9 +318,9 @@
    "season": "2004/05",
    "rows": 385.0,
    "qualifying": 326.0,
-   "identified_share": 0.322078,
+   "identified_share": 0.324675,
    "qualifying_identified_share": 0.340491,
-   "birth_year_share": 0.327273,
+   "birth_year_share": 0.32987,
    "position_share": 1.0
   },
   {
@@ -328,9 +328,9 @@
    "season": "2005/06",
    "rows": 376.0,
    "qualifying": 328.0,
-   "identified_share": 0.316489,
-   "qualifying_identified_share": 0.347561,
-   "birth_year_share": 0.319149,
+   "identified_share": 0.319149,
+   "qualifying_identified_share": 0.35061,
+   "birth_year_share": 0.321809,
    "position_share": 1.0
   },
   {
@@ -398,9 +398,9 @@
    "season": "2012/13",
    "rows": 374.0,
    "qualifying": 328.0,
-   "identified_share": 0.379679,
+   "identified_share": 0.382353,
    "qualifying_identified_share": 0.396341,
-   "birth_year_share": 0.34492,
+   "birth_year_share": 0.347594,
    "position_share": 1.0
   },
   {
@@ -1608,9 +1608,9 @@
    "season": "2023/24",
    "rows": 447.0,
    "qualifying": 372.0,
-   "identified_share": 0.928412,
-   "qualifying_identified_share": 0.948925,
-   "birth_year_share": 0.442953,
+   "identified_share": 0.930649,
+   "qualifying_identified_share": 0.951613,
+   "birth_year_share": 0.44519,
    "position_share": 1.0
   },
   {
@@ -1618,9 +1618,9 @@
    "season": "2024/25",
    "rows": 449.0,
    "qualifying": 367.0,
-   "identified_share": 0.933185,
-   "qualifying_identified_share": 0.948229,
-   "birth_year_share": 0.418708,
+   "identified_share": 0.935412,
+   "qualifying_identified_share": 0.950954,
+   "birth_year_share": 0.420935,
    "position_share": 1.0
   },
   {
@@ -1628,9 +1628,9 @@
    "season": "2025/26",
    "rows": 459.0,
    "qualifying": 365.0,
-   "identified_share": 0.936819,
-   "qualifying_identified_share": 0.939726,
-   "birth_year_share": 0.422658,
+   "identified_share": 0.938998,
+   "qualifying_identified_share": 0.942466,
+   "birth_year_share": 0.424837,
    "position_share": 1.0
   },
   {
@@ -1788,9 +1788,9 @@
    "season": "2010/11",
    "rows": 406.0,
    "qualifying": 311.0,
-   "identified_share": 0.871921,
-   "qualifying_identified_share": 0.945338,
-   "birth_year_share": 0.871921,
+   "identified_share": 0.874384,
+   "qualifying_identified_share": 0.948553,
+   "birth_year_share": 0.874384,
    "position_share": 0.729064
   },
   {
@@ -2129,6 +2129,14 @@
   {
    "event": "OG",
    "year": 2010,
+   "player": "Thomas Greiss",
+   "roster_date": "1986-01-26",
+   "used": "1986-01-29",
+   "reason": "day differs; the player's other rosters give the league date"
+  },
+  {
+   "event": "OG",
+   "year": 2010,
    "player": "Hnat Domenichelli",
    "roster_date": "1976-02-16",
    "used": "1976-02-17",
@@ -2209,6 +2217,14 @@
   {
    "event": "WC",
    "year": 2018,
+   "player": "Tyson Jost",
+   "roster_date": "1998-03-17",
+   "used": "1998-03-14",
+   "reason": "day differs; the player's other rosters give the league date"
+  },
+  {
+   "event": "WC",
+   "year": 2018,
    "player": "Filip Chytil",
    "roster_date": "1999-05-09",
    "used": "1999-09-05",
@@ -2248,11 +2264,27 @@
   },
   {
    "event": "WC",
+   "year": 2018,
+   "player": "Timo Meier",
+   "roster_date": "1996-10-06",
+   "used": "1996-10-08",
+   "reason": "day differs; the player's other rosters give the league date"
+  },
+  {
+   "event": "WC",
    "year": 2019,
    "player": "Patrick Galbraith",
    "roster_date": "1986-11-03",
    "used": "1986-03-11",
    "reason": "day and month swapped"
+  },
+  {
+   "event": "OG",
+   "year": 2022,
+   "player": "Saku Mäenalanen",
+   "roster_date": "1994-05-24",
+   "used": "1994-05-29",
+   "reason": "day differs; the player's other rosters give the league date"
   },
   {
    "event": "WC",
@@ -2277,6 +2309,22 @@
    "roster_date": "1996-05-26",
    "used": "1996-05-25",
    "reason": "one day"
+  },
+  {
+   "event": "OG",
+   "year": 2026,
+   "player": "Radko Gudas",
+   "roster_date": "1990-06-30",
+   "used": "1990-06-05",
+   "reason": "day differs; the player's other rosters give the league date"
+  },
+  {
+   "event": "OG",
+   "year": 2026,
+   "player": "Michal Ivan",
+   "roster_date": "1999-11-08",
+   "used": "1999-11-18",
+   "reason": "day differs; the player's other rosters give the league date"
   }
  ]
 }

@@ -24,13 +24,10 @@
       <summary{% if page == 'question' %} class="is-current"{% endif %}>Questions</summary>
       <ol class="nav-q-list">
         {% for q in questions %}
-        <li><a href="{{ prefix }}{{ q.url }}"{% if cur is defined and cur.id == q.id %} aria-current="page"{% endif %}><span class="nav-q-n">{{ loop.index }}</span>{{ q.title }}</a></li>
+        <li><a href="{{ prefix }}{{ q.url }}"{% if cur is defined and cur.id == q.id %} aria-current="page"{% endif %}><span class="nav-q-n">{{ loop.index }}</span>{{ q.label }}</a></li>
         {% endfor %}
       </ol>
     </details>
-    {% if autumn %}
-    <a href="{{ prefix }}this-autumn/"{% if page == 'autumn' %} aria-current="page"{% endif %}>This autumn</a>
-    {% endif %}
     <a href="{{ prefix }}methodology/"{% if page == 'methodology' %} aria-current="page"{% endif %}>Methodology</a>
     <a href="{{ prefix }}players/"{% if page == 'players' %} aria-current="page"{% endif %}>Players</a>
   </div>
@@ -49,7 +46,7 @@
   <div class="container">
     <div class="role-block">
       <p class="role-kicker">Built by Barbora Šandová — data &amp; cloud engineer</p>
-      <p class="role-body">A descriptive, reproducible benchmark from public statistics: the fetchers, the snapshot, the analysis and this page are one repository. No predictions, no selection advice.</p>
+      <p class="role-body">An exploratory, descriptive atlas built from public statistics; the fetchers, the snapshot, the analysis and these pages are one repository. It makes no forecasts and gives no selection advice.</p>
       <p class="role-author">
         <span class="role-author-name">Barbora Šandová</span>
         <span class="role-author-contact">
@@ -59,7 +56,7 @@
         </span>
       </p>
     </div>
-    <p class="rendered-at">Built {{ build_date }} from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+    <p class="rendered-at">Built {{ build_date_long }} from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
   </div>
 </footer>
 </body>

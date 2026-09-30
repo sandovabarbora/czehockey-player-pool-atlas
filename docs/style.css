@@ -689,80 +689,18 @@ h2[id], h3[id] { scroll-margin-top: 2rem; }
 }
 .downloads-links a { color: var(--navy-700); }
 
-/* =========================================================================
-   For a federation — four quiet tiles right after the argument list, same
-   hairline family as .argument (no boxes, no shadows), plus one mono line
-   on what it takes to run the pipeline for another country
-   ========================================================================= */
-/* the tile count depends on the .container's own width (narrowed by the TOC
-   rail past 1280px, to ~700-900px), not the viewport — a viewport-width media
-   query would force 4-up into that narrow column, so this uses a container
-   query scoped to .for-federation's .container instead */
-.for-federation { padding: var(--space-5) 0 var(--space-6); }
-.for-federation .container { container-type: inline-size; }
-.for-federation h3 { margin: 0 0 var(--space-4); }
 /* hairline grid: the 1px gap shows the rule colour between cells, the tiles
    paint the page background over it — no per-cell border bookkeeping */
-.fed-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1px;
-  margin: 0 0 var(--space-4);
-  padding: 0;
-  list-style: none;
-  background: var(--rule);
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-}
+
 @container (min-width: 480px) {
-  .fed-grid { grid-template-columns: repeat(2, 1fr); }
+  
 }
 @container (min-width: 1100px) {
-  .fed-grid { grid-template-columns: repeat(4, 1fr); }
+  
 }
-.fed-tile { background: var(--page-bg); border: 0; }
-.fed-tile a {
-  display: block;
-  padding: var(--space-3) 0;
-  text-decoration: none;
-  border-bottom: none;
-  color: inherit;
-}
+
 @media (min-width: 640px) {
-  .fed-tile a { padding: var(--space-4); }
-}
-.fed-tile-title {
-  display: block;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: -0.005em;
-  color: var(--navy-700);
-  margin-bottom: 0.35rem;
-}
-.fed-tile a:hover .fed-tile-title { color: var(--ink); text-decoration: none; }
-.fed-tile-body {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: var(--ink-soft);
-}
-.fed-tile-used-by {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  line-height: 1.5;
-  color: var(--ink-faint, var(--ink-soft));
-  margin-top: 0.35rem;
-}
-.fed-note {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  line-height: 1.65;
-  color: var(--ink-soft);
-  margin: 0;
-  max-width: var(--measure-wide);
+  
 }
 
 /* =========================================================================
@@ -797,17 +735,6 @@ h2[id], h3[id] { scroll-margin-top: 2rem; }
   color: var(--ink);
 }
 
-/* =========================================================================
-   Slides — nine question / answer / proof / how-we-know units between the
-   hero and "For a federation" (Task 13b). The question is the memorable
-   element (display serif, largest text on the slide after the hero);
-   the answer is one sentence with the headline number in <strong>; the
-   proof reuses today's exhibit markup unchanged (.capita, tables, tier
-   bars, cards); the how-line is a small mono footnote, same register as
-   .capita-note / .fed-note elsewhere on the page. Hairline + generous
-   space separates slides; on phones everything stacks (no layout rules
-   needed here — the exhibits themselves already collapse to one column).
-   ========================================================================= */
 .slide {
   padding: var(--space-7) 0;
   border-top: 1px solid var(--rule);
@@ -919,11 +846,6 @@ table.peer-compare td:not(:first-child) {
   font-feature-settings: "tnum", "lnum";
 }
 
-/* =========================================================================
-   Explore the data — folded chapters I-III material, after the slides and
-   "For a federation". Same section rhythm as .methodology; each top-level
-   <details class="fold"> is one of the six blocks from the brief.
-   ========================================================================= */
 .explore { padding: var(--space-7) 0 var(--space-6); }
 .explore h2 {
   font-weight: 400;
@@ -2860,22 +2782,6 @@ footer a:hover { border-bottom-color: var(--ink); }
 .changes-list .changes-name { color: var(--ink); }
 .changes-list .muted { font-size: 0.78rem; }
 
-/* ---- pre-registered forecast scoreboard (Task 32) --------------------- */
-.scoreboard {
-  margin: var(--space-4) 0 0; padding: var(--space-3) var(--space-4);
-  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule);
-  background: transparent; max-width: var(--measure-wide); padding-left: 0; padding-right: 0;
-}
-.scoreboard-kicker { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); margin: 0 0 0.4rem; }
-.scoreboard-claim { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.5; margin: 0 0 0.8rem; color: var(--ink); }
-.scoreboard-claim strong { font-size: 1.4em; color: var(--ink); }
-.scoreboard-meta { display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1rem; margin: 0; font-family: var(--font-sans); font-size: 0.86rem; }
-.scoreboard-meta > div { display: contents; }
-.scoreboard-meta dt { color: var(--muted); }
-.scoreboard-meta dd { margin: 0; color: var(--ink-soft); }
-.scoreboard-meta code { font-size: 0.8em; }
-.scoreboard-drift { font-family: var(--font-sans); font-size: 0.86rem; color: var(--ink); margin: 0.8rem 0 0; }
-.scoreboard-why { font-family: var(--font-sans); font-size: 0.8rem; color: var(--muted); margin: 0.8rem 0 0; line-height: 1.5; }
 .slide-detail {
   font-family: var(--font-sans);
   font-size: 0.92rem;
@@ -2887,10 +2793,7 @@ footer a:hover { border-bottom-color: var(--ink); }
 /* the live sensitivity table is wider than a phone: scroll it, never the page */
 .sensitivity-live-table { display: block; overflow-x: auto; max-width: 100%; }
 
-/* distill: the federation tiles and the one-page brief fold on screen; the
-   brief still prints in full (the print button opens it, and print media
-   forces it open for a reader who prints from the browser menu) */
-.fed-fold > summary, .brief-body > summary { font-family: var(--font-sans); }
-.for-federation h3 { display: none; }
+.brief-body > summary { font-family: var(--font-sans); }
+
 .brief-table td.num, .brief-table th:not(:first-child) { white-space: nowrap; }
 @media print { .brief-body > summary { display: none; } }

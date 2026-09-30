@@ -8,6 +8,7 @@ cannot leave a sentence saying the opposite of its figure.
 from __future__ import annotations
 
 import datetime as dt
+import hashlib
 import json
 import subprocess
 import unicodedata
@@ -17,7 +18,7 @@ from typing import Any
 
 from src import config
 from src.nations import BY_ISO3, HOME, ISO3
-from src.web import fmt
+from src.web import fmt, references
 
 OUTPUT_FILES = (
     "linking",
@@ -29,9 +30,11 @@ OUTPUT_FILES = (
     "q6_national_team",
     "q7_goalkeepers",
     "pool",
+    "intervals",
 )
 
 HOME_NAME = BY_ISO3[HOME].name
+WORDS = {2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine"}
 PEERS = [c for c in ISO3 if c != HOME]
 AGE_BANDS = ("≤21", "22–25", "26–29", "30+")
 BAND_WORD = {"≤21": "21 or under", "22–25": "22–25", "26–29": "26–29", "30+": "30 or over"}
@@ -125,6 +128,10 @@ def _q2(q2: dict) -> dict:
     out: dict[str, Any] = {"seasons": q2["seasons"], "definitions": q2["definitions"]}
     for code, nat in q2["nations"].items():
         brk = nat["break"]
+        for st in brk["steps"]:
+            df = st["delta_factor"]
+            st["reading"] = "rise" if df["lo"] > 1 else ("fall" if df["hi"] < 1 else "direction not resolved")
+            st["p_up"] = 1 - st["p_down"]
         fall_step = next((s for s in brk["steps"] if s["direction"] == "down"), None)
         ups = [s for s in brk["steps"] if s["direction"] == "up"]
         out[code] = {
@@ -133,8 +140,12 @@ def _q2(q2: dict) -> dict:
             "fall": fall_step,
             "ups": ups,
             "only_up": fall_step is None,
-            "fitted": nat["fitted"],
+            "fitted": {**nat["fitted"], "seasons": q2["seasons"]},
             "diag": nat["diagnostics"],
+            "top_pair": brk["top_candidates"][0],
+            "n_breaks": brk["n_breaks"],
+            "n_obs": sum(1 for v in nat["n"] if v is not None),
+            "n_seasons": len(nat["n"]),
         }
     cze = out[HOME]
     if cze["fall"]:
@@ -142,10 +153,15 @@ def _q2(q2: dict) -> dict:
         spread = [q2["seasons"][i] for i, p in enumerate(marg) if p >= 0.03]
         cze["fall_spread"] = (spread[0], spread[-1]) if spread else None
         cze["fall_mass_in_spread"] = sum(p for p in marg if p >= 0.03)
+    cze["level_latest"] = _level(cze, "latest", " players")
+    cze["level_peak"] = _level(cze, "peak")
     cze["sharp"] = bool(cze["fall"] and cze["fall"]["modal"]["prob"] >= 0.5)
     out["max_rhat"] = max(n["diagnostics"]["max_rhat"] for n in q2["nations"].values())
     out["divergences"] = sum(n["diagnostics"]["n_divergences"] for n in q2["nations"].values())
     out["compared"] = [c for c in q2["nations"] if c != HOME]
+    steps = [st for c in q2["nations"].values() for st in c["break"]["steps"]]
+    out["n_steps"] = len(steps)
+    out["n_resolved"] = sum(1 for st in steps if st["reading"] != "direction not resolved")
     return out
 
 
@@ -153,7 +169,7 @@ def _q3(q3: dict, population_m: float) -> dict:
     cells = [c for c in q3["cells"] if c["position"] in POSITION_WORD and c["age_band"] in AGE_BANDS]
     u21 = [c for c in cells if c["age_band"] == "≤21" and c["position"] in ("F", "D")]
     u21_home = sum(c["counts"][HOME] for c in u21)
-    shortfalls = [s for s in q3["largest_shortfalls"] if s["shortfall"] > 0]
+    shortfalls = [s for s in q3["largest_shortfalls"] if round(s["shortfall"], 1) > 0]
     excluded_age = sorted(
         {c for band in q3["by_age_band"] for c in PEERS if c not in band["peers_in_median"]}
     )
@@ -169,6 +185,7 @@ def _q3(q3: dict, population_m: float) -> dict:
         "by_position": by_pos,
         "unknown": q3["unknown"],
         "population_m": population_m,
+        "n_peers": len(cells[0]["peers_in_median"]) if cells else 0,
     }
 
 
@@ -349,6 +366,7 @@ def _autumn(news: dict | None, pool: dict, q5: dict) -> dict:
         "notes_czech_nth": cite(c["sources_czech_nth"]),
         "season": last,
         "position_word": POSITION_WORD[player["position"]],
+        "position": player["position"],
         "abroad": q5_row,
     }
     sources = [
@@ -370,121 +388,166 @@ def _population_m(q1: dict) -> float:
     return home["population"] / 1e6
 
 
+def _ci(d: dict | None, key: str = "median", f=fmt.f2) -> str:
+    """'0.98 (95 % bootstrap interval 0.90–1.11)' style: the value and its interval, formatted."""
+    if not d:
+        return "–"
+    return f"{f(d[key])} ({f(d['lo'])}–{f(d['hi'])})"
+
+
+def _level(nation: dict, which: str, unit: str = "") -> str:
+    """The break model's level in one season with its 90 % HDI, at the most probable pair of step seasons."""
+    f = nation["fitted"]
+    i = f["seasons"].index(f[which]["season"])
+    return f"{round(f['median'][i])}{unit} (90 % HDI {round(f['lo'][i])}–{round(f['hi'][i])})"
+
+
 def _takeaways(c: dict) -> list[dict]:
-    q1, q2, q3, q4, q5, q6 = (c[k] for k in ("q1", "q2", "q3", "q4", "q5", "q6"))
+    """The summary's findings, one per question, each with its interval or its count label."""
+    q1, q2, q3, q4, q5, q6, q7, iv = (c[k] for k in ("q1", "q2", "q3", "q4", "q5", "q6", "q7", "iv"))
     h = q1["home"]
     pm = q1["peer_median"]
     leaders = q1["leaders_nhl"]
     cze = q2[HOME]
     fall = cze["fall"]
     out = []
+    ratio = min(leaders[0]["nhl_per_million"], leaders[1]["nhl_per_million"]) / h["nhl_per_million"]
     out.append({
         "head": (
-            f"Per head, the Czech pool sits {q1['nhl_vs_median_word']} the peer median, "
-            f"not at the bottom: {fmt.ordinal(h['rank_nhl'])} of {q1['n_nations']} in the NHL."
+            f"In {q1['season']}, {h['nhl']} Czech players reached the games threshold in the NHL, "
+            f"{fmt.f2(h['nhl_per_million'])} per million inhabitants, which ranks Czechia {fmt.ordinal(h['rank_nhl'])} of "
+            f"{q1['n_nations']} nations and {q1['nhl_vs_median_word']} the median of the nine peers ({fmt.f2(pm['nhl_per_million'])})."
         ),
         "body": [
-            f"{h['nhl']} Czech players reached the games threshold in the NHL in {q1['season']}, "
-            f"{fmt.f2(h['nhl_per_million'])} per million inhabitants against a peer median of {fmt.f2(pm['nhl_per_million'])}. "
-            f"Counting the four strongest European leagues as well, {h['top5']} players, {fmt.f2(h['top5_per_million'])} per million, "
-            f"{fmt.ordinal(h['rank_top5'])} of {q1['n_nations']}.",
-            f"{leaders[0]['name']} and {leaders[1]['name']} are in another class: "
-            f"{fmt.f2(leaders[0]['nhl_per_million'])} and {fmt.f2(leaders[1]['nhl_per_million'])} NHL players per million, "
-            f"about {round(min(leaders[0]['nhl_per_million'], leaders[1]['nhl_per_million']) / h['nhl_per_million'])} times the Czech rate.",
+            f"With the four rung-2 leagues added, the count is {h['top5']} players, {fmt.f2(h['top5_per_million'])} per million, "
+            f"{fmt.ordinal(h['rank_top5'])} of {q1['n_nations']} (peer median {fmt.f2(pm['top5_per_million'])}). "
+            f"{leaders[0]['name']} ({fmt.f2(leaders[0]['nhl_per_million'])}) and {leaders[1]['name']} "
+            f"({fmt.f2(leaders[1]['nhl_per_million'])}) have about {round(ratio)} times the Czech NHL rate. "
+            f"These are administrative counts; the Czech ranks are the same under all three games thresholds.",
         ],
     })
     fall_txt = (
-        f"The most likely season for a fall is {fall['modal']['season']}, with only {fmt.pct0(fall['modal']['prob'])} probability; "
-        f"the step is {fmt.times(fall['delta_factor']['median'])} (90% interval {fmt.f2(fall['delta_factor']['lo'])}–{fmt.f2(fall['delta_factor']['hi'])})."
+        f"The break model dates the step whose median is below 1 most likely to {fall['modal']['season']} (posterior probability "
+        f"{fmt.f2(fall['modal']['prob'])}), with a factor of {fmt.times(fall['delta_factor']['median'])} "
+        f"(90 % HDI {fmt.f2(fall['delta_factor']['lo'])}–{fmt.f2(fall['delta_factor']['hi'])}; "
+        f"P(level falls) = {fmt.f2(fall['p_down'])})"
+        + (", so its direction is not resolved." if fall["delta_factor"]["hi"] >= 1 else ".")
+        + " The model describes timing, not cause."
         if fall
-        else "The model finds no downward step."
+        else "The break model finds no downward step."
     )
-    peers_up = [q2[k]["name"] for k in q2["compared"] if q2[k]["only_up"]]
     out.append({
         "head": (
-            f"The Czech NHL group fell from {q1['peak']['n']} players in {q1['peak']['season']} to "
-            f"{q1['peak']['latest']['n']} in {q1['peak']['latest']['season']}"
-            + (" — gradually, not in one break." if not cze["sharp"] else ", in one break.")
+            f"The observed Czech NHL count was {q1['peak']['n']} players in {q1['peak']['season']} and "
+            f"{q1['peak']['latest']['n']} in {q1['peak']['latest']['season']} (administrative counts)."
         ),
         "body": [
             fall_txt
-            + f" The fitted level is now {fmt.pct0(cze['fitted']['latest_to_peak'])} of its {cze['fitted']['peak']['season']} peak.",
-            (f"{' and '.join(peers_up)} show only upward steps over the same seasons." if peers_up else ""),
+            + f" Conditional on the most probable pair of step seasons, the model level in {cze['fitted']['latest']['season']} is "
+            f"{_level(cze, 'latest', ' players')}, against {_level(cze, 'peak')} at its {cze['fitted']['peak']['season']} peak."
         ],
     })
     top = q3["top_shortfall"]
     second = q3["second_shortfall"]
+    fw = [r for r in iv["q3"]["u21_by_season"] if r["position"] == "F"]
+    q3_gap = (
+        f"Expressed in players at the Czech population, the difference from the median of {WORDS.get(q3['n_peers'], q3['n_peers'])} peers is "
+        f"{fmt.f1(top['shortfall'])} for {POSITION_WORD[top['position']]} aged {BAND_WORD[top['age_band']]}"
+        + (f" and {fmt.f1(second['shortfall'])} for {POSITION_WORD[second['position']]} aged {BAND_WORD[second['age_band']]}" if second else "")
+        + "."
+    ) if top else ""
+    q3_noise = (
+        "One season is a noisy cross-section: Czech forwards aged 21 or under who reached the threshold numbered "
+        + ", ".join(str(r["count"]) for r in fw) + f" in the seasons {fw[0]['season']} to {fw[-1]['season']}."
+    ) if fw else ""
     out.append({
         "head": (
-            "The gap is young: no Czech skater aged 21 or under reaches the games threshold in the NHL or rung 2."
+            f"In {q3['season']} no Czech forward or defenceman aged 21 or under reached the games threshold in the NHL or rung 2."
             if q3["u21_home"] == 0
-            else f"The gap is young: {q3['u21_home']} Czech skaters aged 21 or under reach the threshold in the NHL or rung 2."
+            else f"In {q3['season']}, {q3['u21_home']} Czech forwards and defencemen aged 21 or under reached the games threshold in the NHL or rung 2."
         ),
-        "body": [
-            (
-                f"The largest shortfall against the peer median is {POSITION_WORD[top['position']]} aged {BAND_WORD[top['age_band']]}: "
-                f"{fmt.f1(top['shortfall'])} players"
-                + (
-                    f", then {POSITION_WORD[second['position']]} aged {BAND_WORD[second['age_band']]} ({fmt.f1(second['shortfall'])})."
-                    if second
-                    else "."
-                )
-            )
-            if top
-            else "No cohort is below the peer median."
-        ],
+        "body": [" ".join(x for x in (q3_gap, q3_noise) if x)],
     })
-    lp = q4["peers"]
+    g = iv["q4"]["leagues"]
     out.append({
         "head": (
-            f"At home, under-21 skaters get {fmt.pct(q4['home']['mean_u21_games_share'])} of Extraliga games; "
-            f"the Liiga gives its young {fmt.pct(lp['Liiga']['mean_u21_games_share'])} and the SHL {fmt.pct(lp['SHL']['mean_u21_games_share'])}."
+            f"Skaters aged 20 or under played {fmt.pct(g['Extraliga']['games']['mean'])} of Extraliga skater games, "
+            f"against {fmt.pct(g['Liiga']['games']['mean'])} in the Liiga and {fmt.pct(g['SHL']['games']['mean'])} in the SHL "
+            f"(means of {g['Extraliga']['games']['seasons']} seasons, {q4['window']})."
         ),
         "body": [
-            f"On ice time the gap is wider: {fmt.pct(q4['home']['mean_u21_toi_share'])} against "
-            f"{fmt.pct(lp['Liiga']['mean_u21_toi_share'])} and {fmt.pct(lp['SHL']['mean_u21_toi_share'])}, "
-            f"averaged over {q4['window']}. In {q4['latest_season']} the Extraliga share was {fmt.pct(q4['home']['latest']['u21_games_share'])} of games."
+            f"The 95 % bootstrap intervals, resampling seasons, are {fmt.pct(g['Extraliga']['games']['lo'])}–{fmt.pct(g['Extraliga']['games']['hi'])}, "
+            f"{fmt.pct(g['Liiga']['games']['lo'])}–{fmt.pct(g['Liiga']['games']['hi'])} and {fmt.pct(g['SHL']['games']['lo'])}–{fmt.pct(g['SHL']['games']['hi'])}. "
+            f"The shares cover players of every nationality and compare leagues, not the chances given to any one player."
         ],
     })
+    b = iv["q5"]
     hn = q5["home"]["NHL"]
-    toi_w, ppg_w = q5["words"]["NHL"]
-    toi_phrase = {"at": "play the median ice time", "above": "play more than the median ice time",
-                  "below": "play less than the median ice time"}[toi_w]
-    ppg_phrase = {"at": "score at the median rate", "above": "score above it", "below": "score below it"}[ppg_w]
-    euro = [lg for lg in ("Liiga", "SHL") if q5["words"][lg] == ("above", "above")]
-    euro_txt = f"; in the {' and the '.join(euro)} they are above the median on both" if euro else ""
-    out.append({
-        "head": f"Abroad, Czech skaters in the NHL {toi_phrase} for their position and {ppg_phrase}{euro_txt}.",
-        "body": [
-            f"Over {q5['window']}, Czech NHL skaters played {fmt.f2(hn['median_toi_ratio'])} times the median ice time of their position "
-            f"and scored {fmt.f2(hn['median_ppg_ratio'])} times its points per game. In the Liiga the ratios are "
-            f"{fmt.f2(q5['home']['Liiga']['median_toi_ratio'])} and {fmt.f2(q5['home']['Liiga']['median_ppg_ratio'])}, in the SHL "
-            f"{fmt.f2(q5['home']['SHL']['median_toi_ratio'])} and {fmt.f2(q5['home']['SHL']['median_ppg_ratio'])}."
-        ],
-    })
-    hs = q6["home"]
-    three = sorted(((hs["1"], "the NHL"), (hs["home"], "the Extraliga"), (hs["khl"], "the KHL")), reverse=True)
-    even = three[0][0] - three[-1][0] <= 0.08
-    parts = [f"{name} ({fmt.pct0(v)})" for v, name in three]
-    listed = ", ".join(parts[:-1]) + f" and {parts[-1]}"
     out.append({
         "head": (
-            f"Since {q6['first_year']} the national team has drawn on {listed}"
-            + (" in about equal parts" if even else "")
-            + f"; rung 2 gives {fmt.pct0(hs['2'])}."
+            f"Over {q5['window']}, the median Czech NHL skater played {fmt.f2(hn['median_toi_ratio'])} times the median ice time "
+            f"of his league, season and position and scored {fmt.f2(hn['median_ppg_ratio'])} times its points per game "
+            f"({hn['players']} players, {hn['player_seasons']} player-seasons)."
         ),
         "body": [
-            f"Averaged over {q6['n_events']} World Championship and Olympic rosters."
-            + (
-                f" The KHL is outside the atlas's leagues, so {fmt.pct0(hs['khl'])} of the roster spots come from a league the atlas does not measure."
-                if hs["khl"] >= 0.1
-                else ""
-            )
+            f"The 95 % bootstrap intervals, resampling players, are {fmt.f2(b['NHL']['toi']['lo'])}–{fmt.f2(b['NHL']['toi']['hi'])} and "
+            f"{fmt.f2(b['NHL']['ppg']['lo'])}–{fmt.f2(b['NHL']['ppg']['hi'])}, so both include 1. In the Liiga the ratios are "
+            f"{_ci(b['Liiga']['toi'])} and {_ci(b['Liiga']['ppg'])}, in the SHL {_ci(b['SHL']['toi'])} and {_ci(b['SHL']['ppg'])}; "
+            f"they compare imported players with each league's own depth and are not comparable across leagues."
+        ],
+    })
+    s6 = iv["q6"]
+    a, e, l6 = s6["all"]["shares"], s6["to_2022"]["shares"], s6["from_2023"]["shares"]
+    out.append({
+        "head": (
+            f"Across {s6['all']['events']} World Championship and Olympic rosters, {s6['all']['first']}–{s6['all']['last']}, "
+            f"Czech roster spots came on average {fmt.pct0(a['1'])} from the NHL, {fmt.pct0(a['home'])} from the Extraliga, "
+            f"{fmt.pct0(a['khl'])} from the KHL and {fmt.pct0(a['2'])} from rung 2."
+        ),
+        "body": [
+            f"The KHL share was {fmt.pct0(e['khl'])} over {s6['to_2022']['first']}–{s6['to_2022']['last']} and "
+            f"{fmt.pct0(l6['khl'])} over {s6['from_2023']['first']}–{s6['from_2023']['last']}, when the Extraliga share was {fmt.pct0(l6['home'])}. "
+            f"Without the 2018 and 2022 Olympics, which NHL players did not attend, the NHL share is {fmt.pct0(s6['without_2018_2022_olympics']['shares']['1'])}. "
+            f"Roster composition reflects nomination as well as the pool."
+        ],
+    })
+    k = q7["home"]
+    out.append({
+        "head": (
+            f"In {q7['season']}, {k['top5']} Czech goalkeepers reached the games threshold in the NHL or rung 2, "
+            f"{fmt.f2(k['top5_per_million'])} per million, {fmt.ordinal(k['rank_top5'])} of {q7['n_nations']} "
+            f"(peer median {fmt.f2(q7['peer_median']['top5_per_million'])})."
+        ),
+        "body": [
+            f"In the NHL alone there were {k['nhl']}, {fmt.f2(k['nhl_per_million'])} per million, {fmt.ordinal(q7['rank_nhl'])} "
+            f"(peer median {fmt.f2(q7['peer_median']['nhl_per_million'])}). These are administrative counts of a few players each."
         ],
     })
     for t in out:
-        t["body"] = [b for b in t["body"] if b]
+        t["body"] = [x for x in t["body"] if x]
     return out
+
+
+def meta(outputs_dir: Path | None = None) -> dict[str, Any]:
+    """The header metadata: dates, version, snapshot, code and how to cite."""
+    root = outputs_dir or config.OUTPUTS_DIR
+    sums = config.DATA_DIR / "snapshot" / "SHA256SUMS"
+    q2 = json.loads((root / "q2_break_model.json").read_text(encoding="utf-8"))
+    return {
+        "published": "18 May 2026",
+        "updated": "29 September 2026",
+        "version": 3,
+        "status": "research, exploratory; not pre-registered",
+        "snapshot_date": "29 September 2026",
+        "snapshot_sums": hashlib.sha256(sums.read_bytes()).hexdigest()[:12] if sums.exists() else "–",
+        "repo": "https://github.com/sandovabarbora/czehockey-player-pool-atlas",
+        "repo_short": "github.com/sandovabarbora/czehockey-player-pool-atlas",
+        "url": "https://hockey.bsandova.com/",
+        "python": (config.ROOT_DIR / ".python-version").read_text().strip() if (config.ROOT_DIR / ".python-version").exists() else "3.13",
+        "seed": q2["definitions"]["sampler"]["seed"],
+        "rebuild": "make install restore-snapshot verify-snapshot analysis pages",
+        "title": "Czech hockey atlas: the player pool",
+    }
 
 
 def build(outputs_dir: Path | None = None, build_date: str | None = None) -> dict[str, Any]:
@@ -502,12 +565,19 @@ def build(outputs_dir: Path | None = None, build_date: str | None = None) -> dic
         "q7": _q7(o["q7_goalkeepers"], q1["n_nations"]),
         "linking": _linking(o["linking"]),
         "pool": _pool(o["pool"]),
+        "iv": o["intervals"],
         "population_m": popm,
         "peers": [BY_ISO3[c].name for c in PEERS],
         "category_label": CATEGORY_LABEL,
         "position_word": POSITION_WORD,
         "band_word": BAND_WORD,
         "build_date": build_date or dt.date.today().isoformat(),
+        "build_date_long": fmt.long_date(dt.date.fromisoformat(build_date or dt.date.today().isoformat())),
+        "meta": meta(outputs_dir),
+        "refs": references.listing(),
+        "refnum": references.NUMBER,
+        "signed": fmt.signed,
+        "long_date": lambda d: fmt.long_date(dt.date.fromisoformat(d)) if isinstance(d, str) else fmt.long_date(d),
         "sources": sources(),
         "autumn": _autumn(config.news(), o["pool"], o["q5_abroad"]),
         "f1": fmt.f1,

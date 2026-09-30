@@ -50,3 +50,9 @@ node_modules/
 .env.*
 !.env.example
 secrets/
+
+# Private notes (not part of the published project)
+COVER_LETTER.md
+FIRST_CALL_PREP.md
+PRODUCT.md
+README.cs.md

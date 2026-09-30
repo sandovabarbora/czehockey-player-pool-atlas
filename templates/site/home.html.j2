@@ -1,7 +1,10 @@
 {% extends "_base.html.j2" %}
+{% from "_macros.html.j2" import ref with context %}
 {% set h = q1.home %}
-{% block title %}Czech hockey · Player pool atlas{% endblock %}
-{% block description %}The Czech professional hockey player pool measured against nine peer nations: NHL and top European league players per million inhabitants, when the NHL group fell, where the cohorts are thin, ice time for the young at home, how Czech players fare abroad, what the national team is built from. Public data, reproducible.{% endblock %}
+{% set fall = q2.CZE.fall %}
+{% set yl = iv.q4.leagues %}
+{% block title %}Czech Hockey Atlas{% endblock %}
+{% block description %}An exploratory atlas of Czech professional hockey players per head against nine peer nations, 1995/96–{{ q1.season }}: counts per million, timing of changes, age and position, young players' share at home, players abroad, national-team rosters and goalkeepers. Public data, reproducible.{% endblock %}
 {% block canonical %}https://hockey.bsandova.com/{% endblock %}
 {% block head_extra %}
 <script>
@@ -21,62 +24,85 @@
 
 <header class="report-header">
   <div class="container">
-    <h1>Czech hockey: <em>the player pool</em></h1>
-    <p class="masthead-subtitle">How deep is the Czech professional pool, measured against nine peer nations · {{ q1.season }}</p>
+    <p class="masthead-kicker">Research · Czech hockey atlas · 1995/96–{{ q1.season }}</p>
+    <h1>Czech professional hockey players per head against nine peer nations, 1995/96–{{ q1.season }}</h1>
+    <p class="masthead-deck">This exploratory atlas counts how many Czech players reach the NHL and Europe's four strongest leagues relative to population; in {{ q1.season }} Czechia ranked {{ ordinal(h.rank_nhl) }} of {{ q1.n_nations }} nations in the NHL.</p>
   </div>
 </header>
 
 <section class="hero" id="summary">
   <img class="hero-photo" src="img/hockey.jpg" srcset="img/hockey-1200.jpg 1200w, img/hockey.jpg 1920w" sizes="100vw" alt="A hockey player carrying the puck across the ice, in black and white with only the blue of his jersey kept" decoding="async" fetchpriority="high">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-num">
-        <span class="hero-num-figure">{{ f2(h.nhl_per_million) }}<span class="ast" aria-hidden="true">*</span></span>
-        <span class="hero-num-unit">Czech NHL players per million inhabitants, {{ q1.season }}</span>
-      </div>
-      <div class="hero-lead">
-        <p class="hero-finding">
-          Per head, Czechia ranks {{ ordinal(h.rank_nhl) }} of {{ q1.n_nations }} nations in the NHL and {{ ordinal(h.rank_top5) }} in the NHL plus the four strongest European leagues.
-          The Czech NHL group peaked at {{ q1.peak.n }} players in {{ q1.peak.season }}; it is {{ q1.peak.latest.n }} now.
-        </p>
-        <p class="hero-path">Three minutes: this number and the six findings below. The rest is the evidence.</p>
-      </div>
-    </div>
-    <p class="hero-footnote">* {{ h.nhl }} Czech players with at least 20 of 82 NHL games (pro-rated to the schedule) in {{ q1.season }}, per {{ f1(population_m) }} million inhabitants (Eurostat); every peer counted the same way. <a href="methodology/">Methodology</a>.</p>
+    <dl class="facts">
+      <div class="fact"><dt>Czech NHL players per million, {{ q1.season }}</dt><dd><span class="fact-n">{{ f2(h.nhl_per_million) }}</span><span class="fact-note">{{ h.nhl }} players, population {{ f1(population_m) }} million · administrative count</span></dd></div>
+      <div class="fact"><dt>NHL and rung-2 players per million</dt><dd><span class="fact-n">{{ f2(h.top5_per_million) }}</span><span class="fact-note">{{ h.top5 }} players · {{ ordinal(h.rank_top5) }} of {{ q1.n_nations }} · administrative count</span></dd></div>
+      {% if fall %}<div class="fact"><dt>Czech NHL step with a median below 1</dt><dd><span class="fact-n">{{ times(fall.delta_factor.median) }}</span><span class="fact-note">90 % HDI {{ f2(fall.delta_factor.lo) }}–{{ f2(fall.delta_factor.hi) }} · most likely {{ fall.modal.season }} (posterior probability {{ f2(fall.modal.prob) }})</span></dd></div>{% endif %}
+      <div class="fact"><dt>Extraliga skater games played by skaters aged 20 or under</dt><dd><span class="fact-n">{{ pct(yl.Extraliga.games.mean) }}</span><span class="fact-note">95 % bootstrap by season {{ pct(yl.Extraliga.games.lo) }}–{{ pct(yl.Extraliga.games.hi) }} · {{ yl.Extraliga.games.seasons }} seasons</span></dd></div>
+    </dl>
   </div>
   <p class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Jake_Levin_(Air_Force_Falcon%27s_men%27s_ice_hockey)_during_game_against_Bentley_Falcons_men%27s_ice_hockey_at_Cadet_Arena_in_Colorado_Springs_on_November_9,_2018_(45170233234).jpg">U.S. Air Force Academy</a> · public domain, colour held</p>
 </section>
 
-{% if autumn %}
-<section class="autumn-teaser" aria-labelledby="autumn-teaser-h">
+<section class="front-intro">
   <div class="container">
-    <p class="close-kicker">News</p>
-    <h2 class="slide-q" id="autumn-teaser-h"><a href="this-autumn/">This autumn</a></h2>
-    <p class="autumn-asof">Atlas data as of {{ autumn.data_as_of }}; news as of {{ autumn.news_as_of }}</p>
-    <ul class="autumn-teaser-list">
-      <li><a href="this-autumn/#autumn-coach">A new head coach of the national team</a></li>
-      <li><a href="this-autumn/#autumn-captain">A club captaincy in the NHL</a></li>
-    </ul>
+    <details class="tldr" open>
+      <summary>Overwhelmed? Here's the short version</summary>
+      <ul>
+        <li>{{ q1.leaders_nhl[0].name }} and {{ q1.leaders_nhl[1].name }} have about {{ (([q1.leaders_nhl[0].nhl_per_million, q1.leaders_nhl[1].nhl_per_million]|min) / h.nhl_per_million)|round|int }} times the Czech NHL rate per inhabitant, and the Czech ranks stay the same under three different games thresholds.</li>
+        <li>The Czech NHL count fell from {{ q1.peak.n }} players in {{ q1.peak.season }} to {{ q1.peak.latest.n }}; the break model spreads the timing of that fall over {{ q2.CZE.fall_spread[0] if q2.CZE.fall_spread else '–' }}–{{ q2.CZE.fall_spread[1] if q2.CZE.fall_spread else '–' }} and does not place it in one season.</li>
+        <li>The Czech count is furthest below the peer median among players aged 21 or under, and skaters aged 20 or under take about half the share of league games at home that they take in the Liiga or the SHL.</li>
+        <li>The counts are the whole published record rather than samples; averaged and modelled quantities carry intervals, and several groups are only a handful of players, so single-season ranks move easily.</li>
+        <li>The atlas describes and does not explain: it identifies no cause, makes no forecast and gives no selection advice, and the KHL, which supplied about a quarter of Czech national-team roster spots, is outside its data.</li>
+      </ul>
+    </details>
+    <dl class="meta-block mono">
+      <div><dt>published</dt><dd>{{ meta.published }} · updated {{ meta.updated }} · <a href="#changes">version {{ meta.version }}</a></dd></div>
+      <div><dt>status</dt><dd>{{ meta.status }}</dd></div>
+      <div><dt>data</dt><dd>NHL, Liiga, SHL, Extraliga (hokej.cz), DEL, National League (SIHF), Eurostat <code>demo_gind</code> and English Wikipedia rosters; snapshot {{ meta.snapshot_date }}, hashes in <code>data/snapshot/SHA256SUMS</code> (sha256 {{ meta.snapshot_sums }}); <a href="methodology/#data-sources">data availability</a></dd></div>
+      <div><dt>code</dt><dd><a href="{{ meta.repo }}">{{ meta.repo_short }}</a>, <code>src/analysis/</code> and <code>src/web/</code>; rebuild: <code>{{ meta.rebuild }}</code></dd></div>
+      <div><dt>cite as</dt><dd>Šandová, B. (2026). <em>{{ meta.title }}</em>. hockey.bsandova.com, version {{ meta.version }}.</dd></div>
+      <div><dt>licence</dt><dd>code MIT; text and figures CC BY 4.0; roster-derived data CC BY-SA 4.0</dd></div>
+    </dl>
   </div>
 </section>
-{% endif %}
+
+<section class="front-question" id="question">
+  <div class="container">
+    <h2>The question and its contribution</h2>
+    <p>Research on athlete development asks how players reach the top of a sport and which of them do. Players born early in the selection year are over-represented in youth sport generally and in hockey in particular {{ ref(['cobley2009', 'nolan2010']) }}, success in youth national squads is followed by adult success for only some athletes {{ ref(['barreiros2014']) }}, world-class athletes tend to have practised several sports before specialising {{ ref(['gullich2022']) }}, and professional hockey moves players across national borders {{ ref(['maguire1996']) }}. Comparative work on national sport systems proposes a framework of policy factors behind international success {{ ref(['debosscher2006']) }}. This atlas tests none of these accounts. Its contribution is a descriptive base for the Czech case: from public league statistics and one definition of nationality, it counts how many Czech players reached the NHL and the four strongest European leagues relative to population, against nine peer nations over {{ q2.CZE.n_seasons }} seasons, and it publishes the counts, their intervals, the player list and the code that rebuilds them.</p>
+  </div>
+</section>
 
 <section class="take" id="take">
   <div class="container">
-    <p class="close-kicker">What to take from it</p>
+    <h2 class="close-kicker">Findings</h2>
     {% for t in take %}
     {% set q = questions[loop.index0] %}
-    <div class="nx-take"><p class="nx-take-n">{{ loop.index }}</p><div><p class="nx-take-head">{{ t.head }}</p>{% for b in t.body %}<p class="nx-take-body">{{ b }}</p>{% endfor %}<p class="nx-take-link"><a href="{{ q.url }}">Read the evidence →</a></p></div></div>
+    <div class="nx-take"><p class="nx-take-n">{{ loop.index }}</p><div><p class="nx-take-head">{{ t.head }}</p>{% for b in t.body %}<p class="nx-take-body">{{ b }}</p>{% endfor %}<p class="nx-take-link"><a href="{{ q.url }}">Question {{ q.n }}: {{ q.label }}</a></p></div></div>
     {% endfor %}
-    <p class="take-line close-links"><a href="methodology/#scope">What is counted</a> · <a href="methodology/#limitations">Limitations</a> · {% if autumn %}<a href="this-autumn/">This autumn</a> · {% endif %}<a href="players/">Every Czech player in the pool</a></p>
+    <p class="take-line close-links"><a href="methodology/#scope">What is counted</a> · <a href="methodology/#limitations">Limitations</a> · <a href="players/">Every Czech player in the pool</a>{% if autumn %} · Note: <a href="this-autumn/">Czech hockey news, {{ autumn.news_as_of }}</a>{% endif %}</p>
   </div>
 </section>
 
-<section class="close" id="close">
+<section class="front-foot" id="cite">
   <div class="container">
-    <p class="close-kicker">What this is for</p>
-    <p class="close-statement">The same measured questions, asked every summer and answered the same way, with the uncertainty on the page — and a name behind every number.</p>
-    <p class="close-links"><a href="players/">Every Czech player in the pool</a> · <a href="#take">What to take from it</a> · <a href="methodology/#limitations">Limitations</a> · <a href="https://football.bsandova.com/">The football atlas</a></p>
+    <h2>How to cite</h2>
+    <p>Šandová, B. (2026). <em>{{ meta.title }}</em>. hockey.bsandova.com, version {{ meta.version }}. <a href="{{ meta.url }}">{{ meta.url }}</a>. Code and data: <a href="{{ meta.repo }}">{{ meta.repo_short }}</a>.</p>
+
+    <h2 id="references">References</h2>
+    <ol class="references">
+      {% for r in refs %}
+      <li id="ref-{{ r.n }}">{{ r.text }} <a href="{{ r.url }}">{{ r.url }}</a>. Accessed {{ r.accessed }}.</li>
+      {% endfor %}
+    </ol>
+    {% set cited_here = ['cobley2009', 'nolan2010', 'barreiros2014', 'gullich2022', 'maguire1996', 'debosscher2006'] %}
+    {% set elsewhere = refs|rejectattr('key', 'in', cited_here)|map(attribute='n')|list %}
+    <p>{% if elsewhere %}References {{ elsewhere[0] }}–{{ elsewhere[-1] }} are cited on the question pages. {% endif %}Data sources, with their access dates and terms, are listed under <a href="methodology/#data-sources">Data availability</a>.</p>
+
+    <h2 id="changes">Change log</h2>
+    <ul class="changelog">
+      <li><span class="mono">29 September 2026</span> Version {{ meta.version }}: editorial pass to the site's editorial standard, with intervals added, a roster-linking correction and the corrected numbers listed in the <a href="methodology/#changes">full change log</a>.</li>
+    </ul>
   </div>
 </section>
 {% endblock %}

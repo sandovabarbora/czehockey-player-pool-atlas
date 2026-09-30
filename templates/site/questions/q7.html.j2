@@ -1,21 +1,39 @@
-{% from "_macros.html.j2" import nation_table with context %}
-<p class="close-kicker">Question 7</p>
-<h1 class="slide-q">Goalkeepers</h1>
-<p class="slide-a">{{ q7.home.nhl }} Czech goalkeepers reached the threshold in the NHL in {{ q7.season }} and {{ q7.home.top5 }} in the NHL plus rung 2: <strong>{{ f2(q7.home.top5_per_million) }} per million</strong>, {{ ordinal(q7.home.rank_top5) }} of {{ q7.n_nations }}, against a peer median of {{ f2(q7.peer_median.top5_per_million) }}.</p>
+{% from "_macros.html.j2" import nation_table, means, does_not_show with context %}
+{% set A = iv.q7 %}
+{% set nt = q7.nt %}
+<p class="close-kicker">Question 7 · Czech hockey atlas · {{ q7.season }} and {{ q7.window_abroad }}</p>
+<h1 class="slide-q">{{ cur.title }}</h1>
+<p class="slide-a">In {{ q7.season }}, {{ q7.home.top5 }} Czech goalkeepers reached the games threshold in the NHL or rung 2, <strong>{{ f2(q7.home.top5_per_million) }} per million</strong>, {{ ordinal(q7.home.rank_top5) }} of {{ q7.n_nations }} against a peer median of {{ f2(q7.peer_median.top5_per_million) }}, and {{ q7.home.nhl }} of them played in the NHL.</p>
 <figure class="figure-bleed" data-chart="q7-bars">
   {{ nation_table(q7.table, 'nhl', 'nhl_per_million', 'NHL goalkeepers') }}
-  <figcaption>How to read it: as in question 1, for goalkeepers with at least the pro-rated games threshold in {{ q7.season }}. Czechia is {{ ordinal(q7.rank_nhl) }} in the NHL at {{ f2(q7.home.nhl_per_million) }} per million (peer median {{ f2(q7.peer_median.nhl_per_million) }}).</figcaption>
+  <figcaption><strong>Figure 1.</strong> Goalkeepers who reached the pro-rated games threshold in {{ q7.season }}, per million inhabitants, by nation (administrative counts). How to read it: as in question 1. Czechia is {{ ordinal(q7.rank_nhl) }} in the NHL at {{ f2(q7.home.nhl_per_million) }} per million (peer median {{ f2(q7.peer_median.nhl_per_million) }}); most nations have between zero and a few goalkeepers, so one goalkeeper moves a rank.</figcaption>
 </figure>
 <figure class="figure-bleed" data-chart="q7-series">
   <table class="fig-table">
     <thead><tr><th scope="col">Season</th><th scope="col" class="num">Czech NHL goalkeepers</th></tr></thead>
     <tbody>{% for s, n in q7.home_series %}<tr><td>{{ s }}</td><td class="num">{{ n if n is not none else 'lockout' }}</td></tr>{% endfor %}</tbody>
   </table>
-  <figcaption>How to read it: qualifying NHL goalkeepers per nation, season by season. The Czech count is {{ q7.series_latest }} in {{ q7.season }}{% if q7.series_is_max %}, as many as in any season since 1995/96{% else %}; the most was {{ q7.series_max }}{% endif %}.</figcaption>
+  <figcaption><strong>Figure 2.</strong> Qualifying NHL goalkeepers per nation and season, 1995/96–{{ q7.season }} (administrative counts). How to read it: the Czech count is {{ q7.series_latest }} in {{ q7.season }}{% if q7.series_is_max %}, as many as in any season since 1995/96{% else %}; the most was {{ q7.series_max }}{% endif %}.</figcaption>
 </figure>
-<details class="fold slide-method" open>
-  <summary>How we know</summary>
-  <p class="slide-did"><span class="slide-did-label">Abroad</span> Czech goalkeepers' save percentage against the league-season median, {{ q7.window_abroad }}: NHL {{ '%+.1f'|format(q7.abroad.NHL.median_save_pct_minus_median * 100) }} points ({{ q7.abroad.NHL.goalies }} goalkeepers), Liiga {{ '%+.1f'|format(q7.abroad.Liiga.median_save_pct_minus_median * 100) }} ({{ q7.abroad.Liiga.goalies }}), SHL {{ '%+.1f'|format(q7.abroad.SHL.median_save_pct_minus_median * 100) }} ({{ q7.abroad.SHL.goalies }}). Small numbers: read them as descriptive.</p>
-  <p class="slide-did"><span class="slide-did-label">Young goalkeepers at home</span> Goalkeepers aged 23 or less play {{ pct(q7.youth.Extraliga) }} of Extraliga goalkeeper games, against {{ pct(q7.youth.Liiga) }} in the Liiga and {{ pct(q7.youth.SHL) }} in the SHL ({{ q4.window }}). Czech goalkeepers played {{ pct0(q7.extraliga_home_share) }} of Extraliga goalkeeper games in {{ q7.season }}.</p>
-  <p class="slide-how"><span class="slide-how-label">National team</span> Of {{ q7.nt.roster_spots }} goalkeeper roster spots since 2010, {{ q7.nt.by_category['1'] }} went to NHL goalkeepers, {{ q7.nt.by_category.khl }} to KHL goalkeepers, {{ q7.nt.by_category.home }} to Extraliga goalkeepers and {{ q7.nt.by_category['2'] }} to rung 2.</p>
-</details>
+<section class="q-evidence" aria-labelledby="q7-evidence">
+  <h2 class="q-sub" id="q7-evidence">Evidence</h2>
+  <table class="fig-table">
+    <caption>Czech goalkeepers' save percentage minus the league-season median, {{ q7.window_abroad }}, in percentage points (median over goalkeeper-seasons)</caption>
+    <thead><tr><th scope="col">League</th><th scope="col" class="num">goalkeepers</th><th scope="col" class="num">goalkeeper-seasons</th><th scope="col" class="num">median difference</th><th scope="col" class="num">95 % bootstrap interval by goalkeeper</th></tr></thead>
+    <tbody>
+    {% for lg in ['NHL', 'Liiga', 'SHL', 'NL'] %}{% set x = A[lg] %}
+      {% if x %}<tr><td>{{ lg }}</td><td class="num">{{ x.clusters }}</td><td class="num">{{ x.rows }}</td><td class="num">{{ signed(x.median * 100, 2) }} pp</td><td class="num">{% if x.clusters >= 5 %}{{ signed(x.lo * 100, 2) }} to {{ signed(x.hi * 100, 2) }} pp{% else %}too few goalkeepers{% endif %}</td></tr>{% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="slide-did"><span class="slide-did-label">Abroad</span> Every league with a Czech goalkeeper who reached the threshold is shown. An interval is given only where at least five goalkeepers contribute; with two or three goalkeepers the median is a description of those few players. Save percentage is saves divided by saves plus goals against, and the difference is in percentage points (pp).</p>
+  <p class="slide-did"><span class="slide-did-label">Young goalkeepers at home</span> Goalkeepers aged 23 or under (a wider band than the skaters' 20 or under in question 4, set for goalkeepers in this atlas; the 20-or-under shares are in <code>outputs/q7_goalkeepers.json</code>) {% set Y = iv.q7_youth %}play {{ pct(q7.youth.Extraliga) }} of Extraliga goalkeeper games (95 % bootstrap interval by season {{ pct(Y.Extraliga.lo) }}–{{ pct(Y.Extraliga.hi) }}), against {{ pct(q7.youth.Liiga) }} ({{ pct(Y.Liiga.lo) }}–{{ pct(Y.Liiga.hi) }}) in the Liiga and {{ pct(q7.youth.SHL) }} ({{ pct(Y.SHL.lo) }}–{{ pct(Y.SHL.hi) }}) in the SHL (unweighted means of {{ Y.Extraliga.seasons }} seasons, {{ q4.window }}). Czech goalkeepers played {{ pct0(q7.extraliga_home_share) }} of Extraliga goalkeeper games in {{ q7.season }}.</p>
+  <p class="slide-how"><span class="slide-how-label">National team</span> Of {{ nt.roster_spots }} goalkeeper roster spots since 2010, {{ nt.by_category['1'] }} went to NHL goalkeepers, {{ nt.by_category.khl }} to KHL goalkeepers, {{ nt.by_category.home }} to Extraliga goalkeepers, {{ nt.by_category['2'] }} to rung 2 and {{ nt.by_category.get('other', 0) }} to other leagues.</p>
+</section>
+{% call means() %}
+{% set shown = A.values()|select|list %}
+<p>Relative to population, Czechia had {{ 'more' if q7.home.top5_per_million > q7.peer_median.top5_per_million else 'fewer' }} goalkeepers in the NHL and rung 2 in {{ q7.season }} than the median peer, from counts of a few goalkeepers per nation. Abroad, the Czech goalkeepers' median save percentages differ from their league medians by between {{ signed((shown|map(attribute='median')|min) * 100, 2) }} and {{ signed((shown|map(attribute='median')|max) * 100, 2) }} percentage points, from at most {{ shown|map(attribute='clusters')|max }} goalkeepers per league. These are descriptions of small groups of named players; they do not rank goalkeepers or nations by quality.</p>
+{% endcall %}
+{% call does_not_show() %}
+<li>Goalkeeper quality adjusted for shot quality or team defence; save percentage is the only measure used.</li>
+{% endcall %}

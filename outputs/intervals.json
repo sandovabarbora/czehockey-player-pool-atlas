@@ -1,0 +1,716 @@
+{
+ "meta": {
+  "inputs": {
+   "del_goalies.parquet": "85afcda9b8f8c849800e89086001ebcc7433cd7de6c1e299d82f555801463213",
+   "del_skaters.parquet": "6e8bc872969e5e43e2831abb922d64fca3460db9649ce93f2fcf9cc0fa32a36f",
+   "extraliga_goalies.parquet": "1607e0d36b2852b849a830217a68259802728863163e3ff35cfbfb61a6727b07",
+   "extraliga_skaters.parquet": "7c372c4989dc3af8c6ad044bcbd77626bc3e31347fb6ee5436aecc2698b856ed",
+   "liiga_goalies.parquet": "e7ab79b3f65a225a8d8e9884a3d60446bfc1e354756332811c01cf03975ea3c6",
+   "liiga_skaters.parquet": "141c75ceede7edfa9cacc55f6e1ca71217c04bbd8300e5bbcd6a0c8756cb1ae1",
+   "nhl_goalies.parquet": "a16be42c492ab8be86eeaa1e63433cbdc9a4d7b699acfdb0dc8aeb306b6bff64",
+   "nhl_skaters.parquet": "d42f3feb41ae5238ab6ad3f3cadfc5889109839fcbc529ef5311701b7da05fc9",
+   "nl_goalies.parquet": "1cbc7d9b50e2d9dbf5e3f6c242a34bd624268eff6b02ee6cbd97897b3d2e1512",
+   "nl_skaters.parquet": "1497f2e2740caba1d4d47cea0ed1cf56ade5647dc99197204de39340a6293c60",
+   "population.parquet": "4f546a213389b432a165753b4d58411a1cedcb8274fc5dc815e61436a7c5ce05",
+   "rosters.parquet": "566d51646bf864e718fa4e5634dd4b013d3099aa05ff4997d16a67a63e338752",
+   "shl_goalies.parquet": "397a50791cebbf0fc8cd2d5f4f68774452e8b313a6c0b3705d6f0b2356cd1aac",
+   "shl_skaters.parquet": "0744828aed80a1c2bdf52f05924d3700fc7d5639be402ddd8c600c67edc4a819"
+  }
+ },
+ "definitions": {
+  "bootstrap": "95% percentile interval, 10000 resamples, seed 20260929",
+  "reps": 10000,
+  "seed": 20260929,
+  "q3": "peer range: min and max per million over the peers in each median; u21_by_season: the Czech ≤21 cells for each season, computed as q3_cohort_gaps",
+  "q4": "mean of the measured seasonal shares; interval from resampling seasons; ratio_to_home resamples the same seasons for both leagues",
+  "q5": "median of Czech player-season ratios; interval from resampling players",
+  "q6": "mean over tournaments of the roster share; to_2022 is 2010-2022, from_2023 is 2023-2026",
+  "q7": "median of Czech goalkeeper-season save % minus the league-season median; interval from resampling goalkeepers",
+  "q5_positions": "as q5, for forwards and defencemen in the Liiga and the SHL",
+  "q7_youth": "mean of the seasonal 23-or-under shares of goalkeeper games; interval from resampling seasons"
+ },
+ "q3": {
+  "peer_range": [
+   {
+    "position": "D",
+    "age_band": "22–25",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 7.42984,
+    "peers_at_zero": 3
+   },
+   {
+    "position": "D",
+    "age_band": "26–29",
+    "peers": 7,
+    "peer_min": 0.108507,
+    "peer_max": 6.014632,
+    "peers_at_zero": 0
+   },
+   {
+    "position": "D",
+    "age_band": "30+",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 6.722236,
+    "peers_at_zero": 4
+   },
+   {
+    "position": "D",
+    "age_band": "unknown",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 0.0,
+    "peers_at_zero": 7
+   },
+   {
+    "position": "D",
+    "age_band": "≤21",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 3.71492,
+    "peers_at_zero": 3
+   },
+   {
+    "position": "F",
+    "age_band": "22–25",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 13.975175,
+    "peers_at_zero": 1
+   },
+   {
+    "position": "F",
+    "age_band": "26–29",
+    "peers": 7,
+    "peer_min": 0.108507,
+    "peer_max": 11.14476,
+    "peers_at_zero": 0
+   },
+   {
+    "position": "F",
+    "age_band": "30+",
+    "peers": 7,
+    "peer_min": 0.108507,
+    "peer_max": 10.437156,
+    "peers_at_zero": 0
+   },
+   {
+    "position": "F",
+    "age_band": "unknown",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 0.09429,
+    "peers_at_zero": 6
+   },
+   {
+    "position": "F",
+    "age_band": "≤21",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 10.260255,
+    "peers_at_zero": 2
+   },
+   {
+    "position": "G",
+    "age_band": "22–25",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 0.884505,
+    "peers_at_zero": 3
+   },
+   {
+    "position": "G",
+    "age_band": "26–29",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 1.415208,
+    "peers_at_zero": 3
+   },
+   {
+    "position": "G",
+    "age_band": "30+",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 1.94591,
+    "peers_at_zero": 1
+   },
+   {
+    "position": "G",
+    "age_band": "unknown",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 0.353802,
+    "peers_at_zero": 5
+   },
+   {
+    "position": "G",
+    "age_band": "≤21",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 1.061406,
+    "peers_at_zero": 5
+   },
+   {
+    "position": "unknown",
+    "age_band": "22–25",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 0.565743,
+    "peers_at_zero": 5
+   },
+   {
+    "position": "unknown",
+    "age_band": "26–29",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 0.377162,
+    "peers_at_zero": 5
+   },
+   {
+    "position": "unknown",
+    "age_band": "30+",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 0.942904,
+    "peers_at_zero": 6
+   },
+   {
+    "position": "unknown",
+    "age_band": "≤21",
+    "peers": 7,
+    "peer_min": 0.0,
+    "peer_max": 1.602937,
+    "peers_at_zero": 4
+   }
+  ],
+  "u21_by_season": [
+   {
+    "season": "2020/21",
+    "position": "D",
+    "count": 1,
+    "peer_median": 0.0,
+    "peers": 7,
+    "shortfall": -1.0
+   },
+   {
+    "season": "2020/21",
+    "position": "F",
+    "count": 5,
+    "peer_median": 0.183158,
+    "peers": 7,
+    "shortfall": -3.077792
+   },
+   {
+    "season": "2021/22",
+    "position": "D",
+    "count": 2,
+    "peer_median": 0.266559,
+    "peers": 6,
+    "shortfall": 0.803323
+   },
+   {
+    "season": "2021/22",
+    "position": "F",
+    "count": 3,
+    "peer_median": 0.450561,
+    "peers": 6,
+    "shortfall": 1.738423
+   },
+   {
+    "season": "2022/23",
+    "position": "D",
+    "count": 0,
+    "peer_median": 0.109833,
+    "peers": 6,
+    "shortfall": 1.189215
+   },
+   {
+    "season": "2022/23",
+    "position": "F",
+    "count": 2,
+    "peer_median": 0.35592,
+    "peers": 6,
+    "shortfall": 1.853739
+   },
+   {
+    "season": "2023/24",
+    "position": "D",
+    "count": 1,
+    "peer_median": 0.180174,
+    "peers": 7,
+    "shortfall": 0.963992
+   },
+   {
+    "season": "2023/24",
+    "position": "F",
+    "count": 0,
+    "peer_median": 0.360347,
+    "peers": 7,
+    "shortfall": 3.927984
+   },
+   {
+    "season": "2024/25",
+    "position": "D",
+    "count": 0,
+    "peer_median": 0.0,
+    "peers": 7,
+    "shortfall": 0.0
+   },
+   {
+    "season": "2024/25",
+    "position": "F",
+    "count": 4,
+    "peer_median": 0.217457,
+    "peers": 7,
+    "shortfall": -1.627651
+   },
+   {
+    "season": "2025/26",
+    "position": "D",
+    "count": 0,
+    "peer_median": 0.184863,
+    "peers": 7,
+    "shortfall": 2.017936
+   },
+   {
+    "season": "2025/26",
+    "position": "F",
+    "count": 0,
+    "peer_median": 0.554589,
+    "peers": 7,
+    "shortfall": 6.053809
+   }
+  ]
+ },
+ "q4": {
+  "leagues": {
+   "Extraliga": {
+    "games": {
+     "mean": 0.079468,
+     "lo": 0.070406,
+     "hi": 0.088458,
+     "min": 0.055421,
+     "max": 0.105104,
+     "seasons": 12
+    },
+    "toi": {
+     "mean": 0.054705,
+     "lo": 0.047951,
+     "hi": 0.061325,
+     "min": 0.035831,
+     "max": 0.077743,
+     "seasons": 12
+    },
+    "min_season": {
+     "games": "2023/24",
+     "toi": "2023/24"
+    },
+    "max_season": {
+     "games": "2020/21",
+     "toi": "2020/21"
+    }
+   },
+   "Liiga": {
+    "games": {
+     "mean": 0.142897,
+     "lo": 0.129348,
+     "hi": 0.157559,
+     "min": 0.102335,
+     "max": 0.1925,
+     "seasons": 12
+    },
+    "toi": {
+     "mean": 0.11913,
+     "lo": 0.106623,
+     "hi": 0.132788,
+     "min": 0.083718,
+     "max": 0.166148,
+     "seasons": 12
+    },
+    "min_season": {
+     "games": "2024/25",
+     "toi": "2024/25"
+    },
+    "max_season": {
+     "games": "2020/21",
+     "toi": "2020/21"
+    }
+   },
+   "SHL": {
+    "games": {
+     "mean": 0.16678,
+     "lo": 0.155147,
+     "hi": 0.178629,
+     "min": 0.134898,
+     "max": 0.202924,
+     "seasons": 12
+    },
+    "toi": {
+     "mean": 0.113898,
+     "lo": 0.102899,
+     "hi": 0.125402,
+     "min": 0.088294,
+     "max": 0.146884,
+     "seasons": 12
+    },
+    "min_season": {
+     "games": "2019/20",
+     "toi": "2022/23"
+    },
+    "max_season": {
+     "games": "2016/17",
+     "toi": "2014/15"
+    }
+   }
+  },
+  "ratio_to_home": {
+   "Liiga": {
+    "games": {
+     "ratio": 0.55612,
+     "lo": 0.497145,
+     "hi": 0.625064
+    },
+    "toi": {
+     "ratio": 0.4592,
+     "lo": 0.410446,
+     "hi": 0.512757
+    }
+   },
+   "SHL": {
+    "games": {
+     "ratio": 0.476481,
+     "lo": 0.440572,
+     "hi": 0.5103
+    },
+    "toi": {
+     "ratio": 0.480293,
+     "lo": 0.438229,
+     "hi": 0.52519
+    }
+   }
+  }
+ },
+ "q5": {
+  "NHL": {
+   "toi": {
+    "median": 0.982448,
+    "lo": 0.897898,
+    "hi": 1.108207,
+    "clusters": 35,
+    "rows": 111
+   },
+   "ppg": {
+    "median": 0.86526,
+    "lo": 0.679426,
+    "hi": 1.422222,
+    "clusters": 35,
+    "rows": 111
+   }
+  },
+  "Liiga": {
+   "toi": {
+    "median": 1.08665,
+    "lo": 1.043651,
+    "hi": 1.138011,
+    "clusters": 40,
+    "rows": 72
+   },
+   "ppg": {
+    "median": 1.402941,
+    "lo": 1.230769,
+    "hi": 1.542728,
+    "clusters": 40,
+    "rows": 72
+   }
+  },
+  "SHL": {
+   "toi": {
+    "median": 1.075325,
+    "lo": 0.975157,
+    "hi": 1.180515,
+    "clusters": 21,
+    "rows": 39
+   },
+   "ppg": {
+    "median": 1.3,
+    "lo": 0.985423,
+    "hi": 1.589744,
+    "clusters": 21,
+    "rows": 39
+   }
+  },
+  "NHL_by_position": {
+   "F": {
+    "toi": {
+     "median": 1.003497,
+     "lo": 0.912057,
+     "hi": 1.153247,
+     "clusters": 26,
+     "rows": 84
+    },
+    "ppg": {
+     "median": 1.01385,
+     "lo": 0.630303,
+     "hi": 1.647776,
+     "clusters": 26,
+     "rows": 84
+    }
+   },
+   "D": {
+    "toi": {
+     "median": 0.905435,
+     "lo": 0.76267,
+     "hi": 1.146134,
+     "clusters": 9,
+     "rows": 27
+    },
+    "ppg": {
+     "median": 0.831757,
+     "lo": 0.558645,
+     "hi": 1.710908,
+     "clusters": 9,
+     "rows": 27
+    }
+   }
+  }
+ },
+ "q5_group_n": {
+  "Liiga|2020/21|D": 142,
+  "Liiga|2020/21|F": 236,
+  "Liiga|2021/22|D": 136,
+  "Liiga|2021/22|F": 235,
+  "Liiga|2022/23|D": 131,
+  "Liiga|2022/23|F": 237,
+  "Liiga|2023/24|D": 134,
+  "Liiga|2023/24|F": 230,
+  "Liiga|2024/25|D": 143,
+  "Liiga|2024/25|F": 247,
+  "Liiga|2025/26|D": 141,
+  "Liiga|2025/26|F": 257,
+  "NHL|2020/21|D": 233,
+  "NHL|2020/21|F": 455,
+  "NHL|2021/22|D": 242,
+  "NHL|2021/22|F": 481,
+  "NHL|2022/23|D": 235,
+  "NHL|2022/23|F": 461,
+  "NHL|2023/24|D": 252,
+  "NHL|2023/24|F": 469,
+  "NHL|2024/25|D": 242,
+  "NHL|2024/25|F": 456,
+  "NHL|2025/26|D": 239,
+  "NHL|2025/26|F": 476,
+  "SHL|2020/21|D": 110,
+  "SHL|2020/21|F": 171,
+  "SHL|2021/22|D": 102,
+  "SHL|2021/22|F": 169,
+  "SHL|2022/23|D": 101,
+  "SHL|2022/23|F": 172,
+  "SHL|2023/24|D": 102,
+  "SHL|2023/24|F": 171,
+  "SHL|2024/25|D": 105,
+  "SHL|2024/25|F": 175,
+  "SHL|2025/26|D": 109,
+  "SHL|2025/26|F": 181
+ },
+ "q6": {
+  "all": {
+   "events": 21,
+   "first": 2010,
+   "last": 2026,
+   "shares": {
+    "1": 0.306136,
+    "2": 0.133279,
+    "home": 0.279039,
+    "khl": 0.249876,
+    "other": 0.03167,
+    "unknown": 0.0
+   }
+  },
+  "to_2022": {
+   "events": 16,
+   "first": 2010,
+   "last": 2022,
+   "shares": {
+    "1": 0.309371,
+    "2": 0.109494,
+    "home": 0.230673,
+    "khl": 0.327962,
+    "other": 0.0225,
+    "unknown": 0.0
+   }
+  },
+  "from_2023": {
+   "events": 5,
+   "first": 2023,
+   "last": 2026,
+   "shares": {
+    "1": 0.295783,
+    "2": 0.20939,
+    "home": 0.433812,
+    "khl": 0.0,
+    "other": 0.061014,
+    "unknown": 0.0
+   }
+  },
+  "without_2018_2022_olympics": {
+   "events": 19,
+   "first": 2010,
+   "last": 2026,
+   "shares": {
+    "1": 0.338361,
+    "2": 0.123449,
+    "home": 0.282798,
+    "khl": 0.220389,
+    "other": 0.035004,
+    "unknown": 0.0
+   }
+  },
+  "no_nhl_events": [
+   {
+    "event": "OG",
+    "year": 2018
+   },
+   {
+    "event": "OG",
+    "year": 2022
+   }
+  ],
+  "home_basis": {
+   "nhl_career": 233,
+   "league_row": 110,
+   "khl_club": 106,
+   "club_league": 73,
+   "club_country": 5,
+   "team_name": 2
+  },
+  "home_rows": 529,
+  "home_unknown": 0
+ },
+ "q7": {
+  "NHL": {
+   "median": -0.003072,
+   "lo": -0.007707,
+   "hi": -0.000348,
+   "clusters": 8,
+   "rows": 30
+  },
+  "Liiga": {
+   "median": 0.010647,
+   "lo": -0.000654,
+   "hi": 0.015272,
+   "clusters": 7,
+   "rows": 16
+  },
+  "SHL": {
+   "median": -0.005604,
+   "lo": -0.008162,
+   "hi": 0.0,
+   "clusters": 3,
+   "rows": 5
+  },
+  "NL": {
+   "median": 0.014368,
+   "lo": 0.013223,
+   "hi": 0.015122,
+   "clusters": 2,
+   "rows": 5
+  }
+ },
+ "q5_positions": {
+  "Liiga": {
+   "F": {
+    "toi": {
+     "median": 1.077795,
+     "lo": 1.039931,
+     "hi": 1.15717,
+     "clusters": 19,
+     "rows": 38
+    },
+    "ppg": {
+     "median": 1.527988,
+     "lo": 1.3454,
+     "hi": 1.798246,
+     "clusters": 19,
+     "rows": 38
+    }
+   },
+   "D": {
+    "toi": {
+     "median": 1.08665,
+     "lo": 1.028516,
+     "hi": 1.157426,
+     "clusters": 21,
+     "rows": 34
+    },
+    "ppg": {
+     "median": 1.190113,
+     "lo": 1.0,
+     "hi": 1.45352,
+     "clusters": 21,
+     "rows": 34
+    }
+   }
+  },
+  "SHL": {
+   "F": {
+    "toi": {
+     "median": 1.130113,
+     "lo": 1.040769,
+     "hi": 1.20565,
+     "clusters": 14,
+     "rows": 28
+    },
+    "ppg": {
+     "median": 1.498066,
+     "lo": 1.063725,
+     "hi": 1.713889,
+     "clusters": 14,
+     "rows": 28
+    }
+   },
+   "D": {
+    "toi": {
+     "median": 0.938429,
+     "lo": 0.627602,
+     "hi": 1.0394,
+     "clusters": 7,
+     "rows": 11
+    },
+    "ppg": {
+     "median": 0.985423,
+     "lo": 0.484848,
+     "hi": 1.538462,
+     "clusters": 7,
+     "rows": 11
+    }
+   }
+  }
+ },
+ "q7_youth": {
+  "Extraliga": {
+   "mean": 0.209905,
+   "lo": 0.161893,
+   "hi": 0.259255,
+   "min": 0.070603,
+   "max": 0.383005,
+   "seasons": 12
+  },
+  "Liiga": {
+   "mean": 0.373804,
+   "lo": 0.350239,
+   "hi": 0.399133,
+   "min": 0.310273,
+   "max": 0.460497,
+   "seasons": 12
+  },
+  "SHL": {
+   "mean": 0.208598,
+   "lo": 0.16489,
+   "hi": 0.260089,
+   "min": 0.126743,
+   "max": 0.405707,
+   "seasons": 12
+  }
+ }
+}

@@ -30,7 +30,7 @@ def blocks(html: str) -> set[str]:
     out = set()
     for el in soup.find_all(BLOCKS):
         text = re.sub(r"\s+", " ", el.get_text(" ")).strip()
-        text = re.sub(r"Built \d{4}-\d{2}-\d{2}", "Built", text)
+        text = re.sub(r"Built (\d{4}-\d{2}-\d{2}|\d{1,2} \w+ \d{4})", "Built", text)
         if text:
             out.add(text)
     return out

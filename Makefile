@@ -8,7 +8,7 @@ ACT    := source $(VENV)/bin/activate &&
 
 help:
 	@echo "Targets:"
-	@echo "  install          Create .venv, install deps with uv (or pip fallback)"
+	@echo "  install          Create .venv from uv.lock with uv sync (or pip fallback)"
 	@echo "  install-browsers Install Playwright browsers (Chromium only)"
 	@echo "  fetch            Run all fetchers (NHL, MoneyPuck, Liiga, SHL, NL, Extraliga, IIHF)"
 	@echo "  fetch-nhl        NHL skaters, goalies and careers 1995/96-2025/26 -> data/snapshot/"
@@ -32,7 +32,7 @@ help:
 
 install:
 	@if command -v uv >/dev/null 2>&1; then \
-		uv venv $(VENV) && uv pip install -e ".[dev]"; \
+		UV_PROJECT_ENVIRONMENT=$(VENV) uv sync --extra dev; \
 	else \
 		$(PYTHON) -m venv $(VENV) && $(ACT) pip install -e ".[dev]"; \
 	fi

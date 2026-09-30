@@ -1,22 +1,38 @@
-{% from "_macros.html.j2" import nation_table with context %}
+{% from "_macros.html.j2" import nation_table, means, does_not_show, ref with context %}
 {% set h = q1.home %}
-<p class="close-kicker">Question 1</p>
-<h1 class="slide-q">Is the Czech pool thin?</h1>
-<p class="slide-a">Not per head. Czechia ranks <strong>{{ ordinal(h.rank_nhl) }} of {{ q1.n_nations }}</strong> for NHL players at {{ f2(h.nhl_per_million) }} per million, {{ q1.nhl_vs_median_word }} the peer median of {{ f2(q1.peer_median.nhl_per_million) }}; {{ q1.top_nhl.name }} leads at {{ f2(q1.top_nhl.nhl_per_million) }}.</p>
+{% set by_nhl = q1.table|sort(attribute='rank_nhl') %}
+<p class="close-kicker">Question 1 · Czech hockey atlas · {{ q1.season }}</p>
+<h1 class="slide-q">{{ cur.title }}</h1>
+<p class="slide-a">In {{ q1.season }}, {{ h.nhl }} Czech players reached the games threshold in the NHL, <strong>{{ f2(h.nhl_per_million) }} per million inhabitants</strong>, which ranks Czechia {{ ordinal(h.rank_nhl) }} of {{ q1.n_nations }} nations and {{ q1.nhl_vs_median_word }} the median of the nine peers ({{ f2(q1.peer_median.nhl_per_million) }}); with the four rung-2 leagues added, {{ h.top5 }} players, {{ f2(h.top5_per_million) }} per million, rank {{ ordinal(h.rank_top5) }}.</p>
 <figure class="figure-bleed" data-chart="q1-bars">
   {{ nation_table(q1.table, 'nhl', 'nhl_per_million', 'NHL players') }}
-  <figcaption>How to read it: one bar per nation, players with at least the games threshold in {{ q1.season }} divided by the population in millions; the dashed line is the median of the nine peers. Switch to "NHL + rung 2" to add the SHL, Liiga, National League and DEL: Czechia has {{ h.top5 }} players there, {{ f2(h.top5_per_million) }} per million, {{ ordinal(h.rank_top5) }} of {{ q1.n_nations }} (peer median {{ f2(q1.peer_median.top5_per_million) }}).</figcaption>
+  <figcaption><strong>Figure 1.</strong> Players who reached the games threshold in {{ q1.season }}, per million inhabitants, by nation (administrative counts; population: Eurostat, 1 January of the season's second year; league data snapshot {{ meta.snapshot_date }}). How to read it: one bar per nation; the dashed line is the median of the nine peers. The switch "NHL + rung 2" adds the SHL, Liiga, National League and DEL: Czechia has {{ h.top5 }} players there, {{ f2(h.top5_per_million) }} per million, {{ ordinal(h.rank_top5) }} of {{ q1.n_nations }} (peer median {{ f2(q1.peer_median.top5_per_million) }}).</figcaption>
 </figure>
 <figure class="figure-bleed" data-chart="q1-series">
   <table class="fig-table">
     <thead><tr><th scope="col">Season</th><th scope="col" class="num">Czech NHL players</th></tr></thead>
     <tbody>{% for r in q1.home_series %}<tr><td>{{ r.season }}</td><td class="num">{{ r.n if r.n is not none else 'lockout' }}</td></tr>{% endfor %}</tbody>
   </table>
-  <figcaption>How to read it: each line is a nation's count per million, season by season; Czechia is the blue line, the two peers picked in the chips are ink and grey. The NHL series starts in {{ q1.first_season }} with {{ q1.first_n }} Czech players, rises to {{ q1.peak.n }} in {{ q1.peak.season }} and falls to {{ q1.peak.latest.n }} in {{ q1.peak.latest.season }}; 2004/05 was not played. The rung 1 + 2 series starts in {{ q1.top5_first_season }}; seasons before {{ q1.complete_first }} are shaded because the DEL did not publish nationality, so they are lower bounds.</figcaption>
+  <figcaption><strong>Figure 2.</strong> Players per million who reached the games threshold, by nation and season, {{ q1.first_season }}–{{ q1.season }} (administrative counts). How to read it: Czechia is the blue line, the two peers picked in the chips are ink and grey. The Czech NHL count is {{ q1.first_n }} in {{ q1.first_season }}, {{ q1.peak.n }} at its peak in {{ q1.peak.season }} and {{ q1.peak.latest.n }} in {{ q1.peak.latest.season }}; 2004/05 was not played. The NHL grew from 26 teams to 30 between 1998/99 and 2000/01, to 31 in 2017/18 and to 32 in 2021/22 {{ ref(['nhl_timeline'], prefix ~ 'methodology/') }}, so the number of roster places is not constant over the series. The rung 1 + 2 series starts in {{ q1.top5_first_season }}; seasons before {{ q1.complete_first }} are shaded because the DEL did not publish nationality, so they are lower bounds.</figcaption>
 </figure>
-<details class="fold slide-method" open>
-  <summary>How we know</summary>
-  <p class="slide-did"><span class="slide-did-label">What we did</span> For each nation and season we counted the distinct players of that nationality who reached the games threshold in the NHL (or in any of the five leagues), then divided by the population. The threshold is {{ q1.threshold_def }}: 20 games in a full NHL season, fewer in the short 2012/13 and 2020/21 seasons and in shorter European schedules.</p>
-  <p class="slide-did"><span class="slide-did-label">Sensitivity</span> Counting any game at all, Czechia has {{ q1.sens_any.nhl }} NHL players ({{ f2(q1.sens_any.nhl_per_million) }} per million, {{ ordinal(q1.sens_any.rank_nhl) }}) and {{ q1.sens_any.top5 }} in the five leagues ({{ ordinal(q1.sens_any.rank_top5) }}). With a flat 20 games everywhere, {{ q1.sens_fixed.nhl }} and {{ q1.sens_fixed.top5 }} ({{ ordinal(q1.sens_fixed.rank_top5) }}).</p>
-  <p class="slide-how"><span class="slide-how-label">Coverage</span> In {{ q1.season }} every qualifying NHL, Liiga and DEL player has a nationality; the National League has {{ q1.coverage.NL.unidentified }} of {{ q1.coverage.NL.qualifying }} unidentified (foreign licences with no match), the SHL {{ q1.coverage.SHL.unidentified }} of {{ q1.coverage.SHL.qualifying }}. Only {{ q1.n_complete }} seasons of the rung 1 + 2 series ({{ q1.complete_first }}–{{ q1.complete_last }}) have every rung-2 league at least 90% identified.</p>
-</details>
+<section class="q-evidence" aria-labelledby="q1-evidence">
+  <h2 class="q-sub" id="q1-evidence">Evidence</h2>
+  <p class="slide-did"><span class="slide-did-label">What was counted</span> For each nation and season, the distinct players of that nationality who reached the games threshold in the NHL (or in any of the five leagues), divided by the population. The threshold is {{ q1.threshold_def }}: 20 games in a full NHL season, fewer in the short 2012/13 and 2020/21 seasons and in shorter European schedules. The counts are the whole published record, not a sample, so they carry no sampling interval; the effective n is the ten nations, and a rank moves with a few players: {{ by_nhl[2].name }} is {{ ordinal(by_nhl[2].rank_nhl) }} on {{ by_nhl[2].nhl }} NHL players.</p>
+  <table class="fig-table robustness">
+    <caption>Czech counts and ranks under three games thresholds, {{ q1.season }} (administrative counts; ten nations)</caption>
+    <thead><tr><th scope="col">Threshold</th><th scope="col" class="num">NHL players</th><th scope="col" class="num">per million</th><th scope="col" class="num">rank</th><th scope="col" class="num">NHL + rung 2</th><th scope="col" class="num">per million</th><th scope="col" class="num">rank</th></tr></thead>
+    <tbody>
+      <tr><td>Pro-rated (headline)</td><td class="num">{{ h.nhl }}</td><td class="num">{{ f2(h.nhl_per_million) }}</td><td class="num">{{ ordinal(h.rank_nhl) }}</td><td class="num">{{ h.top5 }}</td><td class="num">{{ f2(h.top5_per_million) }}</td><td class="num">{{ ordinal(h.rank_top5) }}</td></tr>
+      <tr><td>Any game</td><td class="num">{{ q1.sens_any.nhl }}</td><td class="num">{{ f2(q1.sens_any.nhl_per_million) }}</td><td class="num">{{ ordinal(q1.sens_any.rank_nhl) }}</td><td class="num">{{ q1.sens_any.top5 }}</td><td class="num">{{ f2(q1.sens_any.top5_per_million) }}</td><td class="num">{{ ordinal(q1.sens_any.rank_top5) }}</td></tr>
+      <tr><td>Flat 20 games</td><td class="num">{{ q1.sens_fixed.nhl }}</td><td class="num">{{ f2(q1.sens_fixed.nhl_per_million) }}</td><td class="num">{{ ordinal(q1.sens_fixed.rank_nhl) }}</td><td class="num">{{ q1.sens_fixed.top5 }}</td><td class="num">{{ f2(q1.sens_fixed.top5_per_million) }}</td><td class="num">{{ ordinal(q1.sens_fixed.rank_top5) }}</td></tr>
+    </tbody>
+  </table>
+  <p class="slide-how"><span class="slide-how-label">Denominator</span> Total population (Eurostat) is published the same way for all ten nations and every season; registered players are not, so the rate measures output relative to a nation's size, not to its hockey base.</p>
+  <p class="slide-how"><span class="slide-how-label">Coverage</span> In {{ q1.season }} every qualifying NHL, Liiga and DEL player has a nationality; the National League has {{ q1.coverage.NL.unidentified }} of {{ q1.coverage.NL.qualifying }} unidentified (foreign licences with no match), the SHL {{ q1.coverage.SHL.unidentified }} of {{ q1.coverage.SHL.qualifying }}. Only {{ q1.n_complete }} seasons of the rung 1 + 2 series ({{ q1.complete_first }}–{{ q1.complete_last }}) have every rung-2 league at least 90 % identified.</p>
+</section>
+{% call means() %}
+<p>Relative to population, the number of Czech players in the NHL in {{ q1.season }} puts Czechia {{ ordinal(h.rank_nhl) }} of {{ q1.n_nations }}, {{ q1.nhl_vs_median_word }} the middle of the peers and well below {{ q1.leaders_nhl[0].name }} and {{ q1.leaders_nhl[1].name }}, and the rank is the same under all three thresholds. These are counts of the whole record for one season; a single rank position can turn on one or two players. The rate describes how many players from each nation reached the NHL per inhabitant. It does not measure how many people play hockey in each nation, how well any nation develops players, or why the counts differ.</p>
+{% endcall %}
+{% call does_not_show() %}
+<li>Why the rates differ: participation, league structure and migration are not measured here.</li>
+{% endcall %}

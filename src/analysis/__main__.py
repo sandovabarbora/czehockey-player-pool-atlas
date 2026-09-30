@@ -10,6 +10,7 @@ import logging
 import sys
 
 from src.analysis import (
+    intervals,
     linking,
     pool,
     q1_per_million,
@@ -36,6 +37,7 @@ def main(argv: list[str]) -> int:
         q6_national_team,
         q7_goalkeepers,
         pool,
+        intervals,
     ]
     if "--skip-model" not in argv:
         steps.insert(2, q2_break_model)

@@ -5,7 +5,7 @@
   <thead><tr><th scope="col">Nation</th><th scope="col" class="num">{{ noun }}</th><th scope="col" class="num">per million</th></tr></thead>
   <tbody>
   {% for n in rows|sort(attribute=key_pm, reverse=True) %}
-    <tr{% if n.iso3 == 'CZE' %} class="is-home"{% endif %}><td>{{ n.name }}</td><td class="num">{{ n[key_n] }}</td><td class="num">{{ f2(n[key_pm]) }}</td></tr>
+    <tr{% if n.iso3 == 'CZE' %} class="is-home"{% endif %}><td>{{ n.name }}</td><td class="num">{{ num(n[key_n]) }}</td><td class="num">{{ f2(n[key_pm]) }}</td></tr>
   {% endfor %}
   </tbody>
 </table>
@@ -13,20 +13,68 @@
 
 {% macro limit(key) %}
 {% if key == 'khl' %}
-<li><strong>KHL</strong> Excluded by design. It is where {{ pct0(q6.home.khl) }} of Czech national-team roster spots since 2010 came from, so the pool counted here is smaller than the pool the national team drew on, most of all before 2014 and before 2022.</li>
+<li id="limit-khl"><strong>KHL</strong> The KHL is excluded by design (see <a href="#exclusions">Left out</a>). Across the {{ iv.q6.all.events }} tournaments since {{ iv.q6.all.first }}, {{ pct0(q6.home.khl) }} of Czech national-team roster spots on average came from KHL clubs: {{ pct0(iv.q6.to_2022.shares.khl) }} over {{ iv.q6.to_2022.first }}–{{ iv.q6.to_2022.last }} and {{ pct0(iv.q6.from_2023.shares.khl) }} over {{ iv.q6.from_2023.first }}–{{ iv.q6.from_2023.last }}. The pool counted here is therefore smaller than the pool the national team drew on, by the most in the years to 2022.</li>
 {% elif key == 'ahl' %}
-<li><strong>AHL</strong> Not fetched (terms). An AHL season appears only when the player also has an NHL career record, which favours those who made it.</li>
+<li id="limit-ahl"><strong>AHL</strong> Not fetched (its terms forbid automated access). An AHL season appears only when the player also has an NHL career record, which favours those who reached the NHL.</li>
 {% elif key == 'birth' %}
-<li><strong>Birth dates</strong> The National League and the DEL publish none, so their players' ages come only from a link to another league. That removes {{ q3.excluded_age|join(' and ') }} from the age medians in question 3 and leaves the NL and DEL youth shares in question 4 unmeasured.</li>
+<li id="limit-birth"><strong>Birth dates</strong> The National League and the DEL publish none, so their players' ages come only from a link to another league. That removes {{ q3.excluded_age|join(' and ') }} from the age medians in question 3 and leaves the NL and DEL youth shares in question 4 unmeasured.</li>
 {% elif key == 'nationality' %}
-<li><strong>Nationality</strong> For {{ pool.eligibility_only }} of the {{ pool.players }} Czech players on the pool page, the only evidence is the Extraliga foreigner flag or a licence, which is eligibility, not citizenship. The DEL published no nationality before 2022/23, so the rung 1 + 2 series before {{ q1.complete_first }} is a lower bound.</li>
+<li id="limit-nationality"><strong>Nationality</strong> For {{ pool.eligibility_only }} of the {{ pool.players }} Czech players on the pool page, the only evidence is the Extraliga foreigner flag or a licence, which is eligibility, not citizenship. The NHL counts (questions 1, 2, 5 and 7) rest on the NHL's citizenship field; the rung-2 counts for the National League and the DEL, and the pool page, depend on eligibility. The DEL published no nationality before 2022/23, so the rung 1 + 2 series before {{ q1.complete_first }} is a lower bound.</li>
 {% elif key == 'name_links' %}
-<li><strong>Name-only links</strong> Records without a birth date are linked on the name alone, only when one candidate exists within four seasons; ambiguous and unmatched counts are in the table above.</li>
+<li id="limit-name_links"><strong>Name-only links</strong> Records without a birth date are linked on the name alone, only when one candidate exists within four seasons; ambiguous and unmatched counts are in the linking table.</li>
 {% elif key == 'population' %}
-<li><strong>Population</strong> A per-million rate compares nations of very different sizes; a handful of players moves a small nation's rate a lot.</li>
+<li id="limit-population"><strong>Population</strong> The denominator is total population, not registered players. It is chosen because it is published the same way for all ten nations every year; participation differs widely between them (Germany has 83 million inhabitants and a small hockey base), so a per-million rate measures output relative to a nation's size, not relative to its hockey base. A handful of players moves a small nation's rate a lot.</li>
+{% elif key == 'ages' %}
+<li id="limit-ages"><strong>Age bands</strong> Age is the season's start year minus the birth year. Question 3 uses 21 or under (the youngest band of its four), question 4 uses 20 or under (under-21 hockey), and question 7 uses 23 or under for goalkeepers, who are few per team; the three cut-offs are stated where they are used and are not interchangeable.</li>
+{% elif key == 'single_season' %}
+<li id="limit-single_season"><strong>One season</strong> Questions 1, 3 and 7 are cross-sections of {{ q1.season }}. Counts of a few players change from season to season; question 3 shows the Czech 21-or-under cells for {{ iv.q3.u21_by_season[0].season }}–{{ iv.q3.u21_by_season[-1].season }} for that reason.</li>
 {% elif key == 'descriptive' %}
-<li><strong>Descriptive only</strong> Nothing here predicts a season, rates a player beyond his published statistics or advises selection.</li>
+<li id="limit-descriptive"><strong>Descriptive only</strong> The atlas is exploratory and was not pre-registered. Nothing here identifies a cause, predicts a season, rates a player beyond his published statistics or advises on selection or policy.</li>
 {% endif %}
 {% endmacro %}
 
+{# one line per limitation on a question page, pointing to the full text on the methodology page #}
+{% macro limit_short(key) %}
+{% set t = {
+  'khl': 'The KHL is excluded, although it supplied a quarter of Czech national-team roster spots.',
+  'ahl': 'The AHL is not covered; AHL seasons appear only for players with an NHL record.',
+  'birth': 'The National League and the DEL publish no birth dates, so their ages rest on links to other leagues.',
+  'nationality': 'Some nationalities rest on eligibility or licence, not citizenship.',
+  'population': 'The denominator is total population, not registered players.',
+  'ages': 'Each question uses its own age cut-off, stated on the page.',
+  'single_season': 'A single season is a noisy cross-section for counts of a few players.',
+  'descriptive': 'Descriptive and exploratory: no cause, forecast or selection advice.',
+  'name_links': 'Records without a birth date are linked on the name alone.',
+} %}
+<li>{{ t[key] }} <a href="{{ prefix }}methodology/#limit-{{ key }}">More</a></li>
+{% endmacro %}
+
+{% macro ref(keys, prefix='') %}{% set ns = [] %}{% for k in keys %}{% set _ = ns.append(refnum[k]) %}{% endfor %}<span class="ref">[{% for k in ns|sort %}{% if not loop.first %}, {% endif %}<a href="{{ prefix }}#ref-{{ k }}">{{ k }}</a>{% endfor %}]</span>{% endmacro %}
+
+{% macro meta_line(prefix) %}
+<p class="page-meta mono">Data snapshot {{ meta.snapshot_date }} (<code>data/snapshot/SHA256SUMS</code>, sha256 {{ meta.snapshot_sums }}) · code <a href="{{ meta.repo }}">{{ meta.repo_short }}</a>, <code>src/analysis/</code> and <code>src/web/</code> · status: exploratory, not pre-registered · version {{ meta.version }}, <a href="{{ prefix }}methodology/#changes">change log</a></p>
+{% endmacro %}
+
 {% macro fn(ns) %}<sup class="fn">{% for n in ns %}{% if not loop.first %},{% endif %}<a href="#autumn-src-{{ n }}">{{ n }}</a>{% endfor %}</sup>{% endmacro %}
+
+{# "What this means" and "What this does not show" on a question page: the page's own items first
+   (the caller), then one line per shared limitation, each linked to its full text. #}
+{% macro means() %}
+<section class="q-means" aria-labelledby="{{ cur.id }}-means">
+  <h2 class="q-sub" id="{{ cur.id }}-means">What this means</h2>
+  {{ caller() }}
+</section>
+{% endmacro %}
+
+{% macro does_not_show() %}
+<section class="q-limits" aria-labelledby="{{ cur.id }}-limits">
+  <h2 class="q-sub" id="{{ cur.id }}-limits">What this does not show</h2>
+  <ul class="nx-limits">
+    {{ caller() }}
+    {% for k in cur.limits %}
+    {{ limit_short(k) }}
+    {% endfor %}
+  </ul>
+  <p class="q-limits-more">All limitations in one place: <a href="{{ prefix }}methodology/#limitations">Methodology, Limitations</a></p>
+</section>
+{% endmacro %}
