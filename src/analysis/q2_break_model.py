@@ -49,6 +49,9 @@ TUNE = 1000
 CHAINS = 4
 CONTRAST = ("FIN", "SWE")
 TARGET_ACCEPT = 0.99
+# stage 2 of design/break-convergence-protocol.md: only for a fit that fails the rule,
+# twice the tuning and draws (target_accept has no room left above 0.99)
+STAGE2 = {"draws": 2000, "tune": 2000}
 
 
 # =====================================================================================
@@ -268,20 +271,28 @@ def fitted_level(idata, mode_tau: tuple[int, ...]) -> tuple[np.ndarray, np.ndarr
 def diagnostics(idata) -> dict[str, Any]:
     import arviz as az
 
-    summ = az.summary(idata, var_names=["mu0", "sigma", "delta"])
-    return {
+    summ = az.summary(idata, var_names=["mu0", "sigma", "delta", "z_eps"], kind="diagnostics")
+    d = {
         "max_rhat": float(summ["r_hat"].astype(float).max()),
         "min_ess_bulk": float(summ["ess_bulk"].astype(float).min()),
         "min_ess_tail": float(summ["ess_tail"].astype(float).min()),
-        "n_divergences": int(idata.sample_stats["diverging"].values.sum()),
+        "n_divergences": int(np.asarray(idata["sample_stats"]["diverging"]).sum()),
     }
+    # the convergence rule of design/break-convergence-protocol.md
+    d["pass"] = (d["max_rhat"] <= 1.01 and d["min_ess_bulk"] >= 400 and d["min_ess_tail"] >= 400
+                 and d["n_divergences"] == 0)
+    return d
 
 
 def analyse(n: list[int | None], labels: list[str], seed: int, **fit_kw) -> dict[str, Any]:
     y, mask = series_from_counts(n)
     t0 = time.time()
-    idata, grid = fit_change_point(y, mask, seed=seed, **fit_kw)
-    LOG.info("fit: %.1f s", time.time() - t0)
+    for stage, kw in ((1, fit_kw), (2, {**fit_kw, **STAGE2})):
+        idata, grid = fit_change_point(y, mask, seed=seed, **kw)
+        diag = {**diagnostics(idata), "stage": stage}
+        LOG.info("fit stage %d: %.1f s, %s", stage, time.time() - t0, diag)
+        if diag["pass"]:
+            break
     summary = break_summary(idata, y, mask, grid, labels)
     probs = tau_posterior(idata, y, mask, grid)
     mode = tuple(int(v) for v in np.atleast_1d(grid[int(np.argmax(probs))]))
@@ -299,7 +310,7 @@ def analyse(n: list[int | None], labels: list[str], seed: int, **fit_kw) -> dict
             "latest": {"season": labels[-1], "level": float(med[-1])},
             "latest_to_peak": float(med[-1] / med[peak]),
         },
-        "diagnostics": diagnostics(idata),
+        "diagnostics": diag,
     }
 
 

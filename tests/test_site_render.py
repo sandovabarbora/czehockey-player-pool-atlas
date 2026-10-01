@@ -59,7 +59,7 @@ def test_report_structure(site: Path) -> None:
     assert '<html lang="en"' in home and 'id="take"' in home
     assert "img/hockey.jpg" in home and "U.S. Air Force Academy" in home
     assert home.count('class="nx-take-link"') == 7
-    for part in ('class="facts"', 'class="tldr"', 'class="meta-block', 'id="question"', 'id="cite"', 'id="references"', 'id="changes"'):
+    for part in ('class="facts', 'class="tldr"', 'class="meta-block', 'id="question"', 'id="cite"', 'id="references"', 'id="changes"'):
         assert part in home, part
     assert "Research · Czech hockey atlas" in home and "exploratory; not pre-registered" in home
     assert "29 September 2026" in home[home.index('id="changes"'):]

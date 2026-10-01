@@ -203,7 +203,7 @@
       const { svg, w, narrow } = svgIn(plot, H);
       const x = d3.scalePoint().domain(seasons).range([M.l, w - M.r]).padding(0.5);
       const y = d3.scaleLinear().domain([0, d3.max([...d.hi, ...d.n.filter((v) => v != null)]) * 1.05]).nice().range([top, M.t]);
-      const yb = d3.scaleLinear().domain([0, Math.max(0.1, d3.max(d.steps.flatMap((s) => s.marginal)))]).range([H - M.b, top + 36]);
+      const yb = d3.scaleLinear().domain([0, Math.max(0.1, d3.max(d.steps.flatMap((s) => s.marginal)) ?? 0)]).range([H - M.b, top + 36]);
       svg.append('g').attr('transform', `translate(${M.l},0)`).call(d3.axisLeft(y).ticks(5)).call(axisStyle);
       svg.append('g').attr('transform', `translate(0,${H - M.b})`).call(d3.axisBottom(x).tickValues(seasons.filter((s, i) => i % (narrow ? 6 : 3) === 0)).tickFormat(short)).call(axisStyle);
       const band = d3.area().x((v, i) => x(seasons[i])).y0((v, i) => y(d.lo[i])).y1((v, i) => y(d.hi[i]));

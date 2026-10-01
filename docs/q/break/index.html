@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../style.css?v=5449fcf567">
-  <link rel="stylesheet" href="../../modern.css?v=5449fcf567">
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script defer src="../../charts.js?v=5449fcf567"></script></head>
+  <link rel="stylesheet" href="../../style.css?v=209680be1f">
+  <link rel="stylesheet" href="../../modern.css?v=209680be1f">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script defer src="../../charts.js?v=209680be1f"></script></head>
 <body id="top">
 <nav class="topbar" aria-label="Navigation">
   <a class="topbar-brand" href="../../">Czech Hockey <span>Atlas</span></a>
@@ -54,8 +54,7 @@
         <tbody>
           <tr class="is-home"><td>Czechia</td><td class="num">1</td><td>1998/99 (0.39)</td><td class="num">×1.47 (0.73–1.97)</td><td class="num">0.85</td><td>direction not resolved</td></tr>
           <tr class="is-home"><td>Czechia</td><td class="num">2</td><td>2009/10 (0.09)</td><td class="num">×0.83 (0.56–1.14)</td><td class="num">0.20</td><td>direction not resolved</td></tr>
-          <tr><td>Finland</td><td class="num">1</td><td>1999/00 (0.54)</td><td class="num">×1.89 (1.35–2.53)</td><td class="num">0.99</td><td>rise</td></tr>
-          <tr><td>Finland</td><td class="num">2</td><td>2018/19 (0.22)</td><td class="num">×1.28 (0.86–1.54)</td><td class="num">0.87</td><td>direction not resolved</td></tr>
+          <tr><td>Finland</td><td colspan="5">not dated: the fit does not meet the convergence rule</td></tr>
           <tr><td>Sweden</td><td class="num">1</td><td>1999/00 (0.22)</td><td class="num">×1.26 (0.93–1.60)</td><td class="num">0.91</td><td>direction not resolved</td></tr>
           <tr><td>Sweden</td><td class="num">2</td><td>2014/15 (0.53)</td><td class="num">×1.42 (0.90–1.73)</td><td class="num">0.89</td><td>direction not resolved</td></tr>
         </tbody>
@@ -65,7 +64,7 @@
     <section class="q-evidence" aria-labelledby="q2-evidence">
       <h2 class="q-sub" id="q2-evidence">Evidence</h2>
       <p class="slide-did"><span class="slide-did-label">The model</span> A Poisson local-level model, the same model the <a href="https://football.bsandova.com/">football atlas</a> uses for its series: the log of the expected count follows a random walk plus exactly 2 step changes, and the step seasons are marginalised over every allowed pair (at least three seasons from the ends and from each other). Two steps are imposed on every nation, so a nation always receives two steps whether or not its series has them; the direction of a step is read from its interval, not assumed. 2004/05, the lockout, stays in the time index with no likelihood. Priors: σ ~ HalfNormal(0.2), step ~ Normal(0, 1), initial level ~ Normal(log mean, 1); step seasons uniform over ordered pairs, &gt;= 3 seasons from the ends and apart.</p>
-    <p class="slide-did"><span class="slide-did-label">The Czech steps</span> The step with a median below 1 is ×0.83 (90 % HDI 0.56–1.14); the probability that it lowers the level is 0.80, and its interval includes 1. The earlier step is dated most likely to 1998/99 (×1.47, 90 % HDI 0.73–1.97, P(level rises) = 0.85). Of the 6 steps in the table, 1 has an interval that excludes 1.</p>  <p class="slide-how"><span class="slide-how-label">Diagnostics</span> 4 chains × 1000 draws after 1000 tuning, seed 42; largest R-hat 1.007, 1 divergent transition over the three fits. HDI: highest-density interval of the posterior.</p>
+    <p class="slide-did"><span class="slide-did-label">The Czech steps</span> The step with a median below 1 is ×0.83 (90 % HDI 0.56–1.14); the probability that it lowers the level is 0.80, and its interval includes 1. The earlier step is dated most likely to 1998/99 (×1.47, 90 % HDI 0.73–1.97, P(level rises) = 0.85). Of the 4 steps in the table, 0 have intervals that exclude 1.</p>  <p class="slide-how"><span class="slide-how-label">Diagnostics</span> 4 chains × 1000 draws after 1000 tuning, target acceptance 0.99, seed 42; a fit that fails the convergence rule written down before the check of 1 October 2026 is refitted once with 2000 tuning steps and 2000 draws (design/break-convergence-protocol.md). The rule: largest R-hat ≤ 1.01, bulk and tail effective sample size ≥ 400, no divergent transitions. Czechia: R-hat 1.004, bulk ESS 1963, tail ESS 1749, 0 divergent transitions, stage 1, passes; Finland: R-hat 1.003, bulk ESS 3090, tail ESS 3344, 1 divergent transition, stage 2, fails, so its steps are not dated; Sweden: R-hat 1.007, bulk ESS 920, tail ESS 1305, 0 divergent transitions, stage 1, passes. HDI: highest-density interval of the posterior.</p>
     </section>
     <section class="q-means" aria-labelledby="q2-means">
       <h2 class="q-sub" id="q2-means">What this means</h2>
@@ -109,7 +108,7 @@
         </span>
       </p>
     </div>
-    <p class="rendered-at">Built 29 September 2026 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
+    <p class="rendered-at">Built 1 October 2026 from the snapshot in <code>data/snapshot/</code> and the analysis in <code>outputs/</code>.</p>
   </div>
 </footer>
 </body>
