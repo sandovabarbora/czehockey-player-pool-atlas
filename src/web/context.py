@@ -128,6 +128,10 @@ def _q2(q2: dict) -> dict:
     out: dict[str, Any] = {"seasons": q2["seasons"], "definitions": q2["definitions"]}
     for code, nat in q2["nations"].items():
         brk = nat["break"]
+        # a fit that fails the convergence rule dates nothing (design/break-convergence-protocol.md)
+        converged = nat["diagnostics"].get("pass", True)
+        if not converged:
+            brk = {**brk, "steps": []}
         for st in brk["steps"]:
             df = st["delta_factor"]
             st["reading"] = "rise" if df["lo"] > 1 else ("fall" if df["hi"] < 1 else "direction not resolved")
@@ -136,6 +140,7 @@ def _q2(q2: dict) -> dict:
         ups = [s for s in brk["steps"] if s["direction"] == "up"]
         out[code] = {
             "name": BY_ISO3[code].name,
+            "converged": converged,
             "steps": brk["steps"],
             "fall": fall_step,
             "ups": ups,
@@ -159,7 +164,8 @@ def _q2(q2: dict) -> dict:
     out["max_rhat"] = max(n["diagnostics"]["max_rhat"] for n in q2["nations"].values())
     out["divergences"] = sum(n["diagnostics"]["n_divergences"] for n in q2["nations"].values())
     out["compared"] = [c for c in q2["nations"] if c != HOME]
-    steps = [st for c in q2["nations"].values() for st in c["break"]["steps"]]
+    out["unconverged"] = [c for c in q2["nations"] if not out[c]["converged"]]
+    steps = [st for c in q2["nations"] for st in out[c]["steps"]]
     out["n_steps"] = len(steps)
     out["n_resolved"] = sum(1 for st in steps if st["reading"] != "direction not resolved")
     return out
@@ -535,7 +541,7 @@ def meta(outputs_dir: Path | None = None) -> dict[str, Any]:
     q2 = json.loads((root / "q2_break_model.json").read_text(encoding="utf-8"))
     return {
         "published": "18 May 2026",
-        "updated": "29 September 2026",
+        "updated": "1 October 2026",
         "version": 3,
         "status": "research, exploratory; not pre-registered",
         "snapshot_date": "29 September 2026",

@@ -75,7 +75,8 @@ def report_data(o: dict[str, Any]) -> dict[str, Any]:
                     "factor": s["delta_factor"],
                     "p_down": s["p_down"],
                 }
-                for s in nat["break"]["steps"]
+                # a fit that fails the convergence rule dates nothing
+                for s in (nat["break"]["steps"] if nat["diagnostics"].get("pass", True) else [])
             ],
         }
 

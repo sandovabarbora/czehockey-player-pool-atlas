@@ -25,19 +25,17 @@
 <header class="report-header">
   <div class="container">
     <p class="masthead-kicker">Research · Czech hockey atlas · 1995/96–{{ q1.season }}</p>
-    <h1>Czech professional hockey players per head against nine peer nations, 1995/96–{{ q1.season }}</h1>
-    <p class="masthead-deck">This exploratory atlas counts how many Czech players reach the NHL and Europe's four strongest leagues relative to population; in {{ q1.season }} Czechia ranked {{ ordinal(h.rank_nhl) }} of {{ q1.n_nations }} nations in the NHL.</p>
+    <h1>Czech hockey players per head</h1>
+    <p class="masthead-deck">In {{ q1.season }} Czechia ranked {{ ordinal(h.rank_nhl) }} of {{ q1.n_nations }} nations for NHL players per million inhabitants.</p>
   </div>
 </header>
 
 <section class="hero" id="summary">
   <img class="hero-photo" src="img/hockey.jpg" srcset="img/hockey-1200.jpg 1200w, img/hockey.jpg 1920w" sizes="100vw" alt="A hockey player carrying the puck across the ice, in black and white with only the blue of his jersey kept" decoding="async" fetchpriority="high">
   <div class="container">
-    <dl class="facts">
+    {# one figure; the other measures are in the findings and the question pages #}
+    <dl class="facts facts-one">
       <div class="fact"><dt>Czech NHL players per million, {{ q1.season }}</dt><dd><span class="fact-n">{{ f2(h.nhl_per_million) }}</span><span class="fact-note">{{ h.nhl }} players, population {{ f1(population_m) }} million · administrative count</span></dd></div>
-      <div class="fact"><dt>NHL and rung-2 players per million</dt><dd><span class="fact-n">{{ f2(h.top5_per_million) }}</span><span class="fact-note">{{ h.top5 }} players · {{ ordinal(h.rank_top5) }} of {{ q1.n_nations }} · administrative count</span></dd></div>
-      {% if fall %}<div class="fact"><dt>Czech NHL step with a median below 1</dt><dd><span class="fact-n">{{ times(fall.delta_factor.median) }}</span><span class="fact-note">90 % HDI {{ f2(fall.delta_factor.lo) }}–{{ f2(fall.delta_factor.hi) }} · most likely {{ fall.modal.season }} (posterior probability {{ f2(fall.modal.prob) }})</span></dd></div>{% endif %}
-      <div class="fact"><dt>Extraliga skater games played by skaters aged 20 or under</dt><dd><span class="fact-n">{{ pct(yl.Extraliga.games.mean) }}</span><span class="fact-note">95 % bootstrap by season {{ pct(yl.Extraliga.games.lo) }}–{{ pct(yl.Extraliga.games.hi) }} · {{ yl.Extraliga.games.seasons }} seasons</span></dd></div>
     </dl>
   </div>
   <p class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Jake_Levin_(Air_Force_Falcon%27s_men%27s_ice_hockey)_during_game_against_Bentley_Falcons_men%27s_ice_hockey_at_Cadet_Arena_in_Colorado_Springs_on_November_9,_2018_(45170233234).jpg">U.S. Air Force Academy</a> · public domain, colour held</p>
@@ -45,7 +43,7 @@
 
 <section class="front-intro">
   <div class="container">
-    <details class="tldr" open>
+    <details class="tldr">
       <summary>Overwhelmed? Here's the short version</summary>
       <ul>
         <li>{{ q1.leaders_nhl[0].name }} and {{ q1.leaders_nhl[1].name }} have about {{ (([q1.leaders_nhl[0].nhl_per_million, q1.leaders_nhl[1].nhl_per_million]|min) / h.nhl_per_million)|round|int }} times the Czech NHL rate per inhabitant, and the Czech ranks stay the same under three different games thresholds.</li>
@@ -101,6 +99,7 @@
 
     <h2 id="changes">Change log</h2>
     <ul class="changelog">
+      <li><span class="mono">1 October 2026</span> The Q2 break model is checked against a convergence rule written down before the check (design/break-convergence-protocol.md): largest R-hat at most 1.01, bulk and tail effective sample size at least 400, no divergent transitions, now including the random-walk innovations; a failing fit is refitted once with 2000 draws. Czechia and Sweden pass and their steps are unchanged. Finland fails (one divergent transition after both stages), so its two steps (1999/00 and 2018/19) are no longer dated. The Q2 page gives every fit's diagnostics. The front page now leads with one figure and one sentence; the step and youth-games figures are on their question pages, and the short version starts folded.</li>
       <li><span class="mono">29 September 2026</span> Version {{ meta.version }}: editorial pass to the site's editorial standard, with intervals added, a roster-linking correction and the corrected numbers listed in the <a href="methodology/#changes">full change log</a>.</li>
     </ul>
   </div>
